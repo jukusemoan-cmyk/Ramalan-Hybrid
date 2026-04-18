@@ -480,46 +480,57 @@ function handleUnlockPremium() {
     }
 }
 
-function showPremiumContent() {
-    if (!currentFortunes || !currentUserData) {
-        alert('Silakan lakukan ramalan terlebih dahulu.');
-        return;
+function showPremium() {
+    // Cek status premium
+    if (localStorage.getItem('isPremium') === 'true') {
+        const expiry = localStorage.getItem('premiumExpiry');
+        if (expiry && new Date(expiry) > new Date()) {
+            // Tampilkan konten premium
+            displayPremiumKecocokan();
+        } else {
+            localStorage.removeItem('isPremium');
+            localStorage.removeItem('premiumExpiry');
+            window.location.href = 'pricing.html';
+        }
+    } else {
+        window.location.href = 'pricing.html';
     }
+}
+
+function displayPremiumKecocokan() {
+    if (!currentResult) { alert('Lakukan perhitungan dulu.'); return; }
+    const r = currentResult;
+    const w = r.wukuAnalysis;
     
-    const premium = currentFortunes.premium;
-    const user = currentUserData;
-    
+    let saranNeptu = '';
+    if (r.total >= 25) saranNeptu = 'Pasangan ini memiliki potensi kemakmuran luar biasa. Disarankan untuk sering melakukan upacara syukur bersama.';
+    else if (r.total >= 19) saranNeptu = 'Hubungan ini diberkati keharmonisan alami. Jaga komunikasi dan saling percaya.';
+    else if (r.total >= 14) saranNeptu = 'Pasangan yang rukun, perlu usaha menjaga keseimbangan. Hindari konflik sepele.';
+    else if (r.total >= 8) saranNeptu = 'Potensi cukup baik, perlu saling pengertian ekstra. Seringlah berdiskusi.';
+    else saranNeptu = 'Tantangan dalam hubungan cukup besar, namun bukan berarti tidak bisa. Kunci: kesabaran dan saling memaafkan.';
+
     const html = `
-        <div style="display:flex; flex-direction:column; gap:20px;">
-            <h3 style="font-family:'Cinzel'; color:#E9CF7A; margin-bottom:8px;">
-                <i class="fas fa-crown"></i> Ramalan Mendalam untuk ${document.getElementById('userName').value.trim() || 'Sang Pencari'}
-            </h3>
-            <div style="background:#0F111A; border-radius:24px; padding:20px;">
-                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-heart"></i> Asmara</p>
-                <p style="line-height:1.6;">${premium.love}</p>
-            </div>
-            <div style="background:#0F111A; border-radius:24px; padding:20px;">
-                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-briefcase"></i> Karir</p>
-                <p style="line-height:1.6;">${premium.career}</p>
-            </div>
-            <div style="background:#0F111A; border-radius:24px; padding:20px;">
-                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-coins"></i> Keuangan</p>
-                <p style="line-height:1.6;">${premium.finance}</p>
-            </div>
-            <div style="background:#0F111A; border-radius:24px; padding:20px;">
-                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-heartbeat"></i> Kesehatan</p>
-                <p style="line-height:1.6;">${premium.health}</p>
-            </div>
-            <p style="margin-top:8px; text-align:right; font-style:italic;">— Telah dibuka dengan kunci semesta —</p>
-            <p style="font-size:0.9rem; border-top:1px solid #3E3629; padding-top:16px;">
-                <i class="fas fa-gem"></i> Anda adalah anggota Premium.
-            </p>
+        <h3 style="color:#C6A434; margin-bottom:16px;"><i class="fas fa-crown"></i> Analisis Mendalam Kecocokan ${r.name1} & ${r.name2}</h3>
+        <div style="background:#0F111A; border-radius:16px; padding:16px; margin-bottom:20px;">
+            <p><i class="fas fa-calendar-alt"></i> <strong>Weton Anda:</strong> ${r.weton1} (Neptu ${r.neptu1}) | Wuku: ${r.wuku1}</p>
+            <p><i class="fas fa-calendar-alt"></i> <strong>Weton Pasangan:</strong> ${r.weton2} (Neptu ${r.neptu2}) | Wuku: ${r.wuku2}</p>
+            <p><i class="fas fa-calculator"></i> <strong>Total Neptu:</strong> ${r.total} → Kategori: <span style="color:#C6A434;">${r.category} (${r.status})</span></p>
         </div>
+        <div style="margin-bottom:20px;">
+            <h4 style="color:#C6A434;"><i class="fas fa-om"></i> Analisis Wuku</h4>
+            <p><strong>Wuku ${r.wuku1}</strong> (${w.w1?.meaning || ''}) dan <strong>Wuku ${r.wuku2}</strong> (${w.w2?.meaning || ''})</p>
+            <p><strong>Tingkat Kecocokan Wuku:</strong> ${w.level}</p>
+            <p>${w.desc}</p>
+        </div>
+        <div style="margin-bottom:20px;">
+            <h4 style="color:#C6A434;"><i class="fas fa-star"></i> Analisis Neptu</h4>
+            <p>${r.desc}</p>
+        </div>
+        <p style="margin-top:16px; background:#0F111A; padding:16px; border-radius:16px;"><i class="fas fa-lightbulb"></i> <strong>Saran Spiritual:</strong> ${saranNeptu} Dalam tradisi Bali, pasangan dengan kombinasi ini dianjurkan untuk melakukan upacara <em>mabyakala</em> atau <em>melukat</em> bersama.</p>
+        <p style="margin-top:16px; font-style:italic;">Catatan: Ramalan ini bukan penentu mutlak. Cinta, komitmen, dan komunikasi adalah kunci utama kebahagiaan.</p>
     `;
-    
-    elements.premiumBox.innerHTML = html;
-    elements.premiumBox.classList.remove('hidden');
-    isPremium = true;
+    document.getElementById('premiumBox').innerHTML = html;
+    document.getElementById('premiumBox').classList.remove('hidden');
 }
 
 function copyLink() {
