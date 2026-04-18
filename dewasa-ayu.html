@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Dewasa Ayu • Hari Baik Primbon Bali</title>
+  <meta name="description" content="Cari tahu hari baik (Dewasa Ayu) untuk memulai usaha, menikah, bepergian, dan aktivitas penting lainnya berdasarkan Wuku, Saptawara, Pancawara, dan Tri Wara.">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #0B0C10;
+      background-image: radial-gradient(circle at 20% 30%, #1a1f2e 0%, #050608 100%);
+      color: #F3E9D2;
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    .mystic-header { text-align: center; margin-bottom: 24px; }
+    .mystic-header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      background: linear-gradient(135deg, #F9E076, #C6A434);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: 3px;
+    }
+    .oracle-card {
+      background: rgba(18, 20, 30, 0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(198, 164, 52, 0.35);
+      border-radius: 40px;
+      padding: 32px 24px;
+      box-shadow: 0 25px 40px -12px #00000080;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .nav-links a { color: #C6A434; text-decoration: none; font-size: 0.95rem; }
+    .input-field { margin-bottom: 24px; }
+    .input-field label {
+      display: block;
+      margin-bottom: 8px;
+      color: #B9A9D4;
+      font-size: 1rem;
+    }
+    .input-field input {
+      width: 100%;
+      background: #1A1C2B;
+      border: 1.5px solid #3A2E1C;
+      border-radius: 40px;
+      padding: 16px 20px;
+      color: #F0E6D2;
+      font-size: 1.1rem;
+    }
+    .input-field input:focus { border-color: #C6A434; outline: none; }
+    .btn-primary {
+      background: linear-gradient(145deg, #C6A434, #E9CF7A);
+      border: none;
+      padding: 18px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      font-family: 'Cinzel', serif;
+      color: #0B0C10;
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 0 10px 18px #00000050;
+    }
+    .result-panel { margin-top: 32px; }
+    .day-summary {
+      background: #1C1A2E;
+      border: 1px solid #C6A434;
+      border-radius: 24px;
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .day-level {
+      font-size: 2.5rem;
+      font-family: 'Cinzel', serif;
+      color: #EFE1B9;
+    }
+    .day-desc { color: #C2B5D8; margin-top: 8px; }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .detail-item {
+      background: #0F111A;
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+    }
+    .premium-lock { text-align: center; margin-top: 20px; }
+    .btn-premium {
+      background: transparent;
+      border: 2px solid #C6A434;
+      color: #C6A434;
+      padding: 14px 28px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .premium-detail {
+      background: #1A1C2B;
+      border-radius: 24px;
+      padding: 24px;
+      margin-top: 24px;
+      border-left: 8px solid #C6A434;
+    }
+    .hidden { display: none !important; }
+    .footer-note { text-align: center; margin-top: 32px; opacity: 0.8; }
+    @media (max-width: 500px) { .detail-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="nav-links">
+    <a href="index.html"><i class="fas fa-arrow-left"></i> Beranda</a>
+    <a href="ramalan.html"><i class="fas fa-crystal-ball"></i> Ramalan Personal</a>
+    <a href="kecocokan.html"><i class="fas fa-heart"></i> Kecocokan Jodoh</a>
+  </div>
+
+  <div class="mystic-header">
+    <h1><i class="fas fa-sun"></i> Dewasa Ayu</h1>
+    <p style="color:#B9A9D4;">Cari hari baik untuk aktivitas pentingmu</p>
+  </div>
+
+  <div class="oracle-card">
+    <div class="input-field">
+      <label><i class="fas fa-calendar-alt"></i> Pilih Tanggal</label>
+      <input type="date" id="selectedDate" value="">
+    </div>
+    
+    <button class="btn-primary" id="checkBtn"><i class="fas fa-search"></i> CEK HARI BAIK</button>
+
+    <div id="resultSection" class="result-panel hidden">
+      <div class="day-summary">
+        <div class="day-level" id="dayLevel">-</div>
+        <div class="day-desc" id="dayShortDesc">-</div>
+      </div>
+
+      <div class="detail-grid">
+        <div class="detail-item">
+          <i class="fas fa-calendar-week" style="color:#C6A434;"></i>
+          <div style="margin-top:8px;"><strong id="wukuDisplay">-</strong></div>
+          <div style="font-size:0.9rem; opacity:0.8;">Wuku</div>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-sun" style="color:#C6A434;"></i>
+          <div style="margin-top:8px;"><strong id="saptawaraDisplay">-</strong></div>
+          <div style="font-size:0.9rem; opacity:0.8;">Saptawara</div>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-cloud" style="color:#C6A434;"></i>
+          <div style="margin-top:8px;"><strong id="pancawaraDisplay">-</strong></div>
+          <div style="font-size:0.9rem; opacity:0.8;">Pancawara</div>
+        </div>
+        <div class="detail-item">
+          <i class="fas fa-moon" style="color:#C6A434;"></i>
+          <div style="margin-top:8px;"><strong id="triwaraDisplay">-</strong></div>
+          <div style="font-size:0.9rem; opacity:0.8;">Tri Wara</div>
+        </div>
+      </div>
+
+      <div class="premium-lock">
+        <button class="btn-premium" id="premiumBtn"><i class="fas fa-lock"></i> BUKA ANALISIS MENDALAM</button>
+      </div>
+      <div id="premiumBox" class="premium-detail hidden"></div>
+      <p style="margin-top:16px; font-size:0.9rem;"><i class="fas fa-info-circle"></i> Versi gratis menampilkan ringkasan. Analisis lengkap + rekomendasi aktivitas tersedia untuk member.</p>
+    </div>
+  </div>
+  <div class="footer-note">✦ Selaraskan langkahmu dengan energi semesta ✦</div>
+</div>
+
+<script src="js/calculator.js"></script>
+<script>
+let calendarData = null;
+let currentDayData = null;
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth()+1).padStart(2,'0');
+  const dd = String(today.getDate()).padStart(2,'0');
+  document.getElementById('selectedDate').value = `${yyyy}-${mm}-${dd}`;
+
+  try {
+    const res = await fetch('data/bali-calendar.json');
+    calendarData = await res.json();
+  } catch(e) {
+    console.error('Gagal load data kalender', e);
+  }
+
+  document.getElementById('checkBtn').addEventListener('click', calculate);
+  document.getElementById('premiumBtn').addEventListener('click', showPremium);
+});
+
+// Fungsi menghitung Tri Wara
+function getTriWara(saptawara, pancawara) {
+  // Rumus: (urip_saptawara + urip_pancawara) % 3
+  const s = calendarData.saptawara.find(x => x.name === saptawara);
+  const p = calendarData.pancawara.find(x => x.name === pancawara);
+  if (!s || !p) return null;
+  const total = s.urip + p.urip;
+  const mod = total % 3;
+  const triWaraList = [
+    { name: 'Pasah', meaning: 'Jatuh / Selesai', activity: 'Baik untuk upacara kematian atau penyucian. Tidak baik untuk memulai sesuatu yang baru.' },
+    { name: 'Beteng', meaning: 'Kuat / Kokoh', activity: 'Baik untuk membuat pagar, benteng spiritual, atau melindungi sesuatu.' },
+    { name: 'Kajeng', meaning: 'Keras / Sakral', activity: 'Energi kuat. Baik untuk bekerja keras, tetapi waspadai konflik dan keras kepala.' }
+  ];
+  return triWaraList[mod === 0 ? 2 : mod - 1]; // 1->Beteng, 2->Kajeng, 0->Pasah
+}
+
+function calculate() {
+  if (!calendarData) { alert('Data masih dimuat.'); return; }
+  const dateStr = document.getElementById('selectedDate').value;
+  if (!dateStr) { alert('Pilih tanggal terlebih dahulu.'); return; }
+  
+  const date = new Date(dateStr);
+  const weton = getWeton(date);
+  const wuku = getWuku(date);
+  const triWara = getTriWara(weton.saptawara, weton.pancawara);
+  
+  const wukuData = calendarData.wuku.find(w => w.name === wuku.name);
+  
+  // Tentukan level keberuntungan
+  let level = 'Cukup';
+  let shortDesc = '';
+  if (wukuData) {
+    if (wukuData.activity.includes('Baik')) level = 'Baik';
+    if (wukuData.activity.includes('Sangat baik')) level = 'Sangat Baik';
+    if (wukuData.activity.includes('Tidak baik')) level = 'Kurang Baik';
+    shortDesc = wukuData.activity;
+  }
+  
+  // Tampilkan
+  document.getElementById('dayLevel').textContent = level;
+  document.getElementById('dayShortDesc').textContent = shortDesc;
+  document.getElementById('wukuDisplay').textContent = `${wuku.name} (${wukuData?.meaning || ''})`;
+  document.getElementById('saptawaraDisplay').textContent = weton.saptawara;
+  document.getElementById('pancawaraDisplay').textContent = weton.pancawara;
+  document.getElementById('triwaraDisplay').textContent = triWara ? `${triWara.name} (${triWara.meaning})` : '-';
+  
+  currentDayData = {
+    date: dateStr,
+    weton,
+    wuku: wukuData,
+    triWara,
+    level,
+    shortDesc
+  };
+  
+  document.getElementById('resultSection').classList.remove('hidden');
+  document.getElementById('premiumBox').classList.add('hidden');
+}
+
+function showPremium() {
+  if (!currentDayData) { alert('Cek hari baik dulu.'); return; }
+  const d = currentDayData;
+  const w = d.wuku;
+  const t = d.triWara;
+  
+  let rekomendasi = '';
+  if (d.level === 'Sangat Baik') rekomendasi = 'Hari ini sangat baik untuk memulai usaha baru, menikah, pindah rumah, atau upacara penting.';
+  else if (d.level === 'Baik') rekomendasi = 'Hari ini baik untuk aktivitas rutin, bekerja, belajar, dan silaturahmi.';
+  else if (d.level === 'Cukup') rekomendasi = 'Hari ini cukup baik. Lakukan aktivitas biasa, tetapi tunda keputusan besar.';
+  else rekomendasi = 'Hari ini kurang baik untuk memulai hal baru. Lebih baik untuk istirahat, introspeksi, atau menyelesaikan pekerjaan lama.';
+  
+  const html = `
+    <h3 style="color:#C6A434; margin-bottom:16px;"><i class="fas fa-crown"></i> Analisis Dewasa Ayu</h3>
+    <p><strong>Tanggal:</strong> ${d.date}</p>
+    <p><strong>Wuku:</strong> ${w.name} (${w.meaning})</p>
+    <p style="margin-top:12px;">${w.character}</p>
+    <p style="margin-top:12px;"><i class="fas fa-check-circle" style="color:#C6A434;"></i> <strong>Aktivitas yang dianjurkan:</strong> ${w.activity}</p>
+    <p style="margin-top:12px;"><i class="fas fa-times-circle" style="color:#C6A434;"></i> <strong>Pantangan:</strong> Hindari arah ${w.forbidden_direction}.</p>
+    
+    <div style="margin-top:20px; padding-top:16px; border-top:1px solid #3A2E1C;">
+      <p><strong>Saptawara:</strong> ${d.weton.saptawara} – ${calendarData.saptawara.find(s=>s.name===d.weton.saptawara)?.character || ''}</p>
+      <p><strong>Pancawara:</strong> ${d.weton.pancawara} – ${calendarData.pancawara.find(p=>p.name===d.weton.pancawara)?.character || ''}</p>
+    </div>
+    
+    <div style="margin-top:20px; padding-top:16px; border-top:1px solid #3A2E1C;">
+      <p><strong>Tri Wara:</strong> ${t.name} (${t.meaning})</p>
+      <p>${t.activity}</p>
+    </div>
+    
+    <div style="margin-top:20px; background:#0F111A; padding:16px; border-radius:16px;">
+      <p><i class="fas fa-lightbulb"></i> <strong>Rekomendasi Aktivitas Hari Ini:</strong></p>
+      <p>${rekomendasi}</p>
+      <p style="margin-top:12px;">Energi hari ini didominasi oleh Wuku ${w.name} dengan elemen ${w.element}. Kombinasi dengan Tri Wara ${t.name} menghasilkan energi yang ${d.level}. Manfaatkan untuk ${w.activity.toLowerCase()}.</p>
+    </div>
+    
+    <p style="margin-top:16px; font-style:italic;">Catatan: Dewasa Ayu adalah panduan, bukan aturan mutlak. Niat tulus dan usaha keras tetap menjadi penentu utama.</p>
+  `;
+  document.getElementById('premiumBox').innerHTML = html;
+  document.getElementById('premiumBox').classList.remove('hidden');
+}
+</script>
+</body>
+</html>
