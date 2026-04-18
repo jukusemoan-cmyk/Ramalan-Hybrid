@@ -81,8 +81,7 @@ function calculateNeptu(saptawara, pancawara, saptawaraData, pancawaraData) {
 }
 
 // ---------- 5. KONVERSI WUKU (SIKLUS 210 HARI) ----------
-// Referensi: 1 Januari 1900 adalah Wuku Sinta (hari pertama siklus)
-// Siklus Wuku: 30 wuku x 7 hari = 210 hari.
+// Referensi epoch: 21 Mei 2000 adalah hari pertama Wuku Sinta.
 
 const WUKU_LIST = [
     'Sinta', 'Landep', 'Ukir', 'Kulantir', 'Tolu', 'Gumbreg',
@@ -92,21 +91,25 @@ const WUKU_LIST = [
     'Bala', 'Ugu', 'Wayang', 'Klawu', 'Dukut', 'Watugunung'
 ];
 
-const WUKU_EPOCH_DATE = new Date(2000, 4, 21); // 1 Jan 1900 = Sinta
+const WUKU_EPOCH_DATE = new Date(2000, 4, 21); // 21 Mei 2000 (bulan dimulai dari 0)
 
 function getWuku(date) {
     const inputDate = new Date(date);
+    
+    // Selisih hari dari epoch
     const diffTime = inputDate - WUKU_EPOCH_DATE;
     let diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
     
-    // Normalisasi ke rentang 0-209
-    const dayInCycle = diffDays % 210;
-    const wukuIndex = Math.floor(dayInCycle / 7); // 0-29
-    const dayOfWuku = (dayInCycle % 7) + 1; // 1-7
+    // Normalisasi ke dalam siklus 210 hari (0-209)
+    let dayInCycle = diffDays % 210;
+    if (dayInCycle < 0) dayInCycle += 210;
+    
+    const wukuIndex = Math.floor(dayInCycle / 7);
+    const dayOfWuku = (dayInCycle % 7) + 1;
     
     return {
         name: WUKU_LIST[wukuIndex],
-        index: wukuIndex + 1, // 1-30
+        index: wukuIndex + 1,
         day: dayOfWuku
     };
 }
