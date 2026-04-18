@@ -367,23 +367,19 @@
 <script src="js/calculator.js"></script>
 <script src="js/main.js"></script>
   <script>
-    function handleUnlockPremium() {
-    // Cek apakah user sudah premium
+    function unlockPremiumDetail() {
     if (localStorage.getItem('isPremium') === 'true') {
-        // Cek apakah masa berlaku masih aktif (opsional)
         const expiry = localStorage.getItem('premiumExpiry');
         if (expiry && new Date(expiry) > new Date()) {
             // Tampilkan konten premium
-            showPremiumContent();
+            document.getElementById('premiumLockArea').classList.add('hidden');
+            document.getElementById('premiumContentArea').classList.remove('hidden');
         } else {
-            // Masa berlaku habis, hapus status premium
             localStorage.removeItem('isPremium');
             localStorage.removeItem('premiumExpiry');
-            // Arahkan ke halaman pricing
             window.location.href = 'pricing.html';
         }
     } else {
-        // Belum premium, arahkan ke halaman pricing
         window.location.href = 'pricing.html';
     }
 }
