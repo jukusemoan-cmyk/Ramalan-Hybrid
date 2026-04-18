@@ -92,7 +92,7 @@ const WUKU_LIST = [
     'Bala', 'Ugu', 'Wayang', 'Klawu', 'Dukut', 'Watugunung'
 ];
 
-const WUKU_EPOCH_DATE = new Date(1900, 0, 1); // 1 Jan 1900 = Sinta
+const WUKU_EPOCH_DATE = new Date(2000, 4, 21); // 1 Jan 1900 = Sinta
 
 function getWuku(date) {
     const inputDate = new Date(date);
