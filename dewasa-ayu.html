@@ -268,45 +268,23 @@ function calculate() {
 }
 
 function showPremium() {
-  if (!currentDayData) { alert('Cek hari baik dulu.'); return; }
-  const d = currentDayData;
-  const w = d.wuku;
-  const t = d.triWara;
-  
-  let rekomendasi = '';
-  if (d.level === 'Sangat Baik') rekomendasi = 'Hari ini sangat baik untuk memulai usaha baru, menikah, pindah rumah, atau upacara penting.';
-  else if (d.level === 'Baik') rekomendasi = 'Hari ini baik untuk aktivitas rutin, bekerja, belajar, dan silaturahmi.';
-  else if (d.level === 'Cukup') rekomendasi = 'Hari ini cukup baik. Lakukan aktivitas biasa, tetapi tunda keputusan besar.';
-  else rekomendasi = 'Hari ini kurang baik untuk memulai hal baru. Lebih baik untuk istirahat, introspeksi, atau menyelesaikan pekerjaan lama.';
-  
-  const html = `
-    <h3 style="color:#C6A434; margin-bottom:16px;"><i class="fas fa-crown"></i> Analisis Dewasa Ayu</h3>
-    <p><strong>Tanggal:</strong> ${d.date}</p>
-    <p><strong>Wuku:</strong> ${w.name} (${w.meaning})</p>
-    <p style="margin-top:12px;">${w.character}</p>
-    <p style="margin-top:12px;"><i class="fas fa-check-circle" style="color:#C6A434;"></i> <strong>Aktivitas yang dianjurkan:</strong> ${w.activity}</p>
-    <p style="margin-top:12px;"><i class="fas fa-times-circle" style="color:#C6A434;"></i> <strong>Pantangan:</strong> Hindari arah ${w.forbidden_direction}.</p>
-    
-    <div style="margin-top:20px; padding-top:16px; border-top:1px solid #3A2E1C;">
-      <p><strong>Saptawara:</strong> ${d.weton.saptawara} – ${calendarData.saptawara.find(s=>s.name===d.weton.saptawara)?.character || ''}</p>
-      <p><strong>Pancawara:</strong> ${d.weton.pancawara} – ${calendarData.pancawara.find(p=>p.name===d.weton.pancawara)?.character || ''}</p>
-    </div>
-    
-    <div style="margin-top:20px; padding-top:16px; border-top:1px solid #3A2E1C;">
-      <p><strong>Tri Wara:</strong> ${t.name} (${t.meaning})</p>
-      <p>${t.activity}</p>
-    </div>
-    
-    <div style="margin-top:20px; background:#0F111A; padding:16px; border-radius:16px;">
-      <p><i class="fas fa-lightbulb"></i> <strong>Rekomendasi Aktivitas Hari Ini:</strong></p>
-      <p>${rekomendasi}</p>
-      <p style="margin-top:12px;">Energi hari ini didominasi oleh Wuku ${w.name} dengan elemen ${w.element}. Kombinasi dengan Tri Wara ${t.name} menghasilkan energi yang ${d.level}. Manfaatkan untuk ${w.activity.toLowerCase()}.</p>
-    </div>
-    
-    <p style="margin-top:16px; font-style:italic;">Catatan: Dewasa Ayu adalah panduan, bukan aturan mutlak. Niat tulus dan usaha keras tetap menjadi penentu utama.</p>
-  `;
-  document.getElementById('premiumBox').innerHTML = html;
-  document.getElementById('premiumBox').classList.remove('hidden');
+    if (localStorage.getItem('isPremium') === 'true') {
+        const expiry = localStorage.getItem('premiumExpiry');
+        if (expiry && new Date(expiry) > new Date()) {
+            displayPremiumDewasaAyu();
+        } else {
+            localStorage.removeItem('isPremium');
+            localStorage.removeItem('premiumExpiry');
+            window.location.href = 'pricing.html';
+        }
+    } else {
+        window.location.href = 'pricing.html';
+    }
+}
+
+function displayPremiumDewasaAyu() {
+    if (!currentDayData) { alert('Cek hari baik dulu.'); return; }
+    // ... (isi sama dengan kode showPremium yang lama, pindahkan ke sini)
 }
 </script>
 </body>
