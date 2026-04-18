@@ -296,11 +296,12 @@ function closeModal() {
   isPremium = false;
 }
 
-function unlockPremiumDetail() {
-  // Simulasi pembayaran berhasil
-  isPremium = true;
-  document.getElementById('premiumLockArea').classList.add('hidden');
-  document.getElementById('premiumContentArea').classList.remove('hidden');
+function handleUnlock() {
+    if (localStorage.getItem('isPremium') === 'true') {
+        // Tampilkan konten premium
+    } else {
+        window.location.href = 'pricing.html';
+    }
 }
 
 function getPremiumRitual(type, item) {
