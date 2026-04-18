@@ -1,0 +1,327 @@
+{
+  "weton_characters": [
+    {
+      "saptawara": "Redite",
+      "pancawara": "Umanis",
+      "combo": "Minggu Umanis",
+      "neptu": 10,
+      "character": "Manis budi, ramah, disukai banyak orang. Memiliki jiwa sosial yang tinggi dan mudah bergaul. Namun terkadang kurang tegas dalam mengambil keputusan dan mudah terpengaruh oleh orang lain. Cocok bekerja di bidang pelayanan masyarakat atau seni pertunjukan.",
+      "element": "Tanah"
+    },
+    {
+      "saptawara": "Redite",
+      "pancawara": "Paing",
+      "combo": "Minggu Paing",
+      "neptu": 14,
+      "character": "Pekerja keras, ambisius, dan memiliki kemauan yang kuat. Tidak mudah menyerah dan selalu berusaha mencapai target. Namun sifat keras kepala dan mudah marahnya seringkali menjadi bumerang dalam hubungan sosial. Perlu belajar mengendalikan emosi dan lebih sabar.",
+      "element": "Api"
+    },
+    {
+      "saptawara": "Redite",
+      "pancawara": "Pon",
+      "combo": "Minggu Pon",
+      "neptu": 12,
+      "character": "Pemberani, jujur, dan suka berterus terang. Tidak suka basa-basi dan selalu mengatakan apa adanya. Kejujurannya terkadang menyakiti hati orang lain. Memiliki jiwa kepemimpinan yang kuat tetapi perlu belajar diplomasi.",
+      "element": "Logam"
+    },
+    {
+      "saptawara": "Redite",
+      "pancawara": "Wage",
+      "combo": "Minggu Wage",
+      "neptu": 9,
+      "character": "Cerdas, analitis, dan suka belajar hal baru. Memiliki rasa ingin tahu yang tinggi dan selalu mencari jawaban atas segala sesuatu. Namun sifat pendendamnya perlu diwaspadai. Belajarlah untuk memaafkan dan melupakan.",
+      "element": "Air"
+    },
+    {
+      "saptawara": "Redite",
+      "pancawara": "Kliwon",
+      "combo": "Minggu Kliwon",
+      "neptu": 13,
+      "character": "Berwibawa, sakral, dan memiliki aura kepemimpinan yang kuat. Sangat cocok menjadi pemimpin atau tokoh masyarakat. Memiliki intuisi yang tajam dan seringkali bisa merasakan hal-hal gaib. Namun sifat angkuh dan sombongnya perlu dikendalikan agar tidak dijauhi orang.",
+      "element": "Kayu"
+    },
+    {
+      "saptawara": "Soma",
+      "pancawara": "Umanis",
+      "combo": "Senin Umanis",
+      "neptu": 9,
+      "character": "Emosional, penyayang, dan memiliki intuisi yang kuat. Sangat peka terhadap perasaan orang lain dan mudah tersentuh. Cocok bekerja di bidang konseling atau seni. Namun mudah baper dan perlu belajar untuk lebih tegar.",
+      "element": "Air"
+    },
+    {
+      "saptawara": "Soma",
+      "pancawara": "Paing",
+      "combo": "Senin Paing",
+      "neptu": 13,
+      "character": "Kombinasi antara kepekaan Soma dan kerja keras Paing. Pekerja keras yang penuh perasaan. Terkadang terlalu perfeksionis dan mudah stres jika target tidak tercapai. Perlu belajar untuk lebih rileks dan menikmati proses.",
+      "element": "Api"
+    },
+    {
+      "saptawara": "Soma",
+      "pancawara": "Pon",
+      "combo": "Senin Pon",
+      "neptu": 11,
+      "character": "Jujur, berani mengungkapkan perasaan, dan setia. Dalam hubungan, ia adalah pasangan yang protektif dan perhatian. Namun sifat pencemburunya cukup tinggi. Perlu belajar untuk lebih percaya pada pasangan.",
+      "element": "Logam"
+    },
+    {
+      "saptawara": "Soma",
+      "pancawara": "Wage",
+      "combo": "Senin Wage",
+      "neptu": 8,
+      "character": "Cerdas, pendiam, dan suka mengamati. Lebih suka bekerja di balik layar daripada tampil di depan. Memiliki ingatan yang kuat, terutama untuk kesalahan orang lain. Belajarlah untuk memaafkan dan move on.",
+      "element": "Air"
+    },
+    {
+      "saptawara": "Soma",
+      "pancawara": "Kliwon",
+      "combo": "Senin Kliwon",
+      "neptu": 12,
+      "character": "Misterius, spiritual, dan memiliki daya tarik yang kuat. Seringkali menjadi tempat curhat orang lain karena dianggap bijaksana. Namun menyimpan banyak rahasia dan sulit ditebak. Cocok menjadi psikolog atau penasihat spiritual.",
+      "element": "Kayu"
+    },
+    {
+      "saptawara": "Anggara",
+      "pancawara": "Umanis",
+      "combo": "Selasa Umanis",
+      "neptu": 8,
+      "character": "Pemberani namun ramah. Energi Anggara yang panas diredam oleh kelembutan Umanis. Orangnya supel, mudah bergaul, tapi kalau sudah marah bisa meledak-ledak. Cocok bekerja di bidang yang membutuhkan negosiasi dan keberanian.",
+      "element": "Api"
+    },
+    {
+      "saptawara": "Anggara",
+      "pancawara": "Paing",
+      "combo": "Selasa Paing",
+      "neptu": 12,
+      "character": "Kombinasi api ganda. Sangat energetik, ambisius, dan pekerja keras. Tidak kenal lelah dalam mengejar target. Namun emosinya sangat mudah meledak. Perlu belajar mengelola kemarahan agar tidak merugikan diri sendiri dan orang lain.",
+      "element": "Api"
+    },
+    {
+      "saptawara": "Anggara",
+      "pancawara": "Pon",
+      "combo": "Selasa Pon",
+      "neptu": 10,
+      "character": "Pemberani dan jujur. Tidak takut mengatakan kebenaran meskipun pahit. Memiliki prinsip yang kuat dan tidak mudah goyah. Namun terkadang terlalu kaku dan kurang fleksibel dalam menghadapi perubahan.",
+      "element": "Logam"
+    },
+    {
+      "saptawara": "Anggara",
+      "pancawara": "Wage",
+      "combo": "Selasa Wage",
+      "neptu": 7,
+      "character": "Cerdas namun emosional. Seringkali konflik batin antara logika dan perasaan. Jika bisa menyeimbangkan keduanya, akan menjadi pribadi yang sangat kuat. Cocok di bidang penelitian atau investigasi.",
+      "element": "Air"
+    },
+    {
+      "saptawara": "Anggara",
+      "pancawara": "Kliwon",
+      "combo": "Selasa Kliwon",
+      "neptu": 11,
+      "character": "Wibawa dan keberanian menyatu. Pemimpin alami yang disegani. Memiliki energi yang besar dan seringkali dijadikan tempat bergantung. Namun harus berhati-hati dengan sifat dominannya yang bisa membuat orang lain merasa tertekan.",
+      "element": "Kayu"
+    },
+    {
+      "saptawara": "Buda",
+      "pancawara": "Umanis",
+      "combo": "Rabu Umanis",
+      "neptu": 12,
+      "character": "Cerdas, komunikatif, dan ramah. Pandai berbicara dan meyakinkan orang lain. Sangat cocok bekerja di bidang marketing, public relation, atau pengacara. Namun terkadang terlalu banyak bicara dan kurang mendengarkan.",
+      "element": "Udara"
+    },
+    {
+      "saptawara": "Buda",
+      "pancawara": "Paing",
+      "combo": "Rabu Paing",
+      "neptu": 16,
+      "character": "Kombinasi cerdas dan pekerja keras. Sangat ambisius dan memiliki target yang jelas dalam hidup. Pandai membaca peluang dan tidak segan bekerja keras. Namun mudah stres dan perlu belajar untuk lebih santai menikmati hidup.",
+      "element": "Api"
+    },
+    {
+      "saptawara": "Buda",
+      "pancawara": "Pon",
+      "combo": "Rabu Pon",
+      "neptu": 14,
+      "character": "Cerdas, jujur, dan komunikatif. Pandai menyampaikan kebenaran dengan cara yang cerdas. Cocok menjadi jurnalis, penulis, atau aktivis. Namun sifat kritisnya terkadang membuat orang lain tidak nyaman.",
+      "element": "Logam"
+    },
+    {
+      "saptawara": "Buda",
+      "pancawara": "Wage",
+      "combo": "Rabu Wage",
+      "neptu": 11,
+      "character": "Kombinasi cerdas dan analitis. Otaknya selalu bekerja memecahkan masalah. Cocok di bidang IT, akuntansi, atau penelitian. Namun kurang pandai bergaul dan cenderung menyendiri. Perlu melatih kemampuan sosialnya.",
+      "element": "Air"
+    },
+    {
+      "saptawara": "Buda",
+      "pancawara": "Kliwon",
+      "combo": "Rabu Kliwon",
+      "neptu": 15,
+      "character": "Sangat cerdas dan berwibawa. Kombinasi yang langka dan kuat. Memiliki kemampuan untuk mempengaruhi banyak orang dengan kata-katanya. Bisa menjadi pemimpin besar atau manipulator ulung, tergantung pilihan hidupnya.",
+      "element": "Kayu"
+    },
+    {
+      "saptawara": "Wrespati",
+      "pancawara": "Umanis",
+      "combo": "Kamis Umanis",
+      "neptu": 13,
+      "character": "Bijaksana, murah hati, dan ramah. Sangat disukai dalam pergaulan karena sifatnya yang menyenangkan. Suka berbagi ilmu dan membantu orang lain. Namun sifat borosnya perlu dikendalikan.",
+      "element": "Tanah"
+    },
+    {
+      "saptawara": "Wrespati",
+      "pancawara": "Paing",
+      "combo": "Kamis Paing",
+      "neptu": 17,
+      "character": "Kombinasi bijaksana dan pekerja keras. Memiliki visi yang jelas dan tekad yang kuat untuk mewujudkannya. Seringkali sukses dalam karir dan bisnis. Namun harus berhati-hati dengan sifat keras kepala dan ambisinya yang bisa membuatnya lupa diri.",
+      "element": "Api"
+    },
+    {
+      "saptawara": "Wrespati",
+      "pancawara": "Pon",
+      "combo": "Kamis Pon",
+      "neptu": 15,
+      "character": "Bijaksana, jujur, dan berani. Tidak takut mengatakan kebenaran dan membela yang lemah. Cocok menjadi hakim, pengacara, atau pemimpin organisasi. Memiliki integritas yang tinggi dan dihormati oleh banyak orang.",
+      "element": "Logam"
+    },
+    {
+      "saptawara": "Wrespati",
+      "pancawara": "Wage",
+      "combo": "Kamis Wage",
+      "neptu": 12,
+      "character": "Bijaksana dan analitis. Suka belajar dan merenung. Memiliki pemahaman yang mendalam tentang berbagai hal. Cocok menjadi guru, dosen, atau peneliti. Namun cenderung pendiam dan kurang suka bersosialisasi.",
+      "element": "Air"
+    },
+    {
+      "saptawara": "Wrespati",
+      "pancawara": "Kliwon",
+      "combo": "Kamis Kliwon",
+      "neptu": 16,
+      "character": "Wibawa dan kebijaksanaan tingkat tinggi. Seringkali dianggap sebagai sesepuh atau guru spiritual. Memiliki aura yang tenang dan menyejukkan. Namun harus berhati-hati agar tidak menjadi sombong atas ilmu yang dimilikinya.",
+      "element": "Kayu"
+    },
+    {
+      "saptawara": "Sukra",
+      "pancawara": "Umanis",
+      "combo": "Jumat Umanis",
+      "neptu": 11,
+      "character": "Artistik, romantis, dan ramah. Memiliki selera seni yang tinggi dan pandai menciptakan suasana yang indah. Sangat cocok bekerja di bidang seni, desain, atau kuliner. Namun mudah terlena dengan pujian.",
+      "element": "Udara"
+    },
+    {
+      "saptawara": "Sukra",
+      "pancawara": "Paing",
+      "combo": "Jumat Paing",
+      "neptu": 15,
+      "character": "Kombinasi artistik dan pekerja keras. Memiliki bakat seni yang didukung oleh etos kerja yang tinggi. Bisa menjadi seniman yang sukses secara komersial. Namun harus berhati-hati dengan sifat pamer dan borosnya.",
+      "element": "Api"
+    },
+    {
+      "saptawara": "Sukra",
+      "pancawara": "Pon",
+      "combo": "Jumat Pon",
+      "neptu": 13,
+      "character": "Artistik, jujur, dan berani tampil beda. Tidak takut mengekspresikan diri dan berkarya dengan gaya yang unik. Cocok menjadi seniman kontemporer atau aktivis seni. Namun terkadang terlalu kritis dan sulit menerima masukan.",
+      "element": "Logam"
+    },
+    {
+      "saptawara": "Sukra",
+      "pancawara": "Wage",
+      "combo": "Jumat Wage",
+      "neptu": 10,
+      "character": "Artistik dan analitis. Kombinasi yang unik antara rasa dan logika. Bisa menjadi kritikus seni, kurator, atau desainer yang sangat detail. Namun cenderung perfeksionis dan sulit puas dengan karya sendiri.",
+      "element": "Air"
+    },
+    {
+      "saptawara": "Sukra",
+      "pancawara": "Kliwon",
+      "combo": "Jumat Kliwon",
+      "neptu": 14,
+      "character": "Artistik, berwibawa, dan memiliki pesona yang kuat. Seringkali menjadi pusat perhatian dan idola. Cocok menjadi aktor, musisi, atau public figure. Namun harus berhati-hati dengan godaan dan skandal yang bisa merusak reputasi.",
+      "element": "Kayu"
+    },
+    {
+      "saptawara": "Saniscara",
+      "pancawara": "Umanis",
+      "combo": "Sabtu Umanis",
+      "neptu": 14,
+      "character": "Pekerja keras, disiplin, namun ramah. Kombinasi yang seimbang antara ketegasan dan keramahan. Cocok menjadi manajer atau supervisor yang disukai bawahan. Namun harus belajar untuk lebih fleksibel.",
+      "element": "Tanah"
+    },
+    {
+      "saptawara": "Saniscara",
+      "pancawara": "Paing",
+      "combo": "Sabtu Paing",
+      "neptu": 18,
+      "character": "Neptu tertinggi. Sangat pekerja keras, disiplin, dan ambisius. Tidak kenal lelah dalam bekerja dan mengejar target. Memiliki potensi sukses yang sangat besar dalam karir dan finansial. Namun harus sangat berhati-hati dengan kesehatan karena mudah stres dan kelelahan.",
+      "element": "Api"
+    },
+    {
+      "saptawara": "Saniscara",
+      "pancawara": "Pon",
+      "combo": "Sabtu Pon",
+      "neptu": 16,
+      "character": "Pekerja keras, jujur, dan berani. Memiliki integritas yang tinggi dalam bekerja. Tidak suka korupsi dan selalu menyelesaikan tugas dengan tuntas. Cocok menjadi auditor, penegak hukum, atau pemimpin proyek. Namun terkadang terlalu kaku dan kurang kompromi.",
+      "element": "Logam"
+    },
+    {
+      "saptawara": "Saniscara",
+      "pancawara": "Wage",
+      "combo": "Sabtu Wage",
+      "neptu": 13,
+      "character": "Pekerja keras, analitis, dan suka belajar. Selalu mencari cara untuk meningkatkan efisiensi kerja. Cocok di bidang teknik, operasional, atau logistik. Namun cenderung workaholic dan lupa bersosialisasi. Perlu menyeimbangkan hidup.",
+      "element": "Air"
+    },
+    {
+      "saptawara": "Saniscara",
+      "pancawara": "Kliwon",
+      "combo": "Sabtu Kliwon",
+      "neptu": 17,
+      "character": "Pekerja keras, berwibawa, dan memiliki kekuatan spiritual. Kombinasi yang sangat kuat dan dihormati. Seringkali menjadi pemimpin di tempat kerja atau masyarakat. Memiliki ketahanan fisik dan mental yang luar biasa. Namun harus berhati-hati agar tidak terlalu mendominasi orang lain.",
+      "element": "Kayu"
+    }
+  ],
+  "kecocokan_jodoh": [
+    {
+      "min_neptu": 1,
+      "max_neptu": 7,
+      "category": "Rakshasa",
+      "status": "Kurang Harmonis",
+      "description": "Pasangan dengan total Neptu ini cenderung sering berselisih paham dan mengalami konflik. Perlu usaha ekstra dan saling pengertian yang besar untuk menjaga keharmonisan rumah tangga. Disarankan untuk banyak berdoa dan melakukan upacara selamatan agar diberi ketenangan."
+    },
+    {
+      "min_neptu": 8,
+      "max_neptu": 13,
+      "category": "Bhuta",
+      "status": "Cukup",
+      "description": "Pasangan ini memiliki potensi yang cukup baik, namun perlu keseimbangan. Terkadang ada pertengkaran kecil yang jika tidak segera diselesaikan bisa membesar. Kuncinya adalah komunikasi yang jujur dan saling memaafkan. Secara rezeki, pasangan ini cukup stabil."
+    },
+    {
+      "min_neptu": 14,
+      "max_neptu": 18,
+      "category": "Manusa",
+      "status": "Baik",
+      "description": "Pasangan yang rukun dan saling melengkapi. Kehidupan rumah tangganya cenderung harmonis dan penuh kasih sayang. Rezeki mengalir lancar dan bisa hidup berkecukupan. Ini adalah pasangan yang ideal untuk membangun keluarga bahagia."
+    },
+    {
+      "min_neptu": 19,
+      "max_neptu": 24,
+      "category": "Dewa",
+      "status": "Sangat Baik",
+      "description": "Pasangan yang diberkati dan memiliki keharmonisan tingkat tinggi. Jarang terjadi konflik serius. Rezeki mereka sangat lancar, bahkan seringkali mendapatkan keberuntungan yang tidak terduga. Rumah tangganya menjadi panutan bagi orang lain. Pasangan ini diyakini memiliki ikatan yang kuat tidak hanya di dunia, tetapi juga di alam spiritual."
+    },
+    {
+      "min_neptu": 25,
+      "max_neptu": 30,
+      "category": "Sri Sedana",
+      "status": "Istimewa",
+      "description": "Ini adalah kategori tertinggi dan paling langka. Pasangan ini tidak hanya harmonis, tetapi juga dipenuhi dengan kemakmuran dan kelimpahan. Rezeki mengalir seperti air. Rumah tangganya selalu dipenuhi kebahagiaan dan keberuntungan. Pasangan ini diyakini sebagai pasangan 'Sri' dan 'Sedana' (Dewi Kemakmuran dan Dewa Kekayaan) yang bersatu. Mereka ditakdirkan untuk hidup sejahtera dan berjaya."
+    }
+  ],
+  "catatan_kecocokan": [
+    "Perhitungan Neptu dilakukan dengan menjumlahkan nilai Urip dari Saptawara dan Pancawara kedua pasangan.",
+    "Semakin tinggi total Neptu, semakin baik kecocokan pasangan tersebut.",
+    "Namun, kecocokan sejati tidak hanya ditentukan oleh angka. Komunikasi, saling pengertian, dan komitmen adalah kunci utama kebahagiaan rumah tangga.",
+    "Ramalan ini hanyalah sarana introspeksi dan refleksi diri. Hasil akhir dari sebuah hubungan sepenuhnya ada di tangan Tuhan dan usaha kedua pasangan."
+  ]
+}
