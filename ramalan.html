@@ -366,5 +366,69 @@
 <!-- Scripts -->
 <script src="js/calculator.js"></script>
 <script src="js/main.js"></script>
+  <script>
+    function handleUnlockPremium() {
+    // Cek apakah user sudah premium
+    if (localStorage.getItem('isPremium') === 'true') {
+        // Cek apakah masa berlaku masih aktif (opsional)
+        const expiry = localStorage.getItem('premiumExpiry');
+        if (expiry && new Date(expiry) > new Date()) {
+            // Tampilkan konten premium
+            showPremiumContent();
+        } else {
+            // Masa berlaku habis, hapus status premium
+            localStorage.removeItem('isPremium');
+            localStorage.removeItem('premiumExpiry');
+            // Arahkan ke halaman pricing
+            window.location.href = 'pricing.html';
+        }
+    } else {
+        // Belum premium, arahkan ke halaman pricing
+        window.location.href = 'pricing.html';
+    }
+}
+
+function showPremiumContent() {
+    if (!currentFortunes || !currentUserData) {
+        alert('Silakan lakukan ramalan terlebih dahulu.');
+        return;
+    }
+    
+    const premium = currentFortunes.premium;
+    const user = currentUserData;
+    
+    const html = `
+        <div style="display:flex; flex-direction:column; gap:20px;">
+            <h3 style="font-family:'Cinzel'; color:#E9CF7A; margin-bottom:8px;">
+                <i class="fas fa-crown"></i> Ramalan Mendalam untuk ${document.getElementById('userName').value.trim() || 'Sang Pencari'}
+            </h3>
+            <div style="background:#0F111A; border-radius:24px; padding:20px;">
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-heart"></i> Asmara</p>
+                <p style="line-height:1.6;">${premium.love}</p>
+            </div>
+            <div style="background:#0F111A; border-radius:24px; padding:20px;">
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-briefcase"></i> Karir</p>
+                <p style="line-height:1.6;">${premium.career}</p>
+            </div>
+            <div style="background:#0F111A; border-radius:24px; padding:20px;">
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-coins"></i> Keuangan</p>
+                <p style="line-height:1.6;">${premium.finance}</p>
+            </div>
+            <div style="background:#0F111A; border-radius:24px; padding:20px;">
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-heartbeat"></i> Kesehatan</p>
+                <p style="line-height:1.6;">${premium.health}</p>
+            </div>
+            <p style="margin-top:8px; text-align:right; font-style:italic;">— Telah dibuka dengan kunci semesta —</p>
+            <p style="font-size:0.9rem; border-top:1px solid #3E3629; padding-top:16px;">
+                <i class="fas fa-gem"></i> Anda adalah anggota Premium.
+            </p>
+        </div>
+    `;
+    
+    elements.premiumBox.innerHTML = html;
+    elements.premiumBox.classList.remove('hidden');
+    isPremium = true;
+}
+  </script>
 </body>
 </html>
