@@ -429,6 +429,20 @@ function showPremiumContent() {
     elements.premiumBox.classList.remove('hidden');
     isPremium = true;
 }
+    // Cek status premium saat halaman dimuat
+if (localStorage.getItem('isPremium') === 'true') {
+    const expiry = localStorage.getItem('premiumExpiry');
+    if (expiry && new Date(expiry) > new Date()) {
+        // Status premium valid, ubah tampilan tombol jika perlu
+        if (elements.unlockBtn) {
+            elements.unlockBtn.innerHTML = '<i class="fas fa-unlock"></i> LIHAT RAMALAN PREMIUM';
+        }
+    } else {
+        // Masa berlaku habis
+        localStorage.removeItem('isPremium');
+        localStorage.removeItem('premiumExpiry');
+    }
+}
   </script>
 </body>
 </html>
