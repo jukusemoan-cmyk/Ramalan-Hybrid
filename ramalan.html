@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>Ramalan Personal • Oracle Nusantara</title>
-  <meta name="description" content="Dapatkan ramalan personal berdasarkan Zodiak, Shio, Weton, dan Wuku. Analisis mendalam untuk Asmara, Karir, Keuangan, dan Kesehatan.">
+  <meta name="description" content="Dapatkan ramalan personal berdasarkan Zodiak, Shio, Weton, Wuku, dan Numerologi Nama.">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -144,6 +144,66 @@
       gap: 8px;
     }
     .badge i { color: #C6A434; }
+
+    /* Numerologi Styles */
+    .numerology-section {
+      margin: 32px 0;
+      padding: 24px;
+      background: rgba(15, 17, 26, 0.7);
+      border-radius: 32px;
+      border: 1px solid #3E3629;
+    }
+    .numerology-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .numerology-card {
+      text-align: center;
+      padding: 16px;
+      background: #0F111A;
+      border-radius: 20px;
+      border: 1px solid #3A2E1C;
+    }
+    .numerology-icon {
+      font-size: 2rem;
+      color: #C6A434;
+      margin-bottom: 8px;
+    }
+    .numerology-label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #9A8CB0;
+      margin-bottom: 4px;
+    }
+    .numerology-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #C6A434;
+      font-family: 'Cinzel', serif;
+      line-height: 1.2;
+    }
+    .numerology-desc {
+      font-size: 0.9rem;
+      color: #C2B5D8;
+      margin-top: 8px;
+    }
+    .power-name-box {
+      text-align: center;
+      padding: 16px;
+      background: linear-gradient(145deg, #1A1C2B, #0F111A);
+      border-radius: 60px;
+      border: 1px solid #C6A434;
+      font-size: 1.2rem;
+      color: #EFE1B9;
+    }
+    .power-name-box i {
+      color: #C6A434;
+      margin-right: 8px;
+    }
+
     .aspect-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -232,6 +292,7 @@
     @keyframes spin { to { transform: rotate(360deg); } }
     @media (max-width: 900px) {
       .aspect-grid { grid-template-columns: repeat(2, 1fr); }
+      .numerology-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 500px) {
       .aspect-grid { grid-template-columns: 1fr; }
@@ -275,7 +336,7 @@
 
   <div class="mystic-header">
     <h1>✧ ORACLE NUSANTARA ✧</h1>
-    <div class="sub-mystic">Hasil Ramalan • Zodiak • Shio • Weton • Wuku</div>
+    <div class="sub-mystic">Ramalan • Zodiak • Shio • Weton • Wuku • Numerologi</div>
   </div>
 
   <div class="oracle-card">
@@ -290,6 +351,12 @@
           <input type="date" id="birthDate" value="">
         </div>
       </div>
+      <div class="input-row">
+        <div class="input-field">
+          <label><i class="fas fa-signature"></i> Nama Lengkap (untuk Numerologi)</label>
+          <input type="text" id="fullName" placeholder="misal: Bintang Akasa" value="">
+        </div>
+      </div>
       <button class="btn-primary" id="revealBtn"><i class="fas fa-crystal-ball"></i> SINGKAP RAMALAN</button>
     </div>
 
@@ -301,6 +368,36 @@
         <span class="badge" id="displayWeton"><i class="fas fa-calendar"></i> ...</span>
         <span class="badge" id="displayNeptu"><i class="fas fa-hashtag"></i> Neptu: 0</span>
         <span class="badge" id="displayWuku"><i class="fas fa-om"></i> Wuku: ...</span>
+      </div>
+
+      <!-- Numerologi Section -->
+      <div id="numerologySection" class="numerology-section hidden">
+        <h3 style="font-family:'Cinzel'; color:#EFE1B9; margin-bottom:16px; text-align:center;">
+          <i class="fas fa-calculator"></i> Numerologi Nama
+        </h3>
+        <div class="numerology-grid">
+          <div class="numerology-card">
+            <div class="numerology-icon"><i class="fas fa-heart"></i></div>
+            <div class="numerology-label">Angka Jiwa</div>
+            <div class="numerology-value" id="soulUrgeValue">-</div>
+            <div class="numerology-desc" id="soulUrgeDesc">-</div>
+          </div>
+          <div class="numerology-card">
+            <div class="numerology-icon"><i class="fas fa-mask"></i></div>
+            <div class="numerology-label">Angka Kepribadian</div>
+            <div class="numerology-value" id="personalityValue">-</div>
+            <div class="numerology-desc" id="personalityDesc">-</div>
+          </div>
+          <div class="numerology-card">
+            <div class="numerology-icon"><i class="fas fa-star"></i></div>
+            <div class="numerology-label">Angka Takdir</div>
+            <div class="numerology-value" id="destinyValue">-</div>
+            <div class="numerology-desc" id="destinyDesc">-</div>
+          </div>
+        </div>
+        <div class="power-name-box">
+          <i class="fas fa-crown"></i> <span id="powerName">-</span>
+        </div>
       </div>
 
       <div class="aspect-grid">
@@ -334,7 +431,6 @@
     </div>
   </div>
   <div class="footer-note">✦ Rahasia Semesta ✦ Hanya untuk hiburan & refleksi diri ✦</div>
-  <div id="premiumExpiryInfo" style="text-align:center; margin-top:10px; font-size:0.85rem; opacity:0.7;"></div>
 </div>
 
 <script src="js/calculator.js"></script>
@@ -342,24 +438,29 @@
 const DATA_PATHS = {
     calendar: 'data/bali-calendar.json',
     weton: 'data/bali-weton.json',
+    numerology: 'data/numerology.json',
     fortunes: (zodiac) => `data/fortunes/${zodiac.toLowerCase()}.json`
 };
 
 let calendarData = null;
 let wetonData = null;
+let numerologyData = null;
 let currentFortunes = null;
 let currentUserData = null;
 
 const elements = {
-    userName: null, birthDate: null, revealBtn: null, resultSection: null,
+    userName: null, birthDate: null, fullName: null, revealBtn: null, resultSection: null,
     displayName: null, displayZodiac: null, displayShio: null, displayWeton: null, displayNeptu: null, displayWuku: null,
     loveFree: null, careerFree: null, financeFree: null, healthFree: null,
-    unlockBtn: null, premiumBox: null, loadingOverlay: null
+    unlockBtn: null, premiumBox: null, loadingOverlay: null,
+    numerologySection: null, soulUrgeValue: null, soulUrgeDesc: null,
+    personalityValue: null, personalityDesc: null, destinyValue: null, destinyDesc: null, powerName: null
 };
 
 function initDOMElements() {
     elements.userName = document.getElementById('userName');
     elements.birthDate = document.getElementById('birthDate');
+    elements.fullName = document.getElementById('fullName');
     elements.revealBtn = document.getElementById('revealBtn');
     elements.resultSection = document.getElementById('resultSection');
     elements.displayName = document.getElementById('displayName');
@@ -375,6 +476,14 @@ function initDOMElements() {
     elements.unlockBtn = document.getElementById('unlockPremiumBtn');
     elements.premiumBox = document.getElementById('premiumDetailBox');
     elements.loadingOverlay = document.getElementById('loadingOverlay');
+    elements.numerologySection = document.getElementById('numerologySection');
+    elements.soulUrgeValue = document.getElementById('soulUrgeValue');
+    elements.soulUrgeDesc = document.getElementById('soulUrgeDesc');
+    elements.personalityValue = document.getElementById('personalityValue');
+    elements.personalityDesc = document.getElementById('personalityDesc');
+    elements.destinyValue = document.getElementById('destinyValue');
+    elements.destinyDesc = document.getElementById('destinyDesc');
+    elements.powerName = document.getElementById('powerName');
 }
 
 function showLoading(show) {
@@ -390,12 +499,14 @@ async function fetchJSON(path) {
 async function loadAllData() {
     showLoading(true);
     try {
-        const [calendar, weton] = await Promise.all([
+        const [calendar, weton, numerology] = await Promise.all([
             fetchJSON(DATA_PATHS.calendar),
-            fetchJSON(DATA_PATHS.weton)
+            fetchJSON(DATA_PATHS.weton),
+            fetchJSON(DATA_PATHS.numerology)
         ]);
         calendarData = calendar;
         wetonData = weton;
+        numerologyData = numerology;
     } catch(e) {
         console.error('Gagal load data:', e);
         alert('Gagal memuat data. Refresh halaman.');
@@ -413,13 +524,43 @@ async function loadFortunes(zodiac) {
     }
 }
 
+function displayNumerology(fullName) {
+    if (!fullName || !numerologyData) {
+        elements.numerologySection.classList.add('hidden');
+        return;
+    }
+    
+    const numerology = calculateNumerology(fullName);
+    if (!numerology) {
+        elements.numerologySection.classList.add('hidden');
+        return;
+    }
+    
+    function getInterpretation(number) {
+        if (number === 11 || number === 22 || number === 33) {
+            return numerologyData.angka_master[number.toString()]?.judul || 'Angka Master';
+        }
+        return numerologyData.angka_dasar[number.toString()]?.judul || '-';
+    }
+    
+    elements.soulUrgeValue.textContent = numerology.soul_urge;
+    elements.soulUrgeDesc.textContent = getInterpretation(numerology.soul_urge);
+    elements.personalityValue.textContent = numerology.personality;
+    elements.personalityDesc.textContent = getInterpretation(numerology.personality);
+    elements.destinyValue.textContent = numerology.destiny;
+    elements.destinyDesc.textContent = getInterpretation(numerology.destiny);
+    elements.powerName.textContent = numerology.power_name;
+    
+    elements.numerologySection.classList.remove('hidden');
+}
+
 async function handleReveal() {
     const name = elements.userName.value.trim() || 'Sang Pencari';
+    const fullName = elements.fullName.value.trim();
     const birthVal = elements.birthDate.value;
     if (!birthVal) { alert('Pilih tanggal lahir.'); return; }
     if (!calendarData || !wetonData) { alert('Data masih dimuat.'); return; }
     
-    // Simpan nama user untuk keperluan pembayaran
     localStorage.setItem('userName', name);
     
     showLoading(true);
@@ -446,6 +587,10 @@ async function handleReveal() {
         elements.healthFree.textContent = `“${f.health}”`;
         
         currentFortunes = shioData;
+        
+        // Tampilkan numerologi jika nama lengkap diisi
+        displayNumerology(fullName);
+        
         elements.resultSection.classList.remove('hidden');
         elements.premiumBox.classList.add('hidden');
         elements.resultSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -489,7 +634,6 @@ function displayPremiumContent() {
     elements.premiumBox.classList.remove('hidden');
 }
 
-// Fungsi untuk menampilkan toast sukses
 function showSuccessToast(message) {
     const toast = document.createElement('div');
     toast.className = 'success-toast';
@@ -498,7 +642,6 @@ function showSuccessToast(message) {
     setTimeout(() => toast.remove(), 5000);
 }
 
-// Cek parameter payment_success dan aktifkan premium
 function checkPaymentSuccess() {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('payment_success') === '1') {
@@ -521,13 +664,11 @@ function checkPaymentSuccess() {
             
             showSuccessToast(`🎉 Selamat! Anda sekarang adalah member Premium (${pendingPlan})!`);
             
-            // Update tampilan tombol premium jika diperlukan
             if (elements.unlockBtn) {
                 elements.unlockBtn.innerHTML = '<i class="fas fa-unlock"></i> LIHAT RAMALAN PREMIUM';
             }
         }
         
-        // Hapus parameter dari URL
         window.history.replaceState({}, document.title, window.location.pathname);
     }
 }
@@ -538,10 +679,8 @@ async function init() {
     elements.birthDate.value = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
     await loadAllData();
     
-    // Cek apakah ada parameter payment_success
     checkPaymentSuccess();
     
-    // Cek status premium saat halaman dimuat
     if (localStorage.getItem('isPremium') === 'true') {
         const expiry = localStorage.getItem('premiumExpiry');
         if (expiry && new Date(expiry) > new Date()) {
@@ -556,23 +695,6 @@ async function init() {
     
     elements.revealBtn.addEventListener('click', handleReveal);
     elements.unlockBtn.addEventListener('click', handleUnlock);
-}
-function updateExpiryDisplay() {
-    const expiry = localStorage.getItem('premiumExpiry');
-    const isPremium = localStorage.getItem('isPremium') === 'true';
-    const infoEl = document.getElementById('premiumExpiryInfo');
-    
-    if (infoEl && isPremium && expiry) {
-        const expiryDate = new Date(expiry);
-        const now = new Date();
-        const daysLeft = Math.ceil((expiryDate - now) / (1000 * 60 * 60 * 24));
-        
-        if (daysLeft > 0) {
-            infoEl.innerHTML = `<i class="fas fa-crown" style="color:#C6A434;"></i> Premium aktif • ${daysLeft} hari lagi`;
-        } else {
-            infoEl.innerHTML = `<i class="fas fa-exclamation-triangle" style="color:#C6A434;"></i> Premium akan segera berakhir`;
-        }
-    }
 }
 
 document.addEventListener('DOMContentLoaded', init);
