@@ -115,6 +115,18 @@
       margin-bottom: 24px;
     }
     .category-name { font-size: 2rem; font-family: 'Cinzel', serif; color: #EFE1B9; }
+    
+    .token-display-section { text-align: center; margin: 20px 0; }
+    .token-badge {
+      background: #1C1A2E;
+      border: 2px solid #C6A434;
+      border-radius: 40px;
+      padding: 12px 32px;
+      display: inline-block;
+    }
+    .token-badge i { color: #C6A434; margin-right: 8px; }
+    .token-badge span { font-weight: 700; color: #C6A434; font-size: 1.5rem; margin-left: 8px; }
+
     .premium-lock { text-align: center; margin-top: 20px; }
     .btn-premium {
       background: transparent;
@@ -195,7 +207,7 @@
       <a href="dewasa-ayu.html" style="margin-left:16px;"><i class="fas fa-sun"></i> Dewasa Ayu</a>
       <a href="pustaka.html" style="margin-left:16px;"><i class="fas fa-book-open"></i> Pustaka</a>
     </div>
-    <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-crown"></i> Premium</a>
+    <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-coins"></i> Beli Token</a>
   </div>
 
   <div class="mystic-header">
@@ -266,11 +278,17 @@
         </div>
       </div>
 
+      <div class="token-display-section">
+        <div class="token-badge">
+          <i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span>
+        </div>
+      </div>
+
       <div class="premium-lock">
-        <button class="btn-premium" id="premiumBtn"><i class="fas fa-lock"></i> BUKA ANALISIS MENDALAM</button>
+        <button class="btn-premium" id="premiumBtn"><i class="fas fa-lock"></i> BUKA ANALISIS MENDALAM (1 Token)</button>
       </div>
       <div id="premiumBox" class="premium-detail hidden"></div>
-      <p style="margin-top:16px; font-size:0.9rem;"><i class="fas fa-info-circle"></i> Versi gratis menampilkan kategori. Analisis lengkap untuk member Premium.</p>
+      <p style="margin-top:16px; font-size:0.9rem;"><i class="fas fa-info-circle"></i> Versi gratis menampilkan kategori. Gunakan 1 Token untuk analisis lengkap.</p>
     </div>
   </div>
 
@@ -307,9 +325,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     ]);
     kecocokanData = await wetonRes.json();
     calendarData = await calRes.json();
-  } catch(e) {
-    console.error('Gagal load data', e);
-  }
+  } catch(e) { console.error('Gagal load data', e); }
 
   const params = new URLSearchParams(window.location.search);
   if (params.has('n1') && params.has('b1') && params.has('n2') && params.has('b2')) {
@@ -320,12 +336,27 @@ document.addEventListener('DOMContentLoaded', async () => {
     setTimeout(() => calculate(true), 500);
   }
 
+  updateTokenDisplay();
   document.getElementById('checkBtn').addEventListener('click', () => calculate(false));
   document.getElementById('premiumBtn').addEventListener('click', handlePremium);
   document.getElementById('copyLinkBtn').addEventListener('click', copyLink);
   document.getElementById('shareWA').addEventListener('click', shareWA);
   document.getElementById('shareTelegram').addEventListener('click', shareTelegram);
 });
+
+function updateTokenDisplay() {
+    const balance = localStorage.getItem('tokenBalance') || '0';
+    document.getElementById('tokenBalanceSpan').textContent = balance;
+    const btn = document.getElementById('premiumBtn');
+    if (btn) {
+        const token = parseInt(balance) || 0;
+        if (token > 0) {
+            btn.innerHTML = `<i class="fas fa-unlock"></i> BUKA ANALISIS MENDALAM (${token} Token tersedia)`;
+        } else {
+            btn.innerHTML = '<i class="fas fa-shopping-cart"></i> BELI TOKEN UNTUK BUKA PREMIUM';
+        }
+    }
+}
 
 function analyzeWuku(wuku1, wuku2) {
   const w1 = calendarData.wuku.find(w => w.name === wuku1);
@@ -342,22 +373,11 @@ function analyzeWuku(wuku1, wuku2) {
   let level = 'Cukup';
   let desc = '';
   
-  if (sameElement) {
-    level = 'Sangat Baik';
-    desc = `Keduanya lahir di Wuku dengan elemen ${w1.element} yang sama.`;
-  } else if (elementCompatible) {
-    level = 'Baik';
-    desc = `Elemen Wuku ${w1.element} dan ${w2.element} saling melengkapi.`;
-  } else if (uripDiff === 0) {
-    level = 'Sangat Baik';
-    desc = `Keduanya memiliki Urip Wuku yang sama.`;
-  } else if (uripDiff % 3 === 0) {
-    level = 'Baik';
-    desc = `Selisih Urip Wuku (${uripDiff}) adalah bilangan harmonis.`;
-  } else {
-    level = 'Cukup';
-    desc = `Wuku ${w1.name} dan ${w2.name} memiliki karakter berbeda.`;
-  }
+  if (sameElement) { level = 'Sangat Baik'; desc = `Keduanya lahir di Wuku dengan elemen ${w1.element} yang sama.`; }
+  else if (elementCompatible) { level = 'Baik'; desc = `Elemen Wuku ${w1.element} dan ${w2.element} saling melengkapi.`; }
+  else if (uripDiff === 0) { level = 'Sangat Baik'; desc = `Keduanya memiliki Urip Wuku yang sama.`; }
+  else if (uripDiff % 3 === 0) { level = 'Baik'; desc = `Selisih Urip Wuku (${uripDiff}) adalah bilangan harmonis.`; }
+  else { level = 'Cukup'; desc = `Wuku ${w1.name} dan ${w2.name} memiliki karakter berbeda.`; }
   
   return { level, desc, w1, w2 };
 }
@@ -429,17 +449,18 @@ async function calculate(skipScroll) {
 }
 
 function handlePremium() {
-  if (localStorage.getItem('isPremium') === 'true') {
-    const expiry = localStorage.getItem('premiumExpiry');
-    if (expiry && new Date(expiry) > new Date()) {
-      displayPremiumContent();
-    } else {
-      localStorage.removeItem('isPremium');
-      localStorage.removeItem('premiumExpiry');
+  let tokenBalance = parseInt(localStorage.getItem('tokenBalance') || '0');
+  
+  if (tokenBalance > 0) {
+    tokenBalance -= 1;
+    localStorage.setItem('tokenBalance', tokenBalance);
+    displayPremiumContent();
+    updateTokenDisplay();
+    showToast(`✅ 1 Token digunakan. Sisa ${tokenBalance} Token.`);
+  } else {
+    if (confirm('Token Anda habis. Ingin membeli token sekarang?')) {
       window.location.href = 'pricing.html';
     }
-  } else {
-    window.location.href = 'pricing.html';
   }
 }
 
@@ -472,14 +493,17 @@ function displayPremiumContent() {
   document.getElementById('premiumBox').classList.remove('hidden');
 }
 
+function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.remove('hidden');
+    setTimeout(() => toast.classList.add('hidden'), 3000);
+}
+
 function copyLink() {
   const input = document.getElementById('shareLink');
   input.select();
-  navigator.clipboard?.writeText(input.value).then(() => {
-    const toast = document.getElementById('toast');
-    toast.classList.remove('hidden');
-    setTimeout(() => toast.classList.add('hidden'), 2000);
-  });
+  navigator.clipboard?.writeText(input.value).then(() => showToast('Tautan disalin!'));
 }
 
 function shareWA() {
