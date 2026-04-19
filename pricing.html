@@ -286,6 +286,18 @@ async function processPayment(method) {
     
     const orderId = 'TOKEN-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7);
     
+    // ========== SIMPAN DATA FORM SEMENTARA ==========
+    const savedName = localStorage.getItem('temp_userName');
+    const savedBirth = localStorage.getItem('temp_birthDate');
+    const savedFullName = localStorage.getItem('temp_fullName');
+    
+    if (savedName || savedBirth || savedFullName) {
+        localStorage.setItem('pendingUserName', savedName || '');
+        localStorage.setItem('pendingBirthDate', savedBirth || '');
+        localStorage.setItem('pendingFullName', savedFullName || '');
+    }
+    // =============================================
+    
     isLoading = true;
     const container = document.getElementById('paymentMethodsContainer');
     container.innerHTML = '<div class="loading-spinner"></div><p style="margin-top: 16px;">Menghubungkan ke Midtrans...</p>';
@@ -327,12 +339,6 @@ async function processPayment(method) {
 
 function init() {
     updateTokenDisplay();
-    
-    // Cek apakah user sudah punya token, disable tombol jika perlu
-    const balance = parseInt(localStorage.getItem('tokenBalance') || '0');
-    if (balance > 0) {
-        // Bisa tambahkan pesan "Anda sudah punya token"
-    }
 }
 
 document.addEventListener('DOMContentLoaded', init);
