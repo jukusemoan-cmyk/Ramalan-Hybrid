@@ -1,0 +1,1004 @@
+{
+  "daymaster_pairs": [
+    {
+      "dm1": "Jia",
+      "dm2": "Jia",
+      "compatibility": "Cukup Cocok",
+      "score": 70,
+      "strength": "Dua Jia saling memahami esensi satu sama lain.",
+      "challenge": "Bisa saling berkompetisi.",
+      "taboo": "Hindari perebutan dominasi.",
+      "solution": "Tetapkan wilayah masing-masing."
+    },
+    {
+      "dm1": "Jia",
+      "dm2": "Yi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Jia",
+      "dm2": "Bing",
+      "compatibility": "Sangat Cocok",
+      "score": 90,
+      "strength": "Kayu menghasilkan Api—hubungan yang saling menghidupkan.",
+      "challenge": "Api bisa membakar Kayu jika terlalu besar.",
+      "taboo": "Api jangan menguras Kayu.",
+      "solution": "Kayu beri dukungan, Api beri kehangatan."
+    },
+    {
+      "dm1": "Jia",
+      "dm2": "Ding",
+      "compatibility": "Sangat Cocok",
+      "score": 90,
+      "strength": "Kayu menghasilkan Api—hubungan yang saling menghidupkan.",
+      "challenge": "Api bisa membakar Kayu jika terlalu besar.",
+      "taboo": "Api jangan menguras Kayu.",
+      "solution": "Kayu beri dukungan, Api beri kehangatan."
+    },
+    {
+      "dm1": "Jia",
+      "dm2": "Wu",
+      "compatibility": "Kurang Cocok",
+      "score": 55,
+      "strength": "Kayu mengendalikan Tanah—struktur dan batasan.",
+      "challenge": "Kayu bisa merusak Tanah.",
+      "taboo": "Jangan saling mendominasi.",
+      "solution": "Kayu belajar melepaskan, Tanah belajar bertahan."
+    },
+    {
+      "dm1": "Jia",
+      "dm2": "Ji",
+      "compatibility": "Kurang Cocok",
+      "score": 55,
+      "strength": "Kayu mengendalikan Tanah—struktur dan batasan.",
+      "challenge": "Kayu bisa merusak Tanah.",
+      "taboo": "Jangan saling mendominasi.",
+      "solution": "Kayu belajar melepaskan, Tanah belajar bertahan."
+    },
+    {
+      "dm1": "Jia",
+      "dm2": "Geng",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Jia",
+      "dm2": "Xin",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Jia",
+      "dm2": "Ren",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Air menghasilkan Kayu—pertumbuhan dan nutrisi.",
+      "challenge": "Air bisa membuat Kayu busuk jika berlebihan.",
+      "taboo": "Jangan membanjiri atau menenggelamkan.",
+      "solution": "Air beri cukup, Kayu tumbuh mandiri."
+    },
+    {
+      "dm1": "Jia",
+      "dm2": "Gui",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Air menghasilkan Kayu—pertumbuhan dan nutrisi.",
+      "challenge": "Air bisa membuat Kayu busuk jika berlebihan.",
+      "taboo": "Jangan membanjiri atau menenggelamkan.",
+      "solution": "Air beri cukup, Kayu tumbuh mandiri."
+    },
+    {
+      "dm1": "Yi",
+      "dm2": "Jia",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Yi",
+      "dm2": "Yi",
+      "compatibility": "Cukup Cocok",
+      "score": 70,
+      "strength": "Dua Yi saling memahami esensi satu sama lain.",
+      "challenge": "Bisa saling berkompetisi.",
+      "taboo": "Hindari perebutan dominasi.",
+      "solution": "Tetapkan wilayah masing-masing."
+    },
+    {
+      "dm1": "Yi",
+      "dm2": "Bing",
+      "compatibility": "Sangat Cocok",
+      "score": 90,
+      "strength": "Kayu menghasilkan Api—hubungan yang saling menghidupkan.",
+      "challenge": "Api bisa membakar Kayu jika terlalu besar.",
+      "taboo": "Api jangan menguras Kayu.",
+      "solution": "Kayu beri dukungan, Api beri kehangatan."
+    },
+    {
+      "dm1": "Yi",
+      "dm2": "Ding",
+      "compatibility": "Sangat Cocok",
+      "score": 90,
+      "strength": "Kayu menghasilkan Api—hubungan yang saling menghidupkan.",
+      "challenge": "Api bisa membakar Kayu jika terlalu besar.",
+      "taboo": "Api jangan menguras Kayu.",
+      "solution": "Kayu beri dukungan, Api beri kehangatan."
+    },
+    {
+      "dm1": "Yi",
+      "dm2": "Wu",
+      "compatibility": "Kurang Cocok",
+      "score": 55,
+      "strength": "Kayu mengendalikan Tanah—struktur dan batasan.",
+      "challenge": "Kayu bisa merusak Tanah.",
+      "taboo": "Jangan saling mendominasi.",
+      "solution": "Kayu belajar melepaskan, Tanah belajar bertahan."
+    },
+    {
+      "dm1": "Yi",
+      "dm2": "Ji",
+      "compatibility": "Kurang Cocok",
+      "score": 55,
+      "strength": "Kayu mengendalikan Tanah—struktur dan batasan.",
+      "challenge": "Kayu bisa merusak Tanah.",
+      "taboo": "Jangan saling mendominasi.",
+      "solution": "Kayu belajar melepaskan, Tanah belajar bertahan."
+    },
+    {
+      "dm1": "Yi",
+      "dm2": "Geng",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Yi",
+      "dm2": "Xin",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Yi",
+      "dm2": "Ren",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Air menghasilkan Kayu—pertumbuhan dan nutrisi.",
+      "challenge": "Air bisa membuat Kayu busuk jika berlebihan.",
+      "taboo": "Jangan membanjiri atau menenggelamkan.",
+      "solution": "Air beri cukup, Kayu tumbuh mandiri."
+    },
+    {
+      "dm1": "Yi",
+      "dm2": "Gui",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Air menghasilkan Kayu—pertumbuhan dan nutrisi.",
+      "challenge": "Air bisa membuat Kayu busuk jika berlebihan.",
+      "taboo": "Jangan membanjiri atau menenggelamkan.",
+      "solution": "Air beri cukup, Kayu tumbuh mandiri."
+    },
+    {
+      "dm1": "Bing",
+      "dm2": "Jia",
+      "compatibility": "Sangat Cocok",
+      "score": 90,
+      "strength": "Kayu menghasilkan Api—hubungan yang saling menghidupkan.",
+      "challenge": "Api bisa membakar Kayu jika terlalu besar.",
+      "taboo": "Api jangan menguras Kayu.",
+      "solution": "Kayu beri dukungan, Api beri kehangatan."
+    },
+    {
+      "dm1": "Bing",
+      "dm2": "Yi",
+      "compatibility": "Sangat Cocok",
+      "score": 90,
+      "strength": "Kayu menghasilkan Api—hubungan yang saling menghidupkan.",
+      "challenge": "Api bisa membakar Kayu jika terlalu besar.",
+      "taboo": "Api jangan menguras Kayu.",
+      "solution": "Kayu beri dukungan, Api beri kehangatan."
+    },
+    {
+      "dm1": "Bing",
+      "dm2": "Bing",
+      "compatibility": "Cukup Cocok",
+      "score": 70,
+      "strength": "Dua Bing saling memahami esensi satu sama lain.",
+      "challenge": "Bisa saling berkompetisi.",
+      "taboo": "Hindari perebutan dominasi.",
+      "solution": "Tetapkan wilayah masing-masing."
+    },
+    {
+      "dm1": "Bing",
+      "dm2": "Ding",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Bing",
+      "dm2": "Wu",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Api menghasilkan Tanah—fondasi yang kokoh.",
+      "challenge": "Api bisa membuat Tanah terlalu kering.",
+      "taboo": "Jangan saling menjadikan abu.",
+      "solution": "Api beri semangat, Tanah beri stabilitas."
+    },
+    {
+      "dm1": "Bing",
+      "dm2": "Ji",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Api menghasilkan Tanah—fondasi yang kokoh.",
+      "challenge": "Api bisa membuat Tanah terlalu kering.",
+      "taboo": "Jangan saling menjadikan abu.",
+      "solution": "Api beri semangat, Tanah beri stabilitas."
+    },
+    {
+      "dm1": "Bing",
+      "dm2": "Geng",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Bing",
+      "dm2": "Xin",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Bing",
+      "dm2": "Ren",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Bing",
+      "dm2": "Gui",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ding",
+      "dm2": "Jia",
+      "compatibility": "Sangat Cocok",
+      "score": 90,
+      "strength": "Kayu menghasilkan Api—hubungan yang saling menghidupkan.",
+      "challenge": "Api bisa membakar Kayu jika terlalu besar.",
+      "taboo": "Api jangan menguras Kayu.",
+      "solution": "Kayu beri dukungan, Api beri kehangatan."
+    },
+    {
+      "dm1": "Ding",
+      "dm2": "Yi",
+      "compatibility": "Sangat Cocok",
+      "score": 90,
+      "strength": "Kayu menghasilkan Api—hubungan yang saling menghidupkan.",
+      "challenge": "Api bisa membakar Kayu jika terlalu besar.",
+      "taboo": "Api jangan menguras Kayu.",
+      "solution": "Kayu beri dukungan, Api beri kehangatan."
+    },
+    {
+      "dm1": "Ding",
+      "dm2": "Bing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ding",
+      "dm2": "Ding",
+      "compatibility": "Cukup Cocok",
+      "score": 70,
+      "strength": "Dua Ding saling memahami esensi satu sama lain.",
+      "challenge": "Bisa saling berkompetisi.",
+      "taboo": "Hindari perebutan dominasi.",
+      "solution": "Tetapkan wilayah masing-masing."
+    },
+    {
+      "dm1": "Ding",
+      "dm2": "Wu",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Api menghasilkan Tanah—fondasi yang kokoh.",
+      "challenge": "Api bisa membuat Tanah terlalu kering.",
+      "taboo": "Jangan saling menjadikan abu.",
+      "solution": "Api beri semangat, Tanah beri stabilitas."
+    },
+    {
+      "dm1": "Ding",
+      "dm2": "Ji",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Api menghasilkan Tanah—fondasi yang kokoh.",
+      "challenge": "Api bisa membuat Tanah terlalu kering.",
+      "taboo": "Jangan saling menjadikan abu.",
+      "solution": "Api beri semangat, Tanah beri stabilitas."
+    },
+    {
+      "dm1": "Ding",
+      "dm2": "Geng",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ding",
+      "dm2": "Xin",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ding",
+      "dm2": "Ren",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ding",
+      "dm2": "Gui",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Wu",
+      "dm2": "Jia",
+      "compatibility": "Kurang Cocok",
+      "score": 55,
+      "strength": "Kayu mengendalikan Tanah—struktur dan batasan.",
+      "challenge": "Kayu bisa merusak Tanah.",
+      "taboo": "Jangan saling mendominasi.",
+      "solution": "Kayu belajar melepaskan, Tanah belajar bertahan."
+    },
+    {
+      "dm1": "Wu",
+      "dm2": "Yi",
+      "compatibility": "Kurang Cocok",
+      "score": 55,
+      "strength": "Kayu mengendalikan Tanah—struktur dan batasan.",
+      "challenge": "Kayu bisa merusak Tanah.",
+      "taboo": "Jangan saling mendominasi.",
+      "solution": "Kayu belajar melepaskan, Tanah belajar bertahan."
+    },
+    {
+      "dm1": "Wu",
+      "dm2": "Bing",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Api menghasilkan Tanah—fondasi yang kokoh.",
+      "challenge": "Api bisa membuat Tanah terlalu kering.",
+      "taboo": "Jangan saling menjadikan abu.",
+      "solution": "Api beri semangat, Tanah beri stabilitas."
+    },
+    {
+      "dm1": "Wu",
+      "dm2": "Ding",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Api menghasilkan Tanah—fondasi yang kokoh.",
+      "challenge": "Api bisa membuat Tanah terlalu kering.",
+      "taboo": "Jangan saling menjadikan abu.",
+      "solution": "Api beri semangat, Tanah beri stabilitas."
+    },
+    {
+      "dm1": "Wu",
+      "dm2": "Wu",
+      "compatibility": "Cukup Cocok",
+      "score": 70,
+      "strength": "Dua Wu saling memahami esensi satu sama lain.",
+      "challenge": "Bisa saling berkompetisi.",
+      "taboo": "Hindari perebutan dominasi.",
+      "solution": "Tetapkan wilayah masing-masing."
+    },
+    {
+      "dm1": "Wu",
+      "dm2": "Ji",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Wu",
+      "dm2": "Geng",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah menghasilkan Logam—nilai dan struktur.",
+      "challenge": "Logam bisa mengeraskan Tanah.",
+      "taboo": "Jangan terlalu kaku.",
+      "solution": "Tanah beri ruang, Logam beri ketajaman."
+    },
+    {
+      "dm1": "Wu",
+      "dm2": "Xin",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah menghasilkan Logam—nilai dan struktur.",
+      "challenge": "Logam bisa mengeraskan Tanah.",
+      "taboo": "Jangan terlalu kaku.",
+      "solution": "Tanah beri ruang, Logam beri ketajaman."
+    },
+    {
+      "dm1": "Wu",
+      "dm2": "Ren",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Wu",
+      "dm2": "Gui",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ji",
+      "dm2": "Jia",
+      "compatibility": "Kurang Cocok",
+      "score": 55,
+      "strength": "Kayu mengendalikan Tanah—struktur dan batasan.",
+      "challenge": "Kayu bisa merusak Tanah.",
+      "taboo": "Jangan saling mendominasi.",
+      "solution": "Kayu belajar melepaskan, Tanah belajar bertahan."
+    },
+    {
+      "dm1": "Ji",
+      "dm2": "Yi",
+      "compatibility": "Kurang Cocok",
+      "score": 55,
+      "strength": "Kayu mengendalikan Tanah—struktur dan batasan.",
+      "challenge": "Kayu bisa merusak Tanah.",
+      "taboo": "Jangan saling mendominasi.",
+      "solution": "Kayu belajar melepaskan, Tanah belajar bertahan."
+    },
+    {
+      "dm1": "Ji",
+      "dm2": "Bing",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Api menghasilkan Tanah—fondasi yang kokoh.",
+      "challenge": "Api bisa membuat Tanah terlalu kering.",
+      "taboo": "Jangan saling menjadikan abu.",
+      "solution": "Api beri semangat, Tanah beri stabilitas."
+    },
+    {
+      "dm1": "Ji",
+      "dm2": "Ding",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Api menghasilkan Tanah—fondasi yang kokoh.",
+      "challenge": "Api bisa membuat Tanah terlalu kering.",
+      "taboo": "Jangan saling menjadikan abu.",
+      "solution": "Api beri semangat, Tanah beri stabilitas."
+    },
+    {
+      "dm1": "Ji",
+      "dm2": "Wu",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ji",
+      "dm2": "Ji",
+      "compatibility": "Cukup Cocok",
+      "score": 70,
+      "strength": "Dua Ji saling memahami esensi satu sama lain.",
+      "challenge": "Bisa saling berkompetisi.",
+      "taboo": "Hindari perebutan dominasi.",
+      "solution": "Tetapkan wilayah masing-masing."
+    },
+    {
+      "dm1": "Ji",
+      "dm2": "Geng",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah menghasilkan Logam—nilai dan struktur.",
+      "challenge": "Logam bisa mengeraskan Tanah.",
+      "taboo": "Jangan terlalu kaku.",
+      "solution": "Tanah beri ruang, Logam beri ketajaman."
+    },
+    {
+      "dm1": "Ji",
+      "dm2": "Xin",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah menghasilkan Logam—nilai dan struktur.",
+      "challenge": "Logam bisa mengeraskan Tanah.",
+      "taboo": "Jangan terlalu kaku.",
+      "solution": "Tanah beri ruang, Logam beri ketajaman."
+    },
+    {
+      "dm1": "Ji",
+      "dm2": "Ren",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ji",
+      "dm2": "Gui",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Geng",
+      "dm2": "Jia",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Geng",
+      "dm2": "Yi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Geng",
+      "dm2": "Bing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Geng",
+      "dm2": "Ding",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Geng",
+      "dm2": "Wu",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah menghasilkan Logam—nilai dan struktur.",
+      "challenge": "Logam bisa mengeraskan Tanah.",
+      "taboo": "Jangan terlalu kaku.",
+      "solution": "Tanah beri ruang, Logam beri ketajaman."
+    },
+    {
+      "dm1": "Geng",
+      "dm2": "Ji",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah menghasilkan Logam—nilai dan struktur.",
+      "challenge": "Logam bisa mengeraskan Tanah.",
+      "taboo": "Jangan terlalu kaku.",
+      "solution": "Tanah beri ruang, Logam beri ketajaman."
+    },
+    {
+      "dm1": "Geng",
+      "dm2": "Geng",
+      "compatibility": "Cukup Cocok",
+      "score": 70,
+      "strength": "Dua Geng saling memahami esensi satu sama lain.",
+      "challenge": "Bisa saling berkompetisi.",
+      "taboo": "Hindari perebutan dominasi.",
+      "solution": "Tetapkan wilayah masing-masing."
+    },
+    {
+      "dm1": "Geng",
+      "dm2": "Xin",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Geng",
+      "dm2": "Ren",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Logam menghasilkan Air—aliran dan kemurnian.",
+      "challenge": "Air bisa membuat Logam berkarat.",
+      "taboo": "Jangan mengikis satu sama lain.",
+      "solution": "Logam beri bentuk, Air beri kehidupan."
+    },
+    {
+      "dm1": "Geng",
+      "dm2": "Gui",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Logam menghasilkan Air—aliran dan kemurnian.",
+      "challenge": "Air bisa membuat Logam berkarat.",
+      "taboo": "Jangan mengikis satu sama lain.",
+      "solution": "Logam beri bentuk, Air beri kehidupan."
+    },
+    {
+      "dm1": "Xin",
+      "dm2": "Jia",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Xin",
+      "dm2": "Yi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Xin",
+      "dm2": "Bing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Xin",
+      "dm2": "Ding",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Xin",
+      "dm2": "Wu",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah menghasilkan Logam—nilai dan struktur.",
+      "challenge": "Logam bisa mengeraskan Tanah.",
+      "taboo": "Jangan terlalu kaku.",
+      "solution": "Tanah beri ruang, Logam beri ketajaman."
+    },
+    {
+      "dm1": "Xin",
+      "dm2": "Ji",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah menghasilkan Logam—nilai dan struktur.",
+      "challenge": "Logam bisa mengeraskan Tanah.",
+      "taboo": "Jangan terlalu kaku.",
+      "solution": "Tanah beri ruang, Logam beri ketajaman."
+    },
+    {
+      "dm1": "Xin",
+      "dm2": "Geng",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Xin",
+      "dm2": "Xin",
+      "compatibility": "Cukup Cocok",
+      "score": 70,
+      "strength": "Dua Xin saling memahami esensi satu sama lain.",
+      "challenge": "Bisa saling berkompetisi.",
+      "taboo": "Hindari perebutan dominasi.",
+      "solution": "Tetapkan wilayah masing-masing."
+    },
+    {
+      "dm1": "Xin",
+      "dm2": "Ren",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Logam menghasilkan Air—aliran dan kemurnian.",
+      "challenge": "Air bisa membuat Logam berkarat.",
+      "taboo": "Jangan mengikis satu sama lain.",
+      "solution": "Logam beri bentuk, Air beri kehidupan."
+    },
+    {
+      "dm1": "Xin",
+      "dm2": "Gui",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Logam menghasilkan Air—aliran dan kemurnian.",
+      "challenge": "Air bisa membuat Logam berkarat.",
+      "taboo": "Jangan mengikis satu sama lain.",
+      "solution": "Logam beri bentuk, Air beri kehidupan."
+    },
+    {
+      "dm1": "Ren",
+      "dm2": "Jia",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Air menghasilkan Kayu—pertumbuhan dan nutrisi.",
+      "challenge": "Air bisa membuat Kayu busuk jika berlebihan.",
+      "taboo": "Jangan membanjiri atau menenggelamkan.",
+      "solution": "Air beri cukup, Kayu tumbuh mandiri."
+    },
+    {
+      "dm1": "Ren",
+      "dm2": "Yi",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Air menghasilkan Kayu—pertumbuhan dan nutrisi.",
+      "challenge": "Air bisa membuat Kayu busuk jika berlebihan.",
+      "taboo": "Jangan membanjiri atau menenggelamkan.",
+      "solution": "Air beri cukup, Kayu tumbuh mandiri."
+    },
+    {
+      "dm1": "Ren",
+      "dm2": "Bing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ren",
+      "dm2": "Ding",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ren",
+      "dm2": "Wu",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ren",
+      "dm2": "Ji",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Ren",
+      "dm2": "Geng",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Logam menghasilkan Air—aliran dan kemurnian.",
+      "challenge": "Air bisa membuat Logam berkarat.",
+      "taboo": "Jangan mengikis satu sama lain.",
+      "solution": "Logam beri bentuk, Air beri kehidupan."
+    },
+    {
+      "dm1": "Ren",
+      "dm2": "Xin",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Logam menghasilkan Air—aliran dan kemurnian.",
+      "challenge": "Air bisa membuat Logam berkarat.",
+      "taboo": "Jangan mengikis satu sama lain.",
+      "solution": "Logam beri bentuk, Air beri kehidupan."
+    },
+    {
+      "dm1": "Ren",
+      "dm2": "Ren",
+      "compatibility": "Cukup Cocok",
+      "score": 70,
+      "strength": "Dua Ren saling memahami esensi satu sama lain.",
+      "challenge": "Bisa saling berkompetisi.",
+      "taboo": "Hindari perebutan dominasi.",
+      "solution": "Tetapkan wilayah masing-masing."
+    },
+    {
+      "dm1": "Ren",
+      "dm2": "Gui",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Gui",
+      "dm2": "Jia",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Air menghasilkan Kayu—pertumbuhan dan nutrisi.",
+      "challenge": "Air bisa membuat Kayu busuk jika berlebihan.",
+      "taboo": "Jangan membanjiri atau menenggelamkan.",
+      "solution": "Air beri cukup, Kayu tumbuh mandiri."
+    },
+    {
+      "dm1": "Gui",
+      "dm2": "Yi",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Air menghasilkan Kayu—pertumbuhan dan nutrisi.",
+      "challenge": "Air bisa membuat Kayu busuk jika berlebihan.",
+      "taboo": "Jangan membanjiri atau menenggelamkan.",
+      "solution": "Air beri cukup, Kayu tumbuh mandiri."
+    },
+    {
+      "dm1": "Gui",
+      "dm2": "Bing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Gui",
+      "dm2": "Ding",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Gui",
+      "dm2": "Wu",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Gui",
+      "dm2": "Ji",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Gui",
+      "dm2": "Geng",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Logam menghasilkan Air—aliran dan kemurnian.",
+      "challenge": "Air bisa membuat Logam berkarat.",
+      "taboo": "Jangan mengikis satu sama lain.",
+      "solution": "Logam beri bentuk, Air beri kehidupan."
+    },
+    {
+      "dm1": "Gui",
+      "dm2": "Xin",
+      "compatibility": "Sangat Cocok",
+      "score": 85,
+      "strength": "Logam menghasilkan Air—aliran dan kemurnian.",
+      "challenge": "Air bisa membuat Logam berkarat.",
+      "taboo": "Jangan mengikis satu sama lain.",
+      "solution": "Logam beri bentuk, Air beri kehidupan."
+    },
+    {
+      "dm1": "Gui",
+      "dm2": "Ren",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kombinasi yang membutuhkan usaha.",
+      "challenge": "Perbedaan mendasar perlu dijembatani.",
+      "taboo": "Hindari menyalahkan elemen satu sama lain.",
+      "solution": "Fokus pada tujuan bersama."
+    },
+    {
+      "dm1": "Gui",
+      "dm2": "Gui",
+      "compatibility": "Cukup Cocok",
+      "score": 70,
+      "strength": "Dua Gui saling memahami esensi satu sama lain.",
+      "challenge": "Bisa saling berkompetisi.",
+      "taboo": "Hindari perebutan dominasi.",
+      "solution": "Tetapkan wilayah masing-masing."
+    }
+  ]
+}

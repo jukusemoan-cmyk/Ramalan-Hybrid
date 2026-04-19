@@ -1,0 +1,1444 @@
+{
+  "shio_pairs": [
+    {
+      "shio1": "Tikus",
+      "shio2": "Tikus",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Keduanya cerdas dan adaptif.",
+      "challenge": "Bisa terjebak overthinking.",
+      "taboo": "Hindari saling mengkritik soal uang.",
+      "solution": "Jadwalkan waktu santai tanpa bahas kerjaan."
+    },
+    {
+      "shio1": "Tikus",
+      "shio2": "Kerbau",
+      "compatibility": "Sangat Cocok",
+      "score": 90,
+      "strength": "Saling melengkapi—Tikus cerdas, Kerbau kuat.",
+      "challenge": "Kerbau kaku, Tikus licin.",
+      "taboo": "Jangan remehkan kerja keras Kerbau.",
+      "solution": "Tikus jadi otak, Kerbau jadi otot."
+    },
+    {
+      "shio1": "Tikus",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Macan melindungi, Tikus menasihati.",
+      "challenge": "Macan dominan, Tikus bisa terintimidasi.",
+      "taboo": "Hindari konfrontasi saat Macan marah.",
+      "solution": "Tikus sampaikan kritik dengan diplomasi."
+    },
+    {
+      "shio1": "Tikus",
+      "shio2": "Kelinci",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Sama-sama cinta damai.",
+      "challenge": "Tikus ambisius, Kelinci pasif.",
+      "taboo": "Jangan paksa Kelinci keluar zona nyaman.",
+      "solution": "Ciptakan rasa aman dulu."
+    },
+    {
+      "shio1": "Tikus",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Tikus dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Tikus",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Tikus dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Tikus",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Tikus dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Tikus",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Tikus dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Tikus",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Tikus dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Tikus",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Tikus dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Tikus",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Tikus dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Tikus",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Tikus dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Tikus",
+      "compatibility": "Sangat Cocok",
+      "score": 90,
+      "strength": "Saling melengkapi—Tikus cerdas, Kerbau kuat.",
+      "challenge": "Kerbau kaku, Tikus licin.",
+      "taboo": "Jangan remehkan kerja keras Kerbau.",
+      "solution": "Tikus jadi otak, Kerbau jadi otot."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Kerbau",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kerbau dan Kerbau memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kerbau dan Macan memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Kelinci",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kerbau dan Kelinci memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kerbau dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kerbau dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kerbau dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kerbau dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kerbau dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kerbau dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kerbau dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kerbau",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kerbau dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Tikus",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Macan melindungi, Tikus menasihati.",
+      "challenge": "Macan dominan, Tikus bisa terintimidasi.",
+      "taboo": "Hindari konfrontasi saat Macan marah.",
+      "solution": "Tikus sampaikan kritik dengan diplomasi."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Kerbau",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Macan dan Kerbau memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Macan dan Macan memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Kelinci",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Macan dan Kelinci memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Macan dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Macan dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Macan dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Macan dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Macan dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Macan dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Macan dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Macan",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Macan dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Tikus",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Sama-sama cinta damai.",
+      "challenge": "Tikus ambisius, Kelinci pasif.",
+      "taboo": "Jangan paksa Kelinci keluar zona nyaman.",
+      "solution": "Ciptakan rasa aman dulu."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Kerbau",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kelinci dan Kerbau memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kelinci dan Macan memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Kelinci",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kelinci dan Kelinci memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kelinci dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kelinci dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kelinci dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kelinci dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kelinci dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kelinci dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kelinci dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kelinci",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kelinci dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Tikus",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Tikus memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Kerbau",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Kerbau memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Macan memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Kelinci",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Kelinci memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Naga",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Naga dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Tikus",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Tikus memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Kerbau",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Kerbau memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Macan memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Kelinci",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Kelinci memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ular",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ular dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Tikus",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Tikus memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Kerbau",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Kerbau memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Macan memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Kelinci",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Kelinci memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kuda",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kuda dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Tikus",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Tikus memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Kerbau",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Kerbau memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Macan memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Kelinci",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Kelinci memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Kambing",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Kambing dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Tikus",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Tikus memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Kerbau",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Kerbau memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Macan memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Kelinci",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Kelinci memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Monyet",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Monyet dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Tikus",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Tikus memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Kerbau",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Kerbau memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Macan memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Kelinci",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Kelinci memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Ayam",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Ayam dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Tikus",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Tikus memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Kerbau",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Kerbau memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Macan memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Kelinci",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Kelinci memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Anjing",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Anjing dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Tikus",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Tikus memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Kerbau",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Kerbau memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Macan",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Macan memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Kelinci",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Kelinci memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Naga",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Naga memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Ular",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Ular memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Kuda",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Kuda memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Kambing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Kambing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Monyet",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Monyet memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Ayam",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Ayam memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Anjing",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Anjing memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    },
+    {
+      "shio1": "Babi",
+      "shio2": "Babi",
+      "compatibility": "Cukup Cocok",
+      "score": 60,
+      "strength": "Babi dan Babi memiliki dinamika yang unik.",
+      "challenge": "Perbedaan karakter perlu dikelola.",
+      "taboo": "Hindari saling memaksakan kehendak.",
+      "solution": "Komunikasi dan saling pengertian adalah kunci."
+    }
+  ]
+}

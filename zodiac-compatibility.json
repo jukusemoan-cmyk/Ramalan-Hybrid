@@ -1,0 +1,1444 @@
+{
+  "zodiac_pairs": [
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Aries",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Api. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Api bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Taurus",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Gemini",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Cancer",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Leo",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Api. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Api bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Virgo",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Libra",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Scorpio",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Api. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Api bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Capricorn",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Aquarius",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Aries",
+      "zodiac2": "Pisces",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Aries",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Taurus",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Tanah. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Tanah bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Gemini",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Cancer",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Leo",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Virgo",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Tanah. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Tanah bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Libra",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Scorpio",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Capricorn",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Tanah. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Tanah bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Aquarius",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Taurus",
+      "zodiac2": "Pisces",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Aries",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Taurus",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Gemini",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Udara. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Udara bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Cancer",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Leo",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Virgo",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Libra",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Udara. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Udara bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Scorpio",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Capricorn",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Aquarius",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Udara. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Udara bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Gemini",
+      "zodiac2": "Pisces",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Aries",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Taurus",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Gemini",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Cancer",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Air. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Air bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Leo",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Virgo",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Libra",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Scorpio",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Air. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Air bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Capricorn",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Aquarius",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Cancer",
+      "zodiac2": "Pisces",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Air. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Air bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Aries",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Api. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Api bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Taurus",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Gemini",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Cancer",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Leo",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Api. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Api bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Virgo",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Libra",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Scorpio",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Api. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Api bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Capricorn",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Aquarius",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Leo",
+      "zodiac2": "Pisces",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Aries",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Taurus",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Tanah. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Tanah bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Gemini",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Cancer",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Leo",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Virgo",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Tanah. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Tanah bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Libra",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Scorpio",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Capricorn",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Tanah. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Tanah bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Aquarius",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Virgo",
+      "zodiac2": "Pisces",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Aries",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Taurus",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Gemini",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Udara. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Udara bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Cancer",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Leo",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Virgo",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Libra",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Udara. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Udara bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Scorpio",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Capricorn",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Aquarius",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Udara. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Udara bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Libra",
+      "zodiac2": "Pisces",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Aries",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Taurus",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Gemini",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Cancer",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Air. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Air bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Leo",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Virgo",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Libra",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Scorpio",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Air. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Air bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Capricorn",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Aquarius",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Scorpio",
+      "zodiac2": "Pisces",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Air. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Air bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Aries",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Api. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Api bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Taurus",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Gemini",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Cancer",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Leo",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Api. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Api bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Virgo",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Libra",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Scorpio",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Api. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Api bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Capricorn",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Aquarius",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Sagittarius",
+      "zodiac2": "Pisces",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Aries",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Taurus",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Tanah. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Tanah bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Gemini",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Cancer",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Leo",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Virgo",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Tanah. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Tanah bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Libra",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Scorpio",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Capricorn",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Tanah. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Tanah bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Aquarius",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Capricorn",
+      "zodiac2": "Pisces",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Aries",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Taurus",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Gemini",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Udara. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Udara bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Cancer",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Leo",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Virgo",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Libra",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Udara. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Udara bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Scorpio",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Sangat Cocok",
+      "score": 88,
+      "strength": "Api dan Udara saling membesarkan—gairah dan ide berpadu.",
+      "challenge": "Api bisa membakar tanpa kendali.",
+      "taboo": "Jangan biarkan diskusi berubah jadi debat panas.",
+      "solution": "Udara bantu Api fokus, Api beri Udara aksi."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Capricorn",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Aquarius",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Udara. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Udara bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Aquarius",
+      "zodiac2": "Pisces",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Aries",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Taurus",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Gemini",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Cancer",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Air. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Air bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Leo",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Virgo",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Libra",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Scorpio",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Air. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Air bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Sagittarius",
+      "compatibility": "Kurang Cocok",
+      "score": 50,
+      "strength": "Perbedaan menciptakan daya tarik yang kuat.",
+      "challenge": "Api dan Air saling mematikan—konflik mudah muncul.",
+      "taboo": "Hindari menyakiti perasaan satu sama lain.",
+      "solution": "Belajar memahami bahasa emosi masing-masing."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Capricorn",
+      "compatibility": "Sangat Cocok",
+      "score": 80,
+      "strength": "Tanah membendung Air, Air menyuburkan Tanah.",
+      "challenge": "Air bisa membuat Tanah longsor jika terlalu deras.",
+      "taboo": "Jangan saling mengekang atau mengabaikan.",
+      "solution": "Tanah beri struktur, Air beri fleksibilitas."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Aquarius",
+      "compatibility": "Cukup Cocok",
+      "score": 65,
+      "strength": "Kombinasi yang menarik, bisa saling belajar.",
+      "challenge": "Perbedaan elemen perlu penyesuaian.",
+      "taboo": "Jangan meremehkan perspektif satu sama lain.",
+      "solution": "Fokus pada kekuatan masing-masing."
+    },
+    {
+      "zodiac1": "Pisces",
+      "zodiac2": "Pisces",
+      "compatibility": "Cocok",
+      "score": 75,
+      "strength": "Sama-sama berelemen Air. Kalian memiliki bahasa cinta yang sama.",
+      "challenge": "Dua Air bisa saling membesar-besarkan kelemahan.",
+      "taboo": "Hindari kompetisi tidak sehat.",
+      "solution": "Salurkan energi bersama ke hal positif."
+    }
+  ]
+}
