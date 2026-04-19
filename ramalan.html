@@ -238,7 +238,17 @@
       border-left: 8px solid #C6A434;
     }
     .hidden { display: none !important; }
-    .footer-note { text-align: center; opacity: 0.8; margin-top: 32px; color: #9A8CB0; }
+    .footer {
+      border-top: 1px solid #3A2E1C;
+      padding: 32px 0;
+      margin-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: #9A8CB0;
+    }
+    .footer a { color: #C6A434; text-decoration: none; margin-left: 24px; }
     #loadingOverlay {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
@@ -264,6 +274,8 @@
     @media (max-width: 500px) {
       .aspect-grid { grid-template-columns: 1fr; }
       .mystic-header h1 { font-size: 2rem; }
+      .footer { flex-direction: column; text-align: center; }
+      .footer a { margin: 0 12px; }
     }
     .success-toast {
       position: fixed;
@@ -282,21 +294,6 @@
     @keyframes slideDown {
       from { top: -100px; opacity: 0; }
       to { top: 20px; opacity: 1; }
-    }
-    .footer {
-      border-top: 1px solid #3A2E1C;
-      padding: 32px 0;
-      margin-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-      color: #9A8CB0;
-    }
-    .footer a { color: #C6A434; text-decoration: none; margin-left: 24px; }
-    @media (max-width: 768px) {
-      .footer { flex-direction: column; text-align: center; }
-      .footer a { margin: 0 12px; }
     }
   </style>
 </head>
@@ -535,27 +532,14 @@ function updateTokenDisplay() {
 }
 
 function displayNumerology(fullName) {
-    console.log('displayNumerology dipanggil dengan:', fullName);
-    
-    if (!fullName || fullName.trim() === '') {
-        console.log('Nama lengkap kosong, menyembunyikan numerologi');
-        elements.numerologySection.classList.add('hidden');
-        return;
-    }
-    
-    if (!numerologyData) {
-        console.log('numerologyData belum dimuat');
+    if (!fullName || !numerologyData) {
         elements.numerologySection.classList.add('hidden');
         return;
     }
     
     try {
-        console.log('Memanggil calculateNumerology...');
         const numerology = calculateNumerology(fullName);
-        console.log('Hasil numerologi:', numerology);
-        
         if (!numerology) {
-            console.log('calculateNumerology mengembalikan null');
             elements.numerologySection.classList.add('hidden');
             return;
         }
@@ -567,18 +551,17 @@ function displayNumerology(fullName) {
             return numerologyData.angka_dasar[number.toString()]?.judul || '-';
         }
         
-        elements.soulUrgeValue.textContent = numerology.soul_urge || '-';
+        elements.soulUrgeValue.textContent = numerology.soul_urge;
         elements.soulUrgeDesc.textContent = getInterpretation(numerology.soul_urge);
-        elements.personalityValue.textContent = numerology.personality || '-';
+        elements.personalityValue.textContent = numerology.personality;
         elements.personalityDesc.textContent = getInterpretation(numerology.personality);
-        elements.destinyValue.textContent = numerology.destiny || '-';
+        elements.destinyValue.textContent = numerology.destiny;
         elements.destinyDesc.textContent = getInterpretation(numerology.destiny);
-        elements.powerName.textContent = numerology.power_name || '-';
+        elements.powerName.textContent = numerology.power_name;
         
         elements.numerologySection.classList.remove('hidden');
-        console.log('Numerologi berhasil ditampilkan');
-    } catch (error) {
-        console.error('Error saat menampilkan numerologi:', error);
+    } catch(e) {
+        console.error('Error displayNumerology:', e);
         elements.numerologySection.classList.add('hidden');
     }
 }
@@ -645,33 +628,133 @@ function handleUnlock() {
     }
 }
 
+function getNumberData(number) {
+    if (!numerologyData) return null;
+    if (number === 11 || number === 22 || number === 33) {
+        return numerologyData.angka_master[number.toString()];
+    }
+    return numerologyData.angka_dasar[number.toString()];
+}
+
+function generateSynthesisNarrative(soul, personality, destiny) {
+    const soulData = getNumberData(soul);
+    const personalityData = getNumberData(personality);
+    const destinyData = getNumberData(destiny);
+    
+    if (!soulData || !personalityData || !destinyData) {
+        return '<p style="color:#C2B5D8;">Data tidak lengkap untuk analisis sintesis.</p>';
+    }
+    
+    const elementsArr = [soulData.unsur, personalityData.unsur, destinyData.unsur];
+    const elementCount = {};
+    elementsArr.forEach(e => elementCount[e] = (elementCount[e] || 0) + 1);
+    let dominantElement = elementsArr[0];
+    let maxCount = 0;
+    for (let e in elementCount) {
+        if (elementCount[e] > maxCount) {
+            maxCount = elementCount[e];
+            dominantElement = e;
+        }
+    }
+    
+    return `
+        <div style="background:linear-gradient(145deg, #0F111A, #1A1C2B); border-radius:24px; padding:24px; margin-top:20px; border: 1px solid #C6A434;">
+            <p style="color:#EFE1B9; font-size:1.3rem; margin-bottom:20px; text-align:center;">
+                <i class="fas fa-crown" style="color:#C6A434;"></i> Blueprint Energi Dirimu
+            </p>
+            
+            <div style="margin-bottom:20px; padding-bottom:16px; border-bottom:1px dashed #3A2E1C;">
+                <p style="margin-bottom:12px; line-height:1.7;">
+                    <strong style="color:#C6A434;">✨ Inti Dirimu (Angka Jiwa ${soul}):</strong><br>
+                    Di kedalaman jiwamu, kamu adalah <strong style="color:#EFE1B9;">${soulData.judul}</strong>—${soulData.power.toLowerCase()}. 
+                    Ini adalah api yang menggerakkan semua tindakanmu, meskipun tidak selalu terlihat oleh orang lain.
+                </p>
+            </div>
+            
+            <div style="margin-bottom:20px; padding-bottom:16px; border-bottom:1px dashed #3A2E1C;">
+                <p style="margin-bottom:12px; line-height:1.7;">
+                    <strong style="color:#C6A434;">🎭 Wajah Duniamu (Angka Kepribadian ${personality}):</strong><br>
+                    Namun, dunia melihatmu sebagai <strong style="color:#EFE1B9;">${personalityData.judul}</strong>—${personalityData.power.toLowerCase()}. 
+                    Ini adalah 'perisai' yang kamu gunakan untuk bernavigasi dalam kehidupan sosial dan profesional.
+                    ${personality === soul ? 
+                        '<br><br>✨ <em>Kamu adalah orang yang otentik—apa yang ada di dalam selaras dengan apa yang tampak di luar.</em>' : 
+                        '<br><br>🔮 <em>Perbedaan antara jiwa dan topengmu menciptakan misteri yang menarik. Orang lain mungkin butuh waktu untuk benar-benar mengenalmu.</em>'}
+                </p>
+            </div>
+            
+            <div style="margin-bottom:20px; padding-bottom:16px; border-bottom:1px dashed #3A2E1C;">
+                <p style="margin-bottom:12px; line-height:1.7;">
+                    <strong style="color:#C6A434;">🛤️ Jalan Hidupmu (Angka Takdir ${destiny}):</strong><br>
+                    Takdirmu adalah menjadi <strong style="color:#EFE1B9;">${destinyData.judul}</strong>. 
+                    ${destinyData.power}. Ini adalah panggilan jiwamu—apa yang harus kamu wujudkan dalam hidup ini.
+                    ${destiny === soul ? 
+                        '<br><br>💫 <em>Takdirmu selaras sempurna dengan keinginan jiwamu. Ini adalah jalan yang mengalir alami.</em>' : 
+                        destiny === personality ? 
+                        '<br><br>🌟 <em>Takdirmu selaras dengan cara dunia melihatmu. Kamu ditakdirkan untuk dikenal melalui kekuatan ini.</em>' : 
+                        '<br><br>🚀 <em>Takdirmu memintamu untuk melampaui zona nyaman dan mengintegrasikan kekuatan baru.</em>'}
+                </p>
+            </div>
+            
+            <div style="margin-bottom:20px; padding-bottom:16px; border-bottom:1px dashed #3A2E1C;">
+                <p style="margin-bottom:12px; line-height:1.7;">
+                    <strong style="color:#C6A434;">🌿 Energi Dominan:</strong><br>
+                    Elemen <strong style="color:#EFE1B9;">${dominantElement}</strong> mendominasi blueprint energimu 
+                    (Jiwa: ${soulData.unsur}, Kepribadian: ${personalityData.unsur}, Takdir: ${destinyData.unsur}). 
+                    ${getElementAdvice(dominantElement)}
+                </p>
+            </div>
+            
+            <div style="margin-bottom:8px;">
+                <p style="line-height:1.7;">
+                    <strong style="color:#C6A434;">💼 Arah Karir Selaras:</strong><br>
+                    ${getCareerSynthesis(soulData, personalityData, destinyData)}
+                </p>
+            </div>
+        </div>
+    `;
+}
+
+function getElementAdvice(element) {
+    const advice = {
+        'Api': 'Kamu memiliki energi pionir dan antusiasme yang membara. Namun, waspadai burnout dan impulsivitas—belajarlah untuk mengatur ritme.',
+        'Tanah': 'Kamu memiliki fondasi yang kokoh, praktis, dan dapat diandalkan. Namun, waspadai kekakuan dan resistensi terhadap perubahan—kadang fleksibilitas diperlukan.',
+        'Udara': 'Kamu memiliki pikiran yang cemerlang, komunikatif, dan adaptif. Namun, waspadai overthinking dan ketidakkonsistenan—fokus adalah kunci.',
+        'Air': 'Kamu memiliki intuisi yang dalam, empati, dan kreativitas yang mengalir. Namun, waspadai kepekaan berlebihan dan kecenderungan menarik diri—jaga batasan sehat.'
+    };
+    return advice[element] || 'Kamu memiliki keseimbangan elemen yang langka. Ini adalah anugerah sekaligus tantangan untuk menjaga harmoni.';
+}
+
+function getCareerSynthesis(soul, personality, destiny) {
+    const careers = new Set();
+    if (soul.karir_cocok) soul.karir_cocok.split(',').forEach(c => careers.add(c.trim()));
+    if (personality.karir_cocok) personality.karir_cocok.split(',').forEach(c => careers.add(c.trim()));
+    if (destiny.karir_cocok) destiny.karir_cocok.split(',').forEach(c => careers.add(c.trim()));
+    
+    const careerArray = Array.from(careers).slice(0, 6);
+    if (careerArray.length === 0) return 'Eksplorasi berbagai bidang untuk menemukan panggilanmu yang unik.';
+    
+    return `Bidang-bidang ini selaras dengan blueprint energimu: <strong style="color:#EFE1B9;">${careerArray.join(', ')}</strong>.`;
+}
+
 function displayPremiumContent() {
-    if (!currentFortunes || !currentUserData) { alert('Lakukan ramalan dulu.'); return; }
+    if (!currentFortunes || !currentUserData) { 
+        alert('Lakukan ramalan dulu.'); 
+        return; 
+    }
     
     const p = currentFortunes.premium;
     const fullName = elements.fullName.value.trim();
     
-    // Siapkan analisis numerologi mendalam (jika nama lengkap diisi)
     let numerologyPremiumHtml = '';
     if (fullName && numerologyData) {
         try {
             const numerology = calculateNumerology(fullName);
             if (numerology) {
-                const soulInterpretation = getFullInterpretation(numerology.soul_urge);
-                const personalityInterpretation = getFullInterpretation(numerology.personality);
-                const destinyInterpretation = getFullInterpretation(numerology.destiny);
-                
-                numerologyPremiumHtml = `
-                    <div style="background:#0F111A; border-radius:24px; padding:20px; margin-top:20px; border: 1px solid #C6A434;">
-                        <p style="color:#C6A434; font-size:1.3rem; margin-bottom:16px;">
-                            <i class="fas fa-calculator"></i> Analisis Numerologi Mendalam
-                        </p>
-                        <p style="margin-bottom:12px;"><strong style="color:#EFE1B9;">Angka Jiwa ${numerology.soul_urge}:</strong> ${soulInterpretation}</p>
-                        <p style="margin-bottom:12px;"><strong style="color:#EFE1B9;">Angka Kepribadian ${numerology.personality}:</strong> ${personalityInterpretation}</p>
-                        <p style="margin-bottom:12px;"><strong style="color:#EFE1B9;">Angka Takdir ${numerology.destiny}:</strong> ${destinyInterpretation}</p>
-                        <p style="margin-top:16px; font-style:italic; color:#C2B5D8;">Power Name: ${numerology.power_name}</p>
-                    </div>
-                `;
+                numerologyPremiumHtml = generateSynthesisNarrative(
+                    numerology.soul_urge, 
+                    numerology.personality, 
+                    numerology.destiny
+                );
             }
         } catch (e) {
             console.error('Gagal generate analisis numerologi premium:', e);
@@ -680,48 +763,37 @@ function displayPremiumContent() {
     
     const html = `
         <div style="display:flex; flex-direction:column; gap:20px;">
-            <h3 style="font-family:'Cinzel'; color:#E9CF7A;"><i class="fas fa-crown"></i> Ramalan Mendalam untuk ${elements.userName.value.trim() || 'Sang Pencari'}</h3>
+            <h3 style="font-family:'Cinzel'; color:#E9CF7A; margin-bottom:8px;">
+                <i class="fas fa-crown"></i> Ramalan Mendalam untuk ${elements.userName.value.trim() || 'Sang Pencari'}
+            </h3>
             
             <div style="background:#0F111A; border-radius:24px; padding:20px;">
-                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-heart"></i> Asmara</p>
-                <p style="line-height:1.6;">${p.love}</p>
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:12px;"><i class="fas fa-heart"></i> Asmara</p>
+                <p style="line-height:1.7;">${p.love}</p>
             </div>
             <div style="background:#0F111A; border-radius:24px; padding:20px;">
-                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-briefcase"></i> Karir</p>
-                <p style="line-height:1.6;">${p.career}</p>
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:12px;"><i class="fas fa-briefcase"></i> Karir</p>
+                <p style="line-height:1.7;">${p.career}</p>
             </div>
             <div style="background:#0F111A; border-radius:24px; padding:20px;">
-                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-coins"></i> Keuangan</p>
-                <p style="line-height:1.6;">${p.finance}</p>
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:12px;"><i class="fas fa-coins"></i> Keuangan</p>
+                <p style="line-height:1.7;">${p.finance}</p>
             </div>
             <div style="background:#0F111A; border-radius:24px; padding:20px;">
-                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-heartbeat"></i> Kesehatan</p>
-                <p style="line-height:1.6;">${p.health}</p>
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:12px;"><i class="fas fa-heartbeat"></i> Kesehatan</p>
+                <p style="line-height:1.7;">${p.health}</p>
             </div>
             
             ${numerologyPremiumHtml}
             
-            <p style="text-align:right; font-style:italic; margin-top:16px;">— Telah dibuka dengan kunci semesta —</p>
+            <p style="text-align:right; font-style:italic; margin-top:16px; opacity:0.8;">
+                — Telah dibuka dengan kunci semesta —
+            </p>
         </div>
     `;
+    
     elements.premiumBox.innerHTML = html;
     elements.premiumBox.classList.remove('hidden');
-}
-
-// Fungsi helper untuk mendapatkan interpretasi lengkap
-function getFullInterpretation(number) {
-    if (!numerologyData) return 'Data tidak tersedia.';
-    
-    let data;
-    if (number === 11 || number === 22 || number === 33) {
-        data = numerologyData.angka_master[number.toString()];
-    } else {
-        data = numerologyData.angka_dasar[number.toString()];
-    }
-    
-    if (!data) return 'Interpretasi tidak ditemukan.';
-    
-    return `${data.judul}. ${data.power}. Unsur: ${data.unsur}. Planet: ${data.planets}. ${data.karir_cocok ? 'Karir cocok: ' + data.karir_cocok + '.' : ''}`;
 }
 
 function showSuccessToast(message) {
