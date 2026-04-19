@@ -157,7 +157,17 @@
       font-size: 0.9rem;
     }
     .hidden { display: none !important; }
-    .footer-note { text-align: center; margin-top: 32px; opacity: 0.8; font-size: 0.9rem; }
+    .footer {
+      border-top: 1px solid #3A2E1C;
+      padding: 32px 0;
+      margin-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: #9A8CB0;
+    }
+    .footer a { color: #C6A434; text-decoration: none; margin-left: 24px; }
     .toast-msg {
       position: fixed;
       bottom: 20px;
@@ -169,7 +179,10 @@
       border-radius: 40px;
       font-weight: 600;
       z-index: 9999;
-      transition: opacity 0.3s;
+    }
+    @media (max-width: 768px) {
+      .footer { flex-direction: column; text-align: center; }
+      .footer a { margin: 0 12px; }
     }
   </style>
 </head>
@@ -245,7 +258,7 @@
 
       <div class="share-section">
         <p style="margin-bottom:8px;"><i class="fas fa-share-alt"></i> Bagikan hasil ini:</p>
-        <input type="text" id="shareLink" class="share-input" readonly value="" placeholder="Tautan akan muncul di sini...">
+        <input type="text" id="shareLink" class="share-input" readonly value="">
         <div class="share-buttons">
           <button class="btn-share" id="copyLinkBtn"><i class="fas fa-copy"></i> Salin</button>
           <button class="btn-share" id="shareWA"><i class="fab fa-whatsapp"></i> WA</button>
@@ -257,10 +270,18 @@
         <button class="btn-premium" id="premiumBtn"><i class="fas fa-lock"></i> BUKA ANALISIS MENDALAM</button>
       </div>
       <div id="premiumBox" class="premium-detail hidden"></div>
-      <p style="margin-top:16px; font-size:0.9rem;"><i class="fas fa-info-circle"></i> Versi gratis menampilkan kategori. Analisis lengkap (Neptu + Wuku) untuk member Premium.</p>
+      <p style="margin-top:16px; font-size:0.9rem;"><i class="fas fa-info-circle"></i> Versi gratis menampilkan kategori. Analisis lengkap untuk member Premium.</p>
     </div>
   </div>
-  <div class="footer-note">✦ Ramalan untuk hiburan & introspeksi ✦</div>
+
+  <footer class="footer">
+    <div>© 2026 Oracle Nusantara. Seluruh konten untuk hiburan & refleksi diri.</div>
+    <div>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="privacy.html">Privasi</a>
+      <a href="mailto:halo@oraclenusantara.id">Kontak</a>
+    </div>
+  </footer>
 </div>
 
 <div id="toast" class="toast-msg hidden">Tautan disalin!</div>
@@ -323,19 +344,19 @@ function analyzeWuku(wuku1, wuku2) {
   
   if (sameElement) {
     level = 'Sangat Baik';
-    desc = `Keduanya lahir di Wuku dengan elemen ${w1.element} yang sama. Ini menandakan kesamaan frekuensi energi dan tujuan hidup.`;
+    desc = `Keduanya lahir di Wuku dengan elemen ${w1.element} yang sama.`;
   } else if (elementCompatible) {
     level = 'Baik';
-    desc = `Elemen Wuku ${w1.element} (${w1.name}) dan ${w2.element} (${w2.name}) saling melengkapi.`;
+    desc = `Elemen Wuku ${w1.element} dan ${w2.element} saling melengkapi.`;
   } else if (uripDiff === 0) {
     level = 'Sangat Baik';
-    desc = `Keduanya memiliki Urip Wuku yang sama (${w1.urip_wuku}). Ini pertanda ikatan spiritual yang kuat.`;
+    desc = `Keduanya memiliki Urip Wuku yang sama.`;
   } else if (uripDiff % 3 === 0) {
     level = 'Baik';
-    desc = `Selisih Urip Wuku (${uripDiff}) adalah bilangan harmonis. Menandakan keseimbangan dalam rumah tangga.`;
+    desc = `Selisih Urip Wuku (${uripDiff}) adalah bilangan harmonis.`;
   } else {
     level = 'Cukup';
-    desc = `Wuku ${w1.name} dan ${w2.name} memiliki karakter yang berbeda. Perlu penyesuaian, namun bisa saling belajar.`;
+    desc = `Wuku ${w1.name} dan ${w2.name} memiliki karakter berbeda.`;
   }
   
   return { level, desc, w1, w2 };
@@ -428,31 +449,24 @@ function displayPremiumContent() {
   const w = r.wukuAnalysis;
   
   let saranNeptu = '';
-  if (r.total >= 25) saranNeptu = 'Pasangan ini memiliki potensi kemakmuran luar biasa. Disarankan untuk sering melakukan upacara syukur bersama.';
-  else if (r.total >= 19) saranNeptu = 'Hubungan ini diberkati keharmonisan alami. Jaga komunikasi dan saling percaya.';
-  else if (r.total >= 14) saranNeptu = 'Pasangan yang rukun, perlu usaha menjaga keseimbangan. Hindari konflik sepele.';
-  else if (r.total >= 8) saranNeptu = 'Potensi cukup baik, perlu saling pengertian ekstra. Seringlah berdiskusi.';
-  else saranNeptu = 'Tantangan dalam hubungan cukup besar, namun bukan berarti tidak bisa. Kunci: kesabaran dan saling memaafkan.';
+  if (r.total >= 25) saranNeptu = 'Pasangan ini memiliki potensi kemakmuran luar biasa.';
+  else if (r.total >= 19) saranNeptu = 'Hubungan ini diberkati keharmonisan alami.';
+  else if (r.total >= 14) saranNeptu = 'Pasangan yang rukun, perlu usaha menjaga keseimbangan.';
+  else if (r.total >= 8) saranNeptu = 'Potensi cukup baik, perlu saling pengertian ekstra.';
+  else saranNeptu = 'Tantangan cukup besar, kunci: kesabaran dan saling memaafkan.';
 
   const html = `
-    <h3 style="color:#C6A434; margin-bottom:16px;"><i class="fas fa-crown"></i> Analisis Mendalam ${r.name1} & ${r.name2}</h3>
-    <div style="background:#0F111A; border-radius:16px; padding:16px; margin-bottom:20px;">
+    <h3 style="color:#C6A434;"><i class="fas fa-crown"></i> Analisis Mendalam ${r.name1} & ${r.name2}</h3>
+    <div style="background:#0F111A; padding:16px; border-radius:16px; margin:16px 0;">
       <p><strong>Weton Anda:</strong> ${r.weton1} (Neptu ${r.neptu1}) | Wuku: ${r.wuku1}</p>
       <p><strong>Weton Pasangan:</strong> ${r.weton2} (Neptu ${r.neptu2}) | Wuku: ${r.wuku2}</p>
-      <p><strong>Total Neptu:</strong> ${r.total} → <span style="color:#C6A434;">${r.category} (${r.status})</span></p>
+      <p><strong>Total Neptu:</strong> ${r.total} → ${r.category} (${r.status})</p>
     </div>
-    <div style="margin-bottom:20px;">
+    <div style="margin:16px 0;">
       <h4 style="color:#C6A434;"><i class="fas fa-om"></i> Analisis Wuku</h4>
-      <p><strong>Wuku ${r.wuku1}</strong> (${w.w1?.meaning || ''}) dan <strong>Wuku ${r.wuku2}</strong> (${w.w2?.meaning || ''})</p>
-      <p><strong>Tingkat Kecocokan:</strong> ${w.level}</p>
       <p>${w.desc}</p>
     </div>
-    <div style="margin-bottom:20px;">
-      <h4 style="color:#C6A434;"><i class="fas fa-star"></i> Analisis Neptu</h4>
-      <p>${r.desc}</p>
-    </div>
-    <p style="background:#0F111A; padding:16px; border-radius:16px;"><i class="fas fa-lightbulb"></i> <strong>Saran Spiritual:</strong> ${saranNeptu} Dalam tradisi Bali, dianjurkan upacara <em>mabyakala</em> atau <em>melukat</em> bersama.</p>
-    <p style="margin-top:16px; font-style:italic;">Catatan: Ramalan ini bukan penentu mutlak. Cinta dan komitmen adalah kunci.</p>
+    <p style="background:#0F111A; padding:16px; border-radius:16px;"><i class="fas fa-lightbulb"></i> <strong>Saran:</strong> ${saranNeptu}</p>
   `;
   document.getElementById('premiumBox').innerHTML = html;
   document.getElementById('premiumBox').classList.remove('hidden');
@@ -475,7 +489,7 @@ function shareWA() {
 
 function shareTelegram() {
   const link = document.getElementById('shareLink').value;
-  window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}&text=${encodeURIComponent('Cek kecocokanmu juga!')}`, '_blank');
+  window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}`, '_blank');
 }
 </script>
 </body>
