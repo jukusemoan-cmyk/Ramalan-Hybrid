@@ -535,33 +535,52 @@ function updateTokenDisplay() {
 }
 
 function displayNumerology(fullName) {
-    if (!fullName || !numerologyData) {
+    console.log('displayNumerology dipanggil dengan:', fullName);
+    
+    if (!fullName || fullName.trim() === '') {
+        console.log('Nama lengkap kosong, menyembunyikan numerologi');
         elements.numerologySection.classList.add('hidden');
         return;
     }
     
-    const numerology = calculateNumerology(fullName);
-    if (!numerology) {
+    if (!numerologyData) {
+        console.log('numerologyData belum dimuat');
         elements.numerologySection.classList.add('hidden');
         return;
     }
     
-    function getInterpretation(number) {
-        if (number === 11 || number === 22 || number === 33) {
-            return numerologyData.angka_master[number.toString()]?.judul || 'Angka Master';
+    try {
+        console.log('Memanggil calculateNumerology...');
+        const numerology = calculateNumerology(fullName);
+        console.log('Hasil numerologi:', numerology);
+        
+        if (!numerology) {
+            console.log('calculateNumerology mengembalikan null');
+            elements.numerologySection.classList.add('hidden');
+            return;
         }
-        return numerologyData.angka_dasar[number.toString()]?.judul || '-';
+        
+        function getInterpretation(number) {
+            if (number === 11 || number === 22 || number === 33) {
+                return numerologyData.angka_master[number.toString()]?.judul || 'Angka Master';
+            }
+            return numerologyData.angka_dasar[number.toString()]?.judul || '-';
+        }
+        
+        elements.soulUrgeValue.textContent = numerology.soul_urge || '-';
+        elements.soulUrgeDesc.textContent = getInterpretation(numerology.soul_urge);
+        elements.personalityValue.textContent = numerology.personality || '-';
+        elements.personalityDesc.textContent = getInterpretation(numerology.personality);
+        elements.destinyValue.textContent = numerology.destiny || '-';
+        elements.destinyDesc.textContent = getInterpretation(numerology.destiny);
+        elements.powerName.textContent = numerology.power_name || '-';
+        
+        elements.numerologySection.classList.remove('hidden');
+        console.log('Numerologi berhasil ditampilkan');
+    } catch (error) {
+        console.error('Error saat menampilkan numerologi:', error);
+        elements.numerologySection.classList.add('hidden');
     }
-    
-    elements.soulUrgeValue.textContent = numerology.soul_urge;
-    elements.soulUrgeDesc.textContent = getInterpretation(numerology.soul_urge);
-    elements.personalityValue.textContent = numerology.personality;
-    elements.personalityDesc.textContent = getInterpretation(numerology.personality);
-    elements.destinyValue.textContent = numerology.destiny;
-    elements.destinyDesc.textContent = getInterpretation(numerology.destiny);
-    elements.powerName.textContent = numerology.power_name;
-    
-    elements.numerologySection.classList.remove('hidden');
 }
 
 async function handleReveal() {
