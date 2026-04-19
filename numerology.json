@@ -1,0 +1,108 @@
+{
+  "angka_dasar": {
+    "1": {
+      "judul": "Sang Pemimpin (The Leader)",
+      "power": "Mandiri, Pionir, Orisinal",
+      "unsur": "Api",
+      "planets": "Matahari",
+      "karir_cocok": "Pengusaha, Manajer, Penemu, Desainer",
+      "kesehatan": "Jantung, Kepala. Waspadai stres dan tekanan darah tinggi.",
+      "keuangan": "Potensi menghasilkan uang sendiri, hindari bergantung pada orang lain."
+    },
+    "2": {
+      "judul": "Sang Diplomat (The Diplomat)",
+      "power": "Kooperatif, Lembut, Intuitif",
+      "unsur": "Air",
+      "planets": "Bulan",
+      "karir_cocok": "Konselor, Diplomat, Musisi, Asisten Pribadi",
+      "kesehatan": "Sistem pencernaan, Emosional. Jaga keseimbangan cairan tubuh.",
+      "keuangan": "Rezeki datang dari kerjasama dan tim. Hindari keputusan finansial impulsif."
+    },
+    "3": {
+      "judul": "Sang Komunikator (The Communicator)",
+      "power": "Kreatif, Ekspresif, Optimis",
+      "unsur": "Api",
+      "planets": "Jupiter",
+      "karir_cocok": "Artis, Penulis, Pembicara Publik, Marketing",
+      "kesehatan": "Tenggorokan, Sistem Saraf. Ekspresikan emosi dengan sehat.",
+      "keuangan": "Rezeki dari kreativitas dan komunikasi. Waspadai pengeluaran untuk hiburan."
+    },
+    "4": {
+      "judul": "Sang Pembangun (The Builder)",
+      "power": "Praktis, Pekerja Keras, Stabil",
+      "unsur": "Tanah",
+      "planets": "Uranus",
+      "karir_cocok": "Insinyur, Akuntan, Arsitek, Analis Sistem",
+      "kesehatan": "Tulang, Gigi, Lutut. Butuh rutinitas olahraga yang teratur.",
+      "keuangan": "Keuangan stabil dan terencana. Cocok investasi jangka panjang seperti properti."
+    },
+    "5": {
+      "judul": "Sang Petualang (The Adventurer)",
+      "power": "Bebas, Adaptif, Penasaran",
+      "unsur": "Udara",
+      "planets": "Merkurius",
+      "karir_cocok": "Travel Blogger, Jurnalis, Sales, Pemandu Wisata",
+      "kesehatan": "Paru-paru, Sistem Saraf. Butuh variasi dalam olahraga agar tidak bosan.",
+      "keuangan": "Arus kas dinamis. Bisa dapat uang dari banyak sumber, tapi mudah habis."
+    },
+    "6": {
+      "judul": "Sang Pengasuh (The Nurturer)",
+      "power": "Penyayang, Bertanggung Jawab, Harmonis",
+      "unsur": "Tanah",
+      "planets": "Venus",
+      "karir_cocok": "Guru, Dokter, Koki, Desainer Interior",
+      "kesehatan": "Dada, Payudara. Penting untuk menyeimbangkan memberi dan menerima.",
+      "keuangan": "Rezeki mengalir untuk memenuhi kebutuhan keluarga dan orang tercinta."
+    },
+    "7": {
+      "judul": "Sang Pemikir (The Thinker)",
+      "power": "Analitis, Spiritual, Penyendiri",
+      "unsur": "Air",
+      "planets": "Neptunus",
+      "karir_cocok": "Ilmuwan, Peneliti, Filsuf, Programmer",
+      "kesehatan": "Sistem Saraf, Mata. Butuh waktu menyendiri untuk 'mengisi ulang' energi.",
+      "keuangan": "Tidak terlalu materialistis. Rezeki sering datang dari belakang layar."
+    },
+    "8": {
+      "judul": "Sang Eksekutor (The Executor)",
+      "power": "Ambisius, Berwibawa, Materialis",
+      "unsur": "Tanah",
+      "planets": "Saturnus",
+      "karir_cocok": "CEO, Bankir, Politikus, Pengacara",
+      "kesehatan": "Tulang, Sendi, Gigi. Rentan stres karena mengejar target.",
+      "keuangan": "Potensi kekayaan besar. Paham betul cara mengelola dan mengembangkan uang."
+    },
+    "9": {
+      "judul": "Sang Humanis (The Humanitarian)",
+      "power": "Bijaksana, Dermawan, Idealis",
+      "unsur": "Api",
+      "planets": "Mars",
+      "karir_cocok": "Aktivis, Relawan, Seniman, Filantropis",
+      "kesehatan": "Sistem Kekebalan Tubuh. Sembuh dengan membantu orang lain.",
+      "keuangan": "Uang datang dan pergi. Tujuan utamanya adalah untuk dibagikan."
+    }
+  },
+  "angka_master": {
+    "11": {
+      "judul": "Sang Inspirator (The Inspirer)",
+      "power": "Intuitif Tingkat Tinggi, Visioner, Spiritual",
+      "unsur": "Air",
+      "planets": "Bulan",
+      "deskripsi": "Angka Master 11 memiliki intuisi yang sangat tajam dan kemampuan untuk menginspirasi banyak orang. Mereka adalah 'jembatan' antara dunia fisik dan spiritual."
+    },
+    "22": {
+      "judul": "Sang Arsitek Agung (The Master Builder)",
+      "power": "Manifestor Ulung, Visioner Praktis, Pemimpin Sejati",
+      "unsur": "Tanah",
+      "planets": "Saturnus",
+      "deskripsi": "Angka Master 22 adalah yang paling kuat. Mereka mampu mewujudkan mimpi-mimpi besar menjadi kenyataan yang bermanfaat bagi banyak orang. Mereka membangun peradaban."
+    },
+    "33": {
+      "judul": "Sang Guru Sejati (The Master Teacher)",
+      "power": "Kasih Tanpa Syarat, Penyembuh, Pembimbing Spiritual",
+      "unsur": "Api",
+      "planets": "Jupiter",
+      "deskripsi": "Angka Master 33 adalah 'Guru para Guru'. Misi hidup mereka adalah untuk melayani dan membimbing orang lain menuju pencerahan dengan penuh cinta dan pengorbanan."
+    }
+  }
+}
