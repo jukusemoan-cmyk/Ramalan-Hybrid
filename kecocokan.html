@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>Kecocokan Jodoh • Oracle Nusantara</title>
-  <meta name="description" content="Cek kecocokan jodoh berdasarkan Weton, Neptu, dan Wuku Primbon Bali. Bagikan hasilnya ke pasanganmu!">
+  <meta name="description" content="Cek kecocokan jodoh berdasarkan Weton, Neptu, Wuku, Shio, Zodiak, dan BaZi. Analisis holistik 4 dimensi.">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,15 +14,8 @@
   <link rel="stylesheet" href="css/style.css">
   
   <style>
-    /* Style spesifik untuk halaman kecocokan */
-    .mystic-header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    .mystic-header h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
-    }
+    .mystic-header { text-align: center; margin-bottom: 32px; }
+    .mystic-header h1 { font-size: 3rem; letter-spacing: 2px; }
     
     .couple-form {
       display: grid;
@@ -36,11 +29,15 @@
       padding: 28px 24px;
       border: 1px solid rgba(212, 175, 55, 0.1);
     }
-    .person-card h3 {
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .person-card h3 { margin-bottom: 24px; display: flex; align-items: center; gap: 8px; }
+    
+    .hour-select {
+      width: 100%;
+      background: rgba(15, 15, 20, 0.8);
+      border: 1.5px solid rgba(212, 175, 55, 0.2);
+      border-radius: 8px;
+      padding: 14px 18px;
+      color: #E5E5E5;
     }
     
     .neptu-summary {
@@ -50,16 +47,8 @@
       flex-wrap: wrap;
       margin: 32px 0;
     }
-    .neptu-box {
-      text-align: center;
-      min-width: 120px;
-    }
-    .neptu-number {
-      font-size: 3rem;
-      font-weight: 600;
-      color: #D4AF37;
-      font-family: 'Cormorant Garamond', serif;
-    }
+    .neptu-box { text-align: center; min-width: 120px; }
+    .neptu-number { font-size: 3rem; font-weight: 600; color: #D4AF37; font-family: 'Cormorant Garamond', serif; }
     
     .category-badge {
       background: rgba(15, 15, 20, 0.8);
@@ -69,15 +58,67 @@
       text-align: center;
       margin: 24px 0;
     }
-    .category-name {
-      font-size: 2.2rem;
-      color: #F3E5AB;
-    }
+    .category-name { font-size: 2.2rem; color: #F3E5AB; }
     
-    .share-section {
-      margin-top: 32px;
+    .holistic-score {
+      background: linear-gradient(145deg, rgba(20, 20, 25, 0.9), rgba(10, 10, 12, 0.9));
+      border: 2px solid #D4AF37;
+      border-radius: 60px;
+      padding: 20px 32px;
       text-align: center;
+      margin: 24px 0;
     }
+    .holistic-number { font-size: 4rem; font-weight: 700; color: #D4AF37; }
+    
+    .analysis-accordion { margin: 32px 0; }
+    .accordion-item {
+      background: rgba(15, 15, 20, 0.6);
+      border-radius: 20px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .accordion-header {
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .accordion-header:hover { background: rgba(20, 20, 25, 0.6); }
+    .accordion-header.active {
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      background: rgba(20, 20, 25, 0.8);
+    }
+    .accordion-content {
+      padding: 0 24px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .accordion-content.active { max-height: 800px; padding: 24px; }
+    
+    .analysis-section {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed rgba(212, 175, 55, 0.15);
+    }
+    .analysis-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .analysis-label {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-right: 12px;
+    }
+    .label-strength { background: rgba(212, 175, 55, 0.2); color: #D4AF37; }
+    .label-challenge { background: rgba(255, 100, 100, 0.15); color: #FF8A8A; }
+    .label-taboo { background: rgba(255, 180, 100, 0.15); color: #FFB464; }
+    .label-solution { background: rgba(100, 200, 100, 0.15); color: #64C864; }
+    
+    .share-section { margin-top: 32px; text-align: center; }
     .share-input {
       background: rgba(15, 15, 20, 0.8);
       border: 1px solid rgba(212, 175, 55, 0.2);
@@ -87,14 +128,8 @@
       width: 100%;
       max-width: 450px;
       margin: 12px auto;
-      font-size: 0.9rem;
     }
-    .share-buttons {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .share-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn-share {
       background: transparent;
       border: 1px solid #D4AF37;
@@ -104,10 +139,7 @@
       cursor: pointer;
       transition: all 0.2s;
     }
-    .btn-share:hover {
-      background: #D4AF37;
-      color: #0A0A0C;
-    }
+    .btn-share:hover { background: #D4AF37; color: #0A0A0C; }
     
     .toast-msg {
       position: fixed;
@@ -131,9 +163,7 @@
 <div class="container">
   <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo">
-      <a href="index.html">ORACLE NUSANTARA</a>
-    </div>
+    <div class="logo"><a href="index.html">ORACLE NUSANTARA</a></div>
     <div class="nav-links">
       <a href="index.html">Beranda</a>
       <a href="ramalan.html">Ramalan</a>
@@ -144,73 +174,55 @@
     </div>
   </nav>
 
-  <!-- Header -->
   <div class="mystic-header">
-    <h1><i class="fas fa-heart"></i> Kecocokan Jodoh</h1>
-    <p style="color: #A0A0B0;">Berdasarkan Weton, Neptu & Wuku Primbon Bali</p>
+    <h1><i class="fas fa-heart"></i> Kecocokan Holistik</h1>
+    <p style="color: #A0A0B0;">Weton • Neptu • Wuku • Shio • Zodiak • BaZi</p>
   </div>
 
-  <!-- Main Card -->
   <div class="oracle-card">
     <div class="couple-form">
-      <!-- Pasangan 1 -->
       <div class="person-card">
-        <h3><i class="fas fa-user" style="color: #D4AF37;"></i> Diri Anda</h3>
-        <div class="input-field">
-          <label>Nama</label>
-          <input type="text" id="name1" placeholder="Nama Anda" value="">
-        </div>
-        <div class="input-field">
-          <label>Tanggal Lahir</label>
-          <input type="date" id="birth1" value="">
-        </div>
+        <h3><i class="fas fa-user" style="color:#D4AF37;"></i> Diri Anda</h3>
+        <div class="input-field"><label>Nama</label><input type="text" id="name1" placeholder="Nama Anda" value=""></div>
+        <div class="input-field"><label>Tanggal Lahir</label><input type="date" id="birth1" value=""></div>
+        <div class="input-field"><label>Jam Lahir (untuk BaZi)</label><select id="hour1" class="hour-select"><option value="12">12:00 (Default)</option><option value="0">00:00</option><option value="1">01:00</option><option value="3">03:00</option><option value="5">05:00</option><option value="7">07:00</option><option value="9">09:00</option><option value="11">11:00</option><option value="13">13:00</option><option value="15">15:00</option><option value="17">17:00</option><option value="19">19:00</option><option value="21">21:00</option><option value="23">23:00</option></select></div>
       </div>
-      <!-- Pasangan 2 -->
       <div class="person-card">
-        <h3><i class="fas fa-user" style="color: #D4AF37;"></i> Pasangan</h3>
-        <div class="input-field">
-          <label>Nama</label>
-          <input type="text" id="name2" placeholder="Nama Pasangan" value="">
-        </div>
-        <div class="input-field">
-          <label>Tanggal Lahir</label>
-          <input type="date" id="birth2" value="">
-        </div>
+        <h3><i class="fas fa-user" style="color:#D4AF37;"></i> Pasangan</h3>
+        <div class="input-field"><label>Nama</label><input type="text" id="name2" placeholder="Nama Pasangan" value=""></div>
+        <div class="input-field"><label>Tanggal Lahir</label><input type="date" id="birth2" value=""></div>
+        <div class="input-field"><label>Jam Lahir (untuk BaZi)</label><select id="hour2" class="hour-select"><option value="12">12:00 (Default)</option><option value="0">00:00</option><option value="1">01:00</option><option value="3">03:00</option><option value="5">05:00</option><option value="7">07:00</option><option value="9">09:00</option><option value="11">11:00</option><option value="13">13:00</option><option value="15">15:00</option><option value="17">17:00</option><option value="19">19:00</option><option value="21">21:00</option><option value="23">23:00</option></select></div>
       </div>
     </div>
     
     <button class="btn-primary" id="checkBtn"><i class="fas fa-calculator"></i> HITUNG KECOCOKAN</button>
 
-    <!-- Result Section -->
     <div id="resultSection" class="hidden" style="margin-top: 40px;">
+      <!-- Weton Summary -->
       <div class="neptu-summary">
-        <div class="neptu-box">
-          <div id="name1Display">...</div>
-          <div class="neptu-number" id="neptu1">0</div>
-          <div id="weton1Display">-</div>
-        </div>
-        <div style="font-size: 2rem; align-self: center; color: #D4AF37;">+</div>
-        <div class="neptu-box">
-          <div id="name2Display">...</div>
-          <div class="neptu-number" id="neptu2">0</div>
-          <div id="weton2Display">-</div>
-        </div>
-        <div style="font-size: 2rem; align-self: center; color: #D4AF37;">=</div>
-        <div class="neptu-box">
-          <div>Total</div>
-          <div class="neptu-number" id="totalNeptu">0</div>
-        </div>
+        <div class="neptu-box"><div id="name1Display">...</div><div class="neptu-number" id="neptu1">0</div><div id="weton1Display">-</div></div>
+        <div style="font-size:2rem; align-self:center; color:#D4AF37;">+</div>
+        <div class="neptu-box"><div id="name2Display">...</div><div class="neptu-number" id="neptu2">0</div><div id="weton2Display">-</div></div>
+        <div style="font-size:2rem; align-self:center; color:#D4AF37;">=</div>
+        <div class="neptu-box"><div>Total Neptu</div><div class="neptu-number" id="totalNeptu">0</div></div>
       </div>
 
       <div class="category-badge" id="categoryDisplay">
         <div class="category-name" id="categoryName">-</div>
-        <div id="categoryDesc" style="margin-top: 12px; color: #B0B0C0;">-</div>
+        <div id="categoryDesc" style="margin-top:12px; color:#B0B0C0;">-</div>
+      </div>
+
+      <!-- Holistic Score -->
+      <div class="holistic-score hidden" id="holisticScoreBox">
+        <div style="color:#A0A0B0; margin-bottom:8px;">SKOR KECOCOKAN HOLISTIK</div>
+        <div class="holistic-number" id="holisticScore">0%</div>
+        <div id="holisticVerdict" style="color:#F3E5AB; margin-top:8px;">-</div>
       </div>
 
       <!-- Share Section -->
       <div class="share-section">
-        <p style="margin-bottom: 8px;"><i class="fas fa-share-alt"></i> Bagikan hasil ini:</p>
-        <input type="text" id="shareLink" class="share-input" readonly value="" placeholder="Tautan akan muncul di sini...">
+        <p><i class="fas fa-share-alt"></i> Bagikan hasil ini:</p>
+        <input type="text" id="shareLink" class="share-input" readonly>
         <div class="share-buttons">
           <button class="btn-share" id="copyLinkBtn"><i class="fas fa-copy"></i> Salin</button>
           <button class="btn-share" id="shareWA"><i class="fab fa-whatsapp"></i> WA</button>
@@ -219,35 +231,23 @@
       </div>
 
       <!-- Token Display -->
-      <div class="token-display-section">
-        <div class="token-badge">
-          <i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span>
-        </div>
-      </div>
+      <div class="token-display-section"><div class="token-badge"><i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span></div></div>
 
       <!-- Premium Lock -->
-      <div style="text-align: center; margin-top: 32px;">
-        <button class="btn-premium" id="premiumBtn"><i class="fas fa-lock"></i> BUKA ANALISIS MENDALAM (1 Token)</button>
+      <div style="text-align:center; margin-top:32px;">
+        <button class="btn-premium" id="premiumBtn"><i class="fas fa-lock"></i> BUKA ANALISIS MENDALAM (3 Token)</button>
       </div>
       <div id="premiumBox" class="premium-message hidden"></div>
-      <p style="text-align: center; margin-top: 16px; font-size: 0.9rem; opacity: 0.7;">
-        <i class="fas fa-info-circle"></i> Versi gratis menampilkan kategori. Analisis lengkap untuk member Premium.
-      </p>
+      <p style="text-align:center; margin-top:16px; font-size:0.9rem; opacity:0.7;"><i class="fas fa-info-circle"></i> Versi gratis menampilkan weton. Gunakan 3 Token untuk analisis holistik 4 dimensi.</p>
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="footer">
     <div>© 2026 Oracle Nusantara. Seluruh konten untuk hiburan & refleksi diri.</div>
-    <div>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="privacy.html">Privasi</a>
-      <a href="mailto:halo@oraclenusantara.id">Kontak</a>
-    </div>
+    <div><a href="disclaimer.html">Disclaimer</a><a href="privacy.html">Privasi</a><a href="mailto:halo@oraclenusantara.id">Kontak</a></div>
   </footer>
 </div>
 
-<!-- Toast -->
 <div id="toast" class="toast-msg hidden">Tautan disalin!</div>
 
 <!-- JavaScript Modules -->
@@ -257,191 +257,194 @@
 <script src="js/premium.js"></script>
 
 <script>
-// ================== INISIALISASI HALAMAN KECOCOKAN ==================
-let kecocokanData = null;
-let calendarData = null;
+let calendarData = null, wetonData = null, shioData = null, zodiacData = null, baziData = null;
 let currentResult = null;
 
-// DOM Elements
 const elements = {
-    name1: null, birth1: null, name2: null, birth2: null, checkBtn: null, resultSection: null,
-    name1Display: null, name2Display: null, neptu1: null, neptu2: null,
-    weton1Display: null, weton2Display: null, totalNeptu: null,
-    categoryName: null, categoryDesc: null, shareLink: null, premiumBox: null
+    name1: null, birth1: null, hour1: null, name2: null, birth2: null, hour2: null,
+    checkBtn: null, resultSection: null, name1Display: null, name2Display: null,
+    neptu1: null, neptu2: null, weton1Display: null, weton2Display: null, totalNeptu: null,
+    categoryName: null, categoryDesc: null, shareLink: null, premiumBox: null,
+    holisticScoreBox: null, holisticScore: null, holisticVerdict: null
 };
 
 function initDOMElements() {
-    elements.name1 = document.getElementById('name1');
-    elements.birth1 = document.getElementById('birth1');
-    elements.name2 = document.getElementById('name2');
-    elements.birth2 = document.getElementById('birth2');
-    elements.checkBtn = document.getElementById('checkBtn');
-    elements.resultSection = document.getElementById('resultSection');
-    elements.name1Display = document.getElementById('name1Display');
-    elements.name2Display = document.getElementById('name2Display');
-    elements.neptu1 = document.getElementById('neptu1');
-    elements.neptu2 = document.getElementById('neptu2');
-    elements.weton1Display = document.getElementById('weton1Display');
-    elements.weton2Display = document.getElementById('weton2Display');
-    elements.totalNeptu = document.getElementById('totalNeptu');
-    elements.categoryName = document.getElementById('categoryName');
-    elements.categoryDesc = document.getElementById('categoryDesc');
-    elements.shareLink = document.getElementById('shareLink');
+    elements.name1 = document.getElementById('name1'); elements.birth1 = document.getElementById('birth1'); elements.hour1 = document.getElementById('hour1');
+    elements.name2 = document.getElementById('name2'); elements.birth2 = document.getElementById('birth2'); elements.hour2 = document.getElementById('hour2');
+    elements.checkBtn = document.getElementById('checkBtn'); elements.resultSection = document.getElementById('resultSection');
+    elements.name1Display = document.getElementById('name1Display'); elements.name2Display = document.getElementById('name2Display');
+    elements.neptu1 = document.getElementById('neptu1'); elements.neptu2 = document.getElementById('neptu2');
+    elements.weton1Display = document.getElementById('weton1Display'); elements.weton2Display = document.getElementById('weton2Display');
+    elements.totalNeptu = document.getElementById('totalNeptu'); elements.categoryName = document.getElementById('categoryName');
+    elements.categoryDesc = document.getElementById('categoryDesc'); elements.shareLink = document.getElementById('shareLink');
     elements.premiumBox = document.getElementById('premiumBox');
+    elements.holisticScoreBox = document.getElementById('holisticScoreBox'); elements.holisticScore = document.getElementById('holisticScore');
+    elements.holisticVerdict = document.getElementById('holisticVerdict');
 }
 
-function analyzeWuku(wuku1, wuku2) {
-    const w1 = calendarData.wuku.find(w => w.name === wuku1);
-    const w2 = calendarData.wuku.find(w => w.name === wuku2);
-    if (!w1 || !w2) return { level: 'Netral', desc: 'Data Wuku tidak ditemukan.' };
-    
-    const sameElement = w1.element === w2.element;
-    const compatible = (w1.element === 'Api' && w2.element === 'Udara') || 
-                       (w1.element === 'Air' && w2.element === 'Tanah') ||
-                       (w1.element === 'Tanah' && w2.element === 'Air') ||
-                       (w1.element === 'Udara' && w2.element === 'Api');
-    const uripDiff = Math.abs(w1.urip_wuku - w2.urip_wuku);
-    
-    let level = 'Cukup', desc = '';
-    if (sameElement) { level = 'Sangat Baik'; desc = `Elemen ${w1.element} yang sama.`; }
-    else if (compatible) { level = 'Baik'; desc = `Elemen saling melengkapi.`; }
-    else if (uripDiff === 0) { level = 'Sangat Baik'; desc = `Urip Wuku sama.`; }
-    else if (uripDiff % 3 === 0) { level = 'Baik'; desc = `Selisih Urip harmonis.`; }
-    else { level = 'Cukup'; desc = `Karakter berbeda, perlu penyesuaian.`; }
-    return { level, desc, w1, w2 };
+async function loadAllCompatibilityData() {
+    try {
+        const [shio, zodiac, bazi] = await Promise.all([
+            fetchJSON('data/shio-compatibility.json'),
+            fetchJSON('data/zodiac-compatibility.json'),
+            fetchJSON('data/bazi-compatibility.json')
+        ]);
+        shioData = shio; zodiacData = zodiac; baziData = bazi;
+    } catch(e) { console.error('Gagal load data kompatibilitas:', e); }
+}
+
+function analyzeWuku(w1, w2) {
+    const wu1 = calendarData.wuku.find(w => w.name === w1), wu2 = calendarData.wuku.find(w => w.name === w2);
+    if (!wu1 || !wu2) return { level: 'Netral', desc: 'Data tidak ditemukan.', score: 50 };
+    const same = wu1.element === wu2.element;
+    const compatible = (wu1.element === 'Api' && wu2.element === 'Udara') || (wu1.element === 'Air' && wu2.element === 'Tanah') || (wu1.element === 'Tanah' && wu2.element === 'Air') || (wu1.element === 'Udara' && wu2.element === 'Api');
+    const diff = Math.abs(wu1.urip_wuku - wu2.urip_wuku);
+    if (same) return { level: 'Sangat Baik', desc: `Elemen ${wu1.element} sama.`, score: 90 };
+    if (compatible) return { level: 'Baik', desc: `Elemen saling melengkapi.`, score: 80 };
+    if (diff === 0) return { level: 'Sangat Baik', desc: 'Urip Wuku sama.', score: 85 };
+    if (diff % 3 === 0) return { level: 'Baik', desc: `Selisih Urip harmonis.`, score: 75 };
+    return { level: 'Cukup', desc: 'Karakter berbeda.', score: 60 };
+}
+
+function findCompatibility(data, key1, key2, type) {
+    let pair;
+    if (type === 'shio') pair = data.shio_pairs?.find(p => p.shio1 === key1 && p.shio2 === key2);
+    else if (type === 'zodiac') pair = data.zodiac_pairs?.find(p => p.zodiac1 === key1 && p.zodiac2 === key2);
+    else if (type === 'bazi') pair = data.daymaster_pairs?.find(p => p.dm1 === key1 && p.dm2 === key2);
+    return pair || { compatibility: 'Data tidak ditemukan', score: 50, strength: '-', challenge: '-', taboo: '-', solution: '-' };
 }
 
 async function calculateKecocokan(skipScroll = false) {
-    if (!calendarData || !kecocokanData) { alert('Data masih dimuat.'); return; }
+    if (!calendarData || !wetonData) { alert('Data masih dimuat.'); return; }
     
-    const name1 = elements.name1.value.trim() || 'Anda';
-    const name2 = elements.name2.value.trim() || 'Pasangan';
-    const birth1 = elements.birth1.value;
-    const birth2 = elements.birth2.value;
-    if (!birth1 || !birth2) { alert('Lengkapi tanggal lahir keduanya.'); return; }
+    const name1 = elements.name1.value.trim() || 'Anda', name2 = elements.name2.value.trim() || 'Pasangan';
+    const birth1 = elements.birth1.value, birth2 = elements.birth2.value;
+    if (!birth1 || !birth2) { alert('Lengkapi tanggal lahir.'); return; }
     
-    const date1 = new Date(birth1);
-    const date2 = new Date(birth2);
-    const weton1 = getWeton(date1);
-    const weton2 = getWeton(date2);
+    const d1 = new Date(birth1), d2 = new Date(birth2);
+    const weton1 = getWeton(d1), weton2 = getWeton(d2);
     const neptu1 = calculateNeptu(weton1.saptawara, weton1.pancawara, calendarData.saptawara, calendarData.pancawara);
     const neptu2 = calculateNeptu(weton2.saptawara, weton2.pancawara, calendarData.saptawara, calendarData.pancawara);
     const total = neptu1 + neptu2;
-    const wuku1 = getWuku(date1).name;
-    const wuku2 = getWuku(date2).name;
+    const wuku1 = getWuku(d1).name, wuku2 = getWuku(d2).name;
+    const shio1 = getShio(d1.getFullYear()), shio2 = getShio(d2.getFullYear());
+    const zodiac1 = getZodiac(d1.getMonth()+1, d1.getDate()), zodiac2 = getZodiac(d2.getMonth()+1, d2.getDate());
+    const hour1 = parseInt(elements.hour1.value) || 12, hour2 = parseInt(elements.hour2.value) || 12;
+    const bazi1 = analyzeBaZiChart(d1, hour1), bazi2 = analyzeBaZiChart(d2, hour2);
+    const dm1 = bazi1.dayMaster.name, dm2 = bazi2.dayMaster.name;
     
-    elements.name1Display.textContent = name1;
-    elements.name2Display.textContent = name2;
-    elements.neptu1.textContent = neptu1;
-    elements.neptu2.textContent = neptu2;
-    elements.weton1Display.textContent = `${weton1.combo} (Wuku: ${wuku1})`;
-    elements.weton2Display.textContent = `${weton2.combo} (Wuku: ${wuku2})`;
+    elements.name1Display.textContent = name1; elements.name2Display.textContent = name2;
+    elements.neptu1.textContent = neptu1; elements.neptu2.textContent = neptu2;
+    elements.weton1Display.textContent = `${weton1.combo} (${wuku1})`; elements.weton2Display.textContent = `${weton2.combo} (${wuku2})`;
     elements.totalNeptu.textContent = total;
     
-    const kategori = kecocokanData.kecocokan_jodoh.find(k => total >= k.min_neptu && total <= k.max_neptu);
-    if (kategori) {
-        elements.categoryName.textContent = `${kategori.category} (${kategori.status})`;
-        elements.categoryDesc.textContent = kategori.description;
-    } else {
-        elements.categoryName.textContent = 'Tidak Diketahui';
-    }
+    const kategori = wetonData.kecocokan_jodoh.find(k => total >= k.min_neptu && total <= k.max_neptu);
+    if (kategori) { elements.categoryName.textContent = `${kategori.category} (${kategori.status})`; elements.categoryDesc.textContent = kategori.description; }
+    else { elements.categoryName.textContent = 'Tidak Diketahui'; }
     
     const wukuAnalysis = analyzeWuku(wuku1, wuku2);
-    currentResult = { name1, name2, birth1, birth2, weton1: weton1.combo, neptu1, wuku1, weton2: weton2.combo, neptu2, wuku2, total, category: kategori?.category || '-', status: kategori?.status || '-', desc: kategori?.description || '', wukuAnalysis };
+    const shioComp = findCompatibility(shioData, shio1, shio2, 'shio');
+    const zodiacComp = findCompatibility(zodiacData, zodiac1, zodiac2, 'zodiac');
+    const baziComp = findCompatibility(baziData, dm1, dm2, 'bazi');
+    
+    const holistic = Math.round((wukuAnalysis.score + shioComp.score + zodiacComp.score + baziComp.score) / 4);
+    let verdict = ''; if (holistic >= 80) verdict = 'Sangat Cocok - Harmonis dan saling mendukung.';
+    else if (holistic >= 65) verdict = 'Cocok - Hubungan yang baik dengan beberapa tantangan.';
+    else if (holistic >= 50) verdict = 'Cukup Cocok - Perlu usaha ekstra untuk saling memahami.';
+    else verdict = 'Kurang Cocok - Banyak perbedaan, namun bukan berarti tidak mungkin.';
+    
+    elements.holisticScore.textContent = holistic + '%'; elements.holisticVerdict.textContent = verdict;
+    elements.holisticScoreBox.classList.remove('hidden');
+    
+    currentResult = { name1, name2, birth1, birth2, hour1, hour2, weton1: weton1.combo, neptu1, wuku1, shio1, zodiac1, dm1, bazi1, weton2: weton2.combo, neptu2, wuku2, shio2, zodiac2, dm2, bazi2, total, kategori, wukuAnalysis, shioComp, zodiacComp, baziComp, holistic, verdict };
     
     const url = new URL(window.location.href);
-    url.searchParams.set('n1', name1);
-    url.searchParams.set('b1', birth1);
-    url.searchParams.set('n2', name2);
-    url.searchParams.set('b2', birth2);
+    url.searchParams.set('n1', name1); url.searchParams.set('b1', birth1); url.searchParams.set('h1', hour1);
+    url.searchParams.set('n2', name2); url.searchParams.set('b2', birth2); url.searchParams.set('h2', hour2);
     elements.shareLink.value = url.toString();
     
-    elements.resultSection.classList.remove('hidden');
-    elements.premiumBox.classList.add('hidden');
+    elements.resultSection.classList.remove('hidden'); elements.premiumBox.classList.add('hidden');
     if (!skipScroll) elements.resultSection.scrollIntoView({ behavior: 'smooth' });
 }
 
 function displayPremiumContent() {
     if (!currentResult) { alert('Lakukan perhitungan dulu.'); return; }
     const r = currentResult;
-    const w = r.wukuAnalysis;
-    let saran = '';
-    if (r.total >= 25) saran = 'Pasangan ini memiliki potensi kemakmuran luar biasa.';
-    else if (r.total >= 19) saran = 'Hubungan ini diberkati keharmonisan alami.';
-    else if (r.total >= 14) saran = 'Pasangan yang rukun, perlu usaha menjaga keseimbangan.';
-    else if (r.total >= 8) saran = 'Potensi cukup baik, perlu saling pengertian ekstra.';
-    else saran = 'Tantangan cukup besar, kunci: kesabaran dan saling memaafkan.';
     
     const html = `
-        <h3 style="color:#D4AF37;"><i class="fas fa-crown"></i> Analisis Mendalam ${r.name1} & ${r.name2}</h3>
-        <div style="background:rgba(15,15,20,0.8); padding:20px; border-radius:16px; margin:16px 0;">
-            <p><strong>Weton Anda:</strong> ${r.weton1} (Neptu ${r.neptu1}) | Wuku: ${r.wuku1}</p>
-            <p><strong>Weton Pasangan:</strong> ${r.weton2} (Neptu ${r.neptu2}) | Wuku: ${r.wuku2}</p>
-            <p><strong>Total Neptu:</strong> ${r.total} → ${r.category} (${r.status})</p>
+        <h3 style="color:#D4AF37; margin-bottom:24px;"><i class="fas fa-crown"></i> Analisis Holistik 4 Dimensi</h3>
+        <div class="holistic-score"><div class="holistic-number">${r.holistic}%</div><div>${r.verdict}</div></div>
+        
+        <div class="analysis-accordion">
+            ${renderAccordionItem('📿 Wariga Bali (Weton & Wuku)', 'wuku', r.wukuAnalysis, r.wukuAnalysis.score, r.wukuAnalysis.level, r.wukuAnalysis.desc, null, null, null)}
+            ${renderAccordionItem('🐉 Shio Tiongkok', 'shio', r.shioComp, r.shioComp.score, r.shioComp.compatibility, `${r.shio1} & ${r.shio2}`, r.shioComp.strength, r.shioComp.challenge, r.shioComp.taboo, r.shioComp.solution)}
+            ${renderAccordionItem('☀️ Zodiak Barat', 'zodiac', r.zodiacComp, r.zodiacComp.score, r.zodiacComp.compatibility, `${r.zodiac1} & ${r.zodiac2}`, r.zodiacComp.strength, r.zodiacComp.challenge, r.zodiacComp.taboo, r.zodiacComp.solution)}
+            ${renderAccordionItem('🎋 BaZi (Day Master)', 'bazi', r.baziComp, r.baziComp.score, r.baziComp.compatibility, `${r.dm1} & ${r.dm2}`, r.baziComp.strength, r.baziComp.challenge, r.baziComp.taboo, r.baziComp.solution)}
         </div>
-        <div style="margin:16px 0;">
-            <h4 style="color:#D4AF37;"><i class="fas fa-om"></i> Analisis Wuku</h4>
-            <p>${w.desc}</p>
+        
+        <div style="background:rgba(15,15,20,0.8); border-radius:20px; padding:24px; margin-top:24px;">
+            <h4 style="color:#F3E5AB; margin-bottom:16px;"><i class="fas fa-star"></i> Kesimpulan & Saran Spiritual</h4>
+            <p style="line-height:1.7; margin-bottom:16px;">${generateConclusion(r)}</p>
+            <p style="line-height:1.7; font-style:italic;">💡 <strong>Saran Spiritual:</strong> Lakukan upacara <em>melukat</em> atau <em>mabyakala</em> bersama setiap 6 bulan untuk membersihkan energi negatif dan memperkuat ikatan batin.</p>
         </div>
-        <p style="background:rgba(15,15,20,0.8); padding:20px; border-radius:16px;"><i class="fas fa-lightbulb"></i> <strong>Saran:</strong> ${saran}</p>
     `;
     elements.premiumBox.innerHTML = html;
     elements.premiumBox.classList.remove('hidden');
+    
+    // Setup accordion
+    document.querySelectorAll('.accordion-header').forEach(h => h.addEventListener('click', function() {
+        this.classList.toggle('active'); this.nextElementSibling.classList.toggle('active');
+    }));
 }
 
-function copyLink() {
-    elements.shareLink.select();
-    navigator.clipboard?.writeText(elements.shareLink.value).then(() => {
-        const toast = document.getElementById('toast');
-        toast.classList.remove('hidden');
-        setTimeout(() => toast.classList.add('hidden'), 2000);
-    });
+function renderAccordionItem(title, id, data, score, comp, subtitle, strength, challenge, taboo, solution) {
+    return `
+        <div class="accordion-item">
+            <div class="accordion-header"><span><strong>${title}</strong> - Skor: ${score}% (${comp})</span><i class="fas fa-chevron-down"></i></div>
+            <div class="accordion-content">
+                ${subtitle ? `<p style="margin-bottom:16px; color:#A0A0B0;">${subtitle}</p>` : ''}
+                ${strength ? `<div class="analysis-section"><span class="analysis-label label-strength">✅ KEKUATAN</span><p style="margin-top:8px;">${strength}</p></div>` : ''}
+                ${challenge ? `<div class="analysis-section"><span class="analysis-label label-challenge">⚠️ TANTANGAN</span><p style="margin-top:8px;">${challenge}</p></div>` : ''}
+                ${taboo ? `<div class="analysis-section"><span class="analysis-label label-taboo">🚫 PANTANGAN</span><p style="margin-top:8px;">${taboo}</p></div>` : ''}
+                ${solution ? `<div class="analysis-section"><span class="analysis-label label-solution">💡 SOLUSI</span><p style="margin-top:8px;">${solution}</p></div>` : ''}
+            </div>
+        </div>
+    `;
 }
 
-function shareWA() {
-    window.open(`https://wa.me/?text=${encodeURIComponent('Lihat kecocokan jodohku! ' + elements.shareLink.value)}`, '_blank');
+function generateConclusion(r) {
+    return `Berdasarkan analisis holistik 4 dimensi, pasangan ${r.name1} (${r.weton1}, Shio ${r.shio1}, ${r.zodiac1}, Day Master ${r.dm1}) dan ${r.name2} (${r.weton2}, Shio ${r.shio2}, ${r.zodiac2}, Day Master ${r.dm2}) memiliki skor kecocokan ${r.holistic}%. ${r.verdict} Kunci utama hubungan ini adalah komunikasi yang jujur dan saling menghargai perbedaan.`;
 }
 
-function shareTelegram() {
-    window.open(`https://t.me/share/url?url=${encodeURIComponent(elements.shareLink.value)}`, '_blank');
+function handlePremiumUnlock() {
+    let balance = parseInt(localStorage.getItem('tokenBalance') || '0');
+    if (balance >= 3) { balance -= 3; localStorage.setItem('tokenBalance', balance); displayPremiumContent(); updateTokenDisplay(); showSuccessToast(`✅ 3 Token digunakan. Sisa ${balance} Token.`); }
+    else { if (confirm(`Butuh 3 Token. Token Anda: ${balance}. Beli sekarang?`)) window.location.href = 'pricing.html'; }
 }
+
+function copyLink() { const i = document.getElementById('shareLink'); i.select(); navigator.clipboard?.writeText(i.value).then(() => { const t = document.getElementById('toast'); t.classList.remove('hidden'); setTimeout(() => t.classList.add('hidden'), 2000); }); }
+function shareWA() { window.open(`https://wa.me/?text=${encodeURIComponent('Lihat kecocokan kami! ' + elements.shareLink.value)}`, '_blank'); }
+function shareTelegram() { window.open(`https://t.me/share/url?url=${encodeURIComponent(elements.shareLink.value)}`, '_blank'); }
 
 async function checkAutoFill() {
-    const params = new URLSearchParams(window.location.search);
-    if (params.has('n1') && params.has('b1') && params.has('n2') && params.has('b2')) {
-        elements.name1.value = params.get('n1');
-        elements.birth1.value = params.get('b1');
-        elements.name2.value = params.get('n2');
-        elements.birth2.value = params.get('b2');
-        setTimeout(() => calculateKecocokan(true), 500);
-    }
+    const p = new URLSearchParams(window.location.search);
+    if (p.has('n1')) { elements.name1.value = p.get('n1'); elements.birth1.value = p.get('b1'); elements.hour1.value = p.get('h1') || 12; }
+    if (p.has('n2')) { elements.name2.value = p.get('n2'); elements.birth2.value = p.get('b2'); elements.hour2.value = p.get('h2') || 12; }
+    if (p.has('n1') && p.has('n2')) setTimeout(() => calculateKecocokan(true), 500);
 }
 
 async function init() {
     initDOMElements();
-    
-    const today = new Date();
-    const yyyy = today.getFullYear();
-    const mm = String(today.getMonth() + 1).padStart(2, '0');
-    const dd = String(today.getDate()).padStart(2, '0');
-    elements.birth1.value = `${yyyy}-${mm}-${dd}`;
-    elements.birth2.value = `${yyyy}-${mm}-${dd}`;
+    const today = new Date().toISOString().split('T')[0]; elements.birth1.value = today; elements.birth2.value = today;
     
     try {
-        const data = await loadAllData();
-        calendarData = data.calendar;
-        kecocokanData = data.weton;
-    } catch(e) {
-        alert('Gagal memuat data.');
-        return;
-    }
+        const data = await loadAllData(); calendarData = data.calendar; wetonData = data.weton;
+        await loadAllCompatibilityData();
+    } catch(e) { alert('Gagal memuat data.'); return; }
     
-    updateTokenDisplay();
-    checkPaymentSuccess();
-    await checkAutoFill();
-    
+    updateTokenDisplay(); checkPaymentSuccess(); await checkAutoFill();
     elements.checkBtn.addEventListener('click', () => calculateKecocokan(false));
-    document.getElementById('premiumBtn').addEventListener('click', () => handlePremiumUnlock(displayPremiumContent));
+    document.getElementById('premiumBtn').addEventListener('click', handlePremiumUnlock);
     document.getElementById('copyLinkBtn').addEventListener('click', copyLink);
     document.getElementById('shareWA').addEventListener('click', shareWA);
     document.getElementById('shareTelegram').addEventListener('click', shareTelegram);
