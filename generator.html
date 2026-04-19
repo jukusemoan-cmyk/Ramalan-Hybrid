@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator JSON Kecocokan • Oracle Nusantara</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0A0A0C;
+            color: #E5E5E5;
+            padding: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 { color: #D4AF37; }
+        .card {
+            background: #1A1C2B;
+            border: 1px solid #D4AF37;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        button {
+            background: #D4AF37;
+            color: #0A0A0C;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-right: 12px;
+            margin-bottom: 12px;
+        }
+        button:hover { background: #F3E5AB; }
+        pre {
+            background: #0F111A;
+            padding: 16px;
+            border-radius: 12px;
+            overflow-x: auto;
+            max-height: 300px;
+            font-size: 0.8rem;
+        }
+        .info {
+            color: #A0A0B0;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔮 Generator JSON Kecocokan</h1>
+    <p>Klik tombol di bawah untuk mengunduh file JSON lengkap. Upload ke folder <code>data/</code> di GitHub.</p>
+
+    <div class="card">
+        <h2 style="color:#F3E5AB; margin-top:0;">🐉 1. Kecocokan Shio (144 Kombinasi)</h2>
+        <button onclick="generateShioJSON()">📥 Download shio-compatibility.json</button>
+        <button onclick="previewShio()">👁️ Preview</button>
+        <pre id="shioPreview" style="display:none;"></pre>
+    </div>
+
+    <div class="card">
+        <h2 style="color:#F3E5AB; margin-top:0;">☀️ 2. Kecocokan Zodiak (144 Kombinasi)</h2>
+        <button onclick="generateZodiacJSON()">📥 Download zodiac-compatibility.json</button>
+        <button onclick="previewZodiac()">👁️ Preview</button>
+        <pre id="zodiacPreview" style="display:none;"></pre>
+    </div>
+
+    <div class="card">
+        <h2 style="color:#F3E5AB; margin-top:0;">🎋 3. Kecocokan BaZi - Day Master (100 Kombinasi)</h2>
+        <button onclick="generateBaziJSON()">📥 Download bazi-compatibility.json</button>
+        <button onclick="previewBazi()">👁️ Preview</button>
+        <pre id="baziPreview" style="display:none;"></pre>
+    </div>
+
+    <p class="info"><i class="fas fa-info-circle"></i> Setelah diunduh, upload file-file tersebut ke folder <code>data/</code> di repository GitHub kamu.</p>
+
+    <script>
+        // ================== DATA DASAR ==================
+        const shioList = ['Tikus', 'Kerbau', 'Macan', 'Kelinci', 'Naga', 'Ular', 'Kuda', 'Kambing', 'Monyet', 'Ayam', 'Anjing', 'Babi'];
+        const zodiacList = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
+        const dayMasterList = ['Jia', 'Yi', 'Bing', 'Ding', 'Wu', 'Ji', 'Geng', 'Xin', 'Ren', 'Gui'];
+
+        // ================== TEMPLATE SHIO ==================
+        function generateShioEntry(s1, s2) {
+            const pairs = {
+                'Tikus-Tikus': { score: 75, comp: 'Cocok', strength: 'Keduanya cerdas dan adaptif.', challenge: 'Bisa terjebak overthinking.', taboo: 'Hindari saling mengkritik soal uang.', solution: 'Jadwalkan waktu santai tanpa bahas kerjaan.' },
+                'Tikus-Kerbau': { score: 90, comp: 'Sangat Cocok', strength: 'Saling melengkapi—Tikus cerdas, Kerbau kuat.', challenge: 'Kerbau kaku, Tikus licin.', taboo: 'Jangan remehkan kerja keras Kerbau.', solution: 'Tikus jadi otak, Kerbau jadi otot.' },
+                'Tikus-Macan': { score: 65, comp: 'Cukup Cocok', strength: 'Macan melindungi, Tikus menasihati.', challenge: 'Macan dominan, Tikus bisa terintimidasi.', taboo: 'Hindari konfrontasi saat Macan marah.', solution: 'Tikus sampaikan kritik dengan diplomasi.' },
+                'Tikus-Kelinci': { score: 50, comp: 'Kurang Cocok', strength: 'Sama-sama cinta damai.', challenge: 'Tikus ambisius, Kelinci pasif.', taboo: 'Jangan paksa Kelinci keluar zona nyaman.', solution: 'Ciptakan rasa aman dulu.' }
+            };
+            const key = `${s1}-${s2}`;
+            const reverseKey = `${s2}-${s1}`;
+            const template = pairs[key] || pairs[reverseKey] || { score: 60, comp: 'Cukup Cocok', strength: `${s1} dan ${s2} memiliki dinamika yang unik.`, challenge: 'Perbedaan karakter perlu dikelola.', taboo: 'Hindari saling memaksakan kehendak.', solution: 'Komunikasi dan saling pengertian adalah kunci.' };
+            
+            return {
+                shio1: s1, shio2: s2,
+                compatibility: template.comp,
+                score: template.score,
+                strength: template.strength,
+                challenge: template.challenge,
+                taboo: template.taboo,
+                solution: template.solution
+            };
+        }
+
+        // ================== TEMPLATE ZODIAK ==================
+        function generateZodiacEntry(z1, z2) {
+            const elementMap = {
+                'Aries':'Api','Leo':'Api','Sagittarius':'Api',
+                'Taurus':'Tanah','Virgo':'Tanah','Capricorn':'Tanah',
+                'Gemini':'Udara','Libra':'Udara','Aquarius':'Udara',
+                'Cancer':'Air','Scorpio':'Air','Pisces':'Air'
+            };
+            const e1 = elementMap[z1], e2 = elementMap[z2];
+            let score = 70, comp = 'Cocok', strength = '', challenge = '', taboo = '', solution = '';
+            
+            if (e1 === e2) {
+                score = 75; comp = 'Cocok';
+                strength = `Sama-sama berelemen ${e1}. Kalian memiliki bahasa cinta yang sama.`;
+                challenge = `Dua ${e1} bisa saling membesar-besarkan kelemahan.`;
+                taboo = 'Hindari kompetisi tidak sehat.';
+                solution = 'Salurkan energi bersama ke hal positif.';
+            } else if ((e1 === 'Api' && e2 === 'Udara') || (e1 === 'Udara' && e2 === 'Api')) {
+                score = 88; comp = 'Sangat Cocok';
+                strength = 'Api dan Udara saling membesarkan—gairah dan ide berpadu.';
+                challenge = 'Api bisa membakar tanpa kendali.';
+                taboo = 'Jangan biarkan diskusi berubah jadi debat panas.';
+                solution = 'Udara bantu Api fokus, Api beri Udara aksi.';
+            } else if ((e1 === 'Tanah' && e2 === 'Air') || (e1 === 'Air' && e2 === 'Tanah')) {
+                score = 80; comp = 'Sangat Cocok';
+                strength = 'Tanah membendung Air, Air menyuburkan Tanah.';
+                challenge = 'Air bisa membuat Tanah longsor jika terlalu deras.';
+                taboo = 'Jangan saling mengekang atau mengabaikan.';
+                solution = 'Tanah beri struktur, Air beri fleksibilitas.';
+            } else if ((e1 === 'Api' && e2 === 'Air') || (e1 === 'Air' && e2 === 'Api')) {
+                score = 50; comp = 'Kurang Cocok';
+                strength = 'Perbedaan menciptakan daya tarik yang kuat.';
+                challenge = 'Api dan Air saling mematikan—konflik mudah muncul.';
+                taboo = 'Hindari menyakiti perasaan satu sama lain.';
+                solution = 'Belajar memahami bahasa emosi masing-masing.';
+            } else {
+                score = 65; comp = 'Cukup Cocok';
+                strength = 'Kombinasi yang menarik, bisa saling belajar.';
+                challenge = 'Perbedaan elemen perlu penyesuaian.';
+                taboo = 'Jangan meremehkan perspektif satu sama lain.';
+                solution = 'Fokus pada kekuatan masing-masing.';
+            }
+            
+            return { zodiac1: z1, zodiac2: z2, compatibility: comp, score, strength, challenge, taboo, solution };
+        }
+
+        // ================== TEMPLATE BAZI ==================
+        function generateBaziEntry(dm1, dm2) {
+            const elementMap = {
+                'Jia':'Kayu','Yi':'Kayu','Bing':'Api','Ding':'Api','Wu':'Tanah',
+                'Ji':'Tanah','Geng':'Logam','Xin':'Logam','Ren':'Air','Gui':'Air'
+            };
+            const e1 = elementMap[dm1], e2 = elementMap[dm2];
+            let score = 70, comp = 'Cocok', strength = '', challenge = '', taboo = '', solution = '';
+            
+            if (dm1 === dm2) {
+                score = 70; comp = 'Cukup Cocok';
+                strength = `Dua ${dm1} saling memahami esensi satu sama lain.`;
+                challenge = 'Bisa saling berkompetisi.';
+                taboo = 'Hindari perebutan dominasi.';
+                solution = 'Tetapkan wilayah masing-masing.';
+            } else if ((e1 === 'Kayu' && e2 === 'Api') || (e2 === 'Kayu' && e1 === 'Api')) {
+                score = 90; comp = 'Sangat Cocok';
+                strength = 'Kayu menghasilkan Api—hubungan yang saling menghidupkan.';
+                challenge = 'Api bisa membakar Kayu jika terlalu besar.';
+                taboo = 'Api jangan menguras Kayu.';
+                solution = 'Kayu beri dukungan, Api beri kehangatan.';
+            } else if ((e1 === 'Api' && e2 === 'Tanah') || (e2 === 'Api' && e1 === 'Tanah')) {
+                score = 85; comp = 'Sangat Cocok';
+                strength = 'Api menghasilkan Tanah—fondasi yang kokoh.';
+                challenge = 'Api bisa membuat Tanah terlalu kering.';
+                taboo = 'Jangan saling menjadikan abu.';
+                solution = 'Api beri semangat, Tanah beri stabilitas.';
+            } else if ((e1 === 'Tanah' && e2 === 'Logam') || (e2 === 'Tanah' && e1 === 'Logam')) {
+                score = 80; comp = 'Sangat Cocok';
+                strength = 'Tanah menghasilkan Logam—nilai dan struktur.';
+                challenge = 'Logam bisa mengeraskan Tanah.';
+                taboo = 'Jangan terlalu kaku.';
+                solution = 'Tanah beri ruang, Logam beri ketajaman.';
+            } else if ((e1 === 'Logam' && e2 === 'Air') || (e2 === 'Logam' && e1 === 'Air')) {
+                score = 85; comp = 'Sangat Cocok';
+                strength = 'Logam menghasilkan Air—aliran dan kemurnian.';
+                challenge = 'Air bisa membuat Logam berkarat.';
+                taboo = 'Jangan mengikis satu sama lain.';
+                solution = 'Logam beri bentuk, Air beri kehidupan.';
+            } else if ((e1 === 'Air' && e2 === 'Kayu') || (e2 === 'Air' && e1 === 'Kayu')) {
+                score = 88; comp = 'Sangat Cocok';
+                strength = 'Air menghasilkan Kayu—pertumbuhan dan nutrisi.';
+                challenge = 'Air bisa membuat Kayu busuk jika berlebihan.';
+                taboo = 'Jangan membanjiri atau menenggelamkan.';
+                solution = 'Air beri cukup, Kayu tumbuh mandiri.';
+            } else if ((e1 === 'Kayu' && e2 === 'Tanah') || (e2 === 'Kayu' && e1 === 'Tanah')) {
+                score = 55; comp = 'Kurang Cocok';
+                strength = 'Kayu mengendalikan Tanah—struktur dan batasan.';
+                challenge = 'Kayu bisa merusak Tanah.';
+                taboo = 'Jangan saling mendominasi.';
+                solution = 'Kayu belajar melepaskan, Tanah belajar bertahan.';
+            } else {
+                score = 60; comp = 'Cukup Cocok';
+                strength = 'Kombinasi yang membutuhkan usaha.';
+                challenge = 'Perbedaan mendasar perlu dijembatani.';
+                taboo = 'Hindari menyalahkan elemen satu sama lain.';
+                solution = 'Fokus pada tujuan bersama.';
+            }
+            
+            return { dm1, dm2, compatibility: comp, score, strength, challenge, taboo, solution };
+        }
+
+        // ================== FUNGSI GENERATE ==================
+        function generateShioJSON() {
+            const pairs = [];
+            for (let s1 of shioList) {
+                for (let s2 of shioList) {
+                    pairs.push(generateShioEntry(s1, s2));
+                }
+            }
+            downloadJSON({ shio_pairs: pairs }, 'shio-compatibility.json');
+        }
+
+        function generateZodiacJSON() {
+            const pairs = [];
+            for (let z1 of zodiacList) {
+                for (let z2 of zodiacList) {
+                    pairs.push(generateZodiacEntry(z1, z2));
+                }
+            }
+            downloadJSON({ zodiac_pairs: pairs }, 'zodiac-compatibility.json');
+        }
+
+        function generateBaziJSON() {
+            const pairs = [];
+            for (let dm1 of dayMasterList) {
+                for (let dm2 of dayMasterList) {
+                    pairs.push(generateBaziEntry(dm1, dm2));
+                }
+            }
+            downloadJSON({ daymaster_pairs: pairs }, 'bazi-compatibility.json');
+        }
+
+        function downloadJSON(data, filename) {
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // ================== PREVIEW ==================
+        function previewShio() {
+            const pairs = [];
+            for (let s1 of shioList.slice(0,2)) for (let s2 of shioList.slice(0,2)) pairs.push(generateShioEntry(s1, s2));
+            document.getElementById('shioPreview').textContent = JSON.stringify({ shio_pairs: pairs }, null, 2);
+            document.getElementById('shioPreview').style.display = 'block';
+        }
+        function previewZodiac() {
+            const pairs = [];
+            for (let z1 of zodiacList.slice(0,2)) for (let z2 of zodiacList.slice(0,2)) pairs.push(generateZodiacEntry(z1, z2));
+            document.getElementById('zodiacPreview').textContent = JSON.stringify({ zodiac_pairs: pairs }, null, 2);
+            document.getElementById('zodiacPreview').style.display = 'block';
+        }
+        function previewBazi() {
+            const pairs = [];
+            for (let dm1 of dayMasterList.slice(0,2)) for (let dm2 of dayMasterList.slice(0,2)) pairs.push(generateBaziEntry(dm1, dm2));
+            document.getElementById('baziPreview').textContent = JSON.stringify({ daymaster_pairs: pairs }, null, 2);
+            document.getElementById('baziPreview').style.display = 'block';
+        }
+
+        // Expose ke global
+        window.generateShioJSON = generateShioJSON;
+        window.generateZodiacJSON = generateZodiacJSON;
+        window.generateBaziJSON = generateBaziJSON;
+        window.previewShio = previewShio;
+        window.previewZodiac = previewZodiac;
+        window.previewBazi = previewBazi;
+    </script>
+</body>
+</html>
