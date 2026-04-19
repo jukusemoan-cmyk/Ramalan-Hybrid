@@ -1,0 +1,22 @@
+{
+  "templates": [
+    {
+      "id": "morning",
+      "recommendation": "Kamu adalah tipe 'morning person' secara energetik. Energimu paling optimal di pagi hari, terutama antara jam 6-10 pagi. Ini adalah waktu terbaik untuk memulai proyek baru, mengambil keputusan penting, atau melakukan pekerjaan yang membutuhkan konsentrasi tinggi.\n\nHindari pekerjaan berat di sore hari (setelah jam 3). Energimu cenderung menurun dan kamu lebih rentan membuat kesalahan. Gunakan sore untuk tugas-tugas ringan, administrasi, atau networking santai.",
+      "best_days": "Hari dengan Neptu 8, 13, atau 16 adalah hari terbaikmu. Terutama jika jatuh pada Selasa atau Kamis.",
+      "best_months": "Bulan Maret-April dan September-Oktober adalah periode puncakmu. Manfaatkan untuk inisiatif besar."
+    },
+    {
+      "id": "night",
+      "recommendation": "Kamu adalah tipe 'night owl' secara energetik. Kreativitas dan fokusmu justru memuncak di malam hari, terutama antara jam 8 malam hingga 1 pagi. Ini adalah waktu terbaik untuk pekerjaan yang membutuhkan deep work, brainstorming, atau aktivitas kreatif.\n\nHindari meeting penting atau presentasi di pagi hari. Energimu belum sepenuhnya 'bangun'. Gunakan pagi untuk rutinitas ringan, olahraga, atau perencanaan.",
+      "best_days": "Hari dengan Neptu 7, 9, atau 14 adalah hari terbaikmu. Terutama jika jatuh pada Rabu atau Jumat.",
+      "best_months": "Bulan Mei-Juni dan November-Desember adalah periode puncakmu. Ide-ide brilian sering muncul di bulan-bulan ini."
+    },
+    {
+      "id": "afternoon",
+      "recommendation": "Kamu memiliki energi yang paling stabil di siang hingga sore hari, antara jam 11 pagi hingga 4 sore. Ini adalah waktu terbaik untuk kolaborasi, meeting, presentasi, atau pekerjaan yang melibatkan banyak orang.\n\nHindari pekerjaan yang membutuhkan konsentrasi tinggi di pagi buta atau larut malam. Kamu butuh waktu untuk 'pemanasan' dan juga 'pendinginan'.",
+      "best_days": "Hari dengan Neptu 10, 12, atau 15 adalah hari terbaikmu. Terutama jika jatuh pada Senin atau Sabtu.",
+      "best_months": "Bulan Januari-Februari dan Juli-Agustus adalah periode puncakmu. Manfaatkan untuk membangun koneksi dan jaringan."
+    }
+  ]
+}
