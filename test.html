@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test Worker</title></head>
+<body>
+<h3>Test Worker Connection</h3>
+<button onclick="testGet()">Test GET</button>
+<button onclick="testPost()">Test POST</button>
+<pre id="result"></pre>
+
+<script>
+const WORKER_URL = 'https://api-ramalan.jukusemoan.workers.dev';
+
+async function testGet() {
+    const el = document.getElementById('result');
+    el.textContent = 'Testing GET...';
+    try {
+        const res = await fetch(WORKER_URL);
+        const text = await res.text();
+        el.textContent = 'SUCCESS:\n' + text;
+    } catch (e) {
+        el.textContent = 'ERROR:\n' + e.message;
+    }
+}
+
+async function testPost() {
+    const el = document.getElementById('result');
+    el.textContent = 'Testing POST...';
+    try {
+        const res = await fetch(WORKER_URL + '/api/create-transaction', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ order_id: 'TEST-' + Date.now(), amount: 5000 })
+        });
+        const data = await res.json();
+        el.textContent = 'SUCCESS:\n' + JSON.stringify(data, null, 2);
+    } catch (e) {
+        el.textContent = 'ERROR:\n' + e.message;
+    }
+}
+</script>
+</body>
+</html>
