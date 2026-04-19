@@ -647,19 +647,81 @@ function handleUnlock() {
 
 function displayPremiumContent() {
     if (!currentFortunes || !currentUserData) { alert('Lakukan ramalan dulu.'); return; }
+    
     const p = currentFortunes.premium;
+    const fullName = elements.fullName.value.trim();
+    
+    // Siapkan analisis numerologi mendalam (jika nama lengkap diisi)
+    let numerologyPremiumHtml = '';
+    if (fullName && numerologyData) {
+        try {
+            const numerology = calculateNumerology(fullName);
+            if (numerology) {
+                const soulInterpretation = getFullInterpretation(numerology.soul_urge);
+                const personalityInterpretation = getFullInterpretation(numerology.personality);
+                const destinyInterpretation = getFullInterpretation(numerology.destiny);
+                
+                numerologyPremiumHtml = `
+                    <div style="background:#0F111A; border-radius:24px; padding:20px; margin-top:20px; border: 1px solid #C6A434;">
+                        <p style="color:#C6A434; font-size:1.3rem; margin-bottom:16px;">
+                            <i class="fas fa-calculator"></i> Analisis Numerologi Mendalam
+                        </p>
+                        <p style="margin-bottom:12px;"><strong style="color:#EFE1B9;">Angka Jiwa ${numerology.soul_urge}:</strong> ${soulInterpretation}</p>
+                        <p style="margin-bottom:12px;"><strong style="color:#EFE1B9;">Angka Kepribadian ${numerology.personality}:</strong> ${personalityInterpretation}</p>
+                        <p style="margin-bottom:12px;"><strong style="color:#EFE1B9;">Angka Takdir ${numerology.destiny}:</strong> ${destinyInterpretation}</p>
+                        <p style="margin-top:16px; font-style:italic; color:#C2B5D8;">Power Name: ${numerology.power_name}</p>
+                    </div>
+                `;
+            }
+        } catch (e) {
+            console.error('Gagal generate analisis numerologi premium:', e);
+        }
+    }
+    
     const html = `
         <div style="display:flex; flex-direction:column; gap:20px;">
             <h3 style="font-family:'Cinzel'; color:#E9CF7A;"><i class="fas fa-crown"></i> Ramalan Mendalam untuk ${elements.userName.value.trim() || 'Sang Pencari'}</h3>
-            <div style="background:#0F111A; border-radius:24px; padding:20px;"><p style="color:#C6A434; font-size:1.3rem;"><i class="fas fa-heart"></i> Asmara</p><p>${p.love}</p></div>
-            <div style="background:#0F111A; border-radius:24px; padding:20px;"><p style="color:#C6A434; font-size:1.3rem;"><i class="fas fa-briefcase"></i> Karir</p><p>${p.career}</p></div>
-            <div style="background:#0F111A; border-radius:24px; padding:20px;"><p style="color:#C6A434; font-size:1.3rem;"><i class="fas fa-coins"></i> Keuangan</p><p>${p.finance}</p></div>
-            <div style="background:#0F111A; border-radius:24px; padding:20px;"><p style="color:#C6A434; font-size:1.3rem;"><i class="fas fa-heartbeat"></i> Kesehatan</p><p>${p.health}</p></div>
-            <p style="text-align:right; font-style:italic;">— Telah dibuka dengan kunci semesta —</p>
+            
+            <div style="background:#0F111A; border-radius:24px; padding:20px;">
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-heart"></i> Asmara</p>
+                <p style="line-height:1.6;">${p.love}</p>
+            </div>
+            <div style="background:#0F111A; border-radius:24px; padding:20px;">
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-briefcase"></i> Karir</p>
+                <p style="line-height:1.6;">${p.career}</p>
+            </div>
+            <div style="background:#0F111A; border-radius:24px; padding:20px;">
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-coins"></i> Keuangan</p>
+                <p style="line-height:1.6;">${p.finance}</p>
+            </div>
+            <div style="background:#0F111A; border-radius:24px; padding:20px;">
+                <p style="color:#C6A434; font-size:1.3rem; margin-bottom:8px;"><i class="fas fa-heartbeat"></i> Kesehatan</p>
+                <p style="line-height:1.6;">${p.health}</p>
+            </div>
+            
+            ${numerologyPremiumHtml}
+            
+            <p style="text-align:right; font-style:italic; margin-top:16px;">— Telah dibuka dengan kunci semesta —</p>
         </div>
     `;
     elements.premiumBox.innerHTML = html;
     elements.premiumBox.classList.remove('hidden');
+}
+
+// Fungsi helper untuk mendapatkan interpretasi lengkap
+function getFullInterpretation(number) {
+    if (!numerologyData) return 'Data tidak tersedia.';
+    
+    let data;
+    if (number === 11 || number === 22 || number === 33) {
+        data = numerologyData.angka_master[number.toString()];
+    } else {
+        data = numerologyData.angka_dasar[number.toString()];
+    }
+    
+    if (!data) return 'Interpretasi tidak ditemukan.';
+    
+    return `${data.judul}. ${data.power}. Unsur: ${data.unsur}. Planet: ${data.planets}. ${data.karir_cocok ? 'Karir cocok: ' + data.karir_cocok + '.' : ''}`;
 }
 
 function showSuccessToast(message) {
