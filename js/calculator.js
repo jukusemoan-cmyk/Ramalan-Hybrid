@@ -144,7 +144,121 @@ function getSasih(date) {
 
 // Untuk penggunaan yang lebih akurat, fungsi getSasih bisa diambil dari data JSON statis
 // atau menggunakan algoritma yang lebih kompleks.
+// ================== NUMEROLOGI ==================
+// Tabel konversi huruf ke angka (Sistem Pythagorean)
+const NUMEROLOGY_CHART = {
+    'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9,
+    'j': 1, 'k': 2, 'l': 3, 'm': 4, 'n': 5, 'o': 6, 'p': 7, 'q': 8, 'r': 9,
+    's': 1, 't': 2, 'u': 3, 'v': 4, 'w': 5, 'x': 6, 'y': 7, 'z': 8
+};
 
+// Daftar huruf vokal (untuk Angka Jiwa)
+const VOWELS = ['a', 'i', 'u', 'e', 'o'];
+
+/**
+ * Mengurangi angka menjadi satu digit (kecuali angka master 11, 22, 33)
+ */
+function reduceToSingleDigit(num) {
+    if (num === 11 || num === 22 || num === 33) return num;
+    while (num > 9) {
+        num = num.toString().split('').reduce((sum, digit) => sum + parseInt(digit), 0);
+    }
+    return num;
+}
+
+/**
+ * Menghitung nilai numerologi dari sebuah string (hanya huruf)
+ */
+function calculateStringValue(str) {
+    let total = 0;
+    const cleanStr = str.toLowerCase().replace(/[^a-z]/g, '');
+    for (let char of cleanStr) {
+        total += NUMEROLOGY_CHART[char] || 0;
+    }
+    return total;
+}
+
+/**
+ * Menghitung Angka Jiwa (Soul Urge) - hanya dari huruf vokal
+ */
+function calculateSoulUrge(fullName) {
+    let total = 0;
+    const cleanName = fullName.toLowerCase().replace(/[^a-z]/g, '');
+    for (let char of cleanName) {
+        if (VOWELS.includes(char)) {
+            total += NUMEROLOGY_CHART[char] || 0;
+        }
+    }
+    return reduceToSingleDigit(total);
+}
+
+/**
+ * Menghitung Angka Kepribadian (Personality) - hanya dari huruf konsonan
+ */
+function calculatePersonality(fullName) {
+    let total = 0;
+    const cleanName = fullName.toLowerCase().replace(/[^a-z]/g, '');
+    for (let char of cleanName) {
+        if (!VOWELS.includes(char)) {
+            total += NUMEROLOGY_CHART[char] || 0;
+        }
+    }
+    return reduceToSingleDigit(total);
+}
+
+/**
+ * Menghitung Angka Takdir (Destiny/Expression) - dari semua huruf
+ */
+function calculateDestiny(fullName) {
+    const total = calculateStringValue(fullName);
+    return reduceToSingleDigit(total);
+}
+
+/**
+ * Menghitung semua aspek numerologi dari nama lengkap
+ */
+function calculateNumerology(fullName) {
+    if (!fullName || fullName.trim() === '') {
+        return null;
+    }
+    
+    const soulUrge = calculateSoulUrge(fullName);
+    const personality = calculatePersonality(fullName);
+    const destiny = calculateDestiny(fullName);
+    
+    // Tentukan Power Name berdasarkan kombinasi angka
+    let powerName = '';
+    if (destiny === 1) powerName = 'The Leader';
+    else if (destiny === 2) powerName = 'The Diplomat';
+    else if (destiny === 3) powerName = 'The Communicator';
+    else if (destiny === 4) powerName = 'The Builder';
+    else if (destiny === 5) powerName = 'The Adventurer';
+    else if (destiny === 6) powerName = 'The Nurturer';
+    else if (destiny === 7) powerName = 'The Thinker';
+    else if (destiny === 8) powerName = 'The Executor';
+    else if (destiny === 9) powerName = 'The Humanitarian';
+    else if (destiny === 11) powerName = 'The Inspirer';
+    else if (destiny === 22) powerName = 'The Master Builder';
+    else if (destiny === 33) powerName = 'The Master Teacher';
+    
+    // Tambahkan nuansa dari angka jiwa
+    if (soulUrge === 1) powerName += ' with a Pioneering Soul';
+    else if (soulUrge === 2) powerName += ' with a Gentle Heart';
+    else if (soulUrge === 3) powerName += ' with a Creative Spark';
+    else if (soulUrge === 4) powerName += ' with a Steadfast Core';
+    else if (soulUrge === 5) powerName += ' with a Free Spirit';
+    else if (soulUrge === 6) powerName += ' with a Nurturing Soul';
+    else if (soulUrge === 7) powerName += ' with a Mystical Mind';
+    else if (soulUrge === 8) powerName += ' with an Ambitious Drive';
+    else if (soulUrge === 9) powerName += ' with a Compassionate Heart';
+    
+    return {
+        soul_urge: soulUrge,
+        personality: personality,
+        destiny: destiny,
+        power_name: powerName
+    };
+}
 // ---------- 7. FUNGSI UTAMA UNTUK DIPANGGIL DARI MAIN.JS ----------
 async function calculateAll(birthDateString, calendarData, wetonData) {
     const date = new Date(birthDateString);
