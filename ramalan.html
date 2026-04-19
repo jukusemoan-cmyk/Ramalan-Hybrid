@@ -166,30 +166,10 @@
       border-radius: 20px;
       border: 1px solid #3A2E1C;
     }
-    .numerology-icon {
-      font-size: 2rem;
-      color: #C6A434;
-      margin-bottom: 8px;
-    }
-    .numerology-label {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #9A8CB0;
-      margin-bottom: 4px;
-    }
-    .numerology-value {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #C6A434;
-      font-family: 'Cinzel', serif;
-      line-height: 1.2;
-    }
-    .numerology-desc {
-      font-size: 0.9rem;
-      color: #C2B5D8;
-      margin-top: 8px;
-    }
+    .numerology-icon { font-size: 2rem; color: #C6A434; margin-bottom: 8px; }
+    .numerology-label { font-size: 0.85rem; text-transform: uppercase; color: #9A8CB0; }
+    .numerology-value { font-size: 2.5rem; font-weight: 700; color: #C6A434; font-family: 'Cinzel', serif; }
+    .numerology-desc { font-size: 0.9rem; color: #C2B5D8; margin-top: 8px; }
     .power-name-box {
       text-align: center;
       padding: 16px;
@@ -199,10 +179,7 @@
       font-size: 1.2rem;
       color: #EFE1B9;
     }
-    .power-name-box i {
-      color: #C6A434;
-      margin-right: 8px;
-    }
+    .power-name-box i { color: #C6A434; margin-right: 8px; }
 
     .aspect-grid {
       display: grid;
@@ -218,26 +195,25 @@
       backdrop-filter: blur(4px);
       text-align: center;
     }
-    .aspect-icon {
-      font-size: 2.2rem;
-      color: #C6A434;
-      margin-bottom: 10px;
-    }
-    .aspect-title {
-      font-family: 'Cinzel', serif;
-      font-size: 1.4rem;
-      margin-bottom: 14px;
-      color: #EFE1B9;
-    }
-    .free-prediction {
-      font-style: italic;
-      color: #C2B5D8;
-      min-height: 70px;
-    }
-    .premium-lock {
-      margin-top: 28px;
+    .aspect-icon { font-size: 2.2rem; color: #C6A434; margin-bottom: 10px; }
+    .aspect-title { font-family: 'Cinzel', serif; font-size: 1.4rem; margin-bottom: 14px; color: #EFE1B9; }
+    .free-prediction { font-style: italic; color: #C2B5D8; min-height: 70px; }
+
+    .token-display-section {
       text-align: center;
+      margin: 20px 0;
     }
+    .token-badge {
+      background: #1C1A2E;
+      border: 2px solid #C6A434;
+      border-radius: 40px;
+      padding: 12px 32px;
+      display: inline-block;
+    }
+    .token-badge i { color: #C6A434; margin-right: 8px; }
+    .token-badge span { font-weight: 700; color: #C6A434; font-size: 1.5rem; margin-left: 8px; }
+
+    .premium-lock { margin-top: 28px; text-align: center; }
     .btn-premium {
       background: transparent;
       border: 2px solid #C6A434;
@@ -253,11 +229,7 @@
       align-items: center;
       gap: 14px;
     }
-    .btn-premium:hover {
-      background: #C6A434;
-      color: #0B0C10;
-      box-shadow: 0 0 25px #C6A434;
-    }
+    .btn-premium:hover { background: #C6A434; color: #0B0C10; box-shadow: 0 0 25px #C6A434; }
     .premium-message {
       background: #1A1C2B;
       border-radius: 30px;
@@ -266,12 +238,7 @@
       border-left: 8px solid #C6A434;
     }
     .hidden { display: none !important; }
-    .footer-note {
-      text-align: center;
-      opacity: 0.8;
-      margin-top: 32px;
-      color: #9A8CB0;
-    }
+    .footer-note { text-align: center; opacity: 0.8; margin-top: 32px; color: #9A8CB0; }
     #loadingOverlay {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
@@ -316,6 +283,21 @@
       from { top: -100px; opacity: 0; }
       to { top: 20px; opacity: 1; }
     }
+    .footer {
+      border-top: 1px solid #3A2E1C;
+      padding: 32px 0;
+      margin-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: #9A8CB0;
+    }
+    .footer a { color: #C6A434; text-decoration: none; margin-left: 24px; }
+    @media (max-width: 768px) {
+      .footer { flex-direction: column; text-align: center; }
+      .footer a { margin: 0 12px; }
+    }
   </style>
 </head>
 <body>
@@ -331,7 +313,7 @@
       <a href="dewasa-ayu.html" style="margin-left:16px;"><i class="fas fa-sun"></i> Dewasa Ayu</a>
       <a href="pustaka.html" style="margin-left:16px;"><i class="fas fa-book-open"></i> Pustaka</a>
     </div>
-    <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-crown"></i> Premium</a>
+    <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-coins"></i> Beli Token</a>
   </div>
 
   <div class="mystic-header">
@@ -353,7 +335,7 @@
       </div>
       <div class="input-row">
         <div class="input-field">
-          <label><i class="fas fa-signature"></i> Nama Lengkap (untuk Numerologi)</label>
+          <label><i class="fas fa-signature"></i> Nama Lengkap (Numerologi)</label>
           <input type="text" id="fullName" placeholder="misal: Bintang Akasa" value="">
         </div>
       </div>
@@ -370,7 +352,6 @@
         <span class="badge" id="displayWuku"><i class="fas fa-om"></i> Wuku: ...</span>
       </div>
 
-      <!-- Numerologi Section -->
       <div id="numerologySection" class="numerology-section hidden">
         <h3 style="font-family:'Cinzel'; color:#EFE1B9; margin-bottom:16px; text-align:center;">
           <i class="fas fa-calculator"></i> Numerologi Nama
@@ -423,14 +404,28 @@
         </div>
       </div>
 
+      <div class="token-display-section">
+        <div class="token-badge">
+          <i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span>
+        </div>
+      </div>
+
       <div class="premium-lock">
-        <button class="btn-premium" id="unlockPremiumBtn"><i class="fas fa-lock"></i> BUKA RAMALAN LENGKAP</button>
+        <button class="btn-premium" id="unlockPremiumBtn"><i class="fas fa-lock"></i> BUKA RAMALAN LENGKAP (1 Token)</button>
       </div>
       <div id="premiumDetailBox" class="premium-message hidden"></div>
-      <p style="margin-top:16px; font-size:0.9rem; opacity:0.8;"><i class="fas fa-info-circle"></i> Versi gratis menampilkan petunjuk singkat. Ramalan lengkap + analisis mendalam untuk member Premium.</p>
+      <p style="margin-top:16px; font-size:0.9rem; opacity:0.8;"><i class="fas fa-info-circle"></i> Versi gratis menampilkan petunjuk singkat. Gunakan 1 Token untuk analisis mendalam.</p>
     </div>
   </div>
-  <div class="footer-note">✦ Rahasia Semesta ✦ Hanya untuk hiburan & refleksi diri ✦</div>
+
+  <footer class="footer">
+    <div>© 2026 Oracle Nusantara. Seluruh konten untuk hiburan & refleksi diri.</div>
+    <div>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="privacy.html">Privasi</a>
+      <a href="mailto: jukusemoan@gmail.com">Kontak</a>
+    </div>
+  </footer>
 </div>
 
 <script src="js/calculator.js"></script>
@@ -454,7 +449,8 @@ const elements = {
     loveFree: null, careerFree: null, financeFree: null, healthFree: null,
     unlockBtn: null, premiumBox: null, loadingOverlay: null,
     numerologySection: null, soulUrgeValue: null, soulUrgeDesc: null,
-    personalityValue: null, personalityDesc: null, destinyValue: null, destinyDesc: null, powerName: null
+    personalityValue: null, personalityDesc: null, destinyValue: null, destinyDesc: null, powerName: null,
+    tokenBalanceSpan: null
 };
 
 function initDOMElements() {
@@ -484,6 +480,7 @@ function initDOMElements() {
     elements.destinyValue = document.getElementById('destinyValue');
     elements.destinyDesc = document.getElementById('destinyDesc');
     elements.powerName = document.getElementById('powerName');
+    elements.tokenBalanceSpan = document.getElementById('tokenBalanceSpan');
 }
 
 function showLoading(show) {
@@ -521,6 +518,19 @@ async function loadFortunes(zodiac) {
     } catch(e) {
         console.error(`Gagal load fortunes ${zodiac}:`, e);
         return null;
+    }
+}
+
+function updateTokenDisplay() {
+    const balance = localStorage.getItem('tokenBalance') || '0';
+    if (elements.tokenBalanceSpan) elements.tokenBalanceSpan.textContent = balance;
+    if (elements.unlockBtn) {
+        const token = parseInt(balance) || 0;
+        if (token > 0) {
+            elements.unlockBtn.innerHTML = `<i class="fas fa-unlock"></i> BUKA RAMALAN LENGKAP (${token} Token tersedia)`;
+        } else {
+            elements.unlockBtn.innerHTML = '<i class="fas fa-shopping-cart"></i> BELI TOKEN UNTUK BUKA PREMIUM';
+        }
     }
 }
 
@@ -587,8 +597,6 @@ async function handleReveal() {
         elements.healthFree.textContent = `“${f.health}”`;
         
         currentFortunes = shioData;
-        
-        // Tampilkan numerologi jika nama lengkap diisi
         displayNumerology(fullName);
         
         elements.resultSection.classList.remove('hidden');
@@ -603,17 +611,18 @@ async function handleReveal() {
 }
 
 function handleUnlock() {
-    if (localStorage.getItem('isPremium') === 'true') {
-        const expiry = localStorage.getItem('premiumExpiry');
-        if (expiry && new Date(expiry) > new Date()) {
-            displayPremiumContent();
-        } else {
-            localStorage.removeItem('isPremium');
-            localStorage.removeItem('premiumExpiry');
+    let tokenBalance = parseInt(localStorage.getItem('tokenBalance') || '0');
+    
+    if (tokenBalance > 0) {
+        tokenBalance -= 1;
+        localStorage.setItem('tokenBalance', tokenBalance);
+        displayPremiumContent();
+        updateTokenDisplay();
+        showSuccessToast(`✅ 1 Token digunakan. Sisa ${tokenBalance} Token.`);
+    } else {
+        if (confirm('Token Anda habis. Ingin membeli token sekarang?')) {
             window.location.href = 'pricing.html';
         }
-    } else {
-        window.location.href = 'pricing.html';
     }
 }
 
@@ -645,28 +654,20 @@ function showSuccessToast(message) {
 function checkPaymentSuccess() {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('payment_success') === '1') {
+        const pendingTokens = parseInt(localStorage.getItem('pendingTokens') || '0');
         const pendingPlan = localStorage.getItem('pendingPlan');
-        const pendingOrderId = localStorage.getItem('pendingOrderId');
         
-        if (pendingPlan) {
-            let days = 1;
-            if (pendingPlan === 'bulanan') days = 30;
-            else if (pendingPlan === 'tahunan') days = 365;
+        if (pendingTokens > 0) {
+            let currentBalance = parseInt(localStorage.getItem('tokenBalance') || '0');
+            currentBalance += pendingTokens;
+            localStorage.setItem('tokenBalance', currentBalance);
             
-            const expiry = new Date(Date.now() + days * 24 * 60 * 60 * 1000);
-            
-            localStorage.setItem('isPremium', 'true');
-            localStorage.setItem('premiumExpiry', expiry.toISOString());
-            localStorage.setItem('premiumPlan', pendingPlan);
-            
+            localStorage.removeItem('pendingTokens');
             localStorage.removeItem('pendingPlan');
             localStorage.removeItem('pendingOrderId');
             
-            showSuccessToast(`🎉 Selamat! Anda sekarang adalah member Premium (${pendingPlan})!`);
-            
-            if (elements.unlockBtn) {
-                elements.unlockBtn.innerHTML = '<i class="fas fa-unlock"></i> LIHAT RAMALAN PREMIUM';
-            }
+            showSuccessToast(`🎉 Selamat! ${pendingTokens} Token telah ditambahkan! Total: ${currentBalance} Token.`);
+            updateTokenDisplay();
         }
         
         window.history.replaceState({}, document.title, window.location.pathname);
@@ -679,19 +680,8 @@ async function init() {
     elements.birthDate.value = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
     await loadAllData();
     
+    updateTokenDisplay();
     checkPaymentSuccess();
-    
-    if (localStorage.getItem('isPremium') === 'true') {
-        const expiry = localStorage.getItem('premiumExpiry');
-        if (expiry && new Date(expiry) > new Date()) {
-            if (elements.unlockBtn) {
-                elements.unlockBtn.innerHTML = '<i class="fas fa-unlock"></i> LIHAT RAMALAN PREMIUM';
-            }
-        } else {
-            localStorage.removeItem('isPremium');
-            localStorage.removeItem('premiumExpiry');
-        }
-    }
     
     elements.revealBtn.addEventListener('click', handleReveal);
     elements.unlockBtn.addEventListener('click', handleUnlock);
