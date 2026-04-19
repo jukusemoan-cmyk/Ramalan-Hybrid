@@ -382,59 +382,114 @@
 </div>
 
 <script>
+// ================== KONFIGURASI ==================
+// Ganti dengan URL Worker kamu (pastikan tidak ada garis miring di akhir)
+const WORKER_URL = 'https://pekerja-ramalan.jukusemoan.workers.dev';
+
 let currentSelectedPlan = null;
 
+// Fungsi untuk menampilkan modal pembayaran
 function selectPlan(plan) {
-  currentSelectedPlan = plan;
-  
-  let planName = '';
-  let planPrice = '';
-  if (plan === 'harian') { planName = 'Harian'; planPrice = 'Rp5.000'; }
-  else if (plan === 'bulanan') { planName = 'Bulanan'; planPrice = 'Rp29.000/bulan'; }
-  else if (plan === 'tahunan') { planName = 'Tahunan'; planPrice = 'Rp199.000/tahun'; }
-  
-  document.getElementById('planName').textContent = planName;
-  document.getElementById('planPrice').textContent = planPrice;
-  document.getElementById('paymentModal').classList.remove('hidden');
+    currentSelectedPlan = plan;
+    
+    let planName = '';
+    let planPrice = '';
+    if (plan === 'harian') { planName = 'Harian'; planPrice = 'Rp5.000'; }
+    else if (plan === 'bulanan') { planName = 'Bulanan'; planPrice = 'Rp29.000/bulan'; }
+    else if (plan === 'tahunan') { planName = 'Tahunan'; planPrice = 'Rp199.000/tahun'; }
+    
+    document.getElementById('planName').textContent = planName;
+    document.getElementById('planPrice').textContent = planPrice;
+    document.getElementById('paymentModal').classList.remove('hidden');
 }
 
 function closePaymentModal() {
-  document.getElementById('paymentModal').classList.add('hidden');
-  currentSelectedPlan = null;
+    document.getElementById('paymentModal').classList.add('hidden');
+    currentSelectedPlan = null;
 }
 
-function processPayment(method) {
-  if (method === 'demo') {
-    // Simulasi pembayaran sukses (untuk testing)
-    let days = 1;
-    if (currentSelectedPlan === 'bulanan') days = 30;
-    else if (currentSelectedPlan === 'tahunan') days = 365;
+// ================== INI FUNGSI YANG BARU ==================
+async function processPayment(method) {
+    if (!currentSelectedPlan) {
+        alert('Pilih paket terlebih dahulu.');
+        return;
+    }
     
-    const expiry = new Date(Date.now() + days * 24 * 60 * 60 * 1000);
-    localStorage.setItem('isPremium', 'true');
-    localStorage.setItem('premiumExpiry', expiry.toISOString());
-    localStorage.setItem('premiumPlan', currentSelectedPlan);
+    // Tentukan harga dan durasi berdasarkan paket
+    let amount = 0;
+    let days = 0;
+    let planName = '';
     
-    alert(`✅ Pembayaran berhasil! Anda sekarang adalah anggota Premium (${currentSelectedPlan}).`);
-    closePaymentModal();
-    window.location.href = 'ramalan.html';
-  } else {
-    // Untuk metode lain, tampilkan simulasi
-    alert(`🔔 Simulasi: Anda memilih pembayaran via ${method.toUpperCase()}.\n\nUntuk versi production, Anda akan diarahkan ke halaman pembayaran ${method}.`);
-  }
+    if (currentSelectedPlan === 'harian') { amount = 5000; days = 1; planName = 'Harian'; }
+    else if (currentSelectedPlan === 'bulanan') { amount = 29000; days = 30; planName = 'Bulanan'; }
+    else if (currentSelectedPlan === 'tahunan') { amount = 199000; days = 365; planName = 'Tahunan'; }
+    
+    // Buat Order ID unik
+    const orderId = 'ORDER-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7);
+    
+    // Siapkan data untuk dikirim ke Worker
+    const payload = {
+        order_id: orderId,
+        plan: currentSelectedPlan,
+        plan_name: planName,
+        amount: amount,
+        days: days,
+        payment_method: method,
+        customer_name: localStorage.getItem('userName') || 'Pelanggan',
+        timestamp: new Date().toISOString()
+    };
+    
+    // Tampilkan loading di tombol
+    const modal = document.getElementById('paymentModal');
+    const buttons = modal.querySelectorAll('.payment-method');
+    buttons.forEach(btn => btn.style.pointerEvents = 'none');
+    
+    try {
+        // Panggil Worker
+        const response = await fetch(`${WORKER_URL}/api/create-transaction`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        
+        const data = await response.json();
+        
+        if (data.redirect_url) {
+            // Simpan order_id ke localStorage untuk pengecekan nanti
+            localStorage.setItem('pendingOrderId', orderId);
+            localStorage.setItem('pendingPlan', currentSelectedPlan);
+            
+            // Redirect ke halaman pembayaran Midtrans
+            window.location.href = data.redirect_url;
+        } else {
+            alert('Gagal membuat transaksi. Silakan coba lagi.');
+            buttons.forEach(btn => btn.style.pointerEvents = 'auto');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Terjadi kesalahan jaringan. Periksa koneksi internet Anda.');
+        buttons.forEach(btn => btn.style.pointerEvents = 'auto');
+    }
 }
+// =====================================================
 
 // Cek status premium saat halaman dimuat
 document.addEventListener('DOMContentLoaded', () => {
-  const isPremium = localStorage.getItem('isPremium') === 'true';
-  const expiry = localStorage.getItem('premiumExpiry');
-  
-  if (isPremium && expiry && new Date(expiry) > new Date()) {
-    // Tampilkan badge premium aktif di suatu tempat (opsional)
-    const plan = localStorage.getItem('premiumPlan') || 'Premium';
-    console.log(`Status: Premium (${plan}) aktif hingga ${new Date(expiry).toLocaleDateString('id-ID')}`);
-  }
+    const isPremium = localStorage.getItem('isPremium') === 'true';
+    const expiry = localStorage.getItem('premiumExpiry');
+    
+    if (isPremium && expiry && new Date(expiry) > new Date()) {
+        const plan = localStorage.getItem('premiumPlan') || 'Premium';
+        console.log(`Status: Premium (${plan}) aktif hingga ${new Date(expiry).toLocaleDateString('id-ID')}`);
+        
+        // Opsional: Ubah tampilan tombol di halaman pricing jika user sudah premium
+        const buttons = document.querySelectorAll('.btn-pricing');
+        buttons.forEach(btn => {
+            btn.innerHTML = 'Anda Sudah Premium';
+            btn.disabled = true;
+        });
+    }
 });
-</script>
+      </script>
 </body>
 </html>
