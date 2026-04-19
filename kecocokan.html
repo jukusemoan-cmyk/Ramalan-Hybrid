@@ -398,22 +398,157 @@ function displayPremiumContent() {
 }
 
 function renderAccordionItem(title, id, data, score, comp, subtitle, strength, challenge, taboo, solution) {
+    // Buat narasi panjang dari data yang ada
+    const strengthNarasi = strength ? expandNarrative(strength, 'strength', data, subtitle) : '';
+    const challengeNarasi = challenge ? expandNarrative(challenge, 'challenge', data, subtitle) : '';
+    const tabooNarasi = taboo ? expandNarrative(taboo, 'taboo', data, subtitle) : '';
+    const solutionNarasi = solution ? expandNarrative(solution, 'solution', data, subtitle) : '';
+    
     return `
         <div class="accordion-item">
-            <div class="accordion-header"><span><strong>${title}</strong> - Skor: ${score}% (${comp})</span><i class="fas fa-chevron-down"></i></div>
+            <div class="accordion-header">
+                <span><strong>${title}</strong> - Skor: ${score}% (${comp})</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
             <div class="accordion-content">
-                ${subtitle ? `<p style="margin-bottom:16px; color:#A0A0B0;">${subtitle}</p>` : ''}
-                ${strength ? `<div class="analysis-section"><span class="analysis-label label-strength">✅ KEKUATAN</span><p style="margin-top:8px;">${strength}</p></div>` : ''}
-                ${challenge ? `<div class="analysis-section"><span class="analysis-label label-challenge">⚠️ TANTANGAN</span><p style="margin-top:8px;">${challenge}</p></div>` : ''}
-                ${taboo ? `<div class="analysis-section"><span class="analysis-label label-taboo">🚫 PANTANGAN</span><p style="margin-top:8px;">${taboo}</p></div>` : ''}
-                ${solution ? `<div class="analysis-section"><span class="analysis-label label-solution">💡 SOLUSI</span><p style="margin-top:8px;">${solution}</p></div>` : ''}
+                ${subtitle ? `<p style="margin-bottom:20px; color:#A0A0B0; font-style:italic;">✨ ${subtitle}</p>` : ''}
+                
+                ${strengthNarasi ? `
+                <div class="analysis-section">
+                    <span class="analysis-label label-strength"><i class="fas fa-check-circle"></i> KEKUATAN UTAMA</span>
+                    <div style="margin-top:12px; line-height:1.8; text-align:justify;">
+                        ${strengthNarasi}
+                    </div>
+                </div>` : ''}
+                
+                ${challengeNarasi ? `
+                <div class="analysis-section">
+                    <span class="analysis-label label-challenge"><i class="fas fa-exclamation-triangle"></i> TANTANGAN YANG PERLU DIKELOLA</span>
+                    <div style="margin-top:12px; line-height:1.8; text-align:justify;">
+                        ${challengeNarasi}
+                    </div>
+                </div>` : ''}
+                
+                ${tabooNarasi ? `
+                <div class="analysis-section">
+                    <span class="analysis-label label-taboo"><i class="fas fa-ban"></i> PANTANGAN & HAL YANG HARUS DIHINDARI</span>
+                    <div style="margin-top:12px; line-height:1.8; text-align:justify;">
+                        ${tabooNarasi}
+                    </div>
+                </div>` : ''}
+                
+                ${solutionNarasi ? `
+                <div class="analysis-section">
+                    <span class="analysis-label label-solution"><i class="fas fa-lightbulb"></i> SOLUSI & REKOMENDASI</span>
+                    <div style="margin-top:12px; line-height:1.8; text-align:justify;">
+                        ${solutionNarasi}
+                    </div>
+                </div>` : ''}
             </div>
         </div>
     `;
 }
 
+// Fungsi helper untuk memperpanjang narasi
+function expandNarrative(baseText, type, data, subtitle) {
+    // Template tambahan berdasarkan tipe
+    const additions = {
+        strength: [
+            " Kombinasi ini menciptakan fondasi yang kokoh bagi hubungan jangka panjang.",
+            " Energi ini saling mendukung dan memperkuat satu sama lain, menciptakan harmoni yang alami.",
+            " Ini adalah modal besar yang bisa menjadi penguat di saat-saat sulit.",
+            " Kalian memiliki 'chemistry' yang langka—hargai dan rawatlah."
+        ],
+        challenge: [
+            " Namun, setiap hubungan memiliki dinamikanya sendiri. Tantangan ini bukanlah penghalang, melainkan kesempatan untuk tumbuh bersama.",
+            " Perbedaan ini, jika tidak dikelola dengan baik, bisa menjadi sumber gesekan. Kesadaran adalah langkah pertama.",
+            " Ini adalah area yang membutuhkan perhatian ekstra dan komunikasi yang jujur.",
+            " Ingatlah bahwa tidak ada pasangan yang sempurna—yang ada adalah pasangan yang mau berusaha."
+        ],
+        taboo: [
+            " Hindari situasi atau perkataan yang bisa memicu hal ini. Lebih baik mencegah daripada memperbaiki.",
+            " Ini adalah 'tombol merah' dalam hubungan kalian. Jangan pernah menekannya, terutama saat emosi sedang tinggi.",
+            " Waspadai kebiasaan-kebiasaan kecil yang tanpa sadar bisa melukai pasangan.",
+            " Menghormati batasan ini adalah bentuk cinta yang paling dasar."
+        ],
+        solution: [
+            " Kuncinya adalah komunikasi yang terbuka dan jujur. Bicarakan apa yang kalian rasakan tanpa saling menyalahkan.",
+            " Luangkan waktu berkualitas bersama, jauh dari gangguan. Koneksi emosional perlu dirawat secara rutin.",
+            " Jangan ragu untuk mencari bantuan—entah itu teman, keluarga, atau konselor—jika merasa buntu.",
+            " Ingatlah selalu mengapa kalian memilih satu sama lain. Fokus pada kekuatan, bukan kelemahan."
+        ]
+    };
+    
+    // Pilih 2-3 tambahan secara acak (berdasarkan seed agar konsisten)
+    const seed = (subtitle || '').length + type.length;
+    const selected = additions[type].filter((_, i) => (seed + i) % 3 === 0).slice(0, 2);
+    
+    // Gabungkan teks dasar dengan tambahan
+    let expanded = baseText;
+    if (!expanded.endsWith('.')) expanded += '.';
+    expanded += ' ' + selected.join(' ');
+    
+    // Tambahkan sentuhan personal berdasarkan data
+    if (type === 'strength' && data.score >= 80) {
+        expanded += ' Ini adalah anugerah yang langka—jangan sia-siakan.';
+    } else if (type === 'challenge' && data.score < 60) {
+        expanded += ' Tapi jangan berkecil hati—banyak pasangan dengan skor rendah yang justru langgeng karena mereka sadar dan mau berusaha.';
+    } else if (type === 'solution') {
+        expanded += ' Yang terpenting, jangan pernah berhenti berusaha. Cinta adalah kata kerja, bukan sekadar perasaan.';
+    }
+    
+    return expanded;
+}
+
 function generateConclusion(r) {
-    return `Berdasarkan analisis holistik 4 dimensi, pasangan ${r.name1} (${r.weton1}, Shio ${r.shio1}, ${r.zodiac1}, Day Master ${r.dm1}) dan ${r.name2} (${r.weton2}, Shio ${r.shio2}, ${r.zodiac2}, Day Master ${r.dm2}) memiliki skor kecocokan ${r.holistic}%. ${r.verdict} Kunci utama hubungan ini adalah komunikasi yang jujur dan saling menghargai perbedaan.`;
+    // Analisis skor
+    let scoreAnalysis = '';
+    if (r.holistic >= 80) {
+        scoreAnalysis = `Dengan skor ${r.holistic}%, pasangan ini berada dalam kategori "Sangat Cocok". Ini adalah level kecocokan yang langka dan istimewa. Kalian memiliki fondasi yang sangat kuat di hampir semua dimensi—dari weton yang harmonis, shio yang saling mendukung, elemen zodiak yang selaras, hingga Day Master BaZi yang saling menghasilkan.`;
+    } else if (r.holistic >= 65) {
+        scoreAnalysis = `Dengan skor ${r.holistic}%, pasangan ini berada dalam kategori "Cocok". Ini adalah fondasi yang baik untuk membangun hubungan jangka panjang. Ada beberapa area yang perlu perhatian ekstra, namun secara keseluruhan energi kalian saling mendukung.`;
+    } else if (r.holistic >= 50) {
+        scoreAnalysis = `Dengan skor ${r.holistic}%, pasangan ini berada dalam kategori "Cukup Cocok". Ada dinamika yang perlu dikelola dengan lebih sadar. Perbedaan karakter dan energi mungkin terasa, namun justru di situlah letak kesempatan untuk saling melengkapi dan bertumbuh.`;
+    } else {
+        scoreAnalysis = `Dengan skor ${r.holistic}%, pasangan ini berada dalam kategori "Kurang Cocok" secara perhitungan. Namun, perlu diingat bahwa skor hanyalah cerminan potensi—bukan vonis mutlak. Banyak pasangan dengan skor rendah yang justru langgeng karena mereka sadar akan tantangan dan berusaha lebih keras.`;
+    }
+    
+    // Analisis per dimensi
+    const wetonStatus = r.kategori ? `${r.kategori.category} (${r.kategori.status})` : 'tidak diketahui';
+    const shioStatus = r.shioComp.compatibility;
+    const zodiacStatus = r.zodiacComp.compatibility;
+    const baziStatus = r.baziComp.compatibility;
+    
+    let dimensionAnalysis = `Dari sisi Wariga Bali, weton kalian (${r.weton1} dan ${r.weton2}) menghasilkan Neptu ${r.total} yang masuk kategori ${wetonStatus}. ${r.kategori?.description || ''} Wuku kalian (${r.wuku1} dan ${r.wuku2}) ${r.wukuAnalysis.desc.toLowerCase()} `;
+    
+    dimensionAnalysis += `Dari sisi Shio, ${r.shio1} dan ${r.shio2} berada dalam kategori "${shioStatus}". `;
+    dimensionAnalysis += `Zodiak ${r.zodiac1} dan ${r.zodiac2} juga menunjukkan kecocokan "${zodiacStatus}". `;
+    dimensionAnalysis += `Sementara dari perspektif BaZi, Day Master ${r.dm1} dan ${r.dm2} memiliki hubungan "${baziStatus}". `;
+    
+    // Saran personal
+    let personalAdvice = '';
+    if (r.shio1 === r.shio2) {
+        personalAdvice += `Karena shio kalian sama (${r.shio1}), kalian memiliki banyak kesamaan dalam cara berpikir dan merespons situasi. Ini bisa menjadi kekuatan sekaligus tantangan—kalian mudah memahami satu sama lain, tapi juga bisa saling memperkuat kelemahan. `;
+    }
+    if (r.wuku1 === r.wuku2) {
+        personalAdvice += `Wuku kalian sama (${r.wuku1}), yang berarti kalian memiliki ritme energi yang selaras. Ini adalah fondasi yang sangat baik untuk membangun rutinitas bersama. `;
+    }
+    if (r.zodiac1 === r.zodiac2) {
+        personalAdvice += `Zodiak kalian sama (${r.zodiac1}), menandakan kesamaan karakter dasar. Kalian akan merasa sangat "nyambung" satu sama lain. `;
+    }
+    if (!personalAdvice) {
+        personalAdvice = `Keunikan kalian justru terletak pada perbedaan yang saling melengkapi. ${r.shio1} dan ${r.shio2} membawa energi yang berbeda—satu mungkin lebih aktif, yang lain lebih reflektif. Belajarlah untuk menghargai perspektif satu sama lain. `;
+    }
+    
+    // Penutup
+    const closing = `Pada akhirnya, ramalan dan perhitungan hanyalah peta—bukan tujuan. Cinta sejati dibangun di atas fondasi komitmen, komunikasi, dan kemauan untuk terus bertumbuh bersama. Selama kalian berdua memilih untuk saling menjaga, tidak ada halangan yang tidak bisa diatasi. Semoga analisis ini menjadi cermin yang membantu kalian memahami dinamika hubungan dengan lebih jernih.`;
+    
+    return `
+        <p style="margin-bottom:20px; line-height:1.9; text-align:justify;"><strong style="color:#D4AF37;">📊 Analisis Skor:</strong> ${scoreAnalysis}</p>
+        <p style="margin-bottom:20px; line-height:1.9; text-align:justify;"><strong style="color:#D4AF37;">🔍 Tinjauan Per Dimensi:</strong> ${dimensionAnalysis}</p>
+        <p style="margin-bottom:20px; line-height:1.9; text-align:justify;"><strong style="color:#D4AF37;">💬 Catatan Personal:</strong> ${personalAdvice}</p>
+        <p style="line-height:1.9; text-align:justify; font-style:italic; border-top:1px solid rgba(212,175,55,0.2); padding-top:20px;">${closing}</p>
+    `;
 }
 
 function handlePremiumUnlock() {
