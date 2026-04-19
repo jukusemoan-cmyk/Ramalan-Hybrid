@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test Worker</title></head>
+<body>
+<button onclick="testWorker()">Test Worker</button>
+<pre id="result"></pre>
+<script>
+async function testWorker() {
+    const resultEl = document.getElementById('result');
+    resultEl.textContent = 'Loading...';
+    
+    try {
+        const response = await fetch('https://api-ramalan.jukusemoan.workers.dev/api/create-transaction', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                order_id: 'TEST-' + Date.now(),
+                amount: 5000,
+                plan: 'harian',
+                plan_name: 'Harian'
+            })
+        });
+        
+        const data = await response.json();
+        resultEl.textContent = JSON.stringify(data, null, 2);
+    } catch (error) {
+        resultEl.textContent = 'ERROR: ' + error.message;
+    }
+}
+</script>
+</body>
+</html>
