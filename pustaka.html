@@ -50,13 +50,7 @@
       border-radius: 40px;
       padding: 32px 24px;
     }
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-      justify-content: center;
-    }
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; justify-content: center; }
     .tab-btn {
       background: #0F111A;
       border: 1px solid #3A2E1C;
@@ -64,13 +58,8 @@
       padding: 10px 20px;
       border-radius: 40px;
       cursor: pointer;
-      transition: all 0.2s;
     }
-    .tab-btn.active {
-      background: #C6A434;
-      color: #0B0C10;
-      border-color: #C6A434;
-    }
+    .tab-btn.active { background: #C6A434; color: #0B0C10; border-color: #C6A434; }
     .search-box { margin-bottom: 24px; }
     .search-box input {
       width: 100%;
@@ -79,7 +68,6 @@
       border-radius: 40px;
       padding: 14px 20px;
       color: #F0E6D2;
-      font-size: 1rem;
     }
     .item-grid {
       display: grid;
@@ -92,11 +80,8 @@
       padding: 20px;
       border: 1px solid #3A2E1C;
       cursor: pointer;
-      transition: transform 0.2s;
     }
-    .pustaka-card:hover { transform: translateY(-4px); border-color: #C6A434; }
-    .pustaka-card h3 { color: #C6A434; margin-bottom: 8px; }
-    .pustaka-card .sub { color: #9A8CB0; font-size: 0.9rem; }
+    .pustaka-card h3 { color: #C6A434; }
     .modal {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
@@ -115,7 +100,6 @@
       max-width: 600px;
       max-height: 80vh;
       overflow-y: auto;
-      position: relative;
     }
     .modal-close {
       position: absolute;
@@ -126,10 +110,7 @@
       font-size: 1.5rem;
       cursor: pointer;
     }
-    .premium-lock {
-      margin-top: 20px;
-      text-align: center;
-    }
+    .premium-lock { margin-top: 20px; text-align: center; }
     .btn-premium {
       background: transparent;
       border: 2px solid #C6A434;
@@ -140,7 +121,21 @@
       cursor: pointer;
     }
     .hidden { display: none !important; }
-    .footer-note { text-align: center; margin-top: 32px; opacity: 0.8; }
+    .footer {
+      border-top: 1px solid #3A2E1C;
+      padding: 32px 0;
+      margin-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: #9A8CB0;
+    }
+    .footer a { color: #C6A434; text-decoration: none; margin-left: 24px; }
+    @media (max-width: 768px) {
+      .footer { flex-direction: column; text-align: center; }
+      .footer a { margin: 0 12px; }
+    }
   </style>
 </head>
 <body>
@@ -175,10 +170,17 @@
 
     <div id="contentArea" class="item-grid"></div>
   </div>
-  <div class="footer-note">✦ Pengetahuan adalah kunci kebijaksanaan ✦</div>
+
+  <footer class="footer">
+    <div>© 2026 Oracle Nusantara. Seluruh konten untuk hiburan & refleksi diri.</div>
+    <div>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="privacy.html">Privasi</a>
+      <a href="mailto:halo@oraclenusantara.id">Kontak</a>
+    </div>
+  </footer>
 </div>
 
-<!-- Modal Detail -->
 <div id="detailModal" class="modal hidden">
   <div class="modal-content">
     <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -190,20 +192,16 @@
   </div>
 </div>
 
-<script src="js/calculator.js"></script>
 <script>
 let calendarData = null;
 let currentTab = 'wuku';
-let currentDetailItem = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     const res = await fetch('data/bali-calendar.json');
     calendarData = await res.json();
     renderContent();
-  } catch(e) {
-    console.error('Gagal load data', e);
-  }
+  } catch(e) { console.error('Gagal load data', e); }
 
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -222,34 +220,25 @@ function renderContent() {
   if (!calendarData) return;
   const searchTerm = document.getElementById('searchInput').value.toLowerCase();
   let items = [];
-  
-  if (currentTab === 'wuku') {
-    items = calendarData.wuku;
-  } else if (currentTab === 'saptawara') {
-    items = calendarData.saptawara;
-  } else if (currentTab === 'pancawara') {
-    items = calendarData.pancawara;
-  } else if (currentTab === 'triwara') {
-    items = calendarData.wewaran_dasar?.tri_wara || [];
-  } else if (currentTab === 'hariraya') {
-    items = calendarData.hari_raya || [];
-  }
+  if (currentTab === 'wuku') items = calendarData.wuku;
+  else if (currentTab === 'saptawara') items = calendarData.saptawara;
+  else if (currentTab === 'pancawara') items = calendarData.pancawara;
+  else if (currentTab === 'triwara') items = calendarData.wewaran_dasar?.tri_wara || [];
+  else if (currentTab === 'hariraya') items = calendarData.hari_raya || [];
 
   const filtered = items.filter(item => 
     item.name.toLowerCase().includes(searchTerm) || 
-    (item.meaning && item.meaning.toLowerCase().includes(searchTerm)) ||
-    (item.character && item.character.toLowerCase().includes(searchTerm))
+    (item.meaning || '').toLowerCase().includes(searchTerm) ||
+    (item.character || '').toLowerCase().includes(searchTerm)
   );
 
   const html = filtered.map(item => `
     <div class="pustaka-card" onclick="showDetail('${currentTab}', '${item.name}')">
       <h3>${item.name}</h3>
-      <div class="sub">${item.meaning || item.alias || ''}</div>
-      <p style="margin-top:8px; font-size:0.9rem;">${(item.character || item.description || '').substring(0, 60)}...</p>
+      <div style="color:#9A8CB0;">${item.meaning || item.alias || ''}</div>
     </div>
   `).join('');
-  
-  document.getElementById('contentArea').innerHTML = html || '<p style="text-align:center; grid-column:1/-1;">Tidak ditemukan</p>';
+  document.getElementById('contentArea').innerHTML = html || '<p>Tidak ditemukan</p>';
 }
 
 function showDetail(type, name) {
@@ -259,64 +248,34 @@ function showDetail(type, name) {
   else if (type === 'pancawara') item = calendarData.pancawara.find(p => p.name === name);
   else if (type === 'triwara') item = calendarData.wewaran_dasar.tri_wara.find(t => t.name === name);
   else if (type === 'hariraya') item = calendarData.hari_raya.find(h => h.name === name);
-  
   if (!item) return;
-  currentDetailItem = { type, item };
-  
-  let basicHtml = `
-    <h2 style="color:#C6A434; margin-bottom:16px;">${item.name}</h2>
+
+  document.getElementById('modalBody').innerHTML = `
+    <h2 style="color:#C6A434;">${item.name}</h2>
     <p><strong>Makna:</strong> ${item.meaning || item.alias || '-'}</p>
-    <p style="margin-top:12px;"><strong>Deskripsi:</strong> ${item.character || item.description || '-'}</p>
+    <p><strong>Deskripsi:</strong> ${item.character || item.description || '-'}</p>
+    ${type === 'wuku' ? `<p><i class="fas fa-check-circle"></i> ${item.activity || ''}</p>` : ''}
   `;
-  
-  if (type === 'wuku') {
-    basicHtml += `
-      <p style="margin-top:12px;"><i class="fas fa-check-circle"></i> <strong>Aktivitas Baik:</strong> ${item.activity || '-'}</p>
-      <p style="margin-top:12px;"><i class="fas fa-ban"></i> <strong>Pantangan:</strong> ${item.forbidden_direction || '-'}</p>
-      <p style="margin-top:12px;"><i class="fas fa-leaf"></i> <strong>Elemen:</strong> ${item.element || '-'}</p>
-    `;
-  }
-  
-  if (type === 'triwara') {
-    basicHtml += `<p style="margin-top:12px;"><i class="fas fa-tasks"></i> <strong>Rekomendasi Aktivitas:</strong> ${item.activity || '-'}</p>`;
-  }
-  
-  document.getElementById('modalBody').innerHTML = basicHtml;
-  
+
   const premiumHtml = `
     <div style="margin-top:20px; padding-top:20px; border-top:1px solid #3A2E1C;">
-      <h4 style="color:#C6A434;"><i class="fas fa-crown"></i> Pengetahuan Premium</h4>
-      <p style="margin-top:12px;"><strong>Ritual yang Disarankan:</strong> ${getPremiumRitual(type, item)}</p>
-      <p style="margin-top:12px;"><strong>Mantra / Doa:</strong> ${getPremiumMantra(type, item)}</p>
-      <p style="margin-top:12px;"><strong>Filosofi Mendalam:</strong> ${getPremiumPhilosophy(type, item)}</p>
+      <h4 style="color:#C6A434;"><i class="fas fa-crown"></i> Premium</h4>
+      <p><strong>Ritual:</strong> ${getPremiumRitual(type, item)}</p>
+      <p><strong>Mantra:</strong> ${getPremiumMantra(type, item)}</p>
     </div>
   `;
-  
   document.getElementById('premiumContentArea').innerHTML = premiumHtml;
+
+  const isPremium = localStorage.getItem('isPremium') === 'true';
+  const expiry = localStorage.getItem('premiumExpiry');
+  const isValid = isPremium && expiry && new Date(expiry) > new Date();
   
-  // Cek status premium
-  if (localStorage.getItem('isPremium') === 'true') {
-    const expiry = localStorage.getItem('premiumExpiry');
-    if (expiry && new Date(expiry) > new Date()) {
-      document.getElementById('premiumLockArea').classList.add('hidden');
-      document.getElementById('premiumContentArea').classList.remove('hidden');
-    } else {
-      localStorage.removeItem('isPremium');
-      localStorage.removeItem('premiumExpiry');
-      document.getElementById('premiumLockArea').classList.remove('hidden');
-      document.getElementById('premiumContentArea').classList.add('hidden');
-    }
-  } else {
-    document.getElementById('premiumLockArea').classList.remove('hidden');
-    document.getElementById('premiumContentArea').classList.add('hidden');
-  }
-  
+  document.getElementById('premiumLockArea').classList.toggle('hidden', isValid);
+  document.getElementById('premiumContentArea').classList.toggle('hidden', !isValid);
   document.getElementById('detailModal').classList.remove('hidden');
 }
 
-function closeModal() {
-  document.getElementById('detailModal').classList.add('hidden');
-}
+function closeModal() { document.getElementById('detailModal').classList.add('hidden'); }
 
 function handleUnlockPremium() {
   if (localStorage.getItem('isPremium') === 'true') {
@@ -325,31 +284,19 @@ function handleUnlockPremium() {
       document.getElementById('premiumLockArea').classList.add('hidden');
       document.getElementById('premiumContentArea').classList.remove('hidden');
     } else {
-      localStorage.removeItem('isPremium');
-      localStorage.removeItem('premiumExpiry');
+      localStorage.removeItem('isPremium'); localStorage.removeItem('premiumExpiry');
       window.location.href = 'pricing.html';
     }
-  } else {
-    window.location.href = 'pricing.html';
-  }
+  } else { window.location.href = 'pricing.html'; }
 }
 
 function getPremiumRitual(type, item) {
-  if (type === 'wuku') return `Pada Wuku ${item.name}, dianjurkan melakukan upacara kecil dengan sesajen canang sari dan bunga ${item.element === 'Api' ? 'merah' : item.element === 'Air' ? 'putih' : 'kuning'}.`;
-  if (type === 'hariraya') return `Saat ${item.name}, lakukan persembahyangan dan meditasi. ${item.description}`;
-  return 'Lakukan meditasi singkat di pagi hari menghadap matahari terbit.';
+  if (type === 'wuku') return `Sesajen canang sari dengan bunga ${item.element === 'Api' ? 'merah' : 'putih'}.`;
+  return 'Meditasi pagi hari menghadap matahari.';
 }
-
 function getPremiumMantra(type, item) {
-  if (type === 'wuku') return `"Om ${item.meaning.replace('Dewa ', '')} Ya Namah" – diucapkan 108 kali untuk memohon perlindungan.`;
-  if (type === 'hariraya') return `"Om Swastiastu, semoga berkah ${item.name} membersihkan jiwa raga."`;
-  return '"Om Swastiastu" – ucapkan dengan hati tulus sebelum memulai aktivitas.';
-}
-
-function getPremiumPhilosophy(type, item) {
-  if (type === 'wuku') return `${item.name} mengajarkan kita tentang ${item.character?.split(',')[0] || 'keseimbangan'}. Dalam lontar kuno, energi ini selaras dengan perjalanan spiritual menuju pencerahan.`;
-  if (type === 'hariraya') return `${item.name} adalah momen sakral untuk merenungkan ${item.description.toLowerCase()}. Filosofinya mengajak kita kembali ke esensi diri.`;
-  return 'Setiap elemen dalam Wariga adalah cerminan dari hukum alam (Rta). Memahaminya berarti menyelaraskan diri dengan ritme semesta.';
+  if (type === 'wuku') return `"Om ${item.meaning.replace('Dewa ', '')} Ya Namah" 108x.`;
+  return '"Om Swastiastu" dengan hati tulus.';
 }
 </script>
 </body>
