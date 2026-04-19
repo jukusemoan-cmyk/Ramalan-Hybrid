@@ -98,6 +98,18 @@
       padding: 16px;
       text-align: center;
     }
+    
+    .token-display-section { text-align: center; margin: 20px 0; }
+    .token-badge {
+      background: #1C1A2E;
+      border: 2px solid #C6A434;
+      border-radius: 40px;
+      padding: 12px 32px;
+      display: inline-block;
+    }
+    .token-badge i { color: #C6A434; margin-right: 8px; }
+    .token-badge span { font-weight: 700; color: #C6A434; font-size: 1.5rem; margin-left: 8px; }
+
     .premium-lock { text-align: center; margin-top: 20px; }
     .btn-premium {
       background: transparent;
@@ -144,7 +156,7 @@
       <a href="kecocokan.html" style="margin-left:16px;"><i class="fas fa-heart"></i> Kecocokan</a>
       <a href="pustaka.html" style="margin-left:16px;"><i class="fas fa-book-open"></i> Pustaka</a>
     </div>
-    <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-crown"></i> Premium</a>
+    <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-coins"></i> Beli Token</a>
   </div>
 
   <div class="mystic-header">
@@ -189,8 +201,14 @@
         </div>
       </div>
 
+      <div class="token-display-section">
+        <div class="token-badge">
+          <i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span>
+        </div>
+      </div>
+
       <div class="premium-lock">
-        <button class="btn-premium" id="premiumBtn"><i class="fas fa-lock"></i> BUKA ANALISIS MENDALAM</button>
+        <button class="btn-premium" id="premiumBtn"><i class="fas fa-lock"></i> BUKA ANALISIS MENDALAM (1 Token)</button>
       </div>
       <div id="premiumBox" class="premium-detail hidden"></div>
       <p style="margin-top:16px; font-size:0.9rem;"><i class="fas fa-info-circle"></i> Analisis lengkap untuk member Premium.</p>
@@ -224,9 +242,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     calendarData = await res.json();
   } catch(e) { console.error('Gagal load data', e); }
 
+  updateTokenDisplay();
   document.getElementById('checkBtn').addEventListener('click', calculate);
   document.getElementById('premiumBtn').addEventListener('click', handlePremium);
 });
+
+function updateTokenDisplay() {
+    const balance = localStorage.getItem('tokenBalance') || '0';
+    document.getElementById('tokenBalanceSpan').textContent = balance;
+    const btn = document.getElementById('premiumBtn');
+    if (btn) {
+        const token = parseInt(balance) || 0;
+        if (token > 0) {
+            btn.innerHTML = `<i class="fas fa-unlock"></i> BUKA ANALISIS MENDALAM (${token} Token tersedia)`;
+        } else {
+            btn.innerHTML = '<i class="fas fa-shopping-cart"></i> BELI TOKEN UNTUK BUKA PREMIUM';
+        }
+    }
+}
 
 function getTriWara(saptawara, pancawara) {
   const s = calendarData.saptawara.find(x => x.name === saptawara);
@@ -273,15 +306,19 @@ function calculate() {
 }
 
 function handlePremium() {
-  if (localStorage.getItem('isPremium') === 'true') {
-    const expiry = localStorage.getItem('premiumExpiry');
-    if (expiry && new Date(expiry) > new Date()) {
-      displayPremiumContent();
-    } else {
-      localStorage.removeItem('isPremium'); localStorage.removeItem('premiumExpiry');
+  let tokenBalance = parseInt(localStorage.getItem('tokenBalance') || '0');
+  
+  if (tokenBalance > 0) {
+    tokenBalance -= 1;
+    localStorage.setItem('tokenBalance', tokenBalance);
+    displayPremiumContent();
+    updateTokenDisplay();
+    alert(`✅ 1 Token digunakan. Sisa ${tokenBalance} Token.`);
+  } else {
+    if (confirm('Token Anda habis. Ingin membeli token sekarang?')) {
       window.location.href = 'pricing.html';
     }
-  } else { window.location.href = 'pricing.html'; }
+  }
 }
 
 function displayPremiumContent() {
