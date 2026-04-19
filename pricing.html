@@ -11,7 +11,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   
   <style>
     .mystic-header { text-align: center; margin-bottom: 48px; }
@@ -120,17 +120,16 @@
 </head>
 <body>
 <div class="container">
-  <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo"><a href="index.html">ORACLE NUSANTARA</a></div>
+    <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
     <div class="nav-links">
-      <a href="index.html">Beranda</a>
+      <a href="../index.html">Beranda</a>
       <a href="ramalan.html">Ramalan</a>
-      <a href="bazi.html">BaZi</a>
       <a href="kecocokan.html">Kecocokan</a>
+      <a href="bazi.html">BaZi</a>
       <a href="dewasa-ayu.html">Dewasa Ayu</a>
       <a href="pustaka.html">Pustaka</a>
-      <a href="kalender.html" class="btn-premium-nav"><i class="fas fa-calendar-alt"></i> Kalender</a>
+      <a href="kalender.html">Kalender</a>
       <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-coins"></i> Token</a>
     </div>
   </nav>
@@ -145,7 +144,6 @@
   </div>
 
   <div class="pricing-grid">
-    <!-- Paket Coba -->
     <div class="pricing-card">
       <div class="plan-name">Paket Coba</div>
       <div class="plan-price">Rp5k</div>
@@ -159,7 +157,6 @@
       <button class="btn-pricing" onclick="selectPlan('coba')">Pilih Paket Coba</button>
     </div>
 
-    <!-- Paket Hemat (Featured) -->
     <div class="pricing-card featured">
       <div class="popular-badge"><i class="fas fa-star"></i> PALING HEMAT</div>
       <div class="plan-name">Paket Hemat</div>
@@ -175,7 +172,6 @@
       <button class="btn-pricing primary" onclick="selectPlan('hemat')">Pilih Paket Hemat</button>
     </div>
 
-    <!-- Paket Sultan -->
     <div class="pricing-card">
       <div class="plan-name">Paket Sultan</div>
       <div class="plan-price">Rp50k</div>
@@ -227,11 +223,9 @@
   </div>
 </div>
 
-<!-- JavaScript Modules -->
-<script src="js/ui-controller.js"></script>
+<script src="../js/ui-controller.js"></script>
 
 <script>
-// ================== KONFIGURASI ==================
 const WORKER_URL = 'https://pekerja-ramalan.jukusemoan.workers.dev';
 let currentSelectedPlan = null;
 let isLoading = false;
@@ -288,7 +282,6 @@ async function processPayment(method) {
     
     const orderId = 'TOKEN-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7);
     
-    // ========== SIMPAN DATA FORM SEMENTARA ==========
     const savedName = localStorage.getItem('temp_userName');
     const savedBirth = localStorage.getItem('temp_birthDate');
     const savedFullName = localStorage.getItem('temp_fullName');
@@ -298,7 +291,6 @@ async function processPayment(method) {
         localStorage.setItem('pendingBirthDate', savedBirth || '');
         localStorage.setItem('pendingFullName', savedFullName || '');
     }
-    // =============================================
     
     isLoading = true;
     const container = document.getElementById('paymentMethodsContainer');
@@ -345,7 +337,6 @@ function init() {
 
 document.addEventListener('DOMContentLoaded', init);
 
-// Expose functions to global
 window.selectPlan = selectPlan;
 window.closePaymentModal = closePaymentModal;
 window.processPayment = processPayment;

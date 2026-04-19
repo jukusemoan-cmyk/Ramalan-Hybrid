@@ -11,7 +11,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   
   <style>
     .mystic-header { text-align: center; margin-bottom: 32px; }
@@ -118,16 +118,16 @@
 </head>
 <body>
 <div class="container">
-  <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo"><a href="index.html">ORACLE NUSANTARA</a></div>
+    <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
     <div class="nav-links">
-      <a href="index.html">Beranda</a>
+      <a href="../index.html">Beranda</a>
       <a href="ramalan.html">Ramalan</a>
-      <a href="bazi.html">BaZi</a>
       <a href="kecocokan.html">Kecocokan</a>
+      <a href="bazi.html">BaZi</a>
       <a href="dewasa-ayu.html">Dewasa Ayu</a>
-      <a href="kalender.html" class="btn-premium-nav"><i class="fas fa-calendar-alt"></i> Kalender</a>
+      <a href="pustaka.html">Pustaka</a>
+      <a href="kalender.html">Kalender</a>
       <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-coins"></i> Token</a>
     </div>
   </nav>
@@ -144,7 +144,6 @@
       </div>
     </div>
 
-    <!-- Tabs - Semua Kategori -->
     <div class="tabs">
       <button class="tab-btn active" data-tab="wuku">30 Wuku</button>
       <button class="tab-btn" data-tab="saptawara">Saptawara</button>
@@ -187,14 +186,12 @@
   </div>
 </div>
 
-<!-- JavaScript Modules -->
-<script src="js/calculator.js"></script>
-<script src="js/data-loader.js"></script>
-<script src="js/ui-controller.js"></script>
-<script src="js/premium.js"></script>
+<script src="../js/calculator.js"></script>
+<script src="../js/data-loader.js"></script>
+<script src="../js/ui-controller.js"></script>
+<script src="../js/premium.js"></script>
 
 <script>
-// ================== INISIALISASI HALAMAN PUSTAKA ==================
 let calendarData = null;
 let zodiacShioData = null;
 let baziStemsBranches = null;
@@ -219,19 +216,16 @@ function initDOMElements() {
 async function loadAllPustakaData() {
     try {
         const [cal, zodiac, baziStem, baziGod] = await Promise.all([
-            fetchJSON('data/bali-calendar.json'),
-            fetchJSON('data/zodiac-shio.json'),
-            fetchJSON('data/bazi-stems-branches.json'),
-            fetchJSON('data/bazi-ten-gods.json')
+            fetchJSON('../data/bali-calendar.json'),
+            fetchJSON('../data/zodiac-shio.json'),
+            fetchJSON('../data/bazi-stems-branches.json'),
+            fetchJSON('../data/bazi-ten-gods.json')
         ]);
         calendarData = cal;
         zodiacShioData = zodiac;
         baziStemsBranches = baziStem;
         baziTenGods = baziGod;
-    } catch(e) {
-        console.error('Gagal load data pustaka:', e);
-        throw e;
-    }
+    } catch(e) { console.error('Gagal load data pustaka:', e); throw e; }
 }
 
 function getItemsForTab(tab) {
@@ -336,7 +330,6 @@ function showDetail(type, name) {
     
     elements.modalBody.innerHTML = basicHtml;
     
-    // Konten premium
     const premiumHtml = `
         <div style="margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(212, 175, 55, 0.2);">
             <h4 style="color: #D4AF37; margin-bottom: 16px;"><i class="fas fa-crown"></i> Pengetahuan Premium</h4>
@@ -355,9 +348,7 @@ function showDetail(type, name) {
     elements.modal.classList.remove('hidden');
 }
 
-function closeModal() {
-    elements.modal.classList.add('hidden');
-}
+function closeModal() { elements.modal.classList.add('hidden'); }
 
 function getPremiumRitual(type, item) {
     if (type === 'wuku') return `Sesajen canang sari dengan bunga ${item.element === 'Api' ? 'merah' : item.element === 'Air' ? 'putih' : 'kuning'}.`;

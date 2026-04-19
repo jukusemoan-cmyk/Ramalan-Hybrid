@@ -11,7 +11,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   
   <style>
     .mystic-header { text-align: center; margin-bottom: 32px; }
@@ -118,10 +118,7 @@
       text-align: justify;
     }
     .analysis-section-card p:last-child { margin-bottom: 0; }
-    .highlight-text {
-      color: #F3E5AB;
-      font-weight: 500;
-    }
+    .highlight-text { color: #F3E5AB; font-weight: 500; }
     
     @media (max-width: 900px) {
       .numerology-grid { grid-template-columns: 1fr; }
@@ -135,14 +132,15 @@
   </div>
 
   <nav class="navbar">
-    <div class="logo"><a href="index.html">ORACLE NUSANTARA</a></div>
+    <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
     <div class="nav-links">
-      <a href="index.html">Beranda</a>
+      <a href="../index.html">Beranda</a>
+      <a href="ramalan.html">Ramalan</a>
       <a href="kecocokan.html">Kecocokan</a>
       <a href="bazi.html">BaZi</a>
       <a href="dewasa-ayu.html">Dewasa Ayu</a>
       <a href="pustaka.html">Pustaka</a>
-      <a href="kalender.html" class="btn-premium-nav"><i class="fas fa-calendar-alt"></i> Kalender</a>
+      <a href="kalender.html">Kalender</a>
       <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-coins"></i> Token</a>
     </div>
   </nav>
@@ -260,10 +258,10 @@
 </div>
 
 <!-- JavaScript Modules -->
-<script src="js/calculator.js"></script>
-<script src="js/data-loader.js"></script>
-<script src="js/ui-controller.js"></script>
-<script src="js/premium.js"></script>
+<script src="../js/calculator.js"></script>
+<script src="../js/data-loader.js"></script>
+<script src="../js/ui-controller.js"></script>
+<script src="../js/premium.js"></script>
 
 <script>
 // ================== INISIALISASI HALAMAN RAMALAN ==================
@@ -342,15 +340,15 @@ async function loadAllData() {
     showLoading(true);
     try {
         const [calendar, weton, numerology, strengths, obstacles, potentials, spiritual, timing, zodiacShio] = await Promise.all([
-            fetchJSON('data/bali-calendar.json'),
-            fetchJSON('data/bali-weton.json'),
-            fetchJSON('data/numerology.json'),
-            fetchJSON('data/strengths-weaknesses.json'),
-            fetchJSON('data/obstacles-solutions.json'),
-            fetchJSON('data/hidden-potentials.json'),
-            fetchJSON('data/spiritual-advice.json'),
-            fetchJSON('data/timing-recommendations.json'),
-            fetchJSON('data/zodiac-shio.json')
+            fetchJSON('../data/bali-calendar.json'),
+            fetchJSON('../data/bali-weton.json'),
+            fetchJSON('../data/numerology.json'),
+            fetchJSON('../data/strengths-weaknesses.json'),
+            fetchJSON('../data/obstacles-solutions.json'),
+            fetchJSON('../data/hidden-potentials.json'),
+            fetchJSON('../data/spiritual-advice.json'),
+            fetchJSON('../data/timing-recommendations.json'),
+            fetchJSON('../data/zodiac-shio.json')
         ]);
         calendarData = calendar;
         wetonData = weton;
@@ -414,8 +412,6 @@ async function handleReveal() {
 
 function analyzeUserProfile() {
     if (!currentUserData || !strengthsData) return null;
-    
-    // Hitung elemen dominan
     const elements = { Api: 0, Air: 0, Tanah: 0, Kayu: 0, Logam: 0 };
     const zodiacElement = zodiacShioData?.zodiacs?.find(z => z.name === currentUserData.zodiac)?.element;
     const shioElement = zodiacShioData?.shios?.find(s => s.name === currentUserData.shio)?.element;
@@ -423,16 +419,13 @@ function analyzeUserProfile() {
     if (zodiacElement) elements[zodiacElement]++;
     if (shioElement) elements[shioElement]++;
     if (wukuElement) elements[wukuElement]++;
-    
     let dominantElement = 'Api', maxCount = 0;
     for (let e in elements) if (elements[e] > maxCount) { maxCount = elements[e]; dominantElement = e; }
-    
     const strength = strengthsData.templates.find(t => t.element === dominantElement) || strengthsData.templates[0];
     const obstacle = obstaclesData.templates[0];
     const potential = potentialsData.templates[0];
     const spiritual = spiritualData.templates[0];
     const timing = timingData.templates[0];
-    
     return { strength, obstacle, potential, spiritual, timing, dominantElement };
 }
 
@@ -448,7 +441,6 @@ function displayPremiumContent() {
                 <h3 style="color: #F3E5AB; margin-bottom: 24px; text-align: center;">
                     <i class="fas fa-star"></i> Analisis Kepribadian Mendalam
                 </h3>
-                
                 <div class="analysis-section-card">
                     <h4><i class="fas fa-check-circle" style="color:#D4AF37;"></i> ✨ Kelebihan & Kekurangan</h4>
                     <p><span class="highlight-text">Elemen Dominan: ${analysis.dominantElement}</span></p>
@@ -456,28 +448,24 @@ function displayPremiumContent() {
                     <p>${analysis.strength.weakness}</p>
                     ${analysis.strength.additional_note ? `<p><i class="fas fa-info-circle"></i> ${analysis.strength.additional_note}</p>` : ''}
                 </div>
-                
                 <div class="analysis-section-card">
                     <h4><i class="fas fa-exclamation-triangle" style="color:#D4AF37;"></i> ⚠️ Hambatan & Solusi</h4>
                     <p><strong>Hambatan:</strong> ${analysis.obstacle.obstacle}</p>
                     <p><strong>Solusi:</strong> ${analysis.obstacle.solution}</p>
                     ${analysis.obstacle.additional ? `<p><i class="fas fa-lightbulb"></i> ${analysis.obstacle.additional}</p>` : ''}
                 </div>
-                
                 <div class="analysis-section-card">
                     <h4><i class="fas fa-eye" style="color:#D4AF37;"></i> 🔮 Potensi Tersembunyi</h4>
                     <p>${analysis.potential.potential}</p>
                     <p><strong>🚀 Cara Mengembangkan:</strong> ${analysis.potential.how_to}</p>
                     ${analysis.potential.additional ? `<p><i class="fas fa-gem"></i> ${analysis.potential.additional}</p>` : ''}
                 </div>
-                
                 <div class="analysis-section-card">
                     <h4><i class="fas fa-om" style="color:#D4AF37;"></i> 🌿 Saran Spiritual</h4>
                     <p>${analysis.spiritual.advice}</p>
                     <p><strong>🕯️ Praktik:</strong> ${analysis.spiritual.how_to}</p>
                     <p><strong>📿 Mantra:</strong> "${analysis.spiritual.mantra}"</p>
                 </div>
-                
                 <div class="analysis-section-card">
                     <h4><i class="fas fa-calendar-alt" style="color:#D4AF37;"></i> 📅 Rekomendasi Waktu</h4>
                     <p>${analysis.timing.recommendation}</p>

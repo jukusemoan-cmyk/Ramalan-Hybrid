@@ -11,18 +11,11 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   
   <style>
-    /* Style spesifik untuk halaman dewasa ayu */
-    .mystic-header {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-    .mystic-header h1 {
-      font-size: 3rem;
-      letter-spacing: 2px;
-    }
+    .mystic-header { text-align: center; margin-bottom: 32px; }
+    .mystic-header h1 { font-size: 3rem; letter-spacing: 2px; }
     
     .day-summary {
       background: rgba(15, 15, 20, 0.8);
@@ -32,17 +25,8 @@
       text-align: center;
       margin-bottom: 32px;
     }
-    .day-level {
-      font-size: 2.8rem;
-      font-weight: 600;
-      color: #F3E5AB;
-      font-family: 'Cormorant Garamond', serif;
-    }
-    .day-desc {
-      color: #B0B0C0;
-      margin-top: 12px;
-      font-size: 1.1rem;
-    }
+    .day-level { font-size: 2.8rem; font-weight: 600; color: #F3E5AB; font-family: 'Cormorant Garamond', serif; }
+    .day-desc { color: #B0B0C0; margin-top: 12px; font-size: 1.1rem; }
     
     .detail-grid {
       display: grid;
@@ -57,15 +41,8 @@
       text-align: center;
       border: 1px solid rgba(212, 175, 55, 0.1);
     }
-    .detail-item i {
-      font-size: 2rem;
-      color: #D4AF37;
-      margin-bottom: 12px;
-    }
-    .detail-item strong {
-      font-size: 1.4rem;
-      color: #F3E5AB;
-    }
+    .detail-item i { font-size: 2rem; color: #D4AF37; margin-bottom: 12px; }
+    .detail-item strong { font-size: 1.4rem; color: #F3E5AB; }
     
     @media (max-width: 500px) {
       .detail-grid { grid-template-columns: 1fr; }
@@ -74,29 +51,25 @@
 </head>
 <body>
 <div class="container">
-  <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo">
-      <a href="index.html">ORACLE NUSANTARA</a>
-    </div>
+    <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
     <div class="nav-links">
-      <a href="index.html">Beranda</a>
+      <a href="../index.html">Beranda</a>
       <a href="ramalan.html">Ramalan</a>
       <a href="kecocokan.html">Kecocokan</a>
       <a href="bazi.html">BaZi</a>
+      <a href="dewasa-ayu.html">Dewasa Ayu</a>
       <a href="pustaka.html">Pustaka</a>
-      <a href="kalender.html" class="btn-premium-nav"><i class="fas fa-calendar-alt"></i> Kalender</a>
+      <a href="kalender.html">Kalender</a>
       <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-coins"></i> Token</a>
     </div>
   </nav>
 
-  <!-- Header -->
   <div class="mystic-header">
     <h1><i class="fas fa-sun"></i> Dewasa Ayu</h1>
     <p style="color: #A0A0B0;">Cari hari baik untuk aktivitas pentingmu</p>
   </div>
 
-  <!-- Main Card -->
   <div class="oracle-card">
     <div class="input-field">
       <label><i class="fas fa-calendar-alt"></i> Pilih Tanggal</label>
@@ -105,7 +78,6 @@
     
     <button class="btn-primary" id="checkBtn" style="margin-top: 24px;"><i class="fas fa-search"></i> CEK HARI BAIK</button>
 
-    <!-- Result Section -->
     <div id="resultSection" class="hidden" style="margin-top: 40px;">
       <div class="day-summary">
         <div class="day-level" id="dayLevel">-</div>
@@ -135,14 +107,12 @@
         </div>
       </div>
 
-      <!-- Token Display -->
       <div class="token-display-section">
         <div class="token-badge">
           <i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span>
         </div>
       </div>
 
-      <!-- Premium Lock -->
       <div style="text-align: center; margin-top: 32px;">
         <button class="btn-premium" id="premiumBtn"><i class="fas fa-lock"></i> BUKA ANALISIS MENDALAM (1 Token)</button>
       </div>
@@ -153,7 +123,6 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="footer">
     <div>© 2026 Oracle Nusantara. Seluruh konten untuk hiburan & refleksi diri.</div>
     <div>
@@ -164,18 +133,15 @@
   </footer>
 </div>
 
-<!-- JavaScript Modules -->
-<script src="js/calculator.js"></script>
-<script src="js/data-loader.js"></script>
-<script src="js/ui-controller.js"></script>
-<script src="js/premium.js"></script>
+<script src="../js/calculator.js"></script>
+<script src="../js/data-loader.js"></script>
+<script src="../js/ui-controller.js"></script>
+<script src="../js/premium.js"></script>
 
 <script>
-// ================== INISIALISASI HALAMAN DEWASA AYU ==================
 let calendarData = null;
 let currentDayData = null;
 
-// DOM Elements
 const elements = {
     selectedDate: null, checkBtn: null, resultSection: null,
     dayLevel: null, dayShortDesc: null,
@@ -200,7 +166,6 @@ function getTriWara(saptawara, pancawara) {
     const s = calendarData.saptawara.find(x => x.name === saptawara);
     const p = calendarData.pancawara.find(x => x.name === pancawara);
     if (!s || !p) return null;
-    
     const total = s.urip + p.urip;
     const mod = total % 3;
     const triWaraList = [

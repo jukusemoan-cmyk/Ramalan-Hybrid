@@ -11,7 +11,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   
   <style>
     .mystic-header { text-align: center; margin-bottom: 32px; }
@@ -159,17 +159,16 @@
 </head>
 <body>
 <div class="container">
-  <!-- Navigation -->
   <nav class="navbar">
-    <div class="logo"><a href="index.html">ORACLE NUSANTARA</a></div>
+    <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
     <div class="nav-links">
-      <a href="index.html">Beranda</a>
+      <a href="../index.html">Beranda</a>
       <a href="ramalan.html">Ramalan</a>
       <a href="kecocokan.html">Kecocokan</a>
       <a href="bazi.html">BaZi</a>
       <a href="dewasa-ayu.html">Dewasa Ayu</a>
       <a href="pustaka.html">Pustaka</a>
-      <a href="kalender.html" class="btn-premium-nav"><i class="fas fa-calendar-alt"></i> Kalender</a>
+      <a href="kalender.html">Kalender</a>
       <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-coins"></i> Token</a>
     </div>
   </nav>
@@ -179,7 +178,6 @@
     <p style="color: #A0A0B0;">Bali • Shio • BaZi</p>
   </div>
 
-  <!-- Date Navigator -->
   <div class="date-navigator">
     <button class="nav-btn" id="prevDayBtn"><i class="fas fa-chevron-left"></i></button>
     <input type="date" id="datePicker" class="date-input">
@@ -187,14 +185,12 @@
     <button class="nav-btn today-btn" id="todayBtn"><i class="fas fa-calendar-day"></i> Hari Ini</button>
   </div>
 
-  <!-- Tabs -->
   <div class="tabs">
     <button class="tab-btn active" data-tab="bali"><i class="fas fa-om"></i> Kalender Bali</button>
     <button class="tab-btn" data-tab="shio"><i class="fas fa-dragon"></i> Kalender Shio</button>
     <button class="tab-btn" data-tab="bazi"><i class="fas fa-mountain"></i> Kalender BaZi</button>
   </div>
 
-  <!-- Tab Content: Bali -->
   <div id="tab-bali" class="tab-content active">
     <div class="oracle-card">
       <div class="highlight-box">
@@ -230,7 +226,6 @@
     </div>
   </div>
 
-  <!-- Tab Content: Shio -->
   <div id="tab-shio" class="tab-content">
     <div class="oracle-card">
       <div class="highlight-box">
@@ -260,7 +255,6 @@
     </div>
   </div>
 
-  <!-- Tab Content: BaZi -->
   <div id="tab-bazi" class="tab-content">
     <div class="oracle-card">
       <div class="calendar-grid">
@@ -305,8 +299,8 @@
   </footer>
 </div>
 
-<script src="js/calculator.js"></script>
-<script src="js/data-loader.js"></script>
+<script src="../js/calculator.js"></script>
+<script src="../js/data-loader.js"></script>
 <script>
 let calendarData = null;
 let currentDate = new Date();
@@ -432,18 +426,12 @@ function getNextNewMoon(date) {
 
 function getFestivals(wuku, saptawara, pancawara, sasih) {
     const festivals = [];
-    
-    // Hari Raya Berdasarkan Wuku
     if (wuku === 'Dunggulan') festivals.push('🎉 Galungan');
     if (wuku === 'Kuningan') festivals.push('🎉 Kuningan');
     if (wuku === 'Watugunung' && saptawara === 'Saniscara') festivals.push('📚 Saraswati');
     if (wuku === 'Sinta' && saptawara === 'Buda') festivals.push('🛡️ Pagerwesi');
-    
-    // Hari Raya Berdasarkan Sasih
     if (sasih === 'Kasanga' && pancawara === 'Kliwon') festivals.push('🌑 Nyepi');
     if (sasih === 'Kapitu' && pancawara === 'Kliwon') festivals.push('🌙 Siwaratri');
-    
-    // TUMEK (Saniscara Kliwon pada Wuku tertentu)
     if (saptawara === 'Saniscara' && pancawara === 'Kliwon') {
         if (wuku === 'Landep') festivals.push('🗡️ Tumpek Landep');
         else if (wuku === 'Wariga') festivals.push('🌳 Tumpek Wariga');
@@ -452,11 +440,8 @@ function getFestivals(wuku, saptawara, pancawara, sasih) {
         else if (wuku === 'Uye') festivals.push('🐄 Tumpek Kandang');
         else if (wuku === 'Wayang') festivals.push('🎭 Tumpek Wayang');
     }
-    
-    // Buda Kliwon & Anggara Kasih
     if (saptawara === 'Buda' && pancawara === 'Kliwon') festivals.push('🕉️ Buda Kliwon');
     if (saptawara === 'Anggara' && pancawara === 'Kliwon') festivals.push('🔥 Anggara Kasih');
-    
     return festivals;
 }
 

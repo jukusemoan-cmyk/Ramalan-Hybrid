@@ -11,7 +11,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   
   <style>
     .mystic-header { text-align: center; margin-bottom: 32px; }
@@ -45,22 +45,9 @@
       text-transform: uppercase;
       letter-spacing: 2px;
     }
-    .pillar-stem {
-      font-size: 2.5rem;
-      font-weight: 600;
-      color: #F3E5AB;
-      font-family: 'Cormorant Garamond', serif;
-    }
-    .pillar-branch {
-      font-size: 1.8rem;
-      color: #D4AF37;
-      margin-top: 4px;
-    }
-    .pillar-element {
-      font-size: 0.9rem;
-      color: #A0A0B0;
-      margin-top: 8px;
-    }
+    .pillar-stem { font-size: 2.5rem; font-weight: 600; color: #F3E5AB; font-family: 'Cormorant Garamond', serif; }
+    .pillar-branch { font-size: 1.8rem; color: #D4AF37; margin-top: 4px; }
+    .pillar-element { font-size: 0.9rem; color: #A0A0B0; margin-top: 8px; }
     
     .daymaster-section {
       background: linear-gradient(145deg, rgba(15, 15, 20, 0.9), rgba(20, 20, 25, 0.9));
@@ -70,24 +57,9 @@
       text-align: center;
       border: 1px solid #D4AF37;
     }
-    .daymaster-title {
-      font-size: 1.1rem;
-      color: #A0A0B0;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-    }
-    .daymaster-name {
-      font-size: 3.5rem;
-      font-weight: 600;
-      color: #D4AF37;
-      font-family: 'Cormorant Garamond', serif;
-      margin: 12px 0;
-    }
-    .daymaster-desc {
-      color: #B0B0C0;
-      max-width: 500px;
-      margin: 0 auto;
-    }
+    .daymaster-title { font-size: 1.1rem; color: #A0A0B0; text-transform: uppercase; letter-spacing: 3px; }
+    .daymaster-name { font-size: 3.5rem; font-weight: 600; color: #D4AF37; font-family: 'Cormorant Garamond', serif; margin: 12px 0; }
+    .daymaster-desc { color: #B0B0C0; max-width: 500px; margin: 0 auto; }
     
     .tengods-grid {
       display: grid;
@@ -102,16 +74,8 @@
       text-align: center;
       border: 1px solid rgba(212, 175, 55, 0.1);
     }
-    .tengod-pillar {
-      font-size: 0.8rem;
-      color: #A0A0B0;
-      text-transform: uppercase;
-    }
-    .tengod-name {
-      font-size: 1.3rem;
-      color: #D4AF37;
-      margin: 8px 0;
-    }
+    .tengod-pillar { font-size: 0.8rem; color: #A0A0B0; text-transform: uppercase; }
+    .tengod-name { font-size: 1.3rem; color: #D4AF37; margin: 8px 0; }
     
     .hour-select {
       width: 100%;
@@ -159,15 +123,15 @@
   </div>
 
   <nav class="navbar">
-    <div class="logo"><a href="index.html">ORACLE NUSANTARA</a></div>
+    <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
     <div class="nav-links">
-      <a href="index.html">Beranda</a>
+      <a href="../index.html">Beranda</a>
       <a href="ramalan.html">Ramalan</a>
-      <a href="bazi.html">BaZi</a>
       <a href="kecocokan.html">Kecocokan</a>
+      <a href="bazi.html">BaZi</a>
       <a href="dewasa-ayu.html">Dewasa Ayu</a>
       <a href="pustaka.html">Pustaka</a>
-      <a href="kalender.html" class="btn-premium-nav"><i class="fas fa-calendar-alt"></i> Kalender</a>
+      <a href="kalender.html">Kalender</a>
       <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-coins"></i> Token</a>
     </div>
   </nav>
@@ -214,7 +178,6 @@
     </div>
 
     <div id="resultSection" class="hidden" style="margin-top: 40px;">
-      <!-- Empat Pilar -->
       <h3 style="text-align: center; color: #F3E5AB; margin-bottom: 24px;">Empat Pilar Takdir</h3>
       <div class="bazi-pillars">
         <div class="pillar-card">
@@ -243,21 +206,18 @@
         </div>
       </div>
 
-      <!-- Day Master -->
       <div class="daymaster-section">
         <div class="daymaster-title">Day Master (Inti Dirimu)</div>
         <div class="daymaster-name" id="dayMasterName">-</div>
         <div class="daymaster-desc" id="dayMasterDesc">-</div>
       </div>
 
-      <!-- Token Display -->
       <div class="token-display-section">
         <div class="token-badge">
           <i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span>
         </div>
       </div>
 
-      <!-- Premium Lock -->
       <div style="text-align: center; margin-top: 32px;">
         <button class="btn-premium" id="unlockPremiumBtn"><i class="fas fa-lock"></i> BUKA ANALISIS 10 DEWA (3 Token)</button>
       </div>
@@ -278,14 +238,12 @@
   </footer>
 </div>
 
-<!-- JavaScript Modules -->
-<script src="js/calculator.js"></script>
-<script src="js/data-loader.js"></script>
-<script src="js/ui-controller.js"></script>
-<script src="js/premium.js"></script>
+<script src="../js/calculator.js"></script>
+<script src="../js/data-loader.js"></script>
+<script src="../js/ui-controller.js"></script>
+<script src="../js/premium.js"></script>
 
 <script>
-// ================== INISIALISASI HALAMAN BAZI ==================
 let baziStemsBranches = null;
 let baziTenGods = null;
 let currentBaziChart = null;
@@ -327,15 +285,12 @@ function initDOMElements() {
 async function loadBaziData() {
     try {
         const [stems, gods] = await Promise.all([
-            fetchJSON('data/bazi-stems-branches.json'),
-            fetchJSON('data/bazi-ten-gods.json')
+            fetchJSON('../data/bazi-stems-branches.json'),
+            fetchJSON('../data/bazi-ten-gods.json')
         ]);
         baziStemsBranches = stems;
         baziTenGods = gods;
-    } catch(e) {
-        console.error('Gagal load data BaZi:', e);
-        throw e;
-    }
+    } catch(e) { console.error('Gagal load data BaZi:', e); throw e; }
 }
 
 function getStemDescription(stemName) {
@@ -343,16 +298,9 @@ function getStemDescription(stemName) {
     return stem ? `${stem.element} ${stem.polarity} - ${stem.character}` : '-';
 }
 
-function getBranchDescription(branchName) {
-    const branch = baziStemsBranches?.branches?.find(b => b.name === branchName);
-    return branch ? `${branch.element} - ${branch.animal}` : '-';
-}
-
 function getTenGodDescription(godId) {
     const god = baziTenGods?.ten_gods?.find(g => g.id === godId);
     if (!god) return godId;
-    
-    // Mapping nama Indonesia
     const indonesianNames = {
         'direct_officer': 'Pejabat Langsung (Direct Officer)',
         'seven_killings': 'Tujuh Pembunuh (Seven Killings)',
@@ -365,8 +313,18 @@ function getTenGodDescription(godId) {
         'direct_resource': 'Sumber Daya Langsung (Direct Resource)',
         'indirect_resource': 'Sumber Daya Tidak Langsung (Indirect Resource)'
     };
-    
     return indonesianNames[godId] || god.name;
+}
+
+function getTenGodInterpretation(godId, pillar) {
+    const god = baziTenGods?.ten_gods?.find(g => g.id === godId);
+    if (!god) return 'Interpretasi tidak tersedia.';
+    const deepAnalysis = {
+        'direct_officer': { year: 'Di Pilar Tahun, Direct Officer menunjukkan bahwa sejak kecil Anda telah belajar menghormati otoritas dan aturan.', month: 'Di Pilar Bulan, Direct Officer menandakan karier yang stabil dan terstruktur.', day: 'Di Pilar Hari, Direct Officer menggambarkan pasangan yang bertanggung jawab dan setia.', hour: 'Di Pilar Jam, Direct Officer menandakan anak-anak yang disiplin dan berprestasi.' },
+        'seven_killings': { year: 'Di Pilar Tahun, Seven Killings menunjukkan masa kecil yang penuh tantangan.', month: 'Di Pilar Bulan, Seven Killings menandakan karier yang penuh persaingan.', day: 'Di Pilar Hari, Seven Killings menggambarkan pasangan yang dominan dan penuh gairah.', hour: 'Di Pilar Jam, Seven Killings menandakan anak-anak yang pemberani dan kompetitif.' },
+        'friend': { year: 'Di Pilar Tahun, Friend menunjukkan masa kecil dengan banyak teman.', month: 'Di Pilar Bulan, Friend menandakan lingkungan kerja yang kompetitif.', day: 'Di Pilar Hari, Friend menggambarkan pasangan yang setara.', hour: 'Di Pilar Jam, Friend menandakan anak-anak yang mandiri.' }
+    };
+    return deepAnalysis[godId]?.[pillar] || god.positive_traits?.join(', ') || 'Analisis mendalam sedang dikembangkan.';
 }
 
 function handleReveal() {
@@ -382,24 +340,19 @@ function handleReveal() {
         const chart = analyzeBaZiChart(date, hour);
         currentBaziChart = chart;
         
-        // Tampilkan Empat Pilar
         elements.yearStem.textContent = chart.pillars.year.stem.name;
         elements.yearBranch.textContent = chart.pillars.year.branch.name;
         elements.yearElement.textContent = `${chart.pillars.year.stem.element} / ${chart.pillars.year.branch.element}`;
-        
         elements.monthStem.textContent = chart.pillars.month.stem.name;
         elements.monthBranch.textContent = chart.pillars.month.branch.name;
         elements.monthElement.textContent = `${chart.pillars.month.stem.element} / ${chart.pillars.month.branch.element}`;
-        
         elements.dayStem.textContent = chart.pillars.day.stem.name;
         elements.dayBranch.textContent = chart.pillars.day.branch.name;
         elements.dayElement.textContent = `${chart.pillars.day.stem.element} / ${chart.pillars.day.branch.element}`;
-        
         elements.hourStem.textContent = chart.pillars.hour.stem.name;
         elements.hourBranch.textContent = chart.pillars.hour.branch.name;
         elements.hourElement.textContent = `${chart.pillars.hour.stem.element} / ${chart.pillars.hour.branch.element}`;
         
-        // Tampilkan Day Master
         const dm = chart.dayMaster;
         const dmDesc = getStemDescription(dm.name);
         elements.dayMasterName.textContent = `${dm.name} (${dm.element} ${dm.polarity})`;
@@ -408,42 +361,21 @@ function handleReveal() {
         elements.resultSection.classList.remove('hidden');
         elements.premiumBox.classList.add('hidden');
         elements.resultSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        
-    } catch(e) {
-        console.error(e);
-        alert('Terjadi kesalahan dalam perhitungan BaZi.');
-    }
+    } catch(e) { console.error(e); alert('Terjadi kesalahan dalam perhitungan BaZi.'); }
 }
 
 function displayPremiumContent() {
     if (!currentBaziChart) { alert('Lakukan analisis BaZi dulu.'); return; }
-    
     const chart = currentBaziChart;
     const tenGods = chart.tenGods;
     
     const html = `
         <h3 style="color:#D4AF37; margin-bottom:24px; text-align:center;"><i class="fas fa-crown"></i> Analisis 10 Dewa</h3>
         <div class="tengods-grid">
-            <div class="tengod-card">
-                <div class="tengod-pillar">Pilar Tahun</div>
-                <div class="tengod-name">${getTenGodDescription(tenGods.year)}</div>
-                <p style="font-size:0.85rem; color:#A0A0B0; margin-top:8px;">${getTenGodInterpretation(tenGods.year, 'year')}</p>
-            </div>
-            <div class="tengod-card">
-                <div class="tengod-pillar">Pilar Bulan</div>
-                <div class="tengod-name">${getTenGodDescription(tenGods.month)}</div>
-                <p style="font-size:0.85rem; color:#A0A0B0; margin-top:8px;">${getTenGodInterpretation(tenGods.month, 'month')}</p>
-            </div>
-            <div class="tengod-card">
-                <div class="tengod-pillar">Pilar Hari</div>
-                <div class="tengod-name">${getTenGodDescription(tenGods.day)}</div>
-                <p style="font-size:0.85rem; color:#A0A0B0; margin-top:8px;">${getTenGodInterpretation(tenGods.day, 'day')}</p>
-            </div>
-            <div class="tengod-card">
-                <div class="tengod-pillar">Pilar Jam</div>
-                <div class="tengod-name">${getTenGodDescription(tenGods.hour)}</div>
-                <p style="font-size:0.85rem; color:#A0A0B0; margin-top:8px;">${getTenGodInterpretation(tenGods.hour, 'hour')}</p>
-            </div>
+            <div class="tengod-card"><div class="tengod-pillar">Pilar Tahun</div><div class="tengod-name">${getTenGodDescription(tenGods.year)}</div><p style="font-size:0.85rem; color:#A0A0B0; margin-top:8px;">${getTenGodInterpretation(tenGods.year, 'year')}</p></div>
+            <div class="tengod-card"><div class="tengod-pillar">Pilar Bulan</div><div class="tengod-name">${getTenGodDescription(tenGods.month)}</div><p style="font-size:0.85rem; color:#A0A0B0; margin-top:8px;">${getTenGodInterpretation(tenGods.month, 'month')}</p></div>
+            <div class="tengod-card"><div class="tengod-pillar">Pilar Hari</div><div class="tengod-name">${getTenGodDescription(tenGods.day)}</div><p style="font-size:0.85rem; color:#A0A0B0; margin-top:8px;">${getTenGodInterpretation(tenGods.day, 'day')}</p></div>
+            <div class="tengod-card"><div class="tengod-pillar">Pilar Jam</div><div class="tengod-name">${getTenGodDescription(tenGods.hour)}</div><p style="font-size:0.85rem; color:#A0A0B0; margin-top:8px;">${getTenGodInterpretation(tenGods.hour, 'hour')}</p></div>
         </div>
         <div style="background:rgba(15,15,20,0.8); border-radius:16px; padding:24px; margin-top:24px;">
             <h4 style="color:#F3E5AB; margin-bottom:16px;">Ringkasan Cetak Biru Takdir</h4>
@@ -451,142 +383,18 @@ function displayPremiumContent() {
         </div>
         <p style="margin-top:16px; font-style:italic; opacity:0.7; text-align:right;">— Dianalisis dengan BaZi —</p>
     `;
-    
     elements.premiumBox.innerHTML = html;
     elements.premiumBox.classList.remove('hidden');
-}
-
-function getTenGodInterpretation(godId, pillar) {
-    const god = baziTenGods?.ten_gods?.find(g => g.id === godId);
-    if (!god) return 'Interpretasi tidak tersedia.';
-    
-    // Analisis mendalam per Pilar
-    const deepAnalysis = {
-        'direct_officer': {
-            year: 'Di Pilar Tahun, Direct Officer menunjukkan bahwa sejak kecil Anda telah belajar menghormati otoritas dan aturan. Anda mungkin berasal dari keluarga yang menjunjung tinggi disiplin, atau memiliki figur ayah/leluhur yang berwibawa. Ini membentuk karakter Anda yang bertanggung jawab dan dapat diandalkan.',
-            month: 'Di Pilar Bulan, Direct Officer menandakan karier yang stabil dan terstruktur. Anda cocok bekerja di lingkungan yang memiliki hierarki jelas, seperti pemerintahan, korporasi besar, atau institusi formal. Atasan dan mentor akan melihat potensi kepemimpinan dalam diri Anda. Kuncinya adalah konsistensi dan integritas.',
-            day: 'Di Pilar Hari, Direct Officer menggambarkan pasangan yang bertanggung jawab dan setia. Hubungan pernikahan Anda cenderung stabil dan saling menghormati. Anda mencari pasangan yang memiliki prinsip kuat dan dapat diandalkan. Dalam diri sendiri, ini menunjukkan komitmen tinggi terhadap hubungan.',
-            hour: 'Di Pilar Jam, Direct Officer menandakan anak-anak yang disiplin dan berprestasi. Mereka akan tumbuh menjadi individu yang bertanggung jawab dan menghormati Anda. Masa tua Anda akan dihormati dan dihargai oleh keluarga dan lingkungan sekitar.'
-        },
-        'seven_killings': {
-            year: 'Di Pilar Tahun, Seven Killings menunjukkan masa kecil yang penuh tantangan. Anda mungkin menghadapi tekanan atau kompetisi sejak dini, yang membentuk mental baja dan keberanian Anda. Ini adalah energi pejuang—Anda belajar bertahan dan bangkit dari kesulitan.',
-            month: 'Di Pilar Bulan, Seven Killings menandakan karier yang penuh persaingan dan dinamika tinggi. Anda cocok di bidang yang menantang seperti militer, olahraga, bisnis agresif, atau manajemen krisis. Tekanan justru memicu performa terbaik Anda. Waspadai konflik dengan atasan atau rekan yang iri.',
-            day: 'Di Pilar Hari, Seven Killings menggambarkan pasangan yang dominan dan penuh gairah. Hubungan Anda intens, penuh tantangan, namun juga sangat setia. Anda tertarik pada sosok yang kuat dan berani. Dalam diri sendiri, ini menunjukkan dorongan untuk selalu unggul dan melindungi yang dicintai.',
-            hour: 'Di Pilar Jam, Seven Killings menandakan anak-anak yang pemberani dan kompetitif. Mereka akan memiliki jiwa pemimpin dan tidak takut menghadapi rintangan. Masa tua Anda akan penuh semangat dan mungkin masih aktif dalam berbagai kegiatan. Jaga kesehatan dan kelola stres dengan baik.'
-        },
-        'direct_wealth': {
-            year: 'Di Pilar Tahun, Direct Wealth menunjukkan latar belakang keluarga yang stabil secara finansial. Anda belajar nilai uang dan kerja keras sejak kecil. Ada bakat alami dalam mengelola keuangan dan membangun aset.',
-            month: 'Di Pilar Bulan, Direct Wealth menandakan karier yang menghasilkan pendapatan stabil. Anda cocok di bidang keuangan, akuntansi, bisnis konvensional, atau manajemen aset. Anda bukan tipe spekulan—Anda membangun kekayaan secara perlahan namun pasti melalui kerja keras dan disiplin.',
-            day: 'Di Pilar Hari, Direct Wealth menggambarkan pasangan yang mendukung secara finansial dan praktis. Hubungan Anda stabil dan saling membangun kekayaan bersama. Anda menghargai pasangan yang hemat dan pandai mengelola uang.',
-            hour: 'Di Pilar Jam, Direct Wealth menandakan anak-anak yang mandiri secara finansial. Mereka akan mampu mengelola keuangan sendiri dan mungkin membantu Anda di masa tua. Masa tua Anda akan sejahtera dan cukup secara materi.'
-        },
-        'indirect_wealth': {
-            year: 'Di Pilar Tahun, Indirect Wealth menunjukkan rezeki tak terduga sejak muda. Anda mungkin sering mendapat hadiah, bonus, atau peluang bisnis sampingan. Namun, Anda juga belajar bahwa uang mudah datang dan pergi.',
-            month: 'Di Pilar Bulan, Indirect Wealth menandakan karier dengan pendapatan tidak tetap namun berpotensi besar. Anda cocok di bidang investasi, trading, sales, atau bisnis tidak konvensional. Keberanian mengambil risiko adalah kunci, tetapi harus diimbangi dengan perencanaan matang.',
-            day: 'Di Pilar Hari, Indirect Wealth menggambarkan pasangan yang membawa keberuntungan finansial. Hubungan Anda mungkin melibatkan usaha bersama yang menghasilkan rezeki tak terduga. Waspadai pengeluaran bersama yang bisa membengkak.',
-            hour: 'Di Pilar Jam, Indirect Wealth menandakan anak-anak yang membawa rezeki. Mereka mungkin sukses di bidang yang tidak terduga. Masa tua Anda makmur, namun perlu bijak mengelola agar tidak boros.'
-        },
-        'eating_god': {
-            year: 'Di Pilar Tahun, Eating God menunjukkan masa kecil yang menyenangkan dan penuh kreativitas. Anda mungkin memiliki bakat seni atau hobi yang didukung keluarga. Ini membentuk karakter Anda yang santai dan menikmati hidup.',
-            month: 'Di Pilar Bulan, Eating God menandakan karier di bidang kreatif atau yang memberi kepuasan batin. Anda cocok sebagai seniman, musisi, koki, desainer, atau terapis. Lingkungan kerja yang mendukung ekspresi diri sangat penting untuk produktivitas Anda.',
-            day: 'Di Pilar Hari, Eating God menggambarkan pasangan yang menyenangkan dan penuh perhatian. Hubungan Anda hangat, penuh tawa, dan saling memanjakan. Anda menghargai pasangan yang bisa menikmati hidup bersama.',
-            hour: 'Di Pilar Jam, Eating God menandakan anak-anak yang kreatif dan bahagia. Mereka akan membawa keceriaan di masa tua Anda. Masa tua Anda akan santai, penuh hobi, dan kenikmatan hidup.'
-        },
-        'hurting_officer': {
-            year: 'Di Pilar Tahun, Hurting Officer menunjukkan masa kecil yang penuh ekspresi dan mungkin sering menantang aturan. Anda memiliki bakat luar biasa atau kecerdasan di atas rata-rata, namun juga sifat memberontak.',
-            month: 'Di Pilar Bulan, Hurting Officer menandakan karier yang tidak konvensional. Anda cocok bekerja mandiri, sebagai ilmuwan, penemu, seniman avant-garde, atau konsultan independen. Anda tidak suka diatur dan lebih produktif dengan cara sendiri.',
-            day: 'Di Pilar Hari, Hurting Officer menggambarkan pasangan yang cerdas dan kritis. Hubungan Anda penuh dinamika intelektual dan debat sehat. Anda tertarik pada sosok yang brilian dan orisinal.',
-            hour: 'Di Pilar Jam, Hurting Officer menandakan anak-anak yang jenius dan unik. Mereka mungkin memiliki cara berpikir yang berbeda. Masa tua Anda akan penuh pencapaian orisinal dan kebanggaan atas prestasi anak.'
-        },
-        'friend': {
-            year: 'Di Pilar Tahun, Friend menunjukkan masa kecil dengan banyak saudara atau teman sebaya. Anda belajar kompetisi dan kerja sama sejak dini. Ini membentuk karakter Anda yang mandiri dan setia kawan.',
-            month: 'Di Pilar Bulan, Friend menandakan lingkungan kerja yang kompetitif. Anda cocok untuk karir mandiri, wirausaha, atau profesi yang mengandalkan kemampuan pribadi. Anda tidak suka bergantung pada orang lain dan lebih suka mengandalkan diri sendiri.',
-            day: 'Di Pilar Hari, Friend menggambarkan pasangan yang setara—seperti sahabat. Hubungan Anda didasari saling mendukung namun masing-masing tetap memiliki ruang pribadi. Anda menghargai kemandirian dalam hubungan.',
-            hour: 'Di Pilar Jam, Friend menandakan anak-anak yang mandiri dan tidak merepotkan. Mereka akan tumbuh menjadi individu yang kuat. Masa tua Anda akan dikelilingi teman-teman setia dan hubungan sosial yang hangat.'
-        },
-        'rob_wealth': {
-            year: 'Di Pilar Tahun, Rob Wealth menunjukkan masa kecil dengan banyak teman namun juga persaingan. Anda belajar berbagi dan bersosialisasi, namun juga waspada terhadap orang yang memanfaatkan kebaikan Anda.',
-            month: 'Di Pilar Bulan, Rob Wealth menandakan lingkungan kerja yang kolaboratif namun juga penuh persaingan tidak sehat. Anda cocok di bidang sales, public relation, atau bisnis jaringan. Kemampuan bergaul adalah aset, namun waspadai rekan yang manipulatif.',
-            day: 'Di Pilar Hari, Rob Wealth menggambarkan pasangan yang supel dan mudah bergaul. Hubungan Anda hangat dan sosial, namun waspadai campur tangan pihak ketiga. Komunikasi terbuka adalah kunci.',
-            hour: 'Di Pilar Jam, Rob Wealth menandakan anak-anak yang populer dan banyak teman. Masa tua Anda akan ramai dikunjungi dan penuh kegiatan sosial. Nikmati, namun tetap jaga batasan.'
-        },
-        'direct_resource': {
-            year: 'Di Pilar Tahun, Direct Resource menunjukkan dukungan penuh dari keluarga, terutama dalam pendidikan. Anda tumbuh dalam lingkungan yang melindungi dan memberi bekal pengetahuan yang kuat.',
-            month: 'Di Pilar Bulan, Direct Resource menandakan karier yang didukung oleh mentor atau atasan yang bijaksana. Anda cocok di bidang pendidikan, penelitian, konseling, atau penulisan. Anda berkembang dengan bimbingan dan struktur.',
-            day: 'Di Pilar Hari, Direct Resource menggambarkan pasangan yang penuh perhatian, mendukung, dan mungkin lebih tua atau lebih bijaksana. Hubungan Anda hangat, stabil, dan saling mengayomi.',
-            hour: 'Di Pilar Jam, Direct Resource menandakan anak-anak yang berpendidikan dan menghormati Anda. Masa tua Anda tenang, dihormati, dan mungkin Anda menjadi mentor bagi generasi muda.'
-        },
-        'indirect_resource': {
-            year: 'Di Pilar Tahun, Indirect Resource menunjukkan masa kecil yang unik—mungkin dekat dengan figur non-orang tua atau belajar hal-hal tidak biasa. Anda memiliki intuisi kuat dan minat pada hal metafisik.',
-            month: 'Di Pilar Bulan, Indirect Resource menandakan karier di bidang yang tidak biasa atau di belakang layar. Anda cocok sebagai astrolog, psikolog, peneliti independen, atau seniman surealis. Anda bekerja dengan cara sendiri dan tidak suka sorotan.',
-            day: 'Di Pilar Hari, Indirect Resource menggambarkan pasangan yang misterius, dalam, dan intuitif. Hubungan Anda penuh pemahaman tanpa kata dan koneksi spiritual yang kuat.',
-            hour: 'Di Pilar Jam, Indirect Resource menandakan anak-anak yang unik dan mungkin memiliki bakat spiritual. Masa tua Anda tenang dalam refleksi dan mungkin Anda menjadi sumber kebijaksanaan bagi sekitar.'
-        }
-    };
-    
-    // Default fallback jika godId tidak dikenali
-    if (!deepAnalysis[godId]) {
-        return god.positive_traits?.join(', ') || 'Analisis mendalam sedang dikembangkan.';
-    }
-    
-    return deepAnalysis[godId][pillar] || god.positive_traits?.join(', ') || 'Analisis mendalam sedang dikembangkan.';
 }
 
 function generateBaziSummary(chart) {
     const dm = chart.dayMaster;
     const tenGods = chart.tenGods;
-    
-    const dmDescriptions = {
-        'Geng': 'Geng adalah Logam Yang, diibaratkan sebagai kapak atau pedang—tegas, berani, dan kompetitif. Anda adalah tipe orang yang tidak takut menghadapi tantangan dan memiliki rasa keadilan yang tinggi. Anda memotong masalah hingga ke akarnya dan tidak suka basa-basi.',
-        'Xin': 'Xin adalah Logam Yin, diibaratkan sebagai perhiasan atau pisau bedah—teliti, elegan, dan perfeksionis. Anda memperhatikan detail, memiliki selera tinggi, dan mampu menyelesaikan pekerjaan dengan presisi.',
-        'Jia': 'Jia adalah Kayu Yang, diibaratkan sebagai pohon besar—kuat, teguh, dan visioner. Anda adalah pemimpin alami yang tumbuh perlahan namun kokoh, memberikan perlindungan bagi orang di sekitar.',
-        'Yi': 'Yi adalah Kayu Yin, diibaratkan sebagai rumput atau bunga—fleksibel, adaptif, dan diplomatis. Anda mampu menyesuaikan diri dengan lingkungan dan bertahan dalam berbagai situasi.',
-        'Bing': 'Bing adalah Api Yang, diibaratkan sebagai matahari—hangat, murah hati, dan ekspresif. Anda adalah pusat perhatian yang memberi energi pada orang lain, namun bisa terbakar jika tidak dikelola.',
-        'Ding': 'Ding adalah Api Yin, diibaratkan sebagai lilin atau bintang—fokus, tekun, dan misterius. Anda memiliki cahaya sendiri yang stabil dan mampu menerangi jalan di kegelapan.',
-        'Wu': 'Wu adalah Tanah Yang, diibaratkan sebagai gunung—kokoh, dapat diandalkan, dan konservatif. Anda adalah fondasi yang stabil bagi orang lain, namun sulit digoyahkan.',
-        'Ji': 'Ji adalah Tanah Yin, diibaratkan sebagai tanah subur—lembut, pengasuh, dan pemaaf. Anda memberi kehidupan dan dukungan bagi sekitar, mudah beradaptasi dengan kebutuhan orang lain.',
-        'Ren': 'Ren adalah Air Yang, diibaratkan sebagai lautan—bebas, visioner, dan intuitif. Anda memiliki wawasan luas dan mampu mengalir ke mana pun, namun bisa menjadi tak terduga.',
-        'Gui': 'Gui adalah Air Yin, diibaratkan sebagai embun atau hujan—misterius, dalam, dan imajinatif. Anda bekerja diam-diam namun memberi kehidupan, dengan pemahaman mendalam tentang emosi.'
-    };
-    
-    const dmDesc = dmDescriptions[dm.name] || `${dm.name} adalah ${dm.element} ${dm.polarity}.`;
-    
-    return `
-        <p style="margin-bottom:16px;"><strong style="color:#D4AF37;">Day Master Anda: ${dm.name} (${dm.element} ${dm.polarity})</strong><br>${dmDesc}</p>
-        
-        <p style="margin-bottom:16px;"><strong style="color:#D4AF37;">Pilar Tahun (${chart.pillars.year.stem.name} ${chart.pillars.year.branch.name}):</strong><br>
-        ${getTenGodInterpretation(tenGods.year, 'year')}</p>
-        
-        <p style="margin-bottom:16px;"><strong style="color:#D4AF37;">Pilar Bulan (${chart.pillars.month.stem.name} ${chart.pillars.month.branch.name}):</strong><br>
-        ${getTenGodInterpretation(tenGods.month, 'month')}</p>
-        
-        <p style="margin-bottom:16px;"><strong style="color:#D4AF37;">Pilar Hari (${chart.pillars.day.stem.name} ${chart.pillars.day.branch.name}):</strong><br>
-        ${getTenGodInterpretation(tenGods.day, 'day')}</p>
-        
-        <p style="margin-bottom:16px;"><strong style="color:#D4AF37;">Pilar Jam (${chart.pillars.hour.stem.name} ${chart.pillars.hour.branch.name}):</strong><br>
-        ${getTenGodInterpretation(tenGods.hour, 'hour')}</p>
-        
-        <p style="margin-top:20px; padding-top:16px; border-top:1px solid rgba(212,175,55,0.2); font-style:italic;">
-        <i class="fas fa-lightbulb" style="color:#D4AF37;"></i> 
-        Kesimpulan: Dengan Day Master ${dm.name} dan kombinasi energi di empat pilar, Anda adalah sosok yang 
-        ${dm.name === 'Geng' ? 'tegas dan berani, dengan kemampuan memimpin dan mengambil keputusan sulit.' : 
-          dm.name === 'Xin' ? 'teliti dan elegan, dengan bakat menyelesaikan hal-hal detail yang orang lain lewatkan.' :
-          dm.name === 'Jia' ? 'visioner dan teguh, dengan kemampuan membangun sesuatu yang bertahan lama.' :
-          dm.name === 'Yi' ? 'fleksibel dan diplomatis, dengan kemampuan beradaptasi di berbagai situasi.' :
-          dm.name === 'Bing' ? 'hangat dan inspiratif, dengan kemampuan memotivasi dan menjadi pusat perhatian.' :
-          dm.name === 'Ding' ? 'fokus dan tekun, dengan kemampuan mencapai target dengan presisi.' :
-          dm.name === 'Wu' ? 'kokoh dan dapat diandalkan, menjadi fondasi bagi orang-orang di sekitar.' :
-          dm.name === 'Ji' ? 'lembut dan mengayomi, dengan kemampuan merawat dan mendukung orang lain.' :
-          dm.name === 'Ren' ? 'visioner dan bebas, dengan kemampuan melihat gambaran besar dan berinovasi.' :
-          'misterius dan intuitif, dengan kemampuan memahami hal-hal yang tidak terlihat.'}
-        </p>
-    `;
+    return `Day Master Anda adalah ${dm.name} (${dm.element} ${dm.polarity}). Di Pilar Tahun, ${getTenGodDescription(tenGods.year)} menunjukkan hubungan dengan leluhur. Di Pilar Bulan, ${getTenGodDescription(tenGods.month)} mempengaruhi karier. Di Pilar Hari, ${getTenGodDescription(tenGods.day)} menggambarkan diri dan pasangan. Di Pilar Jam, ${getTenGodDescription(tenGods.hour)} mencerminkan anak-anak dan masa tua.`;
 }
 
 function handlePremiumUnlockBazi() {
-    // Bazi premium menggunakan 3 token
     let tokenBalance = parseInt(localStorage.getItem('tokenBalance') || '0');
-    
     if (tokenBalance >= 3) {
         tokenBalance -= 3;
         localStorage.setItem('tokenBalance', tokenBalance);
@@ -594,7 +402,7 @@ function handlePremiumUnlockBazi() {
         updateTokenDisplay();
         showSuccessToast(`✅ 3 Token digunakan. Sisa ${tokenBalance} Token.`);
     } else {
-        if (confirm(`Anda membutuhkan 3 Token untuk analisis BaZi lengkap. Token Anda: ${tokenBalance}. Ingin membeli token sekarang?`)) {
+        if (confirm(`Anda membutuhkan 3 Token. Token Anda: ${tokenBalance}. Ingin membeli token sekarang?`)) {
             window.location.href = 'pricing.html';
         }
     }
@@ -602,20 +410,14 @@ function handlePremiumUnlockBazi() {
 
 async function init() {
     initDOMElements();
-    
     const today = new Date();
     elements.birthDate.value = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
     
-    try {
-        await loadBaziData();
-    } catch(e) {
-        alert('Gagal memuat data BaZi.');
-        return;
-    }
+    try { await loadBaziData(); }
+    catch(e) { alert('Gagal memuat data BaZi.'); return; }
     
     updateTokenDisplay();
     checkPaymentSuccess();
-    
     elements.revealBtn.addEventListener('click', handleReveal);
     elements.unlockBtn.addEventListener('click', handlePremiumUnlockBazi);
 }
