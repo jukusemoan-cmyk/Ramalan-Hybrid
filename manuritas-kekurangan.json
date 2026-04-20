@@ -1,0 +1,304 @@
+{
+  "templates": [
+    {
+      "id": "weakness_0_0",
+      "condition": "pattern_excess_a === true",
+      "text": "Terlalu banyak huruf A bisa membuat emosi mudah meledak-ledak.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_0_1",
+      "condition": "pattern_excess_a === true",
+      "text": "Terlalu banyak huruf A bisa membuat emosi mudah meledak-ledak.  Perhatikan hal ini dengan saksama.  Latihan dan kesabaran akan sangat membantu."
+    },
+    {
+      "id": "weakness_0_2",
+      "condition": "pattern_excess_a === true",
+      "text": "Terlalu banyak huruf A bisa membuat emosi mudah meledak-ledak.  Jangan sampai energi ini berbalik merugikanmu.  Jangan ragu untuk mencari bimbingan jika diperlukan."
+    },
+    {
+      "id": "weakness_0_3",
+      "condition": "pattern_excess_a === true",
+      "text": "Terlalu banyak huruf A bisa membuat emosi mudah meledak-ledak.  Ini adalah area yang perlu mendapat perhatian ekstra.  Ingatlah bahwa setiap tantangan adalah kesempatan untuk bertumbuh."
+    },
+    {
+      "id": "weakness_0_4",
+      "condition": "pattern_excess_a === true",
+      "text": "Terlalu banyak huruf A bisa membuat emosi mudah meledak-ledak.  Kesadaran akan hal ini adalah langkah pertama menuju keseimbangan.  Dengan kesadaran, kamu bisa mengubahnya menjadi kekuatan."
+    },
+    {
+      "id": "weakness_0_5",
+      "condition": "pattern_excess_a === true",
+      "text": "Terlalu banyak huruf A bisa membuat emosi mudah meledak-ledak.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_1_0",
+      "condition": "pattern_no_u === true",
+      "text": "Ketiadaan huruf U mengurangi unsur ketenangan dan spiritualitas.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_1_1",
+      "condition": "pattern_no_u === true",
+      "text": "Ketiadaan huruf U mengurangi unsur ketenangan dan spiritualitas.  Perhatikan hal ini dengan saksama.  Latihan dan kesabaran akan sangat membantu."
+    },
+    {
+      "id": "weakness_1_2",
+      "condition": "pattern_no_u === true",
+      "text": "Ketiadaan huruf U mengurangi unsur ketenangan dan spiritualitas.  Jangan sampai energi ini berbalik merugikanmu.  Jangan ragu untuk mencari bimbingan jika diperlukan."
+    },
+    {
+      "id": "weakness_1_3",
+      "condition": "pattern_no_u === true",
+      "text": "Ketiadaan huruf U mengurangi unsur ketenangan dan spiritualitas.  Ini adalah area yang perlu mendapat perhatian ekstra.  Ingatlah bahwa setiap tantangan adalah kesempatan untuk bertumbuh."
+    },
+    {
+      "id": "weakness_1_4",
+      "condition": "pattern_no_u === true",
+      "text": "Ketiadaan huruf U mengurangi unsur ketenangan dan spiritualitas.  Kesadaran akan hal ini adalah langkah pertama menuju keseimbangan.  Dengan kesadaran, kamu bisa mengubahnya menjadi kekuatan."
+    },
+    {
+      "id": "weakness_1_5",
+      "condition": "pattern_no_u === true",
+      "text": "Ketiadaan huruf U mengurangi unsur ketenangan dan spiritualitas.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_2_0",
+      "condition": "pattern_excess_i === true",
+      "text": "Terlalu banyak huruf I bisa membuat overthinking dan terlalu sensitif.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_2_1",
+      "condition": "pattern_excess_i === true",
+      "text": "Terlalu banyak huruf I bisa membuat overthinking dan terlalu sensitif.  Perhatikan hal ini dengan saksama.  Latihan dan kesabaran akan sangat membantu."
+    },
+    {
+      "id": "weakness_2_2",
+      "condition": "pattern_excess_i === true",
+      "text": "Terlalu banyak huruf I bisa membuat overthinking dan terlalu sensitif.  Jangan sampai energi ini berbalik merugikanmu.  Jangan ragu untuk mencari bimbingan jika diperlukan."
+    },
+    {
+      "id": "weakness_2_3",
+      "condition": "pattern_excess_i === true",
+      "text": "Terlalu banyak huruf I bisa membuat overthinking dan terlalu sensitif.  Ini adalah area yang perlu mendapat perhatian ekstra.  Ingatlah bahwa setiap tantangan adalah kesempatan untuk bertumbuh."
+    },
+    {
+      "id": "weakness_2_4",
+      "condition": "pattern_excess_i === true",
+      "text": "Terlalu banyak huruf I bisa membuat overthinking dan terlalu sensitif.  Kesadaran akan hal ini adalah langkah pertama menuju keseimbangan.  Dengan kesadaran, kamu bisa mengubahnya menjadi kekuatan."
+    },
+    {
+      "id": "weakness_2_5",
+      "condition": "pattern_excess_i === true",
+      "text": "Terlalu banyak huruf I bisa membuat overthinking dan terlalu sensitif.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_3_0",
+      "condition": "pattern_no_r === true",
+      "text": "Ketiadaan huruf R bisa mengurangi daya juang dan ketekunan.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_3_1",
+      "condition": "pattern_no_r === true",
+      "text": "Ketiadaan huruf R bisa mengurangi daya juang dan ketekunan.  Perhatikan hal ini dengan saksama.  Latihan dan kesabaran akan sangat membantu."
+    },
+    {
+      "id": "weakness_3_2",
+      "condition": "pattern_no_r === true",
+      "text": "Ketiadaan huruf R bisa mengurangi daya juang dan ketekunan.  Jangan sampai energi ini berbalik merugikanmu.  Jangan ragu untuk mencari bimbingan jika diperlukan."
+    },
+    {
+      "id": "weakness_3_3",
+      "condition": "pattern_no_r === true",
+      "text": "Ketiadaan huruf R bisa mengurangi daya juang dan ketekunan.  Ini adalah area yang perlu mendapat perhatian ekstra.  Ingatlah bahwa setiap tantangan adalah kesempatan untuk bertumbuh."
+    },
+    {
+      "id": "weakness_3_4",
+      "condition": "pattern_no_r === true",
+      "text": "Ketiadaan huruf R bisa mengurangi daya juang dan ketekunan.  Kesadaran akan hal ini adalah langkah pertama menuju keseimbangan.  Dengan kesadaran, kamu bisa mengubahnya menjadi kekuatan."
+    },
+    {
+      "id": "weakness_3_5",
+      "condition": "pattern_no_r === true",
+      "text": "Ketiadaan huruf R bisa mengurangi daya juang dan ketekunan.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_4_0",
+      "condition": "pattern_excess_k === true",
+      "text": "Terlalu banyak huruf K bisa membuat kaku dan sulit beradaptasi.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_4_1",
+      "condition": "pattern_excess_k === true",
+      "text": "Terlalu banyak huruf K bisa membuat kaku dan sulit beradaptasi.  Perhatikan hal ini dengan saksama.  Latihan dan kesabaran akan sangat membantu."
+    },
+    {
+      "id": "weakness_4_2",
+      "condition": "pattern_excess_k === true",
+      "text": "Terlalu banyak huruf K bisa membuat kaku dan sulit beradaptasi.  Jangan sampai energi ini berbalik merugikanmu.  Jangan ragu untuk mencari bimbingan jika diperlukan."
+    },
+    {
+      "id": "weakness_4_3",
+      "condition": "pattern_excess_k === true",
+      "text": "Terlalu banyak huruf K bisa membuat kaku dan sulit beradaptasi.  Ini adalah area yang perlu mendapat perhatian ekstra.  Ingatlah bahwa setiap tantangan adalah kesempatan untuk bertumbuh."
+    },
+    {
+      "id": "weakness_4_4",
+      "condition": "pattern_excess_k === true",
+      "text": "Terlalu banyak huruf K bisa membuat kaku dan sulit beradaptasi.  Kesadaran akan hal ini adalah langkah pertama menuju keseimbangan.  Dengan kesadaran, kamu bisa mengubahnya menjadi kekuatan."
+    },
+    {
+      "id": "weakness_4_5",
+      "condition": "pattern_excess_k === true",
+      "text": "Terlalu banyak huruf K bisa membuat kaku dan sulit beradaptasi.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_5_0",
+      "condition": "pattern_no_s === true",
+      "text": "Ketiadaan huruf S bisa membuat komunikasi terhambat.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_5_1",
+      "condition": "pattern_no_s === true",
+      "text": "Ketiadaan huruf S bisa membuat komunikasi terhambat.  Perhatikan hal ini dengan saksama.  Latihan dan kesabaran akan sangat membantu."
+    },
+    {
+      "id": "weakness_5_2",
+      "condition": "pattern_no_s === true",
+      "text": "Ketiadaan huruf S bisa membuat komunikasi terhambat.  Jangan sampai energi ini berbalik merugikanmu.  Jangan ragu untuk mencari bimbingan jika diperlukan."
+    },
+    {
+      "id": "weakness_5_3",
+      "condition": "pattern_no_s === true",
+      "text": "Ketiadaan huruf S bisa membuat komunikasi terhambat.  Ini adalah area yang perlu mendapat perhatian ekstra.  Ingatlah bahwa setiap tantangan adalah kesempatan untuk bertumbuh."
+    },
+    {
+      "id": "weakness_5_4",
+      "condition": "pattern_no_s === true",
+      "text": "Ketiadaan huruf S bisa membuat komunikasi terhambat.  Kesadaran akan hal ini adalah langkah pertama menuju keseimbangan.  Dengan kesadaran, kamu bisa mengubahnya menjadi kekuatan."
+    },
+    {
+      "id": "weakness_5_5",
+      "condition": "pattern_no_s === true",
+      "text": "Ketiadaan huruf S bisa membuat komunikasi terhambat.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_6_0",
+      "condition": "pattern_ending_i === true",
+      "text": "Akhiran dengan huruf I cenderung membuat emosi tidak stabil.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_6_1",
+      "condition": "pattern_ending_i === true",
+      "text": "Akhiran dengan huruf I cenderung membuat emosi tidak stabil.  Perhatikan hal ini dengan saksama.  Latihan dan kesabaran akan sangat membantu."
+    },
+    {
+      "id": "weakness_6_2",
+      "condition": "pattern_ending_i === true",
+      "text": "Akhiran dengan huruf I cenderung membuat emosi tidak stabil.  Jangan sampai energi ini berbalik merugikanmu.  Jangan ragu untuk mencari bimbingan jika diperlukan."
+    },
+    {
+      "id": "weakness_6_3",
+      "condition": "pattern_ending_i === true",
+      "text": "Akhiran dengan huruf I cenderung membuat emosi tidak stabil.  Ini adalah area yang perlu mendapat perhatian ekstra.  Ingatlah bahwa setiap tantangan adalah kesempatan untuk bertumbuh."
+    },
+    {
+      "id": "weakness_6_4",
+      "condition": "pattern_ending_i === true",
+      "text": "Akhiran dengan huruf I cenderung membuat emosi tidak stabil.  Kesadaran akan hal ini adalah langkah pertama menuju keseimbangan.  Dengan kesadaran, kamu bisa mengubahnya menjadi kekuatan."
+    },
+    {
+      "id": "weakness_6_5",
+      "condition": "pattern_ending_i === true",
+      "text": "Akhiran dengan huruf I cenderung membuat emosi tidak stabil.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_7_0",
+      "condition": "pattern_ending_konsonan === true",
+      "text": "Akhiran konsonan bisa memberi kesan terburu-buru dan kurang tuntas.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_7_1",
+      "condition": "pattern_ending_konsonan === true",
+      "text": "Akhiran konsonan bisa memberi kesan terburu-buru dan kurang tuntas.  Perhatikan hal ini dengan saksama.  Latihan dan kesabaran akan sangat membantu."
+    },
+    {
+      "id": "weakness_7_2",
+      "condition": "pattern_ending_konsonan === true",
+      "text": "Akhiran konsonan bisa memberi kesan terburu-buru dan kurang tuntas.  Jangan sampai energi ini berbalik merugikanmu.  Jangan ragu untuk mencari bimbingan jika diperlukan."
+    },
+    {
+      "id": "weakness_7_3",
+      "condition": "pattern_ending_konsonan === true",
+      "text": "Akhiran konsonan bisa memberi kesan terburu-buru dan kurang tuntas.  Ini adalah area yang perlu mendapat perhatian ekstra.  Ingatlah bahwa setiap tantangan adalah kesempatan untuk bertumbuh."
+    },
+    {
+      "id": "weakness_7_4",
+      "condition": "pattern_ending_konsonan === true",
+      "text": "Akhiran konsonan bisa memberi kesan terburu-buru dan kurang tuntas.  Kesadaran akan hal ini adalah langkah pertama menuju keseimbangan.  Dengan kesadaran, kamu bisa mengubahnya menjadi kekuatan."
+    },
+    {
+      "id": "weakness_7_5",
+      "condition": "pattern_ending_konsonan === true",
+      "text": "Akhiran konsonan bisa memberi kesan terburu-buru dan kurang tuntas.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_8_0",
+      "condition": "pattern_too_short === true",
+      "text": "Nama yang terlalu pendek bisa membuat energi kurang terekspresikan.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_8_1",
+      "condition": "pattern_too_short === true",
+      "text": "Nama yang terlalu pendek bisa membuat energi kurang terekspresikan.  Perhatikan hal ini dengan saksama.  Latihan dan kesabaran akan sangat membantu."
+    },
+    {
+      "id": "weakness_8_2",
+      "condition": "pattern_too_short === true",
+      "text": "Nama yang terlalu pendek bisa membuat energi kurang terekspresikan.  Jangan sampai energi ini berbalik merugikanmu.  Jangan ragu untuk mencari bimbingan jika diperlukan."
+    },
+    {
+      "id": "weakness_8_3",
+      "condition": "pattern_too_short === true",
+      "text": "Nama yang terlalu pendek bisa membuat energi kurang terekspresikan.  Ini adalah area yang perlu mendapat perhatian ekstra.  Ingatlah bahwa setiap tantangan adalah kesempatan untuk bertumbuh."
+    },
+    {
+      "id": "weakness_8_4",
+      "condition": "pattern_too_short === true",
+      "text": "Nama yang terlalu pendek bisa membuat energi kurang terekspresikan.  Kesadaran akan hal ini adalah langkah pertama menuju keseimbangan.  Dengan kesadaran, kamu bisa mengubahnya menjadi kekuatan."
+    },
+    {
+      "id": "weakness_8_5",
+      "condition": "pattern_too_short === true",
+      "text": "Nama yang terlalu pendek bisa membuat energi kurang terekspresikan.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_9_0",
+      "condition": "pattern_too_long === true",
+      "text": "Nama yang terlalu panjang bisa membuat energi tersebar dan kurang fokus.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    },
+    {
+      "id": "weakness_9_1",
+      "condition": "pattern_too_long === true",
+      "text": "Nama yang terlalu panjang bisa membuat energi tersebar dan kurang fokus.  Perhatikan hal ini dengan saksama.  Latihan dan kesabaran akan sangat membantu."
+    },
+    {
+      "id": "weakness_9_2",
+      "condition": "pattern_too_long === true",
+      "text": "Nama yang terlalu panjang bisa membuat energi tersebar dan kurang fokus.  Jangan sampai energi ini berbalik merugikanmu.  Jangan ragu untuk mencari bimbingan jika diperlukan."
+    },
+    {
+      "id": "weakness_9_3",
+      "condition": "pattern_too_long === true",
+      "text": "Nama yang terlalu panjang bisa membuat energi tersebar dan kurang fokus.  Ini adalah area yang perlu mendapat perhatian ekstra.  Ingatlah bahwa setiap tantangan adalah kesempatan untuk bertumbuh."
+    },
+    {
+      "id": "weakness_9_4",
+      "condition": "pattern_too_long === true",
+      "text": "Nama yang terlalu panjang bisa membuat energi tersebar dan kurang fokus.  Kesadaran akan hal ini adalah langkah pertama menuju keseimbangan.  Dengan kesadaran, kamu bisa mengubahnya menjadi kekuatan."
+    },
+    {
+      "id": "weakness_9_5",
+      "condition": "pattern_too_long === true",
+      "text": "Nama yang terlalu panjang bisa membuat energi tersebar dan kurang fokus.  Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.  Belajarlah untuk mengelolanya dengan bijak."
+    }
+  ]
+}

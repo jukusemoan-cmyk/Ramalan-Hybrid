@@ -1,0 +1,279 @@
+{
+  "templates": [
+    {
+      "id": "luka_0_0",
+      "age_range": [
+        1,
+        10
+      ],
+      "age": "1-10 tahun",
+      "event": "Kurangnya kehadiran emosional dari figur orang tua. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu tumbuh dengan keyakinan bahwa kamu harus 'berprestasi' untuk dicintai. Ini membuatmu menjadi perfeksionis.",
+      "healing": "Afirmasi: 'Aku berharga apa adanya.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_0_1",
+      "age_range": [
+        1,
+        10
+      ],
+      "age": "1-10 tahun",
+      "event": "Kurangnya kehadiran emosional dari figur orang tua.",
+      "impact": "Kamu tumbuh dengan keyakinan bahwa kamu harus 'berprestasi' untuk dicintai. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku berharga apa adanya.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_0_2",
+      "age_range": [
+        1,
+        10
+      ],
+      "age": "1-10 tahun",
+      "event": "Kurangnya kehadiran emosional dari figur orang tua. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu tumbuh dengan keyakinan bahwa kamu harus 'berprestasi' untuk dicintai. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku berharga apa adanya.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_0_3",
+      "age_range": [
+        1,
+        10
+      ],
+      "age": "1-10 tahun",
+      "event": "Kurangnya kehadiran emosional dari figur orang tua.",
+      "impact": "Kamu tumbuh dengan keyakinan bahwa kamu harus 'berprestasi' untuk dicintai. Ini membuatmu menjadi perfeksionis.",
+      "healing": "Afirmasi: 'Aku berharga apa adanya.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_0_4",
+      "age_range": [
+        1,
+        10
+      ],
+      "age": "1-10 tahun",
+      "event": "Kurangnya kehadiran emosional dari figur orang tua. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu tumbuh dengan keyakinan bahwa kamu harus 'berprestasi' untuk dicintai. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku berharga apa adanya.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_1_0",
+      "age_range": [
+        11,
+        20
+      ],
+      "age": "11-17 tahun",
+      "event": "Pengalaman ditolak, di-bully, atau dikhianati oleh teman sebaya. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi sulit percaya pada orang lain. Ini membuatmu menjadi perfeksionis.",
+      "healing": "Afirmasi: 'Aku aman untuk terhubung dengan orang lain.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_1_1",
+      "age_range": [
+        11,
+        20
+      ],
+      "age": "11-17 tahun",
+      "event": "Pengalaman ditolak, di-bully, atau dikhianati oleh teman sebaya.",
+      "impact": "Kamu jadi sulit percaya pada orang lain. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku aman untuk terhubung dengan orang lain.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_1_2",
+      "age_range": [
+        11,
+        20
+      ],
+      "age": "11-17 tahun",
+      "event": "Pengalaman ditolak, di-bully, atau dikhianati oleh teman sebaya. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi sulit percaya pada orang lain. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku aman untuk terhubung dengan orang lain.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_1_3",
+      "age_range": [
+        11,
+        20
+      ],
+      "age": "11-17 tahun",
+      "event": "Pengalaman ditolak, di-bully, atau dikhianati oleh teman sebaya.",
+      "impact": "Kamu jadi sulit percaya pada orang lain. Ini membuatmu menjadi perfeksionis.",
+      "healing": "Afirmasi: 'Aku aman untuk terhubung dengan orang lain.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_1_4",
+      "age_range": [
+        11,
+        20
+      ],
+      "age": "11-17 tahun",
+      "event": "Pengalaman ditolak, di-bully, atau dikhianati oleh teman sebaya. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi sulit percaya pada orang lain. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku aman untuk terhubung dengan orang lain.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_2_0",
+      "age_range": [
+        21,
+        30
+      ],
+      "age": "18-25 tahun",
+      "event": "Patah hati yang mendalam atau kegagalan meraih cita-cita. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi takut berkomitmen. Ini membuatmu menjadi perfeksionis.",
+      "healing": "Afirmasi: 'Aku memaafkan diriku dan orang yang menyakitiku.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_2_1",
+      "age_range": [
+        21,
+        30
+      ],
+      "age": "18-25 tahun",
+      "event": "Patah hati yang mendalam atau kegagalan meraih cita-cita.",
+      "impact": "Kamu jadi takut berkomitmen. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku memaafkan diriku dan orang yang menyakitiku.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_2_2",
+      "age_range": [
+        21,
+        30
+      ],
+      "age": "18-25 tahun",
+      "event": "Patah hati yang mendalam atau kegagalan meraih cita-cita. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi takut berkomitmen. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku memaafkan diriku dan orang yang menyakitiku.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_2_3",
+      "age_range": [
+        21,
+        30
+      ],
+      "age": "18-25 tahun",
+      "event": "Patah hati yang mendalam atau kegagalan meraih cita-cita.",
+      "impact": "Kamu jadi takut berkomitmen. Ini membuatmu menjadi perfeksionis.",
+      "healing": "Afirmasi: 'Aku memaafkan diriku dan orang yang menyakitiku.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_2_4",
+      "age_range": [
+        21,
+        30
+      ],
+      "age": "18-25 tahun",
+      "event": "Patah hati yang mendalam atau kegagalan meraih cita-cita. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi takut berkomitmen. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku memaafkan diriku dan orang yang menyakitiku.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_3_0",
+      "age_range": [
+        31,
+        40
+      ],
+      "age": "26-35 tahun",
+      "event": "Tekanan finansial, kehilangan pekerjaan, atau quarter-life crisis. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi overthinking tentang masa depan. Ini membuatmu menjadi perfeksionis.",
+      "healing": "Afirmasi: 'Aku percaya pada alur hidupku.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_3_1",
+      "age_range": [
+        31,
+        40
+      ],
+      "age": "26-35 tahun",
+      "event": "Tekanan finansial, kehilangan pekerjaan, atau quarter-life crisis.",
+      "impact": "Kamu jadi overthinking tentang masa depan. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku percaya pada alur hidupku.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_3_2",
+      "age_range": [
+        31,
+        40
+      ],
+      "age": "26-35 tahun",
+      "event": "Tekanan finansial, kehilangan pekerjaan, atau quarter-life crisis. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi overthinking tentang masa depan. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku percaya pada alur hidupku.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_3_3",
+      "age_range": [
+        31,
+        40
+      ],
+      "age": "26-35 tahun",
+      "event": "Tekanan finansial, kehilangan pekerjaan, atau quarter-life crisis.",
+      "impact": "Kamu jadi overthinking tentang masa depan. Ini membuatmu menjadi perfeksionis.",
+      "healing": "Afirmasi: 'Aku percaya pada alur hidupku.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_3_4",
+      "age_range": [
+        31,
+        40
+      ],
+      "age": "26-35 tahun",
+      "event": "Tekanan finansial, kehilangan pekerjaan, atau quarter-life crisis. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi overthinking tentang masa depan. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Aku percaya pada alur hidupku.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_4_0",
+      "age_range": [
+        41,
+        50
+      ],
+      "age": "36+ tahun",
+      "event": "Penyesalan atas keputusan besar di masa lalu. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi sering merenung dan merasa 'terlambat'. Ini membuatmu menjadi perfeksionis.",
+      "healing": "Afirmasi: 'Tidak ada kata terlambat.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_4_1",
+      "age_range": [
+        41,
+        50
+      ],
+      "age": "36+ tahun",
+      "event": "Penyesalan atas keputusan besar di masa lalu.",
+      "impact": "Kamu jadi sering merenung dan merasa 'terlambat'. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Tidak ada kata terlambat.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_4_2",
+      "age_range": [
+        41,
+        50
+      ],
+      "age": "36+ tahun",
+      "event": "Penyesalan atas keputusan besar di masa lalu. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi sering merenung dan merasa 'terlambat'. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Tidak ada kata terlambat.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_4_3",
+      "age_range": [
+        41,
+        50
+      ],
+      "age": "36+ tahun",
+      "event": "Penyesalan atas keputusan besar di masa lalu.",
+      "impact": "Kamu jadi sering merenung dan merasa 'terlambat'. Ini membuatmu menjadi perfeksionis.",
+      "healing": "Afirmasi: 'Tidak ada kata terlambat.' Praktikkan journaling atau inner child healing."
+    },
+    {
+      "id": "luka_4_4",
+      "age_range": [
+        41,
+        50
+      ],
+      "age": "36+ tahun",
+      "event": "Penyesalan atas keputusan besar di masa lalu. Mungkin juga berupa ekspektasi yang terlalu tinggi.",
+      "impact": "Kamu jadi sering merenung dan merasa 'terlambat'. Ada rasa takut akan penolakan.",
+      "healing": "Afirmasi: 'Tidak ada kata terlambat.' Praktikkan journaling atau inner child healing."
+    }
+  ]
+}
