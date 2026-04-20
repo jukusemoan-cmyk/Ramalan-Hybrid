@@ -1,0 +1,46 @@
+{
+  "templates": [
+    {
+      "id": "spiritual_wuku_api",
+      "condition": "wuku_element === 'Api'",
+      "advice": "Wuku-mu berelemen Api, yang berarti kamu terhubung dengan energi transformasi dan gairah. Praktik spiritual yang cocok untukmu adalah yang melibatkan gerakan dan panas, seperti yoga dinamis (vinyasa), meditasi dengan lilin, atau ritual api kecil di pagi hari.",
+      "how_to": "Setiap pagi, nyalakan lilin dan tataplah apinya selama 5 menit. Bayangkan api itu membakar semua keraguan dan ketakutanmu. Ucapkan afirmasi: 'Aku adalah cahaya. Aku adalah kekuatan.'",
+      "mantra": "\"Om Agnaye Namah\" (Salam pada Dewa Api)"
+    },
+    {
+      "id": "spiritual_wuku_air",
+      "condition": "wuku_element === 'Air'",
+      "advice": "Wuku-mu berelemen Air, yang berarti kamu terhubung dengan energi emosi, intuisi, dan pembersihan. Praktik spiritual yang cocok untukmu adalah yang melibatkan air, seperti berendam dengan garam, meditasi di dekat sungai, atau sekadar mendengarkan suara hujan.",
+      "how_to": "Setiap malam sebelum tidur, basuh wajah dan tanganmu dengan air dingin sambil membayangkan semua beban pikiran ikut terbuang. Minumlah air putih yang telah didoakan.",
+      "mantra": "\"Om Varunaya Namah\" (Salam pada Dewa Air)"
+    },
+    {
+      "id": "spiritual_wuku_tanah",
+      "condition": "wuku_element === 'Tanah'",
+      "advice": "Wuku-mu berelemen Tanah, yang berarti kamu terhubung dengan energi stabilitas, fondasi, dan kesuburan. Praktik spiritual yang cocok untukmu adalah grounding—berjalan tanpa alas kaki di atas rumput atau tanah, berkebun, atau meditasi sambil duduk di bawah pohon besar.",
+      "how_to": "Luangkan waktu 15 menit setiap minggu untuk berjalan tanpa alas kaki di alam. Rasakan tekstur tanah di telapak kakimu. Ucapkan afirmasi: 'Aku kokoh seperti gunung. Aku stabil dan aman.'",
+      "mantra": "\"Om Prithivi Namah\" (Salam pada Ibu Pertiwi)"
+    },
+    {
+      "id": "spiritual_wuku_kayu",
+      "condition": "wuku_element === 'Kayu'",
+      "advice": "Wuku-mu berelemen Kayu, yang berarti kamu terhubung dengan energi pertumbuhan, ekspansi, dan kreativitas. Praktik spiritual yang cocok untukmu adalah meditasi di hutan, merawat tanaman, atau visualisasi pertumbuhan.",
+      "how_to": "Setiap pagi, berdirilah di depan tanaman dan tarik napas dalam-dalam. Bayangkan energi pertumbuhan tanaman itu mengalir ke dalam dirimu. Ucapkan afirmasi: 'Aku tumbuh dan berkembang setiap hari.'",
+      "mantra": "\"Om Vrikshaya Namah\" (Salam pada Pohon Kehidupan)"
+    },
+    {
+      "id": "spiritual_wuku_logam",
+      "condition": "wuku_element === 'Logam'",
+      "advice": "Wuku-mu berelemen Logam, yang berarti kamu terhubung dengan energi struktur, kejelasan, dan pemurnian. Praktik spiritual yang cocok untukmu adalah meditasi dengan kristal, latihan pernapasan terstruktur (pranayama), atau decluttering (merapikan rumah).",
+      "how_to": "Pegang kristal bening (clear quartz) saat bermeditasi. Fokus pada napas yang teratur dan terstruktur—tarik 4 detik, tahan 4 detik, buang 4 detik. Ucapkan afirmasi: 'Aku jernih dan terstruktur.'",
+      "mantra": "\"Om Shanti Shanti Shanti\" (Kedamaian di tubuh, pikiran, dan jiwa)"
+    },
+    {
+      "id": "spiritual_wuku_default",
+      "condition": "default",
+      "advice": "Kamu terhubung dengan energi keseimbangan universal. Praktik spiritual yang cocok untukmu adalah meditasi mindfulness—mengamati napas dan pikiran tanpa menghakimi. Mulailah dengan 5 menit sehari.",
+      "how_to": "Duduk nyaman, tutup mata, fokus pada napas. Saat pikiran mengembara, dengan lembut bawa kembali ke napas. Gunakan aplikasi seperti Insight Timer.",
+      "mantra": "\"Om Swastiastu\" (Semoga dalam keadaan selamat)"
+    }
+  ]
+}
