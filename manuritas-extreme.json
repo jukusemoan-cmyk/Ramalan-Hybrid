@@ -1,0 +1,274 @@
+{
+  "templates": [
+    {
+      "id": "extreme_0_0",
+      "type": "accident",
+      "level": "Tinggi",
+      "condition": "total_value % 5 == 0",
+      "description": "Getaran namamu memiliki energi 'Cepat' dan 'Terburu-buru'. Ini meningkatkan risiko kecelakaan ringan. Kurangi kecepatan dalam segala hal.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_0_1",
+      "type": "accident",
+      "level": "Tinggi",
+      "condition": "total_value % 5 == 0",
+      "description": "Getaran namamu memiliki energi 'Cepat' dan 'Terburu-buru'. Ini meningkatkan risiko kecelakaan ringan. Tetap waspada dan jangan lengah.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_0_2",
+      "type": "accident",
+      "level": "Tinggi",
+      "condition": "total_value % 5 == 0",
+      "description": "Getaran namamu memiliki energi 'Cepat' dan 'Terburu-buru'. Ini meningkatkan risiko kecelakaan ringan. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_0_3",
+      "type": "accident",
+      "level": "Tinggi",
+      "condition": "total_value % 5 == 0",
+      "description": "Getaran namamu memiliki energi 'Cepat' dan 'Terburu-buru'. Ini meningkatkan risiko kecelakaan ringan. Tetap waspada dan jangan lengah.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_0_4",
+      "type": "accident",
+      "level": "Tinggi",
+      "condition": "total_value % 5 == 0",
+      "description": "Getaran namamu memiliki energi 'Cepat' dan 'Terburu-buru'. Ini meningkatkan risiko kecelakaan ringan. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_1_0",
+      "type": "accident",
+      "level": "Rendah",
+      "condition": "total_value % 5 != 0",
+      "description": "Getaran namamu cukup stabil untuk terhindar dari kecelakaan fisik. Kurangi kecepatan dalam segala hal.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_1_1",
+      "type": "accident",
+      "level": "Rendah",
+      "condition": "total_value % 5 != 0",
+      "description": "Getaran namamu cukup stabil untuk terhindar dari kecelakaan fisik. Tetap waspada dan jangan lengah.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_1_2",
+      "type": "accident",
+      "level": "Rendah",
+      "condition": "total_value % 5 != 0",
+      "description": "Getaran namamu cukup stabil untuk terhindar dari kecelakaan fisik. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_1_3",
+      "type": "accident",
+      "level": "Rendah",
+      "condition": "total_value % 5 != 0",
+      "description": "Getaran namamu cukup stabil untuk terhindar dari kecelakaan fisik. Tetap waspada dan jangan lengah.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_1_4",
+      "type": "accident",
+      "level": "Rendah",
+      "condition": "total_value % 5 != 0",
+      "description": "Getaran namamu cukup stabil untuk terhindar dari kecelakaan fisik. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_2_0",
+      "type": "victim",
+      "level": "Tinggi",
+      "condition": "vowel_count.A >= 3 && !has_consonant_r",
+      "description": "Terdapat energi 'Pengorbanan' yang kuat. Kamu cenderung sulit menolak permintaan orang. Kurangi kecepatan dalam segala hal.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_2_1",
+      "type": "victim",
+      "level": "Tinggi",
+      "condition": "vowel_count.A >= 3 && !has_consonant_r",
+      "description": "Terdapat energi 'Pengorbanan' yang kuat. Kamu cenderung sulit menolak permintaan orang. Tetap waspada dan jangan lengah.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_2_2",
+      "type": "victim",
+      "level": "Tinggi",
+      "condition": "vowel_count.A >= 3 && !has_consonant_r",
+      "description": "Terdapat energi 'Pengorbanan' yang kuat. Kamu cenderung sulit menolak permintaan orang. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_2_3",
+      "type": "victim",
+      "level": "Tinggi",
+      "condition": "vowel_count.A >= 3 && !has_consonant_r",
+      "description": "Terdapat energi 'Pengorbanan' yang kuat. Kamu cenderung sulit menolak permintaan orang. Tetap waspada dan jangan lengah.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_2_4",
+      "type": "victim",
+      "level": "Tinggi",
+      "condition": "vowel_count.A >= 3 && !has_consonant_r",
+      "description": "Terdapat energi 'Pengorbanan' yang kuat. Kamu cenderung sulit menolak permintaan orang. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_3_0",
+      "type": "victim",
+      "level": "Sedang",
+      "condition": "vowel_count.A >= 2 && vowel_count.U === 0",
+      "description": "Energi memberi dalam dirimu cukup besar. Waspadalah terhadap orang yang hanya mendekat saat butuh bantuan. Kurangi kecepatan dalam segala hal.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_3_1",
+      "type": "victim",
+      "level": "Sedang",
+      "condition": "vowel_count.A >= 2 && vowel_count.U === 0",
+      "description": "Energi memberi dalam dirimu cukup besar. Waspadalah terhadap orang yang hanya mendekat saat butuh bantuan. Tetap waspada dan jangan lengah.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_3_2",
+      "type": "victim",
+      "level": "Sedang",
+      "condition": "vowel_count.A >= 2 && vowel_count.U === 0",
+      "description": "Energi memberi dalam dirimu cukup besar. Waspadalah terhadap orang yang hanya mendekat saat butuh bantuan. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_3_3",
+      "type": "victim",
+      "level": "Sedang",
+      "condition": "vowel_count.A >= 2 && vowel_count.U === 0",
+      "description": "Energi memberi dalam dirimu cukup besar. Waspadalah terhadap orang yang hanya mendekat saat butuh bantuan. Tetap waspada dan jangan lengah.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_3_4",
+      "type": "victim",
+      "level": "Sedang",
+      "condition": "vowel_count.A >= 2 && vowel_count.U === 0",
+      "description": "Energi memberi dalam dirimu cukup besar. Waspadalah terhadap orang yang hanya mendekat saat butuh bantuan. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_4_0",
+      "type": "despair",
+      "level": "Tinggi",
+      "condition": "total_value < 30",
+      "description": "Energi nama terasa lebih kecil dari weton. Kamu mungkin sering merasa 'kalah sebelum bertanding'. Kurangi kecepatan dalam segala hal.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_4_1",
+      "type": "despair",
+      "level": "Tinggi",
+      "condition": "total_value < 30",
+      "description": "Energi nama terasa lebih kecil dari weton. Kamu mungkin sering merasa 'kalah sebelum bertanding'. Tetap waspada dan jangan lengah.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_4_2",
+      "type": "despair",
+      "level": "Tinggi",
+      "condition": "total_value < 30",
+      "description": "Energi nama terasa lebih kecil dari weton. Kamu mungkin sering merasa 'kalah sebelum bertanding'. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_4_3",
+      "type": "despair",
+      "level": "Tinggi",
+      "condition": "total_value < 30",
+      "description": "Energi nama terasa lebih kecil dari weton. Kamu mungkin sering merasa 'kalah sebelum bertanding'. Tetap waspada dan jangan lengah.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_4_4",
+      "type": "despair",
+      "level": "Tinggi",
+      "condition": "total_value < 30",
+      "description": "Energi nama terasa lebih kecil dari weton. Kamu mungkin sering merasa 'kalah sebelum bertanding'. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_5_0",
+      "type": "despair",
+      "level": "Rendah",
+      "condition": "total_value >= 30",
+      "description": "Secara energetik, kamu memiliki fondasi mental yang kuat. Kurangi kecepatan dalam segala hal.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_5_1",
+      "type": "despair",
+      "level": "Rendah",
+      "condition": "total_value >= 30",
+      "description": "Secara energetik, kamu memiliki fondasi mental yang kuat. Tetap waspada dan jangan lengah.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_5_2",
+      "type": "despair",
+      "level": "Rendah",
+      "condition": "total_value >= 30",
+      "description": "Secara energetik, kamu memiliki fondasi mental yang kuat. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_5_3",
+      "type": "despair",
+      "level": "Rendah",
+      "condition": "total_value >= 30",
+      "description": "Secara energetik, kamu memiliki fondasi mental yang kuat. Tetap waspada dan jangan lengah.",
+      "advice": "Bawa jimat atau benda pengingat.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    },
+    {
+      "id": "extreme_5_4",
+      "type": "despair",
+      "level": "Rendah",
+      "condition": "total_value >= 30",
+      "description": "Secara energetik, kamu memiliki fondasi mental yang kuat. Kurangi kecepatan dalam segala hal.",
+      "advice": "Praktikkan grounding setiap pagi.",
+      "disclaimer": "Ini BUKAN vonis takdir. Ini adalah peta energi untuk kewaspadaan diri."
+    }
+  ]
+}

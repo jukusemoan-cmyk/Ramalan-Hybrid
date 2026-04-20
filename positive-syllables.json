@@ -1,0 +1,324 @@
+{
+  "templates": [
+    {
+      "id": "syllable_0_0",
+      "syllable": "Adi",
+      "value": 5,
+      "element": "Api",
+      "meaning": "Utama, pertama, mulia",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_0_1",
+      "syllable": "Adi",
+      "value": 6,
+      "element": "Api",
+      "meaning": "Utama, pertama, mulia",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_1_0",
+      "syllable": "Arka",
+      "value": 7,
+      "element": "Api",
+      "meaning": "Cahaya, matahari, penerang",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_1_1",
+      "syllable": "Arka",
+      "value": 8,
+      "element": "Api",
+      "meaning": "Cahaya, matahari, penerang",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_2_0",
+      "syllable": "Baskara",
+      "value": 9,
+      "element": "Api",
+      "meaning": "Matahari, sumber energi",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_2_1",
+      "syllable": "Baskara",
+      "value": 10,
+      "element": "Api",
+      "meaning": "Matahari, sumber energi",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_3_0",
+      "syllable": "Candra",
+      "value": 6,
+      "element": "Air",
+      "meaning": "Bulan, ketenangan, keindahan",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_3_1",
+      "syllable": "Candra",
+      "value": 7,
+      "element": "Air",
+      "meaning": "Bulan, ketenangan, keindahan",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_4_0",
+      "syllable": "Dewa",
+      "value": 8,
+      "element": "Udara",
+      "meaning": "Dewa, spiritual, pelindung",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_4_1",
+      "syllable": "Dewa",
+      "value": 9,
+      "element": "Udara",
+      "meaning": "Dewa, spiritual, pelindung",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_5_0",
+      "syllable": "Guna",
+      "value": 7,
+      "element": "Tanah",
+      "meaning": "Manfaat, kebajikan",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_5_1",
+      "syllable": "Guna",
+      "value": 8,
+      "element": "Tanah",
+      "meaning": "Manfaat, kebajikan",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_6_0",
+      "syllable": "Hanung",
+      "value": 11,
+      "element": "Tanah",
+      "meaning": "Kokoh, teguh, tak tergoyahkan",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_6_1",
+      "syllable": "Hanung",
+      "value": 12,
+      "element": "Tanah",
+      "meaning": "Kokoh, teguh, tak tergoyahkan",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_7_0",
+      "syllable": "Jaya",
+      "value": 9,
+      "element": "Api",
+      "meaning": "Kemenangan, kejayaan",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_7_1",
+      "syllable": "Jaya",
+      "value": 10,
+      "element": "Api",
+      "meaning": "Kemenangan, kejayaan",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_8_0",
+      "syllable": "Kusuma",
+      "value": 10,
+      "element": "Air",
+      "meaning": "Bunga, keindahan, keharuman",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_8_1",
+      "syllable": "Kusuma",
+      "value": 11,
+      "element": "Air",
+      "meaning": "Bunga, keindahan, keharuman",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_9_0",
+      "syllable": "Luhur",
+      "value": 12,
+      "element": "Tanah",
+      "meaning": "Tinggi, mulia, luhur",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_9_1",
+      "syllable": "Luhur",
+      "value": 13,
+      "element": "Tanah",
+      "meaning": "Tinggi, mulia, luhur",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_10_0",
+      "syllable": "Mahendra",
+      "value": 14,
+      "element": "Udara",
+      "meaning": "Raja agung, pemimpin besar",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_10_1",
+      "syllable": "Mahendra",
+      "value": 15,
+      "element": "Udara",
+      "meaning": "Raja agung, pemimpin besar",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_11_0",
+      "syllable": "Nugraha",
+      "value": 13,
+      "element": "Air",
+      "meaning": "Anugerah, berkah",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_11_1",
+      "syllable": "Nugraha",
+      "value": 14,
+      "element": "Air",
+      "meaning": "Anugerah, berkah",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_12_0",
+      "syllable": "Prasetya",
+      "value": 15,
+      "element": "Tanah",
+      "meaning": "Janji, komitmen, kesetiaan",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_12_1",
+      "syllable": "Prasetya",
+      "value": 16,
+      "element": "Tanah",
+      "meaning": "Janji, komitmen, kesetiaan",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_13_0",
+      "syllable": "Raharja",
+      "value": 11,
+      "element": "Api",
+      "meaning": "Sejahtera, selamat",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_13_1",
+      "syllable": "Raharja",
+      "value": 12,
+      "element": "Api",
+      "meaning": "Sejahtera, selamat",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_14_0",
+      "syllable": "Santosa",
+      "value": 10,
+      "element": "Tanah",
+      "meaning": "Puas, cukup, bersyukur",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_14_1",
+      "syllable": "Santosa",
+      "value": 11,
+      "element": "Tanah",
+      "meaning": "Puas, cukup, bersyukur",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_15_0",
+      "syllable": "Utama",
+      "value": 8,
+      "element": "Api",
+      "meaning": "Terbaik, unggul",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_15_1",
+      "syllable": "Utama",
+      "value": 9,
+      "element": "Api",
+      "meaning": "Terbaik, unggul",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_16_0",
+      "syllable": "Wibowo",
+      "value": 12,
+      "element": "Udara",
+      "meaning": "Wibawa, karisma",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_16_1",
+      "syllable": "Wibowo",
+      "value": 13,
+      "element": "Udara",
+      "meaning": "Wibawa, karisma",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_17_0",
+      "syllable": "Wijaya",
+      "value": 10,
+      "element": "Api",
+      "meaning": "Kemenangan, sukses",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_17_1",
+      "syllable": "Wijaya",
+      "value": 11,
+      "element": "Api",
+      "meaning": "Kemenangan, sukses",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_18_0",
+      "syllable": "Yudha",
+      "value": 9,
+      "element": "Api",
+      "meaning": "Perang, perjuangan, pantang menyerah",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_18_1",
+      "syllable": "Yudha",
+      "value": 10,
+      "element": "Api",
+      "meaning": "Perang, perjuangan, pantang menyerah",
+      "usage": "Cocok sebagai nama tengah."
+    },
+    {
+      "id": "syllable_19_0",
+      "syllable": "Arkand",
+      "value": 13,
+      "element": "Api",
+      "meaning": "Cahaya kebijaksanaan, penerang kegelapan",
+      "usage": "Cocok sebagai nama depan."
+    },
+    {
+      "id": "syllable_19_1",
+      "syllable": "Arkand",
+      "value": 14,
+      "element": "Api",
+      "meaning": "Cahaya kebijaksanaan, penerang kegelapan",
+      "usage": "Cocok sebagai nama tengah."
+    }
+  ]
+}

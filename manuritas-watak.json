@@ -1,0 +1,184 @@
+{
+  "templates": [
+    {
+      "id": "watak_0_0",
+      "name": "Singa Berhati Rusa",
+      "condition": "total_value > 50",
+      "watak_asli": "Lembut, penyayang, intuitif, dan cenderung menghindari konflik.",
+      "topeng_sosial": "Terlihat tegas, kritis, dan tidak mudah goyah.",
+      "impact": "Ketegangan batin sering muncul karena kamu harus 'berakting' kuat. Ini menguras energi mentalmu.",
+      "advice": "Belajarlah untuk menampilkan sisi lembutmu secara bertahap. Kelembutan adalah kekuatan sejatimu."
+    },
+    {
+      "id": "watak_0_1",
+      "name": "Singa Berhati Rusa",
+      "condition": "total_value > 50",
+      "watak_asli": "Lembut, penyayang, intuitif, dan cenderung menghindari konflik. Kamu adalah pribadi yang sangat peka.",
+      "topeng_sosial": "Terlihat tegas, kritis, dan tidak mudah goyah.",
+      "impact": "Ketegangan batin sering muncul karena kamu harus 'berakting' kuat. Hal ini bisa memicu stres.",
+      "advice": "Belajarlah untuk menampilkan sisi lembutmu secara bertahap. Jangan takut untuk menjadi diri sendiri."
+    },
+    {
+      "id": "watak_0_2",
+      "name": "Singa Berhati Rusa",
+      "condition": "total_value > 50",
+      "watak_asli": "Lembut, penyayang, intuitif, dan cenderung menghindari konflik.",
+      "topeng_sosial": "Terlihat tegas, kritis, dan tidak mudah goyah.",
+      "impact": "Ketegangan batin sering muncul karena kamu harus 'berakting' kuat. Ini menguras energi mentalmu.",
+      "advice": "Belajarlah untuk menampilkan sisi lembutmu secara bertahap. Kelembutan adalah kekuatan sejatimu."
+    },
+    {
+      "id": "watak_0_3",
+      "name": "Singa Berhati Rusa",
+      "condition": "total_value > 50",
+      "watak_asli": "Lembut, penyayang, intuitif, dan cenderung menghindari konflik. Kamu adalah pribadi yang sangat peka.",
+      "topeng_sosial": "Terlihat tegas, kritis, dan tidak mudah goyah.",
+      "impact": "Ketegangan batin sering muncul karena kamu harus 'berakting' kuat. Hal ini bisa memicu stres.",
+      "advice": "Belajarlah untuk menampilkan sisi lembutmu secara bertahap. Jangan takut untuk menjadi diri sendiri."
+    },
+    {
+      "id": "watak_1_0",
+      "name": "Air Tenang di Bawah Badai",
+      "condition": "total_value < 60",
+      "watak_asli": "Tenang, bijaksana, dan sangat observatif.",
+      "topeng_sosial": "Terlihat pendiam dan pasif, sehingga sering dianggap tidak mampu.",
+      "impact": "Orang sering meremehkanmu. Ini menguras energi mentalmu.",
+      "advice": "Jangan ragu untuk berbicara di momen-momen kunci. Kelembutan adalah kekuatan sejatimu."
+    },
+    {
+      "id": "watak_1_1",
+      "name": "Air Tenang di Bawah Badai",
+      "condition": "total_value < 60",
+      "watak_asli": "Tenang, bijaksana, dan sangat observatif. Kamu adalah pribadi yang sangat peka.",
+      "topeng_sosial": "Terlihat pendiam dan pasif, sehingga sering dianggap tidak mampu.",
+      "impact": "Orang sering meremehkanmu. Hal ini bisa memicu stres.",
+      "advice": "Jangan ragu untuk berbicara di momen-momen kunci. Jangan takut untuk menjadi diri sendiri."
+    },
+    {
+      "id": "watak_1_2",
+      "name": "Air Tenang di Bawah Badai",
+      "condition": "total_value < 60",
+      "watak_asli": "Tenang, bijaksana, dan sangat observatif.",
+      "topeng_sosial": "Terlihat pendiam dan pasif, sehingga sering dianggap tidak mampu.",
+      "impact": "Orang sering meremehkanmu. Ini menguras energi mentalmu.",
+      "advice": "Jangan ragu untuk berbicara di momen-momen kunci. Kelembutan adalah kekuatan sejatimu."
+    },
+    {
+      "id": "watak_1_3",
+      "name": "Air Tenang di Bawah Badai",
+      "condition": "total_value < 60",
+      "watak_asli": "Tenang, bijaksana, dan sangat observatif. Kamu adalah pribadi yang sangat peka.",
+      "topeng_sosial": "Terlihat pendiam dan pasif, sehingga sering dianggap tidak mampu.",
+      "impact": "Orang sering meremehkanmu. Hal ini bisa memicu stres.",
+      "advice": "Jangan ragu untuk berbicara di momen-momen kunci. Jangan takut untuk menjadi diri sendiri."
+    },
+    {
+      "id": "watak_2_0",
+      "name": "Matahari yang Terbenam Awan",
+      "condition": "total_value > 70",
+      "watak_asli": "Ceria, optimis, murah hati.",
+      "topeng_sosial": "Terlihat serius, pekerja keras, dan kadang terlalu kritis.",
+      "impact": "Kamu sering merasa lelah karena menahan diri. Ini menguras energi mentalmu.",
+      "advice": "Biarkan dirimu bersinar! Kelembutan adalah kekuatan sejatimu."
+    },
+    {
+      "id": "watak_2_1",
+      "name": "Matahari yang Terbenam Awan",
+      "condition": "total_value > 70",
+      "watak_asli": "Ceria, optimis, murah hati. Kamu adalah pribadi yang sangat peka.",
+      "topeng_sosial": "Terlihat serius, pekerja keras, dan kadang terlalu kritis.",
+      "impact": "Kamu sering merasa lelah karena menahan diri. Hal ini bisa memicu stres.",
+      "advice": "Biarkan dirimu bersinar! Jangan takut untuk menjadi diri sendiri."
+    },
+    {
+      "id": "watak_2_2",
+      "name": "Matahari yang Terbenam Awan",
+      "condition": "total_value > 70",
+      "watak_asli": "Ceria, optimis, murah hati.",
+      "topeng_sosial": "Terlihat serius, pekerja keras, dan kadang terlalu kritis.",
+      "impact": "Kamu sering merasa lelah karena menahan diri. Ini menguras energi mentalmu.",
+      "advice": "Biarkan dirimu bersinar! Kelembutan adalah kekuatan sejatimu."
+    },
+    {
+      "id": "watak_2_3",
+      "name": "Matahari yang Terbenam Awan",
+      "condition": "total_value > 70",
+      "watak_asli": "Ceria, optimis, murah hati. Kamu adalah pribadi yang sangat peka.",
+      "topeng_sosial": "Terlihat serius, pekerja keras, dan kadang terlalu kritis.",
+      "impact": "Kamu sering merasa lelah karena menahan diri. Hal ini bisa memicu stres.",
+      "advice": "Biarkan dirimu bersinar! Jangan takut untuk menjadi diri sendiri."
+    },
+    {
+      "id": "watak_3_0",
+      "name": "Benteng dengan Pintu Terbuka",
+      "condition": "total_value < 80",
+      "watak_asli": "Tegas, berprinsip, dan sangat protektif.",
+      "topeng_sosial": "Terlihat ramah dan mudah didekati.",
+      "impact": "Orang bisa salah mengartikan keramahanmu sebagai kelemahan. Ini menguras energi mentalmu.",
+      "advice": "Komunikasikan batasanmu sejak awal. Kelembutan adalah kekuatan sejatimu."
+    },
+    {
+      "id": "watak_3_1",
+      "name": "Benteng dengan Pintu Terbuka",
+      "condition": "total_value < 80",
+      "watak_asli": "Tegas, berprinsip, dan sangat protektif. Kamu adalah pribadi yang sangat peka.",
+      "topeng_sosial": "Terlihat ramah dan mudah didekati.",
+      "impact": "Orang bisa salah mengartikan keramahanmu sebagai kelemahan. Hal ini bisa memicu stres.",
+      "advice": "Komunikasikan batasanmu sejak awal. Jangan takut untuk menjadi diri sendiri."
+    },
+    {
+      "id": "watak_3_2",
+      "name": "Benteng dengan Pintu Terbuka",
+      "condition": "total_value < 80",
+      "watak_asli": "Tegas, berprinsip, dan sangat protektif.",
+      "topeng_sosial": "Terlihat ramah dan mudah didekati.",
+      "impact": "Orang bisa salah mengartikan keramahanmu sebagai kelemahan. Ini menguras energi mentalmu.",
+      "advice": "Komunikasikan batasanmu sejak awal. Kelembutan adalah kekuatan sejatimu."
+    },
+    {
+      "id": "watak_3_3",
+      "name": "Benteng dengan Pintu Terbuka",
+      "condition": "total_value < 80",
+      "watak_asli": "Tegas, berprinsip, dan sangat protektif. Kamu adalah pribadi yang sangat peka.",
+      "topeng_sosial": "Terlihat ramah dan mudah didekati.",
+      "impact": "Orang bisa salah mengartikan keramahanmu sebagai kelemahan. Hal ini bisa memicu stres.",
+      "advice": "Komunikasikan batasanmu sejak awal. Jangan takut untuk menjadi diri sendiri."
+    },
+    {
+      "id": "watak_4_0",
+      "name": "Samudera yang Tersembunyi",
+      "condition": "total_value > 90",
+      "watak_asli": "Penuh gairah, kreatif, dan memiliki emosi yang dalam.",
+      "topeng_sosial": "Terlihat datar, cuek, atau bahkan dingin.",
+      "impact": "Kamu sering merasa tidak dipahami. Ini menguras energi mentalmu.",
+      "advice": "Temukan saluran ekspresi yang aman. Kelembutan adalah kekuatan sejatimu."
+    },
+    {
+      "id": "watak_4_1",
+      "name": "Samudera yang Tersembunyi",
+      "condition": "total_value > 90",
+      "watak_asli": "Penuh gairah, kreatif, dan memiliki emosi yang dalam. Kamu adalah pribadi yang sangat peka.",
+      "topeng_sosial": "Terlihat datar, cuek, atau bahkan dingin.",
+      "impact": "Kamu sering merasa tidak dipahami. Hal ini bisa memicu stres.",
+      "advice": "Temukan saluran ekspresi yang aman. Jangan takut untuk menjadi diri sendiri."
+    },
+    {
+      "id": "watak_4_2",
+      "name": "Samudera yang Tersembunyi",
+      "condition": "total_value > 90",
+      "watak_asli": "Penuh gairah, kreatif, dan memiliki emosi yang dalam.",
+      "topeng_sosial": "Terlihat datar, cuek, atau bahkan dingin.",
+      "impact": "Kamu sering merasa tidak dipahami. Ini menguras energi mentalmu.",
+      "advice": "Temukan saluran ekspresi yang aman. Kelembutan adalah kekuatan sejatimu."
+    },
+    {
+      "id": "watak_4_3",
+      "name": "Samudera yang Tersembunyi",
+      "condition": "total_value > 90",
+      "watak_asli": "Penuh gairah, kreatif, dan memiliki emosi yang dalam. Kamu adalah pribadi yang sangat peka.",
+      "topeng_sosial": "Terlihat datar, cuek, atau bahkan dingin.",
+      "impact": "Kamu sering merasa tidak dipahami. Hal ini bisa memicu stres.",
+      "advice": "Temukan saluran ekspresi yang aman. Jangan takut untuk menjadi diri sendiri."
+    }
+  ]
+}

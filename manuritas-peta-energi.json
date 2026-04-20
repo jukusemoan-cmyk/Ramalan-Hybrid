@@ -1,0 +1,391 @@
+{
+  "physical": [
+    {
+      "id": "physical_0_0",
+      "condition": "vocal_a_dominant",
+      "area": "Jantung & Sistem Kardiovaskular",
+      "description": "Dominasi huruf 'A' memberikan energi Api yang besar. Jika tidak seimbang, dapat memicu tekanan darah tinggi, jantung berdebar, atau mudah lelah secara fisik. Perhatikan pola makan dan istirahat.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_0_1",
+      "condition": "vocal_a_dominant",
+      "area": "Jantung & Sistem Kardiovaskular",
+      "description": "Dominasi huruf 'A' memberikan energi Api yang besar. Jika tidak seimbang, dapat memicu tekanan darah tinggi, jantung berdebar, atau mudah lelah secara fisik. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_0_2",
+      "condition": "vocal_a_dominant",
+      "area": "Jantung & Sistem Kardiovaskular",
+      "description": "Dominasi huruf 'A' memberikan energi Api yang besar. Jika tidak seimbang, dapat memicu tekanan darah tinggi, jantung berdebar, atau mudah lelah secara fisik. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_0_3",
+      "condition": "vocal_a_dominant",
+      "area": "Jantung & Sistem Kardiovaskular",
+      "description": "Dominasi huruf 'A' memberikan energi Api yang besar. Jika tidak seimbang, dapat memicu tekanan darah tinggi, jantung berdebar, atau mudah lelah secara fisik. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_0_4",
+      "condition": "vocal_a_dominant",
+      "area": "Jantung & Sistem Kardiovaskular",
+      "description": "Dominasi huruf 'A' memberikan energi Api yang besar. Jika tidak seimbang, dapat memicu tekanan darah tinggi, jantung berdebar, atau mudah lelah secara fisik. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_1_0",
+      "condition": "vocal_i_dominant",
+      "area": "Sistem Saraf & Pencernaan",
+      "description": "Huruf 'I' membawa energi Air yang sensitif. Rentan terhadap gangguan pencernaan (maag, IBS) dan kecemasan yang mempengaruhi saraf. Perhatikan pola makan dan istirahat.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_1_1",
+      "condition": "vocal_i_dominant",
+      "area": "Sistem Saraf & Pencernaan",
+      "description": "Huruf 'I' membawa energi Air yang sensitif. Rentan terhadap gangguan pencernaan (maag, IBS) dan kecemasan yang mempengaruhi saraf. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_1_2",
+      "condition": "vocal_i_dominant",
+      "area": "Sistem Saraf & Pencernaan",
+      "description": "Huruf 'I' membawa energi Air yang sensitif. Rentan terhadap gangguan pencernaan (maag, IBS) dan kecemasan yang mempengaruhi saraf. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_1_3",
+      "condition": "vocal_i_dominant",
+      "area": "Sistem Saraf & Pencernaan",
+      "description": "Huruf 'I' membawa energi Air yang sensitif. Rentan terhadap gangguan pencernaan (maag, IBS) dan kecemasan yang mempengaruhi saraf. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_1_4",
+      "condition": "vocal_i_dominant",
+      "area": "Sistem Saraf & Pencernaan",
+      "description": "Huruf 'I' membawa energi Air yang sensitif. Rentan terhadap gangguan pencernaan (maag, IBS) dan kecemasan yang mempengaruhi saraf. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_2_0",
+      "condition": "vocal_u_dominant",
+      "area": "Ginjal & Sistem Ekskresi",
+      "description": "Huruf 'U' menyimpan energi Tanah yang dalam. Rentan terhadap masalah ginjal, kandung kemih, atau retensi cairan. Perhatikan pola makan dan istirahat.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_2_1",
+      "condition": "vocal_u_dominant",
+      "area": "Ginjal & Sistem Ekskresi",
+      "description": "Huruf 'U' menyimpan energi Tanah yang dalam. Rentan terhadap masalah ginjal, kandung kemih, atau retensi cairan. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_2_2",
+      "condition": "vocal_u_dominant",
+      "area": "Ginjal & Sistem Ekskresi",
+      "description": "Huruf 'U' menyimpan energi Tanah yang dalam. Rentan terhadap masalah ginjal, kandung kemih, atau retensi cairan. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_2_3",
+      "condition": "vocal_u_dominant",
+      "area": "Ginjal & Sistem Ekskresi",
+      "description": "Huruf 'U' menyimpan energi Tanah yang dalam. Rentan terhadap masalah ginjal, kandung kemih, atau retensi cairan. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_2_4",
+      "condition": "vocal_u_dominant",
+      "area": "Ginjal & Sistem Ekskresi",
+      "description": "Huruf 'U' menyimpan energi Tanah yang dalam. Rentan terhadap masalah ginjal, kandung kemih, atau retensi cairan. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_3_0",
+      "condition": "vocal_e_dominant",
+      "area": "Tenggorokan & Sistem Pernapasan",
+      "description": "Huruf 'E' membawa energi Udara. Rentan terhadap radang tenggorokan, batuk, asma, atau alergi pernapasan. Perhatikan pola makan dan istirahat.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_3_1",
+      "condition": "vocal_e_dominant",
+      "area": "Tenggorokan & Sistem Pernapasan",
+      "description": "Huruf 'E' membawa energi Udara. Rentan terhadap radang tenggorokan, batuk, asma, atau alergi pernapasan. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_3_2",
+      "condition": "vocal_e_dominant",
+      "area": "Tenggorokan & Sistem Pernapasan",
+      "description": "Huruf 'E' membawa energi Udara. Rentan terhadap radang tenggorokan, batuk, asma, atau alergi pernapasan. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_3_3",
+      "condition": "vocal_e_dominant",
+      "area": "Tenggorokan & Sistem Pernapasan",
+      "description": "Huruf 'E' membawa energi Udara. Rentan terhadap radang tenggorokan, batuk, asma, atau alergi pernapasan. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_3_4",
+      "condition": "vocal_e_dominant",
+      "area": "Tenggorokan & Sistem Pernapasan",
+      "description": "Huruf 'E' membawa energi Udara. Rentan terhadap radang tenggorokan, batuk, asma, atau alergi pernapasan. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_4_0",
+      "condition": "vocal_o_dominant",
+      "area": "Punggung & Tulang Belakang",
+      "description": "Huruf 'O' memiliki energi Api yang ekspansif. Rentan terhadap nyeri punggung, masalah postur, atau ketegangan di tulang belakang. Perhatikan pola makan dan istirahat.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_4_1",
+      "condition": "vocal_o_dominant",
+      "area": "Punggung & Tulang Belakang",
+      "description": "Huruf 'O' memiliki energi Api yang ekspansif. Rentan terhadap nyeri punggung, masalah postur, atau ketegangan di tulang belakang. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_4_2",
+      "condition": "vocal_o_dominant",
+      "area": "Punggung & Tulang Belakang",
+      "description": "Huruf 'O' memiliki energi Api yang ekspansif. Rentan terhadap nyeri punggung, masalah postur, atau ketegangan di tulang belakang. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_4_3",
+      "condition": "vocal_o_dominant",
+      "area": "Punggung & Tulang Belakang",
+      "description": "Huruf 'O' memiliki energi Api yang ekspansif. Rentan terhadap nyeri punggung, masalah postur, atau ketegangan di tulang belakang. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_4_4",
+      "condition": "vocal_o_dominant",
+      "area": "Punggung & Tulang Belakang",
+      "description": "Huruf 'O' memiliki energi Api yang ekspansif. Rentan terhadap nyeri punggung, masalah postur, atau ketegangan di tulang belakang. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_5_0",
+      "condition": "consonant_r_dominant",
+      "area": "Otot & Sendi",
+      "description": "Huruf 'R' membawa energi Api yang kompetitif. Rentan terhadap keseleo, cedera otot, atau radang sendi. Perhatikan pola makan dan istirahat.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_5_1",
+      "condition": "consonant_r_dominant",
+      "area": "Otot & Sendi",
+      "description": "Huruf 'R' membawa energi Api yang kompetitif. Rentan terhadap keseleo, cedera otot, atau radang sendi. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_5_2",
+      "condition": "consonant_r_dominant",
+      "area": "Otot & Sendi",
+      "description": "Huruf 'R' membawa energi Api yang kompetitif. Rentan terhadap keseleo, cedera otot, atau radang sendi. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    },
+    {
+      "id": "physical_5_3",
+      "condition": "consonant_r_dominant",
+      "area": "Otot & Sendi",
+      "description": "Huruf 'R' membawa energi Api yang kompetitif. Rentan terhadap keseleo, cedera otot, atau radang sendi. Olahraga teratur sangat dianjurkan.",
+      "prevention": "Konsumsi makanan seimbang dan hindari stres."
+    },
+    {
+      "id": "physical_5_4",
+      "condition": "consonant_r_dominant",
+      "area": "Otot & Sendi",
+      "description": "Huruf 'R' membawa energi Api yang kompetitif. Rentan terhadap keseleo, cedera otot, atau radang sendi. Perhatikan pola makan dan istirahat.",
+      "prevention": "Lakukan peregangan rutin dan meditasi."
+    }
+  ],
+  "psychological": [
+    {
+      "id": "psych_0_0",
+      "condition": "vocal_a_dominant",
+      "tendency": "Impulsif & Mudah Marah",
+      "description": "Energi 'A' yang besar bisa membuatmu bereaksi cepat tanpa berpikir. Amarah bisa meledak tiba-tiba, lalu cepat reda. Journaling sangat membantu.",
+      "advice": "Temukan support system yang sehat."
+    },
+    {
+      "id": "psych_0_1",
+      "condition": "vocal_a_dominant",
+      "tendency": "Impulsif & Mudah Marah",
+      "description": "Energi 'A' yang besar bisa membuatmu bereaksi cepat tanpa berpikir. Amarah bisa meledak tiba-tiba, lalu cepat reda. Meditasi mindfulness direkomendasikan.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_0_2",
+      "condition": "vocal_a_dominant",
+      "tendency": "Impulsif & Mudah Marah",
+      "description": "Energi 'A' yang besar bisa membuatmu bereaksi cepat tanpa berpikir. Amarah bisa meledak tiba-tiba, lalu cepat reda. Journaling sangat membantu.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_0_3",
+      "condition": "vocal_a_dominant",
+      "tendency": "Impulsif & Mudah Marah",
+      "description": "Energi 'A' yang besar bisa membuatmu bereaksi cepat tanpa berpikir. Amarah bisa meledak tiba-tiba, lalu cepat reda. Meditasi mindfulness direkomendasikan.",
+      "advice": "Temukan support system yang sehat."
+    },
+    {
+      "id": "psych_0_4",
+      "condition": "vocal_a_dominant",
+      "tendency": "Impulsif & Mudah Marah",
+      "description": "Energi 'A' yang besar bisa membuatmu bereaksi cepat tanpa berpikir. Amarah bisa meledak tiba-tiba, lalu cepat reda. Journaling sangat membantu.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_1_0",
+      "condition": "vocal_i_dominant",
+      "tendency": "Overthinking & Cemas",
+      "description": "Pikiranmu seperti sungai yang tak pernah berhenti. Rentan memikirkan hal yang sama berulang kali. Journaling sangat membantu.",
+      "advice": "Temukan support system yang sehat."
+    },
+    {
+      "id": "psych_1_1",
+      "condition": "vocal_i_dominant",
+      "tendency": "Overthinking & Cemas",
+      "description": "Pikiranmu seperti sungai yang tak pernah berhenti. Rentan memikirkan hal yang sama berulang kali. Meditasi mindfulness direkomendasikan.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_1_2",
+      "condition": "vocal_i_dominant",
+      "tendency": "Overthinking & Cemas",
+      "description": "Pikiranmu seperti sungai yang tak pernah berhenti. Rentan memikirkan hal yang sama berulang kali. Journaling sangat membantu.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_1_3",
+      "condition": "vocal_i_dominant",
+      "tendency": "Overthinking & Cemas",
+      "description": "Pikiranmu seperti sungai yang tak pernah berhenti. Rentan memikirkan hal yang sama berulang kali. Meditasi mindfulness direkomendasikan.",
+      "advice": "Temukan support system yang sehat."
+    },
+    {
+      "id": "psych_1_4",
+      "condition": "vocal_i_dominant",
+      "tendency": "Overthinking & Cemas",
+      "description": "Pikiranmu seperti sungai yang tak pernah berhenti. Rentan memikirkan hal yang sama berulang kali. Journaling sangat membantu.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_2_0",
+      "condition": "vocal_u_dominant",
+      "tendency": "Menyimpan Emosi & Melankolis",
+      "description": "Kamu cenderung memendam perasaan. Ini bisa menjadi bom waktu. Journaling sangat membantu.",
+      "advice": "Temukan support system yang sehat."
+    },
+    {
+      "id": "psych_2_1",
+      "condition": "vocal_u_dominant",
+      "tendency": "Menyimpan Emosi & Melankolis",
+      "description": "Kamu cenderung memendam perasaan. Ini bisa menjadi bom waktu. Meditasi mindfulness direkomendasikan.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_2_2",
+      "condition": "vocal_u_dominant",
+      "tendency": "Menyimpan Emosi & Melankolis",
+      "description": "Kamu cenderung memendam perasaan. Ini bisa menjadi bom waktu. Journaling sangat membantu.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_2_3",
+      "condition": "vocal_u_dominant",
+      "tendency": "Menyimpan Emosi & Melankolis",
+      "description": "Kamu cenderung memendam perasaan. Ini bisa menjadi bom waktu. Meditasi mindfulness direkomendasikan.",
+      "advice": "Temukan support system yang sehat."
+    },
+    {
+      "id": "psych_2_4",
+      "condition": "vocal_u_dominant",
+      "tendency": "Menyimpan Emosi & Melankolis",
+      "description": "Kamu cenderung memendam perasaan. Ini bisa menjadi bom waktu. Journaling sangat membantu.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_3_0",
+      "condition": "vocal_e_dominant",
+      "tendency": "Sulit Fokus & Mudah Bosan",
+      "description": "Pikiranmu melompat-lompat. Tetapkan prioritas harian dan gunakan timer. Journaling sangat membantu.",
+      "advice": "Temukan support system yang sehat."
+    },
+    {
+      "id": "psych_3_1",
+      "condition": "vocal_e_dominant",
+      "tendency": "Sulit Fokus & Mudah Bosan",
+      "description": "Pikiranmu melompat-lompat. Tetapkan prioritas harian dan gunakan timer. Meditasi mindfulness direkomendasikan.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_3_2",
+      "condition": "vocal_e_dominant",
+      "tendency": "Sulit Fokus & Mudah Bosan",
+      "description": "Pikiranmu melompat-lompat. Tetapkan prioritas harian dan gunakan timer. Journaling sangat membantu.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_3_3",
+      "condition": "vocal_e_dominant",
+      "tendency": "Sulit Fokus & Mudah Bosan",
+      "description": "Pikiranmu melompat-lompat. Tetapkan prioritas harian dan gunakan timer. Meditasi mindfulness direkomendasikan.",
+      "advice": "Temukan support system yang sehat."
+    },
+    {
+      "id": "psych_3_4",
+      "condition": "vocal_e_dominant",
+      "tendency": "Sulit Fokus & Mudah Bosan",
+      "description": "Pikiranmu melompat-lompat. Tetapkan prioritas harian dan gunakan timer. Journaling sangat membantu.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_4_0",
+      "condition": "vocal_o_dominant",
+      "tendency": "Perfeksionis & Kritis",
+      "description": "Standarmu tinggi. Belajarlah menerima 'cukup baik'. Journaling sangat membantu.",
+      "advice": "Temukan support system yang sehat."
+    },
+    {
+      "id": "psych_4_1",
+      "condition": "vocal_o_dominant",
+      "tendency": "Perfeksionis & Kritis",
+      "description": "Standarmu tinggi. Belajarlah menerima 'cukup baik'. Meditasi mindfulness direkomendasikan.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_4_2",
+      "condition": "vocal_o_dominant",
+      "tendency": "Perfeksionis & Kritis",
+      "description": "Standarmu tinggi. Belajarlah menerima 'cukup baik'. Journaling sangat membantu.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    },
+    {
+      "id": "psych_4_3",
+      "condition": "vocal_o_dominant",
+      "tendency": "Perfeksionis & Kritis",
+      "description": "Standarmu tinggi. Belajarlah menerima 'cukup baik'. Meditasi mindfulness direkomendasikan.",
+      "advice": "Temukan support system yang sehat."
+    },
+    {
+      "id": "psych_4_4",
+      "condition": "vocal_o_dominant",
+      "tendency": "Perfeksionis & Kritis",
+      "description": "Standarmu tinggi. Belajarlah menerima 'cukup baik'. Journaling sangat membantu.",
+      "advice": "Jangan ragu mencari bantuan profesional."
+    }
+  ]
+}
