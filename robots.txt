@@ -1,0 +1,17 @@
+# Robots.txt untuk Oracle Nusantara
+# https://oracle-nusantara.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://oracle-nusantara.com/sitemap.xml
+
+# Jangan indeks halaman disclaimer dan privacy (opsional)
+Disallow: /pages/disclaimer.html
+Disallow: /pages/privacy.html
+
+# Jangan indeks folder assets dan data
+Disallow: /data/
+Disallow: /css/
+Disallow: /js/
