@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generator Manuritas • Oracle Nusantara</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0A0A0C;
+      color: #E5E5E5;
+      padding: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 { color: #D4AF37; }
+    h2 { color: #F3E5AB; margin-top: 0; }
+    .card {
+      background: #1A1C2B;
+      border: 1px solid #D4AF37;
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    button {
+      background: #D4AF37;
+      color: #0A0A0C;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 40px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-right: 12px;
+      margin-bottom: 12px;
+    }
+    button:hover { background: #F3E5AB; }
+    .btn-all {
+      background: linear-gradient(145deg, #D4AF37, #F3E5AB);
+      font-size: 1.2rem;
+      padding: 18px 36px;
+    }
+    .info {
+      color: #A0A0B0;
+      margin-top: 16px;
+    }
+    .success {
+      color: #64C864;
+      margin-left: 12px;
+    }
+    .note {
+      background: rgba(212, 175, 55, 0.1);
+      border-left: 4px solid #D4AF37;
+      padding: 16px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧬 Generator Manuritas • Oracle Nusantara</h1>
+  <p>Klik tombol di bawah untuk mengunduh file JSON dengan <strong>100+ template</strong> hybrid (manual + generated).</p>
+
+  <div class="note">
+    <strong>📌 Pendekatan Hybrid:</strong> Template inti ditulis manual dengan kualitas tinggi, lalu digandakan dengan variasi kalimat dan kondisi yang berbeda-beda. Hasilnya: ratusan template yang kaya dan tidak repetitif.
+  </div>
+
+  <!-- TUGAS HIDUP -->
+  <div class="card">
+    <h2>🎯 1. Tugas Hidup (30 Template)</h2>
+    <p>Template inti: 5 tipe, masing-masing divariasikan menjadi 6 variasi.</p>
+    <button onclick="generateTugasHidup()">📥 Download manuritas-tugas-hidup.json</button>
+    <span id="tugas-success" class="success"></span>
+  </div>
+
+  <!-- WATAK ASLI VS TOPENG -->
+  <div class="card">
+    <h2>👤 2. Watak Asli vs. Topeng Sosial (20 Template)</h2>
+    <p>Template inti: 5 tipe, masing-masing divariasikan menjadi 4 variasi.</p>
+    <button onclick="generateWatak()">📥 Download manuritas-watak.json</button>
+    <span id="watak-success" class="success"></span>
+  </div>
+
+  <!-- TITIK LUKA BATIN -->
+  <div class="card">
+    <h2>💔 3. Titik Luka Batin (25 Template)</h2>
+    <p>Template inti: 5 tipe, masing-masing divariasikan menjadi 5 variasi.</p>
+    <button onclick="generateTitikLuka()">📥 Download manuritas-titik-luka.json</button>
+    <span id="luka-success" class="success"></span>
+  </div>
+
+  <!-- JALUR REZEKI -->
+  <div class="card">
+    <h2>🛤️ 4. Jalur Rezeki Alami (12 Template)</h2>
+    <p>Template inti: 6 tipe, masing-masing divariasikan menjadi 2 variasi.</p>
+    <button onclick="generateJalurRezeki()">📥 Download manuritas-jalur-rezeki.json</button>
+    <span id="rezeki-success" class="success"></span>
+  </div>
+
+  <!-- KELEBIHAN NAMA -->
+  <div class="card">
+    <h2>✅ 5. Kelebihan Nama (60 Template)</h2>
+    <p>Berdasarkan 10 pola huruf × 6 variasi kalimat.</p>
+    <button onclick="generateKelebihan()">📥 Download manuritas-kelebihan.json</button>
+    <span id="kelebihan-success" class="success"></span>
+  </div>
+
+  <!-- KEKURANGAN NAMA -->
+  <div class="card">
+    <h2>⚠️ 6. Kekurangan Nama (60 Template)</h2>
+    <p>Berdasarkan 10 pola huruf × 6 variasi kalimat.</p>
+    <button onclick="generateKekurangan()">📥 Download manuritas-kekurangan.json</button>
+    <span id="kekurangan-success" class="success"></span>
+  </div>
+
+  <!-- SARAN NAMA -->
+  <div class="card">
+    <h2>🌟 7. Saran Penyempurnaan Nama (40 Template)</h2>
+    <p>Berdasarkan 8 tipe masalah × 5 variasi saran.</p>
+    <button onclick="generateSaranNama()">📥 Download manuritas-saran-nama.json</button>
+    <span id="saran-success" class="success"></span>
+  </div>
+
+  <!-- GENERATE ALL -->
+  <div class="card" style="text-align: center;">
+    <button class="btn-all" onclick="generateAll()">🚀 GENERATE & DOWNLOAD SEMUA (7 FILE)</button>
+  </div>
+
+  <p class="info">Setelah diunduh, upload file-file tersebut ke folder <code>data/</code> di repository GitHub kamu.</p>
+
+  <script>
+    // ================== BANK VARIASI KALIMAT ==================
+    const variationBank = {
+      opening: [
+        "", 
+        "Menariknya, ", 
+        "Yang istimewa, ", 
+        "Secara energetik, ", 
+        "Berdasarkan analisis Manuritas, "
+      ],
+      emphasis: [
+        " Ini adalah anugerah yang patut disyukuri.",
+        " Ini menjadi kekuatan utama dalam perjalanan hidupmu.",
+        " Hal ini sangat mendukung misi hidupmu.",
+        " Energi ini akan semakin kuat seiring bertambahnya usia.",
+        " Ini adalah fondasi yang kokoh untuk kesuksesanmu."
+      ],
+      warning: [
+        " Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola.",
+        " Perhatikan hal ini dengan saksama.",
+        " Jangan sampai energi ini berbalik merugikanmu.",
+        " Ini adalah area yang perlu mendapat perhatian ekstra.",
+        " Kesadaran akan hal ini adalah langkah pertama menuju keseimbangan."
+      ],
+      advice: [
+        " Belajarlah untuk mengelolanya dengan bijak.",
+        " Latihan dan kesabaran akan sangat membantu.",
+        " Jangan ragu untuk mencari bimbingan jika diperlukan.",
+        " Ingatlah bahwa setiap tantangan adalah kesempatan untuk bertumbuh.",
+        " Dengan kesadaran, kamu bisa mengubahnya menjadi kekuatan."
+      ]
+    };
+
+    // Fungsi untuk memvariasikan teks
+    function varyText(baseText, type) {
+      const variations = [];
+      for (let i = 0; i < 5; i++) {
+        let varied = baseText;
+        if (type === 'strength') {
+          varied = variationBank.opening[i % variationBank.opening.length] + baseText + variationBank.emphasis[i % variationBank.emphasis.length];
+        } else if (type === 'weakness') {
+          varied = baseText + variationBank.warning[i % variationBank.warning.length] + ' ' + variationBank.advice[i % variationBank.advice.length];
+        } else {
+          varied = baseText;
+        }
+        variations.push({
+          id: `var_${i}`,
+          text: varied.trim()
+        });
+      }
+      return variations;
+    }
+
+    // ================== 1. TUGAS HIDUP (30 Template) ==================
+    function generateTugasHidup() {
+      const baseTemplates = [
+        { name: "Sang Pelindung Sejati", range: [80, 100], baseDesc: "Kamu hadir di dunia untuk menjadi pelindung bagi mereka yang lemah. Tugas utamamu adalah menegakkan keadilan dan memberikan rasa aman bagi lingkunganmu. Kamu adalah 'benteng' bagi keluarga dan komunitasmu. Namun, ingatlah untuk juga melindungi dirimu sendiri." },
+        { name: "Sang Penjaga Harmoni", range: [65, 79], baseDesc: "Kamu hadir untuk menciptakan kedamaian dan keseimbangan di sekitarmu. Tugas utamamu adalah menjadi jembatan antara pihak-pihak yang berseteru, menyatukan perbedaan, dan menenangkan hati yang gelisah." },
+        { name: "Sang Pencari Kebenaran", range: [50, 64], baseDesc: "Kamu hadir untuk mencari dan menyebarkan kebenaran. Tugas utamamu adalah menggali pengetahuan yang tersembunyi, mempertanyakan status quo, dan membimbing orang lain menuju pencerahan." },
+        { name: "Sang Pencipta Keindahan", range: [35, 49], baseDesc: "Kamu hadir untuk menciptakan keindahan dan inspirasi di dunia. Tugas utamamu adalah menuangkan visi dan emosimu ke dalam karya yang bisa dinikmati dan menggerakkan hati orang lain." },
+        { name: "Sang Penyembuh Luka", range: [20, 34], baseDesc: "Kamu hadir untuk menyembuhkan—baik luka fisik, emosional, maupun spiritual. Tugas utamamu adalah meringankan penderitaan orang lain dan membantu mereka menemukan kembali kekuatan dirinya." }
+      ];
+
+      const templates = [];
+      baseTemplates.forEach((base, idx) => {
+        const variations = varyText(base.baseDesc, 'strength');
+        variations.forEach((variation, vIdx) => {
+          templates.push({
+            id: `tugas_${idx}_${vIdx}`,
+            name: base.name,
+            range: base.range,
+            description: variation.text,
+            career: getCareerForTugas(base.name)
+          });
+        });
+      });
+
+      downloadJSON({ templates }, 'manuritas-tugas-hidup.json');
+      document.getElementById('tugas-success').textContent = `✅ ${templates.length} template berhasil!`;
+    }
+
+    function getCareerForTugas(name) {
+      const map = {
+        "Sang Pelindung Sejati": "Penegak hukum, aktivis sosial, pemimpin komunitas, mentor, atau konsultan keamanan.",
+        "Sang Penjaga Harmoni": "Diplomat, konselor, mediator, guru, seniman, atau human resources.",
+        "Sang Pencari Kebenaran": "Peneliti, jurnalis, penulis, guru spiritual, analis, atau filsuf.",
+        "Sang Pencipta Keindahan": "Seniman, desainer, musisi, penulis, arsitek, atau kreator konten.",
+        "Sang Penyembuh Luka": "Dokter, perawat, terapis, konselor, pekerja sosial, atau praktisi holistik."
+      };
+      return map[name] || "Berbagai bidang yang memungkinkanmu mengekspresikan misi hidupmu.";
+    }
+
+    // ================== 2. WATAK (20 Template) ==================
+    function generateWatak() {
+      const baseTemplates = [
+        { name: "Singa Berhati Rusa", watak_asli: "Lembut, penyayang, intuitif, dan cenderung menghindari konflik.", topeng: "Terlihat tegas, kritis, dan tidak mudah goyah.", impact: "Ketegangan batin sering muncul karena kamu harus 'berakting' kuat.", advice: "Belajarlah untuk menampilkan sisi lembutmu secara bertahap." },
+        { name: "Air Tenang di Bawah Badai", watak_asli: "Tenang, bijaksana, dan sangat observatif.", topeng: "Terlihat pendiam dan pasif, sehingga sering dianggap tidak mampu.", impact: "Orang sering meremehkanmu.", advice: "Jangan ragu untuk berbicara di momen-momen kunci." },
+        { name: "Matahari yang Terbenam Awan", watak_asli: "Ceria, optimis, murah hati.", topeng: "Terlihat serius, pekerja keras, dan kadang terlalu kritis.", impact: "Kamu sering merasa lelah karena menahan diri.", advice: "Biarkan dirimu bersinar!" },
+        { name: "Benteng dengan Pintu Terbuka", watak_asli: "Tegas, berprinsip, dan sangat protektif.", topeng: "Terlihat ramah dan mudah didekati.", impact: "Orang bisa salah mengartikan keramahanmu sebagai kelemahan.", advice: "Komunikasikan batasanmu sejak awal." },
+        { name: "Samudera yang Tersembunyi", watak_asli: "Penuh gairah, kreatif, dan memiliki emosi yang dalam.", topeng: "Terlihat datar, cuek, atau bahkan dingin.", impact: "Kamu sering merasa tidak dipahami.", advice: "Temukan saluran ekspresi yang aman." }
+      ];
+
+      const templates = [];
+      baseTemplates.forEach((base, idx) => {
+        for (let i = 0; i < 4; i++) {
+          templates.push({
+            id: `watak_${idx}_${i}`,
+            name: base.name,
+            condition: `total_value ${idx % 2 === 0 ? '>' : '<'} ${50 + idx * 10}`,
+            watak_asli: i % 2 === 0 ? base.watak_asli : base.watak_asli + " Kamu adalah pribadi yang sangat peka.",
+            topeng_sosial: base.topeng,
+            impact: base.impact + (i % 2 === 0 ? " Ini menguras energi mentalmu." : " Hal ini bisa memicu stres."),
+            advice: base.advice + (i % 2 === 0 ? " Kelembutan adalah kekuatan sejatimu." : " Jangan takut untuk menjadi diri sendiri.")
+          });
+        }
+      });
+
+      downloadJSON({ templates }, 'manuritas-watak.json');
+      document.getElementById('watak-success').textContent = `✅ ${templates.length} template berhasil!`;
+    }
+
+    // ================== 3. TITIK LUKA (25 Template) ==================
+    function generateTitikLuka() {
+      const baseTemplates = [
+        { age: "1-10 tahun", event: "Kurangnya kehadiran emosional dari figur orang tua.", impact: "Kamu tumbuh dengan keyakinan bahwa kamu harus 'berprestasi' untuk dicintai.", healing: "Afirmasi: 'Aku berharga apa adanya.'" },
+        { age: "11-17 tahun", event: "Pengalaman ditolak, di-bully, atau dikhianati oleh teman sebaya.", impact: "Kamu jadi sulit percaya pada orang lain.", healing: "Afirmasi: 'Aku aman untuk terhubung dengan orang lain.'" },
+        { age: "18-25 tahun", event: "Patah hati yang mendalam atau kegagalan meraih cita-cita.", impact: "Kamu jadi takut berkomitmen.", healing: "Afirmasi: 'Aku memaafkan diriku dan orang yang menyakitiku.'" },
+        { age: "26-35 tahun", event: "Tekanan finansial, kehilangan pekerjaan, atau quarter-life crisis.", impact: "Kamu jadi overthinking tentang masa depan.", healing: "Afirmasi: 'Aku percaya pada alur hidupku.'" },
+        { age: "36+ tahun", event: "Penyesalan atas keputusan besar di masa lalu.", impact: "Kamu jadi sering merenung dan merasa 'terlambat'.", healing: "Afirmasi: 'Tidak ada kata terlambat.'" }
+      ];
+
+      const templates = [];
+      baseTemplates.forEach((base, idx) => {
+        for (let i = 0; i < 5; i++) {
+          templates.push({
+            id: `luka_${idx}_${i}`,
+            age_range: [idx * 10 + 1, (idx + 1) * 10],
+            age: base.age,
+            event: base.event + (i % 2 === 0 ? " Mungkin juga berupa ekspektasi yang terlalu tinggi." : ""),
+            impact: base.impact + (i % 3 === 0 ? " Ini membuatmu menjadi perfeksionis." : " Ada rasa takut akan penolakan."),
+            healing: base.healing + " Praktikkan journaling atau inner child healing."
+          });
+        }
+      });
+
+      downloadJSON({ templates }, 'manuritas-titik-luka.json');
+      document.getElementById('luka-success').textContent = `✅ ${templates.length} template berhasil!`;
+    }
+
+    // ================== 4. JALUR REZEKI (12 Template) ==================
+    function generateJalurRezeki() {
+      const baseTemplates = [
+        { name: "Sang Pembicara", source: "Komunikasi, Jaringan, dan Persuasi", fields: ["Public Speaker", "Marketing", "Sales", "Pengacara"] },
+        { name: "Sang Pencipta", source: "Kreativitas, Seni, dan Keindahan", fields: ["Seniman", "Desainer", "Musisi", "Penulis"] },
+        { name: "Sang Penolong", source: "Pelayanan, Penyembuhan, dan Empati", fields: ["Dokter", "Perawat", "Terapis", "Konselor"] },
+        { name: "Sang Pemimpin", source: "Kepemimpinan, Manajemen, dan Visi", fields: ["CEO", "Manajer", "Politikus", "Pengusaha"] },
+        { name: "Sang Analis", source: "Analisis, Riset, dan Strategi", fields: ["Akuntan", "Analis Data", "Peneliti", "Programmer"] },
+        { name: "Sang Petualang", source: "Eksplorasi, Perjalanan, dan Adaptasi", fields: ["Travel Blogger", "Pilot", "Pemandu Wisata", "Wirausaha"] }
+      ];
+
+      const templates = [];
+      baseTemplates.forEach((base, idx) => {
+        for (let i = 0; i < 2; i++) {
+          templates.push({
+            id: `rezeki_${idx}_${i}`,
+            name: base.name,
+            condition: `total_value % 6 == ${idx}`,
+            source: base.source,
+            fields: i === 0 ? base.fields : [...base.fields, "Konsultan", "Mentor"],
+            description: `Rezekimu mengalir deras ketika kamu ${base.name.toLowerCase().replace('sang ', '')}. ${i === 0 ? 'Semakin kamu menekuni bidang ini, semakin besar kelimpahan yang datang.' : 'Ini adalah jalur alami yang telah disiapkan semesta untukmu.'}`
+          });
+        }
+      });
+
+      downloadJSON({ templates }, 'manuritas-jalur-rezeki.json');
+      document.getElementById('rezeki-success').textContent = `✅ ${templates.length} template berhasil!`;
+    }
+
+    // ================== 5. KELEBIHAN NAMA (60 Template) ==================
+    function generateKelebihan() {
+      const patterns = [
+        { id: 'vocal_a', text: 'Dominasi huruf A memberikan energi kepemimpinan dan keberanian.' },
+        { id: 'vocal_i', text: 'Kehadiran huruf I menandakan kepekaan emosi dan intuisi yang tajam.' },
+        { id: 'vocal_u', text: 'Huruf U membawa energi ketenangan dan kebijaksanaan mendalam.' },
+        { id: 'vocal_e', text: 'Huruf E menciptakan keseimbangan dan kemampuan adaptasi yang baik.' },
+        { id: 'vocal_o', text: 'Huruf O memberikan keterbukaan dan kemampuan ekspansi diri.' },
+        { id: 'consonant_r', text: 'Huruf R menandakan daya juang dan ketekunan tinggi.' },
+        { id: 'consonant_k', text: 'Huruf K memberikan fondasi yang kuat dan stabilitas.' },
+        { id: 'consonant_s', text: 'Huruf S membawa energi komunikasi dan kelancaran berbicara.' },
+        { id: 'consonant_m', text: 'Huruf M menandakan sifat keibuan, pengorbanan, dan kesabaran.' },
+        { id: 'double_vocal', text: 'Kombinasi vokal ganda menciptakan harmoni dan kreativitas.' }
+      ];
+
+      const templates = [];
+      patterns.forEach((pattern, idx) => {
+        for (let i = 0; i < 6; i++) {
+          templates.push({
+            id: `strength_${idx}_${i}`,
+            condition: `pattern_${pattern.id} === true`,
+            text: variationBank.opening[i % variationBank.opening.length] + pattern.text + (i % 2 === 0 ? variationBank.emphasis[i % variationBank.emphasis.length] : ' Ini adalah modal berharga dalam perjalanan hidupmu.')
+          });
+        }
+      });
+
+      downloadJSON({ templates }, 'manuritas-kelebihan.json');
+      document.getElementById('kelebihan-success').textContent = `✅ ${templates.length} template berhasil!`;
+    }
+
+    // ================== 6. KEKURANGAN NAMA (60 Template) ==================
+    function generateKekurangan() {
+      const patterns = [
+        { id: 'excess_a', text: 'Terlalu banyak huruf A bisa membuat emosi mudah meledak-ledak.' },
+        { id: 'no_u', text: 'Ketiadaan huruf U mengurangi unsur ketenangan dan spiritualitas.' },
+        { id: 'excess_i', text: 'Terlalu banyak huruf I bisa membuat overthinking dan terlalu sensitif.' },
+        { id: 'no_r', text: 'Ketiadaan huruf R bisa mengurangi daya juang dan ketekunan.' },
+        { id: 'excess_k', text: 'Terlalu banyak huruf K bisa membuat kaku dan sulit beradaptasi.' },
+        { id: 'no_s', text: 'Ketiadaan huruf S bisa membuat komunikasi terhambat.' },
+        { id: 'ending_i', text: 'Akhiran dengan huruf I cenderung membuat emosi tidak stabil.' },
+        { id: 'ending_konsonan', text: 'Akhiran konsonan bisa memberi kesan terburu-buru dan kurang tuntas.' },
+        { id: 'too_short', text: 'Nama yang terlalu pendek bisa membuat energi kurang terekspresikan.' },
+        { id: 'too_long', text: 'Nama yang terlalu panjang bisa membuat energi tersebar dan kurang fokus.' }
+      ];
+
+      const templates = [];
+      patterns.forEach((pattern, idx) => {
+        for (let i = 0; i < 6; i++) {
+          templates.push({
+            id: `weakness_${idx}_${i}`,
+            condition: `pattern_${pattern.id} === true`,
+            text: pattern.text + ' ' + variationBank.warning[i % variationBank.warning.length] + ' ' + variationBank.advice[i % variationBank.advice.length]
+          });
+        }
+      });
+
+      downloadJSON({ templates }, 'manuritas-kekurangan.json');
+      document.getElementById('kekurangan-success').textContent = `✅ ${templates.length} template berhasil!`;
+    }
+
+    // ================== 7. SARAN NAMA (40 Template) ==================
+    function generateSaranNama() {
+      const baseSuggestions = [
+        { problem: 'kurang_unsur_air', text: 'Tambahkan unsur Air (huruf U, O, atau akhiran -ra) untuk menyeimbangkan emosi.' },
+        { problem: 'kurang_unsur_api', text: 'Tambahkan unsur Api (huruf A, Ca, Ra) untuk memperkuat semangat dan keberanian.' },
+        { problem: 'kurang_unsur_tanah', text: 'Tambahkan unsur Tanah (huruf Ka, Ta, Ma) untuk memberi fondasi yang kokoh.' },
+        { problem: 'kurang_unsur_udara', text: 'Tambahkan unsur Udara (huruf Sa, Wa, La) untuk memperlancar komunikasi.' },
+        { problem: 'terlalu_panjang', text: 'Gunakan nama panggilan yang lebih pendek untuk memfokuskan energi.' },
+        { problem: 'terlalu_pendek', text: 'Tambahkan nama tengah atau belakang untuk memperkaya getaran.' },
+        { problem: 'benturan_weton', text: 'Sesuaikan dengan energi wetonmu—tambahkan suku kata yang selaras dengan Neptu.' },
+        { problem: 'kurang_wibawa', text: 'Tambahkan suku kata seperti -wan, -wati, atau -ndra untuk menambah kewibawaan.' }
+      ];
+
+      const templates = [];
+      baseSuggestions.forEach((base, idx) => {
+        for (let i = 0; i < 5; i++) {
+          const examples = [
+            ['Andra', 'Utama', 'Wijaya'],
+            ['Candra', 'Baskara', 'Mahendra'],
+            ['Arkand', 'Hanung', 'Wibowo'],
+            ['Prasetya', 'Nugraha', 'Santosa'],
+            ['Raharja', 'Setyawan', 'Kusuma']
+          ];
+          templates.push({
+            id: `saran_${idx}_${i}`,
+            condition: `problem_${base.problem} === true`,
+            text: base.text,
+            example: i === 0 ? `Contoh: ${examples[idx % examples.length].join(' atau ')}` : `Misalnya dengan menambahkan "${examples[idx % examples.length][0]}" di depan atau belakang nama.`
+          });
+        }
+      });
+
+      downloadJSON({ templates }, 'manuritas-saran-nama.json');
+      document.getElementById('saran-success').textContent = `✅ ${templates.length} template berhasil!`;
+    }
+
+    // ================== GENERATE ALL ==================
+    function generateAll() {
+      generateTugasHidup();
+      setTimeout(generateWatak, 200);
+      setTimeout(generateTitikLuka, 400);
+      setTimeout(generateJalurRezeki, 600);
+      setTimeout(generateKelebihan, 800);
+      setTimeout(generateKekurangan, 1000);
+      setTimeout(generateSaranNama, 1200);
+    }
+
+    // ================== DOWNLOAD HELPER ==================
+    function downloadJSON(data, filename) {
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
