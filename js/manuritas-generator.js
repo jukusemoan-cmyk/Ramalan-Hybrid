@@ -110,7 +110,7 @@ function generateOptionDescription(score, targetScore, modificationType) {
  * Variabel global untuk menyimpan opsi nama yang dipilih
  */
 let selectedNameOption = null;
-let manuritasData = null;
+//let manuritasData = null; sudah dideklarasikan di ramalan.html
 
 /**
  * Menampilkan opsi nama di UI (dipanggil setelah analisis gratis)
