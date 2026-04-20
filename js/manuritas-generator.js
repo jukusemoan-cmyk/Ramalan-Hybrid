@@ -343,7 +343,7 @@ function displayPurchasedNameResult(data) {
             
             <div class="analysis-section-card">
                 <h4><i class="fas fa-check-circle" style="color:#64C864;"></i> Kelebihan Nama Baru</h4>
-                ${kelebihan.map(k => `<p style="margin-bottom:8px;">• ${k.text}</p>`).join('')}
+                ${kelebihan.map(k => `<p style="margin-bottom:8px;">Â• ${k.text}</p>`).join('')}
             </div>
             
             ${titikLuka ? `
@@ -363,9 +363,9 @@ function displayPurchasedNameResult(data) {
             
             <div class="analysis-section-card">
                 <h4><i class="fas fa-lightbulb" style="color:#D4AF37;"></i> Saran Penggunaan</h4>
-                <p>• Gunakan "${data.name}" sebagai nama profesional di LinkedIn, email, atau kartu nama.</p>
-                <p>• Perkenalkan diri dengan nama ini di lingkungan baru untuk menarik energi positif.</p>
-                <p>• Tidak perlu mengubah dokumen legal, getaran nama bekerja saat diucapkan.</p>
+                <p>Â• Gunakan "${data.name}" sebagai nama profesional di LinkedIn, email, atau kartu nama.</p>
+                <p>Â• Perkenalkan diri dengan nama ini di lingkungan baru untuk menarik energi positif.</p>
+                <p>Â• Tidak perlu mengubah dokumen legal, getaran nama bekerja saat diucapkan.</p>
             </div>
             
             <div style="text-align: center; margin-top: 24px;">
@@ -429,16 +429,16 @@ async function downloadPurchasedNamePDF() {
     
     pdf.text('Saran Penggunaan:', 20, yPos);
     yPos += 8;
-    pdf.text('• Gunakan sebagai nama profesional di lingkungan kerja.', 25, yPos);
+    pdf.text('Â• Gunakan sebagai nama profesional di lingkungan kerja.', 25, yPos);
     yPos += 6;
-    pdf.text('• Perkenalkan diri dengan nama ini di lingkungan baru.', 25, yPos);
+    pdf.text('Â• Perkenalkan diri dengan nama ini di lingkungan baru.', 25, yPos);
     yPos += 6;
-    pdf.text('• Tidak perlu mengubah dokumen legal.', 25, yPos);
+    pdf.text('Â• Tidak perlu mengubah dokumen legal.', 25, yPos);
     
     pdf.setFontSize(10);
     pdf.setTextColor(80, 80, 80);
-    pdf.text(`Dianalisis dengan Manuritas • oracle-nusantara.com`, 105, 280, { align: 'center' });
-    pdf.text(`© 2026 Oracle Nusantara`, 105, 290, { align: 'center' });
+    pdf.text(`Dianalisis dengan Manuritas Â• oracle-nusantara.com`, 105, 280, { align: 'center' });
+    pdf.text(`Â© 2026 Oracle Nusantara`, 105, 290, { align: 'center' });
     
     pdf.save(`Sertifikat-Nama-${data.name.replace(/\s/g, '-')}.pdf`);
     showSuccessToast(' Sertifikat PDF berhasil diunduh!');
