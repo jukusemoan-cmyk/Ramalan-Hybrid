@@ -29,11 +29,11 @@ const PACKAGE_CONFIG = {
 
 // ---------- LABEL PERSENTASE ----------
 function getStrengthLabel(score) {
-    if (score >= 90) return { label: 'SANGAT KUAT', stars: '', class: 'sangat-kuat' };
-    if (score >= 75) return { label: 'KUAT', stars: '', class: 'kuat' };
-    if (score >= 60) return { label: 'CUKUP', stars: '', class: 'cukup' };
-    if (score >= 40) return { label: 'KURANG', stars: '', class: 'kurang' };
-    return { label: 'LEMAH', stars: '', class: 'lemah' };
+    if (score >= 90) return { label: 'SANGAT KUAT', stars: '🌟🌟🌟🌟🌟', class: 'sangat-kuat' };
+    if (score >= 75) return { label: 'KUAT', stars: '🌟🌟🌟🌟', class: 'kuat' };
+    if (score >= 60) return { label: 'CUKUP', stars: '🌟🌟🌟', class: 'cukup' };
+    if (score >= 40) return { label: 'KURANG', stars: '🌟🌟', class: 'kurang' };
+    return { label: 'LEMAH', stars: '🌟', class: 'lemah' };
 }
 
 // ---------- GENERATE OPSI NAMA (HANYA 1 OPSI) ----------
@@ -74,7 +74,7 @@ function generateSingleNameOption(originalName, targetMin, targetMax, weton, wuk
         });
     });
     
-    // Jika target tinggi (85), tambahkan kombinasi 2 kata
+    // Jika target tinggi (≥85), tambahkan kombinasi 2 kata
     if (targetMin >= 85) {
         for (let i = 0; i < uniqueWords.length; i++) {
             for (let j = i + 1; j < uniqueWords.length; j++) {
@@ -157,7 +157,7 @@ async function loadNameOptions(packageType) {
     const newBalance = currentBalance - config.tokenCost;
     localStorage.setItem('tokenBalance', newBalance);
     updateTokenDisplay();
-    showSuccessToast(` ${config.tokenCost} Token digunakan. Sisa ${newBalance} Token.`);
+    showSuccessToast(`✅ ${config.tokenCost} Token digunakan. Sisa ${newBalance} Token.`);
     
     showLoading(true);
     
@@ -246,7 +246,7 @@ function displayNameOptionInline(option, config, originalName, currentStrength) 
                         border: 2px solid ${option.strength >= 75 ? '#64C864' : '#D4AF37'};">
                 
                 <div style="text-align: center; margin-bottom: 20px;">
-                    <h3 style="color: #D4AF37; font-size: 1.8rem; margin-bottom: 8px;"> ${option.name} </h3>
+                    <h3 style="color: #D4AF37; font-size: 1.8rem; margin-bottom: 8px;">✨ ${option.name} ✨</h3>
                     <div style="font-size: 2.5rem; font-weight: bold; color: ${option.strength >= 75 ? '#64C864' : '#D4AF37'};">
                         ${option.strength}%
                     </div>
@@ -335,7 +335,7 @@ async function purchaseSelectedName() {
         // Tampilkan hasil pembelian dengan format baru
         displayPurchasedNameResultNew(purchasedNameData);
         
-        showSuccessToast(` Nama "${data.option.name}" berhasil dibeli!`);
+        showSuccessToast(`🎉 Nama "${data.option.name}" berhasil dibeli!`);
         
     } catch (e) {
         console.error('Gagal membeli nama:', e);
@@ -372,7 +372,7 @@ function displayPurchasedNameResultNew(data) {
                 <div style="font-size: 1.2rem; color: #64C864; margin-bottom: 8px;">
                     <i class="fas fa-check-circle"></i> SELAMAT! Anda telah memilih nama baru:
                 </div>
-                <h2 style="color: #D4AF37; font-size: 2.2rem; margin-bottom: 12px;"> ${data.name} </h2>
+                <h2 style="color: #D4AF37; font-size: 2.2rem; margin-bottom: 12px;">✨ ${data.name} ✨</h2>
                 <div style="font-size: 2rem; font-weight: bold; color: ${data.strength >= 75 ? '#64C864' : '#D4AF37'};">
                     ${data.strength}%
                 </div>
@@ -402,7 +402,7 @@ function displayPurchasedNameResultNew(data) {
                         <td style="padding: 10px;">${data.originalStrength}% (${data.originalLabel})</td>
                         <td style="padding: 10px; color: #64C864; font-weight: 600;">
                             ${data.strength}% (${data.strengthLabel}) 
-                            <span style="color: #64C864;"> +${strengthDiff}%</span>
+                            <span style="color: #64C864;">▲ +${strengthDiff}%</span>
                         </td>
                     </tr>
                     <tr>
@@ -438,7 +438,7 @@ function displayPurchasedNameResultNew(data) {
             <!-- KELEBIHAN NAMA BARU -->
             <div class="analysis-section-card">
                 <h4><i class="fas fa-check-circle" style="color:#64C864;"></i> KELEBIHAN NAMA BARU</h4>
-                ${kelebihan.map(k => `<p style="margin-bottom:8px;"> ${k.text}</p>`).join('')}
+                ${kelebihan.map(k => `<p style="margin-bottom:8px;">• ${k.text}</p>`).join('')}
             </div>
             
             ${titikLuka ? `
@@ -451,9 +451,9 @@ function displayPurchasedNameResultNew(data) {
             <!-- SARAN PENGGUNAAN -->
             <div class="analysis-section-card">
                 <h4><i class="fas fa-lightbulb" style="color:#D4AF37;"></i> SARAN PENGGUNAAN</h4>
-                <p> Gunakan <strong>"${data.name}"</strong> sebagai nama profesional di LinkedIn, email, atau kartu nama.</p>
-                <p> Perkenalkan diri dengan nama ini di lingkungan baru untuk menarik energi positif.</p>
-                <p> Tidak perlu mengubah dokumen legal, getaran nama bekerja saat diucapkan.</p>
+                <p>• Gunakan <strong>"${data.name}"</strong> sebagai nama profesional di LinkedIn, email, atau kartu nama.</p>
+                <p>• Perkenalkan diri dengan nama ini di lingkungan baru untuk menarik energi positif.</p>
+                <p>• Tidak perlu mengubah dokumen legal, getaran nama bekerja saat diucapkan.</p>
             </div>
             
             <!-- TOMBOL PDF -->
@@ -465,59 +465,6 @@ function displayPurchasedNameResultNew(data) {
             
             <!-- DISCLAIMER -->
             <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; opacity: 0.7; font-style: italic;">
-                 Perubahan nama tidak harus legal. Energi nama bekerja melalui getaran saat nama itu diucapkan dan didengar.
+                ⚠️ Perubahan nama tidak harus legal. Energi nama bekerja melalui getaran saat nama itu diucapkan dan didengar.
             </p>
         </div>
-    `;
-    
-    container.innerHTML = html;
-    container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-// ---------- ANALISIS KATA TAMBAHAN ----------
-function analyzeAddedWord(word, manuritasData) {
-    // Hitung nilai Hanacaraka
-    const value = hanacarakaValue(word).total;
-    
-    // Tentukan elemen berdasarkan nilai
-    let element = 'Tanah';
-    let effect = 'memberikan stabilitas dan fondasi yang kokoh';
-    
-    if (value <= 20) {
-        element = 'Api';
-        effect = 'memberikan energi kepemimpinan dan semangat yang membara';
-    } else if (value <= 40) {
-        element = 'Air';
-        effect = 'memberikan ketenangan, kebijaksanaan, dan kemampuan beradaptasi';
-    } else if (value <= 60) {
-        element = 'Kayu';
-        effect = 'memberikan pertumbuhan, kreativitas, dan visi ke depan';
-    } else if (value <= 80) {
-        element = 'Logam';
-        effect = 'memberikan ketegasan, disiplin, dan kemampuan eksekusi';
-    }
-    
-    return { value, element, effect };
-}
-
-// ---------- UPDATE TOKEN DISPLAY (DITAMBAHKAN) ----------
-function updateTokenDisplay() {
-    const balance = localStorage.getItem('tokenBalance') || '0';
-    const span = document.getElementById('tokenBalanceSpan');
-    if (span) span.textContent = balance;
-    
-    const btn = document.getElementById('unlockPremiumBtn');
-    if (btn) {
-        const token = parseInt(balance) || 0;
-        btn.innerHTML = token >= 3 
-            ? `<i class="fas fa-unlock"></i> BUKA RAMALAN LENGKAP (${token} Token tersedia)` 
-            : `<i class="fas fa-shopping-cart"></i> BELI TOKEN UNTUK BUKA PREMIUM`;
-    }
-}
-
-// Expose ke global
-window.PACKAGE_CONFIG = PACKAGE_CONFIG;
-window.getStrengthLabel = getStrengthLabel;
-window.loadNameOptions = loadNameOptions;
-window.purchaseSelectedName = purchaseSelectedName;
-window.updateTokenDisplay = updateTokenDisplay;
