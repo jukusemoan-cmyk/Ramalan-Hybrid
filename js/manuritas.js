@@ -518,3 +518,13 @@ async function loadManuritasData() {
         throw e;
     }
 }
+
+// Hilangkan duplikat pada kelebihan
+const uniqueKelebihan = [];
+const seenTexts = new Set();
+kelebihanData.forEach(k => {
+    if (!seenTexts.has(k.text)) {
+        seenTexts.add(k.text);
+        uniqueKelebihan.push(k);
+    }
+});
