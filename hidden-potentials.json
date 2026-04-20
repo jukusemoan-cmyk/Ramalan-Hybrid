@@ -1,0 +1,39 @@
+{
+  "templates": [
+    {
+      "id": "potential_leader",
+      "condition": "zodiac === 'Aries' || zodiac === 'Leo' || zodiac === 'Capricorn'",
+      "potential": "Kamu memiliki bakat terpendam sebagai pemimpin visioner. Orang lain secara alami melihatmu sebagai sosok yang bisa diandalkan untuk mengambil keputusan dan memberikan arah. Kamu memiliki kemampuan untuk melihat gambaran besar dan menginspirasi orang lain untuk bergerak bersama.",
+      "how_to": "Ambillah peran kepemimpinan kecil—pimpin proyek tim, jadi ketua komunitas, atau mentor bagi junior. Bacalah buku tentang servant leadership. Yang terpenting, tetaplah rendah hati dan dengarkan timmu.",
+      "additional": "Warna emas atau ungu dapat memperkuat aura kepemimpinanmu."
+    },
+    {
+      "id": "potential_healer",
+      "condition": "zodiac === 'Cancer' || zodiac === 'Pisces' || zodiac === 'Virgo'",
+      "potential": "Kamu memiliki bakat terpendam sebagai penyembuh. Orang lain merasa nyaman dan aman di dekatmu. Kamu memiliki kemampuan alami untuk meredakan ketegangan dan memberikan kenyamanan emosional. Bakat ini bisa terwujud sebagai tenaga medis, terapis, atau konselor.",
+      "how_to": "Pertimbangkan mempelajari Reiki, pranic healing, atau konseling dasar. Mulailah dari hal sederhana: jadilah pendengar yang lebih baik. Jaga energimu sendiri dengan rutin 'membersihkan' diri.",
+      "additional": "Wewangian lavender atau cendana membantu menjaga vibrasi energimu."
+    },
+    {
+      "id": "potential_communicator",
+      "condition": "zodiac === 'Gemini' || zodiac === 'Libra' || zodiac === 'Aquarius'",
+      "potential": "Kamu memiliki bakat terpendam sebagai komunikator ulung. Kata-katamu memiliki kekuatan untuk mempengaruhi, menghibur, dan mengedukasi. Kamu bisa menjadi penulis, pembicara publik, podcaster, atau guru yang inspiratif.",
+      "how_to": "Mulailah menulis blog, rekam podcast sederhana, atau tawarkan diri untuk menjadi MC di acara kecil. Ikuti kursus public speaking. Yang terpenting, temukan 'suara' unikmu sendiri.",
+      "additional": "Batu akik biru atau pirus dapat memperkuat cakra tenggorokanmu."
+    },
+    {
+      "id": "potential_creator",
+      "condition": "zodiac === 'Taurus' || zodiac === 'Scorpio' || zodiac === 'Sagittarius'",
+      "potential": "Kamu memiliki bakat terpendam sebagai kreator—entah itu seniman, musisi, desainer, atau pembuat konten. Kamu memiliki kemampuan untuk mewujudkan ide abstrak menjadi sesuatu yang nyata dan indah. Tanganmu adalah saluran kreativitas semesta.",
+      "how_to": "Eksplorasi berbagai media: melukis, merajut, fotografi, menulis puisi, atau memasak. Jangan takut hasilnya 'jelek'. Buatlah 'ritual kreatif' mingguan tanpa gangguan.",
+      "additional": "Warna hijau atau oranye dapat memicu kreativitasmu."
+    },
+    {
+      "id": "potential_strategist",
+      "condition": "shio === 'Ular' || shio === 'Monyet' || shio === 'Tikus'",
+      "potential": "Kamu memiliki bakat terpendam sebagai ahli strategi. Pikiranmu tajam, mampu melihat pola dan peluang yang tidak disadari orang lain. Kamu cocok di bidang bisnis, investasi, politik, atau sebagai konsultan strategis.",
+      "how_to": "Asah kemampuan analisismu dengan membaca buku tentang strategi, bermain catur, atau mengikuti kursus analisis data. Jangan ragu untuk menjadi 'otak' di balik layar.",
+      "additional": "Batu obsidian atau onyx dapat mempertajam fokus dan intuisi strategismu."
+    }
+  ]
+}
