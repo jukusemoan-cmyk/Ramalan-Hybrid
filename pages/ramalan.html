@@ -348,9 +348,9 @@ let currentUserData = null;
 let currentNumerology = null;
 
 // Manuritas Data
-let manuritasData = null;
-let currentManuritasResult = null;
-let manuritasUnlocked = false;
+if (typeof manuritasData === 'undefined') { var manuritasData = null; }
+if (typeof currentManuritasResult === 'undefined') { var currentManuritasResult = null; }
+if (typeof manuritasUnlocked === 'undefined') { var manuritasUnlocked = false; }
 
 const elements = {
     userName: null, birthDate: null, fullName: null, revealBtn: null, resultSection: null,
