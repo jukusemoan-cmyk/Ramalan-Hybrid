@@ -438,7 +438,7 @@ function displayPurchasedNameResultNew(data) {
             <!-- KELEBIHAN NAMA BARU -->
             <div class="analysis-section-card">
                 <h4><i class="fas fa-check-circle" style="color:#64C864;"></i> KELEBIHAN NAMA BARU</h4>
-                ${kelebihan.map(k => `<p style="margin-bottom:8px;">• ${k.text}</p>`).join('')}
+                ${kelebihan.map(k => `<p style="margin-bottom:8px;">Â• ${k.text}</p>`).join('')}
             </div>
             
             ${titikLuka ? `
@@ -451,9 +451,9 @@ function displayPurchasedNameResultNew(data) {
             <!-- SARAN PENGGUNAAN -->
             <div class="analysis-section-card">
                 <h4><i class="fas fa-lightbulb" style="color:#D4AF37;"></i> SARAN PENGGUNAAN</h4>
-                <p>• Gunakan <strong>"${data.name}"</strong> sebagai nama profesional di LinkedIn, email, atau kartu nama.</p>
-                <p>• Perkenalkan diri dengan nama ini di lingkungan baru untuk menarik energi positif.</p>
-                <p>• Tidak perlu mengubah dokumen legal, getaran nama bekerja saat diucapkan.</p>
+                <p>Â• Gunakan <strong>"${data.name}"</strong> sebagai nama profesional di LinkedIn, email, atau kartu nama.</p>
+                <p>Â• Perkenalkan diri dengan nama ini di lingkungan baru untuk menarik energi positif.</p>
+                <p>Â• Tidak perlu mengubah dokumen legal, getaran nama bekerja saat diucapkan.</p>
             </div>
             
             <!-- TOMBOL PDF -->
