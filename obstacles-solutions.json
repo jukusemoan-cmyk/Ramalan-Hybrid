@@ -1,0 +1,39 @@
+{
+  "templates": [
+    {
+      "id": "obstacle_fire",
+      "condition": "dominant_element === 'Api'",
+      "obstacle": "Dengan elemen Api yang dominan, tantangan terbesarmu adalah mengendalikan impulsivitas dan amarah. Kamu cenderung bertindak cepat tanpa berpikir panjang, yang terkadang membawa penyesalan. Energimu yang besar juga bisa membuatmu sulit beristirahat, sehingga rentan burnout.",
+      "solution": "Latihlah kesabaran dengan aktivitas yang membutuhkan ketenangan, seperti melukis, memancing, atau berkebun. Sebelum mengambil keputusan besar, biasakan untuk menghitung sampai 10 atau tidur dulu semalam. Jadwalkan waktu istirahat paksa dalam rutinitasmu—ingat, api pun perlu padam untuk mencegah kebakaran.",
+      "additional": "Olahraga kardio seperti lari atau berenang dapat menyalurkan energi Api secara positif."
+    },
+    {
+      "id": "obstacle_water",
+      "condition": "dominant_element === 'Air'",
+      "obstacle": "Elemen Air yang dominan membuatmu sangat sensitif dan mudah menyerap energi sekitar. Kamu cenderung overthinking dan larut dalam emosi, yang bisa mengaburkan logika. Tantangan terbesarmu adalah menetapkan batasan yang sehat antara dirimu dan orang lain.",
+      "solution": "Belajarlah untuk 'memagari' energimu. Visualisasikan perisai cahaya putih di sekelilingmu setiap pagi. Praktikkan journaling untuk mengeluarkan pikiran yang berkecamuk. Jangan ragu untuk mengatakan 'tidak' pada hal-hal yang menguras energimu.",
+      "additional": "Berendam air hangat dengan garam Epsom dapat membantu membersihkan energi negatif."
+    },
+    {
+      "id": "obstacle_earth",
+      "condition": "dominant_element === 'Tanah'",
+      "obstacle": "Elemen Tanah yang dominan membuatmu kokoh, namun juga cenderung kaku dan sulit berubah. Kamu bisa terlalu nyaman di zona nyaman dan menolak peluang baru karena takut risiko. Tantangan terbesarmu adalah belajar fleksibilitas.",
+      "solution": "Cobalah hal-hal kecil yang di luar rutinitasmu—ambil rute berbeda ke kantor, coba menu baru, atau ikuti kelas singkat yang tidak biasa. Ingatlah bahwa tanah yang subur adalah tanah yang diolah dan dicampur dengan unsur lain.",
+      "additional": "Yoga atau tai chi dapat membantu melatih kelenturan tubuh dan pikiran."
+    },
+    {
+      "id": "obstacle_wood",
+      "condition": "dominant_element === 'Kayu'",
+      "obstacle": "Elemen Kayu yang dominan membuatmu visioner dan penuh ide, namun juga bisa membuatmu terlalu keras kepala dan sulit menerima pendapat lain. Kamu cenderung memaksakan visimu tanpa melihat realitas di lapangan. Tantangan terbesarmu adalah belajar mendengarkan dan berkolaborasi.",
+      "solution": "Latihlah diri untuk menjadi pendengar aktif. Dalam rapat atau diskusi, biasakan untuk mendengarkan dulu tanpa menyela. Tuliskan ide-idemu, lalu evaluasi kembali setelah 24 jam sebelum mengeksekusinya.",
+      "additional": "Menghabiskan waktu di hutan atau taman dapat menyeimbangkan energi Kayumu."
+    },
+    {
+      "id": "obstacle_metal",
+      "condition": "dominant_element === 'Logam'",
+      "obstacle": "Elemen Logam yang dominan membuatmu tajam, disiplin, dan perfeksionis. Namun, kamu bisa terlalu kritis pada diri sendiri dan orang lain, serta sulit memaafkan. Tantangan terbesarmu adalah belajar menerima ketidaksempurnaan.",
+      "solution": "Praktikkan self-compassion—berbicaralah pada diri sendiri seperti kamu berbicara pada sahabat terbaikmu. Ingatlah bahwa 'cukup baik' seringkali lebih sehat daripada 'sempurna'. Luangkan waktu untuk aktivitas yang tidak memiliki standar penilaian, seperti menikmati musik atau berjalan-jalan tanpa tujuan.",
+      "additional": "Latihan pernapasan dalam dapat membantu meredakan ketegangan di dada dan paru-paru."
+    }
+  ]
+}
