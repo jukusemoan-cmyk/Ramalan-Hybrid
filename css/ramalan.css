@@ -256,3 +256,132 @@
         text-align: center;
     }
 }
+
+/* ========== RESPONSIVE UNTUK HP ========== */
+@media (max-width: 600px) {
+  
+  /* Identity Badges - jadi 2-3 per baris */
+  .identity-badge {
+    gap: 8px;
+  }
+  
+  .badge {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  /* Numerology Grid - stack 1 kolom */
+  .numerology-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+  
+  .numerology-card {
+    padding: 16px;
+  }
+  
+  .numerology-value {
+    font-size: 2.5rem;
+  }
+  
+  /* Aspect Grid - 2 kolom di HP */
+  .aspect-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
+  }
+  
+  .aspect-card {
+    padding: 16px 8px;
+  }
+  
+  .aspect-icon {
+    font-size: 1.8rem;
+  }
+  
+  .aspect-title {
+    font-size: 1rem;
+  }
+  
+  .free-prediction {
+    font-size: 0.8rem;
+  }
+  
+  /* Generator Packages - stack */
+  .package-card {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  
+  .package-card button {
+    width: 100%;
+  }
+  
+  /* Tabel Perbandingan */
+  table {
+    font-size: 0.8rem;
+  }
+  
+  td, th {
+    padding: 8px 4px !important;
+  }
+  
+  /* Chart */
+  #radarChart, #pieChart {
+    max-height: 200px;
+  }
+  
+  /* Section padding */
+  .numerology-section, .manuritas-section {
+    padding: 20px 16px !important;
+  }
+  
+  /* Power Name Box */
+  .power-name-box {
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+  
+  /* Tombol */
+  .btn-primary, .btn-premium, .btn-pdf, .btn-outline-gold {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+  
+  /* Oracle Card */
+  .oracle-card {
+    padding: 20px 16px;
+  }
+  
+  /* Header */
+  .mystic-header h1 {
+    font-size: 2rem;
+  }
+  
+  .sub-mystic {
+    font-size: 0.9rem;
+    padding-inline: 16px;
+  }
+  
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .footer div:last-child {
+    justify-content: center;
+  }
+}
+
+/* Untuk HP sangat kecil (<= 400px) */
+@media (max-width: 400px) {
+  .aspect-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .badge {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+}
