@@ -633,5 +633,6 @@ window.getStrengthLabel = getStrengthLabel;
 window.loadNameOptions = loadNameOptions;
 window.purchaseSelectedName = purchaseSelectedName;
 window.sharePurchasedName = sharePurchasedName;
+window.analyzeAddedWord = analyzeAddedWord;
 
 console.log(' manuritas-generator.js v4.0.0 loaded');
