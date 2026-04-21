@@ -1,0 +1,258 @@
+/* ================== ORACLE NUSANTARA - RAMALAN STYLES ================== */
+/* Khusus untuk halaman ramalan.html */
+/* ======================================================================== */
+
+/* ---------- HEADER RAMALAN ---------- */
+.mystic-header { 
+    text-align: center; 
+    margin-bottom: 32px; 
+}
+
+.mystic-header h1 { 
+    font-size: 3rem; 
+    letter-spacing: 2px; 
+    color: var(--primary-gold-light);
+}
+
+.sub-mystic {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    border-bottom: 1px solid var(--border-gold);
+    display: inline-block;
+    padding-bottom: 12px;
+    padding-inline: 32px;
+}
+
+/* ---------- NUMEROLOGY SECTION ---------- */
+.numerology-section, .manuritas-section {
+    margin: 40px 0;
+    padding: 32px;
+    background: rgba(15, 15, 20, 0.5);
+    border-radius: 24px;
+    border: 1px solid var(--border-gold);
+}
+
+.numerology-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.numerology-card {
+    text-align: center;
+    padding: 24px 16px;
+    background: rgba(10, 10, 12, 0.6);
+    border-radius: 20px;
+    border: 1px solid var(--border-gold);
+}
+
+.numerology-icon {
+    font-size: 2.2rem;
+    color: var(--primary-gold);
+    margin-bottom: 12px;
+}
+
+.numerology-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+.numerology-value {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--primary-gold);
+    font-family: var(--font-serif);
+    line-height: 1.2;
+}
+
+.numerology-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.power-name-box {
+    text-align: center;
+    padding: 18px 24px;
+    background: linear-gradient(145deg, rgba(20, 20, 25, 0.8), rgba(10, 10, 12, 0.8));
+    border-radius: 60px;
+    border: 1px solid var(--border-gold-light);
+    font-size: 1.2rem;
+    color: var(--primary-gold-light);
+}
+
+.power-name-box i {
+    color: var(--primary-gold);
+    margin-right: 10px;
+}
+
+/* ---------- ANALYSIS CARDS ---------- */
+.analysis-section-card {
+    background: rgba(15, 15, 20, 0.8);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border-gold);
+}
+
+.analysis-section-card h4 {
+    color: var(--primary-gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.analysis-section-card p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+    color: var(--text-muted);
+}
+
+.analysis-section-card p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-text {
+    color: var(--primary-gold-light);
+    font-weight: 500;
+}
+
+/* ---------- PDF BUTTON ---------- */
+.btn-pdf {
+    background: transparent;
+    border: 2px solid var(--primary-gold);
+    color: var(--primary-gold);
+    padding: 12px 24px;
+    border-radius: 60px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-pdf:hover {
+    background: var(--primary-gold);
+    color: var(--bg-dark);
+}
+
+.btn-pdf i {
+    margin-right: 8px;
+}
+
+.btn-outline-gold {
+    background: transparent;
+    border: 2px solid var(--primary-gold);
+    color: var(--primary-gold);
+    padding: 10px 20px;
+    border-radius: 60px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-outline-gold:hover {
+    background: var(--primary-gold);
+    color: var(--bg-dark);
+}
+
+/* ---------- LOADING & TOAST ---------- */
+#loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 12, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgba(212, 175, 55, 0.1);
+    border-top-color: var(--primary-gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin { 
+    to { transform: rotate(360deg); } 
+}
+
+.success-toast {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-gold);
+    color: var(--bg-dark);
+    padding: 16px 32px;
+    border-radius: 60px;
+    font-weight: 600;
+    z-index: 10000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from { top: -100px; opacity: 0; }
+    to { top: 24px; opacity: 1; }
+}
+
+/* ---------- GENERATOR PACKAGES ---------- */
+.package-card {
+    background: rgba(15, 15, 20, 0.8);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.package-silver {
+    border: 1px solid rgba(192, 192, 192, 0.3);
+}
+
+.package-gold {
+    border: 1px solid rgba(212, 175, 55, 0.5);
+}
+
+.package-platinum {
+    border: 1px solid rgba(100, 200, 100, 0.5);
+}
+
+.package-silver h4 { color: #C0C0C0; }
+.package-gold h4 { color: var(--primary-gold); }
+.package-platinum h4 { color: var(--success-green); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .numerology-grid { 
+        grid-template-columns: 1fr; 
+    }
+    
+    .mystic-header h1 { 
+        font-size: 2.2rem; 
+    }
+}
+
+@media (max-width: 600px) {
+    .numerology-section, .manuritas-section {
+        padding: 20px;
+    }
+    
+    .package-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
