@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "name": "Template Ramalan Bulanan",
+    "version": "1.0.0",
+    "description": "Template untuk generate ramalan 30 hari"
+  },
+  "templates": {
+    "Api": {
+      "minggu1": "Energi tinggi di awal bulan. Manfaatkan untuk memulai proyek baru.",
+      "minggu2": "Waspadai konflik kecil. Tarik napas sebelum bereaksi.",
+      "minggu3": "Minggu yang baik untuk networking dan presentasi.",
+      "minggu4": "Keuangan membaik. Saatnya menabung atau investasi kecil."
+    },
+    "Air": {
+      "minggu1": "Intuisi tajam. Percaya pada firasatmu minggu ini.",
+      "minggu2": "Hubungan sosial harmonis. Luangkan waktu untuk keluarga.",
+      "minggu3": "Kreativitas memuncak. Ekspresikan dirimu.",
+      "minggu4": "Saatnya refleksi dan perencanaan bulan depan."
+    },
+    "Tanah": {
+      "minggu1": "Fokus pada penyelesaian tugas tertunda.",
+      "minggu2": "Stabilitas keuangan. Hindari pengeluaran impulsif.",
+      "minggu3": "Kesehatan prima. Tetap jaga pola makan.",
+      "minggu4": "Peluang properti atau investasi jangka panjang muncul."
+    },
+    "Kayu": {
+      "minggu1": "Pertumbuhan karir terlihat. Ambil tanggung jawab baru.",
+      "minggu2": "Ide-ide segar bermunculan. Catat semua.",
+      "minggu3": "Hubungan dengan mentor atau guru membawa berkah.",
+      "minggu4": "Waktunya panen hasil kerja keras. Rayakan pencapaian."
+    },
+    "Logam": {
+      "minggu1": "Disiplin adalah kunci. Buat jadwal dan patuhi.",
+      "minggu2": "Keputusan penting menanti. Pertimbangkan matang-matang.",
+      "minggu3": "Keuangan terstruktur. Saatnya evaluasi anggaran.",
+      "minggu4": "Bantuan dari teman atau kolega datang tak terduga."
+    },
+    "Udara": {
+      "minggu1": "Komunikasi lancar. Sampaikan ide-idemu.",
+      "minggu2": "Perjalanan singkat membawa inspirasi baru.",
+      "minggu3": "Belajar hal baru sangat dianjurkan minggu ini.",
+      "minggu4": "Networking membuka pintu peluang tak terduga."
+    }
+  }
+}
