@@ -30,11 +30,11 @@ const PACKAGE_CONFIG = {
 
 // ---------- LABEL PERSENTASE ----------
 function getStrengthLabel(score) {
-    if (score >= 90) return { label: 'SANGAT KUAT', stars: '🌟🌟🌟🌟🌟', class: 'sangat-kuat' };
-    if (score >= 75) return { label: 'KUAT', stars: '🌟🌟🌟🌟', class: 'kuat' };
-    if (score >= 60) return { label: 'CUKUP', stars: '🌟🌟🌟', class: 'cukup' };
-    if (score >= 40) return { label: 'KURANG', stars: '🌟🌟', class: 'kurang' };
-    return { label: 'LEMAH', stars: '🌟', class: 'lemah' };
+    if (score >= 90) return { label: 'SANGAT KUAT', stars: 'ðŸŒŸðŸŒŸðŸŒŸðŸŒŸðŸŒŸ', class: 'sangat-kuat' };
+    if (score >= 75) return { label: 'KUAT', stars: 'ðŸŒŸðŸŒŸðŸŒŸðŸŒŸ', class: 'kuat' };
+    if (score >= 60) return { label: 'CUKUP', stars: 'ðŸŒŸðŸŒŸðŸŒŸ', class: 'cukup' };
+    if (score >= 40) return { label: 'KURANG', stars: 'ðŸŒŸðŸŒŸ', class: 'kurang' };
+    return { label: 'LEMAH', stars: 'ðŸŒŸ', class: 'lemah' };
 }
 
 // ---------- EVALUASI KONDISI NAMA (UNTUK TRAITS) ----------
@@ -349,7 +349,7 @@ function renderTraitsHTML(traits, title, icon = 'check-circle', color = '#64C864
     `;
     
     traits.forEach(t => {
-        html += `<p style="margin-bottom: 8px; color: #B0B0C0;">• ${t.text}</p>`;
+        html += `<p style="margin-bottom: 8px; color: #B0B0C0;">â€¢ ${t.text}</p>`;
     });
     
     html += `</div>`;
@@ -397,7 +397,7 @@ function generateSingleNameOption(originalName, targetMin, targetMax, weton, wuk
         });
     });
     
-    // Jika target tinggi (≥85), tambahkan kombinasi 2 kata
+    // Jika target tinggi (â‰¥85), tambahkan kombinasi 2 kata
     if (targetMin >= 85) {
         for (let i = 0; i < Math.min(uniqueWords.length, 10); i++) {
             for (let j = i + 1; j < Math.min(uniqueWords.length, 10); j++) {
@@ -477,7 +477,7 @@ async function loadNameOptions(packageType) {
     localStorage.setItem('tokenBalance', newBalance);
     if (typeof updateTokenDisplay === 'function') updateTokenDisplay();
     if (typeof showSuccessToast === 'function') {
-        showSuccessToast(`✅ ${config.tokenCost} Token digunakan. Sisa ${newBalance} Token.`);
+        showSuccessToast(`âœ… ${config.tokenCost} Token digunakan. Sisa ${newBalance} Token.`);
     }
     
     if (typeof showLoading === 'function') showLoading(true);
@@ -579,7 +579,7 @@ function displayNameOptionInline(option, config, originalName, currentStrength, 
                         border: 2px solid ${option.strength >= 75 ? '#64C864' : '#D4AF37'};">
                 
                 <div style="text-align: center; margin-bottom: 20px;">
-                    <h3 style="color: #D4AF37; font-size: 1.8rem; margin-bottom: 8px;">✨ ${option.name} ✨</h3>
+                    <h3 style="color: #D4AF37; font-size: 1.8rem; margin-bottom: 8px;">âœ¨ ${option.name} âœ¨</h3>
                     <div style="font-size: 2.5rem; font-weight: bold; color: ${option.strength >= 75 ? '#64C864' : '#D4AF37'};">
                         ${option.strength}%
                     </div>
@@ -802,7 +802,7 @@ async function downloadPremiumPDF() {
   
   pdf.setFontSize(8);
   pdf.setTextColor(80, 80, 80);
-  pdf.text('� 2026 Oracle Nusantara � Diterbitkan oleh Chandra Prasetya', pageWidth/2, 285, { align: 'center' });
+  pdf.text('© 2026 Oracle Nusantara • Diterbitkan oleh Chandra Prasetya', pageWidth/2, 285, { align: 'center' });
   
   pdf.save(`Oracle-Nusantara-Premium-${userName}.pdf`);
   showSuccessToast(' PDF Premium berhasil diunduh!');
@@ -827,7 +827,7 @@ function updateTokenDisplay() {
 // ---------- HIDE SILVER PACKAGE IF NEEDED ----------
 
 /**
- * Sembunyikan paket Silver jika kekuatan nama asli ≥ 60%
+ * Sembunyikan paket Silver jika kekuatan nama asli â‰¥ 60%
  * Dipanggil dari ramalan.html setelah Manuritas Premium di-unlock
  * @param {number} originalStrength - Persentase kekuatan nama asli
  */
@@ -856,4 +856,4 @@ window.evaluateNameConditions = evaluateNameConditions;
 window.getTraitsForName = getTraitsForName;
 window.hideSilverPackageIfNeeded = hideSilverPackageIfNeeded;
 
-console.log('✅ manuritas-generator.js v3.0.0 loaded');
+console.log('âœ… manuritas-generator.js v3.0.0 loaded');
