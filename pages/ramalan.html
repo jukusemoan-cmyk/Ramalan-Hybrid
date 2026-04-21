@@ -432,6 +432,26 @@ async function handleReveal() {
   const name = elements.userName.value.trim() || 'Sang Pencari';
   const fullName = elements.fullName.value.trim();
   const birthVal = elements.birthDate.value;
+  // Fungsi helper untuk mendapatkan traits dari nama
+function getTraitsForName(name) {
+  if (!name) return ['Kreatif', 'Analitis', 'Berwawasan'];
+  
+  const nameLower = name.toLowerCase();
+  const traits = [];
+  
+  // Contoh logika sederhana
+  if (nameLower.includes('a') || nameLower.includes('i')) traits.push('Kreatif');
+  if (nameLower.includes('r') || nameLower.includes('n')) traits.push('Analitis');
+  if (nameLower.includes('d') || nameLower.includes('m')) traits.push('Berwawasan');
+  if (nameLower.includes('s') || nameLower.includes('l')) traits.push('Diplomatis');
+  if (nameLower.includes('t') || nameLower.includes('k')) traits.push('Praktis');
+  
+  // Fallback jika traits kosong
+  if (traits.length === 0) return ['Kreatif', 'Analitis', 'Berwawasan'];
+  
+  // Kembalikan 3 traits unik
+  return [...new Set(traits)].slice(0, 3);
+}
   
   if (!birthVal) { 
     showErrorToast('Pilih tanggal lahir.'); 
@@ -567,28 +587,7 @@ function displayNumerology(fullName) {
   }
 }
 
-  // Fungsi helper untuk mendapatkan traits dari nama
-function getTraitsForName(name) {
-  if (!name) return ['Kreatif', 'Analitis', 'Berwawasan'];
-  
-  const nameLower = name.toLowerCase();
-  const traits = [];
-  
-  // Contoh logika sederhana
-  if (nameLower.includes('a') || nameLower.includes('i')) traits.push('Kreatif');
-  if (nameLower.includes('r') || nameLower.includes('n')) traits.push('Analitis');
-  if (nameLower.includes('d') || nameLower.includes('m')) traits.push('Berwawasan');
-  if (nameLower.includes('s') || nameLower.includes('l')) traits.push('Diplomatis');
-  if (nameLower.includes('t') || nameLower.includes('k')) traits.push('Praktis');
-  
-  // Fallback jika traits kosong
-  if (traits.length === 0) return ['Kreatif', 'Analitis', 'Berwawasan'];
-  
-  // Kembalikan 3 traits unik
-  return [...new Set(traits)].slice(0, 3);
-}
-  
-// ========== DISPLAY MANURITAS FREE ==========
+  // ========== DISPLAY MANURITAS FREE ==========
 async function displayManuritasFree(fullName) {
   const manuritasData = {
     tugasHidup: null,
