@@ -28,6 +28,59 @@ const PACKAGE_CONFIG = {
     }
 };
 
+// ---------- TRAITS FUNCTIONS (DIPINDAHKAN DARI RAMALAN.HTML) ----------
+function getTraitsForName(name, strengthScore, weton, wuku, filterType, limit = 2) {
+  const traitsData = window.manuritasTraitsData;
+  if (!traitsData || !traitsData.templates) {
+    return [];
+  }
+  
+  const templates = traitsData.templates.filter(t => {
+    if (filterType && t.type !== filterType) return false;
+    return true;
+  });
+  
+  return templates.slice(0, limit);
+}
+
+function renderTraitsHTML(traits, title, icon, color) {
+  if (!traits || traits.length === 0) {
+    return '';
+  }
+  
+  let html = `
+    <div style="margin-top: 20px;">
+      <h4 style="color: ${color}; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-${icon}"></i> ${title}
+      </h4>
+  `;
+  
+  traits.forEach(t => {
+    html += `<p style="margin-bottom: 8px; color: #B0B0C0;">• ${t.text}</p>`;
+  });
+  
+  html += `</div>`;
+  
+  return html;
+}
+
+// ---------- FALLBACK UNTUK FUNGSI TOAST ----------
+function showErrorToast(message) {
+  if (typeof window.showErrorToast === 'function') {
+    window.showErrorToast(message);
+  } else {
+    alert(message);
+  }
+}
+
+function showSuccessToast(message) {
+  if (typeof window.showSuccessToast === 'function') {
+    window.showSuccessToast(message);
+  } else {
+    alert(message);
+  }
+}
+
 // ---------- LABEL PERSENTASE ----------
 function getStrengthLabel(score) {
     if (score >= 90) return { label: 'SANGAT KUAT', stars: '', class: 'sangat-kuat' };
@@ -624,20 +677,20 @@ function analyzeAddedWord(word) {
   return { value, element, effect };
 }
 
-// ---------- DOWNLOAD SERTIFIKAT PDF ----------
+// ---------- DOWNLOAD SERTIFIKAT PDF (PERBAIKAN) ----------
 async function downloadPurchasedNamePDF() {
   console.log('🔵 downloadPurchasedNamePDF called');
   
   const data = window.purchasedNameData;
   if (!data) {
-    showErrorToast('Tidak ada data untuk diunduh.');
+    alert('Tidak ada data untuk diunduh.');
     return;
   }
   
   try {
     const { jsPDF } = window.jspdf;
     if (!jsPDF) {
-      showErrorToast('Library PDF tidak terload. Refresh halaman.');
+      alert('Library PDF tidak terload. Refresh halaman.');
       return;
     }
     
@@ -693,14 +746,14 @@ async function downloadPurchasedNamePDF() {
     // Footer
     pdf.setFontSize(10);
     pdf.text(`Dianalisis dengan Manuritas • oracle-nusantara.com`, 105, 280, { align: 'center' });
-    pdf.text(`© 2026 Oracle Nusantara • Diterbitkan oleh Doni Chandra Utama`, 105, 290, { align: 'center' });
+    pdf.text(`© 2026 Oracle Nusantara • Diterbitkan oleh Doni Chandra Utama`, 105, 285, { align: 'center' });
     
     pdf.save(`Sertifikat-Nama-${data.name.replace(/\s/g, '-')}.pdf`);
-    showSuccessToast('📄 Sertifikat PDF berhasil diunduh!');
+    alert('📄 Sertifikat PDF berhasil diunduh!');
     
   } catch(e) {
-    console.error('❌ Error downloadPurchasedNamePDF:', e);
-    showErrorToast('Gagal mengunduh PDF: ' + e.message);
+    console.error('❌ Error:', e);
+    alert('Gagal mengunduh PDF: ' + e.message);
   }
 }
 
