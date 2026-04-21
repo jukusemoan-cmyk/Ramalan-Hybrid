@@ -1,0 +1,612 @@
+{
+  "metadata": {
+    "name": "Manuritas Traits - Kelebihan & Kekurangan Nama",
+    "version": "1.0.0",
+    "description": "Template kelebihan dan kekurangan nama berdasarkan analisis Hanacaraka, pola huruf, elemen, weton, dan wuku. Digunakan untuk menampilkan Area yang Perlu Diperkuat (<60%) atau Kelebihan Nama (≥60%).",
+    "total_templates": 84,
+    "categories": ["kelebihan", "kekurangan"],
+    "priority_levels": {
+      "1": "Kombinasi unik (nama + weton + wuku)",
+      "2": "Kondisi spesifik (nilai ekstrem, pola huruf dominan)",
+      "3": "Kondisi umum"
+    },
+    "last_updated": "2026-04-21"
+  },
+  "templates": [
+    {
+      "id": "trait_001",
+      "type": "kelebihan",
+      "priority": 1,
+      "condition": "element_harmony === true && weton_neptu_tinggi === true && strength_score >= 75",
+      "text": "Perpaduan langka: elemen nama selaras dengan weton, Neptu tinggi, dan kekuatan nama optimal. Kamu memiliki fondasi energetik yang sangat kuat untuk mencapai kesuksesan besar. Ini adalah anugerah yang patut disyukuri."
+    },
+    {
+      "id": "trait_002",
+      "type": "kekurangan",
+      "priority": 1,
+      "condition": "element_conflict === true && weton_neptu_rendah === true && strength_score < 60",
+      "text": "Kombinasi yang menantang: elemen nama bertentangan dengan weton, Neptu rendah, dan kekuatan nama kurang. Kamu perlu bekerja ekstra untuk mencapai potensi maksimal. Pertimbangkan untuk memperkuat nama dengan menambah nama panggilan yang selaras."
+    },
+    {
+      "id": "trait_003",
+      "type": "kelebihan",
+      "priority": 1,
+      "condition": "wuku_spiritual === true && pattern_vocal_a === true && strength_score >= 60",
+      "text": "Wuku spiritual berpadu dengan dominasi huruf A dalam namamu. Kamu adalah pemimpin spiritual alami yang mampu menginspirasi banyak orang. Energi ini mendukungmu untuk menjadi pembawa perubahan positif."
+    },
+    {
+      "id": "trait_004",
+      "type": "kekurangan",
+      "priority": 1,
+      "condition": "wuku_konflik === true && length_short === true && strength_score < 60",
+      "text": "Wuku peralihan berpadu dengan nama pendek. Kamu mudah merasa tidak stabil dan sering berganti arah. Nama yang lebih 'berisi' bisa menjadi jangkar di tengah perubahan. Pertimbangkan menggunakan nama panggilan yang lebih panjang."
+    },
+    {
+      "id": "trait_005",
+      "type": "kelebihan",
+      "priority": 1,
+      "condition": "word_count_3 === true && value_high === true && strength_score >= 70",
+      "text": "Nama tiga kata dengan nilai Hanacaraka tinggi menciptakan struktur energetik yang kompleks dan kaya. Kamu adalah pribadi multi-talenta dengan banyak potensi. Setiap kata dalam namamu saling memperkuat."
+    },
+    {
+      "id": "trait_006",
+      "type": "kekurangan",
+      "priority": 1,
+      "condition": "word_count_1 === true && value_low === true && weton_neptu_rendah === true",
+      "text": "Nama satu kata dengan nilai rendah berpadu dengan Neptu kecil. Energimu terbatas dan mudah habis. Pertimbangkan menambah nama panggilan untuk memperkuat vibrasi dan memberikan dorongan energi tambahan."
+    },
+    {
+      "id": "trait_007",
+      "type": "kelebihan",
+      "priority": 1,
+      "condition": "element_strengthen === true && wuku_stabil === true && strength_score >= 75",
+      "text": "Elemen namamu memperkuat elemen weton, dan Wuku-mu stabil. Ini adalah kombinasi yang sangat mendukung untuk karir dan kehidupan sosial. Kamu mudah diterima dan dipercaya oleh orang lain."
+    },
+    {
+      "id": "trait_008",
+      "type": "kekurangan",
+      "priority": 1,
+      "condition": "element_weaken === true && value_very_low === true && strength_score < 50",
+      "text": "Elemen namamu melemahkan elemen weton, dan nilai Hanacaraka sangat rendah. Ini menciptakan 'kebocoran energi' yang membuatmu mudah lelah dan kurang beruntung. Sangat disarankan untuk mempertimbangkan nama baru."
+    },
+    {
+      "id": "trait_009",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "pattern_vocal_a === true && strength_score >= 60",
+      "text": "Dominasi huruf A memberikan energi kepemimpinan dan keberanian. Kamu memiliki inisiatif tinggi dan tidak takut memulai hal baru. Ini adalah anugerah yang patut disyukuri."
+    },
+    {
+      "id": "trait_010",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "pattern_excess_a === true && strength_score < 60",
+      "text": "Terlalu banyak huruf A bisa membuat emosi mudah meledak-ledak. Waspadalah, karena ini bisa menjadi bumerang jika tidak dikelola. Belajarlah untuk mengelola emosi dengan bijak dan tarik napas dalam sebelum bereaksi."
+    },
+    {
+      "id": "trait_011",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "pattern_vocal_i === true && strength_score >= 60",
+      "text": "Dominasi huruf I memberikan ketajaman intuisi dan kecerdasan analitis. Kamu mampu melihat hal-hal yang tidak terlihat oleh orang lain. Percayalah pada instingmu, karena ia jarang salah."
+    },
+    {
+      "id": "trait_012",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "pattern_excess_i === true && strength_score < 60",
+      "text": "Terlalu banyak huruf I membuatmu cenderung overthinking dan terlalu kritis pada diri sendiri. Belajarlah untuk lebih memaafkan diri sendiri dan menerima bahwa tidak semua hal harus sempurna."
+    },
+    {
+      "id": "trait_013",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "pattern_vocal_u === true && strength_score >= 60",
+      "text": "Dominasi huruf U memberikan kebijaksanaan dan kedalaman emosi. Kamu adalah pendengar yang baik dan sering menjadi tempat curhat orang lain. Ketenanganmu adalah kekuatan."
+    },
+    {
+      "id": "trait_014",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "pattern_excess_u === true && strength_score < 60",
+      "text": "Terlalu banyak huruf U membuatmu cenderung tertutup dan sulit mengekspresikan diri. Orang lain mungkin kesulitan memahami perasaanmu. Cobalah lebih terbuka pada orang-orang terdekat."
+    },
+    {
+      "id": "trait_015",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "pattern_vocal_e === true && strength_score >= 60",
+      "text": "Dominasi huruf E memberikan keseimbangan dan kemampuan adaptasi yang baik. Kamu fleksibel dalam menghadapi perubahan dan mudah menyesuaikan diri di lingkungan baru."
+    },
+    {
+      "id": "trait_016",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "pattern_excess_e === true && strength_score < 60",
+      "text": "Terlalu banyak huruf E membuatmu cenderung ragu-ragu dan sulit mengambil keputusan. Kamu sering melihat semua sisi hingga bingung sendiri. Percayalah pada pilihan pertamamu."
+    },
+    {
+      "id": "trait_017",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "pattern_vocal_o === true && strength_score >= 60",
+      "text": "Dominasi huruf O memberikan keterbukaan dan optimisme. Kamu memancarkan energi positif yang menarik orang lain. Senyummu adalah kekuatan yang menginspirasi."
+    },
+    {
+      "id": "trait_018",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "pattern_excess_o === true && strength_score < 60",
+      "text": "Terlalu banyak huruf O membuatmu terlalu terbuka dan mudah dimanfaatkan orang lain. Belajarlah untuk memasang batasan dan mengatakan 'tidak' ketika diperlukan."
+    },
+    {
+      "id": "trait_019",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "pattern_consonant_dominant === true && strength_score >= 60",
+      "text": "Dominasi konsonan memberikan struktur dan keteguhan yang kuat. Kamu adalah pribadi yang dapat diandalkan dan konsisten dalam menjalankan tanggung jawab."
+    },
+    {
+      "id": "trait_020",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "pattern_consonant_dominant === true && strength_score < 60",
+      "text": "Terlalu banyak konsonan membuatmu cenderung kaku dan sulit beradaptasi dengan perubahan. Cobalah lebih fleksibel dalam menghadapi situasi baru."
+    },
+    {
+      "id": "trait_021",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "pattern_vocal_dominant === true && strength_score >= 60",
+      "text": "Dominasi vokal memberikan kelancaran dalam berkomunikasi dan mengekspresikan diri. Kamu pandai menyampaikan ide dan perasaan dengan jelas."
+    },
+    {
+      "id": "trait_022",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "pattern_vocal_dominant === true && strength_score < 60",
+      "text": "Terlalu banyak vokal membuatmu seperti 'bocor' secara energetik. Kamu mudah dipengaruhi dan kehilangan arah. Perkuat batasan personalmu."
+    },
+    {
+      "id": "trait_023",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "pattern_balance === true",
+      "text": "Keseimbangan vokal dan konsonan dalam namamu menciptakan harmoni yang langka. Kamu mampu mengekspresikan diri sekaligus menjaga struktur. Ini adalah fondasi yang sangat baik."
+    },
+    {
+      "id": "trait_024",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "value_very_high === true && strength_score >= 90",
+      "text": "Nilai Hanacaraka sangat tinggi dan selaras dengan lahirmu. Ini adalah kombinasi langka yang menandakan potensi kepemimpinan besar. Kamu ditakdirkan untuk hal-hal besar."
+    },
+    {
+      "id": "trait_025",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "value_very_high === true && strength_score < 90",
+      "text": "Nilai Hanacaraka sangat tinggi tapi tidak selaras. Ini seperti memiliki mesin Ferrari dengan rem sepeda—energi besar tapi sulit dikendalikan. Fokuskan energimu pada satu tujuan."
+    },
+    {
+      "id": "trait_026",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "value_high === true && strength_score >= 75",
+      "text": "Nilai Hanacaraka yang tinggi menunjukkan energi besar dan potensi luar biasa. Kamu memiliki kapasitas untuk mencapai hal-hal besar dalam hidup."
+    },
+    {
+      "id": "trait_027",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "value_high === true && strength_score < 75",
+      "text": "Nilai Hanacaraka tinggi namun tidak didukung keseimbangan. Energimu besar tapi sulit dikendalikan, seperti api yang membakar tanpa arah."
+    },
+    {
+      "id": "trait_028",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "value_balanced === true",
+      "text": "Nilai Hanacaraka yang seimbang menunjukkan energi yang stabil dan terkelola dengan baik. Kamu tidak mudah goyah oleh situasi eksternal."
+    },
+    {
+      "id": "trait_029",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "value_low === true && strength_score >= 50",
+      "text": "Meskipun nilai Hanacaraka tidak tinggi, justru ini membuatmu fokus dan tidak terpecah. Kesederhanaan adalah kekuatanmu."
+    },
+    {
+      "id": "trait_030",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "value_low === true && strength_score < 50",
+      "text": "Nilai Hanacaraka rendah menunjukkan fondasi energi yang lemah. Kamu mudah lelah dan kurang stamina dalam menghadapi tantangan berat."
+    },
+    {
+      "id": "trait_031",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "value_very_low === true && strength_score < 40",
+      "text": "Nilai Hanacaraka sangat rendah menunjukkan defisit energi vital. Kamu perlu memperkuat nama dengan menambah nama panggilan yang memiliki vibrasi lebih kuat."
+    },
+    {
+      "id": "trait_032",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "length_ideal === true",
+      "text": "Panjang namamu ideal (8-15 huruf), menciptakan keseimbangan antara ekspresi dan struktur. Ini adalah fondasi yang baik untuk kesuksesan."
+    },
+    {
+      "id": "trait_033",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "length_short === true && strength_score < 60",
+      "text": "Nama yang terlalu pendek (< 8 huruf) membuat energimu kurang 'berisi'. Pertimbangkan untuk menggunakan nama panggilan yang lebih panjang di lingkungan profesional."
+    },
+    {
+      "id": "trait_034",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "length_long === true && strength_score >= 60",
+      "text": "Nama yang panjang memberikan kekayaan energi dan kompleksitas. Kamu adalah pribadi yang multi-dimensi dan tidak mudah ditebak."
+    },
+    {
+      "id": "trait_035",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "length_long === true && strength_score < 60",
+      "text": "Nama yang panjang justru membuat energimu terpecah-pecah. Kamu sering merasa memiliki banyak 'diri' yang berbeda dan sulit fokus."
+    },
+    {
+      "id": "trait_036",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "length_very_long === true",
+      "text": "Nama yang sangat panjang (> 25 huruf) membuat energi terlalu tersebar. Pertimbangkan untuk menggunakan nama panggilan yang lebih ringkas untuk aktivitas sehari-hari."
+    },
+    {
+      "id": "trait_037",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "word_count_2 === true",
+      "text": "Nama dua kata menciptakan keseimbangan yang baik antara identitas personal dan keluarga. Ini adalah struktur nama yang klasik dan efektif."
+    },
+    {
+      "id": "trait_038",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "word_count_3 === true",
+      "text": "Nama tiga kata memberikan kedalaman dan kekayaan makna. Setiap kata membawa energinya sendiri yang saling melengkapi."
+    },
+    {
+      "id": "trait_039",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "word_count_many === true",
+      "text": "Nama dengan lebih dari tiga kata bisa membuat energi terlalu tersebar. Pertimbangkan untuk menggunakan nama panggilan yang lebih ringkas."
+    },
+    {
+      "id": "trait_040",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "element_harmony === true",
+      "text": "Elemen namamu selaras dengan elemen lahirmu. Ini menciptakan harmoni energetik yang mendukung kesuksesan alami."
+    },
+    {
+      "id": "trait_041",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "element_conflict === true",
+      "text": "Elemen namamu bertentangan dengan elemen lahirmu. Ini menciptakan 'gesekan' internal yang bisa melelahkan secara mental dan emosional."
+    },
+    {
+      "id": "trait_042",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "element_strengthen === true",
+      "text": "Elemen namamu memperkuat elemen lahirmu. Ini seperti menambah bahan bakar pada api—energimu berlipat ganda."
+    },
+    {
+      "id": "trait_043",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "element_weaken === true",
+      "text": "Elemen namamu melemahkan elemen lahirmu. Ini seperti air yang memadamkan api—potensimu terhambat oleh namamu sendiri."
+    },
+    {
+      "id": "trait_044",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "start_vocal === true && strength_score >= 60",
+      "text": "Nama yang diawali vokal memberikan energi inisiatif dan keterbukaan. Kamu mudah memulai hal baru dan tidak takut mengambil langkah pertama."
+    },
+    {
+      "id": "trait_045",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "start_vocal === true && strength_score < 60",
+      "text": "Nama yang diawali vokal membuatmu terlalu terbuka dan mudah 'diserang' secara energetik. Perkuat batasan personalmu."
+    },
+    {
+      "id": "trait_046",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "start_consonant === true && strength_score >= 60",
+      "text": "Nama yang diawali konsonan memberikan fondasi yang kokoh. Kamu terstruktur dan dapat diandalkan dalam menyelesaikan sesuatu."
+    },
+    {
+      "id": "trait_047",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "start_consonant === true && strength_score < 60",
+      "text": "Nama yang diawali konsonan membuatmu cenderung defensif dan sulit membuka diri pada peluang baru. Cobalah lebih terbuka."
+    },
+    {
+      "id": "trait_048",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "end_vocal === true",
+      "text": "Nama yang diakhiri vokal memberikan energi yang mengalir dan tidak terputus. Rezeki dan peluang cenderung datang berkelanjutan."
+    },
+    {
+      "id": "trait_049",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "end_consonant === true && strength_score >= 60",
+      "text": "Nama yang diakhiri konsonan memberikan kesan tegas dan final. Kamu dikenal sebagai orang yang menyelesaikan apa yang dimulai."
+    },
+    {
+      "id": "trait_050",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "end_consonant === true && strength_score < 60",
+      "text": "Nama yang diakhiri konsonan membuat energimu 'tertutup' di akhir. Peluang sering datang tapi sulit bertahan lama."
+    },
+    {
+      "id": "trait_051",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "double_letter === true && strength_score >= 60",
+      "text": "Huruf ganda dalam namamu menandakan intensitas dan pendalaman. Kamu tidak setengah-setengah dalam menjalani hidup."
+    },
+    {
+      "id": "trait_052",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "double_letter === true && strength_score < 60",
+      "text": "Huruf ganda justru menciptakan 'energi yang terhambat'. Ada potensi yang sulit keluar karena terhalang oleh dirimu sendiri."
+    },
+    {
+      "id": "trait_053",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "unique_letter === true",
+      "text": "Kehadiran huruf unik (F, Q, V, X, Z) dalam namamu memberikan daya tarik tersendiri. Kamu mudah diingat dan memiliki karisma alami."
+    },
+    {
+      "id": "trait_054",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "weton_neptu_tinggi === true",
+      "text": "Neptu wetonmu tinggi (≥13), memberikan energi besar dan potensi kepemimpinan. Kamu memiliki 'bahan bakar' yang melimpah untuk mencapai tujuan."
+    },
+    {
+      "id": "trait_055",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "weton_neptu_rendah === true && strength_score < 60",
+      "text": "Neptu wetonmu rendah (≤8), sehingga kamu membutuhkan nama yang memberikan dorongan energi tambahan. Nama yang kuat bisa menjadi 'booster' energetik."
+    },
+    {
+      "id": "trait_056",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "weton_neptu_seimbang === true",
+      "text": "Neptu wetonmu seimbang (9-12), memberikan stabilitas dan kemudahan dalam menjalani hidup. Kamu tidak terlalu terbebani atau kekurangan energi."
+    },
+    {
+      "id": "trait_057",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "wuku_spiritual === true",
+      "text": "Wuku lahirmu (Sungsang, Dungulan, Kuningan) memiliki energi spiritual tinggi. Kamu memiliki koneksi alami dengan hal-hal yang bersifat batiniah."
+    },
+    {
+      "id": "trait_058",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "wuku_konflik === true && strength_score < 60",
+      "text": "Wuku lahirmu (Watugunung, Klawu, Dukut) adalah masa peralihan. Nama yang stabil akan menjadi jangkar di tengah perubahan yang sering kamu alami."
+    },
+    {
+      "id": "trait_059",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "wuku_stabil === true",
+      "text": "Wuku lahirmu (Sinta, Landep, Ukir) memiliki energi yang stabil dan terstruktur. Ini mendukungmu untuk membangun fondasi yang kokoh dalam hidup."
+    },
+    {
+      "id": "trait_060",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "sinkron_nama_weton === true",
+      "text": "Elemen namamu selaras dengan elemen weton. Ini menciptakan harmoni yang langka dan mendukung kesuksesan dalam berbagai aspek kehidupan."
+    },
+    {
+      "id": "trait_061",
+      "type": "kekurangan",
+      "priority": 2,
+      "condition": "konflik_nama_weton === true",
+      "text": "Elemen namamu bertentangan dengan elemen weton. Ini menciptakan gesekan internal yang perlu dikelola dengan bijak agar tidak menghambat kemajuanmu."
+    },
+    {
+      "id": "trait_062",
+      "type": "kelebihan",
+      "priority": 2,
+      "condition": "sinkron_nama_wuku === true",
+      "text": "Elemen namamu selaras dengan wuku lahirmu. Bakat alami yang dibawa sejak lahir diperkuat oleh vibrasi namamu."
+    },
+    {
+      "id": "trait_063",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "pattern_has_r === true",
+      "text": "Kehadiran huruf R memberikan energi keberanian dan semangat juang. Kamu tidak mudah menyerah dalam menghadapi tantangan."
+    },
+    {
+      "id": "trait_064",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "pattern_has_k === true",
+      "text": "Kehadiran huruf K memberikan energi kekuatan dan fondasi. Kamu memiliki prinsip yang kuat dan tidak mudah goyah."
+    },
+    {
+      "id": "trait_065",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "pattern_has_s === true",
+      "text": "Kehadiran huruf S memberikan energi komunikasi dan penyebaran. Kamu mudah menyampaikan ide dan mempengaruhi orang lain."
+    },
+    {
+      "id": "trait_066",
+      "type": "kekurangan",
+      "priority": 3,
+      "condition": "pattern_no_r === true",
+      "text": "Ketiadaan huruf R dalam namamu bisa mengurangi energi keberanian. Kamu mungkin perlu lebih memupuk rasa percaya diri dalam menghadapi tantangan."
+    },
+    {
+      "id": "trait_067",
+      "type": "kekurangan",
+      "priority": 3,
+      "condition": "pattern_no_s === true",
+      "text": "Ketiadaan huruf S dalam namamu bisa mempengaruhi kemampuan komunikasi. Latihlah diri untuk lebih ekspresif dalam menyampaikan pikiran."
+    },
+    {
+      "id": "trait_068",
+      "type": "kekurangan",
+      "priority": 3,
+      "condition": "pattern_no_u === true",
+      "text": "Ketiadaan huruf U dalam namamu bisa mengurangi unsur Air (ketenangan). Kamu mungkin mudah gelisah dan perlu melatih ketenangan batin."
+    },
+    {
+      "id": "trait_069",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "pattern_ending_i === true",
+      "text": "Nama yang diakhiri huruf I memberikan energi kepekaan dan intuisi yang tajam. Kamu sering 'merasakan' sesuatu sebelum terjadi."
+    },
+    {
+      "id": "trait_070",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "pattern_double_vocal === true && strength_score >= 60",
+      "text": "Kehadiran vokal ganda (seperti 'ai', 'au') memberikan aliran energi yang lebih kuat. Ini mendukung kreativitas dan ekspresi dirimu."
+    },
+    {
+      "id": "trait_071",
+      "type": "kekurangan",
+      "priority": 3,
+      "condition": "pattern_ending_konsonan === true && strength_score < 60",
+      "text": "Nama yang diakhiri konsonan selain R, S, T bisa membuat energi 'tertahan'. Pertimbangkan untuk menggunakan nama panggilan dengan akhiran vokal."
+    },
+    {
+      "id": "trait_072",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_ma === true",
+      "text": "Kehadiran suku kata 'ma' dalam namamu memberikan energi keibuan dan pengasuhan. Kamu adalah pribadi yang peduli dan melindungi."
+    },
+    {
+      "id": "trait_073",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_ra === true",
+      "text": "Kehadiran suku kata 'ra' dalam namamu memberikan energi matahari dan semangat. Kamu adalah sumber energi bagi orang-orang di sekitarmu."
+    },
+    {
+      "id": "trait_074",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_ka === true",
+      "text": "Kehadiran suku kata 'ka' dalam namamu memberikan energi kreativitas dan keinginan kuat. Kamu memiliki dorongan untuk terus berkarya."
+    },
+    {
+      "id": "trait_075",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_sa === true",
+      "text": "Kehadiran suku kata 'sa' dalam namamu memberikan energi komunikasi dan ketenangan. Kamu adalah pembawa damai dalam konflik."
+    },
+    {
+      "id": "trait_076",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_wa === true",
+      "text": "Kehadiran suku kata 'wa' dalam namamu memberikan energi harmoni dan keseimbangan. Kamu mampu menyatukan berbagai pihak."
+    },
+    {
+      "id": "trait_077",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_ja === true",
+      "text": "Kehadiran suku kata 'ja' dalam namamu memberikan energi kemenangan dan kehormatan. Kamu ditakdirkan untuk mencapai kejayaan."
+    },
+    {
+      "id": "trait_078",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_ya === true",
+      "text": "Kehadiran suku kata 'ya' dalam namamu memberikan energi kebijaksanaan dan pengalaman. Kamu belajar dengan cepat dari setiap kejadian."
+    },
+    {
+      "id": "trait_079",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_ga === true",
+      "text": "Kehadiran suku kata 'ga' dalam namamu memberikan energi keberanian dan terobosan. Kamu adalah pionir yang berani mengambil risiko."
+    },
+    {
+      "id": "trait_080",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_ba === true",
+      "text": "Kehadiran suku kata 'ba' dalam namamu memberikan energi kedamaian dan kesejukan. Kamu adalah penyejuk di tengah situasi panas."
+    },
+    {
+      "id": "trait_081",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_nga === true",
+      "text": "Kehadiran suku kata 'nga' dalam namamu memberikan energi kesempurnaan dan kebijaksanaan tertinggi. Kamu memiliki potensi menjadi guru atau pembimbing."
+    },
+    {
+      "id": "trait_082",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_dha === true",
+      "text": "Kehadiran suku kata 'dha' dalam namamu memberikan energi ketahanan dan kegigihan. Kamu adalah pejuang yang tidak mudah menyerah."
+    },
+    {
+      "id": "trait_083",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "name_contains_tha === true",
+      "text": "Kehadiran suku kata 'tha' dalam namamu memberikan energi kekokohan dan prinsip kuat. Kamu adalah pribadi yang teguh pendirian."
+    },
+    {
+      "id": "trait_fallback_kelebihan",
+      "type": "kelebihan",
+      "priority": 3,
+      "condition": "default === true",
+      "text": "Tidak ada kelebihan dominan yang terdeteksi. Namamu memiliki energi yang seimbang dan harmonis. Ini adalah fondasi yang baik untuk menjalani kehidupan."
+    },
+    {
+   "id": "trait_fallback_kekurangan",
+  "type": "kekurangan",
+  "priority": 3,
+  "condition": "default === true",
+  "text": "Nilai Hanacaraka yang rendah menunjukkan perlunya penguatan energetik. Pertimbangkan untuk menambah nama panggilan atau menggunakan Generator Nama Selaras untuk mendapatkan vibrasi yang lebih kuat."
+}
+  ]
+}
