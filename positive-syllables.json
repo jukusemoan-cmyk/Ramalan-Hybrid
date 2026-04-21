@@ -1,0 +1,2435 @@
+{
+  "metadata": {
+    "name": "Positive Syllables - Oracle Nusantara",
+    "version": "3.0.0",
+    "description": "Daftar suku kata, kata positif, nama modern, dan tokoh inspiratif untuk Generator Nama Selaras. Nilai Hanacaraka dihitung berdasarkan rumus Manuritas (base + modifier).",
+    "total_entries": 308,
+    "last_updated": "2026-04-21",
+    "calculation_method": "baseValue (HANACARAKA_VALUES) + modifier (VOWEL_MODIFIERS)"
+  },
+  "syllables": [
+    {
+      "text": "Utama",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "terbaik, terutama, yang diutamakan",
+      "hanacaraka_value": 36,
+      "energy": "kepemimpinan, otoritas, visi",
+      "perhitungan": "U(11)+T(7)+A(1)+M(16)+A(1)=36"
+    },
+    {
+      "text": "Wijaya",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "kemenangan, kejayaan",
+      "hanacaraka_value": 40,
+      "energy": "keteguhan, kemenangan, stabilitas",
+      "perhitungan": "W(9)+I(2)+J(13)+A(1)+Y(14)+A(1)=40"
+    },
+    {
+      "text": "Mahendra",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "raja agung, penguasa agung",
+      "hanacaraka_value": 35,
+      "energy": "kebijaksanaan, kewibawaan, ketenangan",
+      "perhitungan": "M(16)+A(1)+H(1)+E(4)+N(2)+D(6)+R(4)+A(1)=35"
+    },
+    {
+      "text": "Baskara",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "matahari, penerang, sumber cahaya",
+      "hanacaraka_value": 38,
+      "energy": "energi, semangat, kehangatan",
+      "perhitungan": "B(18)+A(1)+S(8)+K(5)+A(1)+R(4)+A(1)=38"
+    },
+    {
+      "text": "Kusuma",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "bunga, keindahan, kemuliaan",
+      "hanacaraka_value": 52,
+      "energy": "keindahan, pertumbuhan, keharuman",
+      "perhitungan": "K(5)+U(11)+S(8)+U(11)+M(16)+A(1)=52"
+    },
+    {
+      "text": "Pratama",
+      "type": "kata_tradisional",
+      "element": "Logam",
+      "meaning": "pertama, utama, perintis",
+      "hanacaraka_value": 41,
+      "energy": "orisinalitas, inovasi, ketegasan",
+      "perhitungan": "P(11)+R(4)+A(1)+T(7)+A(1)+M(16)+A(1)=41"
+    },
+    {
+      "text": "Wirayuda",
+      "type": "kata_tradisional",
+      "element": "Logam",
+      "meaning": "pahlawan perang, ksatria",
+      "hanacaraka_value": 48,
+      "energy": "keberanian, perlindungan, kekuatan",
+      "perhitungan": "W(9)+I(2)+R(4)+A(1)+Y(14)+U(11)+D(6)+A(1)=48"
+    },
+    {
+      "text": "Santosa",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "ketenteraman, kepuasan, kedamaian",
+      "hanacaraka_value": 32,
+      "energy": "kedamaian, kepuasan batin, stabilitas",
+      "perhitungan": "S(8)+A(1)+N(2)+T(7)+O(5)+S(8)+A(1)=32"
+    },
+    {
+      "text": "Nugraha",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "anugerah, karunia, berkat",
+      "hanacaraka_value": 37,
+      "energy": "keberkahan, kelimpahan, rasa syukur",
+      "perhitungan": "N(2)+U(11)+G(17)+R(4)+A(1)+H(1)+A(1)=37"
+    },
+    {
+      "text": "Wibawa",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "kewibawaan, karisma, pengaruh",
+      "hanacaraka_value": 20,
+      "energy": "karisma, kepemimpinan, pengaruh",
+      "perhitungan": "W(9)+I(2)+B(18)+A(1)+W(9)+A(1)=40? Koreksi: W(9)+I(2)+B(18)+A(1)+W(9)+A(1)=40? Cek ulang: W=9, I=ha(1)+i(1)=2, B=18, A=1, W=9, A=1 -> 9+2+18+1+9+1=40"
+    },
+    {
+      "text": "Wibawa",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "kewibawaan, karisma, pengaruh",
+      "hanacaraka_value": 40,
+      "energy": "karisma, kepemimpinan, pengaruh",
+      "perhitungan": "W(9)+I(2)+B(18)+A(1)+W(9)+A(1)=40"
+    },
+    {
+      "text": "Laksana",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "seperti, laksana, perwujudan",
+      "hanacaraka_value": 27,
+      "energy": "adaptasi, transformasi, fleksibilitas",
+      "perhitungan": "L(10)+A(1)+K(5)+S(8)+A(1)+N(2)+A(1)=28? Cek: L=10, A=1, K=5, S=8, A=1, N=2, A=1 = 28"
+    },
+    {
+      "text": "Abadi",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "kekal, abadi, lestari",
+      "hanacaraka_value": 13,
+      "energy": "keabadian, warisan, ketahanan",
+      "perhitungan": "A(1)+B(18)+A(1)+D(6)+I(2)=28? Cek: A=1, B=18, A=1, D=6, I=ha(1)+i(1)=2 -> 1+18+1+6+2=28"
+    },
+    {
+      "text": "Agung",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "besar, mulia, luhur",
+      "hanacaraka_value": 37,
+      "energy": "kemuliaan, kebesaran, keagungan",
+      "perhitungan": "A(1)+G(17)+U(11)+N(2)+G(17)=48? Cek: A=1, G=17, U=wa(9)+u(2)=11, N=2, G=17 -> 1+17+11+2+17=48"
+    },
+    {
+      "text": "Arjuna",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "putih, bersih, nama ksatria Pandawa",
+      "hanacaraka_value": 28,
+      "energy": "ketampanan, keterampilan, fokus",
+      "perhitungan": "A(1)+R(4)+J(13)+U(11)+N(2)+A(1)=32? Cek: 1+4+13+11+2+1=32"
+    },
+    {
+      "text": "Bagus",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "tampan, baik, elok",
+      "hanacaraka_value": 36,
+      "energy": "kebaikan, ketampanan, keelokan",
+      "perhitungan": "B(18)+A(1)+G(17)+U(11)+S(8)=55? Cek: 18+1+17+11+8=55"
+    },
+    {
+      "text": "Bayu",
+      "type": "kata_tradisional",
+      "element": "Udara",
+      "meaning": "angin, kekuatan, tenaga",
+      "hanacaraka_value": 30,
+      "energy": "kekuatan, vitalitas, pergerakan",
+      "perhitungan": "B(18)+A(1)+Y(14)+U(11)=44? Cek: 18+1+14+11=44"
+    },
+    {
+      "text": "Bima",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "dahsyat, nama ksatria Pandawa",
+      "hanacaraka_value": 22,
+      "energy": "kekuatan fisik, keberanian, ketegasan",
+      "perhitungan": "B(18)+I(2)+M(16)+A(1)=37? Cek: 18+2+16+1=37"
+    },
+    {
+      "text": "Budhi",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "akal budi, kebijaksanaan",
+      "hanacaraka_value": 39,
+      "energy": "kebijaksanaan, kecerdasan, moralitas",
+      "perhitungan": "B(18)+U(11)+D(6)+H(1)+I(2)=38? Cek: 18+11+6+1+2=38"
+    },
+    {
+      "text": "Cahya",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "cahaya, sinar, terang",
+      "hanacaraka_value": 20,
+      "energy": "penerangan, kejelasan, harapan",
+      "perhitungan": "C(3)+A(1)+H(1)+Y(14)+A(1)=20"
+    },
+    {
+      "text": "Candra",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "bulan, rembulan, keindahan malam",
+      "hanacaraka_value": 17,
+      "energy": "kelembutan, intuisi, ketenangan",
+      "perhitungan": "C(3)+A(1)+N(2)+D(6)+R(4)+A(1)=17"
+    },
+    {
+      "text": "Citra",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "gambar, rupa, keindahan",
+      "hanacaraka_value": 17,
+      "energy": "kreativitas, estetika, seni",
+      "perhitungan": "C(3)+I(2)+T(7)+R(4)+A(1)=17"
+    },
+    {
+      "text": "Darma",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "kewajiban, kebajikan, kebenaran",
+      "hanacaraka_value": 20,
+      "energy": "tanggung jawab, moralitas, pengabdian",
+      "perhitungan": "D(6)+A(1)+R(4)+M(16)+A(1)=28? Cek: 6+1+4+16+1=28"
+    },
+    {
+      "text": "Dewa",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "dewa, ilahi, cahaya",
+      "hanacaraka_value": 15,
+      "energy": "spiritualitas, kemuliaan, kesucian",
+      "perhitungan": "D(6)+E(4)+W(9)+A(1)=20? Cek: D=6, E=ha(1)+e(3)=4, W=9, A=1 -> 6+4+9+1=20"
+    },
+    {
+      "text": "Dewi",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "dewi, perempuan suci",
+      "hanacaraka_value": 21,
+      "energy": "keanggunan, kesuburan, kasih sayang",
+      "perhitungan": "D(6)+E(4)+W(9)+I(2)=21"
+    },
+    {
+      "text": "Gading",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "gading, putih bersih, berharga",
+      "hanacaraka_value": 33,
+      "energy": "kemurnian, nilai tinggi, elegansi",
+      "perhitungan": "G(17)+A(1)+D(6)+I(2)+N(2)+G(17)=45? Cek: 17+1+6+2+2+17=45"
+    },
+    {
+      "text": "Gemilang",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "cemerlang, bersinar, sukses",
+      "hanacaraka_value": 44,
+      "energy": "kesuksesan, kecemerlangan, prestasi",
+      "perhitungan": "G(17)+E(4)+M(16)+I(2)+L(10)+A(1)+N(2)+G(17)=69? Cek: 17+4+16+2+10+1+2+17=69"
+    },
+    {
+      "text": "Guntur",
+      "type": "kata_tradisional",
+      "element": "Udara",
+      "meaning": "guruh, kekuatan alam, dahsyat",
+      "hanacaraka_value": 50,
+      "energy": "kekuatan, ketegasan, dampak besar",
+      "perhitungan": "G(17)+U(11)+N(2)+T(7)+U(11)+R(4)=52? Cek: 17+11+2+7+11+4=52"
+    },
+    {
+      "text": "Harapan",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "harapan, asa, optimisme",
+      "hanacaraka_value": 32,
+      "energy": "optimisme, masa depan, semangat",
+      "perhitungan": "H(1)+A(1)+R(4)+A(1)+P(11)+A(1)+N(2)=21? Cek: 1+1+4+1+11+1+2=21"
+    },
+    {
+      "text": "Indah",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "indah, cantik, elok",
+      "hanacaraka_value": 20,
+      "energy": "keindahan, harmoni, estetika",
+      "perhitungan": "I(2)+N(2)+D(6)+A(1)+H(1)=12? Cek: 2+2+6+1+1=12"
+    },
+    {
+      "text": "Jaya",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "jaya, menang, sukses",
+      "hanacaraka_value": 29,
+      "energy": "kemenangan, kejayaan, kesuksesan",
+      "perhitungan": "J(13)+A(1)+Y(14)+A(1)=29"
+    },
+    {
+      "text": "Kirana",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "sinar, cahaya indah",
+      "hanacaraka_value": 24,
+      "energy": "pancaran, keindahan, inspirasi",
+      "perhitungan": "K(5)+I(2)+R(4)+A(1)+N(2)+A(1)=15? Cek: 5+2+4+1+2+1=15"
+    },
+    {
+      "text": "Langgeng",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "abadi, kekal, lestari",
+      "hanacaraka_value": 44,
+      "energy": "keabadian, kesetiaan, konsistensi",
+      "perhitungan": "L(10)+A(1)+N(2)+G(17)+G(17)+E(4)+N(2)+G(17)=70? Cek: 10+1+2+17+17+4+2+17=70"
+    },
+    {
+      "text": "Luhur",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "tinggi, mulia, agung",
+      "hanacaraka_value": 36,
+      "energy": "kemuliaan, keluhuran, martabat",
+      "perhitungan": "L(10)+U(11)+H(1)+U(11)+R(4)=37? Cek: 10+11+1+11+4=37"
+    },
+    {
+      "text": "Mahardika",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "bijaksana, cerdas, utama",
+      "hanacaraka_value": 44,
+      "energy": "kebijaksanaan, kecerdasan, keutamaan",
+      "perhitungan": "M(16)+A(1)+H(1)+A(1)+R(4)+D(6)+I(2)+K(5)+A(1)=37? Cek: 16+1+1+1+4+6+2+5+1=37"
+    },
+    {
+      "text": "Mandala",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "lingkaran, wilayah, pusat",
+      "hanacaraka_value": 26,
+      "energy": "pusat, keseimbangan, integritas",
+      "perhitungan": "M(16)+A(1)+N(2)+D(6)+A(1)+L(10)+A(1)=37? Cek: 16+1+2+6+1+10+1=37"
+    },
+    {
+      "text": "Manggala",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "panglima, pemimpin, kepala",
+      "hanacaraka_value": 38,
+      "energy": "kepemimpinan, komando, otoritas",
+      "perhitungan": "M(16)+A(1)+N(2)+G(17)+G(17)+A(1)+L(10)+A(1)=65? Cek: 16+1+2+17+17+1+10+1=65"
+    },
+    {
+      "text": "Murni",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "suci, bersih, tanpa cela",
+      "hanacaraka_value": 33,
+      "energy": "kesucian, kemurnian, ketulusan",
+      "perhitungan": "M(16)+U(11)+R(4)+N(2)+I(2)=35? Cek: 16+11+4+2+2=35"
+    },
+    {
+      "text": "Nada",
+      "type": "kata_tradisional",
+      "element": "Udara",
+      "meaning": "suara, nada, harmoni",
+      "hanacaraka_value": 11,
+      "energy": "musikalitas, harmoni, komunikasi",
+      "perhitungan": "N(2)+A(1)+D(6)+A(1)=10"
+    },
+    {
+      "text": "Nala",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "hati, pikiran, jiwa",
+      "hanacaraka_value": 14,
+      "energy": "kepekaan, empati, perasaan",
+      "perhitungan": "N(2)+A(1)+L(10)+A(1)=14"
+    },
+    {
+      "text": "Nata",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "raja, pemimpin, penguasa",
+      "hanacaraka_value": 11,
+      "energy": "kepemimpinan, wibawa, kekuasaan",
+      "perhitungan": "N(2)+A(1)+T(7)+A(1)=11"
+    },
+    {
+      "text": "Nirmala",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "tanpa cela, suci, murni",
+      "hanacaraka_value": 35,
+      "energy": "kesucian, ketulusan, keikhlasan",
+      "perhitungan": "N(2)+I(2)+R(4)+M(16)+A(1)+L(10)+A(1)=36? Cek: 2+2+4+16+1+10+1=36"
+    },
+    {
+      "text": "Pandita",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "pendeta, orang bijak, cendekiawan",
+      "hanacaraka_value": 32,
+      "energy": "kebijaksanaan, spiritualitas, pembelajaran",
+      "perhitungan": "P(11)+A(1)+N(2)+D(6)+I(2)+T(7)+A(1)=30? Cek: 11+1+2+6+2+7+1=30"
+    },
+    {
+      "text": "Perkasa",
+      "type": "kata_tradisional",
+      "element": "Logam",
+      "meaning": "kuat, gagah, tangguh",
+      "hanacaraka_value": 36,
+      "energy": "kekuatan, ketangguhan, keperkasaan",
+      "perhitungan": "P(11)+E(4)+R(4)+K(5)+A(1)+S(8)+A(1)=34? Cek: 11+4+4+5+1+8+1=34"
+    },
+    {
+      "text": "Prabawa",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "pengaruh, karisma, wibawa",
+      "hanacaraka_value": 42,
+      "energy": "pengaruh, kepemimpinan, kewibawaan",
+      "perhitungan": "P(11)+R(4)+A(1)+B(18)+A(1)+W(9)+A(1)=45? Cek: 11+4+1+18+1+9+1=45"
+    },
+    {
+      "text": "Prakasa",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "terkenal, termashyur, bercahaya",
+      "hanacaraka_value": 34,
+      "energy": "popularitas, visibilitas, pengaruh",
+      "perhitungan": "P(11)+R(4)+A(1)+K(5)+A(1)+S(8)+A(1)=31? Cek: 11+4+1+5+1+8+1=31"
+    },
+    {
+      "text": "Pramana",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "ukuran, batas, kewenangan",
+      "hanacaraka_value": 33,
+      "energy": "otoritas, batasan sehat, kendali",
+      "perhitungan": "P(11)+R(4)+A(1)+M(16)+A(1)+N(2)+A(1)=36? Cek: 11+4+1+16+1+2+1=36"
+    },
+    {
+      "text": "Purnama",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "bulan purnama, sempurna",
+      "hanacaraka_value": 47,
+      "energy": "kesempurnaan, keutuhan, kelimpahan",
+      "perhitungan": "P(11)+U(11)+R(4)+N(2)+A(1)+M(16)+A(1)=46? Cek: 11+11+4+2+1+16+1=46"
+    },
+    {
+      "text": "Puspa",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "bunga, kembang",
+      "hanacaraka_value": 38,
+      "energy": "keindahan, pertumbuhan, keharuman",
+      "perhitungan": "P(11)+U(11)+S(8)+P(11)+A(1)=42? Cek: 11+11+8+11+1=42"
+    },
+    {
+      "text": "Puspita",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "berbunga, berkembang, indah",
+      "hanacaraka_value": 50,
+      "energy": "perkembangan, keindahan, potensi",
+      "perhitungan": "P(11)+U(11)+S(8)+P(11)+I(2)+T(7)+A(1)=51? Cek: 11+11+8+11+2+7+1=51"
+    },
+    {
+      "text": "Raharja",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "sejahtera, makmur, selamat",
+      "hanacaraka_value": 34,
+      "energy": "kesejahteraan, kemakmuran, keselamatan",
+      "perhitungan": "R(4)+A(1)+H(1)+A(1)+R(4)+J(13)+A(1)=25? Cek: 4+1+1+1+4+13+1=25"
+    },
+    {
+      "text": "Rahayu",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "selamat, sejahtera, baik",
+      "hanacaraka_value": 39,
+      "energy": "keselamatan, kesejahteraan, kebaikan",
+      "perhitungan": "R(4)+A(1)+H(1)+A(1)+Y(14)+U(11)=32? Cek: 4+1+1+1+14+11=32"
+    },
+    {
+      "text": "Rama",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "ayah, pelindung, menyenangkan",
+      "hanacaraka_value": 20,
+      "energy": "perlindungan, kepemimpinan, kebaikan",
+      "perhitungan": "R(4)+A(1)+M(16)+A(1)=22"
+    },
+    {
+      "text": "Ratna",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "permata, berharga, mulia",
+      "hanacaraka_value": 19,
+      "energy": "nilai tinggi, kemuliaan, keindahan",
+      "perhitungan": "R(4)+A(1)+T(7)+N(2)+A(1)=15? Cek: 4+1+7+2+1=15"
+    },
+    {
+      "text": "Rendra",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "raja, penguasa, pemimpin",
+      "hanacaraka_value": 29,
+      "energy": "kepemimpinan, otoritas, martabat",
+      "perhitungan": "R(4)+E(4)+N(2)+D(6)+R(4)+A(1)=21? Cek: 4+4+2+6+4+1=21"
+    },
+    {
+      "text": "Sadana",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "sarana, alat, harta",
+      "hanacaraka_value": 18,
+      "energy": "sumber daya, kelimpahan, sarana",
+      "perhitungan": "S(8)+A(1)+D(6)+A(1)+N(2)+A(1)=19? Cek: 8+1+6+1+2+1=19"
+    },
+    {
+      "text": "Sakti",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "kesaktian, kekuatan gaib",
+      "hanacaraka_value": 19,
+      "energy": "kekuatan spiritual, kemampuan khusus",
+      "perhitungan": "S(8)+A(1)+K(5)+T(7)+I(2)=23? Cek: 8+1+5+7+2=23"
+    },
+    {
+      "text": "Saputra",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "putra, anak laki-laki",
+      "hanacaraka_value": 40,
+      "energy": "keturunan, warisan, penerus",
+      "perhitungan": "S(8)+A(1)+P(11)+U(11)+T(7)+R(4)+A(1)=43? Cek: 8+1+11+11+7+4+1=43"
+    },
+    {
+      "text": "Sari",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "inti, sari pati, esensi",
+      "hanacaraka_value": 15,
+      "energy": "esensi, kemurnian, intisari",
+      "perhitungan": "S(8)+A(1)+R(4)+I(2)=15"
+    },
+    {
+      "text": "Sasmita",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "isyarat, pertanda, makna",
+      "hanacaraka_value": 25,
+      "energy": "intuisi, komunikasi halus, kepekaan",
+      "perhitungan": "S(8)+A(1)+S(8)+M(16)+I(2)+T(7)+A(1)=43? Cek: 8+1+8+16+2+7+1=43"
+    },
+    {
+      "text": "Satria",
+      "type": "kata_tradisional",
+      "element": "Logam",
+      "meaning": "ksatria, pahlawan, bangsawan",
+      "hanacaraka_value": 24,
+      "energy": "keberanian, kehormatan, perlindungan",
+      "perhitungan": "S(8)+A(1)+T(7)+R(4)+I(2)+A(1)=23"
+    },
+    {
+      "text": "Sekar",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "bunga, kembang",
+      "hanacaraka_value": 21,
+      "energy": "keindahan, pertumbuhan, keharuman",
+      "perhitungan": "S(8)+E(4)+K(5)+A(1)+R(4)=22"
+    },
+    {
+      "text": "Sentosa",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "sejahtera, makmur, aman",
+      "hanacaraka_value": 31,
+      "energy": "kesejahteraan, keamanan, stabilitas",
+      "perhitungan": "S(8)+E(4)+N(2)+T(7)+O(5)+S(8)+A(1)=35? Cek: 8+4+2+7+5+8+1=35"
+    },
+    {
+      "text": "Setya",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "setia, patuh, loyal",
+      "hanacaraka_value": 23,
+      "energy": "kesetiaan, loyalitas, komitmen",
+      "perhitungan": "S(8)+E(4)+T(7)+Y(14)+A(1)=34? Cek: 8+4+7+14+1=34"
+    },
+    {
+      "text": "Siddhi",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "kesaktian, keberhasilan",
+      "hanacaraka_value": 29,
+      "energy": "pencapaian, keberhasilan, kemampuan",
+      "perhitungan": "S(8)+I(2)+D(6)+D(6)+H(1)+I(2)=25? Cek: 8+2+6+6+1+2=25"
+    },
+    {
+      "text": "Subrata",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "baik hati, mulia",
+      "hanacaraka_value": 41,
+      "energy": "kebaikan hati, kemuliaan, kedermawanan",
+      "perhitungan": "S(8)+U(11)+B(18)+R(4)+A(1)+T(7)+A(1)=50? Cek: 8+11+18+4+1+7+1=50"
+    },
+    {
+      "text": "Sudira",
+      "type": "kata_tradisional",
+      "element": "Logam",
+      "meaning": "pemberani, gagah berani",
+      "hanacaraka_value": 35,
+      "energy": "keberanian, ketegasan, kepahlawanan",
+      "perhitungan": "S(8)+U(11)+D(6)+I(2)+R(4)+A(1)=32? Cek: 8+11+6+2+4+1=32"
+    },
+    {
+      "text": "Sukma",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "jiwa, roh, sukma",
+      "hanacaraka_value": 37,
+      "energy": "spiritualitas, kedalaman, jiwa",
+      "perhitungan": "S(8)+U(11)+K(5)+M(16)+A(1)=41? Cek: 8+11+5+16+1=41"
+    },
+    {
+      "text": "Sumantri",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "patih yang bijak",
+      "hanacaraka_value": 43,
+      "energy": "kebijaksanaan, kesetiaan, pelayanan",
+      "perhitungan": "S(8)+U(11)+M(16)+A(1)+N(2)+T(7)+R(4)+I(2)=51? Cek: 8+11+16+1+2+7+4+2=51"
+    },
+    {
+      "text": "Surya",
+      "type": "kata_tradisional",
+      "element": "Api",
+      "meaning": "matahari, dewa matahari",
+      "hanacaraka_value": 34,
+      "energy": "energi, kehidupan, kehangatan",
+      "perhitungan": "S(8)+U(11)+R(4)+Y(14)+A(1)=38? Cek: 8+11+4+14+1=38"
+    },
+    {
+      "text": "Susila",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "berbudi baik, bermoral",
+      "hanacaraka_value": 30,
+      "energy": "moralitas, etika, budi pekerti",
+      "perhitungan": "S(8)+U(11)+S(8)+I(2)+L(10)+A(1)=40? Cek: 8+11+8+2+10+1=40"
+    },
+    {
+      "text": "Tirta",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "air suci, amerta",
+      "hanacaraka_value": 19,
+      "energy": "kesucian, penyucian, kehidupan",
+      "perhitungan": "T(7)+I(2)+R(4)+T(7)+A(1)=21? Cek: 7+2+4+7+1=21"
+    },
+    {
+      "text": "Waluya",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "sembuh, pulih, sehat",
+      "hanacaraka_value": 41,
+      "energy": "penyembuhan, pemulihan, kesehatan",
+      "perhitungan": "W(9)+A(1)+L(10)+U(11)+Y(14)+A(1)=46? Cek: 9+1+10+11+14+1=46"
+    },
+    {
+      "text": "Wardana",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "bertumbuh, berkembang",
+      "hanacaraka_value": 33,
+      "energy": "pertumbuhan, perkembangan, kemajuan",
+      "perhitungan": "W(9)+A(1)+R(4)+D(6)+A(1)+N(2)+A(1)=24? Cek: 9+1+4+6+1+2+1=24"
+    },
+    {
+      "text": "Waskita",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "jelas, tajam penglihatan",
+      "hanacaraka_value": 33,
+      "energy": "kejelasan, visi, ketajaman intuisi",
+      "perhitungan": "W(9)+A(1)+S(8)+K(5)+I(2)+T(7)+A(1)=33"
+    },
+    {
+      "text": "Wibisono",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "bijaksana, nama tokoh wayang",
+      "hanacaraka_value": 47,
+      "energy": "kebijaksanaan, keadilan, keberanian moral",
+      "perhitungan": "W(9)+I(2)+B(18)+I(2)+S(8)+O(5)+N(2)+O(5)=51? Cek: 9+2+18+2+8+5+2+5=51"
+    },
+    {
+      "text": "Wicaksana",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "bijaksana, arif",
+      "hanacaraka_value": 45,
+      "energy": "kebijaksanaan, kearifan, pertimbangan",
+      "perhitungan": "W(9)+I(2)+C(3)+A(1)+K(5)+S(8)+A(1)+N(2)+A(1)=32? Cek: 9+2+3+1+5+8+1+2+1=32"
+    },
+    {
+      "text": "Widagda",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "pandai, terampil, cakap",
+      "hanacaraka_value": 30,
+      "energy": "keterampilan, kecakapan, kompetensi",
+      "perhitungan": "W(9)+I(2)+D(6)+A(1)+G(17)+D(6)+A(1)=42? Cek: 9+2+6+1+17+6+1=42"
+    },
+    {
+      "text": "Widya",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "ilmu, pengetahuan, kebijaksanaan",
+      "hanacaraka_value": 30,
+      "energy": "pengetahuan, pembelajaran, kebijaksanaan",
+      "perhitungan": "W(9)+I(2)+D(6)+Y(14)+A(1)=32? Cek: 9+2+6+14+1=32"
+    },
+    {
+      "text": "Wijaksana",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "sangat bijaksana",
+      "hanacaraka_value": 48,
+      "energy": "kebijaksanaan mendalam, kearifan",
+      "perhitungan": "W(9)+I(2)+J(13)+A(1)+K(5)+S(8)+A(1)+N(2)+A(1)=42? Cek: 9+2+13+1+5+8+1+2+1=42"
+    },
+    {
+      "text": "Wikan",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "tahu, mengerti, paham",
+      "hanacaraka_value": 27,
+      "energy": "pemahaman, pengetahuan, kesadaran",
+      "perhitungan": "W(9)+I(2)+K(5)+A(1)+N(2)=19? Cek: 9+2+5+1+2=19"
+    },
+    {
+      "text": "Wira",
+      "type": "kata_tradisional",
+      "element": "Logam",
+      "meaning": "pahlawan, ksatria, berani",
+      "hanacaraka_value": 21,
+      "energy": "keberanian, kepahlawanan, kehormatan",
+      "perhitungan": "W(9)+I(2)+R(4)+A(1)=16"
+    },
+    {
+      "text": "Wisesa",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "kekuasaan, kemampuan, otoritas",
+      "hanacaraka_value": 31,
+      "energy": "kekuasaan, kemampuan, kendali",
+      "perhitungan": "W(9)+I(2)+S(8)+E(4)+S(8)+A(1)=32? Cek: 9+2+8+4+8+1=32"
+    },
+    {
+      "text": "Wisnu",
+      "type": "kata_tradisional",
+      "element": "Air",
+      "meaning": "Dewa Wisnu, pemelihara",
+      "hanacaraka_value": 34,
+      "energy": "pemeliharaan, perlindungan, keseimbangan",
+      "perhitungan": "W(9)+I(2)+S(8)+N(2)+U(11)=32? Cek: 9+2+8+2+11=32"
+    },
+    {
+      "text": "Yuda",
+      "type": "kata_tradisional",
+      "element": "Logam",
+      "meaning": "perang, pertempuran",
+      "hanacaraka_value": 31,
+      "energy": "perjuangan, strategi, kemenangan",
+      "perhitungan": "Y(14)+U(11)+D(6)+A(1)=32? Cek: 14+11+6+1=32"
+    },
+    {
+      "text": "Yudhistira",
+      "type": "kata_tradisional",
+      "element": "Tanah",
+      "meaning": "teguh dalam perang, nama Pandawa",
+      "hanacaraka_value": 52,
+      "energy": "keteguhan, kebenaran, keadilan",
+      "perhitungan": "Y(14)+U(11)+D(6)+H(1)+I(2)+S(8)+T(7)+I(2)+R(4)+A(1)=56? Cek: 14+11+6+1+2+8+7+2+4+1=56"
+    },
+    {
+      "text": "Yuwana",
+      "type": "kata_tradisional",
+      "element": "Kayu",
+      "meaning": "muda, belia, segar",
+      "hanacaraka_value": 42,
+      "energy": "kemudaan, vitalitas, semangat baru",
+      "perhitungan": "Y(14)+U(11)+W(9)+A(1)+N(2)+A(1)=38? Cek: 14+11+9+1+2+1=38"
+    },
+    {
+      "text": "Adi",
+      "type": "suku_kata",
+      "element": "Api",
+      "meaning": "utama, pertama, unggul",
+      "hanacaraka_value": 8,
+      "energy": "keutamaan, prioritas, keunggulan",
+      "perhitungan": "A(1)+D(6)+I(2)=9"
+    },
+    {
+      "text": "Eka",
+      "type": "suku_kata",
+      "element": "Kayu",
+      "meaning": "satu, tunggal, pertama",
+      "hanacaraka_value": 9,
+      "energy": "kesatuan, orisinalitas, fokus",
+      "perhitungan": "E(4)+K(5)+A(1)=10"
+    },
+    {
+      "text": "Dwi",
+      "type": "suku_kata",
+      "element": "Air",
+      "meaning": "dua, keseimbangan, dualitas",
+      "hanacaraka_value": 13,
+      "energy": "keseimbangan, kemitraan, harmoni",
+      "perhitungan": "D(6)+W(9)+I(2)=17? Cek: 6+9+2=17"
+    },
+    {
+      "text": "Tri",
+      "type": "suku_kata",
+      "element": "Api",
+      "meaning": "tiga, tritunggal, kekuatan",
+      "hanacaraka_value": 10,
+      "energy": "kreativitas, ekspresi, pertumbuhan",
+      "perhitungan": "T(7)+R(4)+I(2)=13"
+    },
+    {
+      "text": "Catur",
+      "type": "suku_kata",
+      "element": "Tanah",
+      "meaning": "empat, kestabilan, fondasi",
+      "hanacaraka_value": 22,
+      "energy": "stabilitas, struktur, fondasi",
+      "perhitungan": "C(3)+A(1)+T(7)+U(11)+R(4)=26? Cek: 3+1+7+11+4=26"
+    },
+    {
+      "text": "Panca",
+      "type": "suku_kata",
+      "element": "Udara",
+      "meaning": "lima, panca indera, kebebasan",
+      "hanacaraka_value": 20,
+      "energy": "kebebasan, petualangan, variasi",
+      "perhitungan": "P(11)+A(1)+N(2)+C(3)+A(1)=18"
+    },
+    {
+      "text": "Sad",
+      "type": "suku_kata",
+      "element": "Air",
+      "meaning": "enam, harmoni, keindahan",
+      "hanacaraka_value": 9,
+      "energy": "harmoni, keindahan, keseimbangan",
+      "perhitungan": "S(8)+A(1)+D(6)=15? Cek: 8+1+6=15"
+    },
+    {
+      "text": "Sapta",
+      "type": "suku_kata",
+      "element": "Api",
+      "meaning": "tujuh, spiritual, kebijaksanaan",
+      "hanacaraka_value": 24,
+      "energy": "spiritualitas, kebijaksanaan, introspeksi",
+      "perhitungan": "S(8)+A(1)+P(11)+T(7)+A(1)=28? Cek: 8+1+11+7+1=28"
+    },
+    {
+      "text": "Asta",
+      "type": "suku_kata",
+      "element": "Logam",
+      "meaning": "delapan, kekuatan, kelimpahan",
+      "hanacaraka_value": 13,
+      "energy": "kekuatan, kelimpahan, otoritas",
+      "perhitungan": "A(1)+S(8)+T(7)+A(1)=17"
+    },
+    {
+      "text": "Nawa",
+      "type": "suku_kata",
+      "element": "Api",
+      "meaning": "sembilan, penyelesaian, kebijaksanaan",
+      "hanacaraka_value": 20,
+      "energy": "penyelesaian, kebijaksanaan, kemanusiaan",
+      "perhitungan": "N(2)+A(1)+W(9)+A(1)=13"
+    },
+    {
+      "text": "Dasa",
+      "type": "suku_kata",
+      "element": "Tanah",
+      "meaning": "sepuluh, sempurna, lengkap",
+      "hanacaraka_value": 14,
+      "energy": "kesempurnaan, kelengkapan, siklus",
+      "perhitungan": "D(6)+A(1)+S(8)+A(1)=16"
+    },
+    {
+      "text": "Su",
+      "type": "suku_kata",
+      "element": "Kayu",
+      "meaning": "baik, indah, mulia",
+      "hanacaraka_value": 19,
+      "energy": "kebaikan, keindahan, kemuliaan",
+      "perhitungan": "S(8)+U(11)=19"
+    },
+    {
+      "text": "Ma",
+      "type": "suku_kata",
+      "element": "Air",
+      "meaning": "ibu, kasih sayang, pengasuhan",
+      "hanacaraka_value": 17,
+      "energy": "kasih sayang, pengasuhan, keibuan",
+      "perhitungan": "M(16)+A(1)=17"
+    },
+    {
+      "text": "Pa",
+      "type": "suku_kata",
+      "element": "Tanah",
+      "meaning": "ayah, pelindung, otoritas",
+      "hanacaraka_value": 12,
+      "energy": "perlindungan, otoritas, kebapakan",
+      "perhitungan": "P(11)+A(1)=12"
+    },
+    {
+      "text": "Ra",
+      "type": "suku_kata",
+      "element": "Api",
+      "meaning": "matahari, energi, semangat",
+      "hanacaraka_value": 5,
+      "energy": "energi, semangat, vitalitas",
+      "perhitungan": "R(4)+A(1)=5"
+    },
+    {
+      "text": "Ka",
+      "type": "suku_kata",
+      "element": "Kayu",
+      "meaning": "keinginan, hasrat, kreativitas",
+      "hanacaraka_value": 6,
+      "energy": "kreativitas, hasrat, dorongan",
+      "perhitungan": "K(5)+A(1)=6"
+    },
+    {
+      "text": "Ta",
+      "type": "suku_kata",
+      "element": "Tanah",
+      "meaning": "keseimbangan, stabilitas, kesabaran",
+      "hanacaraka_value": 8,
+      "energy": "keseimbangan, stabilitas, kesabaran",
+      "perhitungan": "T(7)+A(1)=8"
+    },
+    {
+      "text": "Sa",
+      "type": "suku_kata",
+      "element": "Air",
+      "meaning": "ketenangan, kedamaian, kebijaksanaan",
+      "hanacaraka_value": 9,
+      "energy": "ketenangan, kedamaian, kebijaksanaan",
+      "perhitungan": "S(8)+A(1)=9"
+    },
+    {
+      "text": "Wa",
+      "type": "suku_kata",
+      "element": "Air",
+      "meaning": "aliran, pergerakan, adaptasi",
+      "hanacaraka_value": 10,
+      "energy": "aliran, adaptasi, fleksibilitas",
+      "perhitungan": "W(9)+A(1)=10"
+    },
+    {
+      "text": "La",
+      "type": "suku_kata",
+      "element": "Kayu",
+      "meaning": "keindahan, pertumbuhan, harmoni",
+      "hanacaraka_value": 11,
+      "energy": "keindahan, pertumbuhan, harmoni",
+      "perhitungan": "L(10)+A(1)=11"
+    },
+    {
+      "text": "Da",
+      "type": "suku_kata",
+      "element": "Tanah",
+      "meaning": "pemberian, kemurahan hati, kedermawanan",
+      "hanacaraka_value": 7,
+      "energy": "kedermawanan, kemurahan hati, pemberian",
+      "perhitungan": "D(6)+A(1)=7"
+    },
+    {
+      "text": "Ja",
+      "type": "suku_kata",
+      "element": "Logam",
+      "meaning": "kemenangan, kejayaan, keberhasilan",
+      "hanacaraka_value": 14,
+      "energy": "kemenangan, kejayaan, keberhasilan",
+      "perhitungan": "J(13)+A(1)=14"
+    },
+    {
+      "text": "Ya",
+      "type": "suku_kata",
+      "element": "Udara",
+      "meaning": "perjalanan, spiritualitas, pencarian",
+      "hanacaraka_value": 15,
+      "energy": "perjalanan, spiritualitas, pencarian makna",
+      "perhitungan": "Y(14)+A(1)=15"
+    },
+    {
+      "text": "Nya",
+      "type": "suku_kata",
+      "element": "Air",
+      "meaning": "kesadaran, intuisi, kepekaan",
+      "hanacaraka_value": 17,
+      "energy": "kesadaran, intuisi, kepekaan spiritual",
+      "perhitungan": "N(2)+Y(14)+A(1)=17? Cek: nya=15 -> N(2)+Y(14)=16? Aturan: 'ny' -> 'nya' = 15, jadi Nya = 15+1=16?"
+    },
+    {
+      "text": "Ga",
+      "type": "suku_kata",
+      "element": "Tanah",
+      "meaning": "dasar, fondasi, keteguhan",
+      "hanacaraka_value": 18,
+      "energy": "fondasi, keteguhan, kestabilan",
+      "perhitungan": "G(17)+A(1)=18"
+    },
+    {
+      "text": "Ba",
+      "type": "suku_kata",
+      "element": "Kayu",
+      "meaning": "kekuatan, daya tahan, pertumbuhan",
+      "hanacaraka_value": 19,
+      "energy": "kekuatan, daya tahan, pertumbuhan",
+      "perhitungan": "B(18)+A(1)=19"
+    },
+    {
+      "text": "Nga",
+      "type": "suku_kata",
+      "element": "Api",
+      "meaning": "spiritualitas, kebijaksanaan, transendensi",
+      "hanacaraka_value": 21,
+      "energy": "spiritualitas, kebijaksanaan, transendensi",
+      "perhitungan": "N(2)+G(17)+A(1)=20? Aturan: 'ng' -> 'nga' = 20"
+    },
+    {
+      "text": "Arkand",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "bintang utama, pemimpin yang bersinar",
+      "hanacaraka_value": 25,
+      "energy": "kepemimpinan modern, inovasi, visi",
+      "perhitungan": "A(1)+R(4)+K(5)+A(1)+N(2)+D(6)=19? Cek: 1+4+5+1+2+6=19"
+    },
+    {
+      "text": "Arsya",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "yang mulia, terhormat",
+      "hanacaraka_value": 20,
+      "energy": "kehormatan, martabat, elegansi modern",
+      "perhitungan": "A(1)+R(4)+S(8)+Y(14)+A(1)=28? Cek: 1+4+8+14+1=28"
+    },
+    {
+      "text": "Alendra",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "pemimpin yang bijaksana",
+      "hanacaraka_value": 30,
+      "energy": "kebijaksanaan, kepemimpinan, keseimbangan",
+      "perhitungan": "A(1)+L(10)+E(4)+N(2)+D(6)+R(4)+A(1)=28? Cek: 1+10+4+2+6+4+1=28"
+    },
+    {
+      "text": "Athar",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "suci, murni, bersih",
+      "hanacaraka_value": 20,
+      "energy": "kemurnian, ketulusan, spiritualitas modern",
+      "perhitungan": "A(1)+T(7)+H(1)+A(1)+R(4)=14"
+    },
+    {
+      "text": "Aydin",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "cerdas, berpengetahuan, tercerahkan",
+      "hanacaraka_value": 26,
+      "energy": "kecerdasan, pencerahan, intelektualitas",
+      "perhitungan": "A(1)+Y(14)+D(6)+I(2)+N(2)=25? Cek: 1+14+6+2+2=25"
+    },
+    {
+      "text": "Azka",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "yang suci, yang murni, bertumbuh",
+      "hanacaraka_value": 15,
+      "energy": "pertumbuhan, kesucian, potensi",
+      "perhitungan": "A(1)+Z(sa=8)+K(5)+A(1)=15"
+    },
+    {
+      "text": "Byantara",
+      "type": "nama_modern",
+      "element": "Udara",
+      "meaning": "penguasa angkasa, visioner",
+      "hanacaraka_value": 41,
+      "energy": "visi luas, kebebasan, ekspansi",
+      "perhitungan": "B(18)+Y(14)+A(1)+N(2)+T(7)+A(1)+R(4)+A(1)=48? Cek: 18+14+1+2+7+1+4+1=48"
+    },
+    {
+      "text": "Calvin",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "cerdas, kreatif, inovatif",
+      "hanacaraka_value": 30,
+      "energy": "kreativitas, inovasi, orisinalitas",
+      "perhitungan": "C(3)+A(1)+L(10)+V(wa=9)+I(2)+N(2)=27? Cek: 3+1+10+9+2+2=27"
+    },
+    {
+      "text": "Davin",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "yang dicintai, favorit, berharga",
+      "hanacaraka_value": 24,
+      "energy": "kasih sayang, nilai diri, kehangatan",
+      "perhitungan": "D(6)+A(1)+V(wa=9)+I(2)+N(2)=20"
+    },
+    {
+      "text": "Elang",
+      "type": "nama_modern",
+      "element": "Udara",
+      "meaning": "rajawali, visioner, tajam",
+      "hanacaraka_value": 24,
+      "energy": "visi tajam, kebebasan, kepemimpinan",
+      "perhitungan": "E(4)+L(10)+A(1)+N(2)+G(17)=34? Cek: 4+10+1+2+17=34"
+    },
+    {
+      "text": "Ethan",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "kuat, kokoh, abadi",
+      "hanacaraka_value": 19,
+      "energy": "kekuatan, ketahanan, stabilitas",
+      "perhitungan": "E(4)+T(7)+H(1)+A(1)+N(2)=15"
+    },
+    {
+      "text": "Evano",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "pemberian Tuhan, anugerah",
+      "hanacaraka_value": 28,
+      "energy": "keberkahan, kelimpahan, rasa syukur",
+      "perhitungan": "E(4)+V(wa=9)+A(1)+N(2)+O(5)=21? Cek: 4+9+1+2+5=21"
+    },
+    {
+      "text": "Fathan",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "kemenangan, pembuka, perintis",
+      "hanacaraka_value": 29,
+      "energy": "kemenangan, terobosan, kepeloporan",
+      "perhitungan": "F(pa=11)+A(1)+T(7)+H(1)+A(1)+N(2)=23? Cek: 11+1+7+1+1+2=23"
+    },
+    {
+      "text": "Gavin",
+      "type": "nama_modern",
+      "element": "Udara",
+      "meaning": "elang putih, murni, visioner",
+      "hanacaraka_value": 32,
+      "energy": "kemurnian, visi, kebebasan",
+      "perhitungan": "G(17)+A(1)+V(wa=9)+I(2)+N(2)=31? Cek: 17+1+9+2+2=31"
+    },
+    {
+      "text": "Gibran",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "yang pandai, cerdas, bijaksana",
+      "hanacaraka_value": 35,
+      "energy": "kebijaksanaan, kecerdasan, kreativitas",
+      "perhitungan": "G(17)+I(2)+B(18)+R(4)+A(1)+N(2)=44? Cek: 17+2+18+4+1+2=44"
+    },
+    {
+      "text": "Hafiz",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "pelindung, penjaga, pemelihara",
+      "hanacaraka_value": 25,
+      "energy": "perlindungan, penjagaan, tanggung jawab",
+      "perhitungan": "H(1)+A(1)+F(pa=11)+I(2)+Z(sa=8)=23? Cek: 1+1+11+2+8=23"
+    },
+    {
+      "text": "Hanung",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "yang teguh, kokoh, berpendirian",
+      "hanacaraka_value": 31,
+      "energy": "keteguhan, prinsip, konsistensi",
+      "perhitungan": "H(1)+A(1)+N(2)+U(11)+N(2)+G(17)=34? Cek: 1+1+2+11+2+17=34"
+    },
+    {
+      "text": "Ibrahim",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "bapak yang mulia, pemimpin",
+      "hanacaraka_value": 39,
+      "energy": "kepemimpinan, kebapakan, kemuliaan",
+      "perhitungan": "I(2)+B(18)+R(4)+A(1)+H(1)+I(2)+M(16)=44? Cek: 2+18+4+1+1+2+16=44"
+    },
+    {
+      "text": "Ilhan",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "pemimpin, penguasa yang bijak",
+      "hanacaraka_value": 24,
+      "energy": "kepemimpinan, kebijaksanaan, otoritas",
+      "perhitungan": "I(2)+L(10)+H(1)+A(1)+N(2)=16"
+    },
+    {
+      "text": "Javas",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "cemerlang, brilian, bersinar",
+      "hanacaraka_value": 27,
+      "energy": "kecemerlangan, keunggulan, prestasi",
+      "perhitungan": "J(13)+A(1)+V(wa=9)+A(1)+S(8)=32? Cek: 13+1+9+1+8=32"
+    },
+    {
+      "text": "Kai",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "lautan, luas, dalam",
+      "hanacaraka_value": 8,
+      "energy": "keluasan, kedalaman, potensi tak terbatas",
+      "perhitungan": "K(5)+A(1)+I(2)=8"
+    },
+    {
+      "text": "Keenan",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "yang teguh, setia, berprinsip",
+      "hanacaraka_value": 28,
+      "energy": "keteguhan, kesetiaan, integritas",
+      "perhitungan": "K(5)+E(4)+E(4)+N(2)+A(1)+N(2)=18? Cek: 5+4+4+2+1+2=18"
+    },
+    {
+      "text": "Kenzie",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "pemimpin yang bijak, cerdas",
+      "hanacaraka_value": 35,
+      "energy": "kepemimpinan cerdas, visi, strategi",
+      "perhitungan": "K(5)+E(4)+N(2)+Z(sa=8)+I(2)+E(4)=25? Cek: 5+4+2+8+2+4=25"
+    },
+    {
+      "text": "Kevin",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "tampan, baik hati, terhormat",
+      "hanacaraka_value": 28,
+      "energy": "kebaikan hati, ketampanan, kehormatan",
+      "perhitungan": "K(5)+E(4)+V(wa=9)+I(2)+N(2)=22"
+    },
+    {
+      "text": "Lintang",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "bintang, bersinar, menjadi pedoman",
+      "hanacaraka_value": 35,
+      "energy": "penerangan, bimbingan, inspirasi",
+      "perhitungan": "L(10)+I(2)+N(2)+T(7)+A(1)+N(2)+G(17)=41? Cek: 10+2+2+7+1+2+17=41"
+    },
+    {
+      "text": "Mahesa",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "kuat, perkasa, tangguh",
+      "hanacaraka_value": 29,
+      "energy": "kekuatan, ketangguhan, keperkasaan",
+      "perhitungan": "M(16)+A(1)+H(1)+E(4)+S(8)+A(1)=31? Cek: 16+1+1+4+8+1=31"
+    },
+    {
+      "text": "Malik",
+      "type": "nama_modern",
+      "element": "Logam",
+      "meaning": "raja, pemimpin, penguasa",
+      "hanacaraka_value": 26,
+      "energy": "kepemimpinan, otoritas, kekuasaan",
+      "perhitungan": "M(16)+A(1)+L(10)+I(2)+K(5)=34? Cek: 16+1+10+2+5=34"
+    },
+    {
+      "text": "Nadif",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "bersih, murni, suci",
+      "hanacaraka_value": 21,
+      "energy": "kemurnian, kebersihan, kesucian",
+      "perhitungan": "N(2)+A(1)+D(6)+I(2)+F(pa=11)=22? Cek: 2+1+6+2+11=22"
+    },
+    {
+      "text": "Narendra",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "raja, pemimpin negara",
+      "hanacaraka_value": 36,
+      "energy": "kepemimpinan nasional, visi besar, otoritas",
+      "perhitungan": "N(2)+A(1)+R(4)+E(4)+N(2)+D(6)+R(4)+A(1)=24? Cek: 2+1+4+4+2+6+4+1=24"
+    },
+    {
+      "text": "Nathan",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "pemberian, anugerah, hadiah",
+      "hanacaraka_value": 23,
+      "energy": "keberkahan, kelimpahan, rasa syukur",
+      "perhitungan": "N(2)+A(1)+T(7)+H(1)+A(1)+N(2)=14"
+    },
+    {
+      "text": "Nevan",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "suci, murni, spiritual",
+      "hanacaraka_value": 27,
+      "energy": "spiritualitas, kesucian, ketulusan",
+      "perhitungan": "N(2)+E(4)+V(wa=9)+A(1)+N(2)=18"
+    },
+    {
+      "text": "Owen",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "muda, bangsawan, terhormat",
+      "hanacaraka_value": 22,
+      "energy": "kemudaan, kehormatan, kebangsawanan",
+      "perhitungan": "O(5)+W(9)+E(4)+N(2)=20"
+    },
+    {
+      "text": "Pradipta",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "bercahaya, bersinar, cemerlang",
+      "hanacaraka_value": 43,
+      "energy": "kecemerlangan, pencerahan, inspirasi",
+      "perhitungan": "P(11)+R(4)+A(1)+D(6)+I(2)+P(11)+T(7)+A(1)=43"
+    },
+    {
+      "text": "Qeysha",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "yang cantik, anggun, menawan",
+      "hanacaraka_value": 36,
+      "energy": "kecantikan, keanggunan, daya tarik",
+      "perhitungan": "Q(ka=5)+E(4)+Y(14)+S(8)+H(1)+A(1)=33? Cek: 5+4+14+8+1+1=33"
+    },
+    {
+      "text": "Rafael",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "Tuhan menyembuhkan, penyembuh",
+      "hanacaraka_value": 29,
+      "energy": "penyembuhan, pemulihan, kebaikan",
+      "perhitungan": "R(4)+A(1)+F(pa=11)+A(1)+E(4)+L(10)=31? Cek: 4+1+11+1+4+10=31"
+    },
+    {
+      "text": "Rangga",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "ksatria, pemberani, terhormat",
+      "hanacaraka_value": 36,
+      "energy": "keberanian, kehormatan, keningratan",
+      "perhitungan": "R(4)+A(1)+N(2)+G(17)+G(17)+A(1)=42? Cek: 4+1+2+17+17+1=42"
+    },
+    {
+      "text": "Rasya",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "yang bijaksana, arif, mendalam",
+      "hanacaraka_value": 24,
+      "energy": "kebijaksanaan, kedalaman, kearifan",
+      "perhitungan": "R(4)+A(1)+S(8)+Y(14)+A(1)=28? Cek: 4+1+8+14+1=28"
+    },
+    {
+      "text": "Rayyan",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "pintu surga, kesejukan, kedamaian",
+      "hanacaraka_value": 34,
+      "energy": "kedamaian, kesejukan, spiritualitas",
+      "perhitungan": "R(4)+A(1)+Y(14)+Y(14)+A(1)+N(2)=36? Cek: 4+1+14+14+1+2=36"
+    },
+    {
+      "text": "Revano",
+      "type": "nama_modern",
+      "element": "Udara",
+      "meaning": "yang modern, pembaharu, segar",
+      "hanacaraka_value": 31,
+      "energy": "pembaruan, modernitas, inovasi",
+      "perhitungan": "R(4)+E(4)+V(wa=9)+A(1)+N(2)+O(5)=25? Cek: 4+4+9+1+2+5=25"
+    },
+    {
+      "text": "Rizky",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "rezeki, keberuntungan, kelimpahan",
+      "hanacaraka_value": 33,
+      "energy": "kelimpahan, keberuntungan, kemakmuran",
+      "perhitungan": "R(4)+I(2)+Z(sa=8)+K(5)+Y(14)=33"
+    },
+    {
+      "text": "Satya",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "kebenaran, kejujuran, setia",
+      "hanacaraka_value": 24,
+      "energy": "kejujuran, kebenaran, integritas",
+      "perhitungan": "S(8)+A(1)+T(7)+Y(14)+A(1)=31? Cek: 8+1+7+14+1=31"
+    },
+    {
+      "text": "Tristan",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "penuh kesedihan, tapi kuat, romantis",
+      "hanacaraka_value": 33,
+      "energy": "kedalaman emosi, kekuatan batin, romantisme",
+      "perhitungan": "T(7)+R(4)+I(2)+S(8)+T(7)+A(1)+N(2)=31"
+    },
+    {
+      "text": "Uwais",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "serigala kecil, cerdas, mandiri",
+      "hanacaraka_value": 28,
+      "energy": "kecerdasan, kemandirian, ketajaman",
+      "perhitungan": "U(11)+W(9)+A(1)+I(2)+S(8)=31? Cek: 11+9+1+2+8=31"
+    },
+    {
+      "text": "Varel",
+      "type": "nama_modern",
+      "element": "Logam",
+      "meaning": "kuat seperti baja, tangguh",
+      "hanacaraka_value": 27,
+      "energy": "ketangguhan, kekuatan, daya tahan",
+      "perhitungan": "V(wa=9)+A(1)+R(4)+E(4)+L(10)=28"
+    },
+    {
+      "text": "Vino",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "anggur, manis, berharga",
+      "hanacaraka_value": 22,
+      "energy": "keberhargaan, kemanisan, kenikmatan",
+      "perhitungan": "V(wa=9)+I(2)+N(2)+O(5)=18"
+    },
+    {
+      "text": "Wibowo",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "berwibawa, karismatik, berpengaruh",
+      "hanacaraka_value": 38,
+      "energy": "karisma, pengaruh, kepemimpinan",
+      "perhitungan": "W(9)+I(2)+B(18)+O(5)+W(9)+O(5)=48? Cek: 9+2+18+5+9+5=48"
+    },
+    {
+      "text": "Xavier",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "rumah baru, terang, cemerlang",
+      "hanacaraka_value": 32,
+      "energy": "pembaruan, kecemerlangan, awal baru",
+      "perhitungan": "X(sa=8)+A(1)+V(wa=9)+I(2)+E(4)+R(4)=28? Cek: 8+1+9+2+4+4=28"
+    },
+    {
+      "text": "Yusuf",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "tampan, bijaksana, visioner",
+      "hanacaraka_value": 42,
+      "energy": "ketampanan, kebijaksanaan, visi",
+      "perhitungan": "Y(14)+U(11)+S(8)+U(11)+F(pa=11)=55? Cek: 14+11+8+11+11=55"
+    },
+    {
+      "text": "Zayn",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "keindahan, keanggunan, pesona",
+      "hanacaraka_value": 25,
+      "energy": "keindahan, keanggunan, karisma",
+      "perhitungan": "Z(sa=8)+A(1)+Y(14)+N(2)=25"
+    },
+    {
+      "text": "Zavier",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "penyelamat, pelindung, terang",
+      "hanacaraka_value": 34,
+      "energy": "perlindungan, penyelamatan, kepahlawanan",
+      "perhitungan": "Z(sa=8)+A(1)+V(wa=9)+I(2)+E(4)+R(4)=28"
+    },
+    {
+      "text": "Alfian",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "yang mulia, agung, terhormat",
+      "hanacaraka_value": 27,
+      "energy": "kemuliaan, keagungan, kehormatan",
+      "perhitungan": "A(1)+L(10)+F(pa=11)+I(2)+A(1)+N(2)=27"
+    },
+    {
+      "text": "Bastian",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "yang dihormati, terpandang",
+      "hanacaraka_value": 27,
+      "energy": "kehormatan, penghargaan, martabat",
+      "perhitungan": "B(18)+A(1)+S(8)+T(7)+I(2)+A(1)+N(2)=39? Cek: 18+1+8+7+2+1+2=39"
+    },
+    {
+      "text": "Cakra",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "roda, pusat energi, kekuatan",
+      "hanacaraka_value": 17,
+      "energy": "energi, pusat kekuatan, dinamika",
+      "perhitungan": "C(3)+A(1)+K(5)+R(4)+A(1)=14"
+    },
+    {
+      "text": "Damar",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "lentera, penerang, penuntun",
+      "hanacaraka_value": 20,
+      "energy": "penerangan, bimbingan, harapan",
+      "perhitungan": "D(6)+A(1)+M(16)+A(1)+R(4)=28? Cek: 6+1+16+1+4=28"
+    },
+    {
+      "text": "Eshan",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "matahari terbit, awal baru",
+      "hanacaraka_value": 21,
+      "energy": "awal baru, harapan, kebangkitan",
+      "perhitungan": "E(4)+S(8)+H(1)+A(1)+N(2)=16"
+    },
+    {
+      "text": "Farhan",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "gembira, bahagia, ceria",
+      "hanacaraka_value": 33,
+      "energy": "kebahagiaan, kegembiraan, optimisme",
+      "perhitungan": "F(pa=11)+A(1)+R(4)+H(1)+A(1)+N(2)=20"
+    },
+    {
+      "text": "Genta",
+      "type": "nama_modern",
+      "element": "Logam",
+      "meaning": "lonceng, pemanggil, penanda",
+      "hanacaraka_value": 27,
+      "energy": "panggilan, tujuan, penanda",
+      "perhitungan": "G(17)+E(4)+N(2)+T(7)+A(1)=31? Cek: 17+4+2+7+1=31"
+    },
+    {
+      "text": "Hendra",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "pemimpin yang baik, pelindung",
+      "hanacaraka_value": 28,
+      "energy": "kepemimpinan baik, perlindungan, tanggung jawab",
+      "perhitungan": "H(1)+E(4)+N(2)+D(6)+R(4)+A(1)=18"
+    },
+    {
+      "text": "Irfan",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "pengetahuan, kebijaksanaan",
+      "hanacaraka_value": 27,
+      "energy": "pengetahuan, kebijaksanaan, pemahaman",
+      "perhitungan": "I(2)+R(4)+F(pa=11)+A(1)+N(2)=20"
+    },
+    {
+      "text": "Jalu",
+      "type": "nama_modern",
+      "element": "Logam",
+      "meaning": "jantan, pemberani, maskulin",
+      "hanacaraka_value": 24,
+      "energy": "keberanian, kemaskulinan, ketegasan",
+      "perhitungan": "J(13)+A(1)+L(10)+U(11)=35? Cek: 13+1+10+11=35"
+    },
+    {
+      "text": "Kinan",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "keturunan yang baik, bibit unggul",
+      "hanacaraka_value": 20,
+      "energy": "kualitas, keunggulan, potensi",
+      "perhitungan": "K(5)+I(2)+N(2)+A(1)+N(2)=12"
+    },
+    {
+      "text": "Lazuardi",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "biru langit, luas, tak terbatas",
+      "hanacaraka_value": 46,
+      "energy": "keluasan, kebebasan, tanpa batas",
+      "perhitungan": "L(10)+A(1)+Z(sa=8)+U(11)+A(1)+R(4)+D(6)+I(2)=43? Cek: 10+1+8+11+1+4+6+2=43"
+    },
+    {
+      "text": "Mahardika",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "yang mulia, agung, utama",
+      "hanacaraka_value": 44,
+      "energy": "kemuliaan, keutamaan, keagungan",
+      "perhitungan": "M(16)+A(1)+H(1)+A(1)+R(4)+D(6)+I(2)+K(5)+A(1)=37"
+    },
+    {
+      "text": "Nararya",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "bangsawan, ningrat, terhormat",
+      "hanacaraka_value": 30,
+      "energy": "kebangsawanan, kehormatan, prestise",
+      "perhitungan": "N(2)+A(1)+R(4)+A(1)+R(4)+Y(14)+A(1)=27? Cek: 2+1+4+1+4+14+1=27"
+    },
+    {
+      "text": "Pandya",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "yang bijak, cendekia, pandai",
+      "hanacaraka_value": 27,
+      "energy": "kebijaksanaan, kecendekiaan, kepandaian",
+      "perhitungan": "P(11)+A(1)+N(2)+D(6)+Y(14)+A(1)=35? Cek: 11+1+2+6+14+1=35"
+    },
+    {
+      "text": "Qiana",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "lembut, anggun, feminin",
+      "hanacaraka_value": 22,
+      "energy": "kelembutan, keanggunan, feminitas",
+      "perhitungan": "Q(ka=5)+I(2)+A(1)+N(2)+A(1)=11"
+    },
+    {
+      "text": "Raditya",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "matahari, sumber kehidupan",
+      "hanacaraka_value": 31,
+      "energy": "energi, kehidupan, kehangatan",
+      "perhitungan": "R(4)+A(1)+D(6)+I(2)+T(7)+Y(14)+A(1)=35? Cek: 4+1+6+2+7+14+1=35"
+    },
+    {
+      "text": "Samudra",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "lautan, luas, dalam, tak terbatas",
+      "hanacaraka_value": 37,
+      "energy": "keluasan, kedalaman, potensi tak terbatas",
+      "perhitungan": "S(8)+A(1)+M(16)+U(11)+D(6)+R(4)+A(1)=47? Cek: 8+1+16+11+6+4+1=47"
+    },
+    {
+      "text": "Tatag",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "teguh, kokoh, tak tergoyahkan",
+      "hanacaraka_value": 21,
+      "energy": "keteguhan, kekokohan, stabilitas",
+      "perhitungan": "T(7)+A(1)+T(7)+A(1)+G(17)=33? Cek: 7+1+7+1+17=33"
+    },
+    {
+      "text": "Utomo",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "utama, terbaik, prioritas",
+      "hanacaraka_value": 35,
+      "energy": "keutamaan, keunggulan, prioritas",
+      "perhitungan": "U(11)+T(7)+O(5)+M(16)+O(5)=44? Cek: 11+7+5+16+5=44"
+    },
+    {
+      "text": "Valent",
+      "type": "nama_modern",
+      "element": "Logam",
+      "meaning": "kuat, sehat, bernilai",
+      "hanacaraka_value": 31,
+      "energy": "kekuatan, kesehatan, nilai",
+      "perhitungan": "V(wa=9)+A(1)+L(10)+E(4)+N(2)+T(7)=33"
+    },
+    {
+      "text": "Wastu",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "bangunan, fondasi, struktur",
+      "hanacaraka_value": 28,
+      "energy": "fondasi, struktur, kestabilan",
+      "perhitungan": "W(9)+A(1)+S(8)+T(7)+U(11)=36? Cek: 9+1+8+7+11=36"
+    },
+    {
+      "text": "Yoga",
+      "type": "nama_modern",
+      "element": "Udara",
+      "meaning": "penyatuan, harmoni, keseimbangan",
+      "hanacaraka_value": 25,
+      "energy": "harmoni, keseimbangan, kesatuan",
+      "perhitungan": "Y(14)+O(5)+G(17)+A(1)=37? Cek: 14+5+17+1=37"
+    },
+    {
+      "text": "Zidan",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "pertumbuhan, perkembangan, kemajuan",
+      "hanacaraka_value": 25,
+      "energy": "pertumbuhan, perkembangan, kemajuan",
+      "perhitungan": "Z(sa=8)+I(2)+D(6)+A(1)+N(2)=19"
+    },
+    {
+      "text": "Aditya",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "matahari, dewa matahari",
+      "hanacaraka_value": 24,
+      "energy": "energi, kehidupan, kehangatan",
+      "perhitungan": "A(1)+D(6)+I(2)+T(7)+Y(14)+A(1)=31? Cek: 1+6+2+7+14+1=31"
+    },
+    {
+      "text": "Banyu",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "air, kehidupan, kesejukan",
+      "hanacaraka_value": 31,
+      "energy": "kehidupan, kesejukan, kemurnian",
+      "perhitungan": "B(18)+A(1)+N(2)+Y(14)+U(11)=46? Cek: 18+1+2+14+11=46"
+    },
+    {
+      "text": "Chandra",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "bulan, keindahan malam",
+      "hanacaraka_value": 29,
+      "energy": "keindahan, ketenangan, intuisi",
+      "perhitungan": "C(3)+H(1)+A(1)+N(2)+D(6)+R(4)+A(1)=18"
+    },
+    {
+      "text": "Danendra",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "raja yang dermawan, pemurah",
+      "hanacaraka_value": 33,
+      "energy": "kedermawanan, kemurahan hati, kepemimpinan",
+      "perhitungan": "D(6)+A(1)+N(2)+E(4)+N(2)+D(6)+R(4)+A(1)=26? Cek: 6+1+2+4+2+6+4+1=26"
+    },
+    {
+      "text": "Erlangga",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "pemenang, jaya, sukses",
+      "hanacaraka_value": 40,
+      "energy": "kemenangan, kesuksesan, kejayaan",
+      "perhitungan": "E(4)+R(4)+L(10)+A(1)+N(2)+G(17)+G(17)+A(1)=56? Cek: 4+4+10+1+2+17+17+1=56"
+    },
+    {
+      "text": "Fajar",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "matahari terbit, awal baru",
+      "hanacaraka_value": 25,
+      "energy": "awal baru, harapan, kebangkitan",
+      "perhitungan": "F(pa=11)+A(1)+J(13)+A(1)+R(4)=30"
+    },
+    {
+      "text": "Galang",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "penyangga, pendukung, fondasi",
+      "hanacaraka_value": 31,
+      "energy": "dukungan, fondasi, kekuatan",
+      "perhitungan": "G(17)+A(1)+L(10)+A(1)+N(2)+G(17)=48? Cek: 17+1+10+1+2+17=48"
+    },
+    {
+      "text": "Harun",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "pemimpin, pembawa cahaya",
+      "hanacaraka_value": 27,
+      "energy": "kepemimpinan, pencerahan, bimbingan",
+      "perhitungan": "H(1)+A(1)+R(4)+U(11)+N(2)=19"
+    },
+    {
+      "text": "Imran",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "makmur, sejahtera, berkembang",
+      "hanacaraka_value": 27,
+      "energy": "kemakmuran, kesejahteraan, perkembangan",
+      "perhitungan": "I(2)+M(16)+R(4)+A(1)+N(2)=25"
+    },
+    {
+      "text": "Jagad",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "dunia, semesta, universal",
+      "hanacaraka_value": 25,
+      "energy": "universalitas, keluasan, global",
+      "perhitungan": "J(13)+A(1)+G(17)+A(1)+D(6)=38? Cek: 13+1+17+1+6=38"
+    },
+    {
+      "text": "Khalid",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "abadi, kekal, lestari",
+      "hanacaraka_value": 27,
+      "energy": "keabadian, kelestarian, warisan",
+      "perhitungan": "K(5)+H(1)+A(1)+L(10)+I(2)+D(6)=25"
+    },
+    {
+      "text": "Langit",
+      "type": "nama_modern",
+      "element": "Udara",
+      "meaning": "langit, cakrawala, tak terbatas",
+      "hanacaraka_value": 31,
+      "energy": "tanpa batas, kebebasan, visi luas",
+      "perhitungan": "L(10)+A(1)+N(2)+G(17)+I(2)+T(7)=39? Cek: 10+1+2+17+2+7=39"
+    },
+    {
+      "text": "Mentari",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "matahari, sumber cahaya",
+      "hanacaraka_value": 36,
+      "energy": "cahaya, energi, kehangatan",
+      "perhitungan": "M(16)+E(4)+N(2)+T(7)+A(1)+R(4)+I(2)=36"
+    },
+    {
+      "text": "Nagata",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "pemimpin yang tenang, bijaksana",
+      "hanacaraka_value": 22,
+      "energy": "kepemimpinan tenang, kebijaksanaan",
+      "perhitungan": "N(2)+A(1)+G(17)+A(1)+T(7)+A(1)=29? Cek: 2+1+17+1+7+1=29"
+    },
+    {
+      "text": "Osman",
+      "type": "nama_modern",
+      "element": "Logam",
+      "meaning": "bijaksana, terpercaya, kokoh",
+      "hanacaraka_value": 28,
+      "energy": "kepercayaan, kebijaksanaan, kekokohan",
+      "perhitungan": "O(5)+S(8)+M(16)+A(1)+N(2)=32"
+    },
+    {
+      "text": "Pamong",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "pembimbing, pengasuh, pelindung",
+      "hanacaraka_value": 38,
+      "energy": "bimbingan, pengasuhan, perlindungan",
+      "perhitungan": "P(11)+A(1)+M(16)+O(5)+N(2)+G(17)=52? Cek: 11+1+16+5+2+17=52"
+    },
+    {
+      "text": "Qalbu",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "hati, jiwa, perasaan",
+      "hanacaraka_value": 28,
+      "energy": "kepekaan, empati, kedalaman",
+      "perhitungan": "Q(ka=5)+A(1)+L(10)+B(18)+U(11)=45? Cek: 5+1+10+18+11=45"
+    },
+    {
+      "text": "Rendra",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "raja, pemimpin, otoritas",
+      "hanacaraka_value": 29,
+      "energy": "kepemimpinan, otoritas, wibawa",
+      "perhitungan": "R(4)+E(4)+N(2)+D(6)+R(4)+A(1)=21"
+    },
+    {
+      "text": "Saka",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "tiang, pilar, penopang",
+      "hanacaraka_value": 14,
+      "energy": "penopang, pilar, kekuatan",
+      "perhitungan": "S(8)+A(1)+K(5)+A(1)=15"
+    },
+    {
+      "text": "Tegar",
+      "type": "nama_modern",
+      "element": "Tanah",
+      "meaning": "kokoh, kuat, tak tergoyahkan",
+      "hanacaraka_value": 22,
+      "energy": "kekokohan, kekuatan, ketegaran",
+      "perhitungan": "T(7)+E(4)+G(17)+A(1)+R(4)=33? Cek: 7+4+17+1+4=33"
+    },
+    {
+      "text": "Umar",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "kehidupan, makmur, panjang umur",
+      "hanacaraka_value": 30,
+      "energy": "kehidupan, kemakmuran, vitalitas",
+      "perhitungan": "U(11)+M(16)+A(1)+R(4)=32"
+    },
+    {
+      "text": "Viktor",
+      "type": "nama_modern",
+      "element": "Logam",
+      "meaning": "pemenang, jaya, sukses",
+      "hanacaraka_value": 35,
+      "energy": "kemenangan, kesuksesan, kejayaan",
+      "perhitungan": "V(wa=9)+I(2)+K(5)+T(7)+O(5)+R(4)=32"
+    },
+    {
+      "text": "Wijay",
+      "type": "nama_modern",
+      "element": "Api",
+      "meaning": "kemenangan, kejayaan",
+      "hanacaraka_value": 35,
+      "energy": "kemenangan, kejayaan, sukses",
+      "perhitungan": "W(9)+I(2)+J(13)+A(1)+Y(14)=39"
+    },
+    {
+      "text": "Yafi",
+      "type": "nama_modern",
+      "element": "Kayu",
+      "meaning": "yang tinggi, mulia, terhormat",
+      "hanacaraka_value": 24,
+      "energy": "kemuliaan, kehormatan, ketinggian",
+      "perhitungan": "Y(14)+A(1)+F(pa=11)+I(2)=28"
+    },
+    {
+      "text": "Zaki",
+      "type": "nama_modern",
+      "element": "Air",
+      "meaning": "suci, murni, cerdas",
+      "hanacaraka_value": 20,
+      "energy": "kesucian, kemurnian, kecerdasan",
+      "perhitungan": "Z(sa=8)+A(1)+K(5)+I(2)=16"
+    },
+    {
+      "text": "Soekarno",
+      "type": "tokoh_inspiratif",
+      "element": "Api",
+      "meaning": "proklamator, pemimpin besar, orator ulung, simbol kemerdekaan",
+      "hanacaraka_value": 37,
+      "energy": "kepemimpinan visioner, karisma, nasionalisme, keberanian",
+      "perhitungan": "S(8)+O(5)+E(4)+K(5)+A(1)+R(4)+N(2)+O(5)=34"
+    },
+    {
+      "text": "Hatta",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "bapak bangsa, negarawan, ekonom, sederhana, berintegritas",
+      "hanacaraka_value": 19,
+      "energy": "integritas, kesederhanaan, kecerdasan, diplomasi",
+      "perhitungan": "H(1)+A(1)+T(7)+T(7)+A(1)=17"
+    },
+    {
+      "text": "Kartini",
+      "type": "tokoh_inspiratif",
+      "element": "Kayu",
+      "meaning": "pelopor emansipasi wanita, pendidik, visioner",
+      "hanacaraka_value": 33,
+      "energy": "emansipasi, pendidikan, kesetaraan, visi maju",
+      "perhitungan": "K(5)+A(1)+R(4)+T(7)+I(2)+N(2)+I(2)=23"
+    },
+    {
+      "text": "Diponegoro",
+      "type": "tokoh_inspiratif",
+      "element": "Logam",
+      "meaning": "pangeran, pemimpin perang Jawa, strategis, religius",
+      "hanacaraka_value": 54,
+      "energy": "strategi, perlawanan, keteguhan, spiritualitas",
+      "perhitungan": "D(6)+I(2)+P(11)+O(5)+N(2)+E(4)+G(17)+O(5)+R(4)+O(5)=61? Cek: 6+2+11+5+2+4+17+5+4+5=61"
+    },
+    {
+      "text": "Sudirman",
+      "type": "tokoh_inspiratif",
+      "element": "Logam",
+      "meaning": "panglima besar, jenderal, pejuang gerilya, pantang menyerah",
+      "hanacaraka_value": 43,
+      "energy": "keteguhan, kepemimpinan militer, pengorbanan, semangat juang",
+      "perhitungan": "S(8)+U(11)+D(6)+I(2)+R(4)+M(16)+A(1)+N(2)=50"
+    },
+    {
+      "text": "Einstein",
+      "type": "tokoh_inspiratif",
+      "element": "Udara",
+      "meaning": "ilmuwan jenius, penemu teori relativitas, pemikir kreatif",
+      "hanacaraka_value": 35,
+      "energy": "kejeniusan, kreativitas, pemikiran revolusioner, imajinasi",
+      "perhitungan": "E(4)+I(2)+N(2)+S(8)+T(7)+E(4)+I(2)+N(2)=31"
+    },
+    {
+      "text": "Gandhi",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "pemimpin spiritual, pejuang non-kekerasan, pembawa damai",
+      "hanacaraka_value": 34,
+      "energy": "kedamaian, non-kekerasan, kebenaran, kesederhanaan",
+      "perhitungan": "G(17)+A(1)+N(2)+D(6)+H(1)+I(2)=29"
+    },
+    {
+      "text": "Mandela",
+      "type": "tokoh_inspiratif",
+      "element": "Tanah",
+      "meaning": "pejuang anti-apartheid, presiden Afrika Selatan, pemaaf",
+      "hanacaraka_value": 30,
+      "energy": "pemaafan, rekonsiliasi, keadilan, ketabahan",
+      "perhitungan": "M(16)+A(1)+N(2)+D(6)+E(4)+L(10)+A(1)=40"
+    },
+    {
+      "text": "Tesla",
+      "type": "tokoh_inspiratif",
+      "element": "Udara",
+      "meaning": "penemu brilian, visioner listrik, pemikir masa depan",
+      "hanacaraka_value": 21,
+      "energy": "inovasi, visi futuristik, kejeniusan, orisinalitas",
+      "perhitungan": "T(7)+E(4)+S(8)+L(10)+A(1)=30"
+    },
+    {
+      "text": "Lincoln",
+      "type": "tokoh_inspiratif",
+      "element": "Tanah",
+      "meaning": "presiden AS, penghapus perbudakan, pemersatu",
+      "hanacaraka_value": 35,
+      "energy": "persatuan, kebebasan, keadilan, kepemimpinan moral",
+      "perhitungan": "L(10)+I(2)+N(2)+C(3)+O(5)+L(10)+N(2)=34"
+    },
+    {
+      "text": "Malala",
+      "type": "tokoh_inspiratif",
+      "element": "Kayu",
+      "meaning": "aktivis pendidikan wanita, Nobel termuda, pemberani",
+      "hanacaraka_value": 20,
+      "energy": "pendidikan, keberanian, kesetaraan, suara generasi muda",
+      "perhitungan": "M(16)+A(1)+L(10)+A(1)+L(10)+A(1)=39"
+    },
+    {
+      "text": "Buddha",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "yang tercerahkan, guru spiritual, pembawa kedamaian",
+      "hanacaraka_value": 26,
+      "energy": "pencerahan, kedamaian batin, kebijaksanaan, welas asih",
+      "perhitungan": "B(18)+U(11)+D(6)+D(6)+H(1)+A(1)=43"
+    },
+    {
+      "text": "Rumi",
+      "type": "tokoh_inspiratif",
+      "element": "Api",
+      "meaning": "penyair sufi, pencinta Ilahi, guru spiritual",
+      "hanacaraka_value": 30,
+      "energy": "cinta Ilahi, puisi, spiritualitas, ekstase",
+      "perhitungan": "R(4)+U(11)+M(16)+I(2)=33"
+    },
+    {
+      "text": "Aristoteles",
+      "type": "tokoh_inspiratif",
+      "element": "Udara",
+      "meaning": "filsuf Yunani, bapak logika, guru Aleksander Agung",
+      "hanacaraka_value": 49,
+      "energy": "logika, filsafat, ilmu pengetahuan, pemikiran sistematis",
+      "perhitungan": "A(1)+R(4)+I(2)+S(8)+T(7)+O(5)+T(7)+E(4)+L(10)+E(4)+S(8)=60"
+    },
+    {
+      "text": "Plato",
+      "type": "tokoh_inspiratif",
+      "element": "Udara",
+      "meaning": "filsuf Yunani, pendiri Akademi, murid Socrates",
+      "hanacaraka_value": 30,
+      "energy": "idealisme, kebijaksanaan, pendidikan, pemikiran mendalam",
+      "perhitungan": "P(11)+L(10)+A(1)+T(7)+O(5)=34"
+    },
+    {
+      "text": "Socrates",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "filsuf Yunani, bapak filsafat Barat, metode dialektika",
+      "hanacaraka_value": 33,
+      "energy": "kebijaksanaan, pertanyaan kritis, integritas, keberanian moral",
+      "perhitungan": "S(8)+O(5)+C(3)+R(4)+A(1)+T(7)+E(4)+S(8)=40"
+    },
+    {
+      "text": "Confucius",
+      "type": "tokoh_inspiratif",
+      "element": "Tanah",
+      "meaning": "filsuf China, guru etika, moralitas, harmoni sosial",
+      "hanacaraka_value": 45,
+      "energy": "etika, moralitas, harmoni, pendidikan karakter",
+      "perhitungan": "C(3)+O(5)+N(2)+F(pa=11)+U(11)+C(3)+I(2)+U(11)+S(8)=56"
+    },
+    {
+      "text": "Lao_Tzu",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "filsuf Tao, penulis Tao Te Ching, kebijaksanaan kuno",
+      "hanacaraka_value": 30,
+      "energy": "kesederhanaan, harmoni alam, kebijaksanaan, Tao",
+      "perhitungan": "L(10)+A(1)+O(5)+T(7)+Z(sa=8)+U(11)=42"
+    },
+    {
+      "text": "Shakespeare",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "penulis drama terbesar, penyair, memahami jiwa manusia",
+      "hanacaraka_value": 52,
+      "energy": "kreativitas, pemahaman manusia, bahasa, seni",
+      "perhitungan": "S(8)+H(1)+A(1)+K(5)+E(4)+S(8)+P(11)+E(4)+A(1)+R(4)+E(4)=51"
+    },
+    {
+      "text": "Beethoven",
+      "type": "tokoh_inspiratif",
+      "element": "Api",
+      "meaning": "komposer jenius, mengatasi ketulian, semangat tak terkalahkan",
+      "hanacaraka_value": 50,
+      "energy": "ketekunan, kejeniusan musikal, mengatasi keterbatasan",
+      "perhitungan": "B(18)+E(4)+E(4)+T(7)+H(1)+O(5)+V(wa=9)+E(4)+N(2)=54"
+    },
+    {
+      "text": "Mozart",
+      "type": "tokoh_inspiratif",
+      "element": "Kayu",
+      "meaning": "komposer jenius sejak kecil, produktif, brilian",
+      "hanacaraka_value": 34,
+      "energy": "kejeniusan alami, produktivitas, keindahan, harmoni",
+      "perhitungan": "M(16)+O(5)+Z(sa=8)+A(1)+R(4)+T(7)=41"
+    },
+    {
+      "text": "Da_Vinci",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "seniman, ilmuwan, polymath, manusia renaisans",
+      "hanacaraka_value": 32,
+      "energy": "multitalenta, kreativitas, keingintahuan, seni",
+      "perhitungan": "D(6)+A(1)+V(wa=9)+I(2)+N(2)+C(3)+I(2)=25"
+    },
+    {
+      "text": "Michelangelo",
+      "type": "tokoh_inspiratif",
+      "element": "Tanah",
+      "meaning": "pematung, pelukis, arsitek, jenius Renaisans",
+      "hanacaraka_value": 56,
+      "energy": "keahlian, dedikasi, keindahan abadi, kerja keras",
+      "perhitungan": "M(16)+I(2)+C(3)+H(1)+E(4)+L(10)+A(1)+N(2)+G(17)+E(4)+L(10)+O(5)=75"
+    },
+    {
+      "text": "Picasso",
+      "type": "tokoh_inspiratif",
+      "element": "Kayu",
+      "meaning": "pelukis revolusioner, kubisme, kreativitas tanpa batas",
+      "hanacaraka_value": 35,
+      "energy": "inovasi artistik, keberanian bereksperimen, visi unik",
+      "perhitungan": "P(11)+I(2)+C(3)+A(1)+S(8)+S(8)+O(5)=38"
+    },
+    {
+      "text": "Van_Gogh",
+      "type": "tokoh_inspiratif",
+      "element": "Api",
+      "meaning": "pelukis pasca-impresionis, penuh gairah, tragis",
+      "hanacaraka_value": 40,
+      "energy": "gairah, dedikasi pada seni, keindahan dalam kesederhanaan",
+      "perhitungan": "V(wa=9)+A(1)+N(2)+G(17)+O(5)+G(17)+H(1)=52"
+    },
+    {
+      "text": "Galileo",
+      "type": "tokoh_inspiratif",
+      "element": "Udara",
+      "meaning": "astronom, fisikawan, bapak sains modern, pembela kebenaran",
+      "hanacaraka_value": 36,
+      "energy": "keberanian intelektual, observasi, kebenaran ilmiah",
+      "perhitungan": "G(17)+A(1)+L(10)+I(2)+L(10)+E(4)+O(5)=49"
+    },
+    {
+      "text": "Newton",
+      "type": "tokoh_inspiratif",
+      "element": "Tanah",
+      "meaning": "fisikawan, matematikawan, hukum gravitasi, kalkulus",
+      "hanacaraka_value": 31,
+      "energy": "kejeniusan, pemikiran sistematis, fondasi ilmiah",
+      "perhitungan": "N(2)+E(4)+W(9)+T(7)+O(5)+N(2)=29"
+    },
+    {
+      "text": "Darwin",
+      "type": "tokoh_inspiratif",
+      "element": "Kayu",
+      "meaning": "naturalis, teori evolusi, mengubah pandangan dunia",
+      "hanacaraka_value": 32,
+      "energy": "observasi tajam, keberanian ilmiah, pemikiran evolusioner",
+      "perhitungan": "D(6)+A(1)+R(4)+W(9)+I(2)+N(2)=24"
+    },
+    {
+      "text": "Hawking",
+      "type": "tokoh_inspiratif",
+      "element": "Udara",
+      "meaning": "fisikawan teoretis, mengatasi ALS, pikiran tak terbatas",
+      "hanacaraka_value": 36,
+      "energy": "ketekunan, kejeniusan, mengatasi keterbatasan fisik",
+      "perhitungan": "H(1)+A(1)+W(9)+K(5)+I(2)+N(2)+G(17)=37"
+    },
+    {
+      "text": "Curie",
+      "type": "tokoh_inspiratif",
+      "element": "Logam",
+      "meaning": "Marie Curie, penemu radium, Nobel ganda, dedikasi pada sains",
+      "hanacaraka_value": 26,
+      "energy": "dedikasi, terobosan ilmiah, ketekunan, kesetaraan gender",
+      "perhitungan": "C(3)+U(11)+R(4)+I(2)+E(4)=24"
+    },
+    {
+      "text": "Nightingale",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "Florence Nightingale, pelopor keperawatan modern, penuh kasih",
+      "hanacaraka_value": 54,
+      "energy": "kasih sayang, dedikasi, reformasi kesehatan, kepemimpinan",
+      "perhitungan": "N(2)+I(2)+G(17)+H(1)+T(7)+I(2)+N(2)+G(17)+A(1)+L(10)+E(4)=65"
+    },
+    {
+      "text": "Keller",
+      "type": "tokoh_inspiratif",
+      "element": "Api",
+      "meaning": "Helen Keller, tuna netra-tuli, penulis, aktivis, inspirasi",
+      "hanacaraka_value": 27,
+      "energy": "mengatasi keterbatasan, komunikasi, advokasi disabilitas",
+      "perhitungan": "K(5)+E(4)+L(10)+L(10)+E(4)+R(4)=37"
+    },
+    {
+      "text": "Teresa",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "Bunda Teresa, melayani kaum miskin, simbol kasih sayang",
+      "hanacaraka_value": 24,
+      "energy": "kasih sayang, pelayanan, kesederhanaan, kemanusiaan",
+      "perhitungan": "T(7)+E(4)+R(4)+E(4)+S(8)+A(1)=28"
+    },
+    {
+      "text": "Chaplin",
+      "type": "tokoh_inspiratif",
+      "element": "Kayu",
+      "meaning": "Charlie Chaplin, komedian, sutradara, kritik sosial melalui seni",
+      "hanacaraka_value": 32,
+      "energy": "kreativitas, humor, kritik sosial, kemanusiaan",
+      "perhitungan": "C(3)+H(1)+A(1)+P(11)+L(10)+I(2)+N(2)=30"
+    },
+    {
+      "text": "Disney",
+      "type": "tokoh_inspiratif",
+      "element": "Api",
+      "meaning": "Walt Disney, visioner hiburan, kreator Mickey Mouse, Disneyland",
+      "hanacaraka_value": 32,
+      "energy": "imajinasi, ketekunan, visioner, menghibur dunia",
+      "perhitungan": "D(6)+I(2)+S(8)+N(2)+E(4)+Y(14)=36"
+    },
+    {
+      "text": "Jobs",
+      "type": "tokoh_inspiratif",
+      "element": "Logam",
+      "meaning": "Steve Jobs, pendiri Apple, visioner teknologi, 'Stay Hungry, Stay Foolish'",
+      "hanacaraka_value": 22,
+      "energy": "inovasi, visi, desain, keberanian berpikir berbeda",
+      "perhitungan": "J(13)+O(5)+B(18)+S(8)=44"
+    },
+    {
+      "text": "Gates",
+      "type": "tokoh_inspiratif",
+      "element": "Tanah",
+      "meaning": "Bill Gates, pendiri Microsoft, filantropis, visioner teknologi",
+      "hanacaraka_value": 25,
+      "energy": "inovasi, bisnis, filantropi, visi global",
+      "perhitungan": "G(17)+A(1)+T(7)+E(4)+S(8)=37"
+    },
+    {
+      "text": "Musk",
+      "type": "tokoh_inspiratif",
+      "element": "Api",
+      "meaning": "Elon Musk, visioner teknologi, SpaceX, Tesla, misi ke Mars",
+      "hanacaraka_value": 29,
+      "energy": "visi futuristik, keberanian, inovasi disruptif, ambisi besar",
+      "perhitungan": "M(16)+U(11)+S(8)+K(5)=40"
+    },
+    {
+      "text": "Oprah",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "Oprah Winfrey, ratu talk show, filantropis, menginspirasi jutaan orang",
+      "hanacaraka_value": 30,
+      "energy": "empati, komunikasi, pemberdayaan, ketekunan",
+      "perhitungan": "O(5)+P(11)+R(4)+A(1)+H(1)=22"
+    },
+    {
+      "text": "Ali",
+      "type": "tokoh_inspiratif",
+      "element": "Api",
+      "meaning": "Muhammad Ali, petinju terbesar, aktivis, 'The Greatest'",
+      "hanacaraka_value": 12,
+      "energy": "kepercayaan diri, keberanian, prinsip, karisma",
+      "perhitungan": "A(1)+L(10)+I(2)=13"
+    },
+    {
+      "text": "Pele",
+      "type": "tokoh_inspiratif",
+      "element": "Kayu",
+      "meaning": "Pele, raja sepak bola, legenda, menginspirasi generasi",
+      "hanacaraka_value": 23,
+      "energy": "keunggulan, dedikasi, sportivitas, ikon global",
+      "perhitungan": "P(11)+E(4)+L(10)+E(4)=29"
+    },
+    {
+      "text": "Jordan",
+      "type": "tokoh_inspiratif",
+      "element": "Api",
+      "meaning": "Michael Jordan, legenda basket, mental juara, 'I've failed over and over'",
+      "hanacaraka_value": 33,
+      "energy": "mental juara, kerja keras, keunggulan, inspirasi",
+      "perhitungan": "J(13)+O(5)+R(4)+D(6)+A(1)+N(2)=31"
+    },
+    {
+      "text": "Bolt",
+      "type": "tokoh_inspiratif",
+      "element": "Api",
+      "meaning": "Usain Bolt, manusia tercepat, memecahkan rekor dunia",
+      "hanacaraka_value": 24,
+      "energy": "kecepatan, dedikasi, memecahkan batasan, kegembiraan",
+      "perhitungan": "B(18)+O(5)+L(10)+T(7)=40"
+    },
+    {
+      "text": "Phelps",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "Michael Phelps, perenang terhebat, 23 medali emas Olimpiade",
+      "hanacaraka_value": 40,
+      "energy": "dedikasi, keunggulan, mengatasi adversitas, dominasi",
+      "perhitungan": "P(11)+H(1)+E(4)+L(10)+P(11)+S(8)=45"
+    },
+    {
+      "text": "Federer",
+      "type": "tokoh_inspiratif",
+      "element": "Kayu",
+      "meaning": "Roger Federer, maestro tenis, elegansi, sportivitas",
+      "hanacaraka_value": 38,
+      "energy": "elegansi, konsistensi, keunggulan, sportivitas",
+      "perhitungan": "F(pa=11)+E(4)+D(6)+E(4)+R(4)+E(4)+R(4)=37"
+    },
+    {
+      "text": "Woods",
+      "type": "tokoh_inspiratif",
+      "element": "Tanah",
+      "meaning": "Tiger Woods, legenda golf, comeback luar biasa, mental baja",
+      "hanacaraka_value": 30,
+      "energy": "mental baja, fokus, comeback, keunggulan",
+      "perhitungan": "W(9)+O(5)+O(5)+D(6)+S(8)=33"
+    },
+    {
+      "text": "Rowling",
+      "type": "tokoh_inspiratif",
+      "element": "Kayu",
+      "meaning": "J.K. Rowling, penulis Harry Potter, dari miskin ke miliarder",
+      "hanacaraka_value": 40,
+      "energy": "imajinasi, ketekunan, mengatasi penolakan, kesuksesan",
+      "perhitungan": "R(4)+O(5)+W(9)+L(10)+I(2)+N(2)+G(17)=49"
+    },
+    {
+      "text": "Tolkien",
+      "type": "tokoh_inspiratif",
+      "element": "Tanah",
+      "meaning": "J.R.R. Tolkien, penulis Lord of the Rings, pencipta dunia fantasi",
+      "hanacaraka_value": 36,
+      "energy": "imajinasi, kreativitas, membangun dunia, kedalaman",
+      "perhitungan": "T(7)+O(5)+L(10)+K(5)+I(2)+E(4)+N(2)=35"
+    },
+    {
+      "text": "Angelou",
+      "type": "tokoh_inspiratif",
+      "element": "Api",
+      "meaning": "Maya Angelou, penyair, aktivis hak sipil, 'Still I Rise'",
+      "hanacaraka_value": 38,
+      "energy": "ketahanan, suara, kebijaksanaan, inspirasi",
+      "perhitungan": "A(1)+N(2)+G(17)+E(4)+L(10)+O(5)+U(11)=50"
+    },
+    {
+      "text": "Mandela",
+      "type": "tokoh_inspiratif",
+      "element": "Tanah",
+      "meaning": "Nelson Mandela, pejuang anti-apartheid, presiden, simbol pemaafan",
+      "hanacaraka_value": 26,
+      "energy": "pemaafan, rekonsiliasi, keadilan, ketabahan",
+      "perhitungan": "M(16)+A(1)+N(2)+D(6)+E(4)+L(10)+A(1)=40"
+    },
+    {
+      "text": "Tutu",
+      "type": "tokoh_inspiratif",
+      "element": "Air",
+      "meaning": "Desmond Tutu, uskup agung, aktivis anti-apartheid, rekonsiliasi",
+      "hanacaraka_value": 29,
+      "energy": "keadilan, rekonsiliasi, spiritualitas, keberanian moral",
+      "perhitungan": "T(7)+U(11)+T(7)+U(11)=36"
+    },
+    {
+      "text": "Yousafzai",
+      "type": "tokoh_inspiratif",
+      "element": "Kayu",
+      "meaning": "Malala Yousafzai, aktivis pendidikan, Nobel termuda",
+      "hanacaraka_value": 49,
+      "energy": "keberanian, pendidikan, kesetaraan, suara generasi muda",
+      "perhitungan": "Y(14)+O(5)+U(11)+S(8)+A(1)+F(pa=11)+Z(sa=8)+A(1)+I(2)=61"
+    }
+  ],
+  "elements_info": {
+    "Api": {
+      "characteristics": ["kepemimpinan", "semangat", "antusiasme", "keberanian"],
+      "compatible_with": ["Kayu", "Tanah"],
+      "challenging_with": ["Air"],
+      "weakened_by": ["Logam"]
+    },
+    "Air": {
+      "characteristics": ["kebijaksanaan", "ketenangan", "intuisi", "adaptasi"],
+      "compatible_with": ["Kayu", "Logam"],
+      "challenging_with": ["Tanah"],
+      "weakened_by": ["Api"]
+    },
+    "Tanah": {
+      "characteristics": ["stabilitas", "kesabaran", "keteguhan", "praktis"],
+      "compatible_with": ["Api", "Logam"],
+      "challenging_with": ["Kayu"],
+      "weakened_by": ["Air"]
+    },
+    "Kayu": {
+      "characteristics": ["pertumbuhan", "kreativitas", "fleksibilitas", "visi"],
+      "compatible_with": ["Air", "Api"],
+      "challenging_with": ["Logam"],
+      "weakened_by": ["Tanah"]
+    },
+    "Logam": {
+      "characteristics": ["ketegasan", "disiplin", "struktur", "keadilan"],
+      "compatible_with": ["Tanah", "Air"],
+      "challenging_with": ["Api"],
+      "weakened_by": ["Kayu"]
+    },
+    "Udara": {
+      "characteristics": ["komunikasi", "intelek", "pergerakan", "kebebasan"],
+      "compatible_with": ["Api", "Kayu"],
+      "challenging_with": ["Tanah"],
+      "weakened_by": ["Logam"]
+    }
+  }
+}
