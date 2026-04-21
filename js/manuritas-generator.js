@@ -575,6 +575,58 @@ function sharePurchasedName() {
     window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, '_blank');
 }
 
+// ---------- ANALISIS KATA TAMBAHAN ----------
+function analyzeAddedWord(word) {
+  const syllablesData = window.positiveSyllablesData;
+  
+  // Cek di positive-syllables.json dulu
+  if (syllablesData && syllablesData.syllables) {
+    const wordData = syllablesData.syllables.find(s => s.text === word);
+    if (wordData) {
+      return {
+        value: wordData.hanacaraka_value,
+        element: wordData.element,
+        effect: wordData.energy
+      };
+    }
+  }
+  
+  // Fallback: hitung manual
+  let value = 0;
+  try {
+    if (typeof hanacarakaValue === 'function') {
+      value = hanacarakaValue(word).total;
+    } else {
+      // Perhitungan sederhana
+      value = word.length * 5;
+    }
+  } catch(e) {
+    value = word.length * 5;
+  }
+  
+  let element = 'Tanah';
+  let effect = 'memberikan stabilitas dan fondasi yang kokoh';
+  
+  if (value <= 20) {
+    element = 'Api';
+    effect = 'memberikan energi kepemimpinan dan semangat yang membara';
+  } else if (value <= 40) {
+    element = 'Air';
+    effect = 'memberikan ketenangan, kebijaksanaan, dan kemampuan beradaptasi';
+  } else if (value <= 60) {
+    element = 'Kayu';
+    effect = 'memberikan pertumbuhan, kreativitas, dan visi ke depan';
+  } else if (value <= 80) {
+    element = 'Logam';
+    effect = 'memberikan ketegasan, disiplin, dan kemampuan eksekusi';
+  }
+  
+  return { value, element, effect };
+}
+
+// Expose ke global (tambahkan di bagian expose)
+window.analyzeAddedWord = analyzeAddedWord;
+
 // ---------- EXPOSE KE GLOBAL ----------
 window.PACKAGE_CONFIG = PACKAGE_CONFIG;
 window.getStrengthLabel = getStrengthLabel;
