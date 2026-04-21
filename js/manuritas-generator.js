@@ -468,12 +468,12 @@ function displayPurchasedNameResultNew(data) {
             
             <div class="analysis-section-card">
                 <h4><i class="fas fa-check-circle" style="color:#64C864;"></i> KELEBIHAN NAMA BARU</h4>
-                ${kelebihanTraits.length > 0 ? kelebihanTraits.map(k => `<p style="margin-bottom:8px;">• ${k.text}</p>`).join('') : '<p>Energi nama ini seimbang dan harmonis.</p>'}
+                ${kelebihanTraits.length > 0 ? kelebihanTraits.map(k => `<p style="margin-bottom:8px;">Â• ${k.text}</p>`).join('') : '<p>Energi nama ini seimbang dan harmonis.</p>'}
             </div>
             
             <div class="analysis-section-card">
                 <h4><i class="fas fa-exclamation-triangle" style="color:#FF8A8A;"></i> AREA YANG PERLU DIPERKUAT</h4>
-                ${kekuranganTraits.length > 0 ? kekuranganTraits.map(k => `<p style="margin-bottom:8px;">• ${k.text}</p>`).join('') : '<p>Tidak ada area kelemahan signifikan yang terdeteksi.</p>'}
+                ${kekuranganTraits.length > 0 ? kekuranganTraits.map(k => `<p style="margin-bottom:8px;">Â• ${k.text}</p>`).join('') : '<p>Tidak ada area kelemahan signifikan yang terdeteksi.</p>'}
             </div>
             
             <div class="analysis-section-card">
@@ -492,7 +492,7 @@ function displayPurchasedNameResultNew(data) {
             
             <div class="analysis-section-card">
                 <h4><i class="fas fa-clover"></i> KEBERUNTUNGAN ANDA</h4>
-                <p><strong> Angka:</strong> ${angkaHoki.join(' • ')}</p>
+                <p><strong> Angka:</strong> ${angkaHoki.join(' Â• ')}</p>
                 <p><strong> Warna:</strong> ${warna.primary?.join(', ')}</p>
                 <p><strong> Kristal:</strong> ${kristal.name} - ${kristal.benefits}</p>
             </div>
@@ -514,9 +514,9 @@ function displayPurchasedNameResultNew(data) {
             
             <div class="analysis-section-card">
                 <h4><i class="fas fa-lightbulb" style="color:#D4AF37;"></i> SARAN PENGGUNAAN</h4>
-                <p>• Gunakan <strong>"${data.name}"</strong> sebagai nama profesional di LinkedIn, email, atau kartu nama.</p>
-                <p>• Perkenalkan diri dengan nama ini di lingkungan baru untuk menarik energi positif.</p>
-                <p>• Tidak perlu mengubah dokumen legal, getaran nama bekerja saat diucapkan.</p>
+                <p>Â• Gunakan <strong>"${data.name}"</strong> sebagai nama profesional di LinkedIn, email, atau kartu nama.</p>
+                <p>Â• Perkenalkan diri dengan nama ini di lingkungan baru untuk menarik energi positif.</p>
+                <p>Â• Tidak perlu mengubah dokumen legal, getaran nama bekerja saat diucapkan.</p>
             </div>
             
             <div style="display:flex; justify-content:center; gap:16px; margin-top:28px;">
