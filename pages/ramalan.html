@@ -967,165 +967,111 @@
     }
 
     // ==================== BAGIAN 7: SHARE & PDF ====================
-    
-      function showShareCard() {
+    function showShareCard() {
       const name = elements.userName.value.trim() || 'Sang Pencari';
       const zodiac = currentUserData?.zodiac || '-';
       const shio = currentUserData?.shio || '-';
-      const strength = currentManuritasResult?.strength?.score || 0;
-      const strengthLabel = currentManuritasResult?.strength?.label || '-';
-      const tugas = currentManuritasResult?.tugasHidup?.name || '-';
       
-      const shareText = `✨ CETAK BIRU DIRIKU ✨\n\nNama: ${name}\nZodiak: ${zodiac} • Shio: ${shio}\nKekuatan Nama: ${strength}% (${strengthLabel})\nTugas Hidup: ${tugas}\n\n#OracleNusantara #CetakBiruDiriku\n\nCek punyamu di: ${window.location.origin}/pages/ramalan.html`;
+      const shareText = `✨ CETAK BIRU DIRIKU ✨\n\nNama: ${name}\nZodiak: ${zodiac} • Shio: ${shio}\n\n#OracleNusantara #CetakBiruDiriku\n\nCek punyamu di: ${window.location.origin}/pages/ramalan.html`;
       
-      const shareUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
-      
-      showConfirmModal('Bagikan Hasil', 'Bagikan cetak biru dirimu ke WhatsApp atau salin teks untuk media sosial.', 
-        () => { window.open(shareUrl, '_blank'); },
-        () => { 
-          navigator.clipboard?.writeText(shareText).then(() => showSuccessToast('📋 Teks berhasil disalin!'));
-        },
+      showConfirmModal('Bagikan Hasil', 'Bagikan cetak biru dirimu ke WhatsApp atau salin teks.', 
+        () => { window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, '_blank'); },
+        () => { navigator.clipboard?.writeText(shareText).then(() => showSuccessToast('📋 Teks disalin!')); },
         'Bagikan ke WA', 'Salin Teks'
       );
     }
-    
-    // ========== TESTIMONIAL PROMPT ==========
-    function showTestimonialPrompt() {
-      setTimeout(() => {
-        if (ramalanPremiumUnlocked && !localStorage.getItem('testimonialShown')) {
-          showConfirmModal(
-            '🎉 Bagikan Pengalamanmu!',
-            'Apakah ramalan ini membantumu? Bagikan testimonial dan dapatkan 1 Token gratis!',
-            () => {
-              const shareText = `Aku baru saja dapat Cetak Biru Diriku di Oracle Nusantara! Hasilnya akurat dan membuka wawasan. Coba sendiri di ${window.location.origin}`;
-              window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, '_blank');
-              let balance = parseInt(localStorage.getItem('tokenBalance') || '0');
-              balance += 1;
-              localStorage.setItem('tokenBalance', balance);
-              updateTokenDisplay();
-              showSuccessToast('🎉 Terima kasih! 1 Token telah ditambahkan.');
-              localStorage.setItem('testimonialShown', 'true');
-            },
-            () => {},
-            'Bagikan & Dapatkan Token', 'Nanti Saja'
-          );
-        }
-      }, 3000);
-    }
-    
-    // ========== DOWNLOAD PREMIUM PDF (PERBAIKAN FINAL) ==========
-    async function downloadPremiumPDF() {
-      console.log('🔵 downloadPremiumPDF called');
-      
-      if (!ramalanPremiumUnlocked) {
-        showErrorToast('Buka Ramalan Lengkap terlebih dahulu.');
-        return;
-      }
-      
-      const content = document.getElementById('premiumDetailBox');
+
+    function downloadManuritasPDF() {
+      const content = document.getElementById('manuritasPremiumBox');
       if (!content || content.classList.contains('hidden')) {
-        showErrorToast('Konten premium tidak tersedia.');
+        showErrorToast('Buka Manuritas Premium terlebih dahulu.');
         return;
       }
       
       try {
         const { jsPDF } = window.jspdf;
-        if (!jsPDF) {
-          showErrorToast('Library PDF tidak terload. Refresh halaman.');
-          return;
-        }
-        
-        const userNameInput = document.getElementById('userName');
-        const userName = userNameInput?.value?.trim() || 'Sang Pencari';
-        
         const pdf = new jsPDF('p', 'mm', 'a4');
-        const pageWidth = 210;
-        const margin = 20;
+        const userName = elements.userName.value.trim() || 'Sang Pencari';
         
-        pdf.setFont('helvetica', 'bold');
         pdf.setFontSize(22);
         pdf.setTextColor(212, 175, 55);
-        pdf.text('Oracle Nusantara', pageWidth/2, 25, { align: 'center' });
-        
-        pdf.setFont('helvetica', 'normal');
+        pdf.text('Oracle Nusantara', 105, 25, { align: 'center' });
         pdf.setFontSize(12);
         pdf.setTextColor(0, 0, 0);
-        pdf.text(`Cetak Biru Diri - ${userName}`, pageWidth/2, 35, { align: 'center' });
-        
-        pdf.setDrawColor(212, 175, 55);
-        pdf.line(margin, 40, pageWidth - margin, 40);
+        pdf.text(`Manuritas Premium - ${userName}`, 105, 35, { align: 'center' });
         
         let yPos = 50;
         pdf.setFontSize(10);
+        const lines = pdf.splitTextToSize(content.innerText, 170);
+        lines.forEach(line => {
+          if (yPos > 270) { pdf.addPage(); yPos = 20; }
+          pdf.text(line, 20, yPos);
+          yPos += 5;
+        });
         
-        const els = content.querySelectorAll('.analysis-section-card, h4, p');
-        
-        if (els.length === 0) {
-          const allText = content.innerText;
-          const lines = pdf.splitTextToSize(allText, 170);
-          lines.forEach(line => {
-            if (yPos > 270) { pdf.addPage(); yPos = 20; }
-            pdf.text(line, margin, yPos);
-            yPos += 5;
-          });
-        } else {
-          els.forEach(el => {
-            if (el.classList.contains('btn-pdf') || el.classList.contains('btn-share')) return;
-            if (el.querySelector('.btn-pdf')) return;
-            
-            if (el.tagName === 'H4') {
-              pdf.setFont('helvetica', 'bold');
-              pdf.setTextColor(212, 175, 55);
-            } else {
-              pdf.setFont('helvetica', 'normal');
-              pdf.setTextColor(0, 0, 0);
-            }
-            
-            const text = el.innerText || '';
-            if (!text.trim()) return;
-            
-            const lines = pdf.splitTextToSize(text, 170);
-            
-            lines.forEach(line => {
-              if (yPos > 270) {
-                pdf.addPage();
-                yPos = 20;
-              }
-              pdf.text(line, margin, yPos);
-              yPos += 5;
-            });
-            yPos += 3;
-          });
-        }
-        
-        // Tambahkan QR Code jika library tersedia
-        if (typeof QRCode !== 'undefined') {
-          try {
-            const canvas = document.createElement('canvas');
-            await QRCode.toCanvas(canvas, `${window.location.origin}/verify?user=${encodeURIComponent(userName)}`, { width: 80 });
-            const imgData = canvas.toDataURL('image/png');
-            pdf.addImage(imgData, 'PNG', 150, 250, 30, 30);
-            pdf.setFontSize(8);
-            pdf.text('Scan untuk verifikasi', 165, 285, { align: 'center' });
-          } catch(e) {
-            console.warn('QR Code gagal:', e);
-          }
-        }
-        
-        pdf.setFontSize(8);
-        pdf.setTextColor(80, 80, 80);
-        pdf.text('© 2026 Oracle Nusantara • Diterbitkan oleh Doni Chandra Utama', pageWidth/2, 290, { align: 'center' });
-        
-        pdf.save(`Oracle-Nusantara-Premium-${userName}.pdf`);
-        showSuccessToast('📄 PDF Premium berhasil diunduh!');
-        
+        pdf.save(`Oracle-Manuritas-${userName}.pdf`);
+        showSuccessToast('📄 PDF berhasil diunduh!');
       } catch(e) {
-        console.error('❌ Error:', e);
-        showErrorToast('Gagal mengunduh PDF: ' + e.message);
+        showErrorToast('Gagal mengunduh PDF');
       }
     }
-    
-    // ========== CHECK PAYMENT SUCCESS ==========
+
+    function downloadPremiumPDF() {
+      const content = document.getElementById('premiumDetailBox');
+      if (!content || content.classList.contains('hidden')) {
+        showErrorToast('Buka Ramalan Premium terlebih dahulu.');
+        return;
+      }
+      
+      try {
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const userName = elements.userName.value.trim() || 'Sang Pencari';
+        
+        pdf.setFontSize(22);
+        pdf.setTextColor(212, 175, 55);
+        pdf.text('Oracle Nusantara', 105, 25, { align: 'center' });
+        pdf.setFontSize(12);
+        pdf.setTextColor(0, 0, 0);
+        pdf.text(`Ramalan Premium - ${userName}`, 105, 35, { align: 'center' });
+        
+        let yPos = 50;
+        pdf.setFontSize(10);
+        const lines = pdf.splitTextToSize(content.innerText, 170);
+        lines.forEach(line => {
+          if (yPos > 270) { pdf.addPage(); yPos = 20; }
+          pdf.text(line, 20, yPos);
+          yPos += 5;
+        });
+        
+        pdf.save(`Oracle-Premium-${userName}.pdf`);
+        showSuccessToast('📄 PDF berhasil diunduh!');
+      } catch(e) {
+        showErrorToast('Gagal mengunduh PDF');
+      }
+    }
+
+    // ==================== BAGIAN 8: RESTORE & INIT ====================
+    function restoreFormData() {
+      const savedName = localStorage.getItem('pendingUserName');
+      const savedBirth = localStorage.getItem('pendingBirthDate');
+      const savedFull = localStorage.getItem('pendingFullName');
+      const autoReveal = localStorage.getItem('pendingAutoReveal');
+      
+      if (savedName) elements.userName.value = savedName;
+      if (savedBirth) elements.birthDate.value = savedBirth;
+      if (savedFull) elements.fullName.value = savedFull;
+      
+      localStorage.removeItem('pendingUserName');
+      localStorage.removeItem('pendingBirthDate');
+      localStorage.removeItem('pendingFullName');
+      
+      if (autoReveal === 'true') {
+        localStorage.removeItem('pendingAutoReveal');
+        setTimeout(() => handleReveal(), 500);
+      }
+    }
+
     function checkPaymentSuccess() {
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('payment_success') === '1') {
@@ -1134,12 +1080,10 @@
           let balance = parseInt(localStorage.getItem('tokenBalance') || '0');
           balance += pendingTokens;
           localStorage.setItem('tokenBalance', balance);
-          localStorage.removeItem('pendingTokens'); 
-          localStorage.removeItem('pendingPlan'); 
-          localStorage.removeItem('pendingOrderId');
-          showSuccessToast(`🎉 ${pendingTokens} Token ditambahkan! Total: ${balance} Token.`);
+          localStorage.removeItem('pendingTokens');
+          localStorage.removeItem('pendingPlan');
+          showSuccessToast(`🎉 ${pendingTokens} Token ditambahkan!`);
           updateTokenDisplay();
-          
           restoreFormData();
         }
         window.history.replaceState({}, document.title, window.location.pathname);
@@ -1147,88 +1091,14 @@
         restoreFormData();
       }
     }
-    
-    // ========== UNLOCK HANDLERS ==========
-    function handleUnlockManuritas() {
-      if (typeof handleManuritasUnlock === 'function') {
-        handleManuritasUnlock(displayManuritasPremium);
-      } else {
-        let tokenBalance = parseInt(localStorage.getItem('tokenBalance') || '0');
-        if (tokenBalance >= 3) {
-          tokenBalance -= 3;
-          localStorage.setItem('tokenBalance', tokenBalance);
-          displayManuritasPremium();
-          updateTokenDisplay();
-          showSuccessToast(`✅ 3 Token digunakan. Sisa ${tokenBalance} Token.`);
-        } else {
-          if (confirm(`Anda membutuhkan 3 Token. Token Anda: ${tokenBalance}. Ingin membeli token sekarang?`)) {
-            localStorage.setItem('pendingUserName', elements.userName.value);
-            localStorage.setItem('pendingBirthDate', elements.birthDate.value);
-            localStorage.setItem('pendingFullName', elements.fullName.value);
-            localStorage.setItem('pendingAutoReveal', 'true');
-            window.location.href = 'pricing.html';
-          }
-        }
-      }
-    }
-    
-    function handleUnlockRamalan() {
-      if (typeof handlePremiumUnlock === 'function') {
-        handlePremiumUnlock(displayPremiumContent);
-      } else {
-        let tokenBalance = parseInt(localStorage.getItem('tokenBalance') || '0');
-        if (tokenBalance >= 3) {
-          tokenBalance -= 3;
-          localStorage.setItem('tokenBalance', tokenBalance);
-          displayPremiumContent();
-          updateTokenDisplay();
-          showSuccessToast(`✅ 3 Token digunakan. Sisa ${tokenBalance} Token.`);
-        } else {
-          if (confirm(`Anda membutuhkan 3 Token. Token Anda: ${tokenBalance}. Ingin membeli token sekarang?`)) {
-            localStorage.setItem('pendingUserName', elements.userName.value);
-            localStorage.setItem('pendingBirthDate', elements.birthDate.value);
-            localStorage.setItem('pendingFullName', elements.fullName.value);
-            localStorage.setItem('pendingAutoReveal', 'true');
-            window.location.href = 'pricing.html';
-          }
-        }
-      }
-    }
-    
-    // ========== GENERATOR RESULT (OVERRIDE) ==========
-    const originalDisplayPurchased = window.displayPurchasedNameResultNew;
-    if (typeof originalDisplayPurchased === 'function') {
-      window.displayPurchasedNameResultNew = function(data) {
-        originalDisplayPurchased(data);
-        setTimeout(() => {
-          const container = document.getElementById('nameOptionsContainer');
-          if (container && container.innerHTML.includes('SELAMAT')) {
-            if (!container.innerHTML.includes('Premium Member')) {
-              const badgeHtml = `
-                <div style="display:flex; justify-content:center; gap:16px; margin-top:20px;">
-                  <span class="badge" style="background:#D4AF37; color:#0A0A0C;"><i class="fas fa-crown"></i> Premium Member</span>
-                  <span class="badge" style="background:#64C864; color:#0A0A0C;"><i class="fas fa-medal"></i> Nama Baru Diaktifkan</span>
-                </div>
-              `;
-              container.insertAdjacentHTML('beforeend', badgeHtml);
-            }
-          }
-        }, 100);
-      };
-    }
-    
-    // ========== INIT ==========
+
     async function init() {
       initDOMElements();
       
       const today = new Date();
       elements.birthDate.value = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
       
-      try {
-        await loadAllPageData();
-      } catch (e) {
-        return;
-      }
+      await loadAllPageData();
       
       updateTokenDisplay();
       checkPaymentSuccess();
@@ -1236,29 +1106,15 @@
       elements.revealBtn.addEventListener('click', handleReveal);
       elements.unlockBtn.addEventListener('click', handleUnlockRamalan);
       
-      const unlockManuritasBtn = document.getElementById('unlockManuritasBtn');
-      if (unlockManuritasBtn) unlockManuritasBtn.addEventListener('click', handleUnlockManuritas);
-      
-      // Expose functions to global
-      window.downloadPremiumPDF = downloadPremiumPDF;
+      window.handleUnlockManuritas = handleUnlockManuritas;
       window.downloadManuritasPDF = downloadManuritasPDF;
+      window.downloadPremiumPDF = downloadPremiumPDF;
       window.showShareCard = showShareCard;
-      window.handleReveal = handleReveal;
-      window.loadNameOptions = loadNameOptions;
       
-      // Cek jsPDF
-      if (typeof window.jspdf === 'undefined') {
-        console.error('❌ jsPDF tidak terload!');
-      } else {
-        console.log('✅ jsPDF loaded');
-      }
-      
-      console.log('✅ Ramalan page initialized');
+      console.log('✅ Oracle Nusantara - Ramalan page initialized');
     }
-    
-    // ========== START ==========
+
     document.addEventListener('DOMContentLoaded', init);
   </script>
 </body>
 </html>
-        
