@@ -624,8 +624,85 @@ function analyzeAddedWord(word) {
   return { value, element, effect };
 }
 
-// Expose ke global (tambahkan di bagian expose)
-window.analyzeAddedWord = analyzeAddedWord;
+// ---------- DOWNLOAD SERTIFIKAT PDF ----------
+async function downloadPurchasedNamePDF() {
+  console.log('🔵 downloadPurchasedNamePDF called');
+  
+  const data = window.purchasedNameData;
+  if (!data) {
+    showErrorToast('Tidak ada data untuk diunduh.');
+    return;
+  }
+  
+  try {
+    const { jsPDF } = window.jspdf;
+    if (!jsPDF) {
+      showErrorToast('Library PDF tidak terload. Refresh halaman.');
+      return;
+    }
+    
+    const pdf = new jsPDF('p', 'mm', 'a4');
+    
+    // Header
+    pdf.setFontSize(24);
+    pdf.setTextColor(212, 175, 55);
+    pdf.text('Sertifikat Nama Selaras', 105, 30, { align: 'center' });
+    
+    pdf.setFontSize(16);
+    pdf.setTextColor(0, 0, 0);
+    pdf.text('Oracle Nusantara', 105, 45, { align: 'center' });
+    
+    pdf.setDrawColor(212, 175, 55);
+    pdf.line(20, 55, 190, 55);
+    
+    let yPos = 70;
+    
+    // Nama Baru
+    pdf.setFontSize(18);
+    pdf.text(`✨ ${data.name} ✨`, 105, yPos, { align: 'center' });
+    yPos += 15;
+    
+    // Kekuatan
+    pdf.setFontSize(14);
+    pdf.text(`Kekuatan Nama: ${data.strength}% (${data.strengthLabel})`, 20, yPos);
+    yPos += 10;
+    pdf.text(`Nilai Hanacaraka: ${data.hanacarakaTotal}`, 20, yPos);
+    yPos += 10;
+    pdf.text(`Nama Asli: ${data.originalName} (${data.originalStrength}%)`, 20, yPos);
+    yPos += 15;
+    
+    // Tugas Hidup & Jalur Rezeki
+    pdf.setFontSize(12);
+    pdf.text(`Tugas Hidup: ${data.result?.tugasHidup?.name || '-'}`, 20, yPos);
+    yPos += 8;
+    pdf.text(`Jalur Rezeki: ${data.result?.jalurRezeki?.name || '-'}`, 20, yPos);
+    yPos += 15;
+    
+    // Saran Penggunaan
+    pdf.setFontSize(11);
+    pdf.setTextColor(80, 80, 80);
+    pdf.text('Saran Penggunaan:', 20, yPos);
+    yPos += 6;
+    pdf.text('• Gunakan sebagai nama profesional di lingkungan kerja.', 25, yPos);
+    yPos += 6;
+    pdf.text('• Perkenalkan diri dengan nama ini di lingkungan baru.', 25, yPos);
+    yPos += 6;
+    pdf.text('• Tidak perlu mengubah dokumen legal.', 25, yPos);
+    yPos += 15;
+    
+    // Footer
+    pdf.setFontSize(10);
+    pdf.text(`Dianalisis dengan Manuritas • oracle-nusantara.com`, 105, 280, { align: 'center' });
+    pdf.text(`© 2026 Oracle Nusantara • Diterbitkan oleh Doni Chandra Utama`, 105, 290, { align: 'center' });
+    
+    pdf.save(`Sertifikat-Nama-${data.name.replace(/\s/g, '-')}.pdf`);
+    showSuccessToast('📄 Sertifikat PDF berhasil diunduh!');
+    
+  } catch(e) {
+    console.error('❌ Error downloadPurchasedNamePDF:', e);
+    showErrorToast('Gagal mengunduh PDF: ' + e.message);
+  }
+}
 
 // ---------- EXPOSE KE GLOBAL ----------
 window.PACKAGE_CONFIG = PACKAGE_CONFIG;
@@ -634,5 +711,7 @@ window.loadNameOptions = loadNameOptions;
 window.purchaseSelectedName = purchaseSelectedName;
 window.sharePurchasedName = sharePurchasedName;
 window.analyzeAddedWord = analyzeAddedWord;
+window.downloadPurchasedNamePDF = downloadPurchasedNamePDF;
+
 
 console.log(' manuritas-generator.js v4.0.0 loaded');
