@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "name": "Partner Bisnis Ideal Lengkap",
+    "version": "1.0.0",
+    "description": "Rekomendasi partner bisnis ideal berdasarkan elemen dan jalur rezeki"
+  },
+  "analisis_elemen_bisnis": {
+    "Api": {
+      "sifat_kamu": "Visioner, penuh ide, semangat tinggi, namun impulsif dan mudah bosan",
+      "butuh_partner": "Partner yang stabil, teliti, dan bisa mengeksekusi ide-idemu",
+      "cocok_dengan": ["Tanah", "Logam", "Air"],
+      "hindari": ["Api"],
+      "mengapa": "Api adalah pencetus ide, tapi bukan eksekutor terbaik. Kamu membutuhkan partner dengan elemen Tanah (stabil, praktis) atau Logam (terstruktur, disiplin) untuk mewujudkan visimu. Elemen Air juga baik sebagai penyeimbang emosi dan membangun relasi. Hindari partner dengan elemen Api berlebihan karena akan terjadi bentrokan ego dan ide yang tidak pernah tereksekusi."
+    },
+    "Air": {
+      "sifat_kamu": "Kreatif, intuitif, mudah beradaptasi, namun kurang tegas dan ragu-ragu",
+      "butuh_partner": "Partner yang tegas, terstruktur, dan bisa mengambil keputusan",
+      "cocok_dengan": ["Kayu", "Logam", "Tanah"],
+      "hindari": ["Air"],
+      "mengapa": "Air mengalir tanpa bentuk. Kamu butuh partner yang bisa memberi wadah (Tanah) atau struktur (Logam). Kayu akan tumbuh subur dengan aliran idemu. Hindari sesama Air karena kalian akan terus mengalir tanpa arah yang jelas."
+    },
+    "Tanah": {
+      "sifat_kamu": "Stabil, praktis, pekerja keras, namun kurang inovatif dan kaku",
+      "butuh_partner": "Partner yang kreatif, visioner, dan membawa ide-ide baru",
+      "cocok_dengan": ["Api", "Kayu", "Air"],
+      "hindari": ["Tanah"],
+      "mengapa": "Tanah kokoh tapi bisa jadi terlalu statis. Api membawa semangat dan ide baru. Kayu membawa pertumbuhan. Air melunakkan dan memberi fleksibilitas. Hindari sesama Tanah karena bisnis akan jalan di tempat."
+    },
+    "Kayu": {
+      "sifat_kamu": "Kreatif, bertumbuh, fleksibel, namun kurang terstruktur dan mudah terpecah",
+      "butuh_partner": "Partner yang terstruktur, disiplin, dan bisa mengorganisir",
+      "cocok_dengan": ["Air", "Logam", "Tanah"],
+      "hindari": ["Kayu"],
+      "mengapa": "Kayu tumbuh cepat tapi butuh arahan. Air menyirami ide-idemu. Logam memberi struktur. Tanah memberi fondasi. Hindari sesama Kayu karena akan tumbuh liar tanpa arah."
+    },
+    "Logam": {
+      "sifat_kamu": "Tegas, disiplin, terstruktur, namun kaku dan kurang fleksibel",
+      "butuh_partner": "Partner yang kreatif, fleksibel, dan bisa melunakkan",
+      "cocok_dengan": ["Tanah", "Air", "Kayu"],
+      "hindari": ["Logam"],
+      "mengapa": "Logam kuat tapi bisa patah jika terlalu kaku. Tanah adalah fondasi alami. Air melunakkan dan membentuk. Kayu memberi fleksibilitas. Hindari sesama Logam karena akan terjadi benturan keras."
+    },
+    "Udara": {
+      "sifat_kamu": "Komunikatif, penuh ide, bebas, namun sulit fokus dan tidak grounded",
+      "butuh_partner": "Partner yang grounded, praktis, dan bisa mengeksekusi",
+      "cocok_dengan": ["Api", "Tanah", "Kayu"],
+      "hindari": ["Udara"],
+      "mengapa": "Udara bebas melayang. Api memberi energi dan arah. Tanah memberi grounding. Kayu memberi struktur alami. Hindari sesama Udara karena ide akan terus melayang tanpa pernah mendarat."
+    }
+  },
+  "zodiak_bisnis": {
+    "Api": [
+      { "zodiak": "Taurus", "elemen": "Tanah", "peran": "COO, Manajer Operasional, CFO", "alasan": "Stabil, sabar, ahli dalam eksekusi dan keuangan. Akan menjadi fondasi yang kokoh bagi bisnismu." },
+      { "zodiak": "Virgo", "elemen": "Tanah", "peran": "COO, Quality Control, Administrasi", "alasan": "Teliti, analitis, mengurus detail yang kamu lewatkan. Sempurna untuk operasional." },
+      { "zodiak": "Capricorn", "elemen": "Tanah", "peran": "CEO, COO, Manajer Proyek", "alasan": "Ambisius, disiplin, membangun struktur bisnis jangka panjang. Partner yang bisa kamu andalkan." }
+    ],
+    "Air": [
+      { "zodiak": "Capricorn", "elemen": "Tanah", "peran": "CEO, CFO, Legal", "alasan": "Tegas dan terstruktur. Akan menjadi jangkar bagi idemu yang mengalir." },
+      { "zodiak": "Virgo", "elemen": "Tanah", "peran": "COO, Administrasi, HRD", "alasan": "Teliti dan praktis. Membantu mewujudkan ide-idemu menjadi sistem yang rapi." }
+    ],
+    "Tanah": [
+      { "zodiak": "Leo", "elemen": "Api", "peran": "Creative Director, Marketing, Sales", "alasan": "Karismatik dan visioner. Akan membawa bisnismu dikenal luas." },
+      { "zodiak": "Aries", "elemen": "Api", "peran": "Business Development, Sales", "alasan": "Pionir dan pemberani. Membuka pasar-pasar baru dengan agresif." }
+    ],
+    "Kayu": [
+      { "zodiak": "Capricorn", "elemen": "Tanah", "peran": "COO, Manajer Proyek", "alasan": "Struktur dan disiplin. Akan mengorganisir pertumbuhan bisnismu." },
+      { "zodiak": "Taurus", "elemen": "Tanah", "peran": "CFO, Manajer Keuangan", "alasan": "Stabil dan sabar. Mengelola keuangan dengan hati-hati." }
+    ],
+    "Logam": [
+      { "zodiak": "Pisces", "elemen": "Air", "peran": "Creative Director, Marketing", "alasan": "Kreatif dan intuitif. Melunakkan sisi kaku bisnismu dengan sentuhan artistik." },
+      { "zodiak": "Cancer", "elemen": "Air", "peran": "HRD, Customer Relations", "alasan": "Peduli dan protektif. Membangun hubungan baik dengan tim dan klien." }
+    ],
+    "Udara": [
+      { "zodiak": "Taurus", "elemen": "Tanah", "peran": "COO, Manajer Operasional", "alasan": "Grounded dan praktis. Mendaratkan ide-idemu yang melayang." },
+      { "zodiak": "Leo", "elemen": "Api", "peran": "Marketing, Public Relations", "alasan": "Karismatik dan berani. Membawa ide-idemu ke panggung yang lebih besar." }
+    ]
+  },
+  "shio_bisnis": {
+    "Api": [
+      { "shio": "Kerbau", "elemen": "Tanah", "peran": "COO, Manajer Operasional", "alasan": "Pekerja keras, sabar, menjadi fondasi bisnis. Eksekutor handal." },
+      { "shio": "Ular", "elemen": "Api", "peran": "Strategi, Riset, Pengembangan", "alasan": "Bijaksana, strategis, melengkapi visi besarmu dengan perhitungan matang." }
+    ],
+    "Air": [
+      { "shio": "Kerbau", "elemen": "Tanah", "peran": "COO, Manajer Proyek", "alasan": "Stabil dan pekerja keras. Memberi wadah bagi idemu." },
+      { "shio": "Ayam", "elemen": "Logam", "peran": "Administrasi, Keuangan", "alasan": "Teliti dan terstruktur. Mengatur aliran bisnismu." }
+    ],
+    "Tanah": [
+      { "shio": "Kuda", "elemen": "Api", "peran": "Marketing, Sales, Networking", "alasan": "Energik dan bebas. Membawa bisnismu ke tempat-tempat baru." },
+      { "shio": "Macan", "elemen": "Kayu", "peran": "Business Development", "alasan": "Pemberani dan dinamis. Membuka peluang-peluang baru." }
+    ],
+    "Kayu": [
+      { "shio": "Kerbau", "elemen": "Tanah", "peran": "COO, Manajer Operasional", "alasan": "Fondasi yang kokoh bagi pertumbuhanmu." },
+      { "shio": "Ayam", "elemen": "Logam", "peran": "Administrasi, Quality Control", "alasan": "Terstruktur dan teliti. Merapikan pertumbuhanmu." }
+    ],
+    "Logam": [
+      { "shio": "Babi", "elemen": "Air", "peran": "HRD, Customer Relations", "alasan": "Murah hati dan jujur. Melunakkan sisi tegasmu." },
+      { "shio": "Tikus", "elemen": "Air", "peran": "Strategi, Marketing", "alasan": "Cerdas dan adaptif. Membawa fleksibilitas." }
+    ],
+    "Udara": [
+      { "shio": "Kerbau", "elemen": "Tanah", "peran": "COO, Eksekutor", "alasan": "Grounded dan dapat diandalkan. Mewujudkan ide-idemu." },
+      { "shio": "Naga", "elemen": "Tanah", "peran": "CEO, Public Relations", "alasan": "Karismatik dan kuat. Menjadi wajah bisnismu." }
+    ]
+  },
+  "weton_bisnis": {
+    "Api": [
+      { "weton": "Buda Wage", "neptu": 11, "peran": "Riset, Strategi, Analisis", "alasan": "Cerdas dan analitis. Cocok untuk riset dan pengembangan." },
+      { "weton": "Wrespati Pon", "neptu": 15, "peran": "Legal, Negosiasi, Partnership", "alasan": "Bijaksana dan jujur. Cocok untuk negosiasi dan urusan legal." }
+    ],
+    "Air": [
+      { "weton": "Saniscara Wage", "neptu": 13, "peran": "Operasional, Manajemen", "alasan": "Disiplin dan pekerja keras. Mengelola operasional dengan baik." },
+      { "weton": "Anggara Paing", "neptu": 12, "peran": "Eksekusi, Lapangan", "alasan": "Pemberani dan energik. Cocok untuk pekerjaan lapangan." }
+    ],
+    "Tanah": [
+      { "weton": "Sukra Umanis", "neptu": 11, "peran": "Marketing, Kreatif", "alasan": "Romantis dan ramah. Cocok untuk pemasaran dan hubungan pelanggan." },
+      { "weton": "Soma Pon", "neptu": 11, "peran": "Ide, Konsep", "alasan": "Intuitif dan jujur. Sumber ide-ide segar." }
+    ],
+    "Kayu": [
+      { "weton": "Wrespati Wage", "neptu": 12, "peran": "Manajemen, Struktur", "alasan": "Bijaksana dan cerdas. Membangun sistem dan struktur." },
+      { "weton": "Saniscara Kliwon", "neptu": 17, "peran": "Operasional, Disiplin", "alasan": "Pekerja keras dan disiplin. Tulang punggung operasional." }
+    ],
+    "Logam": [
+      { "weton": "Soma Kliwon", "neptu": 12, "peran": "Kreatif, Inovasi", "alasan": "Intuitif dan berwibawa. Membawa ide-ide inovatif." },
+      { "weton": "Sukra Pon", "neptu": 13, "peran": "Hubungan, Komunikasi", "alasan": "Romantis dan jujur. Membangun relasi yang baik." }
+    ],
+    "Udara": [
+      { "weton": "Redite Wage", "neptu": 9, "peran": "Eksekusi, Manajemen", "alasan": "Berwibawa dan cerdas. Mewujudkan ide menjadi aksi." },
+      { "weton": "Buda Paing", "neptu": 16, "peran": "Operasional, Detail", "alasan": "Cerdas dan pekerja keras. Mengurus detail operasional." }
+    ]
+  },
+  "rekomendasi_peran": {
+    "Api": { "kamu": "CEO, Creative Director, Visioner, Business Development" },
+    "Air": { "kamu": "Creative Director, Content Creator, Konsultan, Psikolog Bisnis" },
+    "Tanah": { "kamu": "COO, Manajer Operasional, CFO, Project Manager" },
+    "Kayu": { "kamu": "Product Developer, Inovator, Business Development, Marketing" },
+    "Logam": { "kamu": "CEO, CFO, Legal, Quality Control, Auditor" },
+    "Udara": { "kamu": "CMO, Public Relations, Komunikasi, Networking, Sales" },
+    "partner_Tanah": "COO, Manajer Operasional, CFO, Eksekutor",
+    "partner_Logam": "CTO, Quality Control, Legal, Administrasi, Struktur",
+    "partner_Air": "CMO, Customer Relations, HRD, Kreatif, Mediator",
+    "partner_Api": "CEO, Visioner, Business Development, Marketing",
+    "partner_Kayu": "Product Manager, Inovator, Business Development"
+  },
+  "randomisasi": true,
+  "maksimal_ditampilkan": 3
+}

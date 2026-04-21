@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "name": "Pasangan Ideal Lengkap",
+    "version": "1.0.0",
+    "description": "Rekomendasi pasangan ideal berdasarkan elemen, zodiak, shio, dan weton"
+  },
+  "analisis_elemen": {
+    "Api": {
+      "sifat": "kepemimpinan, semangat, antusiasme, dan keberanian",
+      "cocok_dengan": ["Kayu", "Tanah"],
+      "kurang_cocok": ["Air", "Logam"],
+      "mengapa": "Api membutuhkan Kayu untuk terus menyala dan bertumbuh. Tanah memberikan stabilitas agar Api tidak membakar segalanya. Air dapat memadamkan semangat Api, sementara Logam dapat meleleh jika terlalu dekat dengan Api yang membara."
+    },
+    "Air": {
+      "sifat": "kebijaksanaan, ketenangan, intuisi, dan kemampuan beradaptasi",
+      "cocok_dengan": ["Kayu", "Logam"],
+      "kurang_cocok": ["Tanah", "Api"],
+      "mengapa": "Air mengaliri Kayu untuk tumbuh dan berkembang. Logam dapat membentuk dan mengarahkan Air. Tanah menyerap Air hingga habis, sementara Api dapat menguapkan Air jika tidak seimbang."
+    },
+    "Tanah": {
+      "sifat": "stabilitas, kesabaran, keteguhan, dan kepraktisan",
+      "cocok_dengan": ["Api", "Logam"],
+      "kurang_cocok": ["Kayu", "Air"],
+      "mengapa": "Api menghangatkan Tanah dan memberinya energi. Logam terbentuk dari dalam Tanah. Kayu dapat memecah Tanah, sementara Air dapat melunakkan dan mengikis Tanah."
+    },
+    "Kayu": {
+      "sifat": "pertumbuhan, kreativitas, fleksibilitas, dan visi ke depan",
+      "cocok_dengan": ["Air", "Api"],
+      "kurang_cocok": ["Logam", "Tanah"],
+      "mengapa": "Air menyirami Kayu untuk tumbuh subur. Api memberikan kehangatan bagi Kayu. Logam dapat memotong Kayu, sementara Tanah dapat menghambat pertumbuhan akar."
+    },
+    "Logam": {
+      "sifat": "ketegasan, disiplin, struktur, dan keadilan",
+      "cocok_dengan": ["Tanah", "Air"],
+      "kurang_cocok": ["Api", "Kayu"],
+      "mengapa": "Tanah melahirkan Logam. Air membentuk dan mengasah Logam. Api dapat melelehkan Logam, sementara Kayu dapat ditaklukkan oleh Logam namun hubungannya tidak harmonis."
+    },
+    "Udara": {
+      "sifat": "komunikasi, intelek, pergerakan, dan kebebasan",
+      "cocok_dengan": ["Api", "Kayu"],
+      "kurang_cocok": ["Tanah", "Logam"],
+      "mengapa": "Udara mengipasi Api agar lebih besar. Udara membantu Kayu bernapas. Tanah dapat membendung Udara, sementara Logam terlalu berat untuk digerakkan Udara."
+    }
+  },
+  "zodiak_cocok": {
+    "Api": [
+      { "zodiak": "Leo", "elemen": "Api", "alasan": "Sesama Api, kalian saling memahami semangat dan gairah satu sama lain. Hubungan ini penuh dengan petualangan dan keberanian." },
+      { "zodiak": "Sagittarius", "elemen": "Api", "alasan": "Sama-sama petualang dan optimis. Kalian akan saling mendorong untuk menjelajah dunia dan mencoba hal-hal baru." },
+      { "zodiak": "Aries", "elemen": "Api", "alasan": "Pionir dan pemberani. Kalian akan menjadi pasangan yang kompetitif namun saling mendukung." },
+      { "zodiak": "Taurus", "elemen": "Tanah", "alasan": "Tanah menstabilkan Api. Taurus yang tenang dan sabar akan menjadi jangkar bagi semangatmu yang membara." },
+      { "zodiak": "Virgo", "elemen": "Tanah", "alasan": "Teliti dan praktis, Virgo akan membantu mewujudkan ide-idemu menjadi kenyataan." }
+    ],
+    "Air": [
+      { "zodiak": "Cancer", "elemen": "Air", "alasan": "Sesama Air, kalian saling memahami kedalaman emosi tanpa perlu banyak kata." },
+      { "zodiak": "Scorpio", "elemen": "Air", "alasan": "Intens dan transformatif, hubungan ini akan membawamu pada pertumbuhan spiritual yang mendalam." },
+      { "zodiak": "Pisces", "elemen": "Air", "alasan": "Sama-sama intuitif dan artistik. Kalian akan menciptakan dunia mimpi yang indah bersama." },
+      { "zodiak": "Taurus", "elemen": "Tanah", "alasan": "Tanah memberi wadah bagi Air. Taurus memberikan stabilitas bagi emosimu yang mengalir." },
+      { "zodiak": "Capricorn", "elemen": "Tanah", "alasan": "Capricorn yang disiplin akan membantu mengarahkan aliran emosimu ke tujuan yang konkret." }
+    ],
+    "Tanah": [
+      { "zodiak": "Taurus", "elemen": "Tanah", "alasan": "Sesama Tanah, kalian membangun fondasi hubungan yang kokoh dan stabil." },
+      { "zodiak": "Virgo", "elemen": "Tanah", "alasan": "Sama-sama praktis dan detail. Kalian akan menjadi tim yang efisien dalam segala hal." },
+      { "zodiak": "Capricorn", "elemen": "Tanah", "alasan": "Ambisius dan pekerja keras. Kalian akan saling mendukung untuk mencapai puncak kesuksesan." },
+      { "zodiak": "Cancer", "elemen": "Air", "alasan": "Air menyuburkan Tanah. Cancer membawa kehangatan emosional bagi hidupmu yang terstruktur." },
+      { "zodiak": "Pisces", "elemen": "Air", "alasan": "Pisces yang puitis akan melunakkan sisi kakumu dan mengajarkanmu untuk bermimpi." }
+    ],
+    "Kayu": [
+      { "zodiak": "Gemini", "elemen": "Udara", "alasan": "Udara membantu Kayu bernapas. Gemini membawa ide-ide segar dan komunikasi yang hidup." },
+      { "zodiak": "Libra", "elemen": "Udara", "alasan": "Libra membawa keseimbangan dan keindahan dalam hidupmu yang terus bertumbuh." },
+      { "zodiak": "Aquarius", "elemen": "Udara", "alasan": "Aquarius yang inovatif akan menjadi angin segar bagi ide-ide kreatifmu." },
+      { "zodiak": "Cancer", "elemen": "Air", "alasan": "Air menyirami Kayu. Cancer memberikan nutrisi emosional bagi pertumbuhanmu." },
+      { "zodiak": "Scorpio", "elemen": "Air", "alasan": "Scorpio yang intens akan mendorongmu untuk bertransformasi dan tumbuh lebih kuat." }
+    ],
+    "Logam": [
+      { "zodiak": "Taurus", "elemen": "Tanah", "alasan": "Tanah melahirkan Logam. Taurus adalah fondasi yang kokoh bagi hidupmu." },
+      { "zodiak": "Virgo", "elemen": "Tanah", "alasan": "Virgo yang teliti akan menghargai presisi dan struktur yang kamu miliki." },
+      { "zodiak": "Capricorn", "elemen": "Tanah", "alasan": "Capricorn yang ambisius akan menjadi partner yang sepadan dalam mengejar kesuksesan." },
+      { "zodiak": "Cancer", "elemen": "Air", "alasan": "Air mengasah Logam. Cancer melunakkan sisi tegasmu dengan kelembutan." },
+      { "zodiak": "Pisces", "elemen": "Air", "alasan": "Pisces yang mengalir akan mengajarkanmu untuk lebih fleksibel dan menerima." }
+    ],
+    "Udara": [
+      { "zodiak": "Gemini", "elemen": "Udara", "alasan": "Sesama Udara, komunikasi kalian akan mengalir tanpa henti." },
+      { "zodiak": "Libra", "elemen": "Udara", "alasan": "Sama-sama mencintai harmoni dan keindahan. Hubungan yang elegan dan seimbang." },
+      { "zodiak": "Aquarius", "elemen": "Udara", "alasan": "Kalian akan menjadi pasangan yang unik, bebas, dan penuh ide-ide revolusioner." },
+      { "zodiak": "Leo", "elemen": "Api", "alasan": "Api memberi energi pada Udara. Leo membawa kehangatan dan semangat dalam hidupmu." },
+      { "zodiak": "Sagittarius", "elemen": "Api", "alasan": "Sagittarius yang petualang akan mengajakmu terbang ke tempat-tempat baru." }
+    ]
+  },
+  "shio_cocok": {
+    "Api": [
+      { "shio": "Macan", "elemen": "Kayu", "alasan": "Kayu memperkuat Api. Macan yang pemberani akan menjadi partner yang setara dalam petualangan." },
+      { "shio": "Kuda", "elemen": "Api", "alasan": "Sesama Api, kalian memiliki energi dan semangat yang selaras." },
+      { "shio": "Anjing", "elemen": "Tanah", "alasan": "Tanah menstabilkan Api. Anjing yang setia akan menjadi pelindung dan pendukungmu." },
+      { "shio": "Naga", "elemen": "Tanah", "alasan": "Naga yang karismatik akan menjadi fondasi yang kuat bagi semangatmu." },
+      { "shio": "Kelinci", "elemen": "Kayu", "alasan": "Kelinci yang lembut akan meredam api emosimu dengan diplomasi dan kelembutan." }
+    ],
+    "Air": [
+      { "shio": "Kelinci", "elemen": "Kayu", "alasan": "Kayu menyerap Air. Kelinci yang anggun akan menjadi tempat yang aman bagi emosimu." },
+      { "shio": "Babi", "elemen": "Air", "alasan": "Sesama Air, kalian saling memahami kebutuhan akan ketenangan dan kenyamanan." },
+      { "shio": "Tikus", "elemen": "Air", "alasan": "Tikus yang cerdas akan menjadi partner yang adaptif dan selalu menemukan solusi." },
+      { "shio": "Monyet", "elemen": "Logam", "alasan": "Logam memberi bentuk pada Air. Monyet yang kreatif akan mengarahkan idemu." },
+      { "shio": "Ayam", "elemen": "Logam", "alasan": "Ayam yang terstruktur akan membantu mengorganisir hidupmu yang mengalir." }
+    ],
+    "Tanah": [
+      { "shio": "Kerbau", "elemen": "Tanah", "alasan": "Sesama Tanah, kalian membangun hubungan yang kokoh dan dapat diandalkan." },
+      { "shio": "Anjing", "elemen": "Tanah", "alasan": "Kesetiaan Anjing akan menjadi benteng bagi stabilitas hubungan kalian." },
+      { "shio": "Naga", "elemen": "Tanah", "alasan": "Naga membawa kemakmuran dan keberuntungan dalam hidupmu yang stabil." },
+      { "shio": "Macan", "elemen": "Kayu", "alasan": "Kayu memecah Tanah. Macan membawa dinamika dan petualangan dalam hidupmu." },
+      { "shio": "Kuda", "elemen": "Api", "alasan": "Api menghangatkan Tanah. Kuda membawa semangat dan energi baru." }
+    ],
+    "Kayu": [
+      { "shio": "Kelinci", "elemen": "Kayu", "alasan": "Sesama Kayu, kalian akan tumbuh bersama dan saling mendukung." },
+      { "shio": "Macan", "elemen": "Kayu", "alasan": "Macan yang kuat akan melindungi pertumbuhanmu." },
+      { "shio": "Tikus", "elemen": "Air", "alasan": "Air menyirami Kayu. Tikus yang cerdas akan memberikan ide-ide segar." },
+      { "shio": "Babi", "elemen": "Air", "alasan": "Babi yang murah hati akan memberikan dukungan tanpa syarat." },
+      { "shio": "Kuda", "elemen": "Api", "alasan": "Api memberi kehangatan. Kuda membawa semangat dalam hidupmu." }
+    ],
+    "Logam": [
+      { "shio": "Kerbau", "elemen": "Tanah", "alasan": "Tanah melahirkan Logam. Kerbau adalah fondasi yang kokoh bagimu." },
+      { "shio": "Anjing", "elemen": "Tanah", "alasan": "Anjing yang setia akan selalu mendukung dan melindungimu." },
+      { "shio": "Monyet", "elemen": "Logam", "alasan": "Sesama Logam, kalian memiliki ketajaman dan kecerdasan yang selaras." },
+      { "shio": "Ayam", "elemen": "Logam", "alasan": "Ayam yang teliti akan menghargai presisi dan disiplinmu." },
+      { "shio": "Tikus", "elemen": "Air", "alasan": "Air mengasah Logam. Tikus membawa fleksibilitas dalam hidupmu yang terstruktur." }
+    ],
+    "Udara": [
+      { "shio": "Monyet", "elemen": "Logam", "alasan": "Logam dapat 'menangkap' Udara. Monyet yang cerdik adalah partner yang seru." },
+      { "shio": "Ayam", "elemen": "Logam", "alasan": "Ayam yang terorganisir akan membantu mewujudkan ide-idemu." },
+      { "shio": "Kuda", "elemen": "Api", "alasan": "Api membutuhkan Udara. Kuda membawa petualangan yang kamu dambakan." },
+      { "shio": "Macan", "elemen": "Kayu", "alasan": "Macan yang dinamis akan menjadi teman yang menantang dan menarik." },
+      { "shio": "Naga", "elemen": "Tanah", "alasan": "Naga yang kuat akan menjadi 'bumi' bagi ide-idemu yang melayang." }
+    ]
+  },
+  "weton_cocok": {
+    "Api": [
+      { "weton": "Sukra Paing", "neptu": 15, "alasan": "Energi romantis dan pekerja keras. Kombinasi Neptu menciptakan keseimbangan 15 (kamu) + Neptu pasangan." },
+      { "weton": "Saniscara Wage", "neptu": 13, "alasan": "Disiplin dan setia. Pasangan ini akan menjadi jangkar yang kokoh." },
+      { "weton": "Buda Kliwon", "neptu": 15, "alasan": "Spiritual dan bijaksana. Mampu meredam api emosimu." }
+    ],
+    "Air": [
+      { "weton": "Soma Pon", "neptu": 11, "alasan": "Emosional dan jujur. Kalian akan saling memahami tanpa banyak kata." },
+      { "weton": "Sukra Wage", "neptu": 10, "alasan": "Romantis dan cerdas. Pasangan yang akan terus membuatmu terpesona." },
+      { "weton": "Anggara Kliwon", "neptu": 11, "alasan": "Pemberani dan berwibawa. Melindungi sisi sensitifmu." }
+    ],
+    "Tanah": [
+      { "weton": "Wrespati Pon", "neptu": 15, "alasan": "Bijaksana dan jujur. Fondasi yang kokoh untuk hubungan jangka panjang." },
+      { "weton": "Redite Wage", "neptu": 9, "alasan": "Berwibawa dan cerdas. Pasangan yang bisa kamu andalkan." },
+      { "weton": "Saniscara Paing", "neptu": 18, "alasan": "Pekerja keras dan ambisius. Kalian akan saling mendorong menuju sukses." }
+    ],
+    "Kayu": [
+      { "weton": "Buda Umanis", "neptu": 12, "alasan": "Cerdas dan ramah. Membawa energi positif dalam hidupmu." },
+      { "weton": "Soma Kliwon", "neptu": 12, "alasan": "Intuitif dan berwibawa. Memahami kebutuhanmu akan pertumbuhan." },
+      { "weton": "Sukra Pon", "neptu": 13, "alasan": "Romantis dan jujur. Mendukung kreativitasmu dengan cinta." }
+    ],
+    "Logam": [
+      { "weton": "Wrespati Wage", "neptu": 12, "alasan": "Bijaksana dan cerdas. Menghargai ketegasan dan struktumu." },
+      { "weton": "Anggara Paing", "neptu": 12, "alasan": "Pemberani dan pekerja keras. Partner yang sepadan dalam bekerja." },
+      { "weton": "Saniscara Umanis", "neptu": 14, "alasan": "Disiplin namun ramah. Melunakkan sisi kakumu." }
+    ],
+    "Udara": [
+      { "weton": "Buda Pon", "neptu": 14, "alasan": "Cerdas dan jujur. Komunikasi kalian akan mengalir lancar." },
+      { "weton": "Soma Paing", "neptu": 13, "alasan": "Intuitif dan pekerja keras. Membawa ide-idemu ke realitas." },
+      { "weton": "Sukra Kliwon", "neptu": 14, "alasan": "Romantis dan berwibawa. Pasangan yang elegan dan menarik." }
+    ]
+  },
+  "randomisasi": true,
+  "maksimal_ditampilkan": 3
+}

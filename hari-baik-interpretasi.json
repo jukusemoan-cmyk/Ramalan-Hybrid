@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "name": "Interpretasi Hari Baik & Buruk",
+    "version": "1.0.0",
+    "description": "Interpretasi lengkap untuk kombinasi Saptawara dan Pancawara"
+  },
+  "konversi_hari": {
+    "Redite": { "indonesia": "Minggu", "pasaran_jawa": null },
+    "Soma": { "indonesia": "Senin", "pasaran_jawa": null },
+    "Anggara": { "indonesia": "Selasa", "pasaran_jawa": null },
+    "Buda": { "indonesia": "Rabu", "pasaran_jawa": null },
+    "Wrespati": { "indonesia": "Kamis", "pasaran_jawa": null },
+    "Sukra": { "indonesia": "Jumat", "pasaran_jawa": null },
+    "Saniscara": { "indonesia": "Sabtu", "pasaran_jawa": null }
+  },
+  "konversi_pancawara": {
+    "Umanis": { "jawa": "Legi", "energi": "Manis budi, ramah, disukai banyak orang, namun kurang tegas" },
+    "Paing": { "jawa": "Pahing", "energi": "Keras kemauan, pekerja keras, ambisius, namun pemarah" },
+    "Pon": { "jawa": "Pon", "energi": "Pemberani, jujur, suka berterus terang, namun ceroboh" },
+    "Wage": { "jawa": "Wage", "energi": "Cerdas, suka belajar, analitis, namun sedikit pendendam" },
+    "Kliwon": { "jawa": "Kliwon", "energi": "Berwibawa, sakral, spiritual, cocok jadi pemimpin, namun angkuh" }
+  },
+  "kombinasi_baik": [
+    {
+      "saptawara": "Anggara",
+      "pancawara": "Umanis",
+      "level": "Sangat Baik",
+      "energi": "Pemberani, energik, kompetitif, ramah, disukai banyak orang",
+      "cocok_untuk": ["Meeting penting", "Presentasi", "Negosiasi", "Memulai proyek baru", "Kompetisi"],
+      "hindari": ["Bepergian ke arah yang dilarang Wuku", "Konfrontasi fisik"]
+    },
+    {
+      "saptawara": "Sukra",
+      "pancawara": "Umanis",
+      "level": "Sangat Baik",
+      "energi": "Artistik, romantis, menyenangkan, ramah, disukai banyak orang",
+      "cocok_untuk": ["Transaksi keuangan", "Investasi", "Belanja", "Kegiatan seni", "Kencan"],
+      "hindari": ["Meminjamkan uang dalam jumlah besar", "Spekulasi berisiko tinggi"]
+    },
+    {
+      "saptawara": "Soma",
+      "pancawara": "Pon",
+      "level": "Baik",
+      "energi": "Emosional, penyayang, intuitif, pemberani, jujur",
+      "cocok_untuk": ["Meditasi", "Doa", "Refleksi diri", "Memulai hubungan spiritual", "Journaling"],
+      "hindari": ["Memulai proyek materialistis", "Belanja impulsif"]
+    },
+    {
+      "saptawara": "Wrespati",
+      "pancawara": "Pon",
+      "level": "Baik",
+      "energi": "Bijaksana, spiritual, murah hati, pemberani, jujur",
+      "cocok_untuk": ["Memberi nasihat", "Mengajar", "Kegiatan sosial", "Beramal"],
+      "hindari": ["Egois", "Mementingkan diri sendiri"]
+    },
+    {
+      "saptawara": "Buda",
+      "pancawara": "Wage",
+      "level": "Baik",
+      "energi": "Cerdas, komunikatif, bijaksana, analitis, suka belajar",
+      "cocok_untuk": ["Belajar hal baru", "Riset", "Menulis", "Analisis data", "Perencanaan"],
+      "hindari": ["Menunda pekerjaan", "Prokrastinasi"]
+    }
+  ],
+  "kombinasi_buruk": [
+    {
+      "saptawara": "Wrespati",
+      "pancawara": "Kliwon",
+      "level": "Kurang Baik",
+      "energi": "Bijaksana, spiritual, murah hati, namun angkuh dan mudah konflik jika digabung dengan Kliwon",
+      "hindari": ["Diskusi sensitif", "Debat", "Negosiasi penting", "Konfrontasi"],
+      "lebih_baik": ["Introspeksi diri", "Kegiatan spiritual", "Menyendiri"]
+    },
+    {
+      "saptawara": "Redite",
+      "pancawara": "Umanis",
+      "level": "Kurang Baik",
+      "energi": "Berwibawa, pemimpin, namun kurang tegas jika digabung dengan Umanis",
+      "hindari": ["Keputusan besar", "Perjalanan jauh", "Memulai bisnis", "Investasi"],
+      "lebih_baik": ["Istirahat", "Quality time keluarga", "Refleksi ringan"]
+    },
+    {
+      "saptawara": "Saniscara",
+      "pancawara": "Kliwon",
+      "level": "Kurang Baik",
+      "energi": "Pekerja keras, disiplin, namun angkuh dan keras kepala jika digabung dengan Kliwon",
+      "hindari": ["Kerja paksa", "Memaksakan kehendak", "Konflik dengan atasan"],
+      "lebih_baik": ["Evaluasi diri", "Istirahat cukup", "Quality time sendiri"]
+    }
+  ],
+  "default_baik": {
+    "energi": "Energi netral cenderung positif",
+    "cocok_untuk": ["Aktivitas rutin", "Bekerja", "Silaturahmi"],
+    "hindari": ["Keputusan besar tanpa pertimbangan matang"]
+  },
+  "default_buruk": {
+    "energi": "Energi netral cenderung perlu kewaspadaan",
+    "hindari": ["Memulai hal baru yang berisiko"],
+    "lebih_baik": ["Menyelesaikan yang sudah dimulai", "Istirahat"]
+  }
+}
