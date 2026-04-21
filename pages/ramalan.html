@@ -1231,6 +1231,133 @@ function displayPremiumContent() {
         <span class="badge" style="background:#D4AF37; color:#0A0A0C;"><i class="fas fa-crown"></i> Premium Member</span>
         <span class="badge" style="background:#64C864; color:#0A0A0C;"><i class="fas fa-medal"></i> Achievement Unlocked</span>
       </div>
+// ========== DISPLAY PREMIUM CONTENT (F.2 - RAMALAN LENGKAP) - PERBAIKAN ==========
+function displayPremiumContent() {
+  if (!currentFortunes || !currentUserData) { 
+    showErrorToast('Lakukan ramalan dulu.'); 
+    return; 
+  }
+  
+  const p = currentFortunes.premium;
+  const user = currentUserData;
+  const wukuData = calendarData.wuku.find(w => w.name === user.wuku.name);
+  const wetonChar = wetonData?.weton_characters?.find(w => w.combo === user.weton.combo);
+  
+  // ✅ DEFINISIKAN DI AWAL
+  const elemenDominan = currentManuritasResult?.hanacaraka?.dominantElement || 'Tanah';
+  const rezeki = currentManuritasResult?.jalurRezeki || { name: 'Kreativitas & Pelayanan' };
+  const userIdentifier = `${user.weton.combo}_${elemenDominan}`;
+  
+  const hariBaik = generateHariBaik(user.weton, user.wuku);
+  const hariBuruk = generateHariBuruk(user.weton, user.wuku);
+  
+  const analisisNama = `Nama "${elements.userName.value.trim()}" memiliki arti khusus dalam vibrasi personal. Nama ini membawa energi ${user.weton.combo} yang selaras dengan wuku ${user.wuku.name}.`;
+  const analisisZodiac = `${user.zodiac} adalah zodiak berelemen ${getZodiacElement(user.zodiac)}. Karakter: ${getZodiacCharacter(user.zodiac)}.`;
+  const analisisShio = `Shio ${user.shio} melambangkan ${getShioCharacter(user.shio)}. Energi tahun kelahiran membawa keberuntungan di bidang ${getShioLuckyField(user.shio)}.`;
+  const analisisWeton = `Weton ${user.weton.combo} dengan Neptu ${user.weton.neptu}. ${wetonChar?.character || 'Memiliki wibawa dan keteguhan hati.'}`;
+  const analisisWuku = `Wuku ${user.wuku.name} (${wukuData?.meaning || '-'}). ${wukuData?.character || 'Kreatif dan teliti.'}`;
+  
+  const hariBaikHTML = generateHariBaikPremiumHTML(user.weton, user.wuku, wukuData);
+  const rangkumanNarasi = generateRamalanSummary(user, p, hariBaik, hariBuruk);
+  
+  const warna = warnaKeberuntunganData?.colors?.[elemenDominan] || { primary: ['Emas'], secondary: ['Putih'], avoid: ['Hitam'] };
+  const kristal = kristalData?.crystals?.[elemenDominan] || { name: 'Clear Quartz', benefits: 'Membersihkan energi.' };
+  const jurusan = jurusanKuliahData?.recommendations?.[elemenDominan] || ['Manajemen', 'Psikologi'];
+  const usaha = bidangUsahaData?.businesses?.[elemenDominan] || ['Kuliner', 'Konsultan'];
+  const pekerjaan = pekerjaanData?.jobs?.[elemenDominan]?.fields || ['Manager', 'Analis'];
+  const pasanganHTML = generatePasanganIdealPremiumHTML(elemenDominan, user.weton, userIdentifier);
+  const partnerHTML = generatePartnerBisnisPremiumHTML(elemenDominan, rezeki?.name, userIdentifier);
+  const afirmasi = afirmasiData?.affirmations?.[elemenDominan] || ['Aku percaya diri.', 'Aku sukses.'];
+  const ramalanBulan = ramalanBulananData?.templates?.[elemenDominan] || { minggu1: 'Energi baik.', minggu2: 'Tetap fokus.', minggu3: 'Energi stabil.', minggu4: 'Saatnya refleksi.' };
+  
+  const angkaHoki = generateLuckyNumbers(user.weton.neptu, currentManuritasResult?.hanacaraka?.total || 50);
+  
+  const html = `
+    <div style="display:flex; flex-direction:column; gap:24px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+        <h3 style="color:#F3E5AB;"><i class="fas fa-crown" style="color:#D4AF37;"></i> Analisis Lengkap ${elements.userName.value.trim() || 'Sang Pencari'}</h3>
+        <div>
+          <button class="btn-pdf" onclick="downloadPremiumPDF()"><i class="fas fa-download"></i> Unduh PDF Lengkap</button>
+          <button class="btn-share" onclick="showShareCard()" style="margin-left:12px;"><i class="fas fa-share-alt"></i> Bagikan</button>
+        </div>
+      </div>
+      
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-user-circle"></i> Analisis Identitas Diri</h4>
+        <p><strong>🌟 Nama:</strong> ${analisisNama}</p>
+        <p><strong>🌙 Zodiak ${user.zodiac}:</strong> ${analisisZodiac}</p>
+        <p><strong>🐉 Shio ${user.shio}:</strong> ${analisisShio}</p>
+        <p><strong>📅 Weton ${user.weton.combo}:</strong> ${analisisWeton}</p>
+        <p><strong>🕉️ Wuku ${user.wuku.name}:</strong> ${analisisWuku}</p>
+      </div>
+      
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-heart" style="color:#D4AF37;"></i> Asmara</h4>
+        <p>${p.love}</p>
+      </div>
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-briefcase" style="color:#D4AF37;"></i> Karir</h4>
+        <p>${p.career}</p>
+      </div>
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-coins" style="color:#D4AF37;"></i> Keuangan</h4>
+        <p>${p.finance}</p>
+      </div>
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-heartbeat" style="color:#D4AF37;"></i> Kesehatan</h4>
+        <p>${p.health}</p>
+      </div>
+      
+      ${hariBaikHTML}
+      
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-chart-pie"></i> Visualisasi Energi</h4>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+          <div><canvas id="radarChart" width="200" height="200"></canvas></div>
+          <div><canvas id="pieChart" width="200" height="200"></canvas></div>
+        </div>
+        <p style="margin-top:16px; text-align:center;">Elemen Dominan: <strong>${elemenDominan}</strong></p>
+      </div>
+      
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-graduation-cap"></i> Rekomendasi Pendidikan & Karir</h4>
+        <p><strong>📚 Jurusan Kuliah:</strong> ${jurusan.slice(0, 3).join(', ')}</p>
+        <p><strong>💼 Bidang Pekerjaan:</strong> ${pekerjaan.slice(0, 5).join(', ')}</p>
+        <p><strong>🚀 Bidang Usaha:</strong> ${usaha.slice(0, 3).join(', ')}</p>
+      </div>
+      
+      ${pasanganHTML}
+      ${partnerHTML}
+      
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-clover"></i> Keberuntungan Anda</h4>
+        <p><strong>🔢 Angka Keberuntungan:</strong> ${angkaHoki.join(' • ')}</p>
+        <p><strong>🎨 Warna:</strong> ${warna.primary?.join(', ')} (Hindari: ${warna.avoid?.join(', ')})</p>
+        <p><strong>💎 Kristal:</strong> ${kristal.name} - ${kristal.benefits}</p>
+      </div>
+      
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-quote-right"></i> Afirmasi Harian</h4>
+        <p>"${afirmasi[0]}"</p>
+      </div>
+      
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-calendar-week"></i> Ramalan Bulanan</h4>
+        <p><strong>Minggu 1:</strong> ${ramalanBulan.minggu1}</p>
+        <p><strong>Minggu 2:</strong> ${ramalanBulan.minggu2}</p>
+        <p><strong>Minggu 3:</strong> ${ramalanBulan.minggu3}</p>
+        <p><strong>Minggu 4:</strong> ${ramalanBulan.minggu4}</p>
+      </div>
+      
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-scroll"></i> Rangkuman Cetak Biru Dirimu</h4>
+        ${rangkumanNarasi}
+      </div>
+      
+      <div style="display:flex; justify-content:center; gap:16px; margin-top:16px;">
+        <span class="badge" style="background:#D4AF37; color:#0A0A0C;"><i class="fas fa-crown"></i> Premium Member</span>
+        <span class="badge" style="background:#64C864; color:#0A0A0C;"><i class="fas fa-medal"></i> Achievement Unlocked</span>
+      </div>
       
       <p style="text-align:right; font-style:italic; opacity:0.7;">— Dianalisis oleh Oracle Nusantara —</p>
     </div>
@@ -1245,9 +1372,8 @@ function displayPremiumContent() {
     renderPieChart(currentManuritasResult?.hanacaraka?.elementCount || { Api: 30, Air: 20, Tanah: 50 });
   }, 100);
   
-  // Tampilkan testimonial prompt setelah 3 detik
   showTestimonialPrompt();
-}
+    }
 
 // ========== RANDOM BERBOBOT ==========
 function getWeightedRandom(items, weightKey = null) {
