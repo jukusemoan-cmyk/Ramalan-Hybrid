@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "name": "Rekomendasi Bidang Usaha",
+    "version": "1.0.0",
+    "description": "Bidang usaha yang cocok berdasarkan elemen"
+  },
+  "businesses": {
+    "Api": ["Restoran/Cafe", "Event Organizer", "Branding Agency", "Startup Teknologi", "Bimbingan Belajar"],
+    "Air": ["Klinik Kesehatan", "Spa & Wellness", "Konsultan Psikologi", "Penerbitan Buku", "Galeri Seni"],
+    "Tanah": ["Properti/Real Estate", "Kontraktor Bangunan", "Pertanian Organik", "Toko Material", "Gudang Logistik"],
+    "Kayu": ["Florist", "Nursery Tanaman", "Sekolah/Kursus", "Furniture Custom", "Brand Fashion Ramah Lingkungan"],
+    "Logam": ["Bengkel Las", "Toko Elektronik", "Jasa Perbaikan", "Manufaktur", "Distributor Alat Berat"],
+    "Udara": ["Digital Agency", "Travel Agent", "Kursus Online", "Fotografi/Videografi", "Drone Services"]
+  }
+}

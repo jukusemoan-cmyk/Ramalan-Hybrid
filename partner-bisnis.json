@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "name": "Karakteristik Partner Bisnis Ideal",
+    "version": "1.0.0",
+    "description": "Partner bisnis ideal berdasarkan elemen"
+  },
+  "partners": {
+    "Api": {
+      "needs": ["Perencana", "Detail-Oriented", "Sabar"],
+      "compatible_elements": ["Tanah", "Logam"],
+      "description": "Kamu visioner dan penuh semangat, tapi butuh partner yang bisa mengeksekusi ide-idemu dengan rapi. Cari partner dengan elemen Tanah (stabil, terstruktur) atau Logam (disiplin, teliti)."
+    },
+    "Air": {
+      "needs": ["Visioner", "Tegas", "Pengambil Keputusan"],
+      "compatible_elements": ["Api", "Kayu"],
+      "description": "Kamu kreatif dan intuitif, tapi sering ragu mengambil keputusan besar. Partner dengan elemen Api (berani, visioner) atau Kayu (tumbuh, adaptif) akan melengkapi kelemahanmu."
+    },
+    "Tanah": {
+      "needs": ["Inovatif", "Marketing", "Networking"],
+      "compatible_elements": ["Api", "Udara"],
+      "description": "Kamu pekerja keras dan stabil, tapi kurang dalam hal promosi dan networking. Partner dengan elemen Api (karismatik) atau Udara (komunikatif) akan membawa bisnismu dikenal luas."
+    },
+    "Kayu": {
+      "needs": ["Struktur", "Disiplin", "Finansial"],
+      "compatible_elements": ["Logam", "Tanah"],
+      "description": "Kamu penuh ide dan cepat berkembang, tapi butuh struktur agar tidak berantakan. Partner dengan elemen Logam (disiplin) atau Tanah (stabil) akan membantu bisnismu terorganisir."
+    },
+    "Logam": {
+      "needs": ["Kreatif", "Fleksibel", "Humanis"],
+      "compatible_elements": ["Air", "Kayu"],
+      "description": "Kamu tegas dan terstruktur, tapi kadang terlalu kaku. Partner dengan elemen Air (kreatif) atau Kayu (fleksibel) akan membawa sentuhan manusiawi dan inovasi dalam bisnismu."
+    },
+    "Udara": {
+      "needs": ["Eksekutor", "Grounded", "Praktis"],
+      "compatible_elements": ["Tanah", "Logam"],
+      "description": "Kamu penuh ide dan komunikatif, tapi sering kesulitan eksekusi. Partner dengan elemen Tanah (praktis) atau Logam (eksekutor handal) akan mewujudkan ide-idemu menjadi kenyataan."
+    }
+  }
+}

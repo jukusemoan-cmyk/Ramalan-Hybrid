@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "name": "Karakteristik Pasangan Ideal",
+    "version": "1.0.0",
+    "description": "Pasangan ideal berdasarkan elemen"
+  },
+  "partners": {
+    "Api": {
+      "traits": ["Penyabar", "Menyejukkan", "Fleksibel"],
+      "compatible_elements": ["Air", "Kayu"],
+      "description": "Kamu membutuhkan pasangan yang bisa meredam api emosimu. Seseorang yang tenang, sabar, dan mampu mengalir mengikuti dinamikamu. Pasangan dengan elemen Air atau Kayu akan membawa keseimbangan."
+    },
+    "Air": {
+      "traits": ["Tegas", "Stabil", "Membumi"],
+      "compatible_elements": ["Tanah", "Kayu"],
+      "description": "Kamu membutuhkan pasangan yang bisa menjadi jangkar di tengah arus emosimu. Seseorang yang stabil, praktis, dan bisa diandalkan. Pasangan dengan elemen Tanah atau Kayu adalah pilihan tepat."
+    },
+    "Tanah": {
+      "traits": ["Hangat", "Bersemangat", "Fleksibel"],
+      "compatible_elements": ["Api", "Air"],
+      "description": "Kamu membutuhkan pasangan yang bisa mencairkan kekakuanmu. Seseorang yang hangat, spontan, dan membawa keceriaan. Pasangan dengan elemen Api atau Air akan melengkapi hidupmu."
+    },
+    "Kayu": {
+      "traits": ["Visioner", "Mendukung", "Kreatif"],
+      "compatible_elements": ["Air", "Api"],
+      "description": "Kamu membutuhkan pasangan yang mendukung pertumbuhanmu. Seseorang yang melihat potensimu dan mendorongmu berkembang. Pasangan dengan elemen Air atau Api adalah partner ideal."
+    },
+    "Logam": {
+      "traits": ["Lembut", "Hangat", "Empati"],
+      "compatible_elements": ["Tanah", "Air"],
+      "description": "Kamu membutuhkan pasangan yang bisa melunakkan ketegasanmu. Seseorang yang hangat, pengertian, dan mampu memahami perasaanmu. Pasangan dengan elemen Tanah atau Air akan menciptakan harmoni."
+    },
+    "Udara": {
+      "traits": ["Stabil", "Konsisten", "Mendukung"],
+      "compatible_elements": ["Tanah", "Api"],
+      "description": "Kamu membutuhkan pasangan yang bisa menjadi fondasi di tengah ide-idemu yang melayang. Seseorang yang stabil, setia, dan selalu ada. Pasangan dengan elemen Tanah atau Api adalah jawabannya."
+    }
+  }
+}

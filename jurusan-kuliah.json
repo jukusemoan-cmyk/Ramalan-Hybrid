@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "name": "Rekomendasi Jurusan Kuliah",
+    "version": "1.0.0",
+    "description": "Jurusan yang cocok berdasarkan elemen dan jalur rezeki"
+  },
+  "recommendations": {
+    "Api": ["Manajemen Bisnis", "Marketing", "Hubungan Internasional", "Hukum", "Teater & Seni Peran"],
+    "Air": ["Psikologi", "Sastra", "Filsafat", "Kedokteran", "Keperawatan", "Konseling"],
+    "Tanah": ["Teknik Sipil", "Arsitektur", "Akuntansi", "Pertanian", "Geologi"],
+    "Kayu": ["Desain Grafis", "Bioteknologi", "Pendidikan", "Kehutanan", "Seni Rupa"],
+    "Logam": ["Teknik Mesin", "Teknik Elektro", "Ilmu Komputer", "Matematika", "Fisika"],
+    "Udara": ["Jurnalistik", "Ilmu Komunikasi", "Penerbangan", "Meteorologi", "Fotografi"]
+  }
+}

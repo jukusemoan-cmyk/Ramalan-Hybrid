@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "name": "Warna Keberuntungan",
+    "version": "1.0.0",
+    "description": "Mapping elemen ke warna keberuntungan"
+  },
+  "colors": {
+    "Api": {
+      "primary": ["Merah", "Oranye", "Merah Marun"],
+      "secondary": ["Emas", "Kuning", "Ungu"],
+      "avoid": ["Hitam", "Biru Tua"]
+    },
+    "Air": {
+      "primary": ["Biru", "Biru Muda", "Tosca"],
+      "secondary": ["Putih", "Perak", "Abu-abu"],
+      "avoid": ["Coklat", "Kuning Tanah"]
+    },
+    "Tanah": {
+      "primary": ["Coklat", "Krem", "Terakota"],
+      "secondary": ["Kuning", "Oranye", "Hijau Lumut"],
+      "avoid": ["Hijau Terang", "Biru"]
+    },
+    "Kayu": {
+      "primary": ["Hijau", "Hijau Muda", "Hijau Tua"],
+      "secondary": ["Coklat", "Biru", "Ungu Muda"],
+      "avoid": ["Putih", "Emas"]
+    },
+    "Logam": {
+      "primary": ["Putih", "Perak", "Abu-abu"],
+      "secondary": ["Emas", "Kuning", "Biru Muda"],
+      "avoid": ["Merah", "Oranye"]
+    },
+    "Udara": {
+      "primary": ["Putih", "Biru Langit", "Lavender"],
+      "secondary": ["Abu-abu", "Perak", "Kuning Muda"],
+      "avoid": ["Merah Tua", "Hitam"]
+    }
+  }
+}

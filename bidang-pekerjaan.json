@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "name": "Rekomendasi Bidang Pekerjaan",
+    "version": "1.1.0",
+    "description": "Bidang pekerjaan yang cocok berdasarkan elemen dan jalur rezeki"
+  },
+  "jobs": {
+    "Api": {
+      "fields": [
+        "CEO / Direktur Utama",
+        "Motivator / Public Speaker",
+        "Marketing Manager",
+        "Brand Ambassador",
+        "Event Organizer",
+        "Sales Executive",
+        "Chef / Koki",
+        "Pemadam Kebakaran",
+        "Atlet Profesional",
+        "Artis / Aktor",
+        "Politikus",
+        "Pengacara Litigasi",
+        "Polisi (Reserse Kriminal)",
+        "Tentara (Infanteri / Pasukan Khusus)"
+      ],
+      "work_style": "Kamu cocok di lingkungan kerja yang dinamis, kompetitif, dan memberi ruang untuk kepemimpinan. Pekerjaan yang menantang dan tidak monoton adalah pilihan terbaik.",
+      "work_environment": "Startup, Agensi Kreatif, Perusahaan Multinasional, Panggung Hiburan, Kepolisian Reserse"
+    },
+    "Air": {
+      "fields": [
+        "Psikolog / Konselor",
+        "Penulis / Jurnalis",
+        "Guru / Dosen",
+        "Dokter Umum",
+        "Dokter Spesialis",
+        "Perawat",
+        "Bidan",
+        "Terapis / Healer",
+        "Apoteker",
+        "Peneliti Medis",
+        "Pustakawan",
+        "Seniman / Pelukis",
+        "Musisi",
+        "Editor",
+        "HRD / Human Resources",
+        "Customer Service",
+        "Intelijen (Analis / Profiler)"
+      ],
+      "work_style": "Kamu cocok di lingkungan yang tenang, kolaboratif, dan memungkinkanmu membantu orang lain. Pekerjaan yang melibatkan empati, intuisi, dan kreativitas sangat sesuai.",
+      "work_environment": "Rumah Sakit, Klinik, Sekolah, Universitas, LSM, Perpustakaan, Studio Seni, Badan Intelijen"
+    },
+    "Tanah": {
+      "fields": [
+        "Insinyur Sipil",
+        "Arsitek",
+        "Akuntan / Auditor",
+        "Banker",
+        "Manajer Proyek",
+        "Petani / Agronom",
+        "Geologist",
+        "Surveyor",
+        "Administrasi Publik",
+        "Manajer Operasional",
+        "Quality Control",
+        "Logistik / Supply Chain",
+        "Polisi (Lalu Lintas / Samapta)",
+        "Tentara (Korps Zeni / Logistik)",
+        "Dokter Keluarga",
+        "Kepala Puskesmas"
+      ],
+      "work_style": "Kamu cocok di lingkungan yang stabil, terstruktur, dan memiliki prosedur jelas. Pekerjaan yang membutuhkan ketelitian, kesabaran, dan pengayoman adalah kekuatanmu.",
+      "work_environment": "Bank, Perusahaan Konstruksi, Pemerintahan, BUMN, Perkebunan, Kepolisian, Markas Militer"
+    },
+    "Kayu": {
+      "fields": [
+        "Desainer Grafis",
+        "Arsitek Lanskap",
+        "Guru TK / SD",
+        "Konsultan Pendidikan",
+        "Peneliti Bioteknologi",
+        "Aktivis Lingkungan",
+        "Florist",
+        "Penulis Konten Kreatif",
+        "Fotografer",
+        "Videografer",
+        "Pelatih / Coach",
+        "Product Designer",
+        "Dokter Anak",
+        "Dokter Tumbuh Kembang",
+        "Terapis Okupasi"
+      ],
+      "work_style": "Kamu cocok di lingkungan yang mendukung pertumbuhan, kreativitas, dan inovasi. Pekerjaan yang memberimu kebebasan berekspresi dan membantu orang berkembang adalah pilihan tepat.",
+      "work_environment": "Agensi Kreatif, Startup Teknologi, Sekolah Alam, Lembaga Penelitian, Studio Desain, Rumah Sakit Anak"
+    },
+    "Logam": {
+      "fields": [
+        "Insinyur Mesin",
+        "Insinyur Elektro",
+        "Programmer / Software Engineer",
+        "Data Analyst",
+        "Akuntan Publik",
+        "Auditor",
+        "Hakim / Jaksa",
+        "Notaris",
+        "Teknisi",
+        "Mekanik",
+        "Quality Assurance",
+        "Security Analyst",
+        "Polisi (Provos / Internal Affairs)",
+        "Tentara (Korps Peralatan / Persenjataan)",
+        "Dokter Bedah",
+        "Intelijen (Operasi Lapangan / Kontra-Intelijen)"
+      ],
+      "work_style": "Kamu cocok di lingkungan yang teratur, disiplin, dan menghargai presisi. Pekerjaan yang membutuhkan logika, analisis, ketelitian, dan ketegasan adalah keahlianmu.",
+      "work_environment": "Perusahaan Teknologi, Kantor Akuntan, Pengadilan, Pabrik Manufaktur, Markas Militer, Badan Intelijen"
+    },
+    "Udara": {
+      "fields": [
+        "Jurnalis / Reporter",
+        "Public Relations",
+        "Pilot / Pramugari",
+        "Digital Marketer",
+        "Social Media Specialist",
+        "Fotografer / Videografer",
+        "Tour Guide",
+        "Translator / Interpreter",
+        "Content Creator",
+        "Podcaster",
+        "Diplomat",
+        "Sales & Marketing",
+        "Intelijen (Sinyal / Cyber Intelligence)",
+        "Analis Keamanan Siber",
+        "Dokter Radiologi"
+      ],
+      "work_style": "Kamu cocok di lingkungan yang bebas, komunikatif, dan melibatkan banyak interaksi sosial serta analisis informasi. Pekerjaan yang memungkinkanmu bepergian atau mengolah data adalah pilihan ideal.",
+      "work_environment": "Media, Maskapai Penerbangan, Agensi Travel, Perusahaan Telekomunikasi, Freelance, Badan Intelijen Siber"
+    }
+  }
+}

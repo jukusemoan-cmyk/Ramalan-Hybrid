@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "name": "Batu Akik & Kristal",
+    "version": "1.0.0",
+    "description": "Rekomendasi kristal berdasarkan elemen"
+  },
+  "crystals": {
+    "Api": {
+      "name": "Ruby, Carnelian, Garnet",
+      "benefits": "Meningkatkan semangat, keberanian, dan kreativitas. Membantu mengatasi rasa malas dan kurang percaya diri.",
+      "how_to_use": "Kenakan sebagai cincin atau kalung. Letakkan di meja kerja untuk energi positif."
+    },
+    "Air": {
+      "name": "Aquamarine, Moonstone, Pearl",
+      "benefits": "Menenangkan emosi, meningkatkan intuisi, dan membawa kedamaian batin. Membantu komunikasi yang lembut.",
+      "how_to_use": "Gunakan saat meditasi atau letakkan di samping tempat tidur."
+    },
+    "Tanah": {
+      "name": "Jasper, Obsidian, Hematite",
+      "benefits": "Memberikan stabilitas, grounding, dan perlindungan. Membantu fokus dan ketekunan.",
+      "how_to_use": "Bawa dalam saku atau letakkan di bawah bantal."
+    },
+    "Kayu": {
+      "name": "Jade, Emerald, Green Aventurine",
+      "benefits": "Mendorong pertumbuhan, keberuntungan, dan kesehatan. Membuka peluang baru.",
+      "how_to_use": "Kenakan sebagai gelang atau letakkan di dekat tanaman."
+    },
+    "Logam": {
+      "name": "Clear Quartz, Diamond, Pyrite",
+      "benefits": "Memperkuat fokus, kejelasan pikiran, dan menarik kelimpahan. Membersihkan energi negatif.",
+      "how_to_use": "Letakkan di altar atau meja kerja."
+    },
+    "Udara": {
+      "name": "Amethyst, Fluorite, Blue Lace Agate",
+      "benefits": "Meningkatkan komunikasi, kreativitas, dan koneksi spiritual. Menenangkan pikiran.",
+      "how_to_use": "Gunakan saat belajar atau presentasi."
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "description": "Tabel konversi huruf Hanacaraka ke nilai numerik untuk Manuritas (Dr. Arkand Bodhana Zeshaprajna)",
+  "version": "1.0",
+  "basic_letters": {
+    "ha": { "value": 1, "element": "Api", "meaning": "Nafas kehidupan, awal, keberanian" },
+    "na": { "value": 2, "element": "Air", "meaning": "Simpati, perasaan, kepekaan" },
+    "ca": { "value": 3, "element": "Api", "meaning": "Pikiran, kecerdasan, kreativitas" },
+    "ra": { "value": 4, "element": "Api", "meaning": "Keberanian, semangat, daya juang" },
+    "ka": { "value": 5, "element": "Tanah", "meaning": "Kekuatan, fondasi, kestabilan" },
+    "da": { "value": 6, "element": "Air", "meaning": "Kedalaman, misteri, kebijaksanaan" },
+    "ta": { "value": 7, "element": "Tanah", "meaning": "Stabilitas, keteguhan, kesabaran" },
+    "sa": { "value": 8, "element": "Udara", "meaning": "Komunikasi, angin, penyebaran" },
+    "wa": { "value": 9, "element": "Udara", "meaning": "Penyatuan, harmoni, keseimbangan" },
+    "la": { "value": 10, "element": "Air", "meaning": "Intuisi, kepekaan, spiritualitas" },
+    "pa": { "value": 11, "element": "Api", "meaning": "Kekuasaan, ambisi, kepemimpinan" },
+    "dha": { "value": 12, "element": "Tanah", "meaning": "Ketahanan, daya juang, kegigihan" },
+    "ja": { "value": 13, "element": "Api", "meaning": "Kejayaan, kemenangan, kehormatan" },
+    "ya": { "value": 14, "element": "Air", "meaning": "Kebijaksanaan, pengalaman, kedewasaan" },
+    "nya": { "value": 15, "element": "Udara", "meaning": "Spiritualitas, kehalusan, intuisi tinggi" },
+    "ma": { "value": 16, "element": "Tanah", "meaning": "Pengorbanan, keibuan, pengasuhan" },
+    "ga": { "value": 17, "element": "Api", "meaning": "Keberanian, pionir, terobosan" },
+    "ba": { "value": 18, "element": "Air", "meaning": "Kedamaian, ketenangan, kesejukan" },
+    "tha": { "value": 19, "element": "Tanah", "meaning": "Kekokohan, ketegasan, prinsip kuat" },
+    "nga": { "value": 20, "element": "Udara", "meaning": "Kesempurnaan, penutup, kebijaksanaan tertinggi" }
+  },
+  "vowel_modifiers": {
+    "a": { "value": 0, "element": "Netral", "note": "Vokal dasar, tidak menambah nilai, energi murni" },
+    "i": { "value": 1, "element": "Air", "note": "Emosi, perasaan halus, kepekaan" },
+    "u": { "value": 2, "element": "Tanah", "note": "Ketenangan, kedalaman, stabilitas emosi" },
+    "e": { "value": 3, "element": "Udara", "note": "Keseimbangan, adaptasi, fleksibilitas" },
+    "o": { "value": 4, "element": "Api", "note": "Keterbukaan, ekspansi, semangat membara" }
+  },
+  "latin_to_hanacaraka": {
+    "a": "ha", "b": "ba", "c": "ca", "d": "da", "e": "ha", "f": "pa",
+    "g": "ga", "h": "ha", "i": "ha", "j": "ja", "k": "ka", "l": "la",
+    "m": "ma", "n": "na", "o": "ha", "p": "pa", "q": "ka", "r": "ra",
+    "s": "sa", "t": "ta", "u": "wa", "v": "wa", "w": "wa", "x": "sa",
+    "y": "ya", "z": "sa"
+  },
+  "special_rules": {
+    "double_consonant": {
+      "description": "Konsonan ganda (misal: 'nn', 'll') dihitung sebagai satu huruf dengan nilai dasar",
+      "examples": { "nn": "na", "ll": "la", "ss": "sa", "rr": "ra" }
+    },
+    "diphthong": {
+      "description": "Diftong (ai, au, oi) dihitung sebagai vokal pertama + modifier vokal kedua",
+      "examples": { "ai": "a + i", "au": "a + u", "oi": "o + i" }
+    },
+    "prefix": {
+      "description": "Awalan seperti 'ng' atau 'ny' dikonversi ke 'nga' dan 'nya'",
+      "examples": { "ng": "nga", "ny": "nya" }
+    }
+  },
+  "element_strength": {
+    "description": "Interpretasi kekuatan elemen berdasarkan nilai total",
+    "ranges": [
+      { "min": 1, "max": 25, "label": "Lemah", "advice": "Energi nama perlu diperkuat dengan nama panggilan tambahan." },
+      { "min": 26, "max": 50, "label": "Cukup", "advice": "Energi nama cukup stabil, namun bisa ditingkatkan." },
+      { "min": 51, "max": 75, "label": "Kuat", "advice": "Energi nama baik dan mendukung pemiliknya." },
+      { "min": 76, "max": 100, "label": "Sangat Kuat", "advice": "Energi nama sangat kuat dan selaras dengan takdir." }
+    ]
+  }
+}

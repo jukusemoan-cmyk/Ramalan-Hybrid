@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "name": "Afirmasi Harian",
+    "version": "1.0.0",
+    "description": "7 afirmasi untuk 7 hari"
+  },
+  "affirmations": {
+    "Api": [
+      "Hari ini, semangatku membara untuk mencapai tujuan mulia.",
+      "Aku menyalurkan energiku dengan bijak dan terarah.",
+      "Kreativitasku adalah api yang menerangi jalan orang lain.",
+      "Aku percaya diri dan berani mengambil langkah pertama.",
+      "Hari ini aku memimpin dengan hati yang hangat.",
+      "Aku menginspirasi orang-orang di sekitarku.",
+      "Semangatku tak pernah padam, selalu menyala."
+    ],
+    "Air": [
+      "Hari ini, aku mengalir seperti air, tenang namun kuat.",
+      "Intuisiku tajam, aku percaya pada bisikan hatiku.",
+      "Aku melepaskan semua yang tidak lagi melayaniku.",
+      "Kedamaian memenuhi pikiranku, ketenangan menyelimuti jiwaku.",
+      "Aku mudah beradaptasi dengan perubahan.",
+      "Hari ini aku mendengarkan lebih banyak daripada berbicara.",
+      "Kebijaksanaan mengalir melalui setiap keputusanku."
+    ],
+    "Tanah": [
+      "Hari ini, aku kokoh seperti gunung, tak tergoyahkan.",
+      "Aku membangun fondasi yang kuat untuk masa depanku.",
+      "Kesabaran adalah kekuatanku, aku menikmati setiap proses.",
+      "Aku praktis dan fokus pada apa yang bisa aku kontrol.",
+      "Hari ini aku menyelesaikan apa yang sudah aku mulai.",
+      "Stabilitas adalah pilihanku, aku menciptakan keamanan.",
+      "Aku bersyukur atas semua yang sudah aku miliki."
+    ],
+    "Kayu": [
+      "Hari ini, aku bertumbuh seperti pohon yang kokoh.",
+      "Aku melihat peluang di setiap tantangan.",
+      "Kreativitasku berkembang dan membawa berkah.",
+      "Aku fleksibel, mampu beradaptasi dengan perubahan angin.",
+      "Hari ini aku menanam benih untuk masa depan yang cerah.",
+      "Aku terus belajar dan berkembang setiap hari.",
+      "Visi ke depanku jelas, aku melangkah dengan pasti."
+    ],
+    "Logam": [
+      "Hari ini, aku setajam pedang, fokus pada tujuanku.",
+      "Disiplin adalah kebebasanku, aku konsisten dengan rutinitasku.",
+      "Aku memotong semua hal yang tidak perlu dari hidupku.",
+      "Kejelasan pikiranku membantuku mengambil keputusan tepat.",
+      "Hari ini aku menghargai kualitas daripada kuantitas.",
+      "Aku tegas namun tetap adil pada diri sendiri dan orang lain.",
+      "Struktur yang aku bangun membawa kesuksesan."
+    ],
+    "Udara": [
+      "Hari ini, pikiranku sebebas angin, kreatif tanpa batas.",
+      "Aku berkomunikasi dengan jelas dan efektif.",
+      "Ide-ide segar mengalir dengan mudah kepadaku.",
+      "Aku terhubung dengan orang-orang yang tepat.",
+      "Hari ini aku menyebarkan energi positif ke sekitarku.",
+      "Aku mudah beradaptasi dan menemukan solusi cerdas.",
+      "Kebebasanku adalah kekuatanku, aku menjelajah dengan gembira."
+    ]
+  }
+}
