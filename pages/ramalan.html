@@ -548,6 +548,11 @@ async function loadAllPageData() {
       pekerjaanData = await fetchJSON('../data/pekerjaan.json');
       afirmasiData = await fetchJSON('../data/afirmasi.json');
       ramalanBulananData = await fetchJSON('../data/ramalan-bulanan.json');
+
+       // ✅ TAMBAHKAN INI - Timing Recommendations
+      const timingRec = await fetchJSON('../data/timing-recommendations.json');
+      window.timingRecommendationsData = timingRec;
+      console.log('✅ Timing recommendations loaded');
       
       // Data lama (untuk fallback jika data lengkap tidak ada)
       pasanganIdealData = await fetchJSON('../data/pasangan-ideal.json');
@@ -556,6 +561,7 @@ async function loadAllPageData() {
       console.log('✅ Data premium pendukung loaded');
     } catch(e) {
       console.warn('⚠️ Beberapa data premium pendukung tidak ditemukan:', e.message);
+      window.timingRecommendationsData = null; // ✅ Tambahkan ini juga untuk fallback
     }
 
     // Data Hanacaraka
@@ -1507,6 +1513,154 @@ function renderPieChartWithElementCount(elementCount) {
   console.log('✅ Pie chart rendered dengan elementCount:', elementCount);
 }
 
+// ========== KONVERSI HARI BALI KE INDONESIA ==========
+function konversiHari(saptawara) {
+  const map = {
+    'Redite': 'Minggu',
+    'Soma': 'Senin',
+    'Anggara': 'Selasa',
+    'Buda': 'Rabu',
+    'Wrespati': 'Kamis',
+    'Sukra': 'Jumat',
+    'Saniscara': 'Sabtu'
+  };
+  return map[saptawara] || saptawara;
+}
+
+function konversiPancawara(pancawara) {
+  const map = {
+    'Umanis': 'Legi',
+    'Paing': 'Pahing',
+    'Pon': 'Pon',
+    'Wage': 'Wage',
+    'Kliwon': 'Kliwon'
+  };
+  return map[pancawara] || pancawara;
+}
+
+// ========== GENERATE INTERPRETASI HARI BAIK ==========
+function generateHariBaikInterpretasi(weton, hariBaikString, hariBurukString) {
+  const saptawara = weton.saptawara;
+  const pancawara = weton.pancawara;
+  
+  const hariIndo = konversiHari(saptawara);
+  const pasaranJawa = konversiPancawara(pancawara);
+  
+  // Cari interpretasi dari JSON
+  let interpretasi = null;
+  if (window.hariBaikInterpretasiData) {
+    // Cek kombinasi baik
+    const kombinasiBaik = window.hariBaikInterpretasiData.kombinasi_baik?.find(k => 
+      k.saptawara === saptawara && k.pancawara === pancawara
+    );
+    
+    // Cek kombinasi buruk
+    const kombinasiBuruk = window.hariBaikInterpretasiData.kombinasi_buruk?.find(k => 
+      k.saptawara === saptawara && k.pancawara === pancawara
+    );
+    
+    if (kombinasiBaik) {
+      interpretasi = kombinasiBaik;
+    } else if (kombinasiBuruk) {
+      interpretasi = kombinasiBuruk;
+    }
+  }
+  
+  let html = `
+    <div style="margin-bottom: 16px;">
+      <p style="margin-bottom: 8px;">
+        <i class="fas fa-calendar-day" style="color: #D4AF37; margin-right: 8px;"></i>
+        <strong>Hari Lahirmu:</strong> ${hariIndo} ${pasaranJawa} (${saptawara} ${pancawara})
+      </p>
+  `;
+  
+  if (interpretasi) {
+    const isBaik = interpretasi.level?.includes('Baik');
+    const bgColor = isBaik ? 'rgba(100,200,100,0.1)' : 'rgba(212,175,55,0.1)';
+    const borderColor = isBaik ? '#64C864' : '#D4AF37';
+    const iconColor = isBaik ? '#64C864' : '#D4AF37';
+    
+    html += `
+      <div style="background: ${bgColor}; border-radius: 12px; padding: 16px; margin: 12px 0; border-left: 3px solid ${borderColor};">
+        <p style="margin-bottom: 8px;">
+          <i class="fas fa-${isBaik ? 'check-circle' : 'exclamation-triangle'}" style="color: ${iconColor}; margin-right: 8px;"></i>
+          <strong style="color: ${iconColor};">Level: ${interpretasi.level}</strong>
+        </p>
+        <p style="margin-bottom: 8px; color: #E8E8E8;">${interpretasi.energi}</p>
+    `;
+    
+    if (interpretasi.cocok_untuk) {
+      html += `<p style="margin-bottom: 4px;"><i class="fas fa-thumbs-up" style="color: #64C864;"></i> Cocok untuk: ${interpretasi.cocok_untuk.join(', ')}</p>`;
+    }
+    
+    if (interpretasi.hindari) {
+      html += `<p style="margin-bottom: 4px;"><i class="fas fa-ban" style="color: #FF8A8A;"></i> Hindari: ${interpretasi.hindari.join(', ')}</p>`;
+    }
+    
+    if (interpretasi.lebih_baik) {
+      html += `<p style="margin-bottom: 4px;"><i class="fas fa-lightbulb" style="color: #D4AF37;"></i> Lebih baik: ${interpretasi.lebih_baik.join(', ')}</p>`;
+    }
+    
+    html += `</div>`;
+  } else {
+    // Default interpretasi
+    html += `
+      <div style="background: rgba(15,15,20,0.6); border-radius: 12px; padding: 16px; margin: 12px 0;">
+        <p style="color: #A0A0B0;">Energi netral. Cocok untuk aktivitas rutin dan silaturahmi.</p>
+      </div>
+    `;
+  }
+  
+  // Hari Baik & Buruk
+  html += `
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px;">
+      <div style="background: rgba(100,200,100,0.08); border-radius: 10px; padding: 12px;">
+        <p><i class="fas fa-sun" style="color: #64C864;"></i> <strong style="color: #64C864;">Hari Baik</strong></p>
+        <p style="font-size: 0.9rem; margin-top: 4px;">${hariBaikString}</p>
+      </div>
+      <div style="background: rgba(212,175,55,0.08); border-radius: 10px; padding: 12px;">
+        <p><i class="fas fa-moon" style="color: #D4AF37;"></i> <strong style="color: #D4AF37;">Hari Waspada</strong></p>
+        <p style="font-size: 0.9rem; margin-top: 4px;">${hariBurukString}</p>
+      </div>
+    </div>
+  `;
+  
+  return html;
+}
+
+// ========== GENERATE TIMING RECOMMENDATION ==========
+function generateTimingRecommendation(weton) {
+  if (!window.timingRecommendationsData) {
+    return '';
+  }
+  
+  const pancawara = weton.pancawara;
+  const templates = window.timingRecommendationsData.templates || [];
+  
+  // Cari template yang cocok
+  let recommendation = templates.find(t => {
+    if (!t.condition) return false;
+    return t.condition.includes(`'${pancawara}'`);
+  });
+  
+  if (!recommendation) {
+    recommendation = templates[0]; // Fallback ke template pertama
+  }
+  
+  if (!recommendation) return '';
+  
+  return `
+    <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(212,175,55,0.2);">
+      <h5 style="color: #D4AF37; margin-bottom: 12px;">
+        <i class="fas fa-clock"></i> Rekomendasi Waktu & Momentum
+      </h5>
+      <p style="margin-bottom: 12px; line-height: 1.6;">${recommendation.recommendation}</p>
+      <p style="margin-bottom: 6px;"><i class="fas fa-calendar-star" style="color: #64C864; margin-right: 6px;"></i> <strong>Hari Terbaik:</strong> ${recommendation.best_days || '-'}</p>
+      <p style="margin-bottom: 6px;"><i class="fas fa-calendar-alt" style="color: #D4AF37; margin-right: 6px;"></i> <strong>Bulan Puncak:</strong> ${recommendation.best_months || '-'}</p>
+    </div>
+  `;
+}
+  
 // ========== DISPLAY PREMIUM CONTENT (F.2 - RAMALAN LENGKAP) ==========
 function displayPremiumContent() {
   if (!currentFortunes || !currentUserData) { 
@@ -1581,12 +1735,20 @@ function displayPremiumContent() {
       </div>
       
       <div class="analysis-section-card">
-        <h4><i class="fas fa-calendar-check"></i> Hari Baik & Pantangan</h4>
-        <p><strong>✅ Hari Baik:</strong> ${hariBaik}</p>
-        <p><strong>⚠️ Hari Kurang Baik:</strong> ${hariBuruk}</p>
-        <p><strong>🚫 Pantangan Arah:</strong> ${wukuData?.forbidden_direction || 'Tidak ada pantangan khusus'}.</p>
-        <p><strong>💡 Aktivitas Dianjurkan:</strong> ${wukuData?.activity || 'Silaturahmi dan bekerja dengan tekun.'}</p>
+      <h4><i class="fas fa-calendar-check"></i> Panduan Hari & Waktu</h4>
+      
+      ${generateHariBaikInterpretasi(user.weton, hariBaik, hariBuruk)}
+      
+      <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(212,175,55,0.2);">
+        <p><i class="fas fa-map-pin" style="color: #FF8A8A; margin-right: 8px;"></i> 
+        <strong>🚫 Pantangan Arah:</strong> ${wukuData?.forbidden_direction || 'Tidak ada pantangan khusus'}</p>
+        
+        <p><i class="fas fa-star" style="color: #D4AF37; margin-right: 8px;"></i> 
+        <strong>💡 Aktivitas Dianjurkan:</strong> ${wukuData?.activity || 'Silaturahmi dan bekerja dengan tekun.'}</p>
       </div>
+  
+  ${generateTimingRecommendation(user.weton)}
+</div>
       
       <div class="analysis-section-card">
         <h4><i class="fas fa-chart-pie"></i> Visualisasi Energi</h4>
