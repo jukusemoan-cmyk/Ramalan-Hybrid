@@ -1530,7 +1530,8 @@ function displayPremiumContent() {
   
   const rangkumanNarasi = generateRamalanSummary(user, p, hariBaik, hariBuruk);
   
-  const elemenDominan = currentManuritasResult?.hanacaraka?.dominantElement || 'Tanah';
+  // Placeholder dulu, nanti di-update di setTimeout
+  const elemenDominan = 'Tanah';
   const warna = warnaKeberuntunganData?.colors[elemenDominan] || { primary: ['Emas'], secondary: ['Putih'], avoid: ['Hitam'] };
   const kristal = kristalData?.crystals[elemenDominan] || { name: 'Clear Quartz', benefits: 'Membersihkan energi.' };
   const jurusan = jurusanKuliahData?.recommendations[elemenDominan] || ['Manajemen', 'Psikologi'];
@@ -1650,14 +1651,40 @@ function displayPremiumContent() {
   setTimeout(() => {
   const fullName = elements.fullName?.value?.trim() || elements.userName?.value?.trim() || '';
   
-  // Gunakan elementCount yang sudah dihitung
-  const elementCount = elementCountForDisplay || calculateElementCountFromName(fullName) || { Api: 25, Air: 20, Tanah: 20, Kayu: 15, Logam: 10, Udara: 10 };
+  // ✅ HITUNG ULANG elementCount dan elemenDominan
+  let elementCount = calculateElementCountFromName(fullName);
+  let elemenDominanKoreksi = 'Tanah';
+  
+  if (elementCount) {
+    let maxVal = 0;
+    for (const [el, val] of Object.entries(elementCount)) {
+      if (val > maxVal) {
+        maxVal = val;
+        elemenDominanKoreksi = el;
+      }
+    }
+  } else {
+    elementCount = { Api: 25, Air: 20, Tanah: 20, Kayu: 15, Logam: 10, Udara: 10 };
+  }
+  
+  console.log('✅ Elemen Dominan (dikoreksi):', elemenDominanKoreksi, elementCount);
   
   // Render Radar Chart dengan elemenDominan yang sudah dikoreksi
-  renderRadarChart(fullName, currentManuritasResult, elemenDominan);
+  renderRadarChart(fullName, currentManuritasResult, elemenDominanKoreksi);
   
   // Render Pie Chart dengan elementCount yang sudah dihitung
   renderPieChartWithElementCount(elementCount);
+  
+  // ✅ Update teks Elemen Dominan di HTML
+  const elemenDominanText = document.querySelector('.analysis-section-card p strong');
+  // Cara lebih aman: cari elemen yang mengandung "Elemen Dominan"
+  const allPs = document.querySelectorAll('.analysis-section-card p');
+  for (let p of allPs) {
+    if (p.innerHTML.includes('Elemen Dominan')) {
+      p.innerHTML = `Elemen Dominan: <strong>${elemenDominanKoreksi}</strong>`;
+      break;
+    }
+  }
 }, 200);
   
   // Tampilkan testimonial prompt setelah 3 detik
