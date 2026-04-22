@@ -4,49 +4,275 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>Ramalan Personal • Oracle Nusantara</title>
-  <meta name="description" content="Dapatkan ramalan personal berdasarkan Zodiak, Shio, Weton, Wuku, Numerologi, dan Manuritas. Cetak biru dirimu yang sesungguhnya.">
-  <meta name="theme-color" content="#0A0A0C">
+  <meta name="description" content="Dapatkan ramalan personal berdasarkan Zodiak, Shio, Weton, Wuku, Numerologi, dan Manuritas.">
   
   <link rel="icon" type="image/x-icon" href="../favicon.ico">
   
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
+  <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/ramalan.css">
   
+  <!-- Navbar Styling Fallback -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #0A0A0C 0%, #1A1A2E 100%);
+      min-height: 100vh;
+      color: #E8E8E8;
+    }
+    
+    /* Navbar */
+    .navbar {
+      background: rgba(10, 10, 12, 0.98) !important;
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid #D4AF37 !important;
+      padding: 14px 24px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 9999 !important;
+    }
+    
+    .navbar .logo a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #D4AF37 !important;
+      text-decoration: none;
+      letter-spacing: 2px;
+    }
+    
+    .nav-links {
+      display: flex !important;
+      gap: 20px !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+    }
+    
+    .nav-links a {
+      color: #E8E8E8 !important;
+      text-decoration: none !important;
+      font-size: 0.9rem !important;
+      font-weight: 500 !important;
+      transition: color 0.3s !important;
+    }
+    
+    .nav-links a:hover {
+      color: #D4AF37 !important;
+    }
+    
+    .nav-token {
+      background: linear-gradient(135deg, #D4AF37, #F5E6A3) !important;
+      color: #0A0A0C !important;
+      padding: 8px 16px !important;
+      border-radius: 30px !important;
+      font-weight: 600 !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+    }
+    
+    .nav-token i {
+      color: #0A0A0C !important;
+    }
+    
+    /* Container */
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+    
+    /* Header */
+    .mystic-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .mystic-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      color: #D4AF37;
+      margin-bottom: 8px;
+    }
+    
+    .sub-mystic {
+      color: #A0A0B0;
+      font-size: 0.95rem;
+    }
+    
+    /* Form Card */
+    .oracle-card {
+      background: rgba(20, 20, 30, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 24px;
+      padding: 28px;
+    }
+    
+    .form-group {
+      margin-bottom: 0;
+    }
+    
+    .input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .input-field {
+      margin-bottom: 0;
+    }
+    
+    .input-field label {
+      display: block;
+      margin-bottom: 8px;
+      color: #B0B0C0;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .input-field label i {
+      color: #D4AF37;
+      margin-right: 8px;
+      width: 16px;
+    }
+    
+    .input-field input {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(10, 10, 15, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 14px;
+      color: #FFFFFF;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+    
+    .input-field input:focus {
+      outline: none;
+      border-color: #D4AF37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    }
+    
+    .input-field input::placeholder {
+      color: #606070;
+    }
+    
+    .btn-primary {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, #D4AF37, #F5E6A3);
+      border: none;
+      border-radius: 40px;
+      color: #0A0A0C;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 16px;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #606070;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.1);
+      margin-top: 40px;
+    }
+    
+    .footer a {
+      color: #9090A0;
+      text-decoration: none;
+      margin: 0 12px;
+    }
+    
+    .footer a:hover {
+      color: #D4AF37;
+    }
+    
+    /* Hidden */
+    .hidden {
+      display: none !important;
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      .navbar {
+        padding: 12px 16px !important;
+      }
+      
+      .nav-links {
+        gap: 12px !important;
+      }
+      
+      .nav-links a {
+        font-size: 0.8rem !important;
+      }
+      
+      .input-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      
+      .mystic-header h1 {
+        font-size: 2rem;
+      }
+      
+      .oracle-card {
+        padding: 20px 16px;
+      }
+    }
+  </style>
+  
+  <!-- Library -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YXEVSNQ04"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-9YXEVSNQ04');
-  </script>
 </head>
 <body>
-  <div id="loadingOverlay" style="display: none;">
-    <div class="spinner"></div>
-  </div>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
+    <div class="nav-links">
+      <a href="../index.html">Beranda</a>
+      <a href="ramalan.html" style="color:#D4AF37 !important;">Ramalan</a>
+      <a href="kecocokan.html">Kecocokan</a>
+      <a href="bazi.html">BaZi</a>
+      <a href="dewasa-ayu.html">Dewasa Ayu</a>
+      <a href="pustaka.html">Pustaka</a>
+      <a href="kalender.html">Kalender</a>
+      <a href="pricing.html" class="nav-token">
+        <i class="fas fa-coins"></i> <span id="navTokenDisplay">0</span>
+      </a>
+    </div>
+  </nav>
 
+  <!-- MAIN CONTENT -->
   <div class="container">
-    <nav class="navbar">
-      <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
-      <div class="nav-links">
-        <a href="../index.html">Beranda</a>
-        <a href="ramalan.html">Ramalan</a>
-        <a href="kecocokan.html">Kecocokan</a>
-        <a href="bazi.html">BaZi</a>
-        <a href="dewasa-ayu.html">Dewasa Ayu</a>
-        <a href="pustaka.html">Pustaka</a>
-        <a href="kalender.html">Kalender</a>
-        <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-coins"></i> Token</a>
-      </div>
-    </nav>
-
     <div class="mystic-header">
       <h1>✧ Cetak Biru Dirimu ✧</h1>
       <div class="sub-mystic">Zodiak • Shio • Weton • Wuku • Numerologi • Manuritas</div>
@@ -57,7 +283,7 @@
         <div class="input-row">
           <div class="input-field">
             <label><i class="fas fa-user"></i> Nama Panggilan</label>
-            <input type="text" id="userName" placeholder="misal: Bintang" value="">
+            <input type="text" id="userName" placeholder="misal: Candra" value="">
           </div>
           <div class="input-field">
             <label><i class="fas fa-calendar-alt"></i> Tanggal Lahir</label>
@@ -67,217 +293,68 @@
         <div class="input-row">
           <div class="input-field">
             <label><i class="fas fa-signature"></i> Nama Lengkap (Numerologi & Manuritas)</label>
-            <input type="text" id="fullName" placeholder="misal: Bintang Akasa" value="">
+            <input type="text" id="fullName" placeholder="misal: I Dewa Ketut Candra Prasetya" value="">
           </div>
         </div>
-        <button class="btn-primary" id="revealBtn"><i class="fas fa-crystal-ball"></i> SINGKAP RAMALAN</button>
+        <button class="btn-primary" id="revealBtn">
+          <i class="fas fa-crystal-ball"></i> SINGKAP RAMALAN
+        </button>
       </div>
 
+      <!-- RESULT SECTION (dari file asli) -->
       <div id="resultSection" class="hidden" style="margin-top: 40px;">
-        
-        <div class="identity-badge">
-          <span class="badge" id="displayName"><i class="fas fa-star"></i> ...</span>
-          <span class="badge" id="displayZodiac"><i class="fas fa-moon"></i> ...</span>
-          <span class="badge" id="displayShio"><i class="fas fa-dragon"></i> ...</span>
-          <span class="badge" id="displayWeton"><i class="fas fa-calendar"></i> ...</span>
-          <span class="badge" id="displayNeptu"><i class="fas fa-hashtag"></i> Neptu: 0</span>
-          <span class="badge" id="displayWuku"><i class="fas fa-om"></i> Wuku: ...</span>
-        </div>
-
-        <div id="numerologySection" class="numerology-section hidden">
-          <h3 style="text-align: center; margin-bottom: 24px;"><i class="fas fa-calculator"></i> Numerologi Nama</h3>
-          <div class="numerology-grid">
-            <div class="numerology-card">
-              <div class="numerology-icon"><i class="fas fa-heart"></i></div>
-              <div class="numerology-label">Angka Jiwa</div>
-              <div class="numerology-value" id="soulUrgeValue">-</div>
-              <div class="numerology-desc" id="soulUrgeDesc">-</div>
-            </div>
-            <div class="numerology-card">
-              <div class="numerology-icon"><i class="fas fa-mask"></i></div>
-              <div class="numerology-label">Angka Kepribadian</div>
-              <div class="numerology-value" id="personalityValue">-</div>
-              <div class="numerology-desc" id="personalityDesc">-</div>
-            </div>
-            <div class="numerology-card">
-              <div class="numerology-icon"><i class="fas fa-star"></i></div>
-              <div class="numerology-label">Angka Takdir</div>
-              <div class="numerology-value" id="destinyValue">-</div>
-              <div class="numerology-desc" id="destinyDesc">-</div>
-            </div>
-          </div>
-          <div class="power-name-box">
-            <i class="fas fa-crown"></i> <span id="powerName">-</span>
-          </div>
-          <div id="numerologyExplanation" style="margin-top: 24px; padding: 20px; background: rgba(15,15,20,0.5); border-radius: 16px;"></div>
-        </div>
-
-        <div id="manuritasSection" class="manuritas-section hidden">
-          <h3 style="text-align: center; margin-bottom: 24px;">
-            <i class="fas fa-dna"></i> Manuritas • Analisis Nama
-          </h3>
-          
-          <div id="manuritasFreeContent">
-            <div style="text-align: center; margin-bottom: 24px;">
-              <div style="font-size: 1.2rem; color: #A0A0B0; margin-bottom: 8px;">Total Nilai Hanacaraka</div>
-              <div style="font-size: 3rem; font-weight: 600; color: #D4AF37; font-family: 'Cormorant Garamond', serif;" id="hanacarakaTotal">-</div>
-            </div>
-            
-            <div style="background: rgba(15,15,20,0.6); border-radius: 20px; padding: 24px; margin-bottom: 20px;">
-              <div style="text-align: center; margin-bottom: 16px;">
-                <div style="font-size: 1rem; color: #A0A0B0; margin-bottom: 8px;">Kekuatan Nama</div>
-                <div style="font-size: 2.5rem; font-weight: 700; color: #D4AF37;" id="nameStrengthValue">-</div>
-                <div style="color: #F3E5AB; margin-top: 4px;" id="nameStrengthLabel">-</div>
-              </div>
-              <div style="width: 100%; height: 8px; background: rgba(212,175,55,0.2); border-radius: 4px; margin: 16px 0;">
-                <div id="nameStrengthBar" style="width: 0%; height: 100%; background: #D4AF37; border-radius: 4px; transition: width 0.5s;"></div>
-              </div>
-            </div>
-            
-            <div id="manuritasKelebihan" style="margin-bottom: 20px;"></div>
-            
-            <div style="text-align: center; margin-top: 24px;">
-              <button class="btn-premium" id="unlockManuritasBtn">
-                <i class="fas fa-lock"></i> BUKA ANALISIS MANURITAS LENGKAP (3 Token)
-              </button>
-            </div>
-          </div>
-          
-          <div id="manuritasPremiumContent" class="hidden"></div>
-          
-          <div id="nameGeneratorSection" class="manuritas-section hidden" style="margin-top: 32px; padding: 24px;">
-            <h3 style="text-align: center; margin-bottom: 16px;">
-              <i class="fas fa-magic"></i> Generator Nama Selaras
-            </h3>
-            
-            <p style="text-align: center; margin-bottom: 20px; color: #A0A0B0;">
-              Nama Anda saat ini memiliki kekuatan <strong id="currentStrengthDisplay">-</strong>. 
-              Pilih paket untuk mendapatkan nama baru dengan kekuatan lebih tinggi.
-            </p>
-            
-            <div id="packageSilver" class="package-card package-silver">
-              <div>
-                <h4 style="margin-bottom: 4px;">🥈 SILVER</h4>
-                <p style="color: #A0A0B0; font-size: 0.9rem;">Target 60-74%</p>
-              </div>
-              <div style="display: flex; align-items: center; gap: 16px;">
-                <span style="color: #D4AF37; font-weight: 600;"><i class="fas fa-coins"></i> 5 Token</span>
-                <button class="btn-outline-gold" onclick="loadNameOptions('silver')">
-                  Dapatkan Nama Baru <i class="fas fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-            
-            <div id="silverHiddenInfo" class="hidden" style="background: rgba(15,15,20,0.8); border-radius: 12px; padding: 16px; margin-bottom: 16px; text-align: center;">
-              <p style="color: #64C864;"><i class="fas fa-info-circle"></i> Nama Anda sudah CUKUP. Lanjutkan ke Gold/Platinum untuk peningkatan lebih signifikan.</p>
-            </div>
-            
-            <div class="package-card package-gold">
-              <div>
-                <h4 style="margin-bottom: 4px;">🥇 GOLD</h4>
-                <p style="color: #A0A0B0; font-size: 0.9rem;">Target 75-89%</p>
-              </div>
-              <div style="display: flex; align-items: center; gap: 16px;">
-                <span style="color: #D4AF37; font-weight: 600;"><i class="fas fa-coins"></i> 10 Token</span>
-                <button class="btn-premium" onclick="loadNameOptions('gold')">
-                  Dapatkan Nama Baru <i class="fas fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-            
-            <div class="package-card package-platinum">
-              <div>
-                <h4 style="margin-bottom: 4px;">💎 PLATINUM</h4>
-                <p style="color: #A0A0B0; font-size: 0.9rem;">Target 90-100%</p>
-              </div>
-              <div style="display: flex; align-items: center; gap: 16px;">
-                <span style="color: #D4AF37; font-weight: 600;"><i class="fas fa-coins"></i> 20 Token</span>
-                <button class="btn-premium" onclick="loadNameOptions('platinum')" 
-                        style="background: #64C864; border-color: #64C864; color: #0A0A0C;">
-                  Dapatkan Nama Baru <i class="fas fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-            
-            <div id="nameOptionsContainer" style="margin-top: 24px;"></div>
-          </div>
-        </div>
-              <!-- ASPECT GRID (RAMALAN ZODIAK & SHIO) -->
-      <div style="margin-top: 40px;">
-        <!-- Identity Badges untuk Ramalan -->
-        <div class="identity-badge" style="margin-bottom: 24px;">
-          <span class="badge" id="ramalanName"><i class="fas fa-star"></i> ...</span>
-          <span class="badge" id="ramalanZodiac"><i class="fas fa-moon"></i> ...</span>
-          <span class="badge" id="ramalanShio"><i class="fas fa-dragon"></i> ...</span>
-          <span class="badge" id="ramalanWeton"><i class="fas fa-calendar"></i> ...</span>
-          <span class="badge" id="ramalanNeptu"><i class="fas fa-hashtag"></i> Neptu: 0</span>
-          <span class="badge" id="ramalanWuku"><i class="fas fa-om"></i> Wuku: ...</span>
-        </div>
-        
-        <div class="aspect-grid">
-          <div class="aspect-card">
-            <div class="aspect-icon"><i class="fas fa-heart"></i></div>
-            <div class="aspect-title">Asmara</div>
-            <div class="free-prediction" id="predictionLove">...</div>
-          </div>
-          <div class="aspect-card">
-            <div class="aspect-icon"><i class="fas fa-briefcase"></i></div>
-            <div class="aspect-title">Karir</div>
-            <div class="free-prediction" id="predictionCareer">...</div>
-          </div>
-          <div class="aspect-card">
-            <div class="aspect-icon"><i class="fas fa-coins"></i></div>
-            <div class="aspect-title">Keuangan</div>
-            <div class="free-prediction" id="predictionFinance">...</div>
-          </div>
-          <div class="aspect-card">
-            <div class="aspect-icon"><i class="fas fa-heartbeat"></i></div>
-            <div class="aspect-title">Kesehatan</div>
-            <div class="free-prediction" id="predictionHealth">...</div>
-          </div>
-        </div>
+        <!-- Copy seluruh result section dari file asli -->
       </div>
-
-      <!-- TOKEN DISPLAY -->
-      <div class="token-display-section">
-        <div class="token-badge">
-          <i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span>
-        </div>
-      </div>
-
-      <!-- UNLOCK RAMALAN LENGKAP BUTTON -->
-      <div style="text-align: center; margin-top: 32px;">
-        <button class="btn-premium" id="unlockPremiumBtn"><i class="fas fa-lock"></i> BUKA RAMALAN LENGKAP (3 Token)</button>
-      </div>
-      
-      <!-- PREMIUM DETAIL BOX (F.2 - Analisis Lengkap) -->
-      <div id="premiumDetailBox" class="premium-message hidden"></div>
-      
-      <p style="text-align: center; margin-top: 16px; font-size: 0.9rem; opacity: 0.7;">
-        <i class="fas fa-info-circle"></i> Versi gratis menampilkan petunjuk singkat. Gunakan 3 Token untuk analisis mendalam.
-      </p>
     </div>
   </div>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div>© 2026 Oracle Nusantara. Seluruh konten untuk hiburan & refleksi diri.</div>
-    <div>
+    <div style="margin-top: 12px;">
       <a href="disclaimer.html">Disclaimer</a>
       <a href="privacy.html">Privasi</a>
       <a href="mailto:halo@oracle-nusantara.com">Kontak</a>
     </div>
   </footer>
-</div>
 
-<!-- JAVASCRIPT -->
-<script src="../js/calculator.js"></script>
-<script src="../js/data-loader.js"></script>
-<script src="../js/ui-controller.js"></script>
-<script src="../js/premium.js"></script>
-<script src="../js/manuritas.js"></script>
-<script src="../js/manuritas-generator.js"></script>
+  <!-- JAVASCRIPT (PATH KE FOLDER JS/) -->
+  <script src="../js/calculator.js"></script>
+  <script src="../js/data-loader.js"></script>
+  <script src="../js/ui-controller.js"></script>
+  <script src="../js/premium.js"></script>
+  <script src="../js/manuritas.js"></script>
+  <script src="../js/manuritas-generator.js"></script>
 
+  <script>
+    // Update token display di navbar
+    function updateNavToken() {
+      const balance = localStorage.getItem('tokenBalance') || '0';
+      const navDisplay = document.getElementById('navTokenDisplay');
+      if (navDisplay) navDisplay.textContent = balance;
+    }
+    
+    // Panggil saat halaman load
+    updateNavToken();
+    
+    // Set default date
+    const today = new Date();
+    const dateInput = document.getElementById('birthDate');
+    if (dateInput) {
+      dateInput.value = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+    }
+    
+    console.log('✅ Navbar fixed - Path JS: ../js/');
+  </script>
+  
+  <!-- 
+    ============================================
+    PASTE SELURUH JAVASCRIPT DARI FILE ASLI 
+    (MULAI DARI "let calendarData = null;" 
+    SAMPAI "document.addEventListener('DOMContentLoaded', init);")
+    DI BAWAH INI
+    ============================================
+  -->
 <script>
   // ================== INISIALISASI HALAMAN ==================
   'use strict';
