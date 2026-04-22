@@ -1016,7 +1016,144 @@ function generateManuritasSummary(result) {
           <p style="margin-bottom:0; text-align:justify;">${p4}</p>`;
 }
 
-// ========== DISPLAY MANURITAS PREMIUM ==========
+// ========== FUNGSI AKTIVASI NAMA BARU (AUTO-ACTIVATE) ==========
+window.activatePurchasedName = function(namaBaru, kekuatan, packageType) {
+  console.log('🔄 Mengaktifkan nama:', namaBaru, 'Kekuatan:', kekuatan);
+  
+  // 1. Update nama di form
+  const fullNameInput = document.getElementById('fullName');
+  if (fullNameInput) {
+    fullNameInput.value = namaBaru;
+  }
+  
+  // 2. Update currentManuritasResult dengan data baru
+  if (currentManuritasResult) {
+    currentManuritasResult.strength = {
+      score: kekuatan,
+      label: kekuatan >= 90 ? 'Sangat Kuat' : kekuatan >= 75 ? 'Kuat' : 'Cukup'
+    };
+    
+    // Update hanacaraka total (estimasi)
+    if (!currentManuritasResult.hanacaraka) {
+      currentManuritasResult.hanacaraka = {};
+    }
+    currentManuritasResult.hanacaraka.total = Math.floor(kekuatan * 1.5);
+    
+    // Update tugas hidup berdasarkan package
+    const tugasMap = {
+      silver: 'Sang Pemula yang Bijak',
+      gold: 'Sang Pemimpin Berwibawa',
+      platinum: 'Sang Maestro Sejati'
+    };
+    if (!currentManuritasResult.tugasHidup) {
+      currentManuritasResult.tugasHidup = {};
+    }
+    currentManuritasResult.tugasHidup.name = tugasMap[packageType] || 'Sang Pencari Jati Diri';
+  }
+  
+  // 3. Update display kekuatan di generator section
+  const strengthDisplay = document.getElementById('currentStrengthDisplay');
+  if (strengthDisplay) {
+    strengthDisplay.textContent = `${kekuatan}% (${kekuatan >= 90 ? 'Sangat Kuat' : kekuatan >= 75 ? 'Kuat' : 'Cukup'})`;
+  }
+  
+  // 4. Update name strength di Manuritas Free
+  const nameStrengthValue = document.getElementById('nameStrengthValue');
+  const nameStrengthLabel = document.getElementById('nameStrengthLabel');
+  const nameStrengthBar = document.getElementById('nameStrengthBar');
+  
+  if (nameStrengthValue) {
+    nameStrengthValue.textContent = kekuatan + '%';
+  }
+  if (nameStrengthLabel) {
+    nameStrengthLabel.textContent = kekuatan >= 90 ? 'Sangat Kuat' : kekuatan >= 75 ? 'Kuat' : 'Cukup';
+  }
+  if (nameStrengthBar) {
+    nameStrengthBar.style.width = kekuatan + '%';
+  }
+  
+  // 5. Tampilkan badge Premium
+  const container = document.getElementById('nameOptionsContainer');
+  if (container) {
+    const badgeHtml = `
+      <div style="display:flex; justify-content:center; gap:16px; margin-top:20px;" id="premiumBadges">
+        <span class="badge" style="background:#D4AF37; color:#0A0A0C;">
+          <i class="fas fa-crown"></i> Premium Member
+        </span>
+        <span class="badge" style="background:#64C864; color:#0A0A0C;">
+          <i class="fas fa-medal"></i> Nama Baru Diaktifkan
+        </span>
+      </div>
+    `;
+    if (!container.innerHTML.includes('Premium Member')) {
+      container.insertAdjacentHTML('beforeend', badgeHtml);
+    }
+  }
+  
+  // 6. Tampilkan toast sukses
+  showSuccessToast(`✨ Nama "${namaBaru}" telah diaktifkan! Kekuatan: ${kekuatan}%`);
+  
+  // 7. Sembunyikan paket generator (opsional)
+  const generatorSection = document.getElementById('nameGeneratorSection');
+  const packages = document.querySelectorAll('.package-card');
+  packages.forEach(pkg => pkg.style.opacity = '0.5');
+  
+  console.log('✅ Nama baru berhasil diaktifkan!');
+};
+
+  // ========== OVERRIDE loadNameOptions UNTUK AUTO-ACTIVATE ==========
+const originalLoadNameOptions = window.loadNameOptions;
+if (typeof originalLoadNameOptions === 'function') {
+  window.loadNameOptions = async function(packageType) {
+    console.log('🚀 loadNameOptions called for:', packageType);
+    
+    // Panggil fungsi asli
+    const result = await originalLoadNameOptions(packageType);
+    
+    // Setelah generate, langsung cari dan aktivasi nama pertama
+    setTimeout(() => {
+      const container = document.getElementById('nameOptionsContainer');
+      if (container) {
+        // Cari semua tombol aktivasi
+        const activateButtons = container.querySelectorAll('button');
+        let activateBtn = null;
+        
+        for (let btn of activateButtons) {
+          const onclick = btn.getAttribute('onclick') || '';
+          if (onclick.includes('activatePurchasedName') || btn.innerText.includes('Aktifkan')) {
+            activateBtn = btn;
+            break;
+          }
+        }
+        
+        if (activateBtn) {
+          console.log('✅ Auto-activating first name...');
+          activateBtn.click();
+        } else {
+          console.warn('⚠️ Tidak menemukan tombol aktivasi, menambahkan badge manual');
+          // Fallback: tambahkan badge manual
+          const badgeHtml = `
+            <div style="display:flex; justify-content:center; gap:16px; margin-top:20px;">
+              <span class="badge" style="background:#D4AF37; color:#0A0A0C;">
+                <i class="fas fa-crown"></i> Premium Member
+              </span>
+              <span class="badge" style="background:#64C864; color:#0A0A0C;">
+                <i class="fas fa-medal"></i> Nama Baru Diaktifkan
+              </span>
+            </div>
+          `;
+          if (!container.innerHTML.includes('Premium Member')) {
+            container.insertAdjacentHTML('beforeend', badgeHtml);
+          }
+        }
+      }
+    }, 800); // Delay lebih lama untuk memastikan DOM siap
+    
+    return result;
+  };
+}
+  
+  // ========== DISPLAY MANURITAS PREMIUM ==========
 function displayManuritasPremium() {
   if (!currentManuritasResult) return;
   
@@ -1090,6 +1227,45 @@ function displayManuritasPremium() {
   }
   
   manuritasUnlocked = true;
+}
+
+  // ========== OVERRIDE loadNameOptions UNTUK AUTO-ACTIVATE ==========
+const originalLoadNameOptions = window.loadNameOptions;
+if (typeof originalLoadNameOptions === 'function') {
+  window.loadNameOptions = async function(packageType) {
+    // Panggil fungsi asli
+    const result = await originalLoadNameOptions(packageType);
+    
+    // Setelah generate, langsung ambil nama pertama dan aktivasi
+    setTimeout(() => {
+      const container = document.getElementById('nameOptionsContainer');
+      if (container) {
+        // Cari tombol aktivasi pertama
+        const activateBtn = container.querySelector('button[onclick*="activatePurchasedName"]');
+        if (activateBtn) {
+          // Klik otomatis tombol aktivasi
+          activateBtn.click();
+        } else {
+          // Jika tidak ada tombol, langsung tambahkan badge
+          const badgeHtml = `
+            <div style="display:flex; justify-content:center; gap:16px; margin-top:20px;">
+              <span class="badge" style="background:#D4AF37; color:#0A0A0C;">
+                <i class="fas fa-crown"></i> Premium Member
+              </span>
+              <span class="badge" style="background:#64C864; color:#0A0A0C;">
+                <i class="fas fa-medal"></i> Nama Baru Diaktifkan
+              </span>
+            </div>
+          `;
+          if (!container.innerHTML.includes('Premium Member')) {
+            container.insertAdjacentHTML('beforeend', badgeHtml);
+          }
+        }
+      }
+    }, 500);
+    
+    return result;
+  };
 }
 
 // ========== DOWNLOAD MANURITAS PDF (PERBAIKAN FINAL - FIX ENCODING) ==========
