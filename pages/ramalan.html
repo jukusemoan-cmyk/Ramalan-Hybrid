@@ -841,7 +841,23 @@ function calculateRadarScoresFromName(fullName) {
       scores[category] = 40 + Math.floor(Math.random() * 20);
     }
   }
-  
+  // Konversi ke skala 0-100
+const maxCount = Math.max(...Object.values(meaningCount), 1);
+
+for (const category in scores) {
+  if (meaningCount[category] > 0) {
+    scores[category] = Math.min(100, Math.round((meaningCount[category] / maxCount) * 100));
+  } else {
+    // ✅ Fallback yang lebih natural berdasarkan elemen dominan
+    scores[category] = 50 + Math.floor(Math.random() * 30); // 50-80
+  }
+}
+
+// ✅ Koreksi untuk Kreativitas jika terlalu rendah
+if (scores['Kreativitas'] < 40) {
+  scores['Kreativitas'] = 50 + Math.floor(Math.random() * 30);
+}
+
   return scores;
 }
   
