@@ -676,9 +676,13 @@ async function handleReveal() {
   }
 }
 
-// ========== KALKULASI ELEMENT COUNT DARI NAMA (BERDASARKAN HANACARAKA MAP) ==========
+// ========== KALKULASI ELEMENT COUNT DARI NAMA (DENGAN VALIDASI) ==========
 function calculateElementCountFromName(fullName) {
-  if (!fullName) return null;
+  // ✅ VALIDASI: Pastikan fullName adalah string
+  if (!fullName || typeof fullName !== 'string') {
+    console.warn('⚠️ fullName tidak valid:', fullName);
+    return null;
+  }
   
   // Jika JSON tidak loaded, return null
   if (!hanacarakaMapData) {
@@ -701,6 +705,12 @@ function calculateElementCountFromName(fullName) {
   
   // Bersihkan nama dan konversi ke lowercase
   const cleanName = fullName.toLowerCase().replace(/[^a-z]/g, '');
+  
+  // Jika nama kosong setelah dibersihkan, return null
+  if (cleanName.length === 0) {
+    console.warn('⚠️ Nama kosong setelah dibersihkan');
+    return null;
+  }
   
   // Loop setiap karakter
   for (let i = 0; i < cleanName.length; i++) {
@@ -749,9 +759,13 @@ function calculateElementCountFromName(fullName) {
   return elementCount;
 }
 
-  // ========== KALKULASI RADAR SCORES DARI NAMA (BERDASARKAN HANACARAKA MAP) ==========
+ // ========== KALKULASI RADAR SCORES DARI NAMA (DENGAN VALIDASI) ==========
 function calculateRadarScoresFromName(fullName) {
-  if (!fullName) return null;
+  // ✅ VALIDASI: Pastikan fullName adalah string
+  if (!fullName || typeof fullName !== 'string') {
+    console.warn('⚠️ fullName tidak valid untuk radar:', fullName);
+    return null;
+  }
   
   // Default scores
   const scores = {
@@ -771,6 +785,10 @@ function calculateRadarScoresFromName(fullName) {
   const latinMap = hanacarakaMapData.latin_to_hanacaraka || {};
   
   const cleanName = fullName.toLowerCase().replace(/[^a-z]/g, '');
+  
+  if (cleanName.length === 0) {
+    return scores;
+  }
   
   // Counter untuk akumulasi makna
   const meaningCount = {
@@ -820,7 +838,7 @@ function calculateRadarScoresFromName(fullName) {
     if (meaningCount[category] > 0) {
       scores[category] = Math.min(100, Math.round((meaningCount[category] / maxCount) * 100));
     } else {
-      scores[category] = 40 + Math.floor(Math.random() * 20); // Fallback random 40-60
+      scores[category] = 40 + Math.floor(Math.random() * 20);
     }
   }
   
