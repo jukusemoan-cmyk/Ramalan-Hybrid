@@ -1,0 +1,126 @@
+{
+  "version": "1.0.0",
+  "description": "Rekomendasi pekerjaan berdasarkan elemen dominan Hanacaraka",
+  "lastUpdated": "2026-04-22",
+  "jobs": {
+    "Api": {
+      "element": "Api",
+      "description": "Elemen Api melambangkan semangat, kepemimpinan, dan energi yang membara. Cocok untuk pekerjaan yang membutuhkan inisiatif tinggi dan keberanian.",
+      "fields": [
+        "TNI / Tentara Nasional Indonesia",
+        "Pilot",
+        "CEO / Direktur Utama",
+        "Pengusaha / Entrepreneur",
+        "Motivator / Public Speaker",
+        "Marketing Manager",
+        "Sales Director",
+        "Event Organizer",
+        "Chef / Koki Eksekutif",
+        "Atlet Profesional",
+        "Aktor / Aktris",
+        "Politikus",
+        "Jurnalis Investigasi",
+        "Brand Ambassador",
+        "Creative Director",
+        "Startup Founder"
+      ]
+    },
+    "Air": {
+      "element": "Air",
+      "description": "Elemen Air melambangkan kebijaksanaan, ketenangan, dan kemampuan beradaptasi. Cocok untuk pekerjaan yang membutuhkan empati dan intuisi.",
+      "fields": [
+        "Pelaut / Perwira AL",
+        "Psikolog / Konselor",
+        "Guru / Dosen / Pendidik",
+        "Penulis / Novelis",
+        "HR Manager / HR Business Partner",
+        "Customer Service Manager",
+        "Terapis / Healer",
+        "Perawat / Bidan",
+        "Social Worker / Pekerja Sosial",
+        "Peneliti / Researcher",
+        "Filsuf / Pemikir",
+        "Mediator / Negosiator",
+        "Content Creator",
+        "UX Researcher",
+        "Community Manager",
+        "Spiritual Guide / Mentor"
+      ]
+    },
+    "Kayu": {
+      "element": "Kayu",
+      "description": "Elemen Kayu melambangkan pertumbuhan, kreativitas, dan visi ke depan. Cocok untuk pekerjaan yang membutuhkan inovasi dan pengembangan.",
+      "fields": [
+        "Arsitek",
+        "Desainer Grafis / UI/UX Designer",
+        "Product Manager",
+        "Software Developer / Programmer",
+        "Seniman / Pelukis / Ilustrator",
+        "Fotografer / Videografer",
+        "Arsitek Lanskap",
+        "Urban Planner",
+        "Environmental Consultant",
+        "Pendiri NGO / Aktivis Lingkungan",
+        "Guru Seni / Kreativitas",
+        "Innovation Consultant",
+        "R&D Specialist",
+        "Content Strategist",
+        "Brand Strategist"
+      ]
+    },
+    "Logam": {
+      "element": "Logam",
+      "description": "Elemen Logam melambangkan ketegasan, disiplin, dan kemampuan eksekusi. Cocok untuk pekerjaan yang membutuhkan struktur dan presisi.",
+      "fields": [
+        "Polri / Kepolisian",
+        "Pilot",
+        "Akuntan / Auditor",
+        "Pengacara / Advokat",
+        "Hakim / Jaksa",
+        "Banker / Financial Analyst",
+        "Project Manager",
+        "Insinyur / Engineer",
+        "Quality Assurance Specialist",
+        "Data Analyst / Data Scientist",
+        "Operations Manager",
+        "Supply Chain Manager",
+        "Security Consultant",
+        "Compliance Officer",
+        "Risk Management Specialist",
+        "Surgeon / Dokter Bedah"
+      ]
+    },
+    "Tanah": {
+      "element": "Tanah",
+      "description": "Elemen Tanah melambangkan stabilitas, kesabaran, dan fondasi yang kokoh. Cocok untuk pekerjaan yang membutuhkan ketekunan dan keandalan.",
+      "fields": [
+        "TNI AD / Infanteri",
+        "Polri / Brimob",
+        "Petani / Agronom",
+        "Pengusaha Properti / Real Estate Agent",
+        "Manajer Konstruksi",
+        "Geologist / Ahli Geologi",
+        "Museum Curator",
+        "Arkeolog",
+        "Sejarawan",
+        "Pustakawan / Arsiparis",
+        "Chef / Baker (makanan tradisional)",
+        "Family Business Owner",
+        "Pekerja Sosial Komunitas",
+        "Guru Sekolah Dasar",
+        "Caregiver / Pengasuh Lansia",
+        "Administrasi Publik / PNS",
+        "Facility Manager"
+      ]
+    }
+  },
+  "default": {
+    "fields": [
+      "Manager",
+      "Analis",
+      "Konsultan",
+      "Spesialis",
+      "Koordinator"
+    ]
+  }
+}
