@@ -1406,86 +1406,6 @@ function renderPieChart(fullName, manuritasResult) {
   console.log('✅ Pie chart rendered dengan elementCount:', elementCount);
 }
 
-// ========== FUNGSI KALKULASI ELEMENT COUNT DARI NAMA ==========
-function calculateElementCount(fullName) {
-  if (!fullName) return null;
-  
-  // Mapping aksara ke elemen (Hanacaraka)
-  const aksaraToElement = {
-    // Api
-    'ha': 'Api', 'na': 'Api', 'ca': 'Api', 'ra': 'Api', 'ka': 'Api',
-    'da': 'Api', 'ta': 'Api', 'sa': 'Api', 'wa': 'Api', 'la': 'Api',
-    'pa': 'Api', 'dha': 'Api', 'ja': 'Api', 'ya': 'Api', 'nya': 'Api',
-    // Air
-    'ma': 'Air', 'ga': 'Air', 'ba': 'Air', 'tha': 'Air', 'nga': 'Air',
-    // Tanah
-    'a': 'Tanah', 'i': 'Tanah', 'u': 'Tanah', 'e': 'Tanah', 'o': 'Tanah',
-    // Kayu
-    'ma': 'Kayu', 'ga': 'Kayu', 'ba': 'Kayu',
-    // Logam
-    'pa': 'Logam', 'pha': 'Logam', 'bha': 'Logam',
-    // Udara
-    'ya': 'Udara', 'ra': 'Udara', 'la': 'Udara', 'wa': 'Udara'
-  };
-  
-  // Inisialisasi counter
-  const elementCount = {
-    'Api': 0,
-    'Air': 0,
-    'Tanah': 0,
-    'Kayu': 0,
-    'Logam': 0,
-    'Udara': 0
-  };
-  
-  // Konversi nama ke lowercase dan split per karakter
-  const name = fullName.toLowerCase().replace(/[^a-z]/g, '');
-  
-  // Hitung per 2 karakter (suku kata)
-  for (let i = 0; i < name.length; i++) {
-    let syllable = name[i];
-    if (i + 1 < name.length) {
-      const twoChars = name[i] + name[i+1];
-      if (aksaraToElement[twoChars]) {
-        syllable = twoChars;
-        i++; // Skip next char
-      }
-    }
-    
-    // Cari elemen untuk suku kata ini
-    let found = false;
-    for (const [pattern, element] of Object.entries(aksaraToElement)) {
-      if (syllable.includes(pattern)) {
-        elementCount[element] += 10; // Bobot 10 per suku kata
-        found = true;
-        break;
-      }
-    }
-    
-    // Default ke Tanah jika tidak ditemukan
-    if (!found) {
-      elementCount['Tanah'] += 5;
-    }
-  }
-  
-  // Normalisasi agar total ~100
-  const total = Object.values(elementCount).reduce((sum, val) => sum + val, 0);
-  if (total > 0) {
-    for (const key in elementCount) {
-      elementCount[key] = Math.round((elementCount[key] / total) * 100);
-    }
-  }
-  
-  // Pastikan total tepat 100
-  const newTotal = Object.values(elementCount).reduce((sum, val) => sum + val, 0);
-  if (newTotal !== 100) {
-    const diff = 100 - newTotal;
-    const keys = Object.keys(elementCount);
-    elementCount[keys[0]] += diff;
-  }
-  
-  return elementCount;
-}
 
 // ========== DISPLAY PREMIUM CONTENT (F.2 - RAMALAN LENGKAP) ==========
 function displayPremiumContent() {
@@ -1628,11 +1548,11 @@ function displayPremiumContent() {
   ramalanPremiumUnlocked = true;
   
   setTimeout(() => {
-  // Radar Chart dengan data asli
-  renderRadarChart(elemenDominan, currentManuritasResult);
+  const fullName = elements.fullName?.value?.trim() || elements.userName?.value?.trim() || '';
   
-  // Pie Chart dengan data asli dari Manuritas
-  renderPieChart(currentManuritasResult);
+  // Render charts dengan data dari nama dan hasil Manuritas
+  renderRadarChart(fullName, currentManuritasResult);
+  renderPieChart(fullName, currentManuritasResult);
 }, 200);
   
   // Tampilkan testimonial prompt setelah 3 detik
