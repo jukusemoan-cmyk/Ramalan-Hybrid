@@ -1243,7 +1243,7 @@ function generateRamalanSummary(user, p, hariBaik, hariBuruk) {
 }
 
 // ========== RENDER RADAR CHART (DATA ASLI) ==========
-function renderRadarChart(fullName, manuritasResult) {
+function renderRadarChart(fullName, manuritasResult, elemenDominanOverride) {
   const canvas = document.getElementById('radarChart');
   if (!canvas) {
     console.warn('⚠️ Canvas radarChart tidak ditemukan');
@@ -1280,7 +1280,8 @@ function renderRadarChart(fullName, manuritasResult) {
     };
   }
   
-  const elemenDominan = manuritasResult?.hanacaraka?.dominantElement || 'Tanah';
+  // ✅ GUNAKAN elemenDominanOverride jika ada
+  const elemenDominan = elemenDominanOverride || manuritasResult?.hanacaraka?.dominantElement || 'Tanah';
   
   radarChart = new Chart(ctx, {
     type: 'radar',
@@ -1330,7 +1331,7 @@ function renderRadarChart(fullName, manuritasResult) {
     }
   });
   
-  console.log('✅ Radar chart rendered dengan scores:', scores);
+  console.log('✅ Radar chart rendered dengan elemen:', elemenDominan);
 }
 
 // ========== RENDER PIE CHART (DATA ASLI) ==========
@@ -1424,6 +1425,82 @@ function renderPieChart(fullName, manuritasResult) {
   console.log('✅ Pie chart rendered dengan elementCount:', elementCount);
 }
 
+  // ========== RENDER PIE CHART DENGAN ELEMENT COUNT YANG SUDAH DIHITUNG ==========
+function renderPieChartWithElementCount(elementCount) {
+  const canvas = document.getElementById('pieChart');
+  if (!canvas) {
+    console.warn('⚠️ Canvas pieChart tidak ditemukan');
+    return;
+  }
+  
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+  
+  if (pieChart) pieChart.destroy();
+  
+  // Fallback default jika elementCount kosong
+  if (!elementCount || Object.keys(elementCount).length === 0) {
+    elementCount = { 
+      Api: 25, Air: 20, Tanah: 20, Kayu: 15, Logam: 10, Udara: 10 
+    };
+  }
+  
+  // Warna elemen
+  const colors = {
+    'Api': '#FF6B6B',
+    'Air': '#4ECDC4',
+    'Tanah': '#C7B198',
+    'Kayu': '#96C93D',
+    'Logam': '#9B59B6',
+    'Udara': '#BDC3C7'
+  };
+  
+  const labels = Object.keys(elementCount);
+  const data = Object.values(elementCount);
+  const backgroundColors = labels.map(label => colors[label] || '#D4AF37');
+  const total = data.reduce((sum, val) => sum + val, 0);
+  
+  pieChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: data,
+        backgroundColor: backgroundColors,
+        borderColor: '#0A0A0C',
+        borderWidth: 2,
+        hoverOffset: 8
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      cutout: '55%',
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { 
+            color: '#C0C0D0',
+            font: { size: 11 },
+            padding: 15
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: (context) => {
+              const label = context.label || '';
+              const value = context.raw || 0;
+              const percentage = ((value / total) * 100).toFixed(1);
+              return `${label}: ${value} (${percentage}%)`;
+            }
+          }
+        }
+      }
+    }
+  });
+  
+  console.log('✅ Pie chart rendered dengan elementCount:', elementCount);
+}
 
 // ========== DISPLAY PREMIUM CONTENT (F.2 - RAMALAN LENGKAP) ==========
 function displayPremiumContent() {
@@ -1568,9 +1645,14 @@ function displayPremiumContent() {
   setTimeout(() => {
   const fullName = elements.fullName?.value?.trim() || elements.userName?.value?.trim() || '';
   
-  // Render charts dengan data dari nama dan hasil Manuritas
-  renderRadarChart(fullName, currentManuritasResult);
-  renderPieChart(fullName, currentManuritasResult);
+  // Gunakan elementCount yang sudah dihitung
+  const elementCount = elementCountForDisplay || calculateElementCountFromName(fullName) || { Api: 25, Air: 20, Tanah: 20, Kayu: 15, Logam: 10, Udara: 10 };
+  
+  // Render Radar Chart dengan elemenDominan yang sudah dikoreksi
+  renderRadarChart(fullName, currentManuritasResult, elemenDominan);
+  
+  // Render Pie Chart dengan elementCount yang sudah dihitung
+  renderPieChartWithElementCount(elementCount);
 }, 200);
   
   // Tampilkan testimonial prompt setelah 3 detik
