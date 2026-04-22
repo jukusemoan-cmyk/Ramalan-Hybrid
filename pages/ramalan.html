@@ -1063,21 +1063,37 @@ function generateRamalanSummary(user, p, hariBaik, hariBuruk) {
 }
 
 // ========== RENDER CHARTS ==========
-function renderRadarChart(elemenDominan) {
-  const ctx = document.getElementById('radarChart')?.getContext('2d');
-  if (!ctx) return;
+function renderRadarChart(elemenDominan, manuritasResult) {
+  const canvas = document.getElementById('radarChart');
+  if (!canvas) return;
   
+  const ctx = canvas.getContext('2d');
   if (radarChart) radarChart.destroy();
   
-  const scores = { Api: 70, Air: 60, Tanah: 80, Kayu: 65, Logam: 55, Udara: 50 };
+  // Ambil data dari hasil Manuritas, atau fallback ke template
+  let scores;
+  if (manuritasResult?.petaEnergi?.radar) {
+    scores = manuritasResult.petaEnergi.radar;
+  } else {
+    // Fallback template
+    const templates = {
+      'Api': { Kepemimpinan: 85, Kreativitas: 75, Stabilitas: 50, Intuisi: 60, Komunikasi: 70, Spiritualitas: 65 },
+      'Air': { Kepemimpinan: 55, Kreativitas: 80, Stabilitas: 60, Intuisi: 90, Komunikasi: 70, Spiritualitas: 85 },
+      'Tanah': { Kepemimpinan: 65, Kreativitas: 55, Stabilitas: 90, Intuisi: 60, Komunikasi: 50, Spiritualitas: 70 },
+      'Kayu': { Kepemimpinan: 70, Kreativitas: 85, Stabilitas: 60, Intuisi: 65, Komunikasi: 75, Spiritualitas: 70 },
+      'Logam': { Kepemimpinan: 80, Kreativitas: 60, Stabilitas: 70, Intuisi: 55, Komunikasi: 65, Spiritualitas: 50 },
+      'Udara': { Kepemimpinan: 60, Kreativitas: 70, Stabilitas: 50, Intuisi: 75, Komunikasi: 90, Spiritualitas: 65 }
+    };
+    scores = templates[elemenDominan] || templates['Tanah'];
+  }
   
   radarChart = new Chart(ctx, {
     type: 'radar',
     data: {
       labels: ['Kepemimpinan', 'Kreativitas', 'Stabilitas', 'Intuisi', 'Komunikasi', 'Spiritualitas'],
       datasets: [{
-        label: 'Profil Kepribadian',
-        data: [scores.Api, scores.Kayu, scores.Tanah, scores.Air, scores.Udara, scores.Logam],
+        label: `Profil ${elemenDominan}`,
+        data: Object.values(scores),
         backgroundColor: 'rgba(212, 175, 55, 0.2)',
         borderColor: '#D4AF37',
         borderWidth: 2,
@@ -1085,33 +1101,197 @@ function renderRadarChart(elemenDominan) {
       }]
     },
     options: {
-      scales: { r: { min: 0, max: 100, ticks: { stepSize: 20 } } },
+      scales: { r: { min: 0, max: 100 } },
       plugins: { legend: { display: false } }
     }
   });
 }
 
-function renderPieChart(elementCount) {
-  const ctx = document.getElementById('pieChart')?.getContext('2d');
+// ========== RENDER PIE CHART (DATA ASLI DARI MANURITAS) ==========
+function renderPieChart(manuritasResult) {
+  const canvas = document.getElementById('pieChart');
+  if (!canvas) {
+    console.warn('⚠️ Canvas pieChart tidak ditemukan');
+    return;
+  }
+  
+  const ctx = canvas.getContext('2d');
   if (!ctx) return;
   
+  // Hancurkan chart lama jika ada
   if (pieChart) pieChart.destroy();
   
-  const colors = ['#FF6B6B', '#4ECDC4', '#C7B198', '#96C93D', '#9B59B6', '#BDC3C7'];
+  // Ambil data elementCount dari hasil Manuritas
+  let elementCount = null;
+  
+  // Cek berbagai kemungkinan lokasi data
+  if (manuritasResult?.hanacaraka?.elementCount) {
+    elementCount = manuritasResult.hanacaraka.elementCount;
+  } else if (manuritasResult?.elementCount) {
+    elementCount = manuritasResult.elementCount;
+  } else if (currentManuritasResult?.hanacaraka?.elementCount) {
+    elementCount = currentManuritasResult.hanacaraka.elementCount;
+  }
+  
+  // Jika tidak ada data, hitung ulang dari nama user
+  if (!elementCount || Object.keys(elementCount).length === 0) {
+    const fullName = document.getElementById('fullName')?.value?.trim() || '';
+    if (fullName) {
+      elementCount = calculateElementCount(fullName);
+    }
+  }
+  
+  // Fallback jika tetap kosong
+  if (!elementCount || Object.keys(elementCount).length === 0) {
+    console.warn('⚠️ ElementCount kosong, pakai default');
+    elementCount = { 
+      Api: 25, 
+      Air: 20, 
+      Tanah: 20, 
+      Kayu: 15, 
+      Logam: 10, 
+      Udara: 10 
+    };
+  }
+  
+  // Warna untuk setiap elemen
+  const colors = {
+    'Api': '#FF6B6B',
+    'Air': '#4ECDC4',
+    'Tanah': '#C7B198',
+    'Kayu': '#96C93D',
+    'Logam': '#9B59B6',
+    'Udara': '#BDC3C7'
+  };
+  
+  const labels = Object.keys(elementCount);
+  const data = Object.values(elementCount);
+  const backgroundColors = labels.map(label => colors[label] || '#D4AF37');
+  
+  // Hitung total dan persentase untuk tooltip
+  const total = data.reduce((sum, val) => sum + val, 0);
   
   pieChart = new Chart(ctx, {
-    type: 'pie',
+    type: 'doughnut',
     data: {
-      labels: Object.keys(elementCount),
+      labels: labels,
       datasets: [{
-        data: Object.values(elementCount),
-        backgroundColor: colors.slice(0, Object.keys(elementCount).length)
+        data: data,
+        backgroundColor: backgroundColors,
+        borderColor: '#0A0A0C',
+        borderWidth: 2,
+        hoverOffset: 8
       }]
     },
     options: {
-      plugins: { legend: { position: 'bottom' } }
+      responsive: true,
+      maintainAspectRatio: true,
+      cutout: '50%',
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { 
+            color: '#C0C0D0',
+            font: { size: 11 },
+            padding: 15
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const label = context.label || '';
+              const value = context.raw || 0;
+              const percentage = ((value / total) * 100).toFixed(1);
+              return `${label}: ${value} (${percentage}%)`;
+            }
+          }
+        }
+      }
     }
   });
+  
+  console.log('✅ Pie chart rendered dengan data:', elementCount);
+}
+
+// ========== FUNGSI KALKULASI ELEMENT COUNT DARI NAMA ==========
+function calculateElementCount(fullName) {
+  if (!fullName) return null;
+  
+  // Mapping aksara ke elemen (Hanacaraka)
+  const aksaraToElement = {
+    // Api
+    'ha': 'Api', 'na': 'Api', 'ca': 'Api', 'ra': 'Api', 'ka': 'Api',
+    'da': 'Api', 'ta': 'Api', 'sa': 'Api', 'wa': 'Api', 'la': 'Api',
+    'pa': 'Api', 'dha': 'Api', 'ja': 'Api', 'ya': 'Api', 'nya': 'Api',
+    // Air
+    'ma': 'Air', 'ga': 'Air', 'ba': 'Air', 'tha': 'Air', 'nga': 'Air',
+    // Tanah
+    'a': 'Tanah', 'i': 'Tanah', 'u': 'Tanah', 'e': 'Tanah', 'o': 'Tanah',
+    // Kayu
+    'ma': 'Kayu', 'ga': 'Kayu', 'ba': 'Kayu',
+    // Logam
+    'pa': 'Logam', 'pha': 'Logam', 'bha': 'Logam',
+    // Udara
+    'ya': 'Udara', 'ra': 'Udara', 'la': 'Udara', 'wa': 'Udara'
+  };
+  
+  // Inisialisasi counter
+  const elementCount = {
+    'Api': 0,
+    'Air': 0,
+    'Tanah': 0,
+    'Kayu': 0,
+    'Logam': 0,
+    'Udara': 0
+  };
+  
+  // Konversi nama ke lowercase dan split per karakter
+  const name = fullName.toLowerCase().replace(/[^a-z]/g, '');
+  
+  // Hitung per 2 karakter (suku kata)
+  for (let i = 0; i < name.length; i++) {
+    let syllable = name[i];
+    if (i + 1 < name.length) {
+      const twoChars = name[i] + name[i+1];
+      if (aksaraToElement[twoChars]) {
+        syllable = twoChars;
+        i++; // Skip next char
+      }
+    }
+    
+    // Cari elemen untuk suku kata ini
+    let found = false;
+    for (const [pattern, element] of Object.entries(aksaraToElement)) {
+      if (syllable.includes(pattern)) {
+        elementCount[element] += 10; // Bobot 10 per suku kata
+        found = true;
+        break;
+      }
+    }
+    
+    // Default ke Tanah jika tidak ditemukan
+    if (!found) {
+      elementCount['Tanah'] += 5;
+    }
+  }
+  
+  // Normalisasi agar total ~100
+  const total = Object.values(elementCount).reduce((sum, val) => sum + val, 0);
+  if (total > 0) {
+    for (const key in elementCount) {
+      elementCount[key] = Math.round((elementCount[key] / total) * 100);
+    }
+  }
+  
+  // Pastikan total tepat 100
+  const newTotal = Object.values(elementCount).reduce((sum, val) => sum + val, 0);
+  if (newTotal !== 100) {
+    const diff = 100 - newTotal;
+    const keys = Object.keys(elementCount);
+    elementCount[keys[0]] += diff;
+  }
+  
+  return elementCount;
 }
 
 // ========== DISPLAY PREMIUM CONTENT (F.2 - RAMALAN LENGKAP) ==========
@@ -1255,9 +1435,12 @@ function displayPremiumContent() {
   ramalanPremiumUnlocked = true;
   
   setTimeout(() => {
-    renderRadarChart(elemenDominan);
-    renderPieChart(currentManuritasResult?.hanacaraka?.elementCount || { Api: 30, Air: 20, Tanah: 50 });
-  }, 100);
+  // Radar Chart dengan data asli
+  renderRadarChart(elemenDominan, currentManuritasResult);
+  
+  // Pie Chart dengan data asli dari Manuritas
+  renderPieChart(currentManuritasResult);
+}, 200);
   
   // Tampilkan testimonial prompt setelah 3 detik
   showTestimonialPrompt();
