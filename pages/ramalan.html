@@ -1520,7 +1520,7 @@ function displayPremiumContent() {
   const wetonChar = wetonData?.weton_characters?.find(w => w.combo === user.weton.combo);
   
   const analisisNama = `Nama "${elements.userName.value.trim()}" memiliki arti khusus dalam vibrasi personal. Nama ini membawa energi ${user.weton.combo} yang selaras dengan wuku ${user.wuku.name}.`;
-  const analisisZodiac = `${user.zodiac} adalah zodiak berelemen ${getZodiacElement(user.zodiac)}. Karakter: ${getZodiacCharacter(user.zodiac)}.`;
+  const analisisZodiac = `${user.zodiac} adalah zodiak dengan karakter utama: ${getZodiacCharacter(user.zodiac)}.`;
   const analisisShio = `Shio ${user.shio} melambangkan ${getShioCharacter(user.shio)}. Energi tahun kelahiran membawa keberuntungan di bidang ${getShioLuckyField(user.shio)}.`;
   const analisisWeton = `Weton ${user.weton.combo} dengan Neptu ${user.weton.neptu}. ${wetonChar?.character || 'Memiliki wibawa dan keteguhan hati.'}`;
   const analisisWuku = `Wuku ${user.wuku.name} (${wukuData?.meaning || '-'}). ${wukuData?.character || 'Kreatif dan teliti.'}`;
