@@ -494,6 +494,16 @@
       setTimeout(() => handleReveal(), 500);
     }
   }
+
+  // Di dalam init() atau DOMContentLoaded
+function updateNavTokenDisplay() {
+  const balance = localStorage.getItem('tokenBalance') || '0';
+  const navToken = document.getElementById('navTokenDisplay');
+  if (navToken) navToken.textContent = balance;
+}
+
+// Panggil di init()
+updateNavTokenDisplay();
   
   // ========== TRAITS FUNCTIONS ==========
 function getTraitsForName(name, strengthScore, weton, wuku, filterType, limit = 2) {
