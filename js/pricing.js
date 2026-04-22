@@ -30,9 +30,9 @@ function selectPlan(plan) {
     currentSelectedPlan = plan;
     
     let planName = '', planPrice = '';
-    if (plan === 'coba') { planName = 'Paket Coba'; planPrice = 'Rp5.000'; }
-    else if (plan === 'hemat') { planName = 'Paket Hemat'; planPrice = 'Rp20.000'; }
-    else if (plan === 'sultan') { planName = 'Paket Sultan'; planPrice = 'Rp50.000'; }
+    if (plan === 'coba') { planName = 'Paket Coba'; planPrice = 'Rp50.000'; }
+    else if (plan === 'hemat') { planName = 'Paket Hemat'; planPrice = 'Rp100.000'; }
+    else if (plan === 'sultan') { planName = 'Paket Sultan'; planPrice = 'Rp200.000'; }
     
     document.getElementById('planName').textContent = planName;
     document.getElementById('planPrice').textContent = planPrice;
@@ -51,9 +51,9 @@ async function processPayment(method) {
     if (!currentSelectedPlan || isLoading) return;
     
     let amount = 0, tokens = 0, planName = '';
-    if (currentSelectedPlan === 'coba') { amount = 5000; tokens = 3; planName = 'Paket Coba'; }
-    else if (currentSelectedPlan === 'hemat') { amount = 20000; tokens = 15; planName = 'Paket Hemat'; }
-    else if (currentSelectedPlan === 'sultan') { amount = 50000; tokens = 50; planName = 'Paket Sultan'; }
+    if (currentSelectedPlan === 'coba') { amount = 50000; tokens = 30; planName = 'Paket Coba'; }
+    else if (currentSelectedPlan === 'hemat') { amount = 100000; tokens = 75; planName = 'Paket Hemat'; }
+    else if (currentSelectedPlan === 'sultan') { amount = 200000; tokens = 200; planName = 'Paket Sultan'; }
     
     const orderId = 'TOKEN-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7);
     
