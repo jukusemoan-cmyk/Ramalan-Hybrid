@@ -26,6 +26,43 @@
 /* ... sisa style.css seperti yang sudah ada ... */
 
 
+.navbar {
+  background: rgba(10, 10, 12, 0.98) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #D4AF37 !important;
+  padding: 14px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+}
+
+.navbar .logo a {
+  color: #D4AF37 !important;
+  text-decoration: none !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+}
+
+.nav-links {
+  display: flex !important;
+  gap: 20px !important;
+  align-items: center !important;
+}
+
+.nav-links a {
+  color: #E8E8E8 !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+}
+
+.nav-links a:hover {
+  color: #D4AF37 !important;
+}
+
 /* ---------- 1. RESET & BASE ---------- */
 * {
     margin: 0;
