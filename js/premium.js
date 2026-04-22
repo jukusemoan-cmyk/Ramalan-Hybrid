@@ -150,7 +150,7 @@ function handlePustakaUnlock(lockArea, contentArea) {
  * @returns {boolean} - true jika berhasil
  */
 function handleGeneratorPurchase(packageType, successCallback) {
-    const costs = { silver: 5, gold: 10, platinum: 20 };
+    const costs = { silver: 50, gold: 100, platinum: 200 };
     const tokenCost = costs[packageType] || 5;
     
     return handleTokenUnlock(tokenCost, successCallback, 'pricing.html', true);
