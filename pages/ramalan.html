@@ -2015,15 +2015,16 @@ async function downloadPremiumPDF() {
 }
 
 // ========== FUNGSI PEMBERSIH TEKS ==========
+// ========== FUNGSI PEMBERSIH TEKS (AMAN) ==========
 function cleanTextForPDF(text) {
+  if (!text) return '';
+  
+  // Hanya hapus karakter kontrol yang tidak terlihat
   return text
-    // Ganti karakter aneh
-    .replace(/[Ø<ß]/g, '')
-    .replace(/[Ø=Ü]/g, '')
-    .replace(/[Ø=Ýlþ]/g, '')
-    .replace(/[^\x20-\x7E\u00A0-\u00FF\u0100-\u017F\u0180-\u024F\u1E00-\u1EFF\u4E00-\u9FFF\u0600-\u06FF\u0E00-\u0E7F]/g, '')
-    // Ganti multiple newline
-    .replace(/\n\s*\n\s*\n/g, '\n\n')
+    // Hapus karakter kontrol (0x00-0x1F) kecuali newline (\n) dan tab (\t)
+    .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '')
+    // Ganti multiple newline menjadi maksimal 2
+    .replace(/\n\s*\n\s*\n+/g, '\n\n')
     // Trim
     .trim();
 }
