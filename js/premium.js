@@ -22,7 +22,8 @@ function checkPaymentSuccess() {
             localStorage.removeItem('pendingPlan');
             localStorage.removeItem('pendingOrderId');
             
-            showSuccessToast(` Selamat! ${pendingTokens} Token telah ditambahkan! Total: ${currentBalance} Token.`);
+            // Ganti pesan sukses penambahan token
+            showSuccessToast(`🎉 Terima kasih atas dukungannya! ${pendingTokens} Token telah ditambahkan.`);
             updateTokenDisplay();
             
             // Cek apakah ada pending action yang perlu dilanjutkan
