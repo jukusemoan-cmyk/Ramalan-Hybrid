@@ -369,3 +369,18 @@ a:hover { color: #F3E5AB; }
   max-width: 100%;
   height: auto !important;
 }
+
+.package-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(15, 15, 20, 0.8);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.package-silver { border-left: 4px solid #C0C0C0; }
+.package-gold { border-left: 4px solid #D4AF37; }
+.package-platinum { border-left: 4px solid #64C864; }
