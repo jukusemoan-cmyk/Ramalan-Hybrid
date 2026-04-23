@@ -1538,6 +1538,27 @@ function konversiPancawara(pancawara) {
   return map[pancawara] || pancawara;
 }
 
+  // ========== KONVERSI STRING HARI (BALI → INDONESIA) ==========
+function konversiStringHari(hariString) {
+  if (!hariString) return '';
+  
+  // Split berdasarkan koma
+  const parts = hariString.split(',').map(part => part.trim());
+  
+  const convertedParts = parts.map(part => {
+    // Split spasi untuk dapatkan Saptawara dan Pancawara
+    const words = part.split(' ');
+    if (words.length >= 2) {
+      const saptawara = words[0];
+      const pancawara = words[1];
+      return `${konversiHari(saptawara)} ${konversiPancawara(pancawara)}`;
+    }
+    return part;
+  });
+  
+  return convertedParts.join(', ');
+}
+  
 // ========== GENERATE INTERPRETASI HARI BAIK ==========
 function generateHariBaikInterpretasi(weton, hariBaikString, hariBurukString) {
   const saptawara = weton.saptawara;
@@ -1679,8 +1700,12 @@ function displayPremiumContent() {
   const analisisWeton = `Weton ${user.weton.combo} dengan Neptu ${user.weton.neptu}. ${wetonChar?.character || 'Memiliki wibawa dan keteguhan hati.'}`;
   const analisisWuku = `Wuku ${user.wuku.name} (${wukuData?.meaning || '-'}). ${wukuData?.character || 'Kreatif dan teliti.'}`;
   
-  const hariBaik = generateHariBaik(user.weton, user.wuku);
-  const hariBuruk = generateHariBuruk(user.weton, user.wuku);
+  const hariBaikBali = generateHariBaik(user.weton, user.wuku);
+  const hariBurukBali = generateHariBuruk(user.weton, user.wuku);
+  
+  // Konversi ke Bahasa Indonesia
+  const hariBaik = konversiStringHari(hariBaikBali);
+  const hariBuruk = konversiStringHari(hariBurukBali);
   
   const rangkumanNarasi = generateRamalanSummary(user, p, hariBaik, hariBuruk);
   
