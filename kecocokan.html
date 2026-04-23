@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Kecocokan Holistik • Oracle Nusantara</title>
+  <meta name="description" content="Cek kecocokan jodoh berdasarkan Weton, Neptu, Wuku, Shio, Zodiak, dan BaZi. Analisis holistik 4 dimensi untuk hubungan yang harmonis.">
+  <meta name="theme-color" content="#0A0A0C">
+  
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/ramalan.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --gold-light: #F3E5AB;
+      --bg-dark: #0A0A0C;
+      --text-muted: #A0A0B0;
+      --text-dim: #606070;
+      --love: #FF6B8A;
+      --success: #64C864;
+      --danger: #FF8A8A;
+      --warning: #FFB347;
+      --info: #4ECDC4;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      background: #0A0A0C;
+      background-image: 
+        radial-gradient(ellipse at 30% 15%, rgba(255,107,138,0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 50%, rgba(212,175,55,0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, rgba(100,200,100,0.03) 0%, transparent 50%);
+      font-family: 'Inter', sans-serif;
+      color: #E8E8E8;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .hidden { display: none !important; }
+
+    /* NAVBAR */
+    .navbar {
+      background: rgba(10,10,12,0.97) !important;
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid var(--gold) !important;
+      padding: 14px 24px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 9999 !important;
+    }
+    .navbar .logo a {
+      font-family: 'Cormorant Garamond', serif !important;
+      font-size: 1.5rem !important;
+      font-weight: 700 !important;
+      color: var(--gold) !important;
+      text-decoration: none !important;
+    }
+    .nav-links { display: flex !important; gap: 16px !important; align-items: center !important; flex-wrap: wrap !important; }
+    .nav-links a {
+      color: #E8E8E8 !important;
+      text-decoration: none !important;
+      font-size: 0.85rem !important;
+      font-weight: 400 !important;
+      transition: color 0.2s !important;
+    }
+    .nav-links a:hover { color: var(--gold) !important; }
+    .nav-links a.active { color: var(--gold) !important; font-weight: 700 !important; }
+    .btn-dukung-nav {
+      background: linear-gradient(135deg, #FF6B6B, #FFB8B8);
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: #0A0A0C !important;
+      font-weight: 600 !important;
+    }
+
+    /* HERO */
+    .mystic-header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+    .mystic-header .header-icon {
+      font-size: 4rem;
+      margin-bottom: 16px;
+      animation: float 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 30px rgba(255,107,138,0.3));
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .mystic-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: var(--gold-light);
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .mystic-header .subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      font-weight: 300;
+      max-width: 550px;
+      margin: 0 auto;
+    }
+    .header-divider {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; margin: 16px 0;
+      color: var(--gold); font-size: 0.7rem; opacity: 0.5;
+    }
+    .header-divider::before, .header-divider::after {
+      content: ''; width: 50px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    /* FORM */
+    .couple-form {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0;
+      margin-bottom: 32px;
+      align-items: start;
+    }
+    @media (max-width: 700px) {
+      .couple-form { grid-template-columns: 1fr; gap: 20px; }
+      .vs-badge { display: none; }
+    }
+
+    .person-card {
+      background: rgba(15,15,20,0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 24px;
+      padding: 32px 24px;
+      border: 1px solid rgba(212,175,55,0.12);
+      transition: all 0.3s;
+    }
+    .person-card:hover {
+      border-color: rgba(212,175,55,0.3);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+    }
+    .person-card.you { border-left: 4px solid var(--gold); }
+    .person-card.partner { border-left: 4px solid var(--love); }
+
+    .person-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(212,175,55,0.1);
+    }
+    .person-card.you h3 { color: var(--gold); }
+    .person-card.partner h3 { color: var(--love); }
+
+    .input-field { margin-bottom: 18px; }
+    .input-field:last-child { margin-bottom: 0; }
+    .input-field label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.75rem;
+    }
+    .input-field input, .input-field select {
+      width: 100%;
+      background: rgba(10,10,12,0.8);
+      border: 2px solid rgba(212,175,55,0.2);
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 1rem;
+      color: #E8E8E8;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s;
+    }
+    .input-field input:focus, .input-field select:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 20px rgba(212,175,55,0.1);
+    }
+    .input-field select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23D4AF37' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+    .input-hint {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* VS BADGE */
+    .vs-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+    }
+    .vs-circle {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, var(--gold), var(--love));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      box-shadow: 0 8px 30px rgba(212,175,55,0.4);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(212,175,55,0.5); }
+      70% { box-shadow: 0 0 0 20px rgba(212,175,55,0); }
+      100% { box-shadow: 0 0 0 0 rgba(212,175,55,0); }
+    }
+
+    /* BUTTONS */
+    .btn-primary {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, var(--gold), #C9A830);
+      border: none;
+      color: #0A0A0C;
+      padding: 18px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.4s;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 30px rgba(212,175,55,0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(212,175,55,0.5);
+    }
+
+    /* RESULT SECTION */
+    .result-header {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .result-names {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--gold-light);
+      letter-spacing: 1px;
+    }
+    .result-names .heart { color: var(--love); margin: 0 12px; animation: heartbeat 1.5s infinite; }
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(1); }
+    }
+
+    /* NEPTU SUMMARY */
+    .neptu-summary {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 28px 0;
+      background: rgba(15,15,20,0.7);
+      border-radius: 24px;
+      padding: 28px;
+      border: 1px solid rgba(212,175,55,0.15);
+    }
+    .neptu-box {
+      text-align: center;
+      min-width: 100px;
+      padding: 16px;
+    }
+    .neptu-box .n-label { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .neptu-box .n-name { font-weight: 600; color: var(--gold-light); margin-bottom: 8px; font-size: 0.9rem; }
+    .neptu-box .n-weton { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+    .neptu-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1;
+    }
+    .neptu-operator {
+      font-size: 2rem;
+      color: var(--gold-light);
+      font-weight: 300;
+    }
+    .neptu-result {
+      background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05));
+      border-radius: 20px;
+      padding: 16px 24px;
+      border: 1px solid rgba(212,175,55,0.3);
+    }
+
+    /* CATEGORY BADGE */
+    .category-badge {
+      background: linear-gradient(145deg, rgba(20,20,25,0.95), rgba(10,10,12,0.95));
+      border: 2px solid var(--gold);
+      border-radius: 24px;
+      padding: 32px;
+      text-align: center;
+      margin: 24px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .category-badge::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      transform: translateX(-50%);
+      width: 100px; height: 3px;
+      background: var(--gold);
+      border-radius: 0 0 3px 3px;
+    }
+    .category-name {
+      font-size: 2.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+    .category-icon {
+      font-size: 3rem;
+      margin-bottom: 8px;
+    }
+
+    /* HOLISTIC SCORE */
+    .holistic-score-box {
+      background: linear-gradient(135deg, rgba(255,107,138,0.1), rgba(212,175,55,0.08));
+      border: 2px solid var(--love);
+      border-radius: 24px;
+      padding: 36px;
+      text-align: center;
+      margin: 24px 0;
+    }
+    .holistic-number {
+      font-size: 5rem;
+      font-weight: 700;
+      font-family: 'Cormorant Garamond', serif;
+      background: linear-gradient(135deg, var(--gold), var(--love));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+
+    /* ACCORDION */
+    .analysis-accordion { margin: 32px 0; }
+    .accordion-item {
+      background: rgba(15,15,20,0.7);
+      border-radius: 20px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(212,175,55,0.12);
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+    .accordion-item:hover {
+      border-color: rgba(212,175,55,0.25);
+    }
+    .accordion-header {
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+    .accordion-header:hover { background: rgba(20,20,25,0.6); }
+    .accordion-header .acc-score {
+      background: rgba(212,175,55,0.15);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: var(--gold);
+    }
+    .accordion-header i { transition: transform 0.3s; color: var(--gold); }
+    .accordion-header.active i { transform: rotate(180deg); }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .accordion-content.active { max-height: 2000px; padding: 0 24px 24px; }
+
+    /* ANALYSIS LABELS */
+    .analysis-section {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed rgba(212,175,55,0.1);
+    }
+    .analysis-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .analysis-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .label-strength { background: rgba(100,200,100,0.15); color: var(--success); }
+    .label-challenge { background: rgba(255,138,138,0.15); color: var(--danger); }
+    .label-taboo { background: rgba(255,179,71,0.15); color: var(--warning); }
+    .label-solution { background: rgba(78,205,196,0.15); color: var(--info); }
+
+    /* SHARE */
+    .share-section {
+      background: rgba(15,15,20,0.7);
+      border-radius: 24px;
+      padding: 32px;
+      margin: 32px 0;
+      text-align: center;
+      border: 1px solid rgba(212,175,55,0.15);
+    }
+    .share-input {
+      width: 100%;
+      max-width: 500px;
+      background: rgba(10,10,12,0.8);
+      border: 2px solid rgba(212,175,55,0.2);
+      border-radius: 50px;
+      padding: 14px 20px;
+      color: #E8E8E8;
+      margin: 16px auto;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    .share-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-share {
+      background: transparent;
+      border: 2px solid rgba(212,175,55,0.4);
+      color: var(--gold-light);
+      padding: 10px 24px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+      font-size: 0.9rem;
+    }
+    .btn-share:hover {
+      background: var(--gold);
+      color: #0A0A0C;
+      border-color: var(--gold);
+    }
+
+    /* TOAST */
+    .toast-msg {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: #0A0A0C;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      z-index: 9999;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      animation: slideUp 0.3s ease;
+    }
+    @keyframes slideUp {
+      from { bottom: -60px; opacity: 0; }
+      to { bottom: 32px; opacity: 1; }
+    }
+
+    /* CROSS-SELL */
+    .cross-sell {
+      background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));
+      border-radius: 24px;
+      padding: 32px;
+      margin-top: 40px;
+      text-align: center;
+      border: 1px solid rgba(212,175,55,0.2);
+    }
+    .cross-sell h4 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--gold-light);
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+    .cross-sell .btn-link {
+      display: inline-block;
+      background: transparent;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      margin-top: 12px;
+    }
+    .cross-sell .btn-link:hover { background: var(--gold); color: #0A0A0C; }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .neptu-summary { flex-direction: column; }
+      .holistic-number { font-size: 3.5rem; }
+      .category-name { font-size: 1.8rem; }
+      .result-names { font-size: 1.4rem; }
+    }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YXEVSNQ04"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YXEVSNQ04');
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
+    <div class="nav-links">
+      <a href="../index.html">Beranda</a>
+      <a href="ramalan.html">Ramalan</a>
+      <a href="manuritas.html">Manuritas</a>
+      <a href="kecocokan.html" class="active">Kecocokan</a>
+      <a href="bazi.html">BaZi</a>
+      <a href="dewasa-ayu.html">Dewasa Ayu</a>
+      <a href="pustaka.html">Pustaka</a>
+      <a href="kalender.html">Kalender</a>
+      <a href="dukung.html" class="btn-dukung-nav"><i class="fas fa-heart"></i> Dukung</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="mystic-header">
+    <div class="header-icon">💑</div>
+    <h1>Kecocokan Holistik</h1>
+    <p class="subtitle">Analisis 4 dimensi — Weton, Shio, Zodiak, dan BaZi — untuk mengungkap harmoni hubunganmu</p>
+    <div class="header-divider"><span>✦</span><span>✦</span><span>✦</span></div>
+  </div>
+
+  <div class="oracle-card">
+    <!-- FORM -->
+    <div class="couple-form">
+      <div class="person-card you">
+        <h3><i class="fas fa-user"></i> Diri Anda</h3>
+        <div class="input-field">
+          <label>Nama</label>
+          <input type="text" id="name1" placeholder="Nama Anda" value="">
+        </div>
+        <div class="input-field">
+          <label>Tanggal Lahir</label>
+          <input type="date" id="birth1" value="">
+        </div>
+        <div class="input-field">
+          <label>Jam Lahir (BaZi)</label>
+          <select id="hour1"><option value="12">12:00 (Default)</option><option value="0">00:00</option><option value="1">01:00</option><option value="3">03:00</option><option value="5">05:00</option><option value="7">07:00</option><option value="9">09:00</option><option value="11">11:00</option><option value="13">13:00</option><option value="15">15:00</option><option value="17">17:00</option><option value="19">19:00</option><option value="21">21:00</option><option value="23">23:00</option></select>
+          <span class="input-hint">Untuk analisis BaZi yang akurat</span>
+        </div>
+      </div>
+      
+      <div class="vs-badge">
+        <div class="vs-circle">❤️</div>
+      </div>
+      
+      <div class="person-card partner">
+        <h3><i class="fas fa-heart"></i> Pasangan</h3>
+        <div class="input-field">
+          <label>Nama</label>
+          <input type="text" id="name2" placeholder="Nama Pasangan" value="">
+        </div>
+        <div class="input-field">
+          <label>Tanggal Lahir</label>
+          <input type="date" id="birth2" value="">
+        </div>
+        <div class="input-field">
+          <label>Jam Lahir (BaZi)</label>
+          <select id="hour2"><option value="12">12:00 (Default)</option><option value="0">00:00</option><option value="1">01:00</option><option value="3">03:00</option><option value="5">05:00</option><option value="7">07:00</option><option value="9">09:00</option><option value="11">11:00</option><option value="13">13:00</option><option value="15">15:00</option><option value="17">17:00</option><option value="19">19:00</option><option value="21">21:00</option><option value="23">23:00</option></select>
+          <span class="input-hint">Untuk analisis BaZi yang akurat</span>
+        </div>
+      </div>
+    </div>
+    
+    <button class="btn-primary" id="checkBtn"><i class="fas fa-calculator"></i> HITUNG KECOCOKAN</button>
+
+    <!-- RESULT SECTION -->
+    <div id="resultSection" class="hidden" style="margin-top: 40px; animation: fadeInUp 0.6s ease;">
+      
+      <!-- NAMES -->
+      <div class="result-header">
+        <div class="result-names">
+          <span id="name1Display">...</span>
+          <span class="heart">❤️</span>
+          <span id="name2Display">...</span>
+        </div>
+      </div>
+
+      <!-- NEPTU -->
+      <div class="neptu-summary">
+        <div class="neptu-box">
+          <div class="n-label">Neptu</div>
+          <div class="n-name" id="name1Small"></div>
+          <div class="neptu-number" id="neptu1">0</div>
+          <div class="n-weton" id="weton1Display">-</div>
+        </div>
+        <div class="neptu-operator">+</div>
+        <div class="neptu-box">
+          <div class="n-label">Neptu</div>
+          <div class="n-name" id="name2Small"></div>
+          <div class="neptu-number" id="neptu2">0</div>
+          <div class="n-weton" id="weton2Display">-</div>
+        </div>
+        <div class="neptu-operator">=</div>
+        <div class="neptu-box neptu-result">
+          <div class="n-label">Total Neptu</div>
+          <div class="neptu-number" id="totalNeptu">0</div>
+        </div>
+      </div>
+
+      <!-- CATEGORY -->
+      <div class="category-badge" id="categoryDisplay">
+        <div class="category-icon" id="categoryIcon">💫</div>
+        <div class="category-name" id="categoryName">-</div>
+        <div id="categoryDesc" style="margin-top:12px; color:var(--text-muted); font-size:1rem;">-</div>
+      </div>
+
+      <!-- HOLISTIC SCORE -->
+      <div class="holistic-score-box hidden" id="holisticScoreBox">
+        <div style="color:var(--text-muted); margin-bottom:8px; text-transform:uppercase; letter-spacing:3px; font-size:0.8rem;">Skor Kecocokan Holistik</div>
+        <div class="holistic-number" id="holisticScore">0%</div>
+        <div id="holisticVerdict" style="color:var(--gold-light); margin-top:12px; font-size:1.1rem;">-</div>
+      </div>
+
+      <!-- SHARE -->
+      <div class="share-section">
+        <p><i class="fas fa-share-alt"></i> <strong>Bagikan hasil ini:</strong></p>
+        <input type="text" id="shareLink" class="share-input" readonly>
+        <div class="share-buttons">
+          <button class="btn-share" id="copyLinkBtn"><i class="fas fa-copy"></i> Salin</button>
+          <button class="btn-share" id="shareWA"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+          <button class="btn-share" id="shareTelegram"><i class="fab fa-telegram-plane"></i> Telegram</button>
+        </div>
+      </div>
+
+      <!-- UNLOCK -->
+      <div style="text-align: center; margin: 28px 0;">
+        <div class="token-badge"><i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span></div>
+      </div>
+      <div style="text-align: center; margin-top: 16px;">
+        <button class="btn-premium pulse-gold" id="premiumBtn">
+          <i class="fas fa-unlock-alt"></i> BUKA ANALISIS 4 DIMENSI — GRATIS!
+        </button>
+        <p style="margin-top: 12px; font-size: 0.8rem; color: var(--text-dim);">
+          <i class="fas fa-gift"></i> Klik untuk membuka analisis lengkap tanpa biaya
+        </p>
+      </div>
+
+      <!-- PREMIUM CONTENT -->
+      <div id="premiumBox" class="premium-message hidden" style="animation: fadeInUp 0.6s ease;"></div>
+    </div>
+  </div>
+
+  <!-- CROSS-SELL -->
+  <div class="cross-sell">
+    <h4>🧬 Ingin Analisis Nama Kalian?</h4>
+    <p>Coba <strong>Manuritas</strong> — analisis getaran nama dengan Hanacaraka untuk melihat keselarasan nama pasangan.</p>
+    <a href="manuritas.html" class="btn-link"><i class="fas fa-dna"></i> Coba Manuritas Gratis</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© 2026 Oracle Nusantara. Seluruh konten untuk hiburan & refleksi diri.</div>
+    <div>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="privacy.html">Privasi</a>
+      <a href="dukung.html">Dukung kami</a>
+      <a href="mailto:halo@oracle-nusantara.com">Kontak</a>
+    </div>
+  </footer>
+</div>
+
+<div id="toast" class="toast-msg hidden">✅ Tautan disalin!</div>
+
+<script src="../js/calculator.js"></script>
+<script src="../js/data-loader.js"></script>
+<script src="../js/ui-controller.js"></script>
+<script src="../js/premium.js"></script>
+
+<script>
+'use strict';
+
+let calendarData = null, wetonData = null, shioData = null, zodiacData = null, baziData = null;
+let currentResult = null;
+
+const elements = {};
+
+function initDOMElements() {
+  const ids = ['name1','birth1','hour1','name2','birth2','hour2','checkBtn','resultSection',
+    'name1Display','name2Display','name1Small','name2Small','neptu1','neptu2','weton1Display',
+    'weton2Display','totalNeptu','categoryName','categoryDesc','categoryIcon','categoryDisplay',
+    'shareLink','premiumBox','holisticScoreBox','holisticScore','holisticVerdict'];
+  ids.forEach(id => { elements[id] = document.getElementById(id); });
+}
+
+function showErrorToast(msg) { alert('❌ ' + msg); }
+function showSuccessToast(msg) { alert('✅ ' + msg); }
+
+async function updateTokenDisplay() {
+  const balance = localStorage.getItem('tokenBalance') || '0';
+  const span = document.getElementById('tokenBalanceSpan');
+  if (span) span.textContent = balance;
+}
+
+async function fetchJSON(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return await res.json();
+}
+
+async function loadAllCompatibilityData() {
+  try {
+    [shioData, zodiacData, baziData] = await Promise.all([
+      fetchJSON('../data/shio-compatibility.json'),
+      fetchJSON('../data/zodiac-compatibility.json'),
+      fetchJSON('../data/bazi-compatibility.json')
+    ]);
+  } catch(e) { console.error('Gagal load kompatibilitas:', e); }
+}
+
+function analyzeWuku(w1, w2) {
+  const wu1 = calendarData?.wuku?.find(w => w.name === w1);
+  const wu2 = calendarData?.wuku?.find(w => w.name === w2);
+  if (!wu1 || !wu2) return { level: 'Netral', desc: 'Data tidak ditemukan.', score: 50 };
+  const same = wu1.element === wu2.element;
+  const compatible = (wu1.element === 'Api' && wu2.element === 'Udara') || 
+    (wu1.element === 'Air' && wu2.element === 'Tanah') ||
+    (wu1.element === 'Tanah' && wu2.element === 'Air') ||
+    (wu1.element === 'Udara' && wu2.element === 'Api');
+  if (same) return { level: 'Sangat Baik', desc: `Elemen ${wu1.element} yang sama menciptakan pemahaman mendalam.`, score: 90 };
+  if (compatible) return { level: 'Baik', desc: 'Elemen saling melengkapi dengan harmonis.', score: 80 };
+  const diff = Math.abs((wu1.urip_wuku || 5) - (wu2.urip_wuku || 5));
+  if (diff % 3 === 0) return { level: 'Baik', desc: 'Selisih Urip Wuku selaras.', score: 75 };
+  return { level: 'Cukup', desc: 'Karakter wuku berbeda, perlu penyesuaian.', score: 60 };
+}
+
+function findCompatibility(data, key1, key2, type) {
+  let pair;
+  if (type === 'shio') pair = data?.shio_pairs?.find(p => p.shio1 === key1 && p.shio2 === key2);
+  else if (type === 'zodiac') pair = data?.zodiac_pairs?.find(p => p.zodiac1 === key1 && p.zodiac2 === key2);
+  else if (type === 'bazi') pair = data?.daymaster_pairs?.find(p => p.dm1 === key1 && p.dm2 === key2);
+  return pair || { compatibility: 'Netral', score: 50, strength: '-', challenge: '-', taboo: '-', solution: '-' };
+}
+
+async function calculateKecocokan(skipScroll = false) {
+  if (!calendarData || !wetonData) { showErrorToast('Data masih dimuat.'); return; }
+  
+  const name1 = elements.name1.value.trim() || 'Anda';
+  const name2 = elements.name2.value.trim() || 'Pasangan';
+  const birth1 = elements.birth1.value, birth2 = elements.birth2.value;
+  if (!birth1 || !birth2) { showErrorToast('Lengkapi tanggal lahir keduanya.'); return; }
+  
+  const d1 = new Date(birth1), d2 = new Date(birth2);
+  const weton1 = getWeton(d1), weton2 = getWeton(d2);
+  const neptu1 = calculateNeptu(weton1.saptawara, weton1.pancawara, calendarData.saptawara, calendarData.pancawara);
+  const neptu2 = calculateNeptu(weton2.saptawara, weton2.pancawara, calendarData.saptawara, calendarData.pancawara);
+  const total = neptu1 + neptu2;
+  const wuku1 = getWuku(d1).name, wuku2 = getWuku(d2).name;
+  const shio1 = getShio(d1.getFullYear()), shio2 = getShio(d2.getFullYear());
+  const zodiac1 = getZodiac(d1.getMonth()+1, d1.getDate()), zodiac2 = getZodiac(d2.getMonth()+1, d2.getDate());
+  const hour1 = parseInt(elements.hour1.value) || 12, hour2 = parseInt(elements.hour2.value) || 12;
+  const bazi1 = analyzeBaZiChart(d1, hour1), bazi2 = analyzeBaZiChart(d2, hour2);
+  const dm1 = bazi1.dayMaster.name, dm2 = bazi2.dayMaster.name;
+  
+  elements.name1Display.textContent = name1; elements.name2Display.textContent = name2;
+  elements.name1Small.textContent = name1; elements.name2Small.textContent = name2;
+  elements.neptu1.textContent = neptu1; elements.neptu2.textContent = neptu2;
+  elements.weton1Display.textContent = `${weton1.combo} (${wuku1})`;
+  elements.weton2Display.textContent = `${weton2.combo} (${wuku2})`;
+  elements.totalNeptu.textContent = total;
+  
+  const kategori = wetonData?.kecocokan_jodoh?.find(k => total >= k.min_neptu && total <= k.max_neptu);
+  if (kategori) {
+    elements.categoryName.textContent = `${kategori.category} (${kategori.status})`;
+    elements.categoryDesc.textContent = kategori.description;
+    const icons = { 'Sangat Baik': '🌟', 'Baik': '✨', 'Cukup': '💫', 'Kurang': '🌥️' };
+    elements.categoryIcon.textContent = icons[kategori.status] || '💫';
+  }
+  
+  const wukuAnalysis = analyzeWuku(wuku1, wuku2);
+  const shioComp = findCompatibility(shioData, shio1, shio2, 'shio');
+  const zodiacComp = findCompatibility(zodiacData, zodiac1, zodiac2, 'zodiac');
+  const baziComp = findCompatibility(baziData, dm1, dm2, 'bazi');
+  
+  const holistic = Math.round((wukuAnalysis.score + shioComp.score + zodiacComp.score + baziComp.score) / 4);
+  let verdict = '';
+  if (holistic >= 80) verdict = '🌟 Sangat Cocok — Harmonis dan saling mendukung dalam segala aspek.';
+  else if (holistic >= 65) verdict = '✨ Cocok — Hubungan baik dengan beberapa area yang bisa dikembangkan.';
+  else if (holistic >= 50) verdict = '💫 Cukup Cocok — Perlu usaha ekstra untuk saling memahami dan bertumbuh.';
+  else verdict = '🌥️ Kurang Cocok secara perhitungan — Namun cinta sejati melampaui angka.';
+  
+  elements.holisticScore.textContent = holistic + '%';
+  elements.holisticVerdict.textContent = verdict;
+  elements.holisticScoreBox.classList.remove('hidden');
+  
+  currentResult = { name1, name2, birth1, birth2, hour1, hour2,
+    weton1: weton1.combo, neptu1, wuku1, shio1, zodiac1, dm1, bazi1,
+    weton2: weton2.combo, neptu2, wuku2, shio2, zodiac2, dm2, bazi2,
+    total, kategori, wukuAnalysis, shioComp, zodiacComp, baziComp, holistic, verdict };
+  
+  const url = new URL(window.location.href);
+  url.searchParams.set('n1', name1); url.searchParams.set('b1', birth1); url.searchParams.set('h1', hour1);
+  url.searchParams.set('n2', name2); url.searchParams.set('b2', birth2); url.searchParams.set('h2', hour2);
+  elements.shareLink.value = url.toString();
+  
+  elements.resultSection.classList.remove('hidden');
+  elements.premiumBox.classList.add('hidden');
+  if (!skipScroll) elements.resultSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+function displayPremiumContent() {
+  if (!currentResult) { showErrorToast('Lakukan perhitungan dulu.'); return; }
+  const r = currentResult;
+  
+  const html = `
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:24px;">
+      <h3 style="color:var(--gold-light); margin:0;"><i class="fas fa-crown" style="color:var(--gold);"></i> Analisis Holistik 4 Dimensi</h3>
+      <button class="btn-pdf" onclick="downloadAsPDF()"><i class="fas fa-download"></i> Unduh PDF</button>
+    </div>
+    
+    <div class="analysis-accordion">
+      ${renderAccordionItem('📿 Wariga Bali (Weton & Wuku)', r.wukuAnalysis.score, r.wukuAnalysis.level, r.wukuAnalysis.desc, `${r.wuku1} & ${r.wuku2}`, null, null, null, null)}
+      ${renderAccordionItem('🐉 Shio Tiongkok', r.shioComp.score, r.shioComp.compatibility, `${r.shio1} & ${r.shio2}`, null, r.shioComp.strength, r.shioComp.challenge, r.shioComp.taboo, r.shioComp.solution)}
+      ${renderAccordionItem('☀️ Zodiak Barat', r.zodiacComp.score, r.zodiacComp.compatibility, `${r.zodiac1} & ${r.zodiac2}`, null, r.zodiacComp.strength, r.zodiacComp.challenge, r.zodiacComp.taboo, r.zodiacComp.solution)}
+      ${renderAccordionItem('🎋 BaZi (Day Master)', r.baziComp.score, r.baziComp.compatibility, `${r.dm1} & ${r.dm2}`, null, r.baziComp.strength, r.baziComp.challenge, r.baziComp.taboo, r.baziComp.solution)}
+    </div>
+    
+    <div style="background:rgba(15,15,20,0.8); border-radius:20px; padding:28px; margin-top:24px; border:1px solid rgba(212,175,55,0.15);">
+      <h4 style="color:var(--gold-light); margin-bottom:16px; font-family:'Cormorant Garamond',serif; font-size:1.3rem;">
+        <i class="fas fa-star" style="color:var(--gold);"></i> Kesimpulan & Saran Spiritual
+      </h4>
+      <p style="line-height:1.8; margin-bottom:16px; color:var(--text-muted);">${generateConclusion(r)}</p>
+      <p style="line-height:1.8; font-style:italic; color:var(--text-muted);">
+        💡 <strong style="color:var(--gold-light);">Saran Spiritual:</strong> 
+        Lakukan <em>melukat</em> atau <em>mabyakala</em> bersama setiap 6 bulan untuk membersihkan energi negatif dan memperkuat ikatan batin. Ritual ini telah dilakukan leluhur Bali selama berabad-abad.
+      </p>
+    </div>
+  `;
+  
+  elements.premiumBox.innerHTML = html;
+  elements.premiumBox.classList.remove('hidden');
+  
+  document.querySelectorAll('.accordion-header').forEach(h => {
+    h.addEventListener('click', function() {
+      this.classList.toggle('active');
+      this.nextElementSibling.classList.toggle('active');
+    });
+  });
+  
+  setTimeout(() => elements.premiumBox.scrollIntoView({ behavior: 'smooth' }), 200);
+  showSuccessToast('✨ Analisis 4 dimensi dibuka!');
+}
+
+function renderAccordionItem(title, score, comp, desc, subtitle, strength, challenge, taboo, solution) {
+  const strengthN = strength ? expandNarrative(strength, 'strength', subtitle) : '';
+  const challengeN = challenge ? expandNarrative(challenge, 'challenge', subtitle) : '';
+  const tabooN = taboo ? expandNarrative(taboo, 'taboo', subtitle) : '';
+  const solutionN = solution ? expandNarrative(solution, 'solution', subtitle) : '';
+  
+  return `
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span><strong>${title}</strong></span>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span class="acc-score">${score}% • ${comp}</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+      <div class="accordion-content">
+        ${desc || subtitle ? `<p style="margin-bottom:20px; color:var(--text-muted); font-style:italic;">✨ ${desc || subtitle}</p>` : ''}
+        ${strengthN ? `<div class="analysis-section"><span class="analysis-label label-strength"><i class="fas fa-check-circle"></i> KEKUATAN UTAMA</span><div style="line-height:1.8; text-align:justify; color:var(--text-muted);">${strengthN}</div></div>` : ''}
+        ${challengeN ? `<div class="analysis-section"><span class="analysis-label label-challenge"><i class="fas fa-exclamation-triangle"></i> TANTANGAN</span><div style="line-height:1.8; text-align:justify; color:var(--text-muted);">${challengeN}</div></div>` : ''}
+        ${tabooN ? `<div class="analysis-section"><span class="analysis-label label-taboo"><i class="fas fa-ban"></i> PANTANGAN</span><div style="line-height:1.8; text-align:justify; color:var(--text-muted);">${tabooN}</div></div>` : ''}
+        ${solutionN ? `<div class="analysis-section"><span class="analysis-label label-solution"><i class="fas fa-lightbulb"></i> SOLUSI & REKOMENDASI</span><div style="line-height:1.8; text-align:justify; color:var(--text-muted);">${solutionN}</div></div>` : ''}
+      </div>
+    </div>`;
+}
+
+function expandNarrative(baseText, type, subtitle) {
+  const additions = {
+    strength: ["Kombinasi ini menciptakan fondasi yang kokoh bagi hubungan jangka panjang.", "Energi ini saling mendukung dan memperkuat satu sama lain, menciptakan harmoni yang alami tanpa perlu dipaksakan."],
+    challenge: ["Namun, setiap hubungan memiliki dinamikanya sendiri. Tantangan ini bukanlah penghalang, melainkan kesempatan untuk tumbuh bersama dan saling memahami lebih dalam."],
+    taboo: ["Hindari situasi atau perkataan yang bisa memicu hal ini. Lebih baik mencegah daripada memperbaiki. Komunikasi yang bijak adalah kuncinya."],
+    solution: ["Kuncinya adalah komunikasi yang terbuka dan jujur. Bicarakan apa yang kalian rasakan tanpa saling menyalahkan. Dengarkan dengan hati, bukan hanya telinga."]
+  };
+  const seed = (subtitle || '').length + type.length;
+  const selected = additions[type].filter((_, i) => (seed + i) % 2 === 0).slice(0, 2);
+  let expanded = baseText;
+  if (!expanded.endsWith('.')) expanded += '.';
+  expanded += ' ' + selected.join(' ');
+  return expanded;
+}
+
+function generateConclusion(r) {
+  if (r.holistic >= 80) return `Dengan skor <strong>${r.holistic}%</strong>, pasangan ini berada dalam kategori <strong>"Sangat Cocok"</strong>. Harmoni hadir di hampir semua dimensi — weton, shio, zodiak, dan BaZi. Hubungan ini memiliki fondasi energetik yang kuat dan potensi jangka panjang yang cerah.`;
+  if (r.holistic >= 65) return `Dengan skor <strong>${r.holistic}%</strong>, pasangan ini berada dalam kategori <strong>"Cocok"</strong>. Ada area yang perlu perhatian, namun secara keseluruhan energi mendukung. Dengan komunikasi yang baik, hubungan ini bisa sangat harmonis.`;
+  if (r.holistic >= 50) return `Dengan skor <strong>${r.holistic}%</strong>, pasangan ini berada dalam kategori <strong>"Cukup Cocok"</strong>. Beberapa dimensi menunjukkan perbedaan yang perlu dijembatani dengan usaha ekstra. Namun, tantangan ini juga bisa menjadi perekat jika dihadapi bersama.`;
+  return `Dengan skor <strong>${r.holistic}%</strong>, pasangan ini secara perhitungan berada dalam kategori <strong>"Kurang Cocok"</strong>. Namun ingatlah — cinta sejati tidak selalu bisa diukur dengan angka. Banyak pasangan bahagia yang secara perhitungan "tidak cocok" namun membuktikan bahwa komitmen mengalahkan ramalan.`;
+}
+
+async function downloadAsPDF() {
+  const { jsPDF } = window.jspdf;
+  const pdf = new jsPDF('p', 'mm', 'a4');
+  const r = currentResult;
+  
+  pdf.setFontSize(22);
+  pdf.setTextColor(212, 175, 55);
+  pdf.text('Oracle Nusantara', 105, 20, { align: 'center' });
+  pdf.setFontSize(14);
+  pdf.setTextColor(0, 0, 0);
+  pdf.text(`Kecocokan ${r.name1} & ${r.name2}`, 105, 30, { align: 'center' });
+  pdf.line(20, 35, 190, 35);
+  
+  let yPos = 45;
+  pdf.setFontSize(10);
+  pdf.setTextColor(0, 0, 0);
+  
+  const content = document.getElementById('premiumBox');
+  const allText = content?.innerText || '';
+  const lines = pdf.splitTextToSize(allText, 170);
+  
+  for (let line of lines) {
+    if (yPos > 270) { pdf.addPage(); yPos = 20; }
+    pdf.text(line, 20, yPos);
+    yPos += 5;
+  }
+  
+  pdf.save(`Oracle-Kecocokan-${r.name1}-${r.name2}.pdf`);
+  showSuccessToast('📄 PDF berhasil diunduh!');
+}
+
+// ========== SHARE ==========
+function copyLink() {
+  const input = document.getElementById('shareLink');
+  input.select();
+  navigator.clipboard?.writeText(input.value).then(() => {
+    const toast = document.getElementById('toast');
+    toast.classList.remove('hidden');
+    setTimeout(() => toast.classList.add('hidden'), 2000);
+  });
+}
+function shareWA() {
+  window.open(`https://wa.me/?text=${encodeURIComponent('💑 Lihat kecocokan kami! ' + elements.shareLink.value)}`, '_blank');
+}
+function shareTelegram() {
+  window.open(`https://t.me/share/url?url=${encodeURIComponent(elements.shareLink.value)}`, '_blank');
+}
+
+// ========== HANDLERS ==========
+function handlePremiumUnlock() {
+  // GRATIS - langsung tampilkan
+  displayPremiumContent();
+}
+
+async function checkAutoFill() {
+  const p = new URLSearchParams(window.location.search);
+  if (p.has('n1')) { elements.name1.value = p.get('n1'); elements.birth1.value = p.get('b1'); elements.hour1.value = p.get('h1') || 12; }
+  if (p.has('n2')) { elements.name2.value = p.get('n2'); elements.birth1.value = p.get('b2'); elements.hour2.value = p.get('h2') || 12; }
+  if (p.has('n1') && p.has('n2')) setTimeout(() => calculateKecocokan(true), 500);
+}
+
+// ========== INIT ==========
+async function init() {
+  initDOMElements();
+  const today = new Date().toISOString().split('T')[0];
+  elements.birth1.value = today;
+  elements.birth2.value = today;
+  
+  try {
+    const data = await loadAllData();
+    calendarData = data.calendar;
+    wetonData = data.weton;
+    await loadAllCompatibilityData();
+    console.log('✅ Data kecocokan loaded');
+  } catch(e) { showErrorToast('Gagal memuat data.'); return; }
+  
+  updateTokenDisplay();
+  if (typeof checkPaymentSuccess === 'function') checkPaymentSuccess();
+  await checkAutoFill();
+  
+  elements.checkBtn.addEventListener('click', () => calculateKecocokan(false));
+  document.getElementById('premiumBtn').addEventListener('click', handlePremiumUnlock);
+  document.getElementById('copyLinkBtn').addEventListener('click', copyLink);
+  document.getElementById('shareWA').addEventListener('click', shareWA);
+  document.getElementById('shareTelegram').addEventListener('click', shareTelegram);
+  
+  console.log('✅ Kecocokan Holistik PREMIUM ready');
+}
+
+document.addEventListener('DOMContentLoaded', init);
+window.downloadAsPDF = downloadAsPDF;
+</script>
+</body>
+</html>
