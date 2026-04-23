@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>Beli Token • Oracle Nusantara</title>
-  <meta name="description" content="Beli token untuk membuka ramalan premium. Paket Coba 3 Token, Hemat 15 Token, Sultan 50 Token.">
+  <meta name="description" content="Beli token untuk membuka ramalan premium. Paket Coba 30 Token, Hemat 75 Token, Sultan 200 Token.">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -123,7 +123,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-9YXEVSNQ04');
 </script>
 </head>
@@ -159,7 +158,7 @@
       <div class="plan-token"><i class="fas fa-coins"></i> 30 Token</div>
       <div class="plan-desc">Cocok untuk coba-coba</div>
       <div class="feature-list">
-        <div class="feature-item"><i class="fas fa-check"></i> 3x Buka Ramalan Premium</div>
+        <div class="feature-item"><i class="fas fa-check"></i> 6x Buka Ramalan Premium</div>
         <div class="feature-item"><i class="fas fa-check"></i> Analisis 4 aspek mendalam</div>
         <div class="feature-item"><i class="fas fa-check"></i> Token tidak kadaluarsa</div>
       </div>
@@ -187,7 +186,7 @@
       <div class="plan-token"><i class="fas fa-coins"></i> 200 Token</div>
       <div class="plan-desc">Hemat 50% • Rp1.000/token</div>
       <div class="feature-list">
-        <div class="feature-item"><i class="fas fa-check"></i> 50x Buka Ramalan Premium</div>
+        <div class="feature-item"><i class="fas fa-check"></i> 40x Buka Ramalan Premium</div>
         <div class="feature-item"><i class="fas fa-check"></i> Analisis 4 aspek mendalam</div>
         <div class="feature-item"><i class="fas fa-check"></i> Token tidak kadaluarsa</div>
         <div class="feature-item"><i class="fas fa-check"></i> + Bonus 5 Token</div>
@@ -266,9 +265,9 @@ function selectPlan(plan) {
     currentSelectedPlan = plan;
     
     let displayText = '';
-    if (plan === 'coba') displayText = 'Paket Coba • 3 Token • Rp5.000';
-    else if (plan === 'hemat') displayText = 'Paket Hemat • 15 Token • Rp20.000';
-    else if (plan === 'sultan') displayText = 'Paket Sultan • 50 Token • Rp50.000';
+    if (plan === 'coba') displayText = 'Paket Coba • 30 Token • Rp50.000';
+    else if (plan === 'hemat') displayText = 'Paket Hemat • 75 Token • Rp100.000';
+    else if (plan === 'sultan') displayText = 'Paket Sultan • 200 Token • Rp200.000';
     
     document.getElementById('selectedPackageDisplay').textContent = displayText;
     renderPaymentMethods();
@@ -285,9 +284,9 @@ async function processPayment(method) {
     if (!currentSelectedPlan || isLoading) return;
     
     let amount = 0, tokens = 0, planName = '';
-    if (currentSelectedPlan === 'coba') { amount = 5000; tokens = 3; planName = 'Paket Coba'; }
-    else if (currentSelectedPlan === 'hemat') { amount = 20000; tokens = 15; planName = 'Paket Hemat'; }
-    else if (currentSelectedPlan === 'sultan') { amount = 50000; tokens = 50; planName = 'Paket Sultan'; }
+    if (currentSelectedPlan === 'coba') { amount = 50000; tokens = 30; planName = 'Paket Coba'; }
+    else if (currentSelectedPlan === 'hemat') { amount = 100000; tokens = 75; planName = 'Paket Hemat'; }
+    else if (currentSelectedPlan === 'sultan') { amount = 200000; tokens = 200; planName = 'Paket Sultan'; }
     
     const orderId = 'TOKEN-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7);
     
