@@ -2094,7 +2094,9 @@ function handleUnlockManuritas() {
   } else {
     // Langsung tampilkan Manuritas Premium
     displayManuritasPremium();
-    showSuccessToast(`✨ Analisis Manuritas Lengkap dibuka!`);
+    if (typeof showSuccessToast === 'function') {
+      showSuccessToast(`✨ Analisis Manuritas Lengkap dibuka!`);
+    }
   }
 }
     
@@ -2105,7 +2107,9 @@ function handleUnlockManuritas() {
   } else {
     // Langsung tampilkan Ramalan Premium
     displayPremiumContent();
-    showSuccessToast(`✨ Ramalan Lengkap dibuka!`);
+    if (typeof showSuccessToast === 'function') {
+      showSuccessToast(`✨ Ramalan Lengkap dibuka!`);
+    }
   }
 }
     
