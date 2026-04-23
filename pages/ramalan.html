@@ -2088,52 +2088,27 @@ function cleanTextForPDF(text) {
     }
     
     // ========== UNLOCK HANDLERS ==========
-    function handleUnlockManuritas() {
-      if (typeof handleManuritasUnlock === 'function') {
-        handleManuritasUnlock(displayManuritasPremium);
-      } else {
-        let tokenBalance = parseInt(localStorage.getItem('tokenBalance') || '0');
-        if (tokenBalance >= 3) {
-          tokenBalance -= 3;
-          localStorage.setItem('tokenBalance', tokenBalance);
-          displayManuritasPremium();
-          updateTokenDisplay();
-          showSuccessToast(`✅ 3 Token digunakan. Sisa ${tokenBalance} Token.`);
-        } else {
-          if (confirm(`Anda membutuhkan 3 Token. Token Anda: ${tokenBalance}. Ingin membeli token sekarang?`)) {
-            // Simpan state sebelum redirect
-            localStorage.setItem('pendingUserName', elements.userName.value);
-            localStorage.setItem('pendingBirthDate', elements.birthDate.value);
-            localStorage.setItem('pendingFullName', elements.fullName.value);
-            localStorage.setItem('pendingAutoReveal', 'true');
-            window.location.href = 'pricing.html';
-          }
-        }
-      }
-    }
+function handleUnlockManuritas() {
+  // ✅ GRATIS - Langsung tampilkan konten premium tanpa cek token
+  if (typeof handleManuritasUnlock === 'function') {
+    handleManuritasUnlock(displayManuritasPremium);
+  } else {
+    // Langsung tampilkan Manuritas Premium
+    displayManuritasPremium();
+    showSuccessToast(`✨ Analisis Manuritas Lengkap dibuka!`);
+  }
+}
     
     function handleUnlockRamalan() {
-      if (typeof handlePremiumUnlock === 'function') {
-        handlePremiumUnlock(displayPremiumContent);
-      } else {
-        let tokenBalance = parseInt(localStorage.getItem('tokenBalance') || '0');
-        if (tokenBalance >= 3) {
-          tokenBalance -= 3;
-          localStorage.setItem('tokenBalance', tokenBalance);
-          displayPremiumContent();
-          updateTokenDisplay();
-          showSuccessToast(`✅ 3 Token digunakan. Sisa ${tokenBalance} Token.`);
-        } else {
-          if (confirm(`Anda membutuhkan 3 Token. Token Anda: ${tokenBalance}. Ingin membeli token sekarang?`)) {
-            localStorage.setItem('pendingUserName', elements.userName.value);
-            localStorage.setItem('pendingBirthDate', elements.birthDate.value);
-            localStorage.setItem('pendingFullName', elements.fullName.value);
-            localStorage.setItem('pendingAutoReveal', 'true');
-            window.location.href = 'pricing.html';
-          }
-        }
-      }
-    }
+  // ✅ GRATIS - Langsung tampilkan konten premium tanpa cek token
+  if (typeof handlePremiumUnlock === 'function') {
+    handlePremiumUnlock(displayPremiumContent);
+  } else {
+    // Langsung tampilkan Ramalan Premium
+    displayPremiumContent();
+    showSuccessToast(`✨ Ramalan Lengkap dibuka!`);
+  }
+}
     
     // ========== GENERATOR RESULT (OVERRIDE) ==========
     const originalDisplayPurchased = window.displayPurchasedNameResultNew;
