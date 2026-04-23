@@ -260,28 +260,77 @@ function generateMultipleNameOptions(originalName, targetMin, targetMax, weton, 
   return validOptions.slice(0, maxOptions);
 }
 
-// ---------- LOAD OPSI NAMA (PREVIEW GRATIS - TIDAK POTONG TOKEN) ----------
-async function loadNameOptions(packageType) {
-  console.log(' loadNameOptions called with:', packageType);
+function loadNameOptions(packageType) {
+  console.log('🚀 Generator nama untuk:', packageType);
   
-  const config = PACKAGE_CONFIG[packageType];
-  if (!config) {
-    console.error(' Paket tidak valid:', packageType);
-    return;
+  // ✅ GRATIS - Tidak perlu cek token
+  
+  // Target kekuatan berdasarkan paket (tetap ada variasi)
+  const targetRanges = {
+    silver: { min: 60, max: 74 },
+    gold: { min: 75, max: 89 },
+    platinum: { min: 90, max: 100 }
+  };
+  
+  const range = targetRanges[packageType] || targetRanges.silver;
+  
+  const prefixes = ['Arjuna', 'Dewi', 'Bayu', 'Candra', 'Wira', 'Sinta', 'Rama', 'Lestari', 'Bima', 'Sekar', 'Agni', 'Tirta'];
+  const suffixes = ['Wicaksana', 'Samudra', 'Laksana', 'Prasetya', 'Wijaya', 'Kusuma', 'Nugraha', 'Sejati', 'Utama', 'Bawana', 'Santosa'];
+  
+  const options = [];
+  for (let i = 0; i < 3; i++) {
+    const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
+    const suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
+    const newName = `${prefix} ${suffix}`;
+    const strength = Math.floor(Math.random() * (range.max - range.min + 1)) + range.min;
+    options.push({ name: newName, strength });
   }
   
-  const originalName = document.getElementById('fullName')?.value.trim();
-  if (!originalName) {
-    showErrorToast('Masukkan nama lengkap terlebih dahulu.');
-    return;
-  }
-  console.log(' Nama lengkap:', originalName);
+  options.sort((a, b) => b.strength - a.strength);
   
-  if (!window.currentUserData) {
-    showErrorToast('Data belum lengkap. Silakan refresh halaman atau klik SINGKAP RAMALAN terlebih dahulu.');
-    return;
-  }
-  console.log(' currentUserData tersedia');
+  const container = document.getElementById('nameOptionsContainer');
+  if (!container) return;
+  
+  let html = `
+    <div style="margin-top: 24px;">
+      <h4 style="color: #D4AF37; margin-bottom: 16px;">
+        <i class="fas fa-magic"></i> Opsi Nama Selaras (${packageType.toUpperCase()})
+      </h4>
+      <p style="color: #A0A0B0; margin-bottom: 16px;">
+        <i class="fas fa-gift" style="color: #64C864;"></i> 
+        Nama-nama ini GRATIS untuk kamu! ❤️
+      </p>
+  `;
+  
+  options.forEach((opt) => {
+    const strengthColor = opt.strength >= 90 ? '#64C864' : opt.strength >= 75 ? '#D4AF37' : '#FF8A8A';
+    html += `
+      <div style="background: rgba(15,15,20,0.8); border-radius: 12px; padding: 16px; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; border: 1px solid rgba(212,175,55,0.2);">
+        <div>
+          <p style="font-size: 1.1rem; margin-bottom: 4px;"><strong>${opt.name}</strong></p>
+          <p style="color: ${strengthColor};">Kekuatan: ${opt.strength}%</p>
+        </div>
+        <button class="btn-outline-gold" onclick="activatePurchasedName('${opt.name}', ${opt.strength}, '${packageType}')" style="padding: 8px 16px;">
+          Aktifkan <i class="fas fa-check"></i>
+        </button>
+      </div>
+    `;
+  });
+  
+  html += `
+      <div style="margin-top: 16px; padding: 12px; background: rgba(100,200,100,0.1); border-radius: 8px; text-align: center;">
+        <p style="color: #64C864; font-size: 0.9rem;">
+          <i class="fas fa-heart"></i> 
+          Nama yang diaktifkan akan langsung digunakan untuk analisis selanjutnya.
+        </p>
+      </div>
+    </div>
+  `;
+  
+  container.innerHTML = html;
+  
+  showSuccessToast(`✨ Opsi nama selaras berhasil digenerate!`);
+}
   
   // PREVIEW GRATIS - TIDAK POTONG TOKEN!
   console.log(' Preview gratis - tidak ada token yang dipotong');
