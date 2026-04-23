@@ -29,13 +29,31 @@ function renderPaymentMethods() {
 function selectPlan(plan) {
     currentSelectedPlan = plan;
     
-    let planName = '', planPrice = '';
-    if (plan === 'coba') { planName = 'Paket Coba'; planPrice = 'Rp50.000'; }
-    else if (plan === 'hemat') { planName = 'Paket Hemat'; planPrice = 'Rp100.000'; }
-    else if (plan === 'sultan') { planName = 'Paket Sultan'; planPrice = 'Rp200.000'; }
+    let planName = '', planPrice = '', tokenAmount = '';
+    if (plan === 'coba') { 
+        planName = 'Paket Coba'; 
+        planPrice = 'Rp50.000'; 
+        tokenAmount = '30 Token';
+    } else if (plan === 'hemat') { 
+        planName = 'Paket Hemat'; 
+        planPrice = 'Rp100.000'; 
+        tokenAmount = '75 Token';
+    } else if (plan === 'sultan') { 
+        planName = 'Paket Sultan'; 
+        planPrice = 'Rp200.000'; 
+        tokenAmount = '200 Token';
+    }
     
-    document.getElementById('planName').textContent = planName;
-    document.getElementById('planPrice').textContent = planPrice;
+    // Update modal display
+    const planNameEl = document.getElementById('planName');
+    const planPriceEl = document.getElementById('planPrice');
+    const selectedPackageDisplay = document.getElementById('selectedPackageDisplay');
+    
+    if (planNameEl) planNameEl.textContent = planName;
+    if (planPriceEl) planPriceEl.textContent = planPrice;
+    if (selectedPackageDisplay) {
+        selectedPackageDisplay.textContent = `${planName} • ${tokenAmount} • ${planPrice}`;
+    }
     
     renderPaymentMethods();
     document.getElementById('paymentModal').classList.remove('hidden');
@@ -51,15 +69,36 @@ async function processPayment(method) {
     if (!currentSelectedPlan || isLoading) return;
     
     let amount = 0, tokens = 0, planName = '';
-    if (currentSelectedPlan === 'coba') { amount = 50000; tokens = 30; planName = 'Paket Coba'; }
-    else if (currentSelectedPlan === 'hemat') { amount = 100000; tokens = 75; planName = 'Paket Hemat'; }
-    else if (currentSelectedPlan === 'sultan') { amount = 200000; tokens = 200; planName = 'Paket Sultan'; }
+    if (currentSelectedPlan === 'coba') { 
+        amount = 50000; 
+        tokens = 30; 
+        planName = 'Paket Coba'; 
+    } else if (currentSelectedPlan === 'hemat') { 
+        amount = 100000; 
+        tokens = 75; 
+        planName = 'Paket Hemat'; 
+    } else if (currentSelectedPlan === 'sultan') { 
+        amount = 200000; 
+        tokens = 200; 
+        planName = 'Paket Sultan'; 
+    }
     
     const orderId = 'TOKEN-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7);
     
+    // Simpan state form jika ada
+    const savedName = localStorage.getItem('temp_userName');
+    const savedBirth = localStorage.getItem('temp_birthDate');
+    const savedFullName = localStorage.getItem('temp_fullName');
+    
+    if (savedName || savedBirth || savedFullName) {
+        localStorage.setItem('pendingUserName', savedName || '');
+        localStorage.setItem('pendingBirthDate', savedBirth || '');
+        localStorage.setItem('pendingFullName', savedFullName || '');
+    }
+    
     isLoading = true;
     const container = document.getElementById('paymentMethodsContainer');
-    container.innerHTML = '<div style="text-align:center; padding:20px;"><div class="spinner"></div><p>Menghubungkan ke Midtrans...</p></div>';
+    container.innerHTML = '<div style="text-align:center; padding:20px;"><div class="loading-spinner"></div><p>Menghubungkan ke Midtrans...</p></div>';
     
     try {
         const response = await fetch(`${WORKER_URL}/api/create-transaction`, {
@@ -72,7 +111,7 @@ async function processPayment(method) {
                 amount: amount,
                 tokens: tokens,
                 payment_method: method,
-                customer_name: getUserName()
+                customer_name: localStorage.getItem('userName') || getUserName() || 'Pelanggan'
             })
         });
         
@@ -96,6 +135,13 @@ async function processPayment(method) {
     }
 }
 
+// Helper function untuk mendapatkan nama user
+function getUserName() {
+    return localStorage.getItem('userName') || 
+           localStorage.getItem('temp_userName') || 
+           'Pelanggan';
+}
+
 function initPricing() {
     updateTokenDisplay();
     
@@ -104,3 +150,9 @@ function initPricing() {
     const tokenSpan = document.getElementById('tokenBalanceAmount');
     if (tokenSpan) tokenSpan.textContent = tokenBalance;
 }
+
+// Expose functions to global
+window.selectPlan = selectPlan;
+window.closePaymentModal = closePaymentModal;
+window.processPayment = processPayment;
+window.renderPaymentMethods = renderPaymentMethods;
