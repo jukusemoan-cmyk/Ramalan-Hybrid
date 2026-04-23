@@ -377,6 +377,17 @@
       setTimeout(() => handleReveal(), 500);
     }
   }
+
+  // Fungsi untuk cek token secara manual
+async function cekTokenManual() {
+    await syncTokenFromWorker();
+    const balance = localStorage.getItem('tokenBalance') || '0';
+    showSuccessToast(`Saldo Token kamu: ${balance}`);
+}
+
+// Tambahkan tombol di HTML
+<button onclick="cekTokenManual()">🔄 Cek Saldo Terbaru</button>
+
   
   // ========== TRAITS FUNCTIONS ==========
 function getTraitsForName(name, strengthScore, weton, wuku, filterType, limit = 2) {
