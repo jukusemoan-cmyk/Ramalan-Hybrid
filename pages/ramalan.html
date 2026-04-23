@@ -1369,64 +1369,67 @@ async function downloadManuritasPDF() {
   }
 }
 
-  // Fallback untuk loadNameOptions jika JSON gagal
-async function loadNameOptionsWithFallback(packageType) {
-  try {
-    await loadNameOptions(packageType);
-  } catch (e) {
-    console.error('❌ Gagal load JSON, menggunakan fallback:', e);
-    
-    // Fallback sederhana
-    const container = document.getElementById('nameOptionsContainer');
-    if (!container) return;
-    
-    const prefixes = ['Arjuna', 'Dewi', 'Bayu', 'Wira', 'Lestari', 'Bima', 'Sinta', 'Rama'];
-    const suffixes = ['Wicaksana', 'Samudra', 'Wijaya', 'Prasetya', 'Utama', 'Santosa', 'Mahendra', 'Baskara'];
-    
-    const fullNameInput = document.getElementById('fullName');
-    const userNameInput = document.getElementById('userName');
-    const baseName = (fullNameInput?.value?.trim() || userNameInput?.value?.trim() || 'Sang Pencari').split(' ')[0];
-    
-    const options = [];
-    for (let i = 0; i < 3; i++) {
-      const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
-      const suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
-      
-      let newName;
-      if (i === 0) newName = `${prefix} ${baseName}`;
-      else if (i === 1) newName = `${baseName} ${suffix}`;
-      else newName = `${prefix} ${suffix}`;
-      
-      options.push({
-        name: newName,
-        strength: 60 + Math.floor(Math.random() * 30),
-        prefix: { text: prefix, meaning: 'Nama berkekuatan', element: 'Api' },
-        suffix: { text: suffix, meaning: 'Nama berkekuatan', element: 'Air' }
-      });
-    }
-    
-    let html = `<h4 style="color:#D4AF37;">✨ Opsi Nama (Fallback)</h4>`;
-    options.forEach(opt => {
-      html += `
-        <div style="background:rgba(15,15,20,0.9); border-radius:12px; padding:16px; margin-bottom:12px; border:1px solid #D4AF37;">
-          <p><strong>${opt.name}</strong> - ${opt.strength}%</p>
-          <button onclick="document.getElementById('fullName').value='${opt.name}';showSuccessToast('✅ Nama diaktifkan!')" 
-                  style="background:#D4AF37; padding:8px 16px; border:none; border-radius:8px; margin-top:8px;">
-            Aktifkan
-          </button>
-        </div>
-      `;
-    });
-    
-    container.innerHTML = html;
-    showSuccessToast('✨ Opsi nama berhasil digenerate (mode offline)');
+// ========== FUNGSI loadNameOptions (MENGGUNAKAN YANG DARI manuritas-generator.js) ==========
+// Jangan override! Biarkan fungsi dari manuritas-generator.js yang bekerja.
+// Hapus baris: window.loadNameOptions = loadNameOptionsWithFallback;
+
+// ========== FUNGSI activateSelectedName (WAJIB ADA) ==========
+function activateSelectedName(selectedName, strength, packageType) {
+  console.log('🔵 activateSelectedName:', selectedName, strength);
+  
+  // Update input nama lengkap
+  const fullNameInput = document.getElementById('fullName');
+  if (fullNameInput) {
+    fullNameInput.value = selectedName;
+  }
+  
+  // Simpan ke localStorage
+  localStorage.setItem('activatedName', selectedName);
+  localStorage.setItem('activatedNameStrength', strength);
+  localStorage.setItem('activatedNamePackage', packageType);
+  
+  // Tampilkan toast sukses
+  if (typeof showSuccessToast === 'function') {
+    showSuccessToast(`✅ Nama "${selectedName}" telah diaktifkan! Klik "SINGKAP RAMALAN" untuk melihat hasil baru.`);
+  } else {
+    alert(`✅ Nama "${selectedName}" telah diaktifkan!`);
+  }
+  
+  // Highlight input
+  if (fullNameInput) {
+    fullNameInput.style.border = '2px solid #64C864';
+    fullNameInput.style.transition = 'border 0.3s';
+    setTimeout(() => {
+      fullNameInput.style.border = '';
+    }, 2000);
+  }
+  
+  // Scroll ke tombol reveal
+  const revealBtn = document.getElementById('revealBtn');
+  if (revealBtn) {
+    setTimeout(() => {
+      revealBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 300);
   }
 }
 
-// Override global
-window.loadNameOptions = loadNameOptionsWithFallback;
+// Fallback activateName (untuk kompatibilitas)
+function activateName(name) {
+  const fullNameInput = document.getElementById('fullName');
+  if (fullNameInput) {
+    fullNameInput.value = name;
+    if (typeof showSuccessToast === 'function') {
+      showSuccessToast(`✅ Nama "${name}" diaktifkan!`);
+    }
+  }
+}
 
-  
+// Expose ke global
+window.activateSelectedName = activateSelectedName;
+window.activateName = activateName;
+
+// JANGAN OVERRIDE loadNameOptions dari manuritas-generator.js!
+// window.loadNameOptions = loadNameOptionsWithFallback;  // <-- HAPUS ATAU COMMENT BARIS INI!
 
 // ========== HELPER FUNCTIONS ==========
 function getZodiacElement(zodiac) {
