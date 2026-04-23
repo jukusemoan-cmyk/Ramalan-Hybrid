@@ -48,6 +48,7 @@
     <a href="kalender.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Kalender</a>
     <a href="pricing.html" class="btn-premium-nav" style="background: linear-gradient(135deg, #FF6B6B, #FFB8B8);">
       <i class="fas fa-heart"></i> Dukung
+      <button onclick="cekTokenManual()">🔄 Cek Saldo Terbaru</button>
     </a>
     </a>
   </div>
@@ -377,9 +378,13 @@
       setTimeout(() => handleReveal(), 500);
     }
   }
-
- // Tambahkan tombol di HTML
-<button onclick="cekTokenManual()">🔄 Cek Saldo Terbaru</button>
+  
+// Fungsi untuk cek token secara manual
+async function cekTokenManual() {
+    await syncTokenFromWorker();
+    const balance = localStorage.getItem('tokenBalance') || '0';
+    showSuccessToast(`Saldo Token kamu: ${balance}`);
+}
 
   
   // ========== TRAITS FUNCTIONS ==========
