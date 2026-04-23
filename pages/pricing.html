@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Beli Token • Oracle Nusantara</title>
-  <meta name="description" content="Beli token untuk membuka ramalan premium. Paket Coba 30 Token, Hemat 75 Token, Sultan 200 Token.">
+  <title>Beri Dukungan • Oracle Nusantara</title>
+  <meta name="description" content="Beri dukungan untuk pengembangan Oracle Nusantara dan dapatkan Token Ramalan sebagai apresiasi.">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -69,6 +69,7 @@
     .feature-list { text-align: left; margin-bottom: 32px; }
     .feature-item { display: flex; gap: 10px; margin-bottom: 14px; color: #B0B0C0; }
     .feature-item i.fa-check { color: #D4AF37; }
+    .feature-item i.fa-heart { color: #FF6B6B; }
     
     .btn-pricing {
       background: transparent;
@@ -84,130 +85,128 @@
     }
     .btn-pricing:hover { background: #D4AF37; color: #0A0A0C; }
     .btn-pricing.primary { background: #D4AF37; color: #0A0A0C; }
-    .btn-pricing:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-pricing.primary:hover { background: #F3E5AB; }
+    
+    .support-message {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #A0A0B0;
+      font-style: italic;
+    }
     
     .faq-section { margin: 60px 0; }
     .faq-title { font-size: 2.2rem; color: #F3E5AB; text-align: center; margin-bottom: 40px; }
     .faq-item { background: rgba(15, 15, 20, 0.6); border-radius: 20px; padding: 24px; margin-bottom: 16px; }
     .faq-question { font-weight: 600; color: #D4AF37; margin-bottom: 8px; }
     .faq-answer { color: #A0A0B0; }
-    
-    .payment-modal {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(10, 10, 12, 0.95);
-      display: flex; align-items: center; justify-content: center; z-index: 1000;
-    }
-    .payment-content {
-      background: #1A1C2B; border: 1px solid #D4AF37; border-radius: 32px;
-      padding: 36px 32px; max-width: 480px; text-align: center;
-    }
-    .payment-methods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0; }
-    .payment-method {
-      background: rgba(15, 15, 20, 0.8); border: 1px solid rgba(212, 175, 55, 0.2);
-      border-radius: 16px; padding: 18px 12px; cursor: pointer; transition: all 0.2s;
-    }
-    .payment-method:hover { border-color: #D4AF37; background: rgba(20, 20, 25, 0.9); }
-    .payment-method i { font-size: 2rem; color: #D4AF37; }
-    .payment-method span { display: block; margin-top: 8px; font-size: 0.9rem; }
-    
-    .loading-spinner {
-      width: 24px; height: 24px; border: 3px solid rgba(212, 175, 55, 0.2);
-      border-top-color: #D4AF37; border-radius: 50%; animation: spin 1s linear infinite;
-      margin: 0 auto;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
   </style>
+  
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9YXEVSNQ04"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-9YXEVSNQ04');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YXEVSNQ04"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YXEVSNQ04');
+  </script>
 </head>
 <body>
-<div class="container">
-  <nav class="navbar">
-    <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
-    <div class="nav-links">
-      <a href="../index.html">Beranda</a>
-      <a href="ramalan.html">Ramalan</a>
-      <a href="kecocokan.html">Kecocokan</a>
-      <a href="bazi.html">BaZi</a>
-      <a href="dewasa-ayu.html">Dewasa Ayu</a>
-      <a href="pustaka.html">Pustaka</a>
-      <a href="kalender.html">Kalender</a>
-      <a href="pricing.html" class="btn-premium-nav"><i class="fas fa-coins"></i> Token</a>
-    </div>
-  </nav>
 
+<!-- NAVBAR -->
+<nav class="navbar" style="background: #0A0A0C; border-bottom: 2px solid #D4AF37; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; width: 100%; position: sticky; top: 0; z-index: 9999;">
+  <div class="logo">
+    <a href="../index.html" style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: #D4AF37; text-decoration: none;">ORACLE NUSANTARA</a>
+  </div>
+  <div class="nav-links" style="display: flex; gap: 20px; align-items: center;">
+    <a href="../index.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Beranda</a>
+    <a href="ramalan.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Ramalan</a>
+    <a href="kecocokan.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Kecocokan</a>
+    <a href="bazi.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.9rem; font-weight: 500;">BaZi</a>
+    <a href="dewasa-ayu.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Dewasa Ayu</a>
+    <a href="pustaka.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Pustaka</a>
+    <a href="kalender.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.9rem; font-weight: 500;">Kalender</a>
+    <a href="pricing.html" style="background: linear-gradient(135deg, #FF6B6B, #D4AF37); color: #0A0A0C; padding: 8px 16px; border-radius: 30px; font-weight: 600; text-decoration: none;">
+      <i class="fas fa-heart"></i> Dukung
+    </a>
+  </div>
+</nav>
+
+<div class="container">
   <div class="mystic-header">
-    <h1><i class="fas fa-coins"></i> Beli Token Ramalan</h1>
-    <p style="color: #A0A0B0;">1 Token = 1x Buka Semua Aspek Premium</p>
+    <h1><i class="fas fa-heart" style="color: #FF6B6B;"></i> Beri Dukungan</h1>
+    <p style="color: #A0A0B0;">Dukung pengembangan Oracle Nusantara dan dapatkan Token Ramalan sebagai apresiasi</p>
     
     <div class="token-balance-badge">
-      <i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceAmount">0</span>
+      <i class="fas fa-coins"></i> Saldo Token Kamu: <span id="tokenBalanceAmount">0</span>
     </div>
   </div>
 
   <div class="pricing-grid">
+    <!-- Dukungan Awal -->
     <div class="pricing-card">
-      <div class="plan-name">Paket Coba</div>
+      <div class="plan-name">Dukungan Awal</div>
       <div class="plan-price">Rp50k</div>
-      <div class="plan-token"><i class="fas fa-coins"></i> 30 Token</div>
-      <div class="plan-desc">Cocok untuk coba-coba</div>
+      <div class="plan-token"><i class="fas fa-gift"></i> +30 Token</div>
+      <div class="plan-desc">Cocok untuk menjajal</div>
       <div class="feature-list">
         <div class="feature-item"><i class="fas fa-check"></i> 6x Buka Ramalan Premium</div>
         <div class="feature-item"><i class="fas fa-check"></i> Analisis 4 aspek mendalam</div>
-        <div class="feature-item"><i class="fas fa-check"></i> Token tidak kadaluarsa</div>
+        <div class="feature-item"><i class="fas fa-heart"></i> Token apresiasi tidak kadaluarsa</div>
       </div>
-      <button class="btn-pricing" onclick="selectPlan('coba')">Pilih Paket Coba</button>
+      <button class="btn-pricing" onclick="selectPlan('coba')">Beri Dukungan Awal</button>
     </div>
 
+    <!-- Dukungan Apresiasi -->
     <div class="pricing-card featured">
-      <div class="popular-badge"><i class="fas fa-star"></i> PALING HEMAT</div>
-      <div class="plan-name">Paket Hemat</div>
+      <div class="popular-badge"><i class="fas fa-star"></i> PALING DIMINATI</div>
+      <div class="plan-name">Dukungan Apresiasi</div>
       <div class="plan-price">Rp100k</div>
-      <div class="plan-token"><i class="fas fa-coins"></i> 75 Token</div>
+      <div class="plan-token"><i class="fas fa-gift"></i> +75 Token</div>
       <div class="plan-desc">Hemat 33% • Rp1.333/token</div>
       <div class="feature-list">
         <div class="feature-item"><i class="fas fa-check"></i> 15x Buka Ramalan Premium</div>
         <div class="feature-item"><i class="fas fa-check"></i> Analisis 4 aspek mendalam</div>
-        <div class="feature-item"><i class="fas fa-check"></i> Token tidak kadaluarsa</div>
-        <div class="feature-item"><i class="fas fa-check"></i> + Bonus 1 Token</div>
+        <div class="feature-item"><i class="fas fa-heart"></i> Token apresiasi tidak kadaluarsa</div>
+        <div class="feature-item"><i class="fas fa-gem"></i> + Bonus 1 Token</div>
       </div>
-      <button class="btn-pricing primary" onclick="selectPlan('hemat')">Pilih Paket Hemat</button>
+      <button class="btn-pricing primary" onclick="selectPlan('hemat')">Beri Dukungan Apresiasi</button>
     </div>
 
+    <!-- Dukungan Eksklusif -->
     <div class="pricing-card">
-      <div class="plan-name">Paket Sultan</div>
+      <div class="plan-name">Dukungan Eksklusif</div>
       <div class="plan-price">Rp200k</div>
-      <div class="plan-token"><i class="fas fa-coins"></i> 200 Token</div>
+      <div class="plan-token"><i class="fas fa-gift"></i> +200 Token</div>
       <div class="plan-desc">Hemat 50% • Rp1.000/token</div>
       <div class="feature-list">
         <div class="feature-item"><i class="fas fa-check"></i> 40x Buka Ramalan Premium</div>
         <div class="feature-item"><i class="fas fa-check"></i> Analisis 4 aspek mendalam</div>
-        <div class="feature-item"><i class="fas fa-check"></i> Token tidak kadaluarsa</div>
-        <div class="feature-item"><i class="fas fa-check"></i> + Bonus 5 Token</div>
+        <div class="feature-item"><i class="fas fa-heart"></i> Token apresiasi tidak kadaluarsa</div>
+        <div class="feature-item"><i class="fas fa-crown"></i> + Bonus 5 Token</div>
       </div>
-      <button class="btn-pricing" onclick="selectPlan('sultan')">Pilih Paket Sultan</button>
+      <button class="btn-pricing" onclick="selectPlan('sultan')">Beri Dukungan Eksklusif</button>
     </div>
+  </div>
+
+  <div class="support-message">
+    <i class="fas fa-heart" style="color: #FF6B6B;"></i> 
+    Setiap dukungan yang kamu berikan sangat berarti bagi keberlanjutan Oracle Nusantara.
+    <i class="fas fa-heart" style="color: #FF6B6B;"></i>
   </div>
 
   <div class="faq-section">
     <h2 class="faq-title">Pertanyaan Umum</h2>
     <div class="faq-item">
-      <div class="faq-question"><i class="fas fa-question-circle"></i> Apa itu Token?</div>
-      <div class="faq-answer">Token adalah kredit yang digunakan untuk membuka Ramalan Premium. 1 Token = 1x buka semua aspek (Asmara, Karir, Keuangan, Kesehatan).</div>
+      <div class="faq-question"><i class="fas fa-question-circle"></i> Apa itu Token Apresiasi?</div>
+      <div class="faq-answer">Token adalah bentuk apresiasi kami untuk setiap dukungan yang kamu berikan. 1 Token dapat digunakan untuk membuka 1x Ramalan Premium (Asmara, Karir, Keuangan, Kesehatan).</div>
     </div>
     <div class="faq-item">
       <div class="faq-question"><i class="fas fa-question-circle"></i> Apakah Token kadaluarsa?</div>
-      <div class="faq-answer">Tidak. Token kamu akan tetap ada sampai digunakan. Beli sekarang, pakai kapan saja.</div>
+      <div class="faq-answer">Tidak. Token apresiasi kamu akan tetap ada sampai digunakan. Beri dukungan sekarang, pakai tokennya kapan saja.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question"><i class="fas fa-question-circle"></i> Metode pembayaran apa yang diterima?</div>
-      <div class="faq-answer">QRIS, GoPay, OVO, DANA, dan transfer bank melalui Midtrans.</div>
+      <div class="faq-answer">Saat ini kami menggunakan Saweria yang mendukung QRIS, GoPay, OVO, DANA, dan transfer bank.</div>
     </div>
   </div>
 
@@ -221,75 +220,39 @@
   </footer>
 </div>
 
-<!-- Payment Modal -->
-<div id="paymentModal" class="payment-modal hidden">
-  <div class="payment-content">
-    <h3 style="color: #D4AF37; margin-bottom: 16px;"><i class="fas fa-credit-card"></i> Pilih Metode Pembayaran</h3>
-    <p id="selectedPackageDisplay" style="color: #E5E5E5;"></p>
-    <div class="payment-methods" id="paymentMethodsContainer"></div>
-    <button class="btn-pricing" onclick="closePaymentModal()">Batal</button>
-  </div>
-</div>
-
 <script src="../js/ui-controller.js"></script>
 
 <script>
-const WORKER_URL = 'https://pekerja-ramalan.jukusemoan.workers.dev';
+const SAWERIA_USERNAME = 'oraclenusantara'; // Ganti dengan username Saweria Anda
 let currentSelectedPlan = null;
-let isLoading = false;
-
-const paymentMethods = [
-    { id: 'qris', name: 'QRIS', icon: 'fa-qrcode' },
-    { id: 'gopay', name: 'GoPay', icon: 'fa-wallet' },
-    { id: 'ovo', name: 'OVO', icon: 'fa-mobile-alt' },
-    { id: 'dana', name: 'DANA', icon: 'fa-money-bill-wave' },
-    { id: 'bank_transfer', name: 'Transfer Bank', icon: 'fa-university' }
-];
 
 function updateTokenDisplay() {
     const balance = localStorage.getItem('tokenBalance') || '0';
-    document.getElementById('tokenBalanceAmount').textContent = balance;
-}
-
-function renderPaymentMethods() {
-    const container = document.getElementById('paymentMethodsContainer');
-    container.innerHTML = paymentMethods.map(m => `
-        <div class="payment-method" onclick="processPayment('${m.id}')">
-            <i class="fas ${m.icon}"></i>
-            <span>${m.name}</span>
-        </div>
-    `).join('');
+    const tokenSpan = document.getElementById('tokenBalanceAmount');
+    if (tokenSpan) tokenSpan.textContent = balance;
 }
 
 function selectPlan(plan) {
     currentSelectedPlan = plan;
     
-    let displayText = '';
-    if (plan === 'coba') displayText = 'Paket Coba • 30 Token • Rp50.000';
-    else if (plan === 'hemat') displayText = 'Paket Hemat • 75 Token • Rp100.000';
-    else if (plan === 'sultan') displayText = 'Paket Sultan • 200 Token • Rp200.000';
-    
-    document.getElementById('selectedPackageDisplay').textContent = displayText;
-    renderPaymentMethods();
-    document.getElementById('paymentModal').classList.remove('hidden');
-}
-
-function closePaymentModal() {
-    if (!isLoading) {
-        document.getElementById('paymentModal').classList.add('hidden');
-    }
-}
-
-async function processPayment(method) {
-    if (!currentSelectedPlan || isLoading) return;
-    
     let amount = 0, tokens = 0, planName = '';
-    if (currentSelectedPlan === 'coba') { amount = 50000; tokens = 30; planName = 'Paket Coba'; }
-    else if (currentSelectedPlan === 'hemat') { amount = 100000; tokens = 75; planName = 'Paket Hemat'; }
-    else if (currentSelectedPlan === 'sultan') { amount = 200000; tokens = 200; planName = 'Paket Sultan'; }
+    if (plan === 'coba') { amount = 50000; tokens = 30; planName = 'Dukungan Awal'; }
+    else if (plan === 'hemat') { amount = 100000; tokens = 75; planName = 'Dukungan Apresiasi'; }
+    else if (plan === 'sultan') { amount = 200000; tokens = 200; planName = 'Dukungan Eksklusif'; }
     
-    const orderId = 'TOKEN-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7);
+    // Generate User ID unik jika belum ada
+    let userId = localStorage.getItem('userId');
+    if (!userId) {
+        userId = 'USER-' + Date.now() + '-' + Math.random().toString(36).substring(2, 10);
+        localStorage.setItem('userId', userId);
+    }
     
+    // Simpan data pending
+    localStorage.setItem('pendingTokens', tokens);
+    localStorage.setItem('pendingPlan', plan);
+    localStorage.setItem('pendingAmount', amount);
+    
+    // Simpan state form jika ada
     const savedName = localStorage.getItem('temp_userName');
     const savedBirth = localStorage.getItem('temp_birthDate');
     const savedFullName = localStorage.getItem('temp_fullName');
@@ -300,42 +263,16 @@ async function processPayment(method) {
         localStorage.setItem('pendingFullName', savedFullName || '');
     }
     
-    isLoading = true;
-    const container = document.getElementById('paymentMethodsContainer');
-    container.innerHTML = '<div class="loading-spinner"></div><p style="margin-top: 16px;">Menghubungkan ke Midtrans...</p>';
+    // Format pesan untuk Saweria: "TokenTopUp:USER_ID:PLAN"
+    const message = `TokenTopUp:${userId}:${plan}`;
+    const encodedMessage = encodeURIComponent(message);
     
-    try {
-        const response = await fetch(`${WORKER_URL}/api/create-transaction`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                order_id: orderId,
-                plan: currentSelectedPlan,
-                plan_name: planName,
-                amount: amount,
-                tokens: tokens,
-                payment_method: method,
-                customer_name: localStorage.getItem('userName') || 'Pelanggan'
-            })
-        });
-        
-        const data = await response.json();
-        
-        if (data.redirect_url) {
-            localStorage.setItem('pendingOrderId', orderId);
-            localStorage.setItem('pendingTokens', tokens);
-            localStorage.setItem('pendingPlan', currentSelectedPlan);
-            window.location.href = data.redirect_url;
-        } else {
-            alert('Gagal membuat transaksi. Silakan coba lagi.');
-            renderPaymentMethods();
-            isLoading = false;
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('Terjadi kesalahan jaringan. Periksa koneksi internet Anda.');
-        renderPaymentMethods();
-        isLoading = false;
+    // Link Saweria dengan nominal dan pesan
+    const saweriaUrl = `https://saweria.co/${SAWERIA_USERNAME}?nominal=${amount}&message=${encodedMessage}`;
+    
+    // Tampilkan konfirmasi sebelum redirect
+    if (confirm(`Kamu akan diarahkan ke Saweria untuk memberi ${planName} sebesar Rp${amount.toLocaleString('id')}.\n\nSetelah selesai, token akan otomatis ditambahkan ke akunmu.`)) {
+        window.location.href = saweriaUrl;
     }
 }
 
@@ -346,8 +283,6 @@ function init() {
 document.addEventListener('DOMContentLoaded', init);
 
 window.selectPlan = selectPlan;
-window.closePaymentModal = closePaymentModal;
-window.processPayment = processPayment;
 </script>
 </body>
 </html>
