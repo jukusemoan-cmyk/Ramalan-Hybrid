@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Manuritas • Analisis Nama • Oracle Nusantara</title>
+  <meta name="description" content="Analisis getaran nama dengan Hanacaraka, Numerologi, dan Generator Nama Selaras. Temukan cetak biru dirimu melalui namamu.">
+  <meta name="theme-color" content="#0A0A0C">
+  
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/ramalan.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  
+  <style>
+    :root {
+      --gold: #D4AF37; --gold-light: #F3E5AB; --bg-dark: #0A0A0C;
+      --text-muted: #A0A0B0; --text-dim: #606070; --success: #64C864;
+      --danger: #FF8A8A; --warning: #FFB347; --info: #4ECDC4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: #0A0A0C;
+      background-image: radial-gradient(ellipse at 30% 20%, rgba(212,175,55,0.04) 0%, transparent 50%);
+      font-family: 'Inter', sans-serif; color: #E8E8E8; min-height: 100vh; -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .hidden { display: none !important; }
+    .oracle-card { max-width: 1000px; margin: 0 auto; }
+
+    .navbar {
+      background: rgba(10,10,12,0.97) !important; backdrop-filter: blur(20px);
+      border-bottom: 2px solid var(--gold) !important; padding: 14px 24px !important;
+      display: flex !important; align-items: center !important; justify-content: space-between !important;
+      width: 100% !important; position: sticky !important; top: 0 !important; z-index: 9999 !important;
+    }
+    .navbar .logo a { font-family: 'Cormorant Garamond', serif !important; font-size: 1.5rem !important; font-weight: 700 !important; color: var(--gold) !important; text-decoration: none !important; }
+    .nav-links { display: flex !important; gap: 16px !important; align-items: center !important; flex-wrap: wrap !important; }
+    .nav-links a { color: #E8E8E8 !important; text-decoration: none !important; font-size: 0.85rem !important; transition: color 0.2s !important; }
+    .nav-links a:hover { color: var(--gold) !important; }
+    .nav-links a.active { color: var(--gold) !important; font-weight: 700 !important; }
+
+    .mystic-header { text-align: center; padding: 40px 20px 20px; }
+    .mystic-header .header-icon { font-size: 4rem; margin-bottom: 16px; animation: float 3s ease-in-out infinite; filter: drop-shadow(0 0 30px rgba(212,175,55,0.3)); }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+    .mystic-header h1 { font-family: 'Cormorant Garamond',serif; font-size: clamp(2rem,5vw,3.2rem); color: var(--gold-light); letter-spacing: 2px; margin-bottom: 8px; }
+    .mystic-header .subtitle { color: var(--text-muted); font-size: 1rem; font-weight: 300; }
+    .header-divider { display:flex;align-items:center;justify-content:center;gap:16px;margin:16px 0;color:var(--gold);font-size:0.7rem;opacity:0.5; }
+    .header-divider::before,.header-divider::after { content:'';width:50px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent); }
+
+    .input-field { margin-bottom: 18px; }
+    .input-field label { display:block; margin-bottom:8px; font-weight:500; color:var(--gold); text-transform:uppercase; letter-spacing:2px; font-size:0.75rem; }
+    .input-field input,.input-field select { width:100%; background:rgba(10,10,12,0.8); border:2px solid rgba(212,175,55,0.2); border-radius:12px; padding:14px 18px; font-size:1rem; color:#E8E8E8; font-family:'Inter',sans-serif; transition:all 0.3s; }
+    .input-field input:focus,.input-field select:focus { outline:none; border-color:var(--gold); box-shadow:0 0 20px rgba(212,175,55,0.1); }
+    .input-hint { display:block; font-size:0.7rem; color:var(--text-dim); margin-top:4px; font-style:italic; }
+
+    .btn-primary { display:block; width:100%; max-width:400px; margin:0 auto; background:linear-gradient(135deg,var(--gold),#C9A830); border:none; color:#0A0A0C; padding:18px 32px; border-radius:50px; font-weight:700; font-size:1.1rem; cursor:pointer; transition:all 0.4s; letter-spacing:1px; box-shadow:0 8px 30px rgba(212,175,55,0.3); }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 15px 40px rgba(212,175,55,0.5); }
+
+    .numerology-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:20px 0; }
+    .numerology-card { background:rgba(15,15,20,0.8); border-radius:16px; padding:20px; text-align:center; border:1px solid rgba(212,175,55,0.2); transition:all 0.3s; }
+    .numerology-card:hover { transform:translateY(-2px); border-color:rgba(212,175,55,0.5); }
+    .numerology-icon { font-size:28px; color:var(--gold); margin-bottom:8px; }
+    .numerology-label { font-size:0.8rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; }
+    .numerology-value { font-size:2.2rem; font-weight:700; color:var(--gold); font-family:'Cormorant Garamond',serif; }
+    .numerology-desc { font-size:0.85rem; color:var(--gold-light); margin-top:4px; }
+
+    .power-name-box { background:linear-gradient(135deg,rgba(212,175,55,0.2),rgba(212,175,55,0.05)); border-radius:16px; padding:18px 24px; text-align:center; margin-top:16px; border:1px solid rgba(212,175,55,0.4); font-size:1.2rem; color:var(--gold-light); font-family:'Cormorant Garamond',serif; }
+
+    .analysis-section-card { background:rgba(15,15,20,0.7); border-radius:20px; padding:24px; margin-bottom:16px; border:1px solid rgba(212,175,55,0.12); animation:fadeIn 0.5s ease; }
+    .analysis-section-card h4 { color:var(--gold); margin-bottom:16px; display:flex; align-items:center; gap:10px; font-size:1.1rem; border-bottom:1px solid rgba(212,175,55,0.15); padding-bottom:12px; }
+    .analysis-section-card p { color:var(--text-muted); line-height:1.8; margin-bottom:8px; }
+
+    .highlight-box { background:linear-gradient(135deg,rgba(100,200,100,0.1),rgba(100,200,100,0.05)); border-radius:16px; padding:20px; margin:16px 0; border:1px solid rgba(100,200,100,0.3); }
+    .warning-box { background:linear-gradient(135deg,rgba(255,138,138,0.1),rgba(255,138,138,0.05)); border-radius:16px; padding:16px; margin:12px 0; border-left:4px solid var(--danger); }
+    .info-box { background:rgba(212,175,55,0.08); border-radius:16px; padding:16px; margin:12px 0; border-left:4px solid var(--gold); }
+    .ritual-box { background:linear-gradient(135deg,rgba(212,175,55,0.08),rgba(212,175,55,0.02)); border-radius:16px; padding:20px; margin:16px 0; border:1px dashed rgba(212,175,55,0.3); }
+
+    .package-card { display:flex; justify-content:space-between; align-items:center; background:rgba(15,15,20,0.8); border-radius:16px; padding:20px 24px; margin-bottom:12px; border:1px solid rgba(212,175,55,0.2); flex-wrap:wrap; gap:12px; transition:transform 0.2s; }
+    .package-card:hover { transform:translateY(-2px); }
+    .package-silver { border-left:5px solid #C0C0C0; }
+    .package-gold { border-left:5px solid var(--gold); }
+    .package-platinum { border-left:5px solid var(--success); }
+
+    .btn-premium { background:linear-gradient(135deg,var(--gold),var(--gold-light)); border:none; color:#0A0A0C; padding:12px 24px; border-radius:30px; font-weight:600; cursor:pointer; transition:all 0.3s; font-size:0.9rem; }
+    .btn-premium:hover { transform:scale(1.03); box-shadow:0 8px 25px rgba(212,175,55,0.3); }
+    .btn-outline-gold { background:transparent; border:2px solid var(--gold); color:var(--gold); padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:600; transition:all 0.2s; font-size:0.85rem; }
+    .btn-outline-gold:hover { background:rgba(212,175,55,0.15); }
+    .btn-pdf,.btn-share { background:transparent; border:2px solid var(--gold); color:var(--gold); padding:10px 20px; border-radius:30px; cursor:pointer; font-weight:600; transition:all 0.2s; font-size:0.85rem; }
+    .btn-pdf:hover,.btn-share:hover { background:rgba(212,175,55,0.15); }
+
+    .token-badge { background:rgba(212,175,55,0.15); border:1.5px solid rgba(212,175,55,0.3); border-radius:50px; padding:10px 24px; display:inline-block; color:var(--gold-light); font-weight:600; }
+    .badge-premium { background:rgba(212,175,55,0.15); padding:6px 14px; border-radius:20px; font-size:0.85rem; color:var(--gold-light); border:1px solid rgba(212,175,55,0.3); }
+
+    .lucky-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:16px 0; }
+    .lucky-item { background:rgba(15,15,20,0.8); border-radius:12px; padding:16px; text-align:center; border:1px solid rgba(212,175,55,0.2); }
+    .lucky-item .number { font-size:2rem; font-weight:700; color:var(--gold); font-family:'Cormorant Garamond',serif; }
+    .lucky-item .label { font-size:0.75rem; color:var(--text-muted); text-transform:uppercase; }
+
+    .cross-sell { background:linear-gradient(135deg,rgba(212,175,55,0.08),rgba(212,175,55,0.02)); border-radius:24px; padding:32px; margin-top:40px; text-align:center; border:1px solid rgba(212,175,55,0.2); }
+    .cross-sell h4 { font-family:'Cormorant Garamond',serif; color:var(--gold-light); font-size:1.4rem; margin-bottom:8px; }
+    .cross-sell .btn-link { display:inline-block; background:transparent; border:2px solid var(--gold); color:var(--gold); padding:12px 28px; border-radius:50px; text-decoration:none; font-weight:600; transition:all 0.3s; margin-top:12px; }
+    .cross-sell .btn-link:hover { background:var(--gold); color:#0A0A0C; }
+
+    @keyframes fadeIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(212,175,55,0.4)} 70%{box-shadow:0 0 0 15px rgba(212,175,55,0)} 100%{box-shadow:0 0 0 0 rgba(212,175,55,0)} }
+    .pulse { animation:pulse 2s infinite; }
+
+    @media (max-width:600px) { .numerology-grid { grid-template-columns:1fr; } .lucky-grid { grid-template-columns:repeat(2,1fr); } }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YXEVSNQ04"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YXEVSNQ04');</script>
+</head>
+<body>
+<div id="loadingOverlay" style="display:none;"><div class="spinner"></div><p style="color:var(--gold-light);margin-top:16px;letter-spacing:1px;">MENGANALISIS GETARAN NAMA...</p></div>
+
+<div class="container">
+  <nav class="navbar">
+    <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
+    <div class="nav-links">
+      <a href="../index.html">Beranda</a>
+      <a href="ramalan.html">Ramalan</a>
+      <a href="manuritas.html" class="active">Manuritas</a>
+      <a href="kecocokan.html">Kecocokan</a>
+      <a href="bazi.html">BaZi</a>
+      <a href="dewasa-ayu.html">Dewasa Ayu</a>
+      <a href="pustaka.html">Pustaka</a>
+      <a href="kalender.html">Kalender</a>
+      <a href="dukung.html" style="background:linear-gradient(135deg,#FF6B6B,#FFB8B8);padding:8px 16px;border-radius:20px;color:#0A0A0C!important;font-weight:700;"><i class="fas fa-heart"></i> Dukung</a>
+    </div>
+  </nav>
+
+  <div class="mystic-header">
+    <div class="header-icon">🧬</div>
+    <h1>Manuritas • Getaran Namamu</h1>
+    <p class="subtitle">Ungkap cetak biru dirimu melalui getaran Hanacaraka — Numerologi, Kekuatan Nama, dan Generator Nama Selaras</p>
+    <div class="header-divider"><span>✦</span><span>✦</span><span>✦</span></div>
+  </div>
+
+  <div class="oracle-card">
+    <div class="form-group">
+      <div class="input-row" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <div class="input-field">
+          <label><i class="fas fa-signature"></i> Nama Lengkap</label>
+          <input type="text" id="fullName" placeholder="Tulis nama lengkapmu...">
+          <span class="input-hint">✨ Nama adalah doa — biarkan semesta membaca getarannya</span>
+        </div>
+        <div class="input-field">
+          <label><i class="fas fa-calendar-alt"></i> Tanggal Lahir (opsional)</label>
+          <input type="date" id="birthDate">
+          <span class="input-hint">📅 Untuk analisis yang lebih personal dan akurat</span>
+        </div>
+      </div>
+      <button class="btn-primary" id="analyzeBtn"><i class="fas fa-dna"></i> ANALISIS NAMA</button>
+    </div>
+
+    <div id="resultSection" class="hidden" style="margin-top:40px;">
+
+      <!-- NUMEROLOGI -->
+      <div id="numerologySection" class="hidden">
+        <h3 style="text-align:center;margin-bottom:24px;font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold-light);"><i class="fas fa-calculator"></i> Numerologi Nama</h3>
+        <div class="numerology-grid" id="numerologyGrid"></div>
+        <div class="power-name-box"><i class="fas fa-crown"></i> <span id="powerName">-</span></div>
+        <div id="numerologyExplanation" style="margin-top:24px;padding:20px;background:rgba(15,15,20,0.5);border-radius:16px;"></div>
+      </div>
+
+      <!-- MANURITAS -->
+      <div id="manuritasSection" class="hidden">
+        <h3 style="text-align:center;margin-bottom:24px;font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold-light);"><i class="fas fa-dna"></i> Analisis Hanacaraka</h3>
+
+        <div id="manuritasFreeContent">
+          <div style="text-align:center;margin-bottom:24px;padding:32px;background:rgba(15,15,20,0.7);border-radius:20px;border:2px solid rgba(212,175,55,0.25);">
+            <div style="font-size:0.9rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:3px;margin-bottom:8px;">Total Nilai Hanacaraka</div>
+            <div style="font-size:5rem;font-weight:700;color:var(--gold);font-family:'Cormorant Garamond',serif;line-height:1;" id="hanacarakaTotal">-</div>
+            <div style="color:var(--text-muted);font-size:0.9rem;margin-top:8px;" id="hanacarakaElement"></div>
+          </div>
+
+          <div style="background:rgba(15,15,20,0.7);border-radius:20px;padding:28px;margin-bottom:20px;border:1px solid rgba(212,175,55,0.2);">
+            <div style="text-align:center;margin-bottom:20px;">
+              <div style="font-size:0.9rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:3px;margin-bottom:8px;">Kekuatan Nama</div>
+              <div style="font-size:3.5rem;font-weight:700;color:var(--gold);font-family:'Cormorant Garamond',serif;line-height:1;" id="nameStrengthValue">-</div>
+              <div style="font-size:1.2rem;margin-top:4px;font-weight:600;" id="nameStrengthLabel">-</div>
+            </div>
+            <div style="width:100%;height:12px;background:rgba(212,175,55,0.15);border-radius:6px;margin:16px 0;">
+              <div id="nameStrengthBar" style="width:0%;height:100%;background:linear-gradient(90deg,#D4AF37,#64C864);border-radius:6px;transition:width 1.2s ease;"></div>
+            </div>
+            <p style="text-align:center;color:var(--text-muted);font-size:0.9rem;font-style:italic;" id="strengthInterpretation"></p>
+          </div>
+
+          <div id="manuritasTraits" style="margin-bottom:20px;"></div>
+
+          <div style="text-align:center;margin:24px 0;"><div class="token-badge"><i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span></div></div>
+
+          <div style="text-align:center;margin-top:24px;">
+            <button class="btn-premium pulse" id="unlockManuritasBtn"><i class="fas fa-unlock-alt"></i> BUKA ANALISIS MANURITAS LENGKAP</button>
+            <p style="margin-top:12px;font-size:0.8rem;color:var(--text-dim);"><i class="fas fa-gift"></i> GRATIS! Klik untuk membuka semua analisis</p>
+          </div>
+        </div>
+
+        <div id="manuritasPremiumContent" class="hidden"></div>
+
+        <!-- GENERATOR -->
+        <div id="nameGeneratorSection" class="hidden" style="margin-top:32px;">
+          <h3 style="text-align:center;margin-bottom:20px;font-family:'Cormorant Garamond',serif;color:var(--gold-light);"><i class="fas fa-magic"></i> Generator Nama Selaras</h3>
+          <p style="text-align:center;margin-bottom:20px;color:var(--text-muted);">Nama Anda saat ini memiliki kekuatan <strong id="currentStrengthDisplay">-</strong>. Pilih paket untuk mendapatkan nama baru.</p>
+
+          <div class="package-card package-silver" id="packageSilver">
+            <div><h4 style="margin-bottom:4px;color:#C0C0C0;">🥈 SILVER</h4><p style="color:var(--text-muted);font-size:0.85rem;">Target 60-74%</p></div>
+            <div style="display:flex;align-items:center;gap:16px;"><span style="color:var(--success);font-weight:600;"><i class="fas fa-gift"></i> GRATIS</span><button class="btn-outline-gold" onclick="window.loadNameOptions('silver')"><i class="fas fa-magic"></i> Dapatkan</button></div>
+          </div>
+          <div class="package-card package-gold">
+            <div><h4 style="margin-bottom:4px;color:var(--gold);">🥇 GOLD</h4><p style="color:var(--text-muted);font-size:0.85rem;">Target 75-89%</p></div>
+            <div style="display:flex;align-items:center;gap:16px;"><span style="color:var(--success);font-weight:600;"><i class="fas fa-gift"></i> GRATIS</span><button class="btn-premium" onclick="window.loadNameOptions('gold')">Dapatkan</button></div>
+          </div>
+          <div class="package-card package-platinum">
+            <div><h4 style="margin-bottom:4px;color:var(--success);">💎 PLATINUM</h4><p style="color:var(--text-muted);font-size:0.85rem;">Target 90-100%</p></div>
+            <div style="display:flex;align-items:center;gap:16px;"><span style="color:var(--success);font-weight:600;"><i class="fas fa-gift"></i> GRATIS</span><button class="btn-premium" onclick="window.loadNameOptions('platinum')" style="background:linear-gradient(135deg,var(--success),#4CAF50);color:#0A0A0C;">Dapatkan</button></div>
+          </div>
+          <div id="nameOptionsContainer" style="margin-top:24px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cross-sell">
+    <h4>🔮 Ingin Ramalan Lengkap?</h4>
+    <p>Coba <strong>Ramalan Bintang</strong> — analisis Zodiak, Shio, Weton, dan Wuku khusus untuk tanggal lahirmu.</p>
+    <a href="ramalan.html" class="btn-link"><i class="fas fa-crystal-ball"></i> Coba Ramalan Bintang Gratis</a>
+  </div>
+
+  <footer class="footer">
+    <div>© 2026 Oracle Nusantara. Seluruh konten untuk hiburan & refleksi diri.</div>
+    <div><a href="disclaimer.html">Disclaimer</a><a href="privacy.html">Privasi</a><a href="dukung.html">Dukung kami</a><a href="mailto:halo@oracle-nusantara.com">Kontak</a></div>
+  </footer>
+</div>
+
+<script src="../js/calculator.js"></script>
+<script src="../js/data-loader.js"></script>
+<script src="../js/ui-controller.js"></script>
+<script src="../js/premium.js"></script>
+<script src="../js/manuritas.js"></script>
+<script src="../js/manuritas-generator.js"></script>
+
+<script>
+'use strict';
+
+// ========== GLOBAL STATE ==========
+let calendarData=null,wetonData=null,numerologyData=null;
+let currentUserData=null,currentManuritasResult=null,manuritasUnlocked=false;
+let warnaKeberuntunganData=null,kristalData=null,jurusanKuliahData=null;
+let bidangUsahaData=null,pekerjaanData=null,pasanganIdealData=null;
+let partnerBisnisData=null,afirmasiData=null,jalurRezekiData=null;
+let radarChart=null,pieChart=null;
+
+const elements={};
+
+function initDOMElements(){
+  elements.fullName=document.getElementById('fullName');
+  elements.birthDate=document.getElementById('birthDate');
+  elements.analyzeBtn=document.getElementById('analyzeBtn');
+  elements.resultSection=document.getElementById('resultSection');
+  elements.numerologySection=document.getElementById('numerologySection');
+  elements.numerologyGrid=document.getElementById('numerologyGrid');
+  elements.powerName=document.getElementById('powerName');
+  elements.numerologyExplanation=document.getElementById('numerologyExplanation');
+  elements.manuritasSection=document.getElementById('manuritasSection');
+  elements.hanacarakaTotal=document.getElementById('hanacarakaTotal');
+  elements.hanacarakaElement=document.getElementById('hanacarakaElement');
+  elements.nameStrengthValue=document.getElementById('nameStrengthValue');
+  elements.nameStrengthLabel=document.getElementById('nameStrengthLabel');
+  elements.nameStrengthBar=document.getElementById('nameStrengthBar');
+  elements.strengthInterpretation=document.getElementById('strengthInterpretation');
+  elements.manuritasTraits=document.getElementById('manuritasTraits');
+  elements.unlockManuritasBtn=document.getElementById('unlockManuritasBtn');
+  elements.manuritasPremiumContent=document.getElementById('manuritasPremiumContent');
+  elements.manuritasFreeContent=document.getElementById('manuritasFreeContent');
+  elements.nameGeneratorSection=document.getElementById('nameGeneratorSection');
+}
+
+function showLoading(s){const o=document.getElementById('loadingOverlay');if(o)o.style.display=s?'flex':'none';}
+function showErrorToast(m){alert('❌ '+m);}
+function showSuccessToast(m){alert('✅ '+m);}
+async function updateTokenDisplay(){const s=document.getElementById('tokenBalanceSpan');if(s)s.textContent=localStorage.getItem('tokenBalance')||'0';}
+async function fetchJSON(p){const r=await fetch(p);if(!r.ok)throw new Error(`HTTP ${r.status}`);return await r.json();}
+
+function seededRandom(seed){let x=Math.sin(seed)*10000;return x-Math.floor(x);}
+function shuffleArray(arr,seed){const s=[...arr];for(let i=s.length-1;i>0;i--){const j=Math.floor(seededRandom(seed+i)*(i+1));[s[i],s[j]]=[s[j],s[i]];}return s;}
+function pickRandom(arr,count,seed){return shuffleArray(arr,seed).slice(0,count);}
+
+// ========== LOAD DATA ==========
+async function loadAllPageData(){
+  showLoading(true);
+  try{
+    const basicData=await loadAllData();
+    calendarData=basicData.calendar;wetonData=basicData.weton;numerologyData=basicData.numerology;
+    if(typeof loadAllManuritasData==='function'){
+      const md=await loadAllManuritasData();
+      window.positiveSyllablesData=md.positiveSyllables;
+      window.manuritasTraitsData=md.manuritasTraits;
+      window.manuritasExtremeData=md.manuritasExtreme;
+    }
+    // Load satu per satu — 1 gagal tidak menggagalkan semua
+    try{warnaKeberuntunganData=await fetchJSON('../data/warna-keberuntungan.json');}catch(e){console.warn('warna:',e.message);}
+    try{kristalData=await fetchJSON('../data/kristal.json');}catch(e){console.warn('kristal:',e.message);}
+    try{jurusanKuliahData=await fetchJSON('../data/jurusan-kuliah.json');}catch(e){console.warn('jurusan:',e.message);}
+    try{bidangUsahaData=await fetchJSON('../data/bidang-usaha.json');}catch(e){console.warn('usaha:',e.message);}
+    try{pekerjaanData=await fetchJSON('../data/pekerjaan.json');}catch(e){console.warn('pekerjaan:',e.message);}
+    try{afirmasiData=await fetchJSON('../data/afirmasi.json');}catch(e){console.warn('afirmasi:',e.message);}
+    try{pasanganIdealData=await fetchJSON('../data/pasangan-ideal.json');}catch(e){console.warn('pasangan:',e.message);}
+    try{partnerBisnisData=await fetchJSON('../data/partner-bisnis.json');}catch(e){console.warn('partner:',e.message);}
+    try{jalurRezekiData=await fetchJSON('../data/manuritas-jalur-rezeki.json');}catch(e){console.warn('rezeki:',e.message);}
+    console.log('✅ All data loaded');
+  }catch(e){console.error('❌ Gagal:',e);throw e;}
+  finally{showLoading(false);}
+}
+
+// ========== NUMEROLOGI ==========
+function displayNumerology(fullName){
+  if(!fullName||!numerologyData){elements.numerologySection.classList.add('hidden');return;}
+  try{
+    const num=calculateNumerology(fullName);
+    if(!num){elements.numerologySection.classList.add('hidden');return;}
+    function getData(n){
+      if(n===11||n===22||n===33)return numerologyData.angka_master?.[n.toString()]||null;
+      return numerologyData.angka_dasar?.[n.toString()]||null;
+    }
+    const soul=getData(num.soul_urge),pers=getData(num.personality),dest=getData(num.destiny);
+    
+    // Grid cards
+    elements.numerologyGrid.innerHTML=`
+      <div class="numerology-card"><div class="numerology-icon"><i class="fas fa-heart"></i></div><div class="numerology-label">Angka Jiwa</div><div class="numerology-value">${num.soul_urge}</div><div class="numerology-desc">${soul?.judul||'-'}</div></div>
+      <div class="numerology-card"><div class="numerology-icon"><i class="fas fa-mask"></i></div><div class="numerology-label">Angka Kepribadian</div><div class="numerology-value">${num.personality}</div><div class="numerology-desc">${pers?.judul||'-'}</div></div>
+      <div class="numerology-card"><div class="numerology-icon"><i class="fas fa-star"></i></div><div class="numerology-label">Angka Takdir</div><div class="numerology-value">${num.destiny}</div><div class="numerology-desc">${dest?.judul||'-'}</div></div>
+    `;
+    elements.powerName.textContent=num.power_name||'Sang Pencari';
+    
+    function fmt(d,n){
+      if(!d||!d.judul)return `<p style="color:var(--text-muted);">Data tidak tersedia untuk angka ${n}.</p>`;
+      let h='';
+      h+=`<p style="margin-bottom:6px;"><strong style="color:var(--gold-light);">${d.judul}</strong></p>`;
+      if(d.power)h+=`<p style="margin-bottom:3px;font-size:0.9rem;">⚡ <strong>Kekuatan:</strong> ${d.power}</p>`;
+      if(d.unsur)h+=`<p style="margin-bottom:3px;font-size:0.9rem;">🌿 <strong>Unsur:</strong> ${d.unsur}</p>`;
+      if(d.planets)h+=`<p style="margin-bottom:3px;font-size:0.9rem;">🪐 <strong>Planet:</strong> ${d.planets}</p>`;
+      if(d.karir_cocok)h+=`<p style="margin-bottom:3px;font-size:0.9rem;">💼 <strong>Karir Cocok:</strong> ${d.karir_cocok}</p>`;
+      if(d.kesehatan)h+=`<p style="margin-bottom:3px;font-size:0.9rem;">🏥 <strong>Kesehatan:</strong> ${d.kesehatan}</p>`;
+      if(d.keuangan)h+=`<p style="margin-bottom:3px;font-size:0.9rem;">💰 <strong>Keuangan:</strong> ${d.keuangan}</p>`;
+      if(d.deskripsi)h+=`<p style="margin-bottom:3px;font-size:0.9rem;">📖 ${d.deskripsi}</p>`;
+      return h;
+    }
+    
+    elements.numerologyExplanation.innerHTML=`
+      <h4 style="color:var(--gold-light);margin-bottom:16px;font-family:'Cormorant Garamond',serif;"><i class="fas fa-info-circle"></i> Makna Angkamu</h4>
+      <div style="margin-bottom:16px;padding:16px;background:rgba(15,15,20,0.5);border-radius:8px;border-left:4px solid #FF6B8A;"><p style="margin-bottom:8px;"><strong style="color:#FF6B8A;">❤️ Angka Jiwa ${num.soul_urge}</strong></p>${fmt(soul,num.soul_urge)}</div>
+      <div style="margin-bottom:16px;padding:16px;background:rgba(15,15,20,0.5);border-radius:8px;border-left:4px solid var(--gold);"><p style="margin-bottom:8px;"><strong style="color:var(--gold);">🎭 Angka Kepribadian ${num.personality}</strong></p>${fmt(pers,num.personality)}</div>
+      <div style="padding:16px;background:rgba(15,15,20,0.5);border-radius:8px;border-left:4px solid var(--success);"><p style="margin-bottom:8px;"><strong style="color:var(--success);">⭐ Angka Takdir ${num.destiny}</strong></p>${fmt(dest,num.destiny)}</div>
+    `;
+    elements.numerologySection.classList.remove('hidden');
+  }catch(e){elements.numerologySection.classList.add('hidden');}
+}
+
+// ========== MANURITAS FREE ==========
+async function displayManuritasFree(fullName){
+  const md={
+    tugasHidup:{templates:[]},watak:{templates:[]},titikLuka:{templates:[]},jalurRezeki:{templates:[]},
+    kelebihan:window.manuritasTraitsData?.templates?.filter(t=>t.type==='kelebihan')||[],
+    kekurangan:window.manuritasTraitsData?.templates?.filter(t=>t.type==='kekurangan')||[],
+    saran:{templates:[]},petaEnergi:{physical:[],psychological:[]},
+    extreme:window.manuritasExtremeData||{templates:[]}
+  };
+  try{
+    const w=(currentUserData?.weton)||{neptu:10,saptawara:'Sukra',pancawara:'Umanis'};
+    const wk=(currentUserData?.wuku)||{urip:5,name:'Sinta',element:'Api'};
+    const result=await calculateManuritas(fullName,w,wk,md);
+    if(!result){elements.manuritasSection.classList.add('hidden');return;}
+    currentManuritasResult=result;window.currentManuritasResult=result;
+    
+    elements.hanacarakaTotal.textContent=result.hanacaraka?.total||'-';
+    elements.hanacarakaElement.innerHTML=`<i class="fas fa-fire"></i> Elemen Dominan: <strong>${result.hanacaraka?.dominantElement||'-'}</strong>`;
+    
+    const st=result.strength||{score:0,label:'-',interpretation:''};
+    elements.nameStrengthValue.textContent=st.score+'%';
+    elements.nameStrengthLabel.textContent=st.label;
+    elements.nameStrengthBar.style.width=st.score+'%';
+    elements.strengthInterpretation.textContent=st.interpretation||'';
+    
+    const lbl=elements.nameStrengthLabel;
+    if(st.score>=75)lbl.style.color='var(--success)';
+    else if(st.score>=60)lbl.style.color='var(--gold)';
+    else if(st.score>=40)lbl.style.color='var(--warning)';
+    else lbl.style.color='var(--danger)';
+    
+    let th='';
+    if(st.score>=60){
+      const kl=result.kelebihan||[];
+      th+='<div class="highlight-box"><h4 style="color:var(--success);"><i class="fas fa-check-circle"></i> Kelebihan Nama</h4>';
+      if(kl.length>0)kl.forEach(k=>{th+=`<p style="color:var(--text-muted);margin-bottom:6px;">• ${k.text}</p>`;});
+      else th+='<p style="color:var(--text-muted);">Nama memiliki energi yang cukup harmonis.</p>';
+      th+='</div>';
+    }else{
+      const kk=result.kekurangan||[];
+      th+='<div class="warning-box"><h4 style="color:var(--warning);"><i class="fas fa-exclamation-triangle"></i> Area yang Perlu Diperkuat</h4>';
+      if(kk.length>0)kk.forEach(k=>{th+=`<p style="color:var(--text-muted);margin-bottom:6px;">• ${k.text}</p>`;});
+      else th+='<p style="color:var(--text-muted);">Nama perlu diperkuat untuk hasil optimal.</p>';
+      th+='</div>';
+    }
+    const sr=result.saran||[];
+    if(sr.length>0){
+      th+='<div class="info-box"><h4 style="color:var(--gold);"><i class="fas fa-lightbulb"></i> Saran Penyempurnaan</h4>';
+      sr.forEach(s=>{th+=`<p style="color:var(--text-muted);margin-bottom:4px;">💡 ${s.text} <em style="color:var(--text-dim);">${s.example||''}</em></p>`;});
+      th+='</div>';
+    }
+    elements.manuritasTraits.innerHTML=th;
+    
+    elements.manuritasSection.classList.remove('hidden');
+    elements.manuritasFreeContent.classList.remove('hidden');
+    elements.manuritasPremiumContent.classList.add('hidden');
+    elements.nameGeneratorSection.classList.add('hidden');
+    manuritasUnlocked=false;
+  }catch(e){console.error('Manuritas error:',e);elements.manuritasSection.classList.add('hidden');}
+}
+
+// ========== MANURITAS PREMIUM ==========
+function displayManuritasPremium(){
+  if(!currentManuritasResult)return;
+  const r=currentManuritasResult;
+  const fn=elements.fullName?.value?.trim()||'Sang Pencari';
+  const np=currentUserData?.weton?.neptu||10;
+  const el=r.hanacaraka?.dominantElement||'Tanah';
+  const ht=r.hanacaraka?.total||50;
+  const seed=fn.length*1000+np*100+ht;
+  
+  const rzt=jalurRezekiData?.templates||[];
+  const rz=rzt.length>0?rzt[seed%rzt.length]:{name:'Sang Pencari',description:'Jalur rezeki yang unik.',fields:['Eksplorasi berbagai bidang'],source:'Multi-talenta',ritual_rezeki:'Temukan passion-mu.'};
+  
+  const allPkj=pekerjaanData?.jobs?.[el]?.fields||['Manager','Analis','Konsultan'];
+  const allUsh=bidangUsahaData?.businesses?.[el]||['Konsultan','Toko Online'];
+  const allJrs=jurusanKuliahData?.recommendations?.[el]||['Manajemen','Psikologi'];
+  const allKrs=kristalData?.crystals?.[el];
+  const allWrn=warnaKeberuntunganData?.colors?.[el]||{primary:['Emas'],avoid:['Hitam']};
+  const allPsg=pasanganIdealData?.partners?.[el]||{traits:['Setia'],description:'Pasangan yang mendukung.'};
+  const allPrt=partnerBisnisData?.partners?.[el]||{needs:['Visioner'],description:'Partner yang melengkapi.'};
+  const allAfr=afirmasiData?.affirmations?.[el]||['Aku selaras dengan energi semesta.'];
+  
+  const pkj=pickRandom(allPkj,5,seed+1);
+  const ush=pickRandom(allUsh,3,seed+2);
+  const jrs=pickRandom(allJrs,5,seed+3);
+  const afr=pickRandom(allAfr,1,seed+4)[0];
+  
+  const ln=[(np*7+seed)%100,(ht*3+seed)%100,((np+ht)*5+seed)%100,(np*ht+seed)%100].map(n=>n<10?'0'+n:''+n);
+  
+  const html=`
+    <div style="margin-top:24px;animation:fadeIn 0.5s ease;">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:24px;">
+        <h3 style="color:var(--gold-light);margin:0;"><i class="fas fa-crown" style="color:var(--gold);"></i> Analisis Manuritas Premium</h3>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;"><button class="btn-share" onclick="shareManuritas()"><i class="fas fa-share-alt"></i> Bagikan</button><button class="btn-pdf" onclick="downloadManuritasPDF()"><i class="fas fa-download"></i> Unduh PDF</button></div>
+      </div>
+      
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-scroll"></i> Rangkuman Cetak Biru Dirimu</h4>
+        <p style="text-align:justify;margin-bottom:12px;"><strong style="color:var(--gold);">✨ Getaran Namamu:</strong> Nama "<strong>${r.name}</strong>" memiliki total nilai Hanacaraka sebesar <strong>${ht}</strong> poin energetik dengan dominasi elemen <strong>${el}</strong>. Kekuatan nama mencapai <strong>${r.strength.score}% (${r.strength.label})</strong>.</p>
+        <p style="text-align:justify;margin-bottom:12px;"><strong style="color:var(--gold);">🎯 Misi Utama:</strong> Hadir sebagai "<strong>${r.tugasHidup?.name||'Sang Pencari Jati Diri'}</strong>" — ${r.tugasHidup?.description||'menemukan makna hidup melalui pengalaman.'}</p>
+        <p style="text-align:justify;margin-bottom:12px;"><strong style="color:var(--gold);">💰 Jalur Rezeki:</strong> Kamu adalah <strong>${rz.name}</strong>. ${rz.description}</p>
+        <p style="text-align:justify;"><strong style="color:var(--success);">💫 Saran:</strong> ${r.strength.score<60?'Pertimbangkan Generator Nama Selaras di bawah. ':''}Jaga keseimbangan antara ambisi dan istirahat. Nama adalah doa — ucapkan dengan penuh kesadaran.</p>
+      </div>
+      
+      <div class="analysis-section-card">
+        <h4><i class="fas fa-chart-pie"></i> Visualisasi Energi Nama</h4>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;"><div><canvas id="radarChart" width="200" height="200"></canvas></div><div><canvas id="pieChart" width="200" height="200"></canvas></div></div>
+        <p style="text-align:center;margin-top:12px;">Elemen Dominan: <strong style="color:var(--gold);">${el}</strong></p>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="analysis-section-card"><h4><i class="fas fa-bullseye"></i> Tugas Hidup</h4><p style="font-size:1.3rem;color:var(--gold-light);font-family:'Cormorant Garamond',serif;">${r.tugasHidup?.name||'Sang Pencari Jati Diri'}</p><p>${r.tugasHidup?.description||'Menemukan makna hidup.'}</p></div>
+        <div class="analysis-section-card"><h4><i class="fas fa-coins"></i> Jalur Rezeki: ${rz.name}</h4><p>${rz.description}</p><p style="margin-top:8px;"><strong>Sumber:</strong> ${rz.source||'-'}</p><p><strong>Bidang Cocok:</strong> ${rz.fields?.join(', ')||'-'}</p>${rz.ritual_rezeki?`<div class="ritual-box"><p style="margin:0;font-size:0.9rem;"><strong>🔮 Ritual Rezeki:</strong> ${rz.ritual_rezeki}</p></div>`:''}</div>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        ${r.titikLuka?`<div class="analysis-section-card"><h4><i class="fas fa-heart-broken" style="color:var(--danger);"></i> Titik Luka Batin</h4><p><strong>Usia:</strong> ${r.titikLuka.age||'-'}</p><p><strong>Penyebab:</strong> ${r.titikLuka.cause||r.titikLuka.event||'-'}</p><p><strong>Penyembuhan:</strong> ${r.titikLuka.healing||'-'}</p></div>`:''}
+        ${r.petaEnergi?.physical?.length>0?`<div class="analysis-section-card"><h4><i class="fas fa-heartbeat"></i> Peta Kerentanan Fisik</h4><p><strong>Area:</strong> ${r.petaEnergi.physical[0]?.area||'-'}</p><p>${r.petaEnergi.physical[0]?.description||''}</p><p><strong>💡 Preventif:</strong> ${r.petaEnergi.physical[0]?.prevention||'-'}</p></div>`:''}
+      </div>
+      
+      <div class="analysis-section-card"><h4><i class="fas fa-graduation-cap"></i> Rekomendasi Pendidikan & Karir</h4><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;"><div class="info-box"><p><strong>📚 Jurusan Kuliah:</strong></p><p>${jrs.join(', ')}</p></div><div class="info-box"><p><strong>💼 Bidang Pekerjaan:</strong></p><p>${pkj.join(', ')}</p></div><div class="info-box"><p><strong>🚀 Bidang Usaha:</strong></p><p>${ush.join(', ')}</p></div></div></div>
+      
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="analysis-section-card"><h4><i class="fas fa-heart"></i> Pasangan Ideal</h4><p>${allPsg.description}</p><p><strong>Karakter:</strong> ${allPsg.traits?.join(', ')||'Setia, Pengertian'}</p></div>
+        <div class="analysis-section-card"><h4><i class="fas fa-handshake"></i> Partner Bisnis Ideal</h4><p>${allPrt.description}</p><p><strong>Butuh Partner:</strong> ${allPrt.needs?.join(', ')||'Visioner, Terstruktur'}</p></div>
+      </div>
+      
+      <div class="analysis-section-card"><h4><i class="fas fa-clover"></i> Keberuntungan Anda</h4><div class="lucky-grid">${ln.map((n,i)=>`<div class="lucky-item"><div class="number">${n}</div><div class="label">Angka ${['Jiwa','Kepribadian','Takdir','Keberuntungan'][i]}</div></div>`).join('')}</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;"><div class="info-box"><p><strong>🎨 Warna:</strong> ${allWrn.primary?.join(', ')||'Emas'}</p><p style="font-size:0.85rem;">Hindari: ${allWrn.avoid?.join(', ')||'-'}</p></div><div class="info-box"><p><strong>💎 Kristal:</strong> ${allKrs?.name||'Clear Quartz'}</p><p style="font-size:0.85rem;">${allKrs?.benefits||'Membersihkan energi.'}</p></div></div></div>
+      
+      ${r.extreme?.length>0?`<div class="analysis-section-card"><h4><i class="fas fa-exclamation-triangle" style="color:var(--danger);"></i> Peringatan Energetik</h4>${r.extreme.map(ex=>`<div class="warning-box"><p><strong>⚠️ ${ex.type?.toUpperCase()||'PERINGATAN'} (Level: ${ex.level||'Sedang'})</strong></p><p style="font-size:0.9rem;">${ex.description||''}</p><p style="font-size:0.85rem;color:var(--danger);"><em>💡 ${ex.advice||''}</em></p></div>`).join('')}<p style="font-size:0.75rem;color:var(--text-dim);margin-top:8px;">⚠️ Ini adalah peta energi, BUKAN vonis takdir.</p></div>`:''}
+      
+      <div class="analysis-section-card"><h4><i class="fas fa-quote-right"></i> Afirmasi Harian</h4><p style="font-size:1.1rem;color:var(--gold-light);font-style:italic;text-align:center;">"${afr}"</p></div>
+      
+      <div style="display:flex;justify-content:center;gap:16px;margin-top:24px;flex-wrap:wrap;"><span class="badge-premium"><i class="fas fa-crown"></i> Premium</span><span class="badge-premium"><i class="fas fa-medal"></i> Analisis Lengkap</span></div>
+      <p style="text-align:right;font-style:italic;color:var(--text-dim);margin-top:16px;">— Dianalisis oleh Oracle Nusantara —</p>
+    </div>
+  `;
+  
+  elements.manuritasPremiumContent.innerHTML=html;
+  elements.manuritasPremiumContent.classList.remove('hidden');
+  elements.manuritasFreeContent.classList.add('hidden');
+  elements.nameGeneratorSection.classList.remove('hidden');
+  if(typeof updateGeneratorPackages==='function')updateGeneratorPackages(r.strength.score);
+  manuritasUnlocked=true;
+  setTimeout(()=>{renderRadarChart();renderPieChart();},300);
+}
+
+function renderRadarChart(){
+  const c=document.getElementById('radarChart');if(!c)return;
+  const ctx=c.getContext('2d');if(!ctx)return;
+  if(radarChart)radarChart.destroy();
+  const fn=elements.fullName?.value?.trim()||'';
+  const scores=calcScores(fn);
+  radarChart=new Chart(ctx,{type:'radar',data:{labels:Object.keys(scores),datasets:[{label:'Profil Energetik',data:Object.values(scores),backgroundColor:'rgba(212,175,55,0.2)',borderColor:'#D4AF37',borderWidth:2,pointBackgroundColor:'#D4AF37',pointRadius:4}]},options:{responsive:true,maintainAspectRatio:true,scales:{r:{min:0,max:100,ticks:{stepSize:20,color:'#A0A0B0'},grid:{color:'rgba(212,175,55,0.1)'},pointLabels:{color:'#C0C0D0',font:{size:11}}}},plugins:{legend:{display:false}}}});
+}
+function renderPieChart(){
+  const c=document.getElementById('pieChart');if(!c)return;
+  const ctx=c.getContext('2d');if(!ctx)return;
+  if(pieChart)pieChart.destroy();
+  const ec=currentManuritasResult?.hanacaraka?.elementCount||{Api:25,Air:20,Tanah:20,Kayu:15,Logam:10,Udara:10};
+  const colors={Api:'#FF6B6B',Air:'#4ECDC4',Tanah:'#C7B198',Kayu:'#96C93D',Logam:'#9B59B6',Udara:'#BDC3C7'};
+  const labels=Object.keys(ec),data=Object.values(ec);
+  pieChart=new Chart(ctx,{type:'doughnut',data:{labels,datasets:[{data,backgroundColor:labels.map(l=>colors[l]||'#D4AF37'),borderColor:'#0A0A0C',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:true,cutout:'55%',plugins:{legend:{position:'bottom',labels:{color:'#C0C0D0',font:{size:11},padding:12}}}}});
+}
+function calcScores(fn){
+  const s={Kepemimpinan:50,Kreativitas:50,Stabilitas:50,Intuisi:50,Komunikasi:50,Spiritualitas:50};
+  if(!fn)return s;
+  const cn=fn.toLowerCase().replace(/[^a-z]/g,'');
+  const km={Kepemimpinan:['a','ra','ja','pa'],Kreativitas:['ca','ka','da'],Stabilitas:['ta','ma','ga'],Intuisi:['na','ya','la'],Komunikasi:['sa','wa','e'],Spiritualitas:['ha','nya','nga']};
+  for(let[cat,chars]of Object.entries(km)){let count=0;for(let c of chars)count+=(cn.match(new RegExp(c,'g'))||[]).length;s[cat]=Math.min(100,40+count*8);}
+  return s;
+}
+
+function shareManuritas(){
+  const n=elements.fullName.value.trim()||'Sang Pencari';
+  const sc=currentManuritasResult?.strength?.score||0;
+  window.open(`https://wa.me/?text=${encodeURIComponent('✨ Analisis Manuritas: '+n+' - Kekuatan '+sc+'%. Cek punyamu di '+window.location.origin+'/pages/manuritas.html')}`,'_blank');
+  showSuccessToast('📤 Dibagikan!');
+}
+async function downloadManuritasPDF(){
+  if(!manuritasUnlocked){showErrorToast('Buka Analisis Premium dulu.');return;}
+  try{
+    const{jsPDF}=window.jspdf;const pdf=new jsPDF('p','mm','a4');
+    const un=elements.fullName.value.trim()||'Sang Pencari';
+    pdf.setFontSize(22);pdf.setTextColor(212,175,55);pdf.text('Oracle Nusantara',105,20,{align:'center'});
+    pdf.setFontSize(14);pdf.setTextColor(0,0,0);pdf.text(`Analisis Manuritas - ${un}`,105,30,{align:'center'});
+    pdf.line(20,35,190,35);
+    let y=45;pdf.setFontSize(10);pdf.setTextColor(0,0,0);
+    const ct=elements.manuritasPremiumContent;const ls=pdf.splitTextToSize(ct?.innerText||'',170);
+    for(let l of ls){if(y>270){pdf.addPage();y=20;}pdf.text(l,20,y);y+=5;}
+    pdf.save(`Oracle-Manuritas-${un}.pdf`);showSuccessToast('📄 PDF diunduh!');
+  }catch(e){showErrorToast('Gagal unduh PDF.');}
+}
+
+async function handleAnalyze(){
+  const fn=elements.fullName.value.trim();
+  if(!fn){showErrorToast('Masukkan nama lengkap.');return;}
+  showLoading(true);
+  try{
+    const bv=elements.birthDate.value;
+    if(bv&&calendarData&&wetonData){currentUserData=await calculateAll(bv,calendarData,wetonData);}
+    else{currentUserData={weton:{neptu:10,saptawara:'Sukra',pancawara:'Umanis'},wuku:{name:'Sinta',urip:5,element:'Api'}};}
+    displayNumerology(fn);await displayManuritasFree(fn);
+    elements.resultSection.classList.remove('hidden');manuritasUnlocked=false;
+    elements.resultSection.scrollIntoView({behavior:'smooth'});
+  }catch(e){console.error('Error:',e);showErrorToast('Terjadi kesalahan.');}
+  finally{showLoading(false);}
+}
+function handleUnlockManuritas(){displayManuritasPremium();showSuccessToast('✨ Analisis Premium dibuka!');}
+
+async function init(){
+  initDOMElements();
+  const td=new Date();elements.birthDate.value=`${td.getFullYear()}-${String(td.getMonth()+1).padStart(2,'0')}-${String(td.getDate()).padStart(2,'0')}`;
+  try{await loadAllPageData();}catch(e){return;}
+  updateTokenDisplay();
+  elements.analyzeBtn.addEventListener('click',handleAnalyze);
+  elements.unlockManuritasBtn.addEventListener('click',handleUnlockManuritas);
+  window.downloadManuritasPDF=downloadManuritasPDF;window.shareManuritas=shareManuritas;
+  console.log('✅ Manuritas FINAL SUPER PREMIUM ready');
+}
+document.addEventListener('DOMContentLoaded',init);
+</script>
+</body>
+</html>
