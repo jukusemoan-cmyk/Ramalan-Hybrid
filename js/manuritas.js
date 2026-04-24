@@ -262,11 +262,11 @@ function getTitikLuka(hanacarakaTotal, neptu, titikLukaData) {
 /**
  * Memilih template Jalur Rezeki
  */
-function getJalurRezeki(hanacarakaTotal, jalurRezekiData) {
-    if (!jalurRezekiData || !jalurRezekiData.templates) return null;
-    
-    const mod = hanacarakaTotal % jalurRezekiData.templates.length;
-    return jalurRezekiData.templates[mod] || jalurRezekiData.templates[0];
+function getJalurRezeki(hanacarakaTotal, neptu, name, jalurRezekiData) {
+    // Hash kombinasi: nama + neptu + total untuk hasil unik
+    const seed = (name || '').length + neptu + hanacarakaTotal;
+    const index = seed % jalurRezekiData.templates.length;
+    return jalurRezekiData.templates[index];
 }
 
 /**
