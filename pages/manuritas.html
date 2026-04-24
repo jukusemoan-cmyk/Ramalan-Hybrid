@@ -436,25 +436,16 @@
         }
         
         try {
-          [warnaKeberuntunganData, kristalData, jurusanKuliahData, 
-           bidangUsahaData, pekerjaanData, afirmasiData, 
-           pasanganIdealData, partnerBisnisData, jalurRezekiData] = await Promise.all([
-            fetchJSON('../data/warna-keberuntungan.json'),
-            fetchJSON('../data/kristal.json'),
-            fetchJSON('../data/jurusan-kuliah.json'),
-            fetchJSON('../data/bidang-usaha.json'),
-            fetchJSON('../data/pekerjaan.json'),
-            fetchJSON('../data/afirmasi.json'),
-            fetchJSON('../data/pasangan-ideal.json'),
-            fetchJSON('../data/partner-bisnis.json'),
-            fetchJSON('../data/manuritas-jalur-rezeki.json')
-          ]);
-        } catch(e) { console.warn('Beberapa data tambahan tidak ditemukan:', e.message); }
-        
-        console.log('✅ All data loaded');
-      } catch(e) { console.error('❌ Gagal load:', e); throw e; }
-      finally { showLoading(false); }
-    }
+        // Load satu per satu — 1 gagal tidak menggagalkan semua
+try { warnaKeberuntunganData = await fetchJSON('../data/warna-keberuntungan.json'); } catch(e) { console.warn('⚠️ warna:', e.message); }
+try { kristalData = await fetchJSON('../data/kristal.json'); } catch(e) { console.warn('⚠️ kristal:', e.message); }
+try { jurusanKuliahData = await fetchJSON('../data/jurusan-kuliah.json'); } catch(e) { console.warn('⚠️ jurusan:', e.message); }
+try { bidangUsahaData = await fetchJSON('../data/bidang-usaha.json'); } catch(e) { console.warn('⚠️ usaha:', e.message); }
+try { pekerjaanData = await fetchJSON('../data/pekerjaan.json'); } catch(e) { console.warn('⚠️ pekerjaan:', e.message); }
+try { afirmasiData = await fetchJSON('../data/afirmasi.json'); } catch(e) { console.warn('⚠️ afirmasi:', e.message); }
+try { pasanganIdealData = await fetchJSON('../data/pasangan-ideal.json'); } catch(e) { console.warn('⚠️ pasangan:', e.message); }
+try { partnerBisnisData = await fetchJSON('../data/partner-bisnis.json'); } catch(e) { console.warn('⚠️ partner:', e.message); }
+try { jalurRezekiData = await fetchJSON('../data/manuritas-jalur-rezeki.json'); } catch(e) { console.warn('⚠️ jalur rezeki:', e.message); }
     
     // ========== NUMEROLOGI ==========
     function displayNumerology(fullName) {
