@@ -354,14 +354,20 @@ function getTenGodIcon(godId) {
 }
 
 function getTenGodInterpretation(godId, pillar) {
-  const deep = {
-    'direct_officer': { year: 'Sejak kecil menghormati otoritas dan aturan. Figur ayah atau kakek sangat berpengaruh.', month: 'Karir stabil dan terstruktur. Cocok di pemerintahan atau korporasi besar.', day: 'Pasangan yang bertanggung jawab dan setia. Hubungan dibangun di atas komitmen.', hour: 'Anak-anak yang disiplin dan berprestasi. Masa tua dihormati banyak orang.' },
-    'seven_killings': { year: 'Masa kecil penuh tantangan yang membentuk mental baja.', month: 'Karir penuh persaingan — justru ini yang memacumu menjadi yang terbaik.', day: 'Pasangan yang dominan dan penuh gairah. Hubungan penuh dinamika.', hour: 'Anak-anak pemberani dan kompetitif. Akan menjadi pemimpin di bidangnya.' },
-    'friend': { year: 'Masa kecil dikelilingi banyak teman. Belajar dari interaksi sosial.', month: 'Lingkungan kerja kompetitif namun suportif. Jaringan luas adalah kunci.', day: 'Pasangan yang setara — lebih seperti partner hidup sejati.', hour: 'Anak-anak mandiri dan tidak suka dikekang. Akan sukses dengan cara sendiri.' },
-    'direct_wealth': { year: 'Latar belakang keluarga memberikan fondasi finansial yang kuat.', month: 'Penghasilan stabil dan karir yang menghasilkan. Pandai mengelola uang.', day: 'Pasangan yang mapan secara finansial. Kehidupan rumah tangga sejahtera.', hour: 'Masa tua berkecukupan. Warisan untuk anak-anak terjamin.' },
-    'eating_god': { year: 'Bakat kreatif sudah terlihat sejak kecil. Didukung keluarga.', month: 'Karir di bidang kreatif sangat cocok. Produktivitas tinggi.', day: 'Pasangan yang suportif terhadap hobimu. Harmonis dan menyenangkan.', hour: 'Anak-anak kreatif dan berbakat seni. Hobi menjadi sumber rezeki.' }
-  };
-  return deep[godId]?.[pillar] || 'Analisis mendalam untuk pilar ini sedang dikembangkan.';
+    const god = baziTenGods?.ten_gods?.find(g => g.id === godId);
+    if (!god) return 'Interpretasi tidak tersedia.';
+    
+    const pillarMap = {
+        'year': 'in_year',
+        'month': 'in_month',
+        'day': 'in_day',
+        'hour': 'in_hour'
+    };
+    
+    const field = pillarMap[pillar];
+    if (god[field]) return god[field];
+    
+    return `${god.name}: ${god.positive_traits?.slice(0, 3).join(', ') || 'Energi unik'}.`;
 }
 
 function handleReveal() {
