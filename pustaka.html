@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
+  <title>Pustaka Semesta • Oracle Nusantara</title>
+  <meta name="description" content="Ensiklopedia lengkap: Wuku, Weton, Zodiak, Shio, BaZi, dan Primbon Bali.">
+  <meta name="theme-color" content="#0A0A0C">
+  
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/ramalan.css">
+  
+  <style>
+    :root {
+      --gold: #D4AF37; --gold-light: #F3E5AB; --bg-dark: #0A0A0C;
+      --text-muted: #A0A0B0; --text-dim: #606070;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background: #0A0A0C;
+      background-image: radial-gradient(ellipse at 30% 15%, rgba(212,175,55,0.03) 0%, transparent 50%);
+      font-family: 'Inter', sans-serif; color: #E8E8E8; min-height: 100vh; -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .hidden { display: none !important; }
+
+    .navbar {
+      background: rgba(10,10,12,0.97) !important; backdrop-filter: blur(20px);
+      border-bottom: 2px solid var(--gold) !important; padding: 14px 24px !important;
+      display: flex !important; align-items: center !important; justify-content: space-between !important;
+      width: 100% !important; position: sticky !important; top: 0 !important; z-index: 9999 !important;
+    }
+    .navbar .logo a { font-family: 'Cormorant Garamond', serif !important; font-size: 1.5rem !important; font-weight: 700 !important; color: var(--gold) !important; text-decoration: none !important; }
+    .nav-links { display: flex !important; gap: 16px !important; align-items: center !important; flex-wrap: wrap !important; }
+    .nav-links a { color: #E8E8E8 !important; text-decoration: none !important; font-size: 0.85rem !important; transition: color 0.2s !important; }
+    .nav-links a:hover { color: var(--gold) !important; }
+    .nav-links a.active { color: var(--gold) !important; font-weight: 700 !important; }
+
+    .mystic-header { text-align: center; padding: 40px 20px 20px; }
+    .mystic-header .header-icon { font-size: 4rem; margin-bottom: 16px; animation: float 3s ease-in-out infinite; filter: drop-shadow(0 0 30px rgba(212,175,55,0.3)); }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+    .mystic-header h1 { font-family: 'Cormorant Garamond',serif; font-size: clamp(2rem,5vw,3rem); color: var(--gold-light); letter-spacing: 2px; margin-bottom: 8px; }
+    .mystic-header .subtitle { color: var(--text-muted); font-size: 1rem; font-weight: 300; }
+    .header-divider { display:flex;align-items:center;justify-content:center;gap:16px;margin:16px 0;color:var(--gold);font-size:0.7rem;opacity:0.5; }
+    .header-divider::before,.header-divider::after { content:'';width:50px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent); }
+
+    .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; justify-content: center; }
+    .tab-btn {
+      background: rgba(15,15,20,0.7); border: 1.5px solid rgba(212,175,55,0.2); color: var(--text-muted);
+      padding: 10px 20px; border-radius: 50px; cursor: pointer; transition: all 0.3s; font-size: 0.85rem; font-weight: 500;
+    }
+    .tab-btn:hover { border-color: var(--gold); color: var(--gold-light); }
+    .tab-btn.active { background: var(--gold); color: #0A0A0C; border-color: var(--gold); font-weight: 700; box-shadow: 0 8px 25px rgba(212,175,55,0.3); }
+
+    .search-box { margin-bottom: 24px; }
+    .search-box input {
+      width: 100%; background: rgba(15,15,20,0.8); border: 2px solid rgba(212,175,55,0.2);
+      border-radius: 50px; padding: 16px 24px; color: #E5E5E5; font-size: 1rem; transition: all 0.3s;
+    }
+    .search-box input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 25px rgba(212,175,55,0.1); }
+
+    .item-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .pustaka-card {
+      background: rgba(15,15,20,0.7); backdrop-filter: blur(8px); border-radius: 20px; padding: 24px;
+      border: 1px solid rgba(212,175,55,0.12); cursor: pointer; transition: all 0.3s;
+    }
+    .pustaka-card:hover { transform: translateY(-6px); border-color: rgba(212,175,55,0.4); box-shadow: 0 15px 40px rgba(0,0,0,0.5); }
+    .pustaka-card h3 { color: var(--gold); margin-bottom: 8px; font-family: 'Cormorant Garamond',serif; font-size: 1.4rem; }
+    .pustaka-card .sub { color: var(--text-muted); font-size: 0.85rem; }
+    .pustaka-card .preview { margin-top: 12px; font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
+    .pustaka-card .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(212,175,55,0.1); }
+    .pustaka-card .badge-elemen { padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+
+    /* MODAL */
+    .modal {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(10,10,12,0.95); display: flex; align-items: center; justify-content: center;
+      z-index: 10000; padding: 20px;
+    }
+    .modal-content {
+      background: linear-gradient(145deg, #1A1C2B, #0A0A0C); border: 2px solid var(--gold);
+      border-radius: 24px; padding: 36px 32px; max-width: 650px; width: 100%; max-height: 85vh;
+      overflow-y: auto; position: relative;
+    }
+    .modal-close { position: absolute; top: 16px; right: 16px; background: none; border: none; color: var(--gold); font-size: 1.8rem; cursor: pointer; transition: transform 0.2s; }
+    .modal-close:hover { transform: scale(1.2); }
+
+    .token-badge { background: rgba(212,175,55,0.15); border: 1.5px solid rgba(212,175,55,0.3); border-radius: 50px; padding: 10px 20px; display: inline-block; color: var(--gold-light); font-weight: 600; font-size: 0.9rem; }
+
+    .cross-sell { background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02)); border-radius: 24px; padding: 32px; margin-top: 40px; text-align: center; border: 1px solid rgba(212,175,55,0.2); }
+    .cross-sell h4 { font-family: 'Cormorant Garamond',serif; color: var(--gold-light); font-size: 1.4rem; margin-bottom: 8px; }
+    .cross-sell .btn-link { display: inline-block; background: transparent; border: 2px solid var(--gold); color: var(--gold); padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s; margin-top: 12px; }
+    .cross-sell .btn-link:hover { background: var(--gold); color: #0A0A0C; }
+
+    @media (max-width: 600px) { .item-grid { grid-template-columns: 1fr; } .tab-btn { padding: 8px 14px; font-size: 0.78rem; } }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YXEVSNQ04"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9YXEVSNQ04');</script>
+</head>
+<body>
+<div class="container">
+  <nav class="navbar">
+    <div class="logo"><a href="../index.html">ORACLE NUSANTARA</a></div>
+    <div class="nav-links">
+      <a href="../index.html">Beranda</a>
+      <a href="ramalan.html">Ramalan</a>
+      <a href="manuritas.html">Manuritas</a>
+      <a href="kecocokan.html">Kecocokan</a>
+      <a href="bazi.html">BaZi</a>
+      <a href="dewasa-ayu.html">Dewasa Ayu</a>
+      <a href="pustaka.html" class="active">Pustaka</a>
+      <a href="kalender.html">Kalender</a>
+      <a href="dukung.html" style="background:linear-gradient(135deg,#FF6B6B,#FFB8B8);padding:8px 16px;border-radius:20px;color:#0A0A0C!important;font-weight:700;"><i class="fas fa-heart"></i> Dukung</a>
+    </div>
+  </nav>
+
+  <div class="mystic-header">
+    <div class="header-icon">📚</div>
+    <h1>Pustaka Semesta</h1>
+    <p class="subtitle">Jelajahi 107+ entri ensiklopedia: Wuku, Weton, Zodiak, Shio, BaZi, dan Primbon Bali</p>
+    <div class="header-divider"><span>✦</span><span>✦</span><span>✦</span></div>
+  </div>
+
+  <div class="oracle-card">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:20px;">
+      <div class="token-badge"><i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span></div>
+      <p style="color:var(--text-dim);font-size:0.85rem;margin:0;"><span id="itemCount">0</span> entri tersedia</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="wuku"><i class="fas fa-calendar-week"></i> 30 Wuku</button>
+      <button class="tab-btn" data-tab="saptawara"><i class="fas fa-sun"></i> Saptawara</button>
+      <button class="tab-btn" data-tab="pancawara"><i class="fas fa-cloud"></i> Pancawara</button>
+      <button class="tab-btn" data-tab="zodiak"><i class="fas fa-star"></i> 12 Zodiak</button>
+      <button class="tab-btn" data-tab="shio"><i class="fas fa-dragon"></i> 12 Shio</button>
+      <button class="tab-btn" data-tab="stems"><i class="fas fa-seedling"></i> 10 Batang Langit</button>
+      <button class="tab-btn" data-tab="branches"><i class="fas fa-tree"></i> 12 Cabang Bumi</button>
+      <button class="tab-btn" data-tab="tengods"><i class="fas fa-yin-yang"></i> 10 Dewa</button>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="🔍 Cari berdasarkan nama, makna, atau karakter...">
+    </div>
+
+    <div id="contentArea" class="item-grid"></div>
+  </div>
+
+  <div class="cross-sell">
+    <h4>🎋 Ingin Analisis Personal?</h4>
+    <p>Coba <strong>BaZi • Empat Pilar Takdir</strong> — analisis mendalam berdasarkan tanggal dan jam lahirmu.</p>
+    <a href="bazi.html" class="btn-link"><i class="fas fa-mountain"></i> Coba Analisis BaZi Gratis</a>
+  </div>
+
+  <footer class="footer">
+    <div>© 2026 Oracle Nusantara. Seluruh konten untuk hiburan & refleksi diri.</div>
+    <div><a href="disclaimer.html">Disclaimer</a><a href="privacy.html">Privasi</a><a href="dukung.html">Dukung kami</a><a href="mailto:halo@oracle-nusantara.com">Kontak</a></div>
+  </footer>
+</div>
+
+<!-- MODAL -->
+<div id="detailModal" class="modal hidden">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="../js/calculator.js"></script>
+<script src="../js/data-loader.js"></script>
+<script src="../js/ui-controller.js"></script>
+
+<script>
+'use strict';
+let calendarData=null, zodiacShioData=null, baziStemsBranches=null, baziTenGods=null;
+let currentTab='wuku';
+
+const elements={};
+function initDOMElements(){
+  elements.contentArea=document.getElementById('contentArea');
+  elements.searchInput=document.getElementById('searchInput');
+  elements.modal=document.getElementById('detailModal');
+  elements.modalBody=document.getElementById('modalBody');
+  elements.itemCount=document.getElementById('itemCount');
+}
+
+function showErrorToast(m){alert('❌ '+m);}
+async function updateTokenDisplay(){
+  const s=document.getElementById('tokenBalanceSpan');if(s)s.textContent=localStorage.getItem('tokenBalance')||'0';
+}
+async function fetchJSON(p){const r=await fetch(p);if(!r.ok)throw new Error(`HTTP ${r.status}`);return await r.json();}
+
+async function loadAllPustakaData(){
+  try{
+    [calendarData,zodiacShioData,baziStemsBranches,baziTenGods]=await Promise.all([
+      fetchJSON('../data/bali-calendar.json'),fetchJSON('../data/zodiac-shio.json'),
+      fetchJSON('../data/bazi-stems-branches.json'),fetchJSON('../data/bazi-ten-gods.json')
+    ]);
+    console.log('✅ Pustaka data loaded');
+  }catch(e){console.error(e);throw e;}
+}
+
+function getItemsForTab(tab){
+  if(tab==='wuku') return calendarData?.wuku||[];
+  if(tab==='saptawara') return calendarData?.saptawara||[];
+  if(tab==='pancawara') return calendarData?.pancawara||[];
+  if(tab==='zodiak') return zodiacShioData?.zodiacs||[];
+  if(tab==='shio') return zodiacShioData?.shios||[];
+  if(tab==='stems') return baziStemsBranches?.stems||[];
+  if(tab==='branches') return baziStemsBranches?.branches||[];
+  if(tab==='tengods') return baziTenGods?.ten_gods||[];
+  return [];
+}
+
+const elementColors={'Api':'#FF6B6B','Air':'#4ECDC4','Tanah':'#C7B198','Kayu':'#96C93D','Logam':'#9B59B6','Udara':'#BDC3C7'};
+
+function renderContent(){
+  const search=elements.searchInput.value.toLowerCase();
+  const items=getItemsForTab(currentTab);
+  const filtered=items.filter(i=>{
+    const name=(i.name||'').toLowerCase();
+    const meaning=(i.meaning||i.alias||i.chinese||'').toLowerCase();
+    const desc=(i.character||i.description||i.element_relation||'').toLowerCase();
+    return name.includes(search)||meaning.includes(search)||desc.includes(search);
+  });
+  elements.itemCount.textContent=filtered.length;
+  
+  const html=filtered.map(item=>{
+    let subtitle=item.meaning||item.alias||item.chinese||'';
+    if(item.element) subtitle=`${subtitle} • ${item.element}`;
+    if(item.animal) subtitle=`${subtitle} • ${item.animal}`;
+    const preview=(item.character||item.description||item.positive_traits?.join(', ')||'').substring(0,100);
+    const ec=elementColors[item.element]||'#D4AF37';
+    
+    return `<div class="pustaka-card" onclick="showDetail('${currentTab}','${item.name.replace(/'/g,"\\'")}')">
+      <h3>${item.name}</h3>
+      <div class="sub">${subtitle}</div>
+      <div class="preview">${preview}${preview.length>=100?'...':''}</div>
+      <div class="card-footer">
+        <span class="badge-elemen" style="background:${ec}22;color:${ec};border:1px solid ${ec}44;">${item.element||'—'}</span>
+        <span style="color:var(--gold);font-size:0.8rem;"><i class="fas fa-arrow-right"></i> Buka</span>
+      </div>
+    </div>`;
+  }).join('');
+  
+  elements.contentArea.innerHTML=html||'<p style="text-align:center;grid-column:1/-1;color:var(--text-muted);padding:40px;">✨ Tidak ditemukan. Coba kata kunci lain.</p>';
+}
+
+function showDetail(type,name){
+  const items=getItemsForTab(type);
+  const item=items.find(i=>i.name===name);
+  if(!item) return;
+  
+  let html=`<h2 style="color:var(--gold);margin-bottom:20px;font-family:'Cormorant Garamond',serif;font-size:1.8rem;">${item.name}`;
+  if(item.chinese) html+=` <span style="font-size:1.2rem;color:var(--text-muted);">(${item.chinese})</span>`;
+  html+=`</h2>`;
+  
+  if(item.meaning) html+=`<p><strong style="color:var(--gold-light);">Makna:</strong> ${item.meaning}</p>`;
+  if(item.alias) html+=`<p><strong style="color:var(--gold-light);">Alias:</strong> ${item.alias}</p>`;
+  if(item.element) html+=`<p><strong style="color:var(--gold-light);">Elemen:</strong> <span style="color:${elementColors[item.element]||'#D4AF37'};">${item.element}</span></p>`;
+  if(item.polarity) html+=`<p><strong style="color:var(--gold-light);">Polaritas:</strong> ${item.polarity}</p>`;
+  if(item.animal) html+=`<p><strong style="color:var(--gold-light);">Shio:</strong> ${item.animal}</p>`;
+  if(item.direction) html+=`<p><strong style="color:var(--gold-light);">Arah:</strong> ${item.direction}</p>`;
+  if(item.color) html+=`<p><strong style="color:var(--gold-light);">Warna:</strong> ${item.color}</p>`;
+  if(item.planet) html+=`<p><strong style="color:var(--gold-light);">Planet:</strong> ${item.planet}</p>`;
+  if(item.ruling_planet) html+=`<p><strong style="color:var(--gold-light);">Planet Penguasa:</strong> ${item.ruling_planet}</p>`;
+  
+  html+=`<p style="margin-top:16px;"><strong style="color:var(--gold-light);">Deskripsi:</strong> ${item.character||item.description||'-'}</p>`;
+  
+  if(type==='wuku'){
+    html+=`<p style="margin-top:12px;"><i class="fas fa-check-circle" style="color:#64C864;"></i> <strong>Aktivitas:</strong> ${item.activity||'-'}</p>`;
+    html+=`<p><i class="fas fa-ban" style="color:#FF8A8A;"></i> <strong>Pantangan Arah:</strong> ${item.forbidden_direction||'-'}</p>`;
+    if(item.urip_wuku) html+=`<p><strong>Urip:</strong> ${item.urip_wuku}</p>`;
+  }
+  if(type==='zodiak'||type==='shio'){
+    if(item.strengths) html+=`<p style="margin-top:12px;"><strong style="color:#64C864;">✅ Kelebihan:</strong> ${item.strengths.join(', ')}</p>`;
+    if(item.weaknesses) html+=`<p><strong style="color:#FF8A8A;">⚠️ Kekurangan:</strong> ${item.weaknesses.join(', ')}</p>`;
+    if(item.career_match) html+=`<p><strong style="color:var(--gold);">💼 Karir Cocok:</strong> ${item.career_match.join(', ')}</p>`;
+  }
+  if(type==='tengods'){
+    if(item.element_relation) html+=`<p><strong>Hubungan Elemen:</strong> ${item.element_relation}</p>`;
+    if(item.positive_traits) html+=`<p style="color:#64C864;"><strong>✅ Positif:</strong> ${item.positive_traits.join(', ')}</p>`;
+    if(item.negative_traits) html+=`<p style="color:#FF8A8A;"><strong>⚠️ Negatif:</strong> ${item.negative_traits.join(', ')}</p>`;
+    if(item.career) html+=`<p><strong style="color:var(--gold);">💼 Karir:</strong> ${item.career.join(', ')}</p>`;
+  }
+  if(type==='stems'||type==='branches'){
+    if(item.chinese_name) html+=`<p><strong>Nama Tionghoa:</strong> ${item.chinese_name}</p>`;
+    if(item.character) html+=`<p><strong>Karakter:</strong> ${item.character}</p>`;
+  }
+  
+  // Premium section — GRATIS
+  html+=`<div style="margin-top:24px;padding-top:20px;border-top:1px solid rgba(212,175,55,0.2);">
+    <h4 style="color:var(--gold);margin-bottom:12px;"><i class="fas fa-gem"></i> Pengetahuan Lanjutan <span style="font-size:0.75rem;color:#64C864;">GRATIS</span></h4>
+    <p><strong>🔮 Filosofi:</strong> ${getPhilosophy(type,item)}</p>
+    <p style="margin-top:8px;"><strong>📿 Rekomendasi Spiritual:</strong> ${getSpiritual(type,item)}</p>
+  </div>`;
+  
+  elements.modalBody.innerHTML=html;
+  elements.modal.classList.remove('hidden');
+}
+
+function closeModal(){ elements.modal.classList.add('hidden'); }
+
+function getPhilosophy(type,item){
+  if(type==='wuku') return `${item.name} mengajarkan ${(item.character||'keseimbangan').split(',')[0]}. Dalam filosofi Bali, setiap wuku adalah cerminan siklus alam semesta.`;
+  if(type==='zodiak') return `${item.name} adalah manifestasi energi ${item.element||'kosmik'} dalam zodiak. ${item.description?.substring(0,120)||''}...`;
+  if(type==='shio') return `${item.name} melambangkan ${item.traits?.join(', ')||'keunikan'} dalam astrologi Tiongkok. Setiap shio membawa pelajaran hidup yang berbeda.`;
+  if(type==='tengods') return `${item.name} (${item.chinese||''}) adalah kunci memahami ${item.element_relation?.toLowerCase()||'dinamika energi'} dalam bagan BaZi.`;
+  return 'Setiap elemen adalah cerminan hukum alam semesta (Rta).';
+}
+function getSpiritual(type,item){
+  if(type==='wuku') return `Bersemadi pada hari ${item.name} dengan menghadap ${item.forbidden_direction||'timur'} untuk membersihkan energi negatif.`;
+  if(type==='zodiak') return `Meditasi di bawah naungan planet ${item.ruling_planet||'Matahari'} untuk memperkuat energi ${item.name}.`;
+  if(type==='shio') return `Gunakan simbol ${item.name} sebagai pengingat akan kekuatan batin Anda.`;
+  return 'Lakukan meditasi pagi selama 10 menit setiap hari.';
+}
+
+async function init(){
+  initDOMElements();
+  try{await loadAllPustakaData();renderContent();}catch(e){showErrorToast('Gagal memuat data.');return;}
+  updateTokenDisplay();
+  document.querySelectorAll('.tab-btn').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');currentTab=b.dataset.tab;renderContent();
+    });
+  });
+  elements.searchInput.addEventListener('input',renderContent);
+  window.closeModal=closeModal;window.showDetail=showDetail;
+  console.log('✅ Pustaka PREMIUM ready');
+}
+document.addEventListener('DOMContentLoaded',init);
+</script>
+</body>
+</html>
