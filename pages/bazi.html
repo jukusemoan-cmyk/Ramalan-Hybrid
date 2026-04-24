@@ -323,20 +323,25 @@ function getStemDescription(stemName) {
 
 const elementColors = { 'Kayu': '#96C93D', 'Api': '#FF6B6B', 'Tanah': '#C7B198', 'Logam': '#9B59B6', 'Air': '#4ECDC4' };
 
-function getTenGodName(godId) {
-  const names = {
-    'direct_officer': 'Pejabat Langsung',
-    'seven_killings': 'Tujuh Pembunuh',
-    'direct_wealth': 'Kekayaan Langsung',
-    'indirect_wealth': 'Kekayaan Tak Langsung',
-    'eating_god': 'Dewa Makan',
-    'hurting_officer': 'Pejabat Melukai',
-    'friend': 'Sahabat',
-    'rob_wealth': 'Perampas Kekayaan',
-    'direct_resource': 'Sumber Daya Langsung',
-    'indirect_resource': 'Sumber Daya Tak Langsung'
+function getTenGodInterpretation(godId, pillar) {
+  // Baca dari data JSON yang sudah di-load
+  const god = baziTenGods?.ten_gods?.find(g => g.id === godId);
+  if (!god) return 'Interpretasi tidak tersedia untuk dewa ini.';
+  
+  const pillarMap = {
+    'year': 'in_year',
+    'month': 'in_month', 
+    'day': 'in_day',
+    'hour': 'in_hour'
   };
-  return names[godId] || godId;
+  
+  const field = pillarMap[pillar];
+  if (god[field]) {
+    return god[field];
+  }
+  
+  // Fallback ke traits jika field spesifik tidak ada
+  return `${god.name} (${god.chinese || ''}): ${god.positive_traits?.slice(0, 3).join(', ') || 'Energi unik'}.`;
 }
 
 function getTenGodIcon(godId) {
