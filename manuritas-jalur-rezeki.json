@@ -1,0 +1,552 @@
+{
+  "metadata": {
+    "name": "Manuritas Jalur Rezeki — Super Lengkap",
+    "version": "2.0.0",
+    "description": "Template jalur rezeki berdasarkan kombinasi total nilai Hanacaraka, elemen, weton, dan wuku. 30+ template unik.",
+    "total_templates": 30,
+    "calculation_method": "hash(nama + neptu + total_value) % total_templates",
+    "last_updated": "2026-04-24"
+  },
+  "templates": [
+    {
+      "id": "rezeki_001",
+      "name": "Sang Pembicara",
+      "condition": "default",
+      "source": "Komunikasi, Jaringan, dan Persuasi",
+      "fields": [
+        "Public Speaker / Motivator",
+        "Marketing Manager",
+        "Sales Director",
+        "Pengacara / Advokat",
+        "Jurnalis / Reporter",
+        "Content Creator / Podcaster",
+        "Diplomat / Negosiator"
+      ],
+      "description": "Rezekimu mengalir deras ketika kamu berbicara dan menginspirasi. Lidahmu adalah kunci kemakmuran — semakin banyak orang mendengar, semakin besar rezeki yang datang.",
+      "cocok_untuk": "Kamu adalah komunikator alami. Pekerjaan yang melibatkan public speaking, negosiasi, atau media akan membuatmu bersinar.",
+      "ritual_rezeki": "Latih vokal setiap pagi. Baca affirmasi di depan cermin: 'Suaraku menggetarkan semesta dan menarik kelimpahan.'"
+    },
+    {
+      "id": "rezeki_002",
+      "name": "Sang Pencipta",
+      "condition": "default",
+      "source": "Kreativitas, Seni, dan Keindahan",
+      "fields": [
+        "Seniman / Pelukis",
+        "Desainer Grafis / UI/UX",
+        "Musisi / Komposer",
+        "Penulis / Novelis",
+        "Fotografer / Videografer",
+        "Arsitek",
+        "Creative Director"
+      ],
+      "description": "Rezekimu lahir dari tangan dan imajinasimu. Setiap karya yang kau ciptakan adalah magnet rezeki — semakin orisinal, semakin melimpah.",
+      "cocok_untuk": "Kamu adalah pencipta sejati. Pekerjaan yang melibatkan seni, desain, atau inovasi adalah panggilan jiwamu.",
+      "ritual_rezeki": "Ciptakan sesuatu setiap hari — sekecil apa pun. Kreativitas adalah otot yang harus dilatih."
+    },
+    {
+      "id": "rezeki_003",
+      "name": "Sang Penolong",
+      "condition": "default",
+      "source": "Pelayanan, Penyembuhan, dan Empati",
+      "fields": [
+        "Dokter / Spesialis",
+        "Perawat / Bidan",
+        "Psikolog / Konselor",
+        "Terapis / Healer",
+        "Pekerja Sosial",
+        "Guru / Pendidik",
+        "Apoteker"
+      ],
+      "description": "Rezekimu mengalir melalui tangan yang membantu. Setiap nyawa yang kau sentuh, setiap luka yang kau sembuhkan, mengundang kelimpahan tak terduga.",
+      "cocok_untuk": "Kamu memiliki hati pelayan. Pekerjaan di bidang kesehatan, pendidikan, atau sosial adalah tempatmu bersinar.",
+      "ritual_rezeki": "Lakukan satu kebaikan tanpa pamrih setiap hari. Semesta mencatat dan mengembalikan berkali lipat."
+    },
+    {
+      "id": "rezeki_004",
+      "name": "Sang Pemimpin",
+      "condition": "default",
+      "source": "Kepemimpinan, Manajemen, dan Visi",
+      "fields": [
+        "CEO / Direktur",
+        "Manajer Operasional",
+        "Politikus / Pemimpin Publik",
+        "Pengusaha / Entrepreneur",
+        "Kepala Sekolah / Rektor",
+        "Komandan / Perwira",
+        "Project Leader"
+      ],
+      "description": "Rezekimu berpijak pada kemampuan memimpin. Kamu dilahirkan untuk berada di depan — mengarahkan, menginspirasi, dan membawa perubahan.",
+      "cocok_untuk": "Kamu adalah pemimpin alami. Posisi strategis, manajemen, atau entrepreneurship adalah jalanmu.",
+      "ritual_rezeki": "Ambil tanggung jawab lebih di lingkungan sekitar. Kepemimpinan dimulai dari hal kecil."
+    },
+    {
+      "id": "rezeki_005",
+      "name": "Sang Analis",
+      "condition": "default",
+      "source": "Analisis, Riset, dan Strategi",
+      "fields": [
+        "Data Scientist / Analis Data",
+        "Akuntan / Auditor",
+        "Peneliti / Ilmuwan",
+        "Programmer / Software Engineer",
+        "Quality Assurance",
+        "Financial Analyst",
+        "Risk Management Specialist"
+      ],
+      "description": "Rezekimu bersumber dari ketajaman logika. Di balik angka dan data, tersembunyi harta karun yang hanya bisa kamu temukan.",
+      "cocok_untuk": "Kamu adalah pemikir mendalam. Pekerjaan yang membutuhkan analisis, ketelitian, dan pemecahan masalah adalah keahlianmu.",
+      "ritual_rezeki": "Latih otak dengan puzzle atau game strategi. Pikiran tajam menarik peluang cemerlang."
+    },
+    {
+      "id": "rezeki_006",
+      "name": "Sang Petualang",
+      "condition": "default",
+      "source": "Eksplorasi, Perjalanan, dan Adaptasi",
+      "fields": [
+        "Travel Blogger / Vlogger",
+        "Pilot / Pramugari",
+        "Pemandu Wisata",
+        "Wirausaha / Freelancer",
+        "Fotografer Alam",
+        "Jurnalis Investigasi",
+        "Diplomat / Duta Besar"
+      ],
+      "description": "Rezekimu menunggu di setiap sudut dunia yang belum kau jelajahi. Semakin jauh kakimu melangkah, semakin luas pintu rezeki terbuka.",
+      "cocok_untuk": "Kamu tidak diciptakan untuk diam di satu tempat. Karir yang melibatkan perjalanan, eksplorasi, atau remote work adalah jalurmu.",
+      "ritual_rezeki": "Rencanakan perjalanan — bahkan yang kecil. Mobilitas membuka cakrawala rezeki."
+    },
+    {
+      "id": "rezeki_007",
+      "name": "Sang Penjaga",
+      "condition": "default",
+      "source": "Perlindungan, Keamanan, dan Stabilitas",
+      "fields": [
+        "Polisi / Tentara",
+        "Security Consultant",
+        "Satpam / Bodyguard",
+        "Pengacara Hak Asasi",
+        "Auditor Kepatuhan",
+        "Petugas Pemadam Kebakaran",
+        "Hakim / Jaksa"
+      ],
+      "description": "Rezekimu hadir saat kau melindungi. Kamu adalah benteng bagi mereka yang lemah — penjaga keseimbangan dan keadilan.",
+      "cocok_untuk": "Kamu memiliki jiwa pelindung. Pekerjaan di bidang keamanan, hukum, atau militer adalah panggilanmu.",
+      "ritual_rezeki": "Tegakkan keadilan dalam hal kecil sehari-hari. Integritas adalah magnet rezeki jangka panjang."
+    },
+    {
+      "id": "rezeki_008",
+      "name": "Sang Pembangun",
+      "condition": "default",
+      "source": "Konstruksi, Infrastruktur, dan Fondasi",
+      "fields": [
+        "Insinyur Sipil",
+        "Arsitek",
+        "Kontraktor",
+        "Developer Properti",
+        "Urban Planner",
+        "Surveyor",
+        "Manajer Konstruksi"
+      ],
+      "description": "Rezekimu tertanam dalam fondasi yang kau bangun. Setiap bata, setiap struktur, adalah monumen kemakmuranmu.",
+      "cocok_untuk": "Kamu adalah pembangun sejati. Pekerjaan di bidang konstruksi, properti, atau infrastruktur adalah jalur emasmu.",
+      "ritual_rezeki": "Bangun sesuatu yang bertahan lama — karier, hubungan, atau karya fisik. Fondasi kuat adalah kunci."
+    },
+    {
+      "id": "rezeki_009",
+      "name": "Sang Penghubung",
+      "condition": "default",
+      "source": "Networking, Kemitraan, dan Sinergi",
+      "fields": [
+        "Business Development",
+        "Public Relations",
+        "Event Organizer",
+        "Community Manager",
+        "Talent Acquisition / HRD",
+        "Partnership Manager",
+        "Mediator / Arbitrator"
+      ],
+      "description": "Rezekimu lahir dari hubungan. Setiap orang yang kau kenalkan, setiap jembatan yang kau bangun, mengalirkan sungai rezeki.",
+      "cocok_untuk": "Kamu adalah networker alami. Pekerjaan yang membutuhkan koneksi, kolaborasi, dan sinergi adalah tempatmu.",
+      "ritual_rezeki": "Perluas jaringan setiap minggu. Kenali satu orang baru — dia mungkin kunci rezeki berikutnya."
+    },
+    {
+      "id": "rezeki_010",
+      "name": "Sang Inovator",
+      "condition": "default",
+      "source": "Teknologi, Inovasi, dan Masa Depan",
+      "fields": [
+        "Software Developer",
+        "AI / Machine Learning Engineer",
+        "Blockchain Developer",
+        "Product Manager",
+        "Startup Founder",
+        "Cybersecurity Specialist",
+        "IoT Engineer"
+      ],
+      "description": "Rezekimu tersembunyi di masa depan. Kamu melihat apa yang belum dilihat orang — di sanalah tambang emas menanti.",
+      "cocok_untuk": "Kamu adalah visioner teknologi. Pekerjaan di bidang IT, startup, atau inovasi digital adalah jalur super cepatmu.",
+      "ritual_rezeki": "Pelajari satu teknologi baru setiap bulan. Kecepatan adaptasi adalah kunci di era digital."
+    },
+    {
+      "id": "rezeki_011",
+      "name": "Sang Pengajar",
+      "condition": "default",
+      "source": "Pendidikan, Pembelajaran, dan Pencerahan",
+      "fields": [
+        "Guru / Dosen",
+        "Tutor / Mentor",
+        "Penulis Buku",
+        "Konsultan Pendidikan",
+        "Trainer / Fasilitator",
+        "Pembicara Seminar",
+        "Instructional Designer"
+      ],
+      "description": "Rezekimu mengalir melalui ilmu yang kau sebarkan. Setiap orang yang tercerahkan olehmu adalah sumber rezeki tak terbatas.",
+      "cocok_untuk": "Kamu adalah guru alami. Pekerjaan di bidang pendidikan, pelatihan, atau mentoring adalah panggilan jiwamu.",
+      "ritual_rezeki": "Ajarkan apa yang kau tahu kepada satu orang setiap hari. Ilmu yang dibagi tidak akan habis — justru berlipat."
+    },
+    {
+      "id": "rezeki_012",
+      "name": "Sang Penyembuh",
+      "condition": "default",
+      "source": "Pengobatan Alternatif, Energi, dan Spiritual",
+      "fields": [
+        "Terapis Holistik",
+        "Ahli Akupunktur",
+        "Praktisi Reiki / Prana",
+        "Yoga Instructor",
+        "Herbalis",
+        "Meditasi Guide",
+        "Spiritual Counselor"
+      ],
+      "description": "Rezekimu bersumber dari energi penyembuhan. Tanganmu memiliki kekuatan untuk menyelaraskan — dan semesta membalas dengan kelimpahan.",
+      "cocok_untuk": "Kamu memiliki bakat penyembuhan alami. Karir di bidang terapi, wellness, atau spiritual adalah jalanmu.",
+      "ritual_rezeki": "Meditasi setiap pagi untuk membersihkan energi. Penyembuh harus sembuh dulu sebelum menyembuhkan."
+    },
+    {
+      "id": "rezeki_013",
+      "name": "Sang Petani",
+      "condition": "default",
+      "source": "Pertanian, Pangan, dan Keberlanjutan",
+      "fields": [
+        "Petani Organik",
+        "Agronom",
+        "Chef / Koki",
+        "Food Scientist",
+        "Florist / Nursery",
+        "Sustainability Consultant",
+        "Supply Chain Manager"
+      ],
+      "description": "Rezekimu tumbuh dari tanah yang subur. Setiap benih yang kau tanam, setiap panen yang kau tuai, adalah ritme alam yang memberkatimu.",
+      "cocok_untuk": "Kamu selaras dengan alam. Pekerjaan di bidang pertanian, kuliner, atau lingkungan adalah jalur organikmu.",
+      "ritual_rezeki": "Tanam sesuatu — meski hanya dalam pot kecil. Menyaksikan pertumbuhan adalah afirmasi rezeki paling kuat."
+    },
+    {
+      "id": "rezeki_014",
+      "name": "Sang Pedagang",
+      "condition": "default",
+      "source": "Perdagangan, Negosiasi, dan Transaksi",
+      "fields": [
+        "Pengusaha Retail",
+        "E-commerce Specialist",
+        "Importir / Eksportir",
+        "Sales Manager",
+        "Distributor",
+        "Merchandiser",
+        "Business Owner"
+      ],
+      "description": "Rezekimu mengalir dalam arus barang dan uang. Kamu memiliki naluri bisnis tajam — setiap transaksi adalah seni yang kau kuasai.",
+      "cocok_untuk": "Kamu adalah pedagang alami. Bisnis sendiri, retail, atau e-commerce adalah medan emasmu.",
+      "ritual_rezeki": "Catat pemasukan dan pengeluaran setiap hari. Uang yang dikelola dengan baik akan berkembang biak."
+    },
+    {
+      "id": "rezeki_015",
+      "name": "Sang Seniman Panggung",
+      "condition": "default",
+      "source": "Hiburan, Pertunjukan, dan Ekspresi",
+      "fields": [
+        "Aktor / Aktris",
+        "Penyanyi / Musisi",
+        "Penari / Koreografer",
+        "Komedian / MC",
+        "Sutradara / Produser",
+        "Teater / Drama",
+        "Voice Over Artist"
+      ],
+      "description": "Rezekimu lahir dari panggung dan sorotan. Setiap tepuk tangan, setiap tawa, adalah energi yang kembali sebagai kelimpahan.",
+      "cocok_untuk": "Kamu terlahir untuk tampil. Karir di dunia hiburan, seni pertunjukan, atau media adalah panggung rezekimu.",
+      "ritual_rezeki": "Latih bakatmu setiap hari. Panggung tidak akan mendatangimu — kau harus naik ke atasnya."
+    },
+    {
+      "id": "rezeki_016",
+      "name": "Sang Peneliti",
+      "condition": "default",
+      "source": "Laboratorium, Eksperimen, dan Penemuan",
+      "fields": [
+        "Ilmuwan / Researcher",
+        "Ahli Bioteknologi",
+        "Ahli Kimia / Farmasi",
+        "Ahli Fisika",
+        "Arkeolog",
+        "Astronom",
+        "Data Researcher"
+      ],
+      "description": "Rezekimu tersembunyi di balik tabung reaksi dan mikroskop. Setiap penemuan, setiap hipotesis yang terbukti, membuka pintu rezeki baru.",
+      "cocok_untuk": "Kamu adalah pencari kebenaran. Karir di bidang riset, sains, atau laboratorium adalah habitat alammu.",
+      "ritual_rezeki": "Baca jurnal atau artikel ilmiah secara rutin. Pengetahuan adalah investasi terbaik seorang peneliti."
+    },
+    {
+      "id": "rezeki_017",
+      "name": "Sang Olahragawan",
+      "condition": "default",
+      "source": "Olahraga, Kebugaran, dan Prestasi Fisik",
+      "fields": [
+        "Atlet Profesional",
+        "Pelatih / Coach",
+        "Fisioterapis",
+        "Personal Trainer",
+        "Wasit / Referee",
+        "Sports Commentator",
+        "Gym Owner"
+      ],
+      "description": "Rezekimu mengalir melalui keringat dan prestasi. Setiap otot yang terlatih, setiap rekor yang terpecahkan, adalah magnet sponsor dan peluang.",
+      "cocok_untuk": "Kamu memiliki bakat fisik luar biasa. Karir di bidang olahraga, kebugaran, atau kesehatan fisik adalah arena emasmu.",
+      "ritual_rezeki": "Disiplin latihan adalah kunci. Tubuh yang prima menarik rezeki yang prima."
+    },
+    {
+      "id": "rezeki_018",
+      "name": "Sang Strategis",
+      "condition": "default",
+      "source": "Strategi, Konsultasi, dan Problem Solving",
+      "fields": [
+        "Management Consultant",
+        "Business Strategist",
+        "Financial Advisor",
+        "Investment Banker",
+        "Policy Analyst",
+        "Corporate Lawyer",
+        "Brand Strategist"
+      ],
+      "description": "Rezekimu bersumber dari otak strategismu. Setiap masalah yang kau pecahkan, setiap strategi yang kau rancang, bernilai jutaan.",
+      "cocok_untuk": "Kamu adalah problem solver kelas atas. Karir di bidang konsultasi, keuangan, atau strategi bisnis adalah jalur premiummu.",
+      "ritual_rezeki": "Asah kemampuan analitis dengan membaca laporan dan case study. Solusi mahal lahir dari pemikiran tajam."
+    },
+    {
+      "id": "rezeki_019",
+      "name": "Sang Spiritualis",
+      "condition": "default",
+      "source": "Spiritualitas, Filosofi, dan Pencarian Makna",
+      "fields": [
+        "Pendeta / Pemuka Agama",
+        "Filsuf / Pemikir",
+        "Life Coach",
+        "Meditasi Teacher",
+        "Penulis Spiritual",
+        "Retreat Organizer",
+        "Yoga Master"
+      ],
+      "description": "Rezekimu hadir dalam keheningan dan kebijaksanaan. Setiap jiwa yang kau tuntun menuju cahaya adalah tabungan surgawi yang tak ternilai.",
+      "cocok_untuk": "Kamu memiliki koneksi spiritual tinggi. Karir di bidang keagamaan, filosofi, atau bimbingan spiritual adalah jalan sunyi namun penuh berkah.",
+      "ritual_rezeki": "Bermeditasilah setiap hari. Koneksi dengan Yang Maha Kuasa adalah sumber rezeki tak terbatas."
+    },
+    {
+      "id": "rezeki_020",
+      "name": "Sang Pengrajin",
+      "condition": "default",
+      "source": "Kerajinan Tangan, Ketelitian, dan Karya Fisik",
+      "fields": [
+        "Pengrajin Kayu / Mebel",
+        "Perhiasan / Jeweler",
+        "Tukang Jahit / Fashion Designer",
+        "Keramik / Potter",
+        "Blacksmith / Pandai Besi",
+        "Watchmaker / Pembuat Jam",
+        "Leather Craft"
+      ],
+      "description": "Rezekimu lahir dari ketelitian tanganmu. Setiap ukiran, setiap jahitan, setiap detail — adalah tanda tangan keahlian yang bernilai tinggi.",
+      "cocok_untuk": "Kamu adalah artisan sejati. Karir di bidang kerajinan, fashion, atau barang seni adalah jalur rezeki yang tak lekang waktu.",
+      "ritual_rezeki": "Sempurnakan satu teknik setiap minggu. Keahlian tangan adalah aset yang tidak bisa digantikan mesin."
+    },
+    {
+      "id": "rezeki_021",
+      "name": "Sang Penulis",
+      "condition": "default",
+      "source": "Kata-kata, Cerita, dan Dokumentasi",
+      "fields": [
+        "Novelis",
+        "Copywriter",
+        "Penulis Skenario",
+        "Editor / Proofreader",
+        "Technical Writer",
+        "Blogger",
+        "Ghost Writer"
+      ],
+      "description": "Rezekimu mengalir melalui kata-kata. Setiap kalimat yang kau tulis, setiap cerita yang kau bagikan, adalah pancing yang menarik pembaca — dan rezeki.",
+      "cocok_untuk": "Kamu punya bakat menuangkan ide ke dalam tulisan. Karir di bidang kepenulisan, editing, atau konten adalah jalur sunyi yang menguntungkan.",
+      "ritual_rezeki": "Tulislah 500 kata setiap hari — apa pun temanya. Konsistensi adalah kunci."
+    },
+    {
+      "id": "rezeki_022",
+      "name": "Sang Desainer",
+      "condition": "default",
+      "source": "Estetika, Visual, dan Pengalaman Pengguna",
+      "fields": [
+        "Desainer Grafis",
+        "UI/UX Designer",
+        "Ilustrator",
+        "Animator",
+        "Desainer Interior",
+        "Desainer Produk",
+        "Brand Identity Designer"
+      ],
+      "description": "Rezekimu lahir dari keindahan yang kau ciptakan. Setiap pixel, setiap kurva, setiap palet warna — adalah bahasa visual yang bernilai komersial.",
+      "cocok_untuk": "Kamu memiliki mata estetika yang tajam. Karir di bidang desain, branding, atau seni digital adalah kanvas emasmu.",
+      "ritual_rezeki": "Kumpulkan referensi visual setiap hari. Inspirasi adalah bahan bakar desainer."
+    },
+    {
+      "id": "rezeki_023",
+      "name": "Sang Teknisi",
+      "condition": "default",
+      "source": "Perbaikan, Pemeliharaan, dan Keahlian Teknis",
+      "fields": [
+        "Mekanik / Teknisi Mesin",
+        "Teknisi Listrik / Elektronik",
+        "IT Support",
+        "Teknisi Jaringan",
+        "Teknisi AC / HVAC",
+        "Plumber / Tukang Pipa",
+        "Automotive Technician"
+      ],
+      "description": "Rezekimu ada di balik mesin dan peralatan. Setiap benda yang kau perbaiki, setiap sistem yang kau pulihkan, adalah bukti keahlian yang selalu dicari.",
+      "cocok_untuk": "Kamu adalah problem solver teknis. Karir di bidang perbaikan, maintenance, atau engineering adalah jalur stabil dengan permintaan tinggi.",
+      "ritual_rezeki": "Upgrade skill teknis secara berkala. Teknologi berubah — teknisi terbaik selalu belajar."
+    },
+    {
+      "id": "rezeki_024",
+      "name": "Sang Pengusaha Kuliner",
+      "condition": "default",
+      "source": "Makanan, Minuman, dan Kenikmatan",
+      "fields": [
+        "Chef Eksekutif",
+        "Restaurant Owner",
+        "Barista / Coffee Shop Owner",
+        "Baker / Pastry Chef",
+        "Food Stylist",
+        "Catering Business",
+        "Food Critic / Reviewer"
+      ],
+      "description": "Rezekimu tersaji di setiap piring dan cangkir. Setiap rasa yang kau racik, setiap aroma yang kau ciptakan, adalah undangan bagi pelanggan untuk kembali.",
+      "cocok_untuk": "Kamu memiliki lidah dan jiwa kuliner. Bisnis makanan, restoran, atau minuman adalah jalur nikmat menuju kemakmuran.",
+      "ritual_rezeki": "Eksperimen dengan satu resep baru setiap minggu. Inovasi rasa adalah kunci di dunia kuliner."
+    },
+    {
+      "id": "rezeki_025",
+      "name": "Sang Digital Nomad",
+      "condition": "default",
+      "source": "Remote Work, Freelancing, dan Kebebasan Lokasi",
+      "fields": [
+        "Freelancer (Design, Writing, Dev)",
+        "Virtual Assistant",
+        "Online Course Creator",
+        "Affiliate Marketer",
+        "Dropshipper",
+        "Digital Product Creator",
+        "Remote Consultant"
+      ],
+      "description": "Rezekimu tidak terikat lokasi. Selama ada laptop dan internet, di mana pun kau berada — di sanalah rezeki mengalir.",
+      "cocok_untuk": "Kamu mencintai kebebasan. Karir sebagai freelancer, digital nomad, atau remote worker adalah jalur fleksibel dengan potensi tak terbatas.",
+      "ritual_rezeki": "Bangun portofolio online yang kuat. Di dunia digital, karyamu adalah etalase 24 jam."
+    },
+    {
+      "id": "rezeki_026",
+      "name": "Sang Investor",
+      "condition": "default",
+      "source": "Investasi, Aset, dan Pertumbuhan Modal",
+      "fields": [
+        "Investor Saham / Obligasi",
+        "Real Estate Investor",
+        "Venture Capitalist",
+        "Angel Investor",
+        "Crypto / Forex Trader",
+        "Portfolio Manager",
+        "Financial Planner"
+      ],
+      "description": "Rezekimu bekerja bahkan saat kau tidur. Setiap aset yang kau kumpulkan, setiap investasi yang kau tanam, adalah benih yang tumbuh menjadi hutan kekayaan.",
+      "cocok_untuk": "Kamu memiliki naluri finansial yang tajam. Karir di bidang investasi, pasar modal, atau manajemen aset adalah jalur akselerasi kekayaan.",
+      "ritual_rezeki": "Investasikan 10-20% penghasilan setiap bulan — sekecil apa pun. Waktu adalah sahabat investor."
+    },
+    {
+      "id": "rezeki_027",
+      "name": "Sang Event Maestro",
+      "condition": "default",
+      "source": "Acara, Perayaan, dan Momen Spesial",
+      "fields": [
+        "Wedding Planner",
+        "Event Organizer",
+        "Party Planner",
+        "Festival Director",
+        "MICE Coordinator",
+        "Stage Manager",
+        "Lighting / Sound Engineer"
+      ],
+      "description": "Rezekimu hadir di setiap acara dan perayaan. Setiap event yang kau selenggarakan, setiap momen yang kau ciptakan, adalah kenangan — yang dibayar mahal.",
+      "cocok_untuk": "Kamu adalah maestro acara. Karir di bidang event planning, wedding, atau festival adalah panggung yang selalu ramai.",
+      "ritual_rezeki": "Dokumentasikan setiap event yang kau tangani. Portfolio adalah tiket menuju klien berikutnya."
+    },
+    {
+      "id": "rezeki_028",
+      "name": "Sang Konsultan",
+      "condition": "default",
+      "source": "Keahlian Spesifik, Nasihat Profesional, dan Solusi",
+      "fields": [
+        "IT Consultant",
+        "HR Consultant",
+        "Marketing Consultant",
+        "Legal Consultant",
+        "Tax Consultant",
+        "Sustainability Consultant",
+        "Education Consultant"
+      ],
+      "description": "Rezekimu adalah keahlianmu. Setiap nasihat yang kau berikan, setiap solusi yang kau tawarkan, bernilai tinggi bagi yang membutuhkan.",
+      "cocok_untuk": "Kamu adalah ahli di bidangmu. Karir sebagai konsultan independen atau firma konsultasi adalah jalur prestisius dengan bayaran premium.",
+      "ritual_rezeki": "Spesialisasi adalah kunci. Pilih satu bidang dan jadilah yang terbaik di dalamnya."
+    },
+    {
+      "id": "rezeki_029",
+      "name": "Sang Filantropis",
+      "condition": "default",
+      "source": "Amal, Yayasan, dan Dampak Sosial",
+      "fields": [
+        "NGO Founder / Director",
+        "Social Entrepreneur",
+        "Fundraiser / Grant Writer",
+        "Community Organizer",
+        "CSR Manager",
+        "Advocacy Specialist",
+        "Humanitarian Worker"
+      ],
+      "description": "Rezekimu datang dari memberi. Paradoks yang indah — semakin banyak kau berikan, semakin deras semesta mengembalikan melalui jalur tak terduga.",
+      "cocok_untuk": "Kamu memiliki misi sosial yang kuat. Karir di LSM, yayasan, atau social enterprise adalah jalur bermakna yang juga bisa makmur.",
+      "ritual_rezeki": "Sisihkan sebagian rezeki untuk mereka yang membutuhkan. Berbagi adalah magnet rezeki paling kuat di alam semesta."
+    },
+    {
+      "id": "rezeki_030",
+      "name": "Sang Multi-Talent",
+      "condition": "default",
+      "source": "Kombinasi Unik dari Berbagai Bakat",
+      "fields": [
+        "Portfolio Career (beberapa pekerjaan sekaligus)",
+        "Solopreneur",
+        "Content Creator Multi-Platform",
+        "Consultant + Practitioner",
+        "Author + Speaker",
+        "Creative + Business",
+        "Tech + Art Hybrid"
+      ],
+      "description": "Rezekimu tidak bisa dimasukkan dalam satu kotak. Kamu memiliki banyak bakat — dan justru di situlah kekuatanmu. Gabungkan semuanya menjadi karier unik yang hanya bisa dilakukan olehmu.",
+      "cocok_untuk": "Kamu adalah multi-talenta sejati. Jangan pilih satu — gabungkan semuanya menjadi portfolio career yang unik dan tak tergantikan.",
+      "ritual_rezeki": "Identifikasi 2-3 bakat utamamu dan cari cara menggabungkannya. Kombinasi unik adalah keunggulan kompetitif."
+    }
+  ]
+}
