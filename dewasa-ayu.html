@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Dewasa Ayu • Hari Baik Primbon Bali • Oracle Nusantara</title>
+  <meta name="description" content="Cari tahu hari baik (Dewasa Ayu) berdasarkan Wuku, Saptawara, Pancawara, dan Tri Wara untuk memulai usaha, menikah, bepergian, dan aktivitas penting lainnya.">
+  <meta name="theme-color" content="#0A0A0C">
+  
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/ramalan.css">
+  
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --gold-light: #F3E5AB;
+      --bg-dark: #0A0A0C;
+      --text-muted: #A0A0B0;
+      --text-dim: #606070;
+      --success: #64C864;
+      --danger: #FF8A8A;
+      --warning: #FFB347;
+    }
+
+    .oracle-card { max-width: 900px; margin: 0 auto; }
+    .hidden { display: none !important; }
+
+    /* HERO */
+    .mystic-header {
+      text-align: center;
+      margin-bottom: 36px;
+      padding: 20px 0;
+    }
+
+    .mystic-header .header-icon {
+      font-size: 3.5rem;
+      margin-bottom: 16px;
+      animation: float 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 25px rgba(212,175,55,0.3));
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .mystic-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--gold-light);
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .mystic-header .subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    .header-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 16px 0;
+      color: var(--gold);
+      font-size: 0.7rem;
+      opacity: 0.5;
+    }
+
+    .header-divider::before,
+    .header-divider::after {
+      content: '';
+      width: 50px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    /* FORM */
+    .form-group { display: flex; flex-direction: column; gap: 20px; }
+
+    .input-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .input-field { flex: 1 1 240px; }
+
+    .input-field label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+    }
+
+    .input-field input {
+      width: 100%;
+      background: rgba(10,10,12,0.8);
+      border: 2px solid rgba(212,175,55,0.2);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 1rem;
+      color: #E8E8E8;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s;
+    }
+
+    .input-field input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 25px rgba(212,175,55,0.1);
+    }
+
+    .input-hint {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(212,175,55,0.05));
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      padding: 18px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.4s;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold);
+      color: #0A0A0C;
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(212,175,55,0.3);
+    }
+
+    /* DAY SUMMARY */
+    .day-summary {
+      background: linear-gradient(145deg, rgba(15,15,20,0.9), rgba(10,10,12,0.9));
+      border: 2px solid rgba(212,175,55,0.3);
+      border-radius: 24px;
+      padding: 40px 24px;
+      text-align: center;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .day-summary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      border-radius: 0 0 4px 4px;
+      transition: all 0.5s;
+    }
+
+    .day-summary.level-sangat-baik::before { background: var(--success); width: 100%; }
+    .day-summary.level-baik::before { background: #4ECDC4; width: 80%; }
+    .day-summary.level-cukup::before { background: var(--warning); width: 60%; }
+    .day-summary.level-kurang::before { background: var(--danger); width: 40%; }
+
+    .day-level {
+      font-size: 3.5rem;
+      font-weight: 700;
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.2;
+    }
+
+    .level-sangat-baik .day-level { color: var(--success); }
+    .level-baik .day-level { color: #4ECDC4; }
+    .level-cukup .day-level { color: var(--warning); }
+    .level-kurang .day-level { color: var(--danger); }
+
+    .day-level-icon {
+      font-size: 3rem;
+      margin-bottom: 8px;
+    }
+
+    .level-sangat-baik .day-level-icon { color: var(--success); }
+    .level-baik .day-level-icon { color: #4ECDC4; }
+    .level-cukup .day-level-icon { color: var(--warning); }
+    .level-kurang .day-level-icon { color: var(--danger); }
+
+    .day-desc {
+      color: var(--text-muted);
+      margin-top: 12px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* DETAIL GRID */
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .detail-item {
+      background: rgba(15,15,20,0.7);
+      border-radius: 20px;
+      padding: 24px 16px;
+      text-align: center;
+      border: 1px solid rgba(212,175,55,0.12);
+      transition: all 0.3s;
+    }
+
+    .detail-item:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212,175,55,0.35);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .detail-item .d-icon {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+      transition: transform 0.3s;
+    }
+
+    .detail-item:hover .d-icon { transform: scale(1.15); }
+
+    .detail-item .d-value {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 4px;
+    }
+
+    .detail-item .d-label {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .detail-item .d-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ANALYSIS CARDS */
+    .analysis-section-card {
+      background: rgba(15,15,20,0.7);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(212,175,55,0.12);
+      backdrop-filter: blur(4px);
+      transition: all 0.3s;
+    }
+
+    .analysis-section-card:hover {
+      border-color: rgba(212,175,55,0.25);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    .analysis-section-card h4 {
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .analysis-section-card p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 8px;
+    }
+
+    .analysis-section-card p:last-child { margin-bottom: 0; }
+
+    /* ACTIVITY TAGS */
+    .activity-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .activity-tag {
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .activity-tag.recommended {
+      background: rgba(100,200,100,0.15);
+      color: var(--success);
+      border: 1px solid rgba(100,200,100,0.3);
+    }
+
+    .activity-tag.caution {
+      background: rgba(255,179,71,0.15);
+      color: var(--warning);
+      border: 1px solid rgba(255,179,71,0.3);
+    }
+
+    .activity-tag.avoid {
+      background: rgba(255,138,138,0.15);
+      color: var(--danger);
+      border: 1px solid rgba(255,138,138,0.3);
+    }
+
+    /* INFO BOX */
+    .info-box {
+      background: rgba(212,175,55,0.06);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 16px 0;
+      border-left: 4px solid var(--gold);
+    }
+
+    .highlight-box {
+      background: rgba(100,200,100,0.06);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 16px 0;
+      border-left: 4px solid var(--success);
+    }
+
+    .warning-box {
+      background: rgba(255,138,138,0.06);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 16px 0;
+      border-left: 4px solid var(--danger);
+    }
+
+    /* CALENDAR NAV */
+    .calendar-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .calendar-nav button {
+      background: rgba(15,15,20,0.8);
+      border: 1px solid rgba(212,175,55,0.3);
+      color: var(--gold);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 1rem;
+    }
+
+    .calendar-nav button:hover {
+      background: var(--gold);
+      color: #0A0A0C;
+    }
+
+    .calendar-nav .current-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--gold-light);
+      min-width: 200px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* TOKEN */
+    .token-badge {
+      background: rgba(212,175,55,0.15);
+      border: 1.5px solid rgba(212,175,55,0.3);
+      border-radius: 50px;
+      padding: 12px 28px;
+      display: inline-block;
+      color: var(--gold-light);
+      font-weight: 600;
+      font-size: 0.95rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .token-badge i { color: var(--gold); margin-right: 8px; }
+
+    .btn-premium {
+      background: linear-gradient(135deg, var(--gold), #C9A830);
+      border: none;
+      color: #0A0A0C;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+      transition: all 0.3s;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 25px rgba(212,175,55,0.2);
+    }
+
+    .btn-premium:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(212,175,55,0.4);
+    }
+
+    /* PULSE */
+    .pulse-gold {
+      animation: pulseGold 2s infinite;
+    }
+
+    @keyframes pulseGold {
+      0% { box-shadow: 0 0 0 0 rgba(212,175,55,0.6); }
+      70% { box-shadow: 0 0 0 20px rgba(212,175,55,0); }
+      100% { box-shadow: 0 0 0 0 rgba(212,175,55,0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 700px) {
+      .detail-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 400px) {
+      .detail-grid { grid-template-columns: 1fr; }
+      .day-level { font-size: 2.5rem; }
+    }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9YXEVSNQ04"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9YXEVSNQ04');
+  </script>
+</head>
+<body>
+  <div id="loadingOverlay" style="display: none;">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" style="background: #0A0A0C; border-bottom: 2px solid #D4AF37; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; width: 100%; position: sticky; top: 0; z-index: 9999;">
+    <div class="logo">
+      <a href="../index.html" style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: #D4AF37; text-decoration: none;">ORACLE NUSANTARA</a>
+    </div>
+    <div class="nav-links" style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
+      <a href="../index.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.85rem;">Beranda</a>
+      <a href="ramalan.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.85rem;">Ramalan</a>
+      <a href="manuritas.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.85rem;">Manuritas</a>
+      <a href="kecocokan.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.85rem;">Kecocokan</a>
+      <a href="bazi.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.85rem;">BaZi</a>
+      <a href="dewasa-ayu.html" style="color: #D4AF37; text-decoration: none; font-size: 0.85rem; font-weight: 700;">Dewasa Ayu</a>
+      <a href="pustaka.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.85rem;">Pustaka</a>
+      <a href="kalender.html" style="color: #E8E8E8; text-decoration: none; font-size: 0.85rem;">Kalender</a>
+      <a href="dukung.html" style="background: linear-gradient(135deg, #FF6B6B, #FFB8B8); padding: 8px 16px; border-radius: 20px; color: #0A0A0C; text-decoration: none; font-weight: 600; font-size: 0.85rem;"><i class="fas fa-heart"></i> Dukung</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- HERO -->
+    <div class="mystic-header">
+      <div class="header-icon">☀️</div>
+      <h1>Dewasa Ayu</h1>
+      <p class="subtitle">Temukan hari baik berdasarkan kearifan Primbon Bali — Wuku, Saptawara, Pancawara, dan Tri Wara</p>
+      <div class="header-divider">
+        <span>✦</span><span>✦</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="oracle-card">
+      <div class="form-group">
+        <div class="input-row">
+          <div class="input-field">
+            <label><i class="fas fa-calendar-alt"></i> Pilih Tanggal</label>
+            <div class="calendar-nav">
+              <button onclick="shiftDate(-1)" title="Hari Sebelumnya"><i class="fas fa-chevron-left"></i></button>
+              <span class="current-date" id="currentDateDisplay">-</span>
+              <button onclick="shiftDate(1)" title="Hari Berikutnya"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <input type="date" id="selectedDate" value="" style="display:none;">
+            <span class="input-hint">📅 Pilih tanggal untuk melihat kualitas Dewasa Ayu</span>
+          </div>
+        </div>
+        <button class="btn-primary" id="checkBtn">
+          <i class="fas fa-search"></i> CEK HARI BAIK
+        </button>
+      </div>
+
+      <!-- RESULT SECTION -->
+      <div id="resultSection" class="hidden" style="margin-top: 40px; animation: fadeInUp 0.6s ease;">
+        
+        <!-- DAY SUMMARY -->
+        <div class="day-summary" id="daySummary">
+          <div class="day-level-icon" id="dayIcon">-</div>
+          <div class="day-level" id="dayLevel">-</div>
+          <div class="day-desc" id="dayShortDesc">-</div>
+        </div>
+
+        <!-- DETAIL GRID -->
+        <div class="detail-grid">
+          <div class="detail-item">
+            <div class="d-icon"><i class="fas fa-calendar-week"></i></div>
+            <div class="d-value" id="wukuDisplay">-</div>
+            <div class="d-label">Wuku</div>
+            <div class="d-sub" id="wukuMeaning">-</div>
+          </div>
+          <div class="detail-item">
+            <div class="d-icon"><i class="fas fa-sun"></i></div>
+            <div class="d-value" id="saptawaraDisplay">-</div>
+            <div class="d-label">Saptawara</div>
+            <div class="d-sub" id="saptawaraIndo">-</div>
+          </div>
+          <div class="detail-item">
+            <div class="d-icon"><i class="fas fa-cloud"></i></div>
+            <div class="d-value" id="pancawaraDisplay">-</div>
+            <div class="d-label">Pancawara</div>
+            <div class="d-sub" id="pancawaraJawa">-</div>
+          </div>
+          <div class="detail-item">
+            <div class="d-icon"><i class="fas fa-moon"></i></div>
+            <div class="d-value" id="triwaraDisplay">-</div>
+            <div class="d-label">Tri Wara</div>
+            <div class="d-sub" id="triwaraMeaning">-</div>
+          </div>
+        </div>
+
+        <!-- QUICK INFO -->
+        <div id="quickInfo" class="hidden" style="margin-top: 20px;"></div>
+
+        <!-- TOKEN -->
+        <div style="text-align: center; margin: 28px 0;">
+          <div class="token-badge">
+            <i class="fas fa-coins"></i> Sisa Token: <span id="tokenBalanceSpan">0</span>
+          </div>
+        </div>
+
+        <!-- UNLOCK BUTTON -->
+        <div style="text-align: center; margin-top: 24px;">
+          <button class="btn-premium pulse-gold" id="premiumBtn">
+            <i class="fas fa-unlock-alt"></i> BUKA ANALISIS MENDALAM — GRATIS!
+          </button>
+          <p style="margin-top: 12px; font-size: 0.8rem; color: var(--text-dim);">
+            <i class="fas fa-gift"></i> Klik untuk membuka analisis lengkap tanpa biaya
+          </p>
+        </div>
+
+        <!-- PREMIUM CONTENT -->
+        <div id="premiumBox" class="hidden" style="animation: fadeInUp 0.6s ease;"></div>
+
+        <!-- CROSS-SELL -->
+        <div class="analysis-section-card" style="margin-top: 32px; text-align: center;">
+          <h4 style="justify-content:center;">✨ Butuh Analisis Lebih Personal?</h4>
+          <p>Coba <strong>Ramalan Bintang</strong> — analisis lengkap Zodiak, Shio, Weton, dan Wuku khusus untuk dirimu.</p>
+          <a href="ramalan.html" class="btn-primary" style="display:inline-block;width:auto;padding:14px 32px;margin-top:12px;">
+            <i class="fas fa-crystal-ball"></i> Coba Ramalan Bintang Gratis
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© 2026 Oracle Nusantara. Seluruh konten untuk hiburan & refleksi diri.</div>
+    <div>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="privacy.html">Privasi</a>
+      <a href="dukung.html">Dukung kami</a>
+      <a href="mailto:halo@oracle-nusantara.com">Kontak</a>
+    </div>
+  </footer>
+
+  <script src="../js/calculator.js"></script>
+  <script src="../js/data-loader.js"></script>
+  <script src="../js/ui-controller.js"></script>
+  <script src="../js/premium.js"></script>
+
+  <script>
+    'use strict';
+    
+    let calendarData = null;
+    let currentDayData = null;
+    let dewasaAyuPremiumUnlocked = false;
+    
+    const elements = {};
+    
+    function initDOMElements() {
+      elements.selectedDate = document.getElementById('selectedDate');
+      elements.currentDateDisplay = document.getElementById('currentDateDisplay');
+      elements.checkBtn = document.getElementById('checkBtn');
+      elements.resultSection = document.getElementById('resultSection');
+      elements.daySummary = document.getElementById('daySummary');
+      elements.dayIcon = document.getElementById('dayIcon');
+      elements.dayLevel = document.getElementById('dayLevel');
+      elements.dayShortDesc = document.getElementById('dayShortDesc');
+      elements.wukuDisplay = document.getElementById('wukuDisplay');
+      elements.wukuMeaning = document.getElementById('wukuMeaning');
+      elements.saptawaraDisplay = document.getElementById('saptawaraDisplay');
+      elements.saptawaraIndo = document.getElementById('saptawaraIndo');
+      elements.pancawaraDisplay = document.getElementById('pancawaraDisplay');
+      elements.pancawaraJawa = document.getElementById('pancawaraJawa');
+      elements.triwaraDisplay = document.getElementById('triwaraDisplay');
+      elements.triwaraMeaning = document.getElementById('triwaraMeaning');
+      elements.quickInfo = document.getElementById('quickInfo');
+      elements.premiumBox = document.getElementById('premiumBox');
+      elements.premiumBtn = document.getElementById('premiumBtn');
+    }
+    
+    function showLoading(show) {
+      const overlay = document.getElementById('loadingOverlay');
+      if (overlay) overlay.style.display = show ? 'flex' : 'none';
+    }
+    
+    function showErrorToast(msg) { alert('❌ ' + msg); }
+    function showSuccessToast(msg) { alert('✅ ' + msg); }
+    
+    async function updateTokenDisplay() {
+      const balance = localStorage.getItem('tokenBalance') || '0';
+      const span = document.getElementById('tokenBalanceSpan');
+      if (span) span.textContent = balance;
+    }
+    
+    // ========== KONVERSI HARI ==========
+    function konversiHari(saptawara) {
+      const map = { 'Redite':'Minggu','Soma':'Senin','Anggara':'Selasa','Buda':'Rabu','Wrespati':'Kamis','Sukra':'Jumat','Saniscara':'Sabtu' };
+      return map[saptawara] || saptawara;
+    }
+    
+    function konversiPancawara(pancawara) {
+      const map = { 'Umanis':'Legi','Paing':'Pahing','Pon':'Pon','Wage':'Wage','Kliwon':'Kliwon' };
+      return map[pancawara] || pancawara;
+    }
+    
+    // ========== TRI WARA ==========
+    function getTriWara(saptawara, pancawara) {
+      if (!calendarData) return null;
+      const s = calendarData.saptawara?.find(x => x.name === saptawara);
+      const p = calendarData.pancawara?.find(x => x.name === pancawara);
+      if (!s || !p) return null;
+      const total = (s.urip || 0) + (p.urip || 0);
+      const mod = total % 3;
+      const triWaraList = [
+        { name: 'Pasah', meaning: 'Jatuh / Selesai', activity: 'Baik untuk penyucian dan introspeksi. Tidak baik untuk memulai hal baru.', icon: '🌊', level: 'cukup' },
+        { name: 'Beteng', meaning: 'Kuat / Kokoh', activity: 'Baik untuk membuat pagar, perlindungan, atau memperkuat fondasi. Energi stabil.', icon: '🏰', level: 'baik' },
+        { name: 'Kajeng', meaning: 'Keras / Sakral', activity: 'Energi kuat dan sakral. Baik untuk bekerja keras dan upacara spiritual. Waspadai konflik.', icon: '⚡', level: 'sangat-baik' }
+      ];
+      return triWaraList[mod === 0 ? 2 : mod - 1] || triWaraList[0];
+    }
+    
+    // ========== CALCULATE DEWASA AYU ==========
+    function calculateDewasaAyu() {
+      if (!calendarData) { showErrorToast('Data masih dimuat. Tunggu sebentar...'); return; }
+      
+      const dateStr = elements.selectedDate.value;
+      if (!dateStr) { showErrorToast('Pilih tanggal terlebih dahulu.'); return; }
+      
+      showLoading(true);
+      
+      try {
+        const date = new Date(dateStr);
+        const weton = getWeton(date);
+        const wukuResult = getWuku(date);
+        const triWara = getTriWara(weton.saptawara, weton.pancawara);
+        const wukuData = calendarData.wuku?.find(w => w.name === wukuResult.name);
+        
+        // Tentukan level
+        let level = 'cukup';
+        let levelText = 'Cukup';
+        let icon = '🌤️';
+        
+        if (wukuData) {
+          const act = (wukuData.activity || '').toLowerCase();
+          if (act.includes('sangat baik')) { level = 'sangat-baik'; levelText = 'Sangat Baik'; icon = '☀️'; }
+          else if (act.includes('baik')) { level = 'baik'; levelText = 'Baik'; icon = '🌤️'; }
+          else if (act.includes('tidak baik') || act.includes('hindari')) { level = 'kurang'; levelText = 'Kurang Baik'; icon = '🌧️'; }
+        }
+        
+        // Update day summary
+        elements.daySummary.className = 'day-summary level-' + level;
+        elements.dayIcon.textContent = icon;
+        elements.dayLevel.textContent = levelText;
+        elements.dayShortDesc.textContent = wukuData?.activity || 'Energi netral. Gunakan dengan bijak.';
+        
+        // Update detail grid
+        elements.wukuDisplay.textContent = wukuResult.name || '-';
+        elements.wukuMeaning.textContent = wukuData?.meaning || '';
+        elements.saptawaraDisplay.textContent = weton.saptawara || '-';
+        elements.saptawaraIndo.textContent = konversiHari(weton.saptawara);
+        elements.pancawaraDisplay.textContent = weton.pancawara || '-';
+        elements.pancawaraJawa.textContent = konversiPancawara(weton.pancawara);
+        elements.triwaraDisplay.textContent = triWara?.name || '-';
+        elements.triwaraMeaning.textContent = triWara?.meaning || '';
+        
+        // Quick info
+        let quickHTML = '';
+        if (triWara) {
+          quickHTML += `
+            <div class="info-box">
+              <p><strong>🔮 Tri Wara ${triWara.name}:</strong> ${triWara.activity}</p>
+            </div>`;
+        }
+        if (wukuData?.forbidden_direction) {
+          quickHTML += `
+            <div class="warning-box">
+              <p><strong>🚫 Pantangan Arah:</strong> Hindari bepergian ke arah <strong>${wukuData.forbidden_direction}</strong> hari ini.</p>
+            </div>`;
+        }
+        elements.quickInfo.innerHTML = quickHTML;
+        elements.quickInfo.classList.remove('hidden');
+        
+        // Simpan data
+        currentDayData = {
+          date: dateStr,
+          weton,
+          wuku: wukuData,
+          wukuResult,
+          triWara,
+          level,
+          levelText
+        };
+        
+        // Tampilkan
+        elements.resultSection.classList.remove('hidden');
+        elements.premiumBox.classList.add('hidden');
+        dewasaAyuPremiumUnlocked = false;
+        
+        setTimeout(() => {
+          elements.resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 200);
+        
+      } catch(e) {
+        console.error('Error:', e);
+        showErrorToast('Terjadi kesalahan saat menghitung.');
+      } finally {
+        showLoading(false);
+      }
+    }
+    
+    // ========== DISPLAY PREMIUM CONTENT ==========
+    function displayPremiumContent() {
+      if (!currentDayData) { showErrorToast('Cek hari baik dulu.'); return; }
+      
+      const d = currentDayData;
+      const w = d.wuku;
+      const t = d.triWara;
+      const weton = d.weton;
+      
+      let rekomendasi = '';
+      let rekomendasiIcon = '';
+      
+      if (d.level === 'sangat-baik') {
+        rekomendasi = 'Sangat baik untuk memulai usaha baru, melangsungkan pernikahan, mengadakan upacara penting, atau memulai proyek besar. Energi semesta mendukung penuh langkah Anda.';
+        rekomendasiIcon = '☀️';
+      } else if (d.level === 'baik') {
+        rekomendasi = 'Baik untuk aktivitas rutin, bekerja, silaturahmi, dan menyelesaikan tugas yang tertunda. Boleh memulai hal baru dengan persiapan matang.';
+        rekomendasiIcon = '🌤️';
+      } else if (d.level === 'cukup') {
+        rekomendasi = 'Energi netral. Baik untuk aktivitas sehari-hari. Tunda keputusan besar dan hindari memulai proyek baru yang berisiko tinggi.';
+        rekomendasiIcon = '⛅';
+      } else {
+        rekomendasi = 'Kurang baik untuk memulai hal baru. Manfaatkan waktu untuk istirahat, refleksi, dan menyelesaikan urusan yang tertunda.';
+        rekomendasiIcon = '🌧️';
+      }
+      
+      // Activity tags
+      let activityTags = '';
+      if (w?.activity) {
+        const act = w.activity.toLowerCase();
+        if (act.includes('baik') && !act.includes('tidak')) {
+          const activities = w.activity.split(',').map(a => a.trim());
+          activities.forEach(a => {
+            if (a) activityTags += `<span class="activity-tag recommended">✅ ${a}</span>`;
+          });
+        }
+      }
+      if (w?.forbidden_direction) {
+        activityTags += `<span class="activity-tag avoid">🚫 Hindari arah ${w.forbidden_direction}</span>`;
+      }
+      if (t?.activity) {
+        const tAct = t.activity.toLowerCase();
+        if (tAct.includes('tidak baik') || tAct.includes('hindari')) {
+          activityTags += `<span class="activity-tag caution">⚠️ ${t.activity}</span>`;
+        } else {
+          activityTags += `<span class="activity-tag recommended">✅ ${t.activity}</span>`;
+        }
+      }
+      
+      const html = `
+        <div style="margin-top: 24px;">
+          
+          <!-- HEADER -->
+          <div style="padding-bottom:16px; border-bottom:1px solid rgba(212,175,55,0.2); margin-bottom:24px;">
+            <h3 style="color:var(--gold-light); margin:0; font-size:1.5rem;">
+              <i class="fas fa-crown" style="color:var(--gold);"></i> 
+              Analisis Dewasa Ayu Mendalam
+            </h3>
+            <p style="color:var(--text-dim); margin:4px 0 0 0; font-size:0.85rem;">
+              ${d.date} • ${konversiHari(weton.saptawara)} ${konversiPancawara(weton.pancawara)}
+            </p>
+          </div>
+          
+          <!-- WUKU DETAIL -->
+          <div class="analysis-section-card">
+            <h4><i class="fas fa-calendar-week" style="color:var(--gold);"></i> Wuku ${d.wukuResult?.name || '-'}</h4>
+            <p><strong>Makna:</strong> ${w?.meaning || 'Tidak tersedia'}</p>
+            <p style="margin-top:8px;"><strong>Karakter Energi:</strong> ${w?.character || 'Energi netral yang dapat dimanfaatkan untuk berbagai aktivitas.'}</p>
+            <p style="margin-top:8px;"><strong>Elemen:</strong> ${w?.element || '-'}</p>
+          </div>
+          
+          <!-- ACTIVITY TAGS -->
+          ${activityTags ? `
+          <div class="analysis-section-card">
+            <h4><i class="fas fa-tasks" style="color:var(--gold);"></i> Panduan Aktivitas</h4>
+            <div class="activity-tags">${activityTags}</div>
+          </div>` : ''}
+          
+          <!-- TRI WARA DETAIL -->
+          ${t ? `
+          <div class="analysis-section-card">
+            <h4><i class="fas fa-moon" style="color:var(--gold);"></i> Tri Wara: ${t.name}</h4>
+            <p><strong>Makna:</strong> ${t.meaning}</p>
+            <p style="margin-top:8px;">${t.activity}</p>
+          </div>` : ''}
+          
+          <!-- SAKTI / PANTANGAN -->
+          <div class="analysis-section-card">
+            <h4><i class="fas fa-shield-alt" style="color:var(--gold);"></i> Pantangan & Kewaspadaan</h4>
+            ${w?.forbidden_direction ? `
+              <div class="warning-box">
+                <p><strong>🚫 Pantangan Arah:</strong> Jangan bepergian ke arah <strong>${w.forbidden_direction}</strong> untuk urusan penting.</p>
+              </div>` : 
+              '<p>Tidak ada pantangan khusus untuk hari ini.</p>'}
+            ${w?.pantangan ? `<p style="margin-top:8px;">${w.pantangan}</p>` : ''}
+          </div>
+          
+          <!-- REKOMENDASI -->
+          <div class="highlight-box">
+            <p style="font-size:1.5rem;margin-bottom:8px;">${rekomendasiIcon}</p>
+            <p><strong>Rekomendasi Aktivitas Hari Ini:</strong></p>
+            <p style="margin-top:8px;">${rekomendasi}</p>
+          </div>
+          
+          <!-- ENERGI HARI -->
+          <div class="analysis-section-card">
+            <h4><i class="fas fa-bolt" style="color:var(--gold);"></i> Energi Hari Ini</h4>
+            <p>
+              Hari ${konversiHari(weton.saptawara)} ${konversiPancawara(weton.pancawara)} 
+              (${weton.saptawara} ${weton.pancawara}) berada dalam naungan 
+              <strong>Wuku ${d.wukuResult?.name}</strong> dengan elemen <strong>${w?.element || '-'}</strong>. 
+              Kombinasi dengan Tri Wara <strong>${t?.name || '-'}</strong> (${
+                t?.meaning || '-'
+              }) menghasilkan energi yang <strong>${d.levelText}</strong>.
+            </p>
+            <p style="margin-top:12px;">
+              ${d.level === 'sangat-baik' ? 'Manfaatkan momentum ini sebaik-baiknya. Langkah yang diambil hari ini memiliki potensi keberhasilan yang tinggi.' : 
+                d.level === 'baik' ? 'Hari yang produktif. Kerjakan apa yang bisa dikerjakan dengan ketekunan dan niat baik.' :
+                d.level === 'cukup' ? 'Hari yang seimbang. Tidak ada desakan kuat untuk atau menolak. Gunakan kebijaksanaan Anda.' :
+                'Istirahat dan refleksi adalah pilihan bijak. Energi akan kembali membaik di hari berikutnya.'}
+            </p>
+          </div>
+          
+          <!-- CATATAN -->
+          <div class="info-box" style="text-align:center;">
+            <p style="font-style:italic;margin:0;font-size:0.9rem;">
+              💫 <strong>Catatan:</strong> Dewasa Ayu adalah panduan kearifan leluhur, bukan aturan mutlak. 
+              Niat tulus, usaha keras, dan doa tetap menjadi penentu utama dalam setiap langkah kehidupan.
+            </p>
+          </div>
+          
+        </div>
+      `;
+      
+      elements.premiumBox.innerHTML = html;
+      elements.premiumBox.classList.remove('hidden');
+      dewasaAyuPremiumUnlocked = true;
+      
+      setTimeout(() => {
+        elements.premiumBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+      
+      showSuccessToast('✨ Analisis mendalam dibuka!');
+    }
+    
+    // ========== CALENDAR NAVIGATION ==========
+    function shiftDate(days) {
+      const currentVal = elements.selectedDate.value;
+      if (!currentVal) return;
+      
+      const date = new Date(currentVal);
+      date.setDate(date.getDate() + days);
+      
+      const yyyy = date.getFullYear();
+      const mm = String(date.getMonth() + 1).padStart(2, '0');
+      const dd = String(date.getDate()).padStart(2, '0');
+      const newDate = `${yyyy}-${mm}-${dd}`;
+      
+      elements.selectedDate.value = newDate;
+      updateDateDisplay();
+      calculateDewasaAyu();
+    }
+    
+    function updateDateDisplay() {
+      const dateStr = elements.selectedDate.value;
+      if (!dateStr) return;
+      
+      const date = new Date(dateStr);
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      elements.currentDateDisplay.textContent = date.toLocaleDateString('id-ID', options);
+    }
+    
+    // ========== INIT ==========
+    async function init() {
+      initDOMElements();
+      
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      elements.selectedDate.value = `${yyyy}-${mm}-${dd}`;
+      updateDateDisplay();
+      
+      // Sync date input with calendar nav
+      elements.selectedDate.addEventListener('change', updateDateDisplay);
+      
+      try {
+        const data = await loadAllData();
+        calendarData = data.calendar;
+        console.log('✅ Calendar data loaded');
+      } catch(e) {
+        showErrorToast('Gagal memuat data kalender. Refresh halaman.');
+        return;
+      }
+      
+      updateTokenDisplay();
+      
+      if (typeof checkPaymentSuccess === 'function') checkPaymentSuccess();
+      
+      elements.checkBtn.addEventListener('click', calculateDewasaAyu);
+      elements.premiumBtn.addEventListener('click', () => {
+        // GRATIS - langsung tampilkan
+        displayPremiumContent();
+      });
+      
+      // Expose shiftDate ke global
+      window.shiftDate = shiftDate;
+      
+      console.log('✅ Dewasa Ayu PREMIUM ready');
+    }
+    
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
