@@ -462,7 +462,23 @@ function displayManuritasPremium(){
   const seed=fn.length*1000+np*100+ht;
   
   const rzt=jalurRezekiData?.templates||[];
-  const rz=rzt.length>0?rzt[seed%rzt.length]:{name:'Sang Pencari',description:'Jalur rezeki yang unik.',fields:['Eksplorasi berbagai bidang'],source:'Multi-talenta',ritual_rezeki:'Temukan passion-mu.',timing:'Setiap hari'};
+  let rz;
+    if (typeof getJalurRezeki === 'function') {
+        rz = getJalurRezeki(ht, np, fn, jalurRezekiData);
+        console.log("✅ Jalur Rezeki from function:", rz.name);
+    } else {
+        // Fallback jika fungsi tidak ada
+        console.warn("⚠️ getJalurRezeki not found, using direct access");
+        const rzt = jalurRezekiData?.templates || [];
+        rz = rzt.length > 0 ? rzt[seed % rzt.length] : {
+            name: 'Sang Pencari',
+            description: 'Jalur rezeki yang unik.',
+            fields: ['Eksplorasi berbagai bidang'],
+            source: 'Multi-talenta',
+            ritual_rezeki: 'Temukan passion-mu',
+            timing: 'Setiap hari'
+        };
+    }
   
   const allPkj=pekerjaanData?.jobs?.[el]?.fields||['Manager','Analis','Konsultan'];
   const allUsh=bidangUsahaData?.businesses?.[el]||['Konsultan','Toko Online'];
