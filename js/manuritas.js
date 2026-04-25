@@ -262,11 +262,73 @@ function getTitikLuka(hanacarakaTotal, neptu, titikLukaData) {
 /**
  * Memilih template Jalur Rezeki
  */
+// ========== JALUR REZEKI ==========
 function getJalurRezeki(hanacarakaTotal, neptu, name, jalurRezekiData) {
-    // Hash kombinasi: nama + neptu + total untuk hasil unik
-    const seed = (name || '').length + neptu + hanacarakaTotal;
-    const index = seed % jalurRezekiData.templates.length;
-    return jalurRezekiData.templates[index];
+    // VALIDASI DATA
+    if (!jalurRezekiData) {
+        console.warn("⚠️ jalurRezekiData is undefined, using fallback");
+        // Fallback sederhana
+        return {
+            name: "Sang Pembawa Hoki",
+            source: "Energi Positif Universal",
+            fields: ["Entrepreneur", "Kreator", "Pemimpin", "Konsultan"],
+            description: "Rezeki Anda mengalir dari energi positif dan keyakinan diri. Teruslah bergerak maju!",
+            cocok_untuk: "Pekerjaan yang membutuhkan inisiatif dan keberanian",
+            ritual_rezeki: "Mulai setiap hari dengan afirmasi positif dan rasa syukur",
+            timing: "Setiap hari adalah hari baik"
+        };
+    }
+    
+    // CEK STRUKTUR DATA
+    // Support 3 format: { templates: [...] } ATAU langsung array ATAU { "1": {...}, "2": {...} }
+    let templatesArray = null;
+    
+    if (Array.isArray(jalurRezekiData)) {
+        templatesArray = jalurRezekiData;
+    } 
+    else if (jalurRezekiData.templates && Array.isArray(jalurRezekiData.templates)) {
+        templatesArray = jalurRezekiData.templates;
+    }
+    else if (typeof jalurRezekiData === 'object') {
+        // Coba konversi object { "1": {...}, "2": {...} } ke array
+        const values = Object.values(jalurRezekiData);
+        if (values.length > 0 && values[0] && values[0].name) {
+            templatesArray = values;
+        }
+    }
+    
+    if (!templatesArray || templatesArray.length === 0) {
+        console.error("❌ No valid templates found in jalurRezekiData!");
+        console.log("Data structure:", Object.keys(jalurRezekiData || {}));
+        return {
+            name: "Sang Penjelajah",
+            source: "Pengalaman Hidup",
+            fields: ["Eksplorasi", "Pembelajaran", "Adaptasi"],
+            description: "Rezeki datang dari keberanian menjelajahi hal-hal baru.",
+            cocok_untuk: "Karir yang dinamis dan penuh tantangan",
+            ritual_rezeki: "Jangan takut mencoba hal baru setiap minggu",
+            timing: "Saat Anda merasa bersemangat"
+        };
+    }
+    
+    // HITUNG INDEX UNIK
+    const seed = (name || '').length * 31 + (neptu || 0) * 17 + (hanacarakaTotal || 0) * 13;
+    const index = Math.abs(seed) % templatesArray.length;
+    
+    console.log(`🎯 Jalur Rezeki: index=${index}, total=${templatesArray.length}, seed=${seed}`);
+    
+    const result = templatesArray[index];
+    
+    // Pastikan semua field yang diperlukan ada
+    return {
+        name: result.name || result.title || "Sang Pemberani",
+        source: result.source || "Potensi Diri",
+        fields: result.fields || result.bidang || ["Pengembangan Diri"],
+        description: result.description || "Rezeki mengalir dari usaha dan keyakinan.",
+        cocok_untuk: result.cocok_untuk || "Ikuti passion Anda",
+        ritual_rezeki: result.ritual_rezeki || "Bersyukur dan terus belajar",
+        timing: result.timing || result.momentum || "Saat Anda paling percaya diri"
+    };
 }
 
 /**
